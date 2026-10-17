@@ -1,0 +1,327 @@
+{
+  "schema_version": 2,
+  "filename": "Renewable_Power_Hosting_Capacity_Assessment_Considering_L-Index_for_Static_Voltage_Stability.pdf",
+  "pages": 5,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/APPEEC61255.2024.10922669",
+  "year_candidates": [
+    "2026",
+    "2024",
+    "1986"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—The construction of new type of power system \nwith an increasing integration of renewable energy generation \nhas become the mainstream trend in current power system \ndevelopment. The rising penetration of renewable energy poses \nchallenges to the stability of the power system, making it \nincreasingly important to assess renewable energy hosting \ncapacity while considering system stability constraints.  This \npaper establishes a method for assessing renewable energy \nhosting capacity considering static voltage stabil ity. Firstly, it \nreviews and analyzes commonly used static voltage stability \nindices in power systems, selecting the L -index for detailed \nmodeling. Building upon this, a renewable energy hosting \ncapacity assessment model incorporating the L-index is \ndeveloped, and a solution strategy based on the primal -dual \ninterior point method is proposed. Subsequently, the study \nanalyzes the impact of considering static voltage stability on the \nassessment results of renewable energy hosting  capacity using \nan enhanced IEEE 30-bus test case. \n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 660
+      },
+      "end": {
+        "page": 1,
+        "offset": 1737
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1737
+      },
+      "heading": "abstract—theconstructionofnewtypeofpowersystem",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1077,
+      "truncated": false,
+      "quality_flags": [
+        "text:private_use_characters"
+      ],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. INTRODUCTION  \nAs early as the 1940s, Marković raised concerns about \nvoltage stability in power systems. With the continuous \nexpansion of power grid scale and increasing penetration of \nrenewable energy, the industry has placed greater emphasis on \nvoltage stability issues. In recent years, large -scale system \nincidents caused by renewable energy in modern power \nsystems have also become more frequent. \nThe dynamic equations of power systems can be \nsuccinctly described as a complex set of nonlinear equations. \nSpecifically, they can be represented by a set of nonlinear \ndifferential-difference-algebraic equations (DDAEs), which \nform the foundation for addressing all voltage stability issues \nin power systems\n[1].  \nStatic voltage instability occurs when the voltage level of \na power system gradually decreases as the load increases. This \ninstability reaches a critical state when the load grows to a \npoint where the system can no longer support it. Static voltage \nstability involves identifying a time -domain section of the \npower system's dynamic processes. Mathematically, in \nDDAEs, this can be simplified by fixing the difference \nequations in the DDAE and approximating the differentiation \nof state variables to zero.\n [5]This transformation allows the \nDDAE system to be described purely by algebraic equations. \nFollowing this logic, static voltage stability is solely \nrelated to the algebraic equations describing the system. \nAnalytical methods for assessing static voltage stability can \ngenerally be categorized into two approaches: static voltage \nstability indices\n [6][7]and methods such as the continuation \npower flow or direct methods  [8][9]based on continuous flow \nanalysis. Common assessment indices for static voltage \nstability margin include sensitivity index[10][11], eigenvalue and \nsingular value indices[12][13], singular value indices[14], margin \nindices [15], V/V0 index [16], voltage stability proximity index, \netc. The static voltage stability L index (L index), proposed by \nKessel in 1986, belongs to the category of voltage stability \nproximity indices\n[17]. The L index is based on power flow \nsolutions and is defined through the derivation of system \nnetwork equations. It is a stability index that intuitively \nreflects the distance between the current operating state of the \nsystem and static voltage collapse. Due to its early proposal, \nthe L index has been widely applied in the analysis of static \nvoltage stability in power systems and exhibits strong \naccuracy. Given the excellent performance of the L index in \nassessing static voltage stability, this section will employ the \nL index to evaluate the static voltage stability of the system. \nThe subsequent section will provide a theoretical basis by \ndetailing the establishment and derivation process of the L \nindex, supporting the assessment of renewable energy \nintegration considering static voltage stability. \n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 1832
+      },
+      "end": {
+        "page": 1,
+        "offset": 4776
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 4776
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 2944,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate",
+        "text:private_use_characters"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "V. S\nUMMARY \nThis article first studies the static voltage stability \nindicators and related analysis and calculation methods of the \npower system. The L indicator is selected to evaluate the static \nvoltage stability of the studied system. Subsequently, based on \nthe static voltage stability L index, a renewable energy hosting \ncapacity assessment model considering the L index was \nestablished. By comparing the evaluation results of the \nsystem's absorption capacity under different L\nmax settings, it \nwas found that the evaluat ion results of the system's \nabsorption capacity were basically positively correlated with \nthe value of L\nmax, that is, the larger the L max value, the better \nthe evaluation results of the system's absorption capacity. The \nconclusion can be achieved that when renewable energy units \nare connected to nodes with higher L index, the system's \nabsorption rate and amount are higher. This conclusion can \nhave certain reference value for renewable energy site \nselection. \n",
+      "page_start": 5,
+      "page_end": 5,
+      "start": {
+        "page": 5,
+        "offset": 701
+      },
+      "end": {
+        "page": 5,
+        "offset": 1709
+      },
+      "preview_end": {
+        "page": 5,
+        "offset": 1709
+      },
+      "heading": "v.summary",
+      "method": "joined_heading",
+      "end_reason": "backmatter",
+      "total_chars": 1008,
+      "truncated": false,
+      "quality_flags": [
+        "joined_heading"
+      ],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "abstract:text:private_use_characters",
+    "conclusion:joined_heading",
+    "introduction:numbered_boundary_candidate",
+    "introduction:text:private_use_characters",
+    "page:1:private_use_characters",
+    "page:2:fragmented_text",
+    "page:2:private_use_characters",
+    "page:3:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 660,
+      "heading": "abstract—theconstructionofnewtypeofpowersystem",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1737,
+      "heading": "keywords—renewableenergy,hostingcapacityassessment,",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 1832,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 1,
+      "offset": 4776,
+      "heading": "ii.t",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 1,
+      "offset": 5105,
+      "heading": "ivyy",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 1,
+      "offset": 5770,
+      "heading": "vzizyv",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 690,
+      "heading": "vfv",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 2103,
+      "heading": "vvvαα∈∈",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 2394,
+      "heading": "vvvαα∈∈",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 2692,
+      "heading": "iii.t",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 1036,
+      "heading": "vvvαα∈∈",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 1173,
+      "heading": "iv.casestudy",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 5,
+      "offset": 701,
+      "heading": "v.summary",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "backmatter",
+      "page": 5,
+      "offset": 1709,
+      "heading": "vi.acknowledgment",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 5,
+      "offset": 1856,
+      "heading": "references",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 6126
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 4127
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 5065
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5635
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5806
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 1,
+      "cue": "simplified",
+      "snippet": "point where the system can no longer support it. Static voltage \nstability involves identifying a time -domain section of the \npower system's dynamic processes. Mathematically, in \nDDAEs, this can be simplified by fixing the difference \nequations in the DDAE and approximating the differentiation \nof state variables to zero.\n [5]This transformation allows the \nDDAE system to be described purely by algebraic"
+    },
+    {
+      "page": 2,
+      "cue": "simplified",
+      "snippet": "variation of loads in a power system has a minimal \nimpact on the phase angle difference at nodes. Therefore, the \nphase angle part of the voltage in equation (9) can be \nneglected, resulting in the simplified static stability L index: \n \n' 221L ( )( )\nLL\ni ji i ij i ji i ij\nj\niiji i\nPR Q X Q R PX\nVV V αα∈∈\n+−\n= +∑∑ (10) \nIn practical transmission networks, the reactance of the \npower system is much larger"
+    },
+    {
+      "page": 3,
+      "cue": "limitation",
+      "snippet": "active Power Limits for Generator at Node 22 0.6250/-0.1500 \nReactive Power Limits for Generator at Node 23 0.4000/-0.1000 \nReactive Power Limits for Generator at Node 27 0.4870/-0.1500 \nActive Power Limitation for Photovoltaic Units 2.0000/0.0000 \nActive Power of Wind Turbines 2.2000/0.0000 \nBranch Transmission Power Limitation 0.5 \nVoltage Amplitude Limitation 1.05/0.95 \nL index limitation 0.4 \nThe comput"
+    },
+    {
+      "page": 3,
+      "cue": "does not consider",
+      "snippet": "the L -index \nabsorption model considers the same mathematical setup as \nearlier, with a static voltage stability L-index constraint where \nLmax=0.4. In Scenario 2, the traditional absorption model \ndoes not consider the static voltage stability L-index constraint, \nomitting equations (7) and (8) from the previously established \nmodel. The absorption resul ts of the two scenarios are \nanalyzed as follows: \na) Sta"
+    },
+    {
+      "page": 4,
+      "cue": "limitation",
+      "snippet": "l assessment model has a hosting capacity of 3.8919 \np.u. and a penetration rate of 92.66%. From the data \ncomparison in Table 2.5.3, it can be seen that when \nconsidering the L indicator, due to the limitations of the L \nindicator, the system's renewable power penetration level will \nbe significantly reduced. \nThe comparison of the hosting capacity situation evaluated \nby the L -index assessment model and"
+    },
+    {
+      "page": 5,
+      "cue": "simplified",
+      "snippet": "[17] P. Kessel and H. Glavitsch, \"Estimating the voltage stability of a power \nsystem,\" IEEE Transactions on Power Delivery, vol. 1, no. 3, pp. 346-\n354, 1986. \n[18] Jiang T., Li G., Jia H., et al., \"Simplified L index and sensitivity \nanalysis method for online voltage stability monitoring,\" Automation \nof Electric Power Systems, vol. 36, no. 21, pp. 13-18, 2012.\n \nAuthorized licensed use limited to: SOUTH"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/10_Renewable_Power_Hosting_Capacity_Assessment_Considering_L_In_pages.json",
+  "abstract": "Abstract—The construction of new type of power system \nwith an increasing integration of renewable energy generation \nhas become the mainstream trend in current power system \ndevelopment. The rising penetration of renewable energy poses \nchallenges to the stability of the power system, making it \nincreasingly important to assess renewable energy hosting \ncapacity while considering system stability constraints.  This \npaper establishes a method for assessing renewable energy \nhosting capacity considering static voltage stabil ity. Firstly, it \nreviews and analyzes commonly used static voltage stability \nindices in power systems, selecting the L -index for detailed \nmodeling. Building upon this, a renewable energy hosting \ncapacity assessment model incorporating the L-index is \ndeveloped, and a solution strategy based on the primal -dual \ninterior point method is proposed. Subsequently, the study \nanalyzes the impact of considering static voltage stability on the \nassessment results of renewable energy hosting  capacity using \nan enhanced IEEE 30-bus test case. \n",
+  "introduction": "I. INTRODUCTION  \nAs early as the 1940s, Marković raised concerns about \nvoltage stability in power systems. With the continuous \nexpansion of power grid scale and increasing penetration of \nrenewable energy, the industry has placed greater emphasis on \nvoltage stability issues. In recent years, large -scale system \nincidents caused by renewable energy in modern power \nsystems have also become more frequent. \nThe dynamic equations of power systems can be \nsuccinctly described as a complex set of nonlinear equations. \nSpecifically, they can be represented by a set of nonlinear \ndifferential-difference-algebraic equations (DDAEs), which \nform the foundation for addressing all voltage stability issues \nin power systems\n[1].  \nStatic voltage instability occurs when the voltage level of \na power system gradually decreases as the load increases. This \ninstability reaches a critical state when the load grows to a \npoint where the system can no longer support it. Static voltage \nstability involves identifying a time -domain section of the \npower system's dynamic processes. Mathematically, in \nDDAEs, this can be simplified by fixing the difference \nequations in the DDAE and approximating the differentiation \nof state variables to zero.\n [5]This transformation allows the \nDDAE system to be described purely by algebraic equations. \nFollowing this logic, static voltage stability is solely \nrelated to the algebraic equations describing the system. \nAnalytical methods for assessing static voltage stability can \ngenerally be categorized into two approaches: static voltage \nstability indices\n [6][7]and methods such as the continuation \npower flow or direct methods  [8][9]based on continuous flow \nanalysis. Common assessment indices for static voltage \nstability margin include sensitivity index[10][11], eigenvalue and \nsingular value indices[12][13], singular value indices[14], margin \nindices [15], V/V0 index [16], voltage stability proximity index, \netc. The static voltage stability L index (L index), proposed by \nKessel in 1986, belongs to the category of voltage stability \nproximity indices\n[17]. The L index is based on power flow \nsolutions and is defined through the derivation of system \nnetwork equations. It is a stability index that intuitively \nreflects the distance between the current operating state of the \nsystem and static voltage collapse. Due to its early proposal, \nthe L index has been widely applied in the analysis of static \nvoltage stability in power systems and exhibits strong \naccuracy. Given the excellent performance of the L index in \nassessing static voltage stability, this section will employ the \nL index to evaluate the static voltage stability of the system. \nThe subsequent section will provide a theoretical basis by \ndetailing the establishment and derivation process of the L \nindex, supporting the assessment of renewable energy \nintegration considering static voltage stability. \n",
+  "conclusion": "V. S\nUMMARY \nThis article first studies the static voltage stability \nindicators and related analysis and calculation methods of the \npower system. The L indicator is selected to evaluate the static \nvoltage stability of the studied system. Subsequently, based on \nthe static voltage stability L index, a renewable energy hosting \ncapacity assessment model considering the L index was \nestablished. By comparing the evaluation results of the \nsystem's absorption capacity under different L\nmax settings, it \nwas found that the evaluat ion results of the system's \nabsorption capacity were basically positively correlated with \nthe value of L\nmax, that is, the larger the L max value, the better \nthe evaluation results of the system's absorption capacity. The \nconclusion can be achieved that when renewable energy units \nare connected to nodes with higher L index, the system's \nabsorption rate and amount are higher. This conclusion can \nhave certain reference value for renewable energy site \nselection. \n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Renewable_Power_Hosting_Capacity_Assessment_Considering_L-Index_for_Static_Voltage_Stability.pdf",
+  "file_sha256": "f34d780d4931b27cebcac23bae89b609744229ae3590afcf983783ab9e3ba044",
+  "target_ids": [
+    "P09"
+  ]
+}

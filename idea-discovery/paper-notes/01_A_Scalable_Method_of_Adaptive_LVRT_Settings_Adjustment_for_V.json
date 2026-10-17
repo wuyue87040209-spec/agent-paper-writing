@@ -1,0 +1,484 @@
+{
+  "schema_version": 2,
+  "filename": "A_Scalable_Method_of_Adaptive_LVRT_Settings_Adjustment_for_Voltage_Security_Enhancement_in_Power_Systems_With_High_Renewable_Penetration.pdf",
+  "pages": 12,
+  "status": "needs_review",
+  "text_status": "readable",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/TSTE.2021.3116102",
+  "year_candidates": [
+    "2026",
+    "2022",
+    "2021",
+    "2019"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—Recent expansion of inverter-based renewable gener-\nation (RG) has introduced unprecedented stability issues. One ma-\njor challenge stems from tripping RGs ofﬂine during disturbances\nbased on predeﬁned operation thresholds (ride through curves) on\nvoltage magnitudes and frequency at the point of common coupling\n(PCC). The current practice uses a single set of thresholds for the\nwhole year across all RGs in the system. This could result in loss\nof these resources during critical times, particularly endangering\nsystem voltage security, i.e a signiﬁcant reduction in the load margin\n(LM). On the other hand, relaxing these limits could result in them\nstaying online even during islanding scenarios, which is a safety\nconcern to the restoration crew. Thus, an approach to ﬁnd minimal\nrelaxations to these limits to enhance voltage security is proposed\nhere. This process ﬁrst constructs an optimization model aiming\nto minimize adjustments on RG voltage limits to reach anticipated\nLM increase and then solves it with a multi-stage screening method\nincluding base power-voltage (P-V) curve acquisition, critical RGs\nidentiﬁcation, successive screenings of candidate solutions based on\nsensitivities, and optimal solutions validation. This largely increases\nthe scalability of the algorithm, which is demonstrated on the IEEE\n14-bus, 118-bus systems, and a 500-bus system.\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 319
+      },
+      "end": {
+        "page": 1,
+        "offset": 1702
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1702
+      },
+      "heading": "abstract—recentexpansionofinverter-basedrenewablegener-",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1383,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. I NTRODUCTION\nG\nROWING concerns on carbon footprint have urged elec-\ntric power utilities to replace fossil fuel-based generation\nwith renewable energy resources. The increasing integration of\nRGs [1], on the other hand, has made the system operation much\nmore complicated. In the past, RGs were conservatively tripped\nofﬂine during disturbances to avoid energizing islands. However,\nthis practice posed a threat to system stability with the growing\npenetration of RGs. Thus, the time-dependent operation limits\nin the form of ride-through curves were introduced to allow\nManuscript received March 22, 2021; revised July 15, 2021 and September 7,\n2021; accepted September 23, 2021. Date of publication September 28, 2021;\ndate of current version December 16, 2021. Paper no. TSTE-00301-2021.R2.\n(Corresponding author: Chen Wang.)\nChen Wang and Virgilio A. Centeno are with the Bradley Department\nof Electrical and Computer Engineering, Virginia Polytechnic Institute and\nState University, Blacksburg, V A 24061 USA (e-mail: chenwang@vt.edu; vir-\ngilio@vt.edu).\nChetan Mishra is with Dominion Energy, Richmond, V A 23219 USA (e-mail:\nchetan31@vt.edu).\nColor versions of one or more ﬁgures in this article are available at\nhttps://doi.org/10.1109/TSTE.2021.3116102.\nDigital Object Identiﬁer 10.1109/TSTE.2021.3116102\nthem to remain online as long as there wasn’t an unintentional\nislanding situation, in which case these limits were expected to\nbe violated. These limits include the Low-V oltage Ride-Through\n(L VRT) curve and the Low-Frequency Ride-Through (LFRT)\ncurve concerning the voltage and frequency at the PCC of each\nRG, respectively [2].\nThe L VRT settings are designed to ensure that RGs only\ntrip ofﬂine during islanding scenarios [3]. However, in reality,\nit is extremely difﬁcult to distinguish islanding cases based\nonly on the local measurements at the PCC [4]. Furthermore,\nthere is no widely accepted approach to arriving at an optimal\nsetting. A conservatively designed L VRT setting can result in a\nwidespread tripping event, especially for transmission network\nfaults, which can threaten system stability, as happened in the\nUnited Kingdom on August 9th, 2019 [5]. Researchers in [6],\n[7] have talked about the negative effect of this generation loss\non transient stability. Given low voltage scenarios are of major\nconcern in both steady state and dynamical stability analysis,\nthis article focused on the L VRT and considered its inﬂuence on\nsystem voltage security.\nA widely used metric for voltage security is LM, which refers\nto the maximum load the system can supply with all the online\nresources. The CPFLOW [8] is the most reliable method to\nestimate it, however, is computationally intensive. Given a ﬁxed\nload change direction, CPFLOW traces the one-dimensional\nP-V curve in the state space connecting the load ﬂow solutions\ncorresponding to increasing system loading. The curve is traced\ntill the solution no longer exists, a condition referred to as the\nsaddle-node bifurcation (SNB). There are also fast methods,\nsuch as [9], where a look-ahead approach is utilized to approxi-\nmate the projection of this curve at one or more critical buses by\nusing a few load ﬂow solutions. Lately, holomorphic embedding\ntechniques[10] have become more popular which provides a\nclosed-form expression for this curve of load ﬂow solutions as\na function of loading. Note that the load ﬂow equations can\nundergo structural changes on generators hitting reactive power\nlimits which the existing methods are capable of dealing with.\nHowever, the case of RGs tripping ofﬂine is slightly different\nin that it introduces a discontinuity (jump) in the curve itself,\nwhich has not been studied in the previous work. Data-driven\nmethods [11]–[13] are also proposed in recent years, which\nprovide an estimate of the LM given measured system states.\nBut they aim more on the online applications and heavily depend\n1949-3029 © 2021 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.\nSee https://www.ieee.org/publications/rights/index.html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:31:42 UTC from IEEE Xplore.  Restrictions apply. \nW ANGet al.: SCALABLE METHOD OF ADAPTIVE L VRT SETTINGS ADJUSTMENT FOR VOLTAGE SECURITY ENHANCEMENT 441\non measurements. The results are either probabilistic or a range\nwhere the LM locates, which is not applicable here.\nGiven a scenario with rich RG penetration and low load\nmargin, the next step is to understand mitigation approaches\nto enhance it. Existing methods to enhance the LM mostly\nfocus on generation re-dispatch[14], load control [15], shunt\ncapacitance placement [16], network topology optimization[9],\nand other conventional perspectives. However, situations can\narise when they are not sufﬁcient especially when there is a\nthreat of losing multiple critical RGs[17] that will signiﬁcantly\nreduce the load margin. Under those circumstances, there may\nbe a need to temporarily relax the L VRT constraints for main-\ntaining system voltage security. It is important to clarify that\nthe authors acknowledge the criticality of L VRT’s function to\navoid situations with RGs staying online in an islanding sce-\nnario. Therefore, the goal of this study is to achieve certain LM\nimprovement through minimal adjustment in L VRT settings and\nimplement it only when necessary. Even if not used for online\napplications, this tool can help identify areas requiring additional\nreactive power support to reduce the amount of generation\nlost.\nExisting research on L VRT setting adjustment mainly concen-\ntrates on designing control schemes to enhance the RGs’ L VRT\ncapability [18]–[20]. Others propose control strategies to pro-\nvide better reactive support [21], [22] or to enhance system small\nsignal stability[23]. Researchers in [24] focus on equipping the\ninverter itself with autonomous model predictive control and\nenable the inverter to switch between normal operation and fault\nmodes. The fault ride-through capability of RGs is enhanced by\nautonomous P/Q setpoint changes. Additive devices like energy\nstorage [25], [26] and various fault current limiters [27], [28] are\nalso integrated to limit the fault current and further enhance the\nfault ride-through capability of RGs. For the L VRT criterion, re-\nsearchers in [29] attempted to summarize proper L VRT settings\nfrom real-world practices. [30] proposed a method to justify\nthe fault ride-through requirements for newly integrated RGs in\nthe system based on identiﬁed critical contingencies analysis.\nAlthough this work did not provide quantitative methods to ﬁnd\nproper ride though requirements, it conﬁrms the necessity to ﬁnd\nmore adaptive RG L VRT settings for better voltage security and\nmore efﬁcient renewable energy utilization. However, all these\nworks treat the L VRT settings as an existing standard; they do\nnot attempt to adjust the criterion for more secure and efﬁcient\nsystem operation.\nIn this paper, we proposed a scalable methodology to adap-\ntively adjust RGs’ L VRT settings to improve the voltage security\nof a system with high renewables penetration. This multi-stage\napproach involves identifying critical RGs in the system given\ncertain operation condition, ﬁltering feasible schemes of RGs\nblocked from tripping to reach desired LM, selecting optimum\nfeasible solutions by estimating L VRT setting adjustment quan-\ntities, and evaluating the selected solutions to ﬁnd true LM\nincrement and L VRT settings adjustment as results. With the\nmeasures to scale down the problem and multiple estimation\nsteps, the proposed method is fast and suitable for large-scale\nsystems. The main contributions include:\n1. Proposed the novel problem of RGs ﬂexible operation for\nvoltage security of system with high renewable penetration\nto facilitate renewable energy transition.\n2. Introduced a novel voltage prediction method for the iden-\ntiﬁcation of critical RGs to boost efﬁciency.\n3. Constructed a scheme combining multiple estimation-\nbased analytic tools to ﬁnd effective and feasible solutions\nof RG L VRT limit adjustment for system LM improve-\nment.\n4. Applied the proposed method to large scale renewable-rich\nsystems and validated its capability and scalability.\nThis paper is an extension of the work in [31] which proposed\nthe concept about improving system voltage security through\nﬂexible operation of RGs. To extend the proposed concept and\nimplement it with scalability and robustness, on the basis set\nby [31], the authors introduced several improvements to the\nintermedia steps and, more importantly, following advancement\nin the research: 1) further detailed and formalized the research\nproblem and explained key concepts like the Base Curve and\nthe discrete system condition change brought by renewables\ntripping; 2) improved the proposed voltage prediction method\nby introducing Least Squares Estimation (LSE) for robustness\nand curvature relevant data point selection method for better\naccuracy; 3) parallelized the sensitivity based LM estimation\nmethod to improve the method scalability; 4) proposed con-\ntinuous RG connection statuses instead of binary variables in\nthe L VRT constant estimation step to mitigate Newton-Raphson\n(NR) divergence issue; 5) deployed the proposed method in large\nscale RG-rich study cases and reached expected results.\nThe rest of the paper is organized as follows: Section II dis-\ncusses the impacts of RG tripping by L VRT violation to system\nvoltage security; Section III provides a theoretical formulation of\nthe problem studied; Section IV details the proposed adaptive\n",
+      "page_start": 1,
+      "page_end": 2,
+      "start": {
+        "page": 1,
+        "offset": 1819
+      },
+      "end": {
+        "page": 2,
+        "offset": 5406
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 5406
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 9678,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "VI. C ONCLUSION\nA scalable multi-stage method is proposed in this paper to\nadapt RGs’ L VRT settings as a preventive control measure to\nenhance voltage security. The overall process comprises of a\nCPFLOW with loss of RGs accounted for, identiﬁcation of\ncritical RGs using a proposed PV curve approximation method,\nscreening feasible candidates using LM sensitivity, estimation\nof minimum required L VRT adjustments, and an optimal RG\nblocking schemes selection and evaluation. The main contri-\nbution lies in the formulation of the L VRT adjustment problem.\nOther contributions include proposing a novel voltage prediction\nmethod, an estimation-based scalable scheme for feasible RG\noperation limits adjustment solution screening, and application\nof the proposed method in large scale renewable-rich system\nstudy cases. The overall goal is to help the system attain a desired\nLM by preventing nuisance RG trips due to L VRT violation.\nBy avoiding repetitive CPFLOW calculation, the approach is\nscalable and can be used both online to adapt L VRT settings\nas well as ofﬂine to identify areas requiring dynamic V AR\nsupport to minimize harmful loss of generation scenarios. Three\nstudy cases with various scales are used to demonstrate the\neffectiveness and efﬁciency of the method.\n",
+      "page_start": 11,
+      "page_end": 11,
+      "start": {
+        "page": 11,
+        "offset": 1366
+      },
+      "end": {
+        "page": 11,
+        "offset": 2647
+      },
+      "preview_end": {
+        "page": 11,
+        "offset": 2647
+      },
+      "heading": "vi.conclusion",
+      "method": "heading_match",
+      "end_reason": "backmatter",
+      "total_chars": 1281,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "introduction:numbered_boundary_candidate"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 319,
+      "heading": "abstract—recentexpansionofinverter-basedrenewablegener-",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1702,
+      "heading": "indexterms—adaptivecontrol,voltagesecurity,low-voltage",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 1819,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 5406,
+      "heading": "lvrtadjustmentmethodology;sectionvpresentsthecase",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 5599,
+      "heading": "ii.impactsofrglvrtviolationsonloadmargin",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 166,
+      "heading": "lvrtlimitwillbeviolated,thevoltagemagnitudevontherg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 966,
+      "heading": "lvrtlimitonrg2isviolatedandthesystemisoughttojump",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 1627,
+      "heading": "iii.problemformulation",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 2068,
+      "heading": "lvrtadjustmentproblemcanbeformulatedasanoptimization",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 2175,
+      "heading": "lvrt≥0,∀i∈{1,2,...,nrg}(a)",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 2252,
+      "heading": "lvrt−δclvrt",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 2306,
+      "heading": "lvrt−clvrt∈rnrg×1isthevector",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 2404,
+      "heading": "lvrt∈",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 2755,
+      "heading": "lvrt",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 2914,
+      "heading": "lvrtisthelvrtsettingofrgi.",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 3194,
+      "heading": "iv.methodologyforadaptivelvrtadjustment",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 3863,
+      "heading": "lvrtsettings,thereisnowayotherthanfullcpflowtofind",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 3931,
+      "heading": "lvrt",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 4215,
+      "heading": "lvrtthen",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 6,
+      "offset": 2140,
+      "heading": "lvrtadjustmentestimation.thedetailedalgorithmisshown",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 6,
+      "offset": 2217,
+      "heading": "c.estimatingadjustmenttolvrtlimits",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 579,
+      "heading": "lvrt(i)−vrg(i)",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 869,
+      "heading": "d.optimumadjustmentsolutionselectionandevaluation",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 1052,
+      "heading": "lvrtadjustments.however,thesesettingadjustmentsandthe",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 1584,
+      "heading": "dloopthroughfeasibleblockingschemes:",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 3118,
+      "heading": "v.casestudyanddiscussion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 10,
+      "offset": 1226,
+      "heading": "c.synthetic500-bussystem",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 11,
+      "offset": 1366,
+      "heading": "vi.conclusion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "backmatter",
+      "page": 11,
+      "offset": 2647,
+      "heading": "appendix",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 11,
+      "offset": 2757,
+      "heading": "references",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 12,
+      "offset": 5761,
+      "heading": "lvrtsettingsadjustmentforenhancingvoltagesecurityofrenewable-rich",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 12,
+      "offset": 6893,
+      "heading": "m.eng.degreesinelectricalengineeringfromshang-",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 6090
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [],
+      "chars": 6500
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4107
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5059
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5124
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5773
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3619
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3197
+    },
+    {
+      "page": 9,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3414
+    },
+    {
+      "page": 10,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4106
+    },
+    {
+      "page": 11,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4208
+    },
+    {
+      "page": 12,
+      "error": null,
+      "quality_flags": [],
+      "chars": 8996
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 5,
+      "cue": "we assume",
+      "snippet": "= λlimit are lower than respective L VRT settings are also\ndeemed critical. These V cannot be found directly given these\nRGs should have already been tripped ofﬂine before reaching\nλlimit. Therefore, we assume all L VRT settings are temporarily\ndisabled, i.e., all RGs are blocked from tripping at this stage.\nNow, in order to avoid repeatedly running a CPFLOW, we\nused LSE to estimate the voltages at differe"
+    },
+    {
+      "page": 5,
+      "cue": "assumption",
+      "snippet": "nd system loadingλ as follows,\n[\nλ2 λVi V2\ni λ Vi 1\n][\nαi βi γi σi ηi μi\n]T\n=0 (5)\nwhereVi is the voltage of bus i;[αi βi γi σi ηi μi ]T is the pa-\nrameter vector of the corresponding quadratic. This assumption\nis in line with the existing methods to predict P-V curve [32],\n[33]. It has been seen that simpler models [32] only perform well\nfor approximating the PV curve away from the SNB, while [33]\nonly per"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/01_A_Scalable_Method_of_Adaptive_LVRT_Settings_Adjustment_for_V_pages.json",
+  "abstract": "Abstract—Recent expansion of inverter-based renewable gener-\nation (RG) has introduced unprecedented stability issues. One ma-\njor challenge stems from tripping RGs ofﬂine during disturbances\nbased on predeﬁned operation thresholds (ride through curves) on\nvoltage magnitudes and frequency at the point of common coupling\n(PCC). The current practice uses a single set of thresholds for the\nwhole year across all RGs in the system. This could result in loss\nof these resources during critical times, particularly endangering\nsystem voltage security, i.e a signiﬁcant reduction in the load margin\n(LM). On the other hand, relaxing these limits could result in them\nstaying online even during islanding scenarios, which is a safety\nconcern to the restoration crew. Thus, an approach to ﬁnd minimal\nrelaxations to these limits to enhance voltage security is proposed\nhere. This process ﬁrst constructs an optimization model aiming\nto minimize adjustments on RG voltage limits to reach anticipated\nLM increase and then solves it with a multi-stage screening method\nincluding base power-voltage (P-V) curve acquisition, critical RGs\nidentiﬁcation, successive screenings of candidate solutions based on\nsensitivities, and optimal solutions validation. This largely increases\nthe scalability of the algorithm, which is demonstrated on the IEEE\n14-bus, 118-bus systems, and a 500-bus system.\n",
+  "introduction": "I. I NTRODUCTION\nG\nROWING concerns on carbon footprint have urged elec-\ntric power utilities to replace fossil fuel-based generation\nwith renewable energy resources. The increasing integration of\nRGs [1], on the other hand, has made the system operation much\nmore complicated. In the past, RGs were conservatively tripped\nofﬂine during disturbances to avoid energizing islands. However,\nthis practice posed a threat to system stability with the growing\npenetration of RGs. Thus, the time-dependent operation limits\nin the form of ride-through curves were introduced to allow\nManuscript received March 22, 2021; revised July 15, 2021 and September 7,\n2021; accepted September 23, 2021. Date of publication September 28, 2021;\ndate of current version December 16, 2021. Paper no. TSTE-00301-2021.R2.\n(Corresponding author: Chen Wang.)\nChen Wang and Virgilio A. Centeno are with the Bradley Department\nof Electrical and Computer Engineering, Virginia Polytechnic Institute and\nState University, Blacksburg, V A 24061 USA (e-mail: chenwang@vt.edu; vir-\ngilio@vt.edu).\nChetan Mishra is with Dominion Energy, Richmond, V A 23219 USA (e-mail:\nchetan31@vt.edu).\nColor versions of one or more ﬁgures in this article are available at\nhttps://doi.org/10.1109/TSTE.2021.3116102.\nDigital Object Identiﬁer 10.1109/TSTE.2021.3116102\nthem to remain online as long as there wasn’t an unintentional\nislanding situation, in which case these limits were expected to\nbe violated. These limits include the Low-V oltage Ride-Through\n(L VRT) curve and the Low-Frequency Ride-Through (LFRT)\ncurve concerning the voltage and frequency at the PCC of each\nRG, respectively [2].\nThe L VRT settings are designed to ensure that RGs only\ntrip ofﬂine during islanding scenarios [3]. However, in reality,\nit is extremely difﬁcult to distinguish islanding cases based\nonly on the local measurements at the PCC [4]. Furthermore,\nthere is no widely accepted approach to arriving at an optimal\nsetting. A conservatively designed L VRT setting can result in a\nwidespread tripping event, especially for transmission network\nfaults, which can threaten system stability, as happened in the\nUnited Kingdom on August 9th, 2019 [5]. Researchers in [6],\n[7] have talked about the negative effect of this generation loss\non transient stability. Given low voltage scenarios are of major\nconcern in both steady state and dynamical stability analysis,\nthis article focused on the L VRT and considered its inﬂuence on\nsystem voltage security.\nA widely used metric for voltage security is LM, which refers\nto the maximum load the system can supply with all the online\nresources. The CPFLOW [8] is the most reliable method to\nestimate it, however, is computationally intensive. Given a ﬁxed\nload change direction, CPFLOW traces the one-dimensional\nP-V curve in the state space connecting the load ﬂow solutions\ncorresponding to increasing system loading. The curve is traced\ntill the solution no longer exists, a condition referred to as the\nsaddle-node bifurcation (SNB). There are also fast methods,\nsuch as [9], where a look-ahead approach is utilized to approxi-\nmate the projection of this curve at one or more critical buses by\nusing a few load ﬂow solutions. Lately, holomorphic embedding\ntechniques[10] have become more popular which provides a\nclosed-form expression for this curve of load ﬂow solutions as\na function of loading. Note that the load ﬂow equations can\nundergo structural changes on generators hitting reactive power\nlimits which the existing methods are capable of dealing with.\nHowever, the case of RGs tripping ofﬂine is slightly different\nin that it introduces a discontinuity (jump) in the curve itself,\nwhich has not been studied in the previous work. Data-driven\nmethods [11]–[13] are also proposed in recent years, which\nprovide an estimate of the LM given measured system states.\nBut they aim more on the online applications and heavily depend\n1949-3029 © 2021 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.\nSee https://www.ieee.org/publications/rights/index.html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:31:42 UTC from IEEE Xplore.  Restrictions apply. \nW ANGet al.: SCALABLE METHOD OF ADAPTIVE L VRT SETTINGS ADJUSTMENT FOR VOLTAGE SECURITY ENHANCEMENT 441\non measurements. The results are either probabilistic or a range\nwhere the LM locates, which is not applicable here.\nGiven a scenario with rich RG penetration and low load\nmargin, the next step is to understand mitigation approaches\nto enhance it. Existing methods to enhance the LM mostly\nfocus on generation re-dispatch[14], load control [15], shunt\ncapacitance placement [16], network topology optimization[9],\nand other conventional perspectives. However, situations can\narise when they are not sufﬁcient especially when there is a\nthreat of losing multiple critical RGs[17] that will signiﬁcantly\nreduce the load margin. Under those circumstances, there may\nbe a need to temporarily relax the L VRT constraints for main-\ntaining system voltage security. It is important to clarify that\nthe authors acknowledge the criticality of L VRT’s function to\navoid situations with RGs staying online in an islanding sce-\nnario. Therefore, the goal of this study is to achieve certain LM\nimprovement through minimal adjustment in L VRT settings and\nimplement it only when necessary. Even if not used for online\napplications, this tool can help identify areas requiring additional\nreactive power support to reduce the amount of generation\nlost.\nExisting research on L VRT setting adjustment mainly concen-\ntrates on designing control schemes to enhance the RGs’ L VRT\ncapability [18]–[20]. Others propose control strategies to pro-\nvide better reactive support [21], [22] or to enhance system small\nsignal stability[23]. Researchers in [24] focus on equipping the\ninverter itself with autonomous model predictive control and\nenable the inverter to switch between normal operation and fault\nmodes. The fault ride-through capability of RGs is enhanced by\nautonomous P/Q setpoint changes. Additive devices like energy\nstorage [25], [26] and various fault current limiters [27], [28] are\nalso integrated to limit the fault current and further enhance the\nfault ride-through capability of RGs. For the L VRT criterion, re-\nsearchers in [29] attempted to summarize proper L VRT settings\nfrom real-world practices. [30] proposed a method to justify\nthe fault ride-through requirements for newly integrated RGs in\nthe system based on identiﬁed critical contingencies analysis.\nAlthough this work did not provide quantitative methods to ﬁnd\nproper ride though requirements, it conﬁrms the necessity to ﬁnd\nmore adaptive RG L VRT settings for better voltage security and\nmore efﬁcient renewable energy utilization. However, all these\nworks treat the L VRT settings as an existing standard; they do\nnot attempt to adjust the criterion for more secure and efﬁcient\nsystem operation.\nIn this paper, we proposed a scalable methodology to adap-\ntively adjust RGs’ L VRT settings to improve the voltage security\nof a system with high renewables penetration. This multi-stage\napproach involves identifying critical RGs in the system given\ncertain operation condition, ﬁltering feasible schemes of RGs\nblocked from tripping to reach desired LM, selecting optimum\nfeasible solutions by estimating L VRT setting adjustment quan-\ntities, and evaluating the selected solutions to ﬁnd true LM\nincrement and L VRT settings adjustment as results. With the\nmeasures to scale down the problem and multiple estimation\nsteps, the proposed method is fast and suitable for large-scale\nsystems. The main contributions include:\n1. Proposed the novel problem of RGs ﬂexible operation for\nvoltage security of system with high renewable penetration\nto facilitate renewable energy transition.\n2. Introduced a novel voltage prediction method for the iden-\ntiﬁcation of critical RGs to boost efﬁciency.\n3. Constructed a scheme combining multiple estimation-\nbased analytic tools to ﬁnd effective and feasible solutions\nof RG L VRT limit adjustment for system LM improve-\nment.\n4. Applied the proposed method to large scale renewable-rich\nsystems and validated its capability and scalability.\nThis paper is an extension of the work in [31] which proposed\nthe concept about improving system voltage security through\nﬂexible operation of RGs. To extend the proposed concept and\nimplement it with scalability and robustness, on the basis set\nby [31], the authors introduced several improvements to the\nintermedia steps and, more importantly, following advancement\nin the research: 1) further detailed and formalized the research\nproblem and explained key concepts like the Base Curve and\nthe discrete system condition change brought by renewables\ntripping; 2) improved the proposed voltage prediction method\nby introducing Least Squares Estimation (LSE) for robustness\nand curvature relevant data point selection method for better\naccuracy; 3) parallelized the sensitivity based LM estimation\nmethod to improve the method scalability; 4) proposed con-\ntinuous RG connection statuses instead of binary variables in\nthe L VRT constant estimation step to mitigate Newton-Raphson\n(NR) divergence issue; 5) deployed the proposed method in large\nscale RG-rich study cases and reached expected results.\nThe rest of the paper is organized as follows: Section II dis-\ncusses the impacts of RG tripping by L VRT violation to system\nvoltage security; Section III provides a theoretical formulation of\nthe problem studied; Section IV details the proposed adaptive\n",
+  "conclusion": "VI. C ONCLUSION\nA scalable multi-stage method is proposed in this paper to\nadapt RGs’ L VRT settings as a preventive control measure to\nenhance voltage security. The overall process comprises of a\nCPFLOW with loss of RGs accounted for, identiﬁcation of\ncritical RGs using a proposed PV curve approximation method,\nscreening feasible candidates using LM sensitivity, estimation\nof minimum required L VRT adjustments, and an optimal RG\nblocking schemes selection and evaluation. The main contri-\nbution lies in the formulation of the L VRT adjustment problem.\nOther contributions include proposing a novel voltage prediction\nmethod, an estimation-based scalable scheme for feasible RG\noperation limits adjustment solution screening, and application\nof the proposed method in large scale renewable-rich system\nstudy cases. The overall goal is to help the system attain a desired\nLM by preventing nuisance RG trips due to L VRT violation.\nBy avoiding repetitive CPFLOW calculation, the approach is\nscalable and can be used both online to adapt L VRT settings\nas well as ofﬂine to identify areas requiring dynamic V AR\nsupport to minimize harmful loss of generation scenarios. Three\nstudy cases with various scales are used to demonstrate the\neffectiveness and efﬁciency of the method.\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/A_Scalable_Method_of_Adaptive_LVRT_Settings_Adjustment_for_Voltage_Security_Enhancement_in_Power_Systems_With_High_Renewable_Penetration.pdf",
+  "file_sha256": "dbc805871500fd7a41e64d4a8162f19b339b87aa6502c7f15478b817cf3eec99",
+  "target_ids": [
+    "P07"
+  ]
+}

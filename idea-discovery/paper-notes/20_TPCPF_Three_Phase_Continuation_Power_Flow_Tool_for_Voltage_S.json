@@ -1,0 +1,292 @@
+{
+  "schema_version": 2,
+  "filename": "TPCPF_Three-Phase_Continuation_Power_Flow_Tool_for_Voltage_Stability_Assessment_of_Distribution_Networks_With_Distributed_Energy_Resources.pdf",
+  "pages": 12,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/TIA.2021.3088384",
+  "year_candidates": [
+    "2026",
+    "2021",
+    "2020"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—This work presents a three-phase unbalanced contin-\nuation power ﬂow algorithm for voltage stability assessment of\ndistribution systems with high penetration of distributed energy\nresources (DERs). Analyzing distribution system voltage stability\nwith DER will allow high penetration of renewable energy nec-\nessary for the sustainability goals. The developed algorithm can\nanalyze voltage stability for both the meshed and radial systems\nand the balanced and unbalanced three-phase distribution sys-\ntems. The developed tool allows the voltage stability analysis to\nfacilitate the planning, operation, control, and distribution system\nmanagement. The impact of DER on the voltage stability of several\ntest cases has been analyzed considering constant power ( PQ )\nand regulated-voltage ( PV ) modes of operation for DER units.\nMoreover, different voltage stability case studies are presented to\ndemonstrate the impact of unbalance, load increment, and network\ntopology on the maximum loading capacity. Results using the IEEE\n13-node feeder, the 18-bus balanced shipboard system, the 13-node\nCIGRE benchmark system, and the 136-bus redial distribution\nfeeder demonstrate that the developed continuation power ﬂow\ntool can efﬁciently perform voltage stability analysis for active\ndistribution systems.\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 394
+      },
+      "end": {
+        "page": 1,
+        "offset": 1703
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1703
+      },
+      "heading": "abstract—thisworkpresentsathree-phaseunbalancedcontin-",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1309,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. I NTRODUCTION\nV\nOLTAGE stability analysis is critical for operating the\nsystem in a reliable and efﬁcient mode considering the\ncontinuous growth in demand driven by environmental, eco-\nnomic, and technical constraints. V oltage collapse has been\none of the prime reasons for several signiﬁcant disturbances\nManuscript received February 6, 2021; revised April 6, 2021; accepted June 1,\n2021. Date of publication June 10, 2021; date of current version September 16,\n2021. Paper 2021-IACC-0141.R1, presented at the 2020 IEEE Industry Appli-\ncations Society Annual Meeting, Detroit, MI, USA, Oct. 10–16, and approved\nfor publication in the IEEE T RANSACTIONS ON INDUSTRY APPLICA TIONSby the\nIndustrial Automation and Control Committee of the IEEE Industry Applica-\ntions Society. This work was supported in part by the Fulbright Scholarship\nand the U.S. Department of Energy UI-ASSIST under Grant DE-IA0000025.\n(Corresponding author: Anurag K. Srivastava.)\nPramila S. Nirbhavane is with the New Y ork Independent System Operator,\nInc., Rensselaer, NY 12144 USA (e-mail: pnirbhavane@nyiso.com).\nLeslie Corson is with the Douglas County Public Utility District, East We-\nnatchee, W A 98802 USA (e-mail: lesliecorson@hotmail.com).\nSyed M. Hur Rizvi and Anurag K. Srivastava are with the Department of\nElectrical Engineering, Washington State University, Pullman, W A 99164 USA\n(e-mail: syed.rizvi@wsu.edu; anurag.k.srivastava@wsu.edu).\nColor versions of one or more ﬁgures in this article are available at https:\n//doi.org/10.1109/TIA.2021.3088384.\nDigital Object Identiﬁer 10.1109/TIA.2021.3088384\nin the past [1], [2], and as a result, voltage stability assessment\nresearch has received great attention [3]–[5]. V oltage stability is\nusually considered a local phenomenon, but the impacts could be\nwidespread and could lead to a system-level voltage collapse [6].\nV oltage stability of power systems has been a vastly studied\ntopic for transmission system analysis [7], [8]. The continuation\npower ﬂow (CPF) method has always been considered one of\nthe best methods to evaluate voltage stability [9]–[11]. CPF-\nbased approaches have proven their mettle and have become\na necessary tool in many energy control centers. Transmission\nsystem operators use CPF to determine the maximum loading\ncapacity and also for detailed contingency analysis. In gen-\neral, the CPF-based approaches use predictor–corrector steps\nto trace the P –V curves as the loading multiplier is increased\nfrom the base case till the collapse point. As the system be-\ncomes stressed, the power ﬂow Jacobian approaches singularity,\nand CPF uses parameterization and augmentation of power\nﬂow Jacobian to ensure convergence under stressed operating\nconditions.\nCPF for distribution networks has received relatively less\nattention compared to transmission. Most mature transmission\nanalysis tools have well-developed CPF libraries capable of\ntracing the static voltage behavior. Some researchers have tried\nextending the conventional forward–backward sweep power\nﬂow to develop CPF tools for distribution [12]. The major\ndisadvantage of forward–backward sweep-based CPF is limited\napplicability in the analysis of meshed distribution networks.\nIn [13], Ju et al. have presented a loop-based CPF method for\ndistribution systems, but this algorithm can only be used for\nradial and weakly meshed networks. In [14], Sheng and Chi-\nang have developed a comprehensive three-phase continuation\npower ﬂow (TPCPF) tool for distribution networks. The tool\ndeveloped in [14] uses a modiﬁed Newton method for corrector\nimplementation. Dou [15] also consider the traditional Newton\nmethod for the development of the CPF tool for distribution\nnetworks with high distributed energy resource (DER) pene-\ntration. The Newton method in its traditional form has faced\nconvergence issues in the power ﬂow analysis of distribution\nnetworks due to their appreciably high R/X ratio. Thus, a CPF\ntool embedded with a power ﬂow solution method suitable for\nmeshed and radial distribution networks is highly desirable to\nsuit modern active distribution systems’ planning and opera-\ntional analysis needs.\n0093-9994 © 2021 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.\nSee https://www.ieee.org/publications/rights/index.html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:39:23 UTC from IEEE Xplore.  Restrictions apply. \n5426 IEEE TRANSACTIONS ON INDUSTRY APPLICATIONS, VOL. 57, NO. 5, SEPTEMBER/OCTOBER 2021\nTraditional power ﬂow methods adopted for transmission\nsystem analysis have faced convergence issues when applied to\nanalyze the distribution system. The reason behind unsuitability\nlies in the special characteristics of distribution networks. The\ndistribution networks possess a comparatively high R/X ratio\nand are mostly radial in the literature. That, coupled with the\nmultiphase unbalanced operation and increasing penetration of\nDERs, has resulted in numerical issues when the traditional\nNewton method is used for distribution networks [16], [17].\nThe convergence issues are further aggravated by distribution\nsystems moving toward more meshed topologies. This evolving\nactive nature of distribution networks necessitates dedicated\npower ﬂow algorithms for unbalanced distribution system anal-\nysis. The three-phase power ﬂow methods explained in [18] and\n[19] use the current injection method for power ﬂow analysis in\ndistribution networks. Recent modernization of the electric grid\nwith smart grid revolution has made tremendous modiﬁcations\nin distribution systems’ structure. A high degree of unbalance,\nDER penetration, and multiphase radial feeders make voltage\nstability a pivotal concern in distribution networks. The three-\nphase current injection method (TCIM) in [19] is a powerful dis-\ntribution power ﬂow solver for both meshed and radial networks.\nThis method has also been adopted in commercial-grade distri-\nbution solvers such as OPENDSS [20] and GRIDLAB-D [21].\nOPENDSS [20] uses a TCIM for analysis of both radial and\nmeshed distribution networks, whereas GRIDLAB-D [20] uses\nforward–backward sweep for analysis of radial conﬁgurations\nand uses the current injection method for meshed conﬁgurations.\nBecause of the superior performance of the current injection\nmethod in three-phase distribution analyses, this work considers\nusing the TCIM [18], [19] for the development of the proposed\nCPF tool for active distribution networks.\nThis work builds on our previous work [22] and presents the\nTPCPF tool for voltage stability analysis with the following\ncontributions.\n1) Developed formulation and algorithm for CPF for un-\nbalanced three-phase distribution power systems with\nDERs using the current injection power ﬂow method, the\nadaptive step predictor–corrector, thePV –PQ switching\nalgorithm, and the nose point convergence criterion.\n2) Investigated the effect of DERs in improving the voltage\nproﬁles and improving the system loading margin. The\nimpact of unbalance, topology, DER penetration, and DER\nmodels is also demonstrated on the system loading margin.\n3) Analyzed the performance for both meshed and radial\nactive distribution networks.\n4) V alidated the performance for four test cases: IEEE 13-\nnode feeder, 18-bus balanced shipboard system, 13-node\nCIGRE benchmark system, and 136-bus redial distribu-\ntion feeder.\n",
+      "page_start": 1,
+      "page_end": 2,
+      "start": {
+        "page": 1,
+        "offset": 1826
+      },
+      "end": {
+        "page": 2,
+        "offset": 2946
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 2946
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 7438,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "V. C ONCLUSION\nThis work describes development of a three-phase unbalanced\nCPF algorithm for active distribution systems using the TCIM,\nadaptive step predictor–corrector,PV –PQ switching, and nose\npoint convergence criteria. The TCIM allows incorporating\nDERs using a PV (voltage-regulated) or PQ (constant-power)\nmodel. This tool can be utilized for the voltage stability assess-\nment of unbalanced distribution feeders with high penetration\nof DERs. The impacts of load increment on the system for\nboth (balanced and unbalanced) radial and meshed distribution\nnetworks have been investigated. PV and PQ models for the\nDGs have been studied, and their signiﬁcance is presented with\nnumerical results. Thus,P –V curves obtained using the TPCPF\ntool can help determine the weakest system bus and provide a\nguideline for the optimum placement of the distributed genera-\ntion to improve the voltage stability of the system. The developed\nTPCPF tool has been validated for multiple test systems, in-\ncluding the IEEE 13-node feeder, the 18-bus balanced shipboard\nsystem, the 13-node CIGRE benchmark system, and the 136-bus\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:39:23 UTC from IEEE Xplore.  Restrictions apply. \n5436 IEEE TRANSACTIONS ON INDUSTRY APPLICATIONS, VOL. 57, NO. 5, SEPTEMBER/OCTOBER 2021\nredial distribution feeder for multiple system scenarios. The\ndeveloped TPCPF can be used effectively for the planning,\noperation, control, and management of the active distribution\nsystems with high penetration of DERs.\n",
+      "page_start": 11,
+      "page_end": 12,
+      "start": {
+        "page": 11,
+        "offset": 2491
+      },
+      "end": {
+        "page": 12,
+        "offset": 309
+      },
+      "preview_end": {
+        "page": 12,
+        "offset": 309
+      },
+      "heading": "v.conclusion",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 1591,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "introduction:numbered_boundary_candidate",
+    "page:3:fragmented_text"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 394,
+      "heading": "abstract—thisworkpresentsathree-phaseunbalancedcontin-",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1703,
+      "heading": "indexterms—continuationpowerflow(cpf),distributed",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 1826,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 2946,
+      "heading": "ii.three-phasecurrentinjectionpowerflow",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 1216,
+      "heading": "iii.three-phasecontinuationpowerflow",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 1043,
+      "heading": "c.steplengthcontrol",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 1949,
+      "heading": "iv.resultsanddiscussion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 1951,
+      "heading": "c.cigre13-bussystem",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 10,
+      "offset": 96,
+      "heading": "impactofthedermodelontheloadingmargininthecigre",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 11,
+      "offset": 2491,
+      "heading": "v.conclusion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 12,
+      "offset": 309,
+      "heading": "references",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 6317
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5717
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 3689
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3190
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4122
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3525
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3191
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [],
+      "chars": 2504
+    },
+    {
+      "page": 9,
+      "error": null,
+      "quality_flags": [],
+      "chars": 2557
+    },
+    {
+      "page": 10,
+      "error": null,
+      "quality_flags": [],
+      "chars": 2415
+    },
+    {
+      "page": 11,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3772
+    },
+    {
+      "page": 12,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5686
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 12,
+      "cue": "limitation",
+      "snippet": "alu, and M. G. Lauby, Power System Stability and\nControl, vol. 7. New Y ork, NY , USA: McGraw-Hill, 1994.\n[2] C. W. Taylor, Reactive Power Compensation and V oltage Stability: Re-\nmoving Transmission Limitations . Portland, OR, USA: Carson Taylor\nSeminars, 1989.\n[3] L. H. Fink, Proceedings, Bulk Power System V oltage Phenomena: V oltage\nStability and Security: Potosi, Missouri, Sep. 19-24, 1988 . Palo Alto,"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/20_TPCPF_Three_Phase_Continuation_Power_Flow_Tool_for_Voltage_S_pages.json",
+  "abstract": "Abstract—This work presents a three-phase unbalanced contin-\nuation power ﬂow algorithm for voltage stability assessment of\ndistribution systems with high penetration of distributed energy\nresources (DERs). Analyzing distribution system voltage stability\nwith DER will allow high penetration of renewable energy nec-\nessary for the sustainability goals. The developed algorithm can\nanalyze voltage stability for both the meshed and radial systems\nand the balanced and unbalanced three-phase distribution sys-\ntems. The developed tool allows the voltage stability analysis to\nfacilitate the planning, operation, control, and distribution system\nmanagement. The impact of DER on the voltage stability of several\ntest cases has been analyzed considering constant power ( PQ )\nand regulated-voltage ( PV ) modes of operation for DER units.\nMoreover, different voltage stability case studies are presented to\ndemonstrate the impact of unbalance, load increment, and network\ntopology on the maximum loading capacity. Results using the IEEE\n13-node feeder, the 18-bus balanced shipboard system, the 13-node\nCIGRE benchmark system, and the 136-bus redial distribution\nfeeder demonstrate that the developed continuation power ﬂow\ntool can efﬁciently perform voltage stability analysis for active\ndistribution systems.\n",
+  "introduction": "I. I NTRODUCTION\nV\nOLTAGE stability analysis is critical for operating the\nsystem in a reliable and efﬁcient mode considering the\ncontinuous growth in demand driven by environmental, eco-\nnomic, and technical constraints. V oltage collapse has been\none of the prime reasons for several signiﬁcant disturbances\nManuscript received February 6, 2021; revised April 6, 2021; accepted June 1,\n2021. Date of publication June 10, 2021; date of current version September 16,\n2021. Paper 2021-IACC-0141.R1, presented at the 2020 IEEE Industry Appli-\ncations Society Annual Meeting, Detroit, MI, USA, Oct. 10–16, and approved\nfor publication in the IEEE T RANSACTIONS ON INDUSTRY APPLICA TIONSby the\nIndustrial Automation and Control Committee of the IEEE Industry Applica-\ntions Society. This work was supported in part by the Fulbright Scholarship\nand the U.S. Department of Energy UI-ASSIST under Grant DE-IA0000025.\n(Corresponding author: Anurag K. Srivastava.)\nPramila S. Nirbhavane is with the New Y ork Independent System Operator,\nInc., Rensselaer, NY 12144 USA (e-mail: pnirbhavane@nyiso.com).\nLeslie Corson is with the Douglas County Public Utility District, East We-\nnatchee, W A 98802 USA (e-mail: lesliecorson@hotmail.com).\nSyed M. Hur Rizvi and Anurag K. Srivastava are with the Department of\nElectrical Engineering, Washington State University, Pullman, W A 99164 USA\n(e-mail: syed.rizvi@wsu.edu; anurag.k.srivastava@wsu.edu).\nColor versions of one or more ﬁgures in this article are available at https:\n//doi.org/10.1109/TIA.2021.3088384.\nDigital Object Identiﬁer 10.1109/TIA.2021.3088384\nin the past [1], [2], and as a result, voltage stability assessment\nresearch has received great attention [3]–[5]. V oltage stability is\nusually considered a local phenomenon, but the impacts could be\nwidespread and could lead to a system-level voltage collapse [6].\nV oltage stability of power systems has been a vastly studied\ntopic for transmission system analysis [7], [8]. The continuation\npower ﬂow (CPF) method has always been considered one of\nthe best methods to evaluate voltage stability [9]–[11]. CPF-\nbased approaches have proven their mettle and have become\na necessary tool in many energy control centers. Transmission\nsystem operators use CPF to determine the maximum loading\ncapacity and also for detailed contingency analysis. In gen-\neral, the CPF-based approaches use predictor–corrector steps\nto trace the P –V curves as the loading multiplier is increased\nfrom the base case till the collapse point. As the system be-\ncomes stressed, the power ﬂow Jacobian approaches singularity,\nand CPF uses parameterization and augmentation of power\nﬂow Jacobian to ensure convergence under stressed operating\nconditions.\nCPF for distribution networks has received relatively less\nattention compared to transmission. Most mature transmission\nanalysis tools have well-developed CPF libraries capable of\ntracing the static voltage behavior. Some researchers have tried\nextending the conventional forward–backward sweep power\nﬂow to develop CPF tools for distribution [12]. The major\ndisadvantage of forward–backward sweep-based CPF is limited\napplicability in the analysis of meshed distribution networks.\nIn [13], Ju et al. have presented a loop-based CPF method for\ndistribution systems, but this algorithm can only be used for\nradial and weakly meshed networks. In [14], Sheng and Chi-\nang have developed a comprehensive three-phase continuation\npower ﬂow (TPCPF) tool for distribution networks. The tool\ndeveloped in [14] uses a modiﬁed Newton method for corrector\nimplementation. Dou [15] also consider the traditional Newton\nmethod for the development of the CPF tool for distribution\nnetworks with high distributed energy resource (DER) pene-\ntration. The Newton method in its traditional form has faced\nconvergence issues in the power ﬂow analysis of distribution\nnetworks due to their appreciably high R/X ratio. Thus, a CPF\ntool embedded with a power ﬂow solution method suitable for\nmeshed and radial distribution networks is highly desirable to\nsuit modern active distribution systems’ planning and opera-\ntional analysis needs.\n0093-9994 © 2021 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.\nSee https://www.ieee.org/publications/rights/index.html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:39:23 UTC from IEEE Xplore.  Restrictions apply. \n5426 IEEE TRANSACTIONS ON INDUSTRY APPLICATIONS, VOL. 57, NO. 5, SEPTEMBER/OCTOBER 2021\nTraditional power ﬂow methods adopted for transmission\nsystem analysis have faced convergence issues when applied to\nanalyze the distribution system. The reason behind unsuitability\nlies in the special characteristics of distribution networks. The\ndistribution networks possess a comparatively high R/X ratio\nand are mostly radial in the literature. That, coupled with the\nmultiphase unbalanced operation and increasing penetration of\nDERs, has resulted in numerical issues when the traditional\nNewton method is used for distribution networks [16], [17].\nThe convergence issues are further aggravated by distribution\nsystems moving toward more meshed topologies. This evolving\nactive nature of distribution networks necessitates dedicated\npower ﬂow algorithms for unbalanced distribution system anal-\nysis. The three-phase power ﬂow methods explained in [18] and\n[19] use the current injection method for power ﬂow analysis in\ndistribution networks. Recent modernization of the electric grid\nwith smart grid revolution has made tremendous modiﬁcations\nin distribution systems’ structure. A high degree of unbalance,\nDER penetration, and multiphase radial feeders make voltage\nstability a pivotal concern in distribution networks. The three-\nphase current injection method (TCIM) in [19] is a powerful dis-\ntribution power ﬂow solver for both meshed and radial networks.\nThis method has also been adopted in commercial-grade distri-\nbution solvers such as OPENDSS [20] and GRIDLAB-D [21].\nOPENDSS [20] uses a TCIM for analysis of both radial and\nmeshed distribution networks, whereas GRIDLAB-D [20] uses\nforward–backward sweep for analysis of radial conﬁgurations\nand uses the current injection method for meshed conﬁgurations.\nBecause of the superior performance of the current injection\nmethod in three-phase distribution analyses, this work considers\nusing the TCIM [18], [19] for the development of the proposed\nCPF tool for active distribution networks.\nThis work builds on our previous work [22] and presents the\nTPCPF tool for voltage stability analysis with the following\ncontributions.\n1) Developed formulation and algorithm for CPF for un-\nbalanced three-phase distribution power systems with\nDERs using the current injection power ﬂow method, the\nadaptive step predictor–corrector, thePV –PQ switching\nalgorithm, and the nose point convergence criterion.\n2) Investigated the effect of DERs in improving the voltage\nproﬁles and improving the system loading margin. The\nimpact of unbalance, topology, DER penetration, and DER\nmodels is also demonstrated on the system loading margin.\n3) Analyzed the performance for both meshed and radial\nactive distribution networks.\n4) V alidated the performance for four test cases: IEEE 13-\nnode feeder, 18-bus balanced shipboard system, 13-node\nCIGRE benchmark system, and 136-bus redial distribu-\ntion feeder.\n",
+  "conclusion": "V. C ONCLUSION\nThis work describes development of a three-phase unbalanced\nCPF algorithm for active distribution systems using the TCIM,\nadaptive step predictor–corrector,PV –PQ switching, and nose\npoint convergence criteria. The TCIM allows incorporating\nDERs using a PV (voltage-regulated) or PQ (constant-power)\nmodel. This tool can be utilized for the voltage stability assess-\nment of unbalanced distribution feeders with high penetration\nof DERs. The impacts of load increment on the system for\nboth (balanced and unbalanced) radial and meshed distribution\nnetworks have been investigated. PV and PQ models for the\nDGs have been studied, and their signiﬁcance is presented with\nnumerical results. Thus,P –V curves obtained using the TPCPF\ntool can help determine the weakest system bus and provide a\nguideline for the optimum placement of the distributed genera-\ntion to improve the voltage stability of the system. The developed\nTPCPF tool has been validated for multiple test systems, in-\ncluding the IEEE 13-node feeder, the 18-bus balanced shipboard\nsystem, the 13-node CIGRE benchmark system, and the 136-bus\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:39:23 UTC from IEEE Xplore.  Restrictions apply. \n5436 IEEE TRANSACTIONS ON INDUSTRY APPLICATIONS, VOL. 57, NO. 5, SEPTEMBER/OCTOBER 2021\nredial distribution feeder for multiple system scenarios. The\ndeveloped TPCPF can be used effectively for the planning,\noperation, control, and management of the active distribution\nsystems with high penetration of DERs.\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/TPCPF_Three-Phase_Continuation_Power_Flow_Tool_for_Voltage_Stability_Assessment_of_Distribution_Networks_With_Distributed_Energy_Resources.pdf",
+  "file_sha256": "f090a814407918bf9753706e7c3af5ab4321d378a1d5527d097da6cc9b33273d",
+  "target_ids": [
+    "P08"
+  ]
+}

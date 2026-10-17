@@ -1,0 +1,259 @@
+{
+  "schema_version": 2,
+  "filename": "Static_Voltage_Stability_Based_Maximum_Integration_Ratio_of_Distributed_Renewable_Energy_in_Distribution_Power_System.pdf",
+  "pages": 5,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/ICCEPE62686.2024.10931356",
+  "year_candidates": [
+    "2026",
+    "2024"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract. Distributed renewable energy source (DREs) is an\neffective supplement to traditional centralized power generation\nsystems. However, how to allocate the DREs and how to evaluate\nthe maximum integration ratio of DREs are the two main\nobstacles hindering the development of DREs. To tackle these\nproblems, this paper proposes a novel optimal allocation method\nfor DREs in distribution power systems with static voltage\ns t a b i l i t y a s t h e c o n s t r a i n t . B a s e d o n t h e o p t i m a l a l l o c a t i o n\nmethod, one maximum integration ratio of DREs in the\ndistribution power system is studied. The theoretical analysis and\ncase studies show the effectiveness of the proposed allocation and\nevaluation methods of DREs. Moreover, the proposed allocation\nmethod of DREs can achieve high efficiency and low power loss.\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 301
+      },
+      "end": {
+        "page": 1,
+        "offset": 1143
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1143
+      },
+      "heading": "abstract.distributedrenewableenergysource(dres)isan",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 842,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. Introduction\nDistributed renewable energy source (DREs) is an\neffective supplement to traditional centralized power\ngeneration systems. The combined and complementary power\ngeneration model of traditional centralized power generation\nand DREs has the functions of achieving green development,\nreducing transmission losses, saving investment, and\nimproving system reliability. It breaks the shortcomings of\nhigh pollution and low reliability of traditional centralized\npower supply systems, improves energy utilization efficiency,\nand flexibly distributes location-allocation, satisfying the\ncharacteristics of existing resource distribution and the\ndemand for decentralized power supply [1-2].\nHowever, the dynamic reactive power support capability\nof renewable energy units is weak [3]. With the rapid increase\nin the proportion of renewable energy, the system voltage\nsupport capability drops sharply, and the problem of voltage\nstability is prominent. The static voltage stability can reflect\nthe voltage stability level of the system to a certain extent.\nTherefore, studying the static voltage stability and its margin\nof the new energy multi-station transmission system is of great\nsignificance for the safe and stable operation of the system [4].\nO n e o f t h e m a i n f a c t o r s l i m i t i n g t h e D R E s l e v e l i s t h e\nvoltage exceeding the limit caused by the reverse power flow\ncaused by the renewable energy access. A simple solution is to\nreduce the voltage setting of the substation or use an automatic\nvoltage controller (AVC) on the feeder. However, the access\ncapacity and location of DREs are different, so the allocation\nof AVC or dynamic reactive power compensator is\ncomplicated. Besides, the investment of the extra AVC\nequipment in each accession node is high. Moreover, the\nvoltage distribution of the whole feeder cannot be guaranteed\nin an acceptable range by just the on-load tap-changer due to\nthe dynamic changes in the renewable energy output. In [5],\nan approach to find suitable sites for integrating DREs on the\nbasis of maximum power that can be injected at these sites\nwithout violating transmission network constraints is proposed,\nbut the approach is a little complicated. In [6], a technique for\nfinding the optimal locations and sizes of (RESs) in electric\npower systems is proposed by using oscillatory particle swarm\noptimization. However, the static voltage constraint is not\nfully considered in these available studies.\nTherefore, this paper intends to study the maximum\nintegration of DREs in the distribution power system while\nconsidering static voltage stability. The main contributions of\nthis paper are as follows:\n1) the optimal allocation method of DREs in the\ndistribution power system is proposed.\n2) the maximum integration ratio of DREs with static\nvoltage stability as a constraint is proposed.\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 1266
+      },
+      "end": {
+        "page": 1,
+        "offset": 4133
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 4133
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 2867,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "V. Conclusion and future work\nThe allocation value of DREs in distribution with a radial\nnetwork has a great influence on the static voltage of the\ndistribution nodes. An unreasonable allocation value of DREs\nin distribution will cause some nodes to exceed the static\nvoltage limits and result in a large power transmission loss.\nHence, this paper proposes a novel optimal allocation method\nfor DREs in a distribution power system with static voltage\nstability as the constraint. Based on the optimal allocation\nmethod, one maximum integration ratio of DREs in the\ndistribution power system is studied. Through the theoretical\nanalysis and simulation verification, it can be concluded that\nthe optimal allocation value of DREs should be equal to the\npower load except for the node closest to the source node (the\nsubstation). Compared to other allocation methods of DREs in\ndistribution, this allocation method can avoid power backflow\nexcept for the node closest to the source node, thereby\npreventing some remote nodes from exceeding the voltage\nlimit and reducing the power losses caused by line impedance\nduring the transmission.\nThe impact of the reactive power on the allocation method\nsuitable for the distribution with a ring network will be studied\nin further work.\n",
+      "page_start": 4,
+      "page_end": 4,
+      "start": {
+        "page": 4,
+        "offset": 2010
+      },
+      "end": {
+        "page": 4,
+        "offset": 3285
+      },
+      "preview_end": {
+        "page": 4,
+        "offset": 3285
+      },
+      "heading": "v.conclusionandfuturework",
+      "method": "heading_match",
+      "end_reason": "backmatter",
+      "total_chars": 1275,
+      "truncated": false,
+      "quality_flags": [
+        "text:private_use_characters"
+      ],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "conclusion:text:private_use_characters",
+    "introduction:numbered_boundary_candidate",
+    "page:2:private_use_characters",
+    "page:3:private_use_characters",
+    "page:4:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 301,
+      "heading": "abstract.distributedrenewableenergysource(dres)isan",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1143,
+      "heading": "keywords:distributedrenewableenergysource;staticvoltage",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 1266,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 1,
+      "offset": 4133,
+      "heading": "ii.staticvoltagestabilityofdistributionpowersystem",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 2533,
+      "heading": "c.overvoltageproblemofthedistributionsystemwithn",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 634,
+      "heading": "iii.themaximumintegrationratioofdresinthedistribution",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 2389,
+      "heading": "iv.casestudy",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 4,
+      "offset": 2010,
+      "heading": "v.conclusionandfuturework",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "backmatter",
+      "page": 4,
+      "offset": 3285,
+      "heading": "acknowledgments",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 5,
+      "offset": 0,
+      "heading": "references",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5853
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 3088
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 2691
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 3627
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1799
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 4,
+      "cue": "future work",
+      "snippet": "Case1 Case2 Case3 Case4\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n33.36 MW\n34.23 MW 34.02 MW\n37.06 MW\nPsend / MW\nFigure 6. The comparison of reverse power with different allocation methods.\nV. Conclusion and future work\nThe allocation value of DREs in distribution with a radial\nnetwork has a great influence on the static voltage of the\ndistribution nodes. An unreasonable allocation value of DREs\nin distribution will"
+    },
+    {
+      "page": 4,
+      "cue": "further work",
+      "snippet": "ucing the power losses caused by line impedance\nduring the transmission.\nThe impact of the reactive power on the allocation method\nsuitable for the distribution with a ring network will be studied\nin further work.\nAcknowledgments\nThis work has been funded by the research project on\nresearch and application of voltage stability of high-proportion\nnew energy power systems (GXKJXM20222114).\n650\nAuthorized licens"
+    },
+    {
+      "page": 4,
+      "cue": "it is assumed",
+      "snippet": "at Bus 4 6 MW\nThe Transformer\nCapacity 50 MVA The Power Load at Bus 5 4 MW\nVoltage of the\nSubstation 10 kV The Operation Range of\nVoltage 7%\nThe Power Load\nat Bus 1 5 MW Power Factor of Power\nLoad 1\nIt is assumed that the total amount of DREs is 60 MW, and\nfour cases are studied in this section.\n∂ Case 1: All the DREs are allocated at Bus 2, which\nmeans 2 60dgP < MW.\n∂ Case 2: The DREs are allocated at the fi"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/17_Static_Voltage_Stability_Based_Maximum_Integration_Ratio_of__pages.json",
+  "abstract": "Abstract. Distributed renewable energy source (DREs) is an\neffective supplement to traditional centralized power generation\nsystems. However, how to allocate the DREs and how to evaluate\nthe maximum integration ratio of DREs are the two main\nobstacles hindering the development of DREs. To tackle these\nproblems, this paper proposes a novel optimal allocation method\nfor DREs in distribution power systems with static voltage\ns t a b i l i t y a s t h e c o n s t r a i n t . B a s e d o n t h e o p t i m a l a l l o c a t i o n\nmethod, one maximum integration ratio of DREs in the\ndistribution power system is studied. The theoretical analysis and\ncase studies show the effectiveness of the proposed allocation and\nevaluation methods of DREs. Moreover, the proposed allocation\nmethod of DREs can achieve high efficiency and low power loss.\n",
+  "introduction": "I. Introduction\nDistributed renewable energy source (DREs) is an\neffective supplement to traditional centralized power\ngeneration systems. The combined and complementary power\ngeneration model of traditional centralized power generation\nand DREs has the functions of achieving green development,\nreducing transmission losses, saving investment, and\nimproving system reliability. It breaks the shortcomings of\nhigh pollution and low reliability of traditional centralized\npower supply systems, improves energy utilization efficiency,\nand flexibly distributes location-allocation, satisfying the\ncharacteristics of existing resource distribution and the\ndemand for decentralized power supply [1-2].\nHowever, the dynamic reactive power support capability\nof renewable energy units is weak [3]. With the rapid increase\nin the proportion of renewable energy, the system voltage\nsupport capability drops sharply, and the problem of voltage\nstability is prominent. The static voltage stability can reflect\nthe voltage stability level of the system to a certain extent.\nTherefore, studying the static voltage stability and its margin\nof the new energy multi-station transmission system is of great\nsignificance for the safe and stable operation of the system [4].\nO n e o f t h e m a i n f a c t o r s l i m i t i n g t h e D R E s l e v e l i s t h e\nvoltage exceeding the limit caused by the reverse power flow\ncaused by the renewable energy access. A simple solution is to\nreduce the voltage setting of the substation or use an automatic\nvoltage controller (AVC) on the feeder. However, the access\ncapacity and location of DREs are different, so the allocation\nof AVC or dynamic reactive power compensator is\ncomplicated. Besides, the investment of the extra AVC\nequipment in each accession node is high. Moreover, the\nvoltage distribution of the whole feeder cannot be guaranteed\nin an acceptable range by just the on-load tap-changer due to\nthe dynamic changes in the renewable energy output. In [5],\nan approach to find suitable sites for integrating DREs on the\nbasis of maximum power that can be injected at these sites\nwithout violating transmission network constraints is proposed,\nbut the approach is a little complicated. In [6], a technique for\nfinding the optimal locations and sizes of (RESs) in electric\npower systems is proposed by using oscillatory particle swarm\noptimization. However, the static voltage constraint is not\nfully considered in these available studies.\nTherefore, this paper intends to study the maximum\nintegration of DREs in the distribution power system while\nconsidering static voltage stability. The main contributions of\nthis paper are as follows:\n1) the optimal allocation method of DREs in the\ndistribution power system is proposed.\n2) the maximum integration ratio of DREs with static\nvoltage stability as a constraint is proposed.\n",
+  "conclusion": "V. Conclusion and future work\nThe allocation value of DREs in distribution with a radial\nnetwork has a great influence on the static voltage of the\ndistribution nodes. An unreasonable allocation value of DREs\nin distribution will cause some nodes to exceed the static\nvoltage limits and result in a large power transmission loss.\nHence, this paper proposes a novel optimal allocation method\nfor DREs in a distribution power system with static voltage\nstability as the constraint. Based on the optimal allocation\nmethod, one maximum integration ratio of DREs in the\ndistribution power system is studied. Through the theoretical\nanalysis and simulation verification, it can be concluded that\nthe optimal allocation value of DREs should be equal to the\npower load except for the node closest to the source node (the\nsubstation). Compared to other allocation methods of DREs in\ndistribution, this allocation method can avoid power backflow\nexcept for the node closest to the source node, thereby\npreventing some remote nodes from exceeding the voltage\nlimit and reducing the power losses caused by line impedance\nduring the transmission.\nThe impact of the reactive power on the allocation method\nsuitable for the distribution with a ring network will be studied\nin further work.\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Static_Voltage_Stability_Based_Maximum_Integration_Ratio_of_Distributed_Renewable_Energy_in_Distribution_Power_System.pdf",
+  "file_sha256": "fa4ce4581bfb1b4930b34196fdd8686fc3cbf03e6beece2c2eccde5e39f1558b",
+  "target_ids": [
+    "P11"
+  ]
+}

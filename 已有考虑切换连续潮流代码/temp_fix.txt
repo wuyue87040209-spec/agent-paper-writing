@@ -1,0 +1,21 @@
+    % 检查PART 1是否正常完成
+    if temp1 > max_iterations_part1
+        warning('PART 1达到最大迭代次数，可能未找到鼻点');
+        fprintf('PART 1完成，共%d步，最大λ=%.4f\n', temp1-1, Last_LamdaPh1);
+    else
+        fprintf('PART 1完成，共%d步，最大λ=%.4f\n', temp1-1, Last_LamdaPh1);
+    end
+
+    % 检查PART 1是否有有效数据
+    if isempty(X_LamdaPh1) || length(X_LamdaPh1) < 2
+        error('PART 1未能生成有效数据，请检查系统参数或减小步长');
+    end
+
+% PART 2 --> 使用电压变化作为连续参数
+
+    sigma=0.005;             % 这个阶段逼近极限，需要取小一点的步长
+    Last_Lamda=Last_LamdaPh1;
+    temp2=1;
+    flag=1;  % 初始化flag变量，1表示lambda还在增长
+    max_iterations_part2=500;  % 增加最大迭代次数限制
+    fprintf('开始PART 2计算（电压参数化鼻点区域）...\n');

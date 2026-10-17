@@ -1,0 +1,294 @@
+{
+  "schema_version": 2,
+  "filename": "Static_Voltage_Stability_Criterion_of_Renewable_Energy_Sources_based_on_Power_Flow_Analysis.pdf",
+  "pages": 5,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/IC2ECT66838.2025.11290792",
+  "year_candidates": [
+    "2026",
+    "2025"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—With the continuous increase in the penetration rate\nof new energy sources, the strength of the power grid gradually\nweakens, and the anti-interference capability of the system also\ndecreases accordingly. Therefore, the real-time identification of\nthe static voltage stability of power systems is of particular\nimportance. The traditional approach for identifying the static\nvoltage stability boundary of power systems is the P-V curve\nmethod. However, this method exhibits high computational\ncomplexity and strong dependence on the operational scenarios of\nthe system, making it difficult to meet the requirements of real-\ntime monitoring under complex scenarios. In view of this, this\npaper proposes a static voltage stability assessment method based\non the singular points of the Jacobian matrix, and theoretically\nproves the effectiveness of this novel voltage stability assessment\nmethod. The reliability of the proposed method is verified through\nsimulations.\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 528
+      },
+      "end": {
+        "page": 1,
+        "offset": 1503
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1503
+      },
+      "heading": "abstract—withthecontinuousincreaseinthepenetrationrate",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 975,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. I NTRODUCTION\nWith the continuous increase in the penetration rate of\nrenewable energy source (RES), the number of voltage source\nconverters (VSC) connected to the power grid has been\nincreasing progressively, which leads to a gradual weakening of\ngrid strength[1]-[3]. Concurrently, the system's capability to\nresist disturbances decreases accordingly, and the interaction\nbetween inverters and the AC power grid may give rise to\nunstable fluctuations in grid voltage [4]. To accurately evaluate\nsystem fluctuations, proactively identify the risks of static\nvoltage instability, and optimize power grid structure as well as\nequipment configuration, the assessment of static voltage\nstability assumes crucial significance.\nAt present, two primary methods are widely applied to the\ncalculation of static voltage stability in power systems: the P-V\ncurve method [5]-[6] and the Q-V curve method [7]-[8]. The\nformer can intuitively reflect the stability margin but requires a\nlarge number of power flow calculations. The latter, on the\nother hand, can clearly demonstrate the robustness of node\nvoltage to reactive power but only one node can be considered\nat a tim. Therefore, both of the aforementioned methods have\nlimitations in engineering applications.\nThis paper proposes a novel method for determining the\nstatic voltage stability of power systems by analyzing the\nsingular points of the Jacobian matrix of power flow equations.\nUnlike the traditional P-V curve method, which relies on\ncomplex continuous power flow iterative calculations, this\nmethod directly solves the critical voltage amplitude using the\nline impedance modulus and the new energy output power\nmodulus. This significantly simplifies the calculation process of\ncritical voltage and enhances the capability of rapid\nidentification of the static voltage stability boundary.\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 1599
+      },
+      "end": {
+        "page": 1,
+        "offset": 3448
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 3448
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 1849,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "V. C ONCLUSION\nBy analyzing the singular points of the Jacobian matrix\ndeterminant corresponding to the new energy grid-connected\nsystem, this study proposes a Voltage-Source-Converter -based\nvoltage stability assessment method. This method eliminates\nthe reliance of traditional P-V curve methods on continuous\npower flow calculations, which demand iterative solving of\nmodified power flow equations. It simplifies the identification\nprocess of the static voltage stability boundary, improves\ncomputational efficiency, and enhances applicability in\ncomplex operating environments featuring fluctuations and\nintermittency of new energy output.\n",
+      "page_start": 5,
+      "page_end": 5,
+      "start": {
+        "page": 5,
+        "offset": 2990
+      },
+      "end": {
+        "page": 5,
+        "offset": 3634
+      },
+      "preview_end": {
+        "page": 5,
+        "offset": 3634
+      },
+      "heading": "v.conclusion",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 644,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "introduction:numbered_boundary_candidate",
+    "page:2:private_use_characters",
+    "page:3:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 528,
+      "heading": "abstract—withthecontinuousincreaseinthepenetrationrate",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1503,
+      "heading": "keywords—grid-followingconverter,controlstrategy,static",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 1599,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 1,
+      "offset": 3448,
+      "heading": "ii.vscgrid-connectedsystemmodelling",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 1,
+      "offset": 3561,
+      "heading": "i、v、ig",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 1948,
+      "heading": "vvxkiili",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 1963,
+      "heading": "vvxkiili",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 2251,
+      "heading": "c.powerloop",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 2645,
+      "heading": "igspp",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 2653,
+      "heading": "igsqq",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 2865,
+      "heading": "iii.voltagestabilityanalysisofnewenergygrid",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 414,
+      "heading": "iv.simulationverification",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 5,
+      "offset": 2990,
+      "heading": "v.conclusion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 5,
+      "offset": 3634,
+      "heading": "references",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5118
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 3407
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 5026
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3944
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5517
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 1,
+      "cue": "limitation",
+      "snippet": "he latter, on the\nother hand, can clearly demonstrate the robustness of node\nvoltage to reactive power but only one node can be considered\nat a tim. Therefore, both of the aforementioned methods have\nlimitations in engineering applications.\nThis paper proposes a novel method for determining the\nstatic voltage stability of power systems by analyzing the\nsingular points of the Jacobian matrix of power flow eq"
+    },
+    {
+      "page": 3,
+      "cue": "simplified",
+      "snippet": "ower flow\nin P-V curves and simplifying the assessment of system static\nvoltage stability.\nCompared with the PV curve method, this proposed method\ncan significantly reduce the computation time. For a simplified\nsystem with a single line, the single computation time of this\nmethod ranges from 10 nanoseconds to 5 microseconds,\nwhereas the single computation time of the PV curve method\n(per Pk) is between 50 a"
+    },
+    {
+      "page": 3,
+      "cue": "simplified",
+      "snippet": "tems\" (e.g., the criterion value is calculated for each line, and\nthe minimum value is adopted as the system stability index).\nAssuming there are 10 lines, the single computation time of the\nextended simplified criterion method is 100 nanoseconds to 50\nmicroseconds, while that of thePV curve method is 500 to 1000\nmicroseconds, corresponding to a time reduction of about\n93.3%.In conclusion, whether for a sim"
+    },
+    {
+      "page": 5,
+      "cue": "it is assumed",
+      "snippet": "in the time interval from when the system approaches the\nstability limit to when voltage collapse occurs.\nConsidering the scenario where multiple renewable energy\nstations are connected to the grid, it is assumed that the\nparameters of VSC1 remain as presented in Table 1. VSC2 is\nconnected in parallel with VSC1, and all parameters of VSC2\nare identical to those of VSC1, except that its active power\nreference"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/18_Static_Voltage_Stability_Criterion_of_Renewable_Energy_Sourc_pages.json",
+  "abstract": "Abstract—With the continuous increase in the penetration rate\nof new energy sources, the strength of the power grid gradually\nweakens, and the anti-interference capability of the system also\ndecreases accordingly. Therefore, the real-time identification of\nthe static voltage stability of power systems is of particular\nimportance. The traditional approach for identifying the static\nvoltage stability boundary of power systems is the P-V curve\nmethod. However, this method exhibits high computational\ncomplexity and strong dependence on the operational scenarios of\nthe system, making it difficult to meet the requirements of real-\ntime monitoring under complex scenarios. In view of this, this\npaper proposes a static voltage stability assessment method based\non the singular points of the Jacobian matrix, and theoretically\nproves the effectiveness of this novel voltage stability assessment\nmethod. The reliability of the proposed method is verified through\nsimulations.\n",
+  "introduction": "I. I NTRODUCTION\nWith the continuous increase in the penetration rate of\nrenewable energy source (RES), the number of voltage source\nconverters (VSC) connected to the power grid has been\nincreasing progressively, which leads to a gradual weakening of\ngrid strength[1]-[3]. Concurrently, the system's capability to\nresist disturbances decreases accordingly, and the interaction\nbetween inverters and the AC power grid may give rise to\nunstable fluctuations in grid voltage [4]. To accurately evaluate\nsystem fluctuations, proactively identify the risks of static\nvoltage instability, and optimize power grid structure as well as\nequipment configuration, the assessment of static voltage\nstability assumes crucial significance.\nAt present, two primary methods are widely applied to the\ncalculation of static voltage stability in power systems: the P-V\ncurve method [5]-[6] and the Q-V curve method [7]-[8]. The\nformer can intuitively reflect the stability margin but requires a\nlarge number of power flow calculations. The latter, on the\nother hand, can clearly demonstrate the robustness of node\nvoltage to reactive power but only one node can be considered\nat a tim. Therefore, both of the aforementioned methods have\nlimitations in engineering applications.\nThis paper proposes a novel method for determining the\nstatic voltage stability of power systems by analyzing the\nsingular points of the Jacobian matrix of power flow equations.\nUnlike the traditional P-V curve method, which relies on\ncomplex continuous power flow iterative calculations, this\nmethod directly solves the critical voltage amplitude using the\nline impedance modulus and the new energy output power\nmodulus. This significantly simplifies the calculation process of\ncritical voltage and enhances the capability of rapid\nidentification of the static voltage stability boundary.\n",
+  "conclusion": "V. C ONCLUSION\nBy analyzing the singular points of the Jacobian matrix\ndeterminant corresponding to the new energy grid-connected\nsystem, this study proposes a Voltage-Source-Converter -based\nvoltage stability assessment method. This method eliminates\nthe reliance of traditional P-V curve methods on continuous\npower flow calculations, which demand iterative solving of\nmodified power flow equations. It simplifies the identification\nprocess of the static voltage stability boundary, improves\ncomputational efficiency, and enhances applicability in\ncomplex operating environments featuring fluctuations and\nintermittency of new energy output.\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Static_Voltage_Stability_Criterion_of_Renewable_Energy_Sources_based_on_Power_Flow_Analysis.pdf",
+  "file_sha256": "7e0bb1ad90fd0cc718b88d182455fe730739e49609bddf41cc2be1c28074f3df",
+  "target_ids": [
+    "P14"
+  ]
+}

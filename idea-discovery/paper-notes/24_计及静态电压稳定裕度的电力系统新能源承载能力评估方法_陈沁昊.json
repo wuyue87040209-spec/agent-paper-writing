@@ -1,0 +1,473 @@
+{
+  "schema_version": 2,
+  "filename": "计及静态电压稳定裕度的电力系统新能源承载能力评估方法_陈沁昊.pdf",
+  "pages": 13,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.13335/j.1000-3673.pst.2025.1803",
+  "year_candidates": [
+    "2026",
+    "2025"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "ABSTRACT : High-penetration renewable energy power \nsystems pose static voltage stability challenges, while existing \nhosting capacity assessment methods use over-simplified \nmodels and ambiguous criteria. This paper proposes a method \nincorporating static voltage stability margin constraints. It \ntransforms the power margin constraint, representing the \nsystem's power distance to the voltage collapse point, into a \nlower bound on the minimum singular value of the Jacobian \nmatrix. An optimization model that accounts for the static \nvoltage stability margin is constructed to maximize renewable \nenergy integration. This model is efficiently solved using an \niterative relaxation algorithm based on a quadratic support \nfunction. Simulation on a modified IEEE 30-bus system shows \nthat the proposed method outperforms the continuation power \nflow-based approach in assessing maximum hosting capacity, \nunder the same stability margin. These results provide strong \nevidence for the method's effectiveness in enhancing the grid \nhosting capacity for renewable energy. Therefore, it could serve \nas a powerful tool for future power system planning. \n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 819
+      },
+      "end": {
+        "page": 1,
+        "offset": 1973
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1973
+      },
+      "heading": "abstract:high-penetrationrenewableenergypower",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1154,
+      "truncated": false,
+      "quality_flags": [
+        "multiple_heading_candidates"
+      ],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "0 引言 \n在“双碳”战略目标下，基于电压源型变流器\n的大规模可再生能源并网技术，正逐步推动电力系\n统向清洁化方向转型[1]。然而，高比例新能源与高\n比例电力电子设备的“双高”特性，使电力系统安\n全稳定边界显著收窄[2]。在此背景下，科学量化电\n网的新能源承载度，即在满足系统安全约束前提下\n的电网最大可接入容量，成为电力系统规划与运行\n的关键课题。 \n值得注意的是， 新能源并网的承载能力本质上\n是一个多约束条件下的极限边界求解问题[3]。除静\n态电压稳定约束外， 新能源渗透率提升还须兼顾电\n量平衡、频率稳定、小干扰稳定等约束。现有研究\n已探索了不同约束下的评估方法。在电量平衡约束\n方面，文献[4-5]基于时序生产模拟计算消纳上限；\n第 50 卷 第 8 期 电  网  技  术 3179 \n在频率稳定方面，文献[6-7]通过引入频率安全稳定\n约束构建了承载度评估模型；在小干扰稳定方面，\n已有文献[8-9]通过特征值 分析确 定振荡模态恶化\n的临界容量。 \n与此同时，静态电压稳定也是保障“双高”电\n力系统 安全运 行的基础 性约束之一，同样面临 挑\n战。 一方面， 新能源机组逐步替代传统同步发电机，\n导致系统无功储备和电压支撑能力减弱， 电压失稳\n风险显著升高。另一方面，新能源机组通常经由长\n线路并网[10]， 离网侧电气距离远，进一步放大了电\n压失稳的风险。更重要的是，静态电压稳定性决定\n了系统的平衡点是否存在，其失稳将导致全网电压\n的崩溃。因此，精确的静态电压稳定量化指标是构\n建承载度评估模型的理论基石。 \n目前，在电力系统静态电压稳定领域，已发展\n出多种量化指标用于交直流混联网络的静态电压\n安全稳定评估。根据其物理意义与数学基础可分为\n短路比类、潮流雅可比矩阵类、功率裕度等多个维\n度。对 于短路比类指标，传统短路比(short-circuit \nratio，SCR)难以反映多馈入交互影响[11]， 新能源场站\n短路比(multiple renewable energy stations short-circuit \nratio，MRSCR)等改进指标[10,12-13]虽通过容量折算\n计及该影响，但缺乏严密理论基础，导致其临界值\n取值不明确或是在应用到单机系统时无法与 SCR\n统一[14]；潮流雅可比矩阵类指标通过特征分析或奇\n异值识别薄弱环节[15-17]，但这类指标本质是状态指\n标，缺乏实际物理意义；对于功率裕度指标，核心\n思想是以当前运行点距稳定 边界的功率距离来 量\n化系统稳定水平，具有良好的物理意义。目前常采\n用连续潮流法、直接法、最优潮流法等[18]来确定该\n电压崩溃点。 然而这类方法计算所得到的崩溃点受\n到预设负荷增长模式的影响[19]。 \n这些成果为从静态电压约束 角度评估承载度\n提供了重要参考，但目前从静态电压稳定角度量化\n电网新能源承载度的 工作仍 相对匮乏且存 在一些\n问题。一方面，部分方法仅能给出区域整体容量上\n限或是按预设比例增加各并网点容量，无法提供具\n体并网点的容量分配方案，难以指导实际新能源消\n纳的精细化规划：文献[20]将一个区域内的传统同\n步机组和新能源机组分别聚合为两个等效电源， 计\n算可再生能源的临界渗透率。 该方法的指导作用止\n步于区域总量，而未延伸至 具体并网点的分配方\n案。文献[21]以扩展雅可比阵的最小奇异值为静态\n电压稳定约束， 通过逐步等比例提升直流功率至临\n界点来求取系统最大受电能力。 然而这种方法高度\n依赖于初值的选择，因为它本质上仅沿预设的等比\n例分配的固定路径进行测试，可能导致低估系统的\n真实承载潜力。另一方面，部分方法的判据临界值\n模糊，电压崩溃边界依赖经验值而缺乏理论支撑，\n无法量化优化方案相对于电压崩溃点 的静态电压\n稳定裕度，可能错误估计承载能力：文献[10]以无\n功等效短路比(reactive power considered equivalent \nshort-circuit ratio ，QESCR)指标为核心约束构建优\n化模型评估系统对新能源的承载能力， 然而 QESCR\n判据临界值依赖行业经验值，缺乏针对性理论支\n撑，无法量化当前运行点距电压 崩溃点 的真实距\n离。文献[22]以广义有效短路比(generalized effective \nshort-circuit ratio ，GESCR)指标为稳定判据，循环\n递增直流馈入容量和重复求解优化模型，直至馈入\n规模增加至不存在潮流解。但该方法缺乏崩溃裕度\n量化机制，其求得的极限解可能无法满足工程实际\n所要求的安全裕度。文献[23-24]通过线性最优潮流\n模型量化新能源承载能力。 然而模型的线性近似在\n高负载时精度下降，加之模型未内嵌电压稳定裕度\n判据，导致其最优解可能处于电压崩溃边缘，从而\n高估了系统的实际安全承载能力。 \n针对上述局限，本文提出计及静态电压稳定裕\n度约束的电力系统新能源承载度评估方法。 该方法\n旨在解决静态电压稳定裕度 指标难以直接作为优\n化模型约束条件的难题，将功率裕度约束优化问题\n重构为一系列基于最小奇异值约束的优化问题。进\n一步， 为解决奇异值约束带来的非光滑、非凸难题，\n本文采用了松弛求解算法。本文主要从以下 3 个方\n面进行突破： \n1）针对部分模型无法提供具体并网点容量分\n配方案问题：建立包含完整交流潮流约束、适用各\n种系统拓扑的新能源承载度优化模型， 并考虑新能\n源变流器无功控制策略，精准刻画新能源并网系统\n电压稳定边界，计算出各并网点的并网容量。 \n2）针对无法准确量化优化方案的静态电压稳\n定裕度的问题：利用连续潮流法计算功率裕度表征\n系统静态电压稳定裕度， 通过迭代验证将难以直接\n嵌入承载度 优化模型的 功率裕度约束 转化为奇异\n值约束，建立功率裕度与潮流雅可比矩阵最小奇异\n值之间的映射关系。 \n3）针对最小奇异值约束的非光滑与非凸问题：\n将二次支撑函数算 法引入电力系统并 适配潮流雅\n可比矩阵非对称性，利用支撑函数的光滑凸特性构\n3180 陈沁昊等：计及静态电压稳定裕度的电力系统新能源承载能力评估方法 V ol. 50 No. 8 \n建最小奇异值函数全局下界，将原约束转化为光滑\n二次约束序列，实现了复杂约束的高效处理。 \n",
+      "page_start": 1,
+      "page_end": 3,
+      "start": {
+        "page": 1,
+        "offset": 2790
+      },
+      "end": {
+        "page": 3,
+        "offset": 98
+      },
+      "preview_end": {
+        "page": 3,
+        "offset": 98
+      },
+      "heading": "0引言",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 2593,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "5  结论与展望 \n为解决评估电网新能源承载能力 时存在的模\n型过度简化、无法指导节点级容量分配、未能准确\n量化真实稳定裕度等问题，本文提出了一种计及静\n态电压稳定裕度的电力系统新能源承载度评估方\n法。该方法采用双层循环协同架构，将难题分解： \n1）外层循环提出了新的静态电压稳定约束 转\n化思路，将难以在优化模型中直接应用的功率裕度\n约束，转化为对系统潮流雅可比矩阵最小奇异值的\n下界约束。理论分析与仿真结果均表明最小奇异值\n与功率裕度间存在正相关，验证了该转化的合理性\n与有效性。 \n2）内层循环针对模型中最小奇异值 约束的非\n光滑、非凸特性，引入基于二次支撑函数的迭代松\n弛算法。 该算法将原问题分解为一系列易于求解的\n子问题，通过不断迭代逼近，实现了对原问题的可\n靠求解。 \n基于修改的 IEEE 30 节点系统的仿真结果表\n明，在极端情况下，与基于连续潮流的评估方法相\n比，本文所提方法评估出的新能源承载容量提升了\n约 114.08%。这证实了该方法能够显著减少评估的\n保守性，为电网的 规划设 计提供了更精确的决策\n依据。 \n尽管本文取得了一定成果，但仍有以下潜在方\n向值得进一步探索：1）考虑大扰动下暂态稳定等\n更加复杂的系统动态约束， 提升所得新能源承载方\n案的安全稳定水平；2）计及多类型新能源出力 波\n动的时空相关性，从而有效获取兼顾系统安全稳定\n风险与运行效益的新型电力系统新能源规划方案。 \n附录见本刊网络版(http://www.dwjs.com.cn/CN/1000- \n3673/current.shtml)。 \n",
+      "page_start": 10,
+      "page_end": 10,
+      "start": {
+        "page": 10,
+        "offset": 38
+      },
+      "end": {
+        "page": 10,
+        "offset": 710
+      },
+      "preview_end": {
+        "page": 10,
+        "offset": 710
+      },
+      "heading": "5结论与展望",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 672,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "abstract:multiple_heading_candidates",
+    "introduction:numbered_boundary_candidate",
+    "page:12:fragmented_text",
+    "page:13:fragmented_text",
+    "page:4:fragmented_text",
+    "page:5:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 819,
+      "heading": "abstract:high-penetrationrenewableenergypower",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1973,
+      "heading": "keywords:renewableenergyhostingcapacity;static",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 2134,
+      "heading": "摘要:为应对高比例新能源电力系统带来的静态电压稳定挑",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 2709,
+      "heading": "关键词:新能源承载度;静态电压稳定;功率裕度;最小奇",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 2790,
+      "heading": "0引言",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 98,
+      "heading": "1新能源并网系统潮流模型",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 234,
+      "heading": "1.1新能源并网系统建模",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 904,
+      "heading": "1.2新能源并网系统潮流方程与雅可比矩阵",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 430,
+      "heading": "2.2承载度评估的优化建模挑战",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 1966,
+      "heading": "2.3基于迭代算法的模型转化",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 6,
+      "offset": 1314,
+      "heading": "3基于支撑函数算法的奇异值约束松弛",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 697,
+      "heading": "4仿真验证与结果分析",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 1233,
+      "heading": "4.1算法外层循环有效性分析",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 253,
+      "heading": "4.2算法内层循环关键参数分析",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 1444,
+      "heading": "4.3承载度评估对比分析",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 9,
+      "offset": 1031,
+      "heading": "4.4下垂控制对新能源承载度的影响分析",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 10,
+      "offset": 38,
+      "heading": "5结论与展望",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 10,
+      "offset": 710,
+      "heading": "参考文献",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 11,
+      "offset": 1599,
+      "heading": "lijianhua,wangguoteng,lujianyu,etal.estimationmethod",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 11,
+      "offset": 1877,
+      "heading": "lihuaqu,pengxiaotao,qinqin,etal.assessmentofdc",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "backmatter",
+      "page": 12,
+      "offset": 2,
+      "heading": "附录a",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 13,
+      "offset": 1003,
+      "heading": "lugbu",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3109
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [],
+      "chars": 2174
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [],
+      "chars": 2111
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 2514
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 2348
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [],
+      "chars": 2402
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1992
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [],
+      "chars": 2330
+    },
+    {
+      "page": 9,
+      "error": null,
+      "quality_flags": [],
+      "chars": 2188
+    },
+    {
+      "page": 10,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4339
+    },
+    {
+      "page": 11,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4126
+    },
+    {
+      "page": 12,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 2940
+    },
+    {
+      "page": 13,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 1155
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 1,
+      "cue": "simplified",
+      "snippet": "ersity, Townsville 4814, Australia) \nABSTRACT : High-penetration renewable energy power \nsystems pose static voltage stability challenges, while existing \nhosting capacity assessment methods use over-simplified \nmodels and ambiguous criteria. This paper proposes a method \nincorporating static voltage stability margin constraints. It \ntransforms the power margin constraint, representing the \nsystem's power d"
+    },
+    {
+      "page": 1,
+      "cue": "简化",
+      "snippet": "RDS: renewable energy hosting capacity; static \nvoltage stability; load margin; minimum singular value; \nquadratic support function relaxation algorithm \n摘要：为应对高比例新能源电力系统带来的静态电压稳定挑\n战， 并解决现有承载能力评估方法中模型简化过度、 判据模\n \n基金项目：国家自然科学基金项目(52577110)；广东省基础与应用\n基础研究基金项目(2025A1515010653)。 \nProject Supported by National Natural Science Foundation of China \n(52577110); Guangdong Basic and Applied Basic Research Found"
+    },
+    {
+      "page": 2,
+      "cue": "局限",
+      "snippet": "R)指标为稳定判据，循环\n递增直流馈入容量和重复求解优化模型，直至馈入\n规模增加至不存在潮流解。但该方法缺乏崩溃裕度\n量化机制，其求得的极限解可能无法满足工程实际\n所要求的安全裕度。文献[23-24]通过线性最优潮流\n模型量化新能源承载能力。 然而模型的线性近似在\n高负载时精度下降，加之模型未内嵌电压稳定裕度\n判据，导致其最优解可能处于电压崩溃边缘，从而\n高估了系统的实际安全承载能力。 \n针对上述局限，本文提出计及静态电压稳定裕\n度约束的电力系统新能源承载度评估方法。 该方法\n旨在解决静态电压稳定裕度 指标难以直接作为优\n化模型约束条件的难题，将功率裕度约束优化问题\n重构为一系列基于最小奇异值约束的优化问题。进\n一步， 为解决奇异值约束带来的非光滑、非凸难题，\n本文采用了松弛求解算法。本文主要从以下 3 个方\n面进行突破： \n1）针对部分模型无法提供具体并网点容量分\n配方案问题：建立包含完整交"
+    },
+    {
+      "page": 2,
+      "cue": "难以",
+      "snippet": "稳定性决定\n了系统的平衡点是否存在，其失稳将导致全网电压\n的崩溃。因此，精确的静态电压稳定量化指标是构\n建承载度评估模型的理论基石。 \n目前，在电力系统静态电压稳定领域，已发展\n出多种量化指标用于交直流混联网络的静态电压\n安全稳定评估。根据其物理意义与数学基础可分为\n短路比类、潮流雅可比矩阵类、功率裕度等多个维\n度。对 于短路比类指标，传统短路比(short-circuit \nratio，SCR)难以反映多馈入交互影响[11]， 新能源场站\n短路比(multiple renewable energy stations short-circuit \nratio，MRSCR)等改进指标[10,12-13]虽通过容量折算\n计及该影响，但缺乏严密理论基础，导致其临界值\n取值不明确或是在应用到单机系统时无法与 SCR\n统一[14]；潮流雅可比矩阵类指标通过特征分析或奇\n异值识别薄弱环节[15-17]，但"
+    },
+    {
+      "page": 2,
+      "cue": "难以",
+      "snippet": "前常采\n用连续潮流法、直接法、最优潮流法等[18]来确定该\n电压崩溃点。 然而这类方法计算所得到的崩溃点受\n到预设负荷增长模式的影响[19]。 \n这些成果为从静态电压约束 角度评估承载度\n提供了重要参考，但目前从静态电压稳定角度量化\n电网新能源承载度的 工作仍 相对匮乏且存 在一些\n问题。一方面，部分方法仅能给出区域整体容量上\n限或是按预设比例增加各并网点容量，无法提供具\n体并网点的容量分配方案，难以指导实际新能源消\n纳的精细化规划：文献[20]将一个区域内的传统同\n步机组和新能源机组分别聚合为两个等效电源， 计\n算可再生能源的临界渗透率。 该方法的指导作用止\n步于区域总量，而未延伸至 具体并网点的分配方\n案。文献[21]以扩展雅可比阵的最小奇异值为静态\n电压稳定约束， 通过逐步等比例提升直流功率至临\n界点来求取系统最大受电能力。 然而这种方法高度\n依赖于初值的选择，因为它本质上仅沿预设的等比"
+    },
+    {
+      "page": 4,
+      "cue": "局限",
+      "snippet": ")直接嵌入优\n化模型中，由于该约束具有非光滑、非凸特性，常\n规优化算法难以求解。 \n为解决上述两大挑战，本文第 2 节将建立σmin\n与工程实用指标之间的桥梁，将难以直接嵌入优化\n模型的功率裕度约束，重构为一系列可求解的奇异\n值约束优化问题。 第3 节将针对性提出一种奇异值\n约束的松弛处理算法，以解决其在优化模型中的求\n解难题。 \n2 计及静态电压稳定裕度的承载度优化模型 \n2.1 传统评估方法的局限性 \n本节旨在建立一个能从静态电压稳定 角度评\n估电网最大新能源承载度的优化模型。 该承载度的\n物理边界由系统的静态电压稳定极限所决定。在工\n程实践中，这一极限通常通过功率裕度来 进行量\n化，而连续潮流 法是计算功率 裕度的 公认标准工\n具。在负荷等功率因数增长、负荷增加导致的网损\n增量由平衡节点承担，各机组按初始出力占比分配\n增量的经典场景下，设系统的各机组的有功出力构\n成向量 PG。 该方法通"
+    },
+    {
+      "page": 4,
+      "cue": "局限",
+      "snippet": "15—2021《电力系统电压稳定评价导则》\n中 5.1.3 节要求功率裕度 M 应大于 8%)定义为α，即\n任何一个可行的运行方案 PG 都需要满足 M(PG)≥α。\n在裕度约束α的前提下，系统的最大新能源承载能\n力即为所有可行的 PG 方案中，使得目标函数(新能 \n源机组总出力 GiPΣ )最大的初始方案 PG 所对应的 \n功率值。 \n然而，当评估多机系统的最大承载潜力时，仅\n应用连续潮流法存在局限性，原因在于：连续潮流\n法本质是一种校验工具，而非寻优工具。它只能在\n预设了一个初始方案 PG 作为起点后，检验出该方\n案的功率裕度，而不能快速找到那个能恰好满足裕\n度要求的最佳方案，即便通过轨迹反向求解最大承\n载度方法也依然无法克服这一局限。 该方法从一个\n基准的 PG 出发，依据连续潮流法所计算的稳定轨\n迹 Ptraj(λ)，取λ=λmax-α对应的功率值作为最大承载\n度。这种方法过于保守，因"
+    },
+    {
+      "page": 5,
+      "cue": "局限",
+      "snippet": "PG1\n方案A-PG2\n发电机有功出力/MW 方案A-8%裕度点\nmin\nσ\n1.0\nλ\n方案B-PG1\n方案B-PG2\n方案A-\n方案B-\nminσ\nminσ\n方案B-8%裕度点\n \n图 3 新能源并网节点的 Pλ曲线 \nFig. 3 Pλ curve of renewable energy grid-integration nodes \n2.2 承载度评估的优化建模挑战 \n为克服传统方法的局限性， 一个自然的思路是\n引入优化视角，建立如式(9)—(18)所示的优化模型 1。\n需要说明的是， 新能源承载力本质上是电网对新能\n源有功功率的接纳极限。 由于逆变器是新能源并网\n的功率接口，因此式(9)以逆变器总注入有功最大化\n为目标函数，其物理实质是在源端新能源资源充足\n的条件下通过优化算法探寻电网侧所允许的最大\n安全准入边界， 该目标函数的最优解在数值上等价\n于系统在满足静态电压稳定裕度等"
+    },
+    {
+      "page": 5,
+      "cue": "难以",
+      "snippet": "增 长模\n式，即 M(PG)是关于初始运行点 PG 的复杂隐函数，\nPG 不仅决定连续潮流计算的起点；同时，在按初始\n出力占比分配的经典规则下，还定义了连续潮流的\n增长方向。因此，要评估候选解 PG 的裕度 M(PG)\n需要通过一次完整的连续潮流计算才能获得，功率\n裕度约束 (10)无法作为显式约束 写入优化模型 1\n中，导致优化问题无法直接求解。 \n2.3 基于迭代算法的模型转化 \n为此，本文将难以直接嵌入优化模型的功率裕\n度约束转化为一系列奇异值约束问题， 通过建立功\n率裕度与 潮流雅可 比矩阵最小奇异值 之间的映射\n关系，进而将静态电压稳定裕度约束转化为对最小\n奇异值的边界要求，从而可以在优化模型中求解。 \n研究表明，在逼近电压崩溃点的过程中，系统\n功率裕度与系统 潮流雅可比矩阵 J 的最小奇异值\nσmin 之间存在一种明确的正相关映射关系[28-29]：随\n着系统负荷的增加(对应新能源"
+    },
+    {
+      "page": 6,
+      "cue": "不足",
+      "snippet": "循环。 该循环采用二分法策略搜索合适\n的奇异值阈值δ。算法首先初始化搜索区间[δmin,δmax] \n(δmin 稍大于σmin0，δmax 设定为一个较大的值以满足\n系统的功率裕度要求)，在每次迭代中取中点δmid 作\n为式(20)的约束值并调用内层循环(灰色框部分)来\n重新求解完整的优化模型 2。随后，利用连续潮流\n法计算所得方案的实际功率裕度 Mmid。若 Mmid<α，\n则说明系统稳定裕度不足，将令δmin=δmid 以收紧约\n束；若 Mmid>α+η(其中η为工程允许容差)，则说明\n当前约束过于保守，将令δmax=δmid 以释放承载潜力。\n该过程将反复进行，直至功率裕度落在目标区间\n[α,α+η]内，将该优化结果作为最终方案输出。 \n3 基于支撑函数算法的奇异值约束松弛 \n如 2.3 节所述，图 4 中的外层循环在每次迭代\n时，都需要求解给定参数δ下的优化模型 2。而该问\n题的核心"
+    },
+    {
+      "page": 7,
+      "cue": "假设",
+      "snippet": "需要注意的是，在求解优化模型\n2 时，求解器找到的可行解必须满足约束(20)。当\n此约束起作用时，求解的解通常会落到边界上，即\nσmin≈δ。因此，横轴的δ不仅表示约束强度，也近似\n代表 了该δ值约束 下解的静态电压稳定 水平(σmin\n大小)。 \n图 6 中的红色曲线描绘了求解结果的功率裕度\nM 随最小奇异值阈值δ的变化趋势。两者在整体上\n呈现出正相关关系，这在宏观上验证了本文所提及\n方法的核心假设，即通过外层循环调节阈值δ以提\n高σmin，能够有效找到使功率裕度 M 同步提升的可\n行方案。图 6 中的黑色曲线表明承载度与δ呈现出\n负相关关系。这揭示了系统的高新能源承载度与静\n态电压稳定间存在矛盾，随着对静态安全的要求愈\n严苛，即δ越大，优化模型 2 的可行域将被压缩得越\n小， 系统能达到的最大新能源接纳能力也随之降低。 \n基于此，图 4 所示算法外层循环的寻优路径在"
+    },
+    {
+      "page": 9,
+      "cue": "进一步研究",
+      "snippet": "分别提升 114.62 和 93.56MW)\n承担更多的出力增量，同时适当限制薄弱位置机组\n(例如机组 13，出力降低 8.97MW)的出力。这种对\n静态电压稳定而言更优的功率分配方式，其应用相\n同的“按比例增长”规则派生出的增长路径自然对\n电压稳定更为有利。这使得本文方法能够更充分地\n挖掘电网的接纳潜力，从而得出更精确、经济性更\n优的评估结果。 \n4.4 下垂控制对新能源承载度的影响分析 \n为进一步研究并网 点无功控制策 略对新能源\n承载度的影响，本节在 4.3 节的方案 2 系统配置基\n础上，设计了一个对比算例方案 3。该方案将原系\n统中 13、22、23、27 号新能源机组由 PQ 节点改为\nQ-V 下垂节点，参数统一设置为：下垂系数 kQV 为\n10pu，参考电压 Uref 为 1.0pu，无功参考值 Qref 为 0。\n这一配置在工程实践中较为常见，因其无需像定无\n功控制那样实时调整 Q"
+    },
+    {
+      "page": 9,
+      "cue": "后续研究",
+      "snippet": "约束下的无功上限\n46.11MW。相比 4.1 节中的 PQ 控制方式，切换到\nQref=0 的下垂控制后，新能源机组对系统的无功贡\n献实际上减小了，从而导致了静态电压稳定裕度的\n下降和承载度降低。该算例表明，虽然下垂控制提\n供了电压主动调节的能力，但其参数的合理配置对\n于发挥其电压支撑优势至关重要。若要充分释放下\n垂控制在提升系统承载能力方面的潜力，必须将其\n控制参数纳入协同优化范畴，这将是本文后续研究"
+    },
+    {
+      "page": 10,
+      "cue": "简化",
+      "snippet": "第 50 卷 第 8 期 电 网 技 术 3187 \n的重要方向。 \n5 结论与展望 \n为解决评估电网新能源承载能力 时存在的模\n型过度简化、无法指导节点级容量分配、未能准确\n量化真实稳定裕度等问题，本文提出了一种计及静\n态电压稳定裕度的电力系统新能源承载度评估方\n法。该方法采用双层循环协同架构，将难题分解： \n1）外层循环提出了新的静态电压稳定约束 转\n化思路，将难以在优化模型中直接应用的功率裕度\n约束，转化为对系统潮流雅可比矩阵最小奇异值的\n下界约束。理论分析与仿真结果均表明最小奇异值\n与功率裕度间存在正相关，验证了该转化的合理性"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/24_计及静态电压稳定裕度的电力系统新能源承载能力评估方法_陈沁昊_pages.json",
+  "abstract": "ABSTRACT : High-penetration renewable energy power \nsystems pose static voltage stability challenges, while existing \nhosting capacity assessment methods use over-simplified \nmodels and ambiguous criteria. This paper proposes a method \nincorporating static voltage stability margin constraints. It \ntransforms the power margin constraint, representing the \nsystem's power distance to the voltage collapse point, into a \nlower bound on the minimum singular value of the Jacobian \nmatrix. An optimization model that accounts for the static \nvoltage stability margin is constructed to maximize renewable \nenergy integration. This model is efficiently solved using an \niterative relaxation algorithm based on a quadratic support \nfunction. Simulation on a modified IEEE 30-bus system shows \nthat the proposed method outperforms the continuation power \nflow-based approach in assessing maximum hosting capacity, \nunder the same stability margin. These results provide strong \nevidence for the method's effectiveness in enhancing the grid \nhosting capacity for renewable energy. Therefore, it could serve \nas a powerful tool for future power system planning. \n",
+  "introduction": "0 引言 \n在“双碳”战略目标下，基于电压源型变流器\n的大规模可再生能源并网技术，正逐步推动电力系\n统向清洁化方向转型[1]。然而，高比例新能源与高\n比例电力电子设备的“双高”特性，使电力系统安\n全稳定边界显著收窄[2]。在此背景下，科学量化电\n网的新能源承载度，即在满足系统安全约束前提下\n的电网最大可接入容量，成为电力系统规划与运行\n的关键课题。 \n值得注意的是， 新能源并网的承载能力本质上\n是一个多约束条件下的极限边界求解问题[3]。除静\n态电压稳定约束外， 新能源渗透率提升还须兼顾电\n量平衡、频率稳定、小干扰稳定等约束。现有研究\n已探索了不同约束下的评估方法。在电量平衡约束\n方面，文献[4-5]基于时序生产模拟计算消纳上限；\n第 50 卷 第 8 期 电  网  技  术 3179 \n在频率稳定方面，文献[6-7]通过引入频率安全稳定\n约束构建了承载度评估模型；在小干扰稳定方面，\n已有文献[8-9]通过特征值 分析确 定振荡模态恶化\n的临界容量。 \n与此同时，静态电压稳定也是保障“双高”电\n力系统 安全运 行的基础 性约束之一，同样面临 挑\n战。 一方面， 新能源机组逐步替代传统同步发电机，\n导致系统无功储备和电压支撑能力减弱， 电压失稳\n风险显著升高。另一方面，新能源机组通常经由长\n线路并网[10]， 离网侧电气距离远，进一步放大了电\n压失稳的风险。更重要的是，静态电压稳定性决定\n了系统的平衡点是否存在，其失稳将导致全网电压\n的崩溃。因此，精确的静态电压稳定量化指标是构\n建承载度评估模型的理论基石。 \n目前，在电力系统静态电压稳定领域，已发展\n出多种量化指标用于交直流混联网络的静态电压\n安全稳定评估。根据其物理意义与数学基础可分为\n短路比类、潮流雅可比矩阵类、功率裕度等多个维\n度。对 于短路比类指标，传统短路比(short-circuit \nratio，SCR)难以反映多馈入交互影响[11]， 新能源场站\n短路比(multiple renewable energy stations short-circuit \nratio，MRSCR)等改进指标[10,12-13]虽通过容量折算\n计及该影响，但缺乏严密理论基础，导致其临界值\n取值不明确或是在应用到单机系统时无法与 SCR\n统一[14]；潮流雅可比矩阵类指标通过特征分析或奇\n异值识别薄弱环节[15-17]，但这类指标本质是状态指\n标，缺乏实际物理意义；对于功率裕度指标，核心\n思想是以当前运行点距稳定 边界的功率距离来 量\n化系统稳定水平，具有良好的物理意义。目前常采\n用连续潮流法、直接法、最优潮流法等[18]来确定该\n电压崩溃点。 然而这类方法计算所得到的崩溃点受\n到预设负荷增长模式的影响[19]。 \n这些成果为从静态电压约束 角度评估承载度\n提供了重要参考，但目前从静态电压稳定角度量化\n电网新能源承载度的 工作仍 相对匮乏且存 在一些\n问题。一方面，部分方法仅能给出区域整体容量上\n限或是按预设比例增加各并网点容量，无法提供具\n体并网点的容量分配方案，难以指导实际新能源消\n纳的精细化规划：文献[20]将一个区域内的传统同\n步机组和新能源机组分别聚合为两个等效电源， 计\n算可再生能源的临界渗透率。 该方法的指导作用止\n步于区域总量，而未延伸至 具体并网点的分配方\n案。文献[21]以扩展雅可比阵的最小奇异值为静态\n电压稳定约束， 通过逐步等比例提升直流功率至临\n界点来求取系统最大受电能力。 然而这种方法高度\n依赖于初值的选择，因为它本质上仅沿预设的等比\n例分配的固定路径进行测试，可能导致低估系统的\n真实承载潜力。另一方面，部分方法的判据临界值\n模糊，电压崩溃边界依赖经验值而缺乏理论支撑，\n无法量化优化方案相对于电压崩溃点 的静态电压\n稳定裕度，可能错误估计承载能力：文献[10]以无\n功等效短路比(reactive power considered equivalent \nshort-circuit ratio ，QESCR)指标为核心约束构建优\n化模型评估系统对新能源的承载能力， 然而 QESCR\n判据临界值依赖行业经验值，缺乏针对性理论支\n撑，无法量化当前运行点距电压 崩溃点 的真实距\n离。文献[22]以广义有效短路比(generalized effective \nshort-circuit ratio ，GESCR)指标为稳定判据，循环\n递增直流馈入容量和重复求解优化模型，直至馈入\n规模增加至不存在潮流解。但该方法缺乏崩溃裕度\n量化机制，其求得的极限解可能无法满足工程实际\n所要求的安全裕度。文献[23-24]通过线性最优潮流\n模型量化新能源承载能力。 然而模型的线性近似在\n高负载时精度下降，加之模型未内嵌电压稳定裕度\n判据，导致其最优解可能处于电压崩溃边缘，从而\n高估了系统的实际安全承载能力。 \n针对上述局限，本文提出计及静态电压稳定裕\n度约束的电力系统新能源承载度评估方法。 该方法\n旨在解决静态电压稳定裕度 指标难以直接作为优\n化模型约束条件的难题，将功率裕度约束优化问题\n重构为一系列基于最小奇异值约束的优化问题。进\n一步， 为解决奇异值约束带来的非光滑、非凸难题，\n本文采用了松弛求解算法。本文主要从以下 3 个方\n面进行突破： \n1）针对部分模型无法提供具体并网点容量分\n配方案问题：建立包含完整交流潮流约束、适用各\n种系统拓扑的新能源承载度优化模型， 并考虑新能\n源变流器无功控制策略，精准刻画新能源并网系统\n电压稳定边界，计算出各并网点的并网容量。 \n2）针对无法准确量化优化方案的静态电压稳\n定裕度的问题：利用连续潮流法计算功率裕度表征\n系统静态电压稳定裕度， 通过迭代验证将难以直接\n嵌入承载度 优化模型的 功率裕度约束 转化为奇异\n值约束，建立功率裕度与潮流雅可比矩阵最小奇异\n值之间的映射关系。 \n3）针对最小奇异值约束的非光滑与非凸问题：\n将二次支撑函数算 法引入电力系统并 适配潮流雅\n可比矩阵非对称性，利用支撑函数的光滑凸特性构\n3180 陈沁昊等：计及静态电压稳定裕度的电力系统新能源承载能力评估方法 V ol. 50 No. 8 \n建最小奇异值函数全局下界，将原约束转化为光滑\n二次约束序列，实现了复杂约束的高效处理。 \n",
+  "conclusion": "5  结论与展望 \n为解决评估电网新能源承载能力 时存在的模\n型过度简化、无法指导节点级容量分配、未能准确\n量化真实稳定裕度等问题，本文提出了一种计及静\n态电压稳定裕度的电力系统新能源承载度评估方\n法。该方法采用双层循环协同架构，将难题分解： \n1）外层循环提出了新的静态电压稳定约束 转\n化思路，将难以在优化模型中直接应用的功率裕度\n约束，转化为对系统潮流雅可比矩阵最小奇异值的\n下界约束。理论分析与仿真结果均表明最小奇异值\n与功率裕度间存在正相关，验证了该转化的合理性\n与有效性。 \n2）内层循环针对模型中最小奇异值 约束的非\n光滑、非凸特性，引入基于二次支撑函数的迭代松\n弛算法。 该算法将原问题分解为一系列易于求解的\n子问题，通过不断迭代逼近，实现了对原问题的可\n靠求解。 \n基于修改的 IEEE 30 节点系统的仿真结果表\n明，在极端情况下，与基于连续潮流的评估方法相\n比，本文所提方法评估出的新能源承载容量提升了\n约 114.08%。这证实了该方法能够显著减少评估的\n保守性，为电网的 规划设 计提供了更精确的决策\n依据。 \n尽管本文取得了一定成果，但仍有以下潜在方\n向值得进一步探索：1）考虑大扰动下暂态稳定等\n更加复杂的系统动态约束， 提升所得新能源承载方\n案的安全稳定水平；2）计及多类型新能源出力 波\n动的时空相关性，从而有效获取兼顾系统安全稳定\n风险与运行效益的新型电力系统新能源规划方案。 \n附录见本刊网络版(http://www.dwjs.com.cn/CN/1000- \n3673/current.shtml)。 \n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/计及静态电压稳定裕度的电力系统新能源承载能力评估方法_陈沁昊.pdf",
+  "file_sha256": "410bef10056638dc67e3136d43a23d103bd513ede9584c83cdfa4c24c9b523ac",
+  "target_ids": [
+    "P23"
+  ]
+}

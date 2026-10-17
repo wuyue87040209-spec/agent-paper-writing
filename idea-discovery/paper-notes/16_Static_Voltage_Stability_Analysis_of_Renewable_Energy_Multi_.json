@@ -1,0 +1,307 @@
+{
+  "schema_version": 2,
+  "filename": "Static_Voltage_Stability_Analysis_of_Renewable_Energy_Multi-Infeed_Systems_Based_on_Margin_Index.pdf",
+  "pages": 8,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/CIEEC60922.2024.10583313",
+  "year_candidates": [
+    "2026",
+    "2024",
+    "2022"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract-Substituting a high proportion of renewable energy \nsources for traditional synchronous generators can lead to a \ndeterioration in the system's static voltage stability. This paper \nproposes extending margin-based voltage stability indices based \non the load side Thevenin equivalent, to the renewable energy \nsource side for assessing the static voltage stability of renewable \nenergy multi-infeed systems. Firstly, a comprehensive analysis of \nboth the load and renewable energy sources is conducted, and \nnormalized expressions for three margin indices are derived \nbased on a single-machine black-box system. Secondly, the \ncharacteristics of the margin indices are analyzed, validating \ntheir applicability in a single-infeed system. Thirdly, a method is \nintroduced for conducting static stability analysis on the \nrenewable energy source side of multi-infeed systems using \nThevenin equivalent. Finally, the effectiveness of the indices \nunder different growth scenarios is verified in a modified IEEE \n39-node system, expanding the application scenarios of these \nindices. \nKeyword5-s tatic voltage stability; margin index; renewable \nenergy multi-infeed system; Thevenin equivalent; sensitivity \n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 6952
+      },
+      "end": {
+        "page": 1,
+        "offset": 8166
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 8166
+      },
+      "heading": "abstract-substitutingahighproportionofrenewableenergy",
+      "method": "heading_match",
+      "end_reason": "introduction",
+      "total_chars": 1214,
+      "truncated": false,
+      "quality_flags": [
+        "text:control_characters_encoding_suspect"
+      ],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. INTRODUCTION \nIn recent years, China has accelerated the construction of a \nnew type of power system. The total installed capacity and \nannual power generation of renewable energy units have \nexperienced rapid growth [1- 2] . However, accompanying this \ngrowth is a gradual weakening of the voltage stability of the \npower system. Ta king the Jixi renewable energy base as an \nexamp le, with the continued integration of renewable energy \nsources in the western region of Jilin in 2022, the short-circuit \nratio of multiple renewable energy stations in some areas will \nfall below 1. 5, failing to meet the requirements for the voltage \nstrength of multiple renewable energy stations [3 ]. This \nsituation could easily lead to widespread disconnection of \nrenewable energy sources. Therefore, accurately assessing the \nstatic voltage stability of the renewable energy transmission \nsystem holds significant importance for the safe and stable \noperation of the system. \nThe evaluation indices for static voltage stability primarily \nfall into two categories: margin indices and state indices. \nCommon state indices include sensitivity indices [ 4 ], energy \nfunction indices [5] , eigenvalue indices [6], and others. Ta king \nsensitivity indices as an exam ple, as the system approaches \ninstability, the sensitivity of voltage to power tends to approach \ninfinity. This characteristic is used as a basis for determining \nwhether the system is unstable or approaching instability. \nHowever, due to the poor linearity of state indices, especially \nin the distance from the turning point to the instability point, \n979-8-3503-5955- 8/24/$31.00 ©2024 IEEE \n787 \nthe values of state indices can change rapidly. This makes it \nchallenging to timely and accurately predict the voltage \nstability margin. \nMargin indices represent a widely used type of assessment \nmetric employed in analyzing static voltage stability. These \nindices involve setting a specific growth pattern to compare the \ndistance between voltage, power, and other metr ics in the \ncurrent system state and the crit ical stability state. This \ncomparison is pivotal in evaluating the voltage stability of a \nsystem. These indices offer straightforward calculations and \nclear physical interpretations, crucial in static voltage stability \nanalysis. Among them, the impedance margin does not rely on \nthe calculation of the Thevenin equivalent potential. Its \napplication has been extensive, with abundant research \nfindings. Literature [7 -8] independently validated the efficacy \nof impedance margin indices in photovoltaic integration \nsystems and radiative distribution networks. However, most \nexisting research has predominantly focused on the load side. \nIn literature [9], there's a proposal to extend impedance margin \nindices to the realm of renewable energy sources. The study \nconducted stability analyses of wind power stations ba sed on \nthese indices, yielding certain results. However, this research \ndidn't consider the strong nonlinearity of impedance margin \nindices near instability points. \"Moreover, the accuracy of its \nThevenin equivalent method based on node admittance matrix \nremains que stionable under strong nonlinear conditions.\" \nThe Short Circuit Ratio (SCR) is another type of margin \nindex. Traditionally defined as the ratio between the system's \nshort-circuit capacity and the equipment's rated capacity [10]. \nWith renewable energy stations employing multi-infeed \nmet hods, their interdependencies impact each other. \nCalculating based on a single-infeed method can yield overly \noptimistic results. Hence, numero us scholars have researched \nto improve the SCR index [1 1-13 ]. Ba sed on operational \nexperiences with renewable energy generation worldwide, the \ncritical SCR is generally around 1. 5 [3] . However, during \nactual operation, factors like system parameters and operating \nconditions significantly influence the critical SCR, which \ncannot be overlooked. Literature [12 ] presents various methods \nto calculate critical values for multiple SCR indices. However, \nthese indices are applicable in different scenarios, varying in \nprecision, which poses challenges for practical application. \nTo address the difficulty in calculating critical values for \ncommon short-circuit ratio indices, this paper conducts a \ncomprehensive study on both the load and renewable energy \nsources. The proposed method establishes a static stability \nanalysis model for a single-machine black-box system, extends \nthe margin indices on the load side, and proposes a new \nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:49:45 UTC from IEEE Xplore.  Restrictions apply. \nPHWKRG\u0003 IRU\u0003 VWDWLF\u0003 VWDELOLW\\\u0003 DQDO\\VLV\u0003 RQ\u0003 WKH\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003\nVRXUFH\u0003VLGH\u0003EDVHG\u0003RQ\u0003PDUJLQ\u0003LQGLFHV\u0011\u00037KLV\u0003PHWKRG\u0003LV\u0003HPSOR\\HG\u0003\nWR\u0003 HYDOXDWH\u0003 WKH\u0003 VWDWLF\u0003 YROWDJH\u0003 VWDELOLW\\\u0003 RI\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003\nPXOWL\u0010LQIHHG\u0003V\\VWHPV\u0011\u00037KH\u0003PDLQ\u0003FRQWULEXWLRQV\u0003DUH\u0003DV\u0003IROORZV\u001d\u0003\nL\f\u0003 %\\\u0003 HVWDEOLVKLQJ\u0003 D\u0003 VWDWLF\u0003 VWDELOLW\\\u0003 DQDO\\VLV\u0003 PRGHO\u0003 IRU\u0003 D\u0003\nVLQJOH\u0010PDFKLQH\u0003 EODFN\u0010ER[\u0003 V\\VWHP\u000f\u0003 VSHFLILF\u0003 H[SUHVVLRQV\u0003 IRU\u0003\nWKUHH\u0003 PDUJLQ\u0003 LQGLFHV\u0003 RQ\u0003 WKH\u0003 ORDG\u0003 VLGH\u0003 DQG\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003\nVRXUFH\u0003VLGH\u0003DUH\u0003GHULYHG\u0011\u00037KH\u0003SURSRVHG\u0003PRGHO\u0003LOOXVWUDWHV\u0003WKDW\u0003WKH\u0003\nVWDWLF\u0003 VWDELOLW\\\u0003 DQDO\\VLV\u0003 SURFHVV\u0003 EDVHG\u0003 RQ\u0003 PDUJLQ\u0003 LQGLFHV\u0003 IRU\u0003\nERWK\u0003WKH\u0003VRXUFH\u0003DQG\u0003ORDG\u0003VLGHV\u0003LV\u0003HVVHQWLDOO\\\u0003FRQVLVWHQW\u0011\u0003\nLL\f\u0003 2Q\u0003 WKH\u0003 EDVLV\u0003 RI\u0003 VWDELOLW\\\u0003 DQDO\\VLV\u0003 LQ\u0003 D\u0003 VLQJOH\u0010LQIHHG\u0003\nV\\VWHP\u000f\u0003WKLV\u0003SDSHU\u0003SURSRVHV\u0003WKH\u0003VLPSOLILFDWLRQ\u0003RI\u0003D\u0003PXOWL\u0010LQIHHG\u0003\nV\\VWHP\u0003 XVLQJ\u0003 7KHYHQLQ\u0003 HTXLYDOHQW\u0011\u0003 6XEVHTXHQWO\\\u000f\u0003 PDUJLQ\u0003\nLQGLFHV\u0003DUH\u0003DSSOLHG\u0003WR\u0003DVVHVV\u0003WKH\u0003VWDWLF\u0003VWDELOLW\\\u0003RI\u0003WKH\u0003UHQHZDEOH\u0003\nHQHUJ\\\u0003VRXUFH\u0003VLGH\u0003LQ\u0003WKH\u0003PXOWL\u0010LQIHHG\u0003V\\VWHP\u0003\n,,\u0011\u00037+(\u000332:(5\u0003)/2:\u0003(48$7,216\u00032)\u0003$\u00036,1*/(\u00100$&+,1(\u0003\n%/$&.\u0010%2;\u00036<67(0\u0003\n7KH\u0003 FRQWURO\u0003 VWUDWHJ\\\u0003 RI\u0003 JULG\u0010FRQQHFWHG\u0003 LQYHUWHUV\u0003 IRU\u0003\nUHQHZDEOH\u0003HQHUJ\\\u0003VRXUFHV\u0003KDV\u0003D\u0003VLJQLILFDQW\u0003LPSDFW\u0003RQ\u0003WKH\u0003VWDWLF\u0003\nYROWDJH\u0003VWDELOLW\\\u0003DW\u0003WKH\u0003JULG\u0003FRQQHFWLRQ\u0003SRLQW\u000f\u0003PDLQO\\\u0003HPSOR\\LQJ\u0003\nWZR\u0003 PHWKRGV\u001d\u0003 FRQVWDQW\u0003 SRZHU\u0003 IDFWRU\u0003 FRQWURO\u0003 DQG\u0003 FRQVWDQW\u0003\nYROWDJH\u0003 FRQWURO\u0011\u0003 ,Q\u0003 VWDWLF\u0003 VWDELOLW\\\u0003 DQDO\\VLV\u000f\u0003 WKH\u0003 UHQHZDEOH\u0003\nHQHUJ\\\u0003 VWDWLRQ\u0003 XQGHU\u0003 FRQVWDQW\u0003 YROWDJH\u0003 FRQWURO\u0003 FDQ\u0003 EH\u0003 UHJDUGHG\u0003\nDV\u0003D\u000339\u0003QRGH\u0011\u00037KHUH\u0003DUH\u0003QR\u0003LQVWDELOLW\\\u0003LVVXHV\u0003ZKHQ\u0003WKH\u0003UHDFWLYH\u0003\nSRZHU\u0003 UHPDLQV\u0003 ZLWKLQ\u0003 OLPLWV\u0011\u0003 &RQYHUVHO\\\u000f\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003\nVWDWLRQV\u0003 HPSOR\\LQJ\u0003 FRQVWDQW\u0003 SRZHU\u0003 IDFWRU\u0003 FRQWURO\u0003 FDQQRW\u0003\nHVWDEOLVK\u0003VXIILFLHQW\u0003YROWDJH\u0003VXSSRUW\u0003DQG\u0003DUH\u0003WKXV\u0003UHJDUGHG\u0003DV\u000334\u0003\nQRGHV\u0011\u0003 7KLV\u0003 VWXG\\\u0003 IRFXVHV\u0003 RQ\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003 VWDWLRQV\u0003\nXWLOL]LQJ\u0003FRQVWDQW\u0003SRZHU\u0003IDFWRU\u0003FRQWURO\u0011\u0003\n,Q\u0003 VWDWLF\u0003 VWDELOLW\\\u0003 DQDO\\VLV\u000f\u0003 QHJOHFWLQJ\u0003 ORDG\u0003 VWDWLF\u0003\nFKDUDFWHULVWLFV\u000f\u0003 WKH\u0003 RQO\\\u0003 GLIIHUHQFH\u0003 EHWZHHQ\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003\nVWDWLRQV\u0003DQG\u0003ORDGV\u0003OLHV\u0003LQ\u0003WKH\u0003SRZHU\u0003GLUHFWLRQ\u0011\u00037KXV\u000f\u0003FRQVLGHULQJ\u0003\nD\u0003 XQLILHG\u0003 GHVFULSWLRQ\u0003 IRU\u0003 ERWK\u000f\u0003 WKH\\\u0003 FDQ\u0003 EH\u0003 UHSUHVHQWHG\u0003 E\\\u0003 D\u0003\nVLQJOH\u0003EODFN\u0010ER[\u0003HOHPHQW\u0011\u00036SHFLILFDOO\\\u000f\u0003SHUIRUPLQJ\u0003D\u00037KHYHQLQ\u0003\nHTXLYDOHQW\u0003RQ\u0003WKH\u0003V\\VWHP\u0003VLGH\u0003RI\u0003WKH\u0003JULG\u0003DW\u0003WKH\u0003EODFN\u0010ER[\u0003VLGH\u0003\n\\LHOGV\u0003WKH\u0003VLQJOH\u0010PDFKLQH\u0003EODFN\u0010ER[\u0003V\\VWHP\u0003VKRZQ\u0003LQ\u0003)LJ\u0003\u0014\u0011\u0003\n=WK 5 WK\u000eM;WK\n(TXLYDOHQW\u0003\nVRXUFH\nWK (( δ∠\n6L 3 L\u000eM4L\nLL8 δ∠(TXLYDOHQW\u0003\nLPSHGDQFH %ODFN\u0010ER[\n\u0003\n)LJ\u0011\u0003\u0014\u0011\u00036LQJOH\u0010PDFKLQH\u0003EODFN\u0010ER[\u0003V\\VWHP\u0003\n7KH\u0003JLYHQ\u0003UHIHUHQFH\u0003GLUHFWLRQ\u0003IRU\u0003SRZHU\u0003LV\u0003IURP\u0003WKH\u0003V\\VWHP\u0003\nVLGH\u0003 WRZDUGV\u0003 WKH\u0003 EODFN\u0003 ER[\u0011\u0003 %DVHG\u0003 RQ\u0003 WKH\u0003 IXQGDPHQWDO\u0003\nHTXDWLRQV\u0003 RI\u0003 WKH\u0003 FLUFXLW\u000f\u0003 WKH\u0003 SRZHU\u0003 IORZ\u0003 HTXDWLRQV\u0003 DUH\u0003\nIRUPXODWHG\u0003DV\u0003IROORZV\u0003>\u0014\u0017@\u001d\u0003\n\u0003\n()\n()\nFRV FRV\u000b \f FRV\nVLQ VLQ\u000b \f VLQ\nL\nLW K ( L L\nWK\nL\nLW K ( L L\nWK\n86( 8 =\n86( 8 =\nϕ θδδ θ\nϕ θδδ θ\n­ ªº=− − −¬¼°°®\n° ªº=− − −¬¼°¯\n\u0003\u000b \u0014 \f \u0003\n,Q\u0003\u000b\u0014\f\u001d\u00036L\u0003UHSUHVHQWV\u0003WKH\u0003DSSDUHQW\u0003SRZHU\u0003PDJQLWXGH\u0003DW\u0003QRGH\u0003\nL\u001e\u00038L\u0003 UHSUHVHQWV\u0003 WKH\u0003 YROWDJH\u0003 PDJQLWXGH\u0003 DW\u0003 QRGH\u0003L\u001e\u0003įL\u0003U H S U H V H Q W V \u0003\nWKH\u0003YROWDJH\u0003SKDVH\u0003DQJOH\u0003DW\u0003QRGH\u0003L\u001e\u0003(WK\u0003UHSUHVHQWV\u0003WKH\u0003PDJQLWXGH\u0003\nRI\u00037KHYHQLQ\u0003HTXLYDOHQW\u0003VRXUFH\u001e\u0003į(\u0003UHSUHVHQWV\u0003WKH\u0003SKDVH\u0003DQJOH\u0003RI\u0003\n7KHYHQLQ\u0003 HTXLYDOHQW\u0003 VRXUFH\u001e\u0003=WK\u0003 UHSUHVHQWV\u0003 WKH\u0003 PDJQLWXGH\u0003 RI\u0003\n7KHYHQLQ\u0003 HTXLYDOHQW\u0003 LPSHGDQFH\u001e\u0003ș\u0003 UHSUHVHQWV\u0003 WKH\u0003 DQJOH\u0003 RI\u0003\n7KHYHQLQ\u0003HTXLYDOHQW\u0003LPSHGDQFH\u001e\u0003ĳ\u0003UHSUHVHQWV\u0003WKH\u0003SRZHU\u0003IDFWRU\u0003\nDQJOH\u0003RI\u0003WKH\u0003EODFN\u0010ER[\u0003HOHPHQW\u0011\u0003%\\\u0003VLPXOWDQHRXVO\\\u0003HOLPLQDWLQJ\u0003\n\u000bį(\u0010įL\f\u000f\u0003 DQ\u0003 DQDO\\WLFDO\u0003 H[SUHVVLRQ\u0003 GHVFULELQJ\u0003 WKH\u0003 UHODWLRQVKLS\u0003\nEHWZHHQ\u0003WKH\u0003YROWDJH\u0003DQG\u0003SRZHU\u0003DW\u0003QRGHV\u0003LQ\u0003WKH\u0003GHSLFWHG\u0003VLQJOH\u0010\nPDFKLQH\u0003EODFN\u0010ER[\u0003V\\VWHP\u0003FDQ\u0003EH\u0003REWDLQHG\u0011\u0003\n\u0003 ()\n\u0015\u0015\u0015 \u0015 \u0015 \u0015>\u0015 FRV\u000b \f @ \u0013LW K L W K L W K L8= 6 ( 8 = 6θϕ+− − + = \u0003\u000b \u0015 \f \u0003\n,Q\u0003 \u000b\u0015\f\u000f\u0003 WKH\u0003 7KHYHQLQ\u0003 HTXLYDOHQW\u0003 SDUDPHWHUV\u0003(WK\u000f\u0003=WK\u000f\u0003ș\u000f\u0003 DQG\u0003\nWKH\u0003 SRZHU\u0003 IDFWRU\u0003 DQJOH\u0003ĳ\u0003 RI\u0003 WKH\u0003 EODFN\u0010ER[\u0003 HOHPHQW\u0003 DUH\u0003 DOO\u0003\nNQRZQ\u0003TXDQWLWLHV\u0011\u00036ROYLQJ\u0003\u000b\u0015\f\u0003DOORZV\u0003XV\u0003WR\u0003GHWHUPLQH\u0003WKH\u0003SRZHU\u0003\nIORZ\u0003 VWDWH\u0003RI\u0003 WKH\u0003 V\\VWHP\u0011\u0003 ,I\u0003SRZHU\u0003 IORZV\u0003 IURP\u0003 WKH\u0003 V\\VWHP\u0003 VLGH\u0003\nWRZDUGV\u0003 WKH\u0003 EODFN\u0003 ER[\u000f\u0003 WKHQ\u0003 WKH\u0003 EODFN\u0003 ER[\u0003 UHSUHVHQWV\u0003 D\u0003 ORDG\u0011\u0003\n&RQYHUVHO\\\u000f\u0003 LI\u0003 SRZHU\u0003 IORZV\u0003 IURP\u0003 WKH\u0003 EODFN\u0003 ER[\u0003 WRZDUGV\u0003 WKH\u0003\nV\\VWHP\u0003VLGH\u000f\u0003WKHQ\u0003WKH\u0003EODFN\u0003ER[\u0003UHSUHVHQWV\u0003D\u0003UHQHZDEOH\u0003HQHUJ\\\u0003\nVWDWLRQ\u0011\u0003\n,,,\u0011\u00037+(\u0003(;35(66,21\u0003)25\u000392/7$*(\u000367$%,/,7<\u00030$5*,1\u0003,1'(;\u0003\n21\u00037+(\u00036285&(\u0003$1'\u0003/2$'\u00036,'(6\u0003\u0003\n$\u0011\u00037KH\u0003H[SUHVVLRQ\u0003IRU\u0003WKH\u0003YROWDJH\u0003PDUJLQ\u0003LQGH[\u0003.8\u0003RQ\u0003WKH\u0003\nVRXUFH\u0003DQG\u0003ORDG\u0003VLGHV\u0003\n7KH\u0003 YROWDJH\u0003 PDUJLQ\u0003 LQGH[\u0003.8\u0003 LV\u0003 WKH\u0003 VLPSOHVW\u0003 LQGH[\u0003 WR\u0003\nGHWHUPLQH\u0003ZKHWKHU\u0003WKH\u0003YROWDJH\u0003DW\u0003D\u0003FHUWDLQ\u0003QRGH\u0003LV\u0003RQ\u0003WKH\u0003YHUJH\u0003\nRI\u0003FROODSVH\u0011\u00037KLV\u0003LQGH[\u0003GLUHFWO\\\u0003UHIOHFWV\u0003WKH\u0003YROWDJH\u0003DW\u0003WKH\u0003QRGH\u000f\u0003\nSURYLGLQJ\u0003D\u0003FOHDU\u0003SK\\VLFDO\u0003PHDQLQJ\u0011\u00037DNLQJ\u00038L\u0015\u0003DV\u0003WKH\u0003XQNQRZQ\u0003\nLQ\u0003 VROYLQJ\u0003 \u000b\u0015\f\u0003 DV\u0003 D\u0003 V\\VWHP\u0003 RI\u0003 TXDGUDWLF\u0003 HTXDWLRQV\u000f\u0003 WKH\u0003\nH[SUHVVLRQ\u0003 IRU\u0003 WKH\u0003 QRGH\u0003 YROWDJH\u0003 RI\u0003 WKH\u0003 EODFN\u0003 ER[\u0003 FRPSRQHQW\u0003\nFDQ\u0003EH\u0003REWDLQHG\u0003DV\u0003IROORZV\u001d\u0003\n\u0003\n\u0015\nFRV\u000b \f\u0015\nWK\nLW K L\n(8= 6 $ θϕ=− − ± \u0003\u000b \u0016 \f \u0003\n\u0003\n\u0017\n\u0015\u0015\u000b",
+      "page_start": 1,
+      "page_end": 2,
+      "start": {
+        "page": 1,
+        "offset": 8166
+      },
+      "end": {
+        "page": 2,
+        "offset": 4654
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 4654
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 9386,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate",
+        "text:control_characters_encoding_suspect",
+        "text:replacement_characters"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "CONCLUSION \nThis study proposes the use of the voltage stability margin \nindex to analyze the static voltage stability of the system from \nthe perspective of renewable energy power stations. A \nnormalized expression of the index is derived based on a \nsingle-machine black-box system, extending its application \nscenarios. The main contributions are as follows: \nThe normalized expressions of the index on the load and \nrenewable energy sides are derived. The characteristics of three \nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:49:45 UTC from IEEE Xplore.  Restrictions apply. \nGLIIHUHQW\u0003 LQGLFHV\u0003 DUH\u0003 DQDO\\]HG\u0003 DQG\u0003 FRPSDUHG\u0003 ZLWK\u0003 WKH\u0003\nFRPPRQO\\\u0003 XVHG\u0003 VKRUW\u0010FLUFXLW\u0003 UDWLR\u0003 LQGH[\u000f\u0003 HIIHFWLYHO\\\u0003 DYRLGLQJ\u0003\nWKH\u0003 GLIILFXOWLHV\u0003 LQ\u0003 FDOFXODWLQJ\u0003 WKH\u0003 FULWLFDO\u0003 VKRUW\u0010FLUFXLW\u0003 UDWLR\u0003\nLQGH[\u0011\u0003\n7KH\u0003 HIIHFWLYHQHVV\u0003 RI\u0003 WKH\u0003 PDUJLQ\u0003 LQGH[\nV\u0003 HYDOXDWLRQ\u0003 LV\u0003\nLQIOXHQFHG\u0003 E\\\u0003 WKH\u0003 DFFXUDF\\\u0003 RI\u0003 WKH\u0003 FDOFXODWLRQ\u0003 RI\u0003 7KHYHQLQ\u0003\nHTXLYDOHQW\u0003 SDUDPHWHUV\u0011\u0003 ,Q\u0003 WKH\u0003 FDOFXODWLRQ\u0003 RI\u0003 7KHYHQLQ\u0003\nHTXLYDOHQWV\u000f\u0003WKH\u0003SURSRVHG\u0003DSSURDFK\u0003DVVXPHV\u0003WKDW\u0003WKH\u0003VHQVLWLYLW\\\u0003\nRI\u0003 YROWDJH\u0003 WR\u0003 SRZHU\u0003 UHPDLQV\u0003 XQFKDQJHG\u0003 EHIRUH\u0003 DQG\u0003 DIWHU\u0003\nHTXLYDOHQFH\u0011\u0003 7KLV\u0003 PHWKRG\u0003 RI\u0003 HTXLYDOHQFH\u0003 LV\u0003 PRUH\u0003 VXLWDEOH\u0003 IRU\u0003\nVWDWLF\u0003VWDELOLW\\\u0003HYDOXDWLRQ\u0003FRPSDUHG\u0003WR\u0003FRPPRQO\\\u0003XVHG\u0003PHWKRGV\u0003\nLQ\u0003H[LVWLQJ\u0003OLWHUDWXUH\u000f\u0003\\LHOGLQJ\u0003PRUH\u0003DFFXUDWH\u0003UHVXOWV\u0011\u0003\n5()(5(1&(6\u0003\n>\u0014@\u00034 \u0011 \u0003= K R X \u000f \u0003& \u0011 \u00036 K H Q \u000f \u0003' \u0011 \u0003: D Q J \u000f \u0003/ \u0011 \u0003/ L X \u000f \u00033 \u0011 \u0003* D R \u0003D Q G \u00036 \u0011 \u0003< D Q J \u000f \u0003\u0005 6 F H Q D U LRV\u000f\u0003\n&KDOOHQJHV\u0003 DQG\u0003 6XJJHVWLRQV\u0003 IRU\u0003 )XWXUH\u0003 1HZ\u0003 3RZHU\u0003 6\\VWHPV\u0003 ZLWK\u0003 +LJK\u0003\n3URSRUWLRQ\u0003 RI\u0003 5HQHZDEOH\u0003 HQHUJ\\\u0003 *ULG\u0010FRQQHFWHG\u0003 RI\u0003 *DQVX\u000f\u0005\u0003 \u0015\u0013\u0015\u0015\u0003 \u0016UG\u0003\n,QWHUQDWLRQDO\u0003 &RQIHUHQFH\u0003 RQ\u0003 $GYDQFHG\u0003 (OHFWULFDO\u0003 DQG\u0003 (QHUJ\\\u0003 6\\VWHPV\u0003\n\u000b$((6\f\u000f\u0003/DQ]KRX\u000f\u0003&KLQD\u000f\u0003\u0015\u0013\u0015\u0015\u000f\u0003SS\u0011\u0003\u0016\u001c\u001a\u0010\u0017\u0013\u0014\u0003\n>\u0015@\u0003<\u0011\u0003/L\u0003HW\u0003DO\u0011\u000f\u0003\u00055HVHDUFK\u0003RQ\u0003&DSDFLW\\\u00033ODQQLQJ\u0003RI\u00035HQHZDEOH\u0003(QHUJ\\\u0003*ULG\u0003\n,QWHJUDWLRQ\u0003 %DVHG\u0003 RQ\u0003 (IIHFWLYH\u0003 6KRUW\u0003 &LUFXLW\u0003 5DWLR\u000f\u0005\u0003 \u0015\u0013\u0015\u0013\u0003 ,(((\u0003\n6XVWDLQDEOH\u0003 3RZHU\u0003 DQG\u0003 (QHUJ\\\u0003 &RQIHUHQFH\u0003 \u000bL63(&\f\u000f\u0003 &KHQJGX\u000f\u0003 &KLQD\u000f\u0003\n\u0015\u0013\u0015\u0013\u000f\u0003SS\u0011\u0003\u0019\u0015\u0015\u0010\u0019\u0015\u001a\u0003\n>\u0016@\u0003:$1*\u0003 1LQJER\u000f\u0003 0$\u0003 0LQJ\u000f\u0003 4$1*\u0003 7RQJER\u0011\u0003 'HYHORSPHQW\u0003\nRSSRUWXQLWLHV\u000f\u0003 FKDOOHQJHV\u0003 DQG\u0003 FRXQWHUPHDVXUHV\u0003 RI\u0003 KLJK\u0003 SURSRUWLRQ\u0003 RI\u0003\nUHQHZDEOH\u0003HQHUJ\\\u0003SRZHU\u0003V\\VWHP>-@\u0011\u0003(OHFWULF\u00033RZHU\u000f\u0003\u0015\u0013\u0014\u001b\u000f\u0003\u0018\u0014\u000b\u0014\f\u001d\u0003\u0015\u001c\u0010\u0016\u0018\u000f\u0003\n\u0018\u0013\u0011\u0003\n>\u0017@\u0003%(*29,&\u0003 0\u0003 0\u000f\u0003 3+$'.(\u0003 $\u0003 *\u0011\u0003 &RQWURO\u0003 RI\u0003 YROWDJH\u0003 VWDELOLW\\\u0003 XVLQJ\u0003\nVHQVLWLYLW\\\u0003 DQDO\\VLV>-@\u0011\u0003 ,(((\u0003 7UDQVDFWLRQV\u0003 RQ\u0003 3RZHU\u0003 6\\VWHPV\u000f\u0003 \u0014\u001c\u001c\u0015\u000f\u0003 \u001a\u000b\u0014\f\u001d\u0003\n\u0014\u0014\u0017\u0010\u0014\u0015\u0016\u0011\u0003\n>\u0018@\u0003=+(1*\u0003 :X\u000f\u0003 /,\u0003 +XDTLDQJ\u000f\u0003 /,8\u0003 +XL\u0011\u0003 $QDO\\VLV\u0003 RI\u0003 YROWDJH\u0003 ZHDN\u0003 QRGHV\u0003\nEDVHG\u0003RQ\u0003VWDWLF\u0003HQHUJ\\\u0003IXQFWLRQ\u0003PHWKRG>-@\u0011\u00033RZHU\u00036\\VWHP\u00033URWHFWLRQ\u0003DQG\u0003\n&RQWURO\u000f\u0003\u0015\u0013\u0014\u0013\u000f\u0003\u0016\u001b\u000b\u0014\u0017\f\u001d\u0003\u001a\u001c\u0010\u001b\u0016\u0011\u0003\n>\u0019@\u0003;8\u0003 =KL\\RX\u000f\u0003 /8$1\u0003 =KDRZHQ\u000f\u0003 )$1\u0003 7DR\u0011\u0003 6LQJXODU\u0003 YDOXH\u0003 PHWKRG\u0003 DQG\u0003\nVWDELOLW\\\u0003 LQGH[\u0003 WR\u0003 PHDVXUH\u0003 QRGH\u0003 YROWDJH\u0003 VWDELOLW\\>-@\u0011\u0003 $XWRPDWLRQ\u0003 RI\u0003\n(OHFWULF\u00033RZHU\u00036\\VWHPV\u000f\u0003\u0014\u001c\u001c\u001a\u000b\u0013\u001b\f\u001d\u0003\u0017\u0015\u0010\u0017\u0017\u0011\u0003\n>\u001a@\u0003/,8\u0003<XQ[LQ\u000f\u0003<$2\u0003/LDQJ]KRQJ\u000f\u0003/,$2\u00036L\\DQJ\u0011\u00036WXG\\\u0003RQ\u0003WKH\u0003LQIOXHQFH\u0003RI\u0003\nSKRWRYROWDLF\u0003SHUPHDELOLW\\\u0003RQ\u0003VWDWLF\u0003YROWDJH\u0003VWDELOLW\\\u0003RI\u0003SRZHU\u0003V\\VWHP>-@\u0011\u0003\n3URFHHGLQJV\u0003RI\u0003WKH\u0003&6((\u000f\u0003\u0015\u0013\u0015\u0015\u000f\u0003\u0017\u0015\u000b\u0014\u0018\f\u001d\u0003\u0018\u0017\u001b\u0017\u0010\u0018\u0017\u001c\u001a\u0011\u0003\n>\u001b@\u0003:$1*\u0003)DQJ]RQJ\u000f\u0003:$1*\u0003<DQJWLDQ\u000f\u0003/,\u0003)DQ\u0011\u00039ROWDJH\u0003VWDELOLW\\\u0003DQDO\\VLV\u0003\nPHWKRG\u0003 RI\u0003 UDGLDO\u0003 GLVWULEXWLRQ\u0003 V\\VWHP\u0003 EDVHG\u0003 RQ\u0003 LPSHGDQFH\u0003 PDWFKLQJ\u0003\nPHWKRG>-@\u0011\u00033RZHU\u00036\\VWHP\u00037HFKQRORJ\\\u000f\u0003\u0015\u0013\u0015\u0014\u000f\u0003\u0017\u0018\u000b\u0013\u0015\f\u001d\u0003\u0019\u0019\u0018\u0010\u0019\u001a\u0014\u0011\u0003\n>\u001c@\u0003$ G D S W D E L O L W \\ \u0003D Q D O \\ V L V \u0003R I \u0003L P S H G D Q F H \u0003P R G X O X V \u0003P D U J L Q \u0003L Q G H [ \u0003L Q \u0003V W D WLF\u0003\nYROWDJH\u0003 VWDELOLW\\\u0003 HYDOXDWLRQ\u0003 RI\u0003 PXOWL\u0010LQIHHG\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003 SRZHU\u0003\nV\\VWHP\u0011\u0003 3URFHHGLQJV\u0003 RI\u0003 WKH\u0003 &6((\u001d\u0003 \u0014\u0010\u0014\u0019>\u0015\u0013\u0015\u0016\u0010\u0014\u0013\u0015\u0015@\u0011\u0003\nKWWS\u001d\u0012\u0012NQV\u0011FQNL\u0011QHW\u0012NFPV\u0012GHWDLO\u0012\u0014\u0014\u0011\u0015\u0014\u0013\u001a\u001170\u0011\u0015\u0013\u0015\u0015\u0014\u0015\u0015\u0016\u0011\u0013\u001c\u0015\u0013\u0011\u0013\u0013\u0015\u0011KWPO\u0003\n>\u0014\u0013@\u00037 $ < / 2 5 \u0003& \u0011 \u0003: \u0011 \u0003\u000f \u00033 R Z H U \u0003V \\ V W H P \u0003Y R O W D J H \u0003V W D E L O L W \\ > 0 @ \u0011 \u00031 H Z \u0003< R U N \u001d \u0003\n0F*UDZ\u0010+LOO\u000f\u0003\u0014\u001c\u001c\u0017\u0011\u0003\n>\u0014\u0014@\u0003;,1\u0003+XDQKDL\u000f\u0003'21*\u0003:HL\u000f\u0003<8$1\u0003;LDRPLQJ\u0011\u0003*HQHUDOL]HG\u0003VKRUW\u0003FLUFXLW\u0003\nUDWLR\u0003RI\u0003SRZHU\u0003HOHFWURQLFV\u0003PXOWL\u0010LQIHHG\u0003SRZHU\u0003V\\VWHP>-@\u0011\u00033URFHHGLQJV\u0003RI\u0003\nWKH\u0003&6((\u000f\u0003\u0015\u0013\u0014\u0019\u000f\u0003\u0016\u0019\u000b\u0015\u0015\f\u001d\u0003\u0019\u0013\u0014\u0016\u0010\u0019\u0013\u0015\u001a\u0011\u0003\n>\u0014\u0015@\u0003681\u0003 +XDGRQJ\u000f\u0003 ;8\u0003 6KL\\XQ\u000f\u0003 ;8\u0003 7DR\u0011\u0003 'HILQLWLRQ\u0003 DQG\u0003 LQGH[\u0003 RI\u0003 VKRUW\u0003\nFLUFXLW\u0003 UDWLR\u0003 RI\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003 PXOWL\u0010ILHOG\u0003 VWDWLRQ>-@\u0011\u0003 3URFHHGLQJV\u0003 RI\u0003\nWKH\u0003&6((\u000f\u0003\u0015\u0013\u0015\u0014\u000f\u0003\u0017\u0014\u000b\u0013\u0015\f\u001d\u0003\u0017\u001c\u001a\u0010\u0018\u0013\u0019\u0011\u0003\n>\u0014\u0016@\u0003<8\u0003 /LQ\u000f\u0003 681\u0003 +XDGRQJ\u000f\u0003 =+$2\u0003 %LQJ\u0011\u0003 $QDO\\VLV\u0003 RI\u0003 VKRUW\u0010FLUFXLW\u0003 UDWLR\u0003\nLQGH[\u0003DQG\u0003FDOFXODWLRQ\u0003PHWKRG\u0003RI\u0003FULWLFDO\u0003VKRUW\u0010FLUFXLW\u0003UDWLR\u0003RI\u0003UHQHZDEOH\u0003\nHQHUJ\\\u0003 JULG\u0010FRQQHFWHG\u0003 V\\VWHP>-@\u0011\u0003 3URFHHGLQJV\u0003 RI\u0003 WKH\u0003 &6((\u000f\u0003 \u0015\u0013\u0015\u0015\u000f\u0003\n\u0017\u0015\u000b\u0013\u0016\f\u001d\u0003\u001c\u0014\u001c\u0010\u001c\u0015\u001c\u0011\u0003\n>\u0014\u0017@\u0003%$,\u0003 .XQ\u0011\u0003 9ROWDJH\u0003 VWDELOLW\\\u0003 HYDOXDWLRQ\u0003 EDVHG\u0003 RQ\u0003 FRQVLVWHQF\\\u0003 UHVROXWLRQ\u0003\nPDUJLQ\u0003LQGH[>'@\u0011\u0003+DUELQ\u0003,QVWLWXWH\u0003RI\u00037HFKQRORJ\\\u000f\u0003\u0015\u0013\u0015\u0015\u0011\u0003\n>\u0014\u0018@\u0003*8$1\u0003 =KDQTL\u0011\u0003 6WDWLF\u0003 YROWDJH\u0003 VWDELOLW\\\u0003 DQDO\\VLV\u0003 EDVHG\u0003 RQ\u0003 7KHYHQLQ\u0003\nHTXLYDOHQFH>'@\u0011\u0003+DUELQ\u0003,QVWLWXWH\u0003RI\u00037HFKQRORJ\\\u000f\u0003\u0015\u0013\u0015\u0013\u0011\u0003\n\u0003\n794\ndifferent indices are analyzed and compared with the \ncommonly used short-circuit ratio index, effectively avoiding \nthe dif ficulties in calculating the critical short-circuit ratio \nindex. \nThe effectiveness of the margin index's evaluation is \ninfluenced by the accuracy of the calculation of Thevenin \nequivalent parameters. In the calculation of Thevenin \nequivalents, the proposed approach assumes that the sensitivity \nof voltage to power remains unchanged before and after \nequivalence. This method of equivalence is more suitable for \nstatic stability evaluation compared to commonly used methods \nin existing literature, yielding more accurate results. \n",
+      "page_start": 7,
+      "page_end": 8,
+      "start": {
+        "page": 7,
+        "offset": 6691
+      },
+      "end": {
+        "page": 8,
+        "offset": 4535
+      },
+      "preview_end": {
+        "page": 8,
+        "offset": 4535
+      },
+      "heading": "conclusion",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 5183,
+      "truncated": false,
+      "quality_flags": [
+        "text:control_characters_encoding_suspect",
+        "text:replacement_characters"
+      ],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "abstract:text:control_characters_encoding_suspect",
+    "conclusion:text:control_characters_encoding_suspect",
+    "conclusion:text:replacement_characters",
+    "introduction:numbered_boundary_candidate",
+    "introduction:text:control_characters_encoding_suspect",
+    "introduction:text:replacement_characters",
+    "page:1:control_characters_encoding_suspect",
+    "page:2:control_characters_encoding_suspect",
+    "page:2:replacement_characters",
+    "page:3:control_characters_encoding_suspect",
+    "page:3:fragmented_text",
+    "page:3:replacement_characters",
+    "page:4:control_characters_encoding_suspect",
+    "page:4:replacement_characters",
+    "page:5:control_characters_encoding_suspect",
+    "page:6:control_characters_encoding_suspect",
+    "page:6:replacement_characters",
+    "page:7:control_characters_encoding_suspect",
+    "page:7:replacement_characters",
+    "page:8:control_characters_encoding_suspect"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 6952,
+      "heading": "abstract-substitutingahighproportionofrenewableenergy",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 8166,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 4654,
+      "heading": "vlq",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 6501,
+      "heading": "ii.thepowerflowequationsofasingle-machine",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 9312,
+      "heading": "iii.theexpressionforvoltagestabilitymarginindex",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 403,
+      "heading": "ll",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 838,
+      "heading": "ll",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 7716,
+      "heading": "c.theexpressionoftheimpedancemarginindexkrbetween",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 7508,
+      "heading": "iv.casestudy",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 7,
+      "offset": 6691,
+      "heading": "conclusion",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 8,
+      "offset": 4535,
+      "heading": "references",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 12897
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [
+        "replacement_characters",
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 10828
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "replacement_characters",
+        "control_characters_encoding_suspect",
+        "fragmented_text"
+      ],
+      "chars": 9584
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [
+        "replacement_characters",
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 10919
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 9853
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [
+        "replacement_characters",
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 5506
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [
+        "replacement_characters",
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 7338
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 7563
+    }
+  ],
+  "limitation_hits": [],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/16_Static_Voltage_Stability_Analysis_of_Renewable_Energy_Multi__pages.json",
+  "abstract": "Abstract-Substituting a high proportion of renewable energy \nsources for traditional synchronous generators can lead to a \ndeterioration in the system's static voltage stability. This paper \nproposes extending margin-based voltage stability indices based \non the load side Thevenin equivalent, to the renewable energy \nsource side for assessing the static voltage stability of renewable \nenergy multi-infeed systems. Firstly, a comprehensive analysis of \nboth the load and renewable energy sources is conducted, and \nnormalized expressions for three margin indices are derived \nbased on a single-machine black-box system. Secondly, the \ncharacteristics of the margin indices are analyzed, validating \ntheir applicability in a single-infeed system. Thirdly, a method is \nintroduced for conducting static stability analysis on the \nrenewable energy source side of multi-infeed systems using \nThevenin equivalent. Finally, the effectiveness of the indices \nunder different growth scenarios is verified in a modified IEEE \n39-node system, expanding the application scenarios of these \nindices. \nKeyword5-s tatic voltage stability; margin index; renewable \nenergy multi-infeed system; Thevenin equivalent; sensitivity \n",
+  "introduction": "I. INTRODUCTION \nIn recent years, China has accelerated the construction of a \nnew type of power system. The total installed capacity and \nannual power generation of renewable energy units have \nexperienced rapid growth [1- 2] . However, accompanying this \ngrowth is a gradual weakening of the voltage stability of the \npower system. Ta king the Jixi renewable energy base as an \nexamp le, with the continued integration of renewable energy \nsources in the western region of Jilin in 2022, the short-circuit \nratio of multiple renewable energy stations in some areas will \nfall below 1. 5, failing to meet the requirements for the voltage \nstrength of multiple renewable energy stations [3 ]. This \nsituation could easily lead to widespread disconnection of \nrenewable energy sources. Therefore, accurately assessing the \nstatic voltage stability of the renewable energy transmission \nsystem holds significant importance for the safe and stable \noperation of the system. \nThe evaluation indices for static voltage stability primarily \nfall into two categories: margin indices and state indices. \nCommon state indices include sensitivity indices [ 4 ], energy \nfunction indices [5] , eigenvalue indices [6], and others. Ta king \nsensitivity indices as an exam ple, as the system approaches \ninstability, the sensitivity of voltage to power tends to approach \ninfinity. This characteristic is used as a basis for determining \nwhether the system is unstable or approaching instability. \nHowever, due to the poor linearity of state indices, especially \nin the distance from the turning point to the instability point, \n979-8-3503-5955- 8/24/$31.00 ©2024 IEEE \n787 \nthe values of state indices can change rapidly. This makes it \nchallenging to timely and accurately predict the voltage \nstability margin. \nMargin indices represent a widely used type of assessment \nmetric employed in analyzing static voltage stability. These \nindices involve setting a specific growth pattern to compare the \ndistance between voltage, power, and other metr ics in the \ncurrent system state and the crit ical stability state. This \ncomparison is pivotal in evaluating the voltage stability of a \nsystem. These indices offer straightforward calculations and \nclear physical interpretations, crucial in static voltage stability \nanalysis. Among them, the impedance margin does not rely on \nthe calculation of the Thevenin equivalent potential. Its \napplication has been extensive, with abundant research \nfindings. Literature [7 -8] independently validated the efficacy \nof impedance margin indices in photovoltaic integration \nsystems and radiative distribution networks. However, most \nexisting research has predominantly focused on the load side. \nIn literature [9], there's a proposal to extend impedance margin \nindices to the realm of renewable energy sources. The study \nconducted stability analyses of wind power stations ba sed on \nthese indices, yielding certain results. However, this research \ndidn't consider the strong nonlinearity of impedance margin \nindices near instability points. \"Moreover, the accuracy of its \nThevenin equivalent method based on node admittance matrix \nremains que stionable under strong nonlinear conditions.\" \nThe Short Circuit Ratio (SCR) is another type of margin \nindex. Traditionally defined as the ratio between the system's \nshort-circuit capacity and the equipment's rated capacity [10]. \nWith renewable energy stations employing multi-infeed \nmet hods, their interdependencies impact each other. \nCalculating based on a single-infeed method can yield overly \noptimistic results. Hence, numero us scholars have researched \nto improve the SCR index [1 1-13 ]. Ba sed on operational \nexperiences with renewable energy generation worldwide, the \ncritical SCR is generally around 1. 5 [3] . However, during \nactual operation, factors like system parameters and operating \nconditions significantly influence the critical SCR, which \ncannot be overlooked. Literature [12 ] presents various methods \nto calculate critical values for multiple SCR indices. However, \nthese indices are applicable in different scenarios, varying in \nprecision, which poses challenges for practical application. \nTo address the difficulty in calculating critical values for \ncommon short-circuit ratio indices, this paper conducts a \ncomprehensive study on both the load and renewable energy \nsources. The proposed method establishes a static stability \nanalysis model for a single-machine black-box system, extends \nthe margin indices on the load side, and proposes a new \nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:49:45 UTC from IEEE Xplore.  Restrictions apply. \nPHWKRG\u0003 IRU\u0003 VWDWLF\u0003 VWDELOLW\\\u0003 DQDO\\VLV\u0003 RQ\u0003 WKH\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003\nVRXUFH\u0003VLGH\u0003EDVHG\u0003RQ\u0003PDUJLQ\u0003LQGLFHV\u0011\u00037KLV\u0003PHWKRG\u0003LV\u0003HPSOR\\HG\u0003\nWR\u0003 HYDOXDWH\u0003 WKH\u0003 VWDWLF\u0003 YROWDJH\u0003 VWDELOLW\\\u0003 RI\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003\nPXOWL\u0010LQIHHG\u0003V\\VWHPV\u0011\u00037KH\u0003PDLQ\u0003FRQWULEXWLRQV\u0003DUH\u0003DV\u0003IROORZV\u001d\u0003\nL\f\u0003 %\\\u0003 HVWDEOLVKLQJ\u0003 D\u0003 VWDWLF\u0003 VWDELOLW\\\u0003 DQDO\\VLV\u0003 PRGHO\u0003 IRU\u0003 D\u0003\nVLQJOH\u0010PDFKLQH\u0003 EODFN\u0010ER[\u0003 V\\VWHP\u000f\u0003 VSHFLILF\u0003 H[SUHVVLRQV\u0003 IRU\u0003\nWKUHH\u0003 PDUJLQ\u0003 LQGLFHV\u0003 RQ\u0003 WKH\u0003 ORDG\u0003 VLGH\u0003 DQG\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003\nVRXUFH\u0003VLGH\u0003DUH\u0003GHULYHG\u0011\u00037KH\u0003SURSRVHG\u0003PRGHO\u0003LOOXVWUDWHV\u0003WKDW\u0003WKH\u0003\nVWDWLF\u0003 VWDELOLW\\\u0003 DQDO\\VLV\u0003 SURFHVV\u0003 EDVHG\u0003 RQ\u0003 PDUJLQ\u0003 LQGLFHV\u0003 IRU\u0003\nERWK\u0003WKH\u0003VRXUFH\u0003DQG\u0003ORDG\u0003VLGHV\u0003LV\u0003HVVHQWLDOO\\\u0003FRQVLVWHQW\u0011\u0003\nLL\f\u0003 2Q\u0003 WKH\u0003 EDVLV\u0003 RI\u0003 VWDELOLW\\\u0003 DQDO\\VLV\u0003 LQ\u0003 D\u0003 VLQJOH\u0010LQIHHG\u0003\nV\\VWHP\u000f\u0003WKLV\u0003SDSHU\u0003SURSRVHV\u0003WKH\u0003VLPSOLILFDWLRQ\u0003RI\u0003D\u0003PXOWL\u0010LQIHHG\u0003\nV\\VWHP\u0003 XVLQJ\u0003 7KHYHQLQ\u0003 HTXLYDOHQW\u0011\u0003 6XEVHTXHQWO\\\u000f\u0003 PDUJLQ\u0003\nLQGLFHV\u0003DUH\u0003DSSOLHG\u0003WR\u0003DVVHVV\u0003WKH\u0003VWDWLF\u0003VWDELOLW\\\u0003RI\u0003WKH\u0003UHQHZDEOH\u0003\nHQHUJ\\\u0003VRXUFH\u0003VLGH\u0003LQ\u0003WKH\u0003PXOWL\u0010LQIHHG\u0003V\\VWHP\u0003\n,,\u0011\u00037+(\u000332:(5\u0003)/2:\u0003(48$7,216\u00032)\u0003$\u00036,1*/(\u00100$&+,1(\u0003\n%/$&.\u0010%2;\u00036<67(0\u0003\n7KH\u0003 FRQWURO\u0003 VWUDWHJ\\\u0003 RI\u0003 JULG\u0010FRQQHFWHG\u0003 LQYHUWHUV\u0003 IRU\u0003\nUHQHZDEOH\u0003HQHUJ\\\u0003VRXUFHV\u0003KDV\u0003D\u0003VLJQLILFDQW\u0003LPSDFW\u0003RQ\u0003WKH\u0003VWDWLF\u0003\nYROWDJH\u0003VWDELOLW\\\u0003DW\u0003WKH\u0003JULG\u0003FRQQHFWLRQ\u0003SRLQW\u000f\u0003PDLQO\\\u0003HPSOR\\LQJ\u0003\nWZR\u0003 PHWKRGV\u001d\u0003 FRQVWDQW\u0003 SRZHU\u0003 IDFWRU\u0003 FRQWURO\u0003 DQG\u0003 FRQVWDQW\u0003\nYROWDJH\u0003 FRQWURO\u0011\u0003 ,Q\u0003 VWDWLF\u0003 VWDELOLW\\\u0003 DQDO\\VLV\u000f\u0003 WKH\u0003 UHQHZDEOH\u0003\nHQHUJ\\\u0003 VWDWLRQ\u0003 XQGHU\u0003 FRQVWDQW\u0003 YROWDJH\u0003 FRQWURO\u0003 FDQ\u0003 EH\u0003 UHJDUGHG\u0003\nDV\u0003D\u000339\u0003QRGH\u0011\u00037KHUH\u0003DUH\u0003QR\u0003LQVWDELOLW\\\u0003LVVXHV\u0003ZKHQ\u0003WKH\u0003UHDFWLYH\u0003\nSRZHU\u0003 UHPDLQV\u0003 ZLWKLQ\u0003 OLPLWV\u0011\u0003 &RQYHUVHO\\\u000f\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003\nVWDWLRQV\u0003 HPSOR\\LQJ\u0003 FRQVWDQW\u0003 SRZHU\u0003 IDFWRU\u0003 FRQWURO\u0003 FDQQRW\u0003\nHVWDEOLVK\u0003VXIILFLHQW\u0003YROWDJH\u0003VXSSRUW\u0003DQG\u0003DUH\u0003WKXV\u0003UHJDUGHG\u0003DV\u000334\u0003\nQRGHV\u0011\u0003 7KLV\u0003 VWXG\\\u0003 IRFXVHV\u0003 RQ\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003 VWDWLRQV\u0003\nXWLOL]LQJ\u0003FRQVWDQW\u0003SRZHU\u0003IDFWRU\u0003FRQWURO\u0011\u0003\n,Q\u0003 VWDWLF\u0003 VWDELOLW\\\u0003 DQDO\\VLV\u000f\u0003 QHJOHFWLQJ\u0003 ORDG\u0003 VWDWLF\u0003\nFKDUDFWHULVWLFV\u000f\u0003 WKH\u0003 RQO\\\u0003 GLIIHUHQFH\u0003 EHWZHHQ\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003\nVWDWLRQV\u0003DQG\u0003ORDGV\u0003OLHV\u0003LQ\u0003WKH\u0003SRZHU\u0003GLUHFWLRQ\u0011\u00037KXV\u000f\u0003FRQVLGHULQJ\u0003\nD\u0003 XQLILHG\u0003 GHVFULSWLRQ\u0003 IRU\u0003 ERWK\u000f\u0003 WKH\\\u0003 FDQ\u0003 EH\u0003 UHSUHVHQWHG\u0003 E\\\u0003 D\u0003\nVLQJOH\u0003EODFN\u0010ER[\u0003HOHPHQW\u0011\u00036SHFLILFDOO\\\u000f\u0003SHUIRUPLQJ\u0003D\u00037KHYHQLQ\u0003\nHTXLYDOHQW\u0003RQ\u0003WKH\u0003V\\VWHP\u0003VLGH\u0003RI\u0003WKH\u0003JULG\u0003DW\u0003WKH\u0003EODFN\u0010ER[\u0003VLGH\u0003\n\\LHOGV\u0003WKH\u0003VLQJOH\u0010PDFKLQH\u0003EODFN\u0010ER[\u0003V\\VWHP\u0003VKRZQ\u0003LQ\u0003)LJ\u0003\u0014\u0011\u0003\n=WK 5 WK\u000eM;WK\n(TXLYDOHQW\u0003\nVRXUFH\nWK (( δ∠\n6L 3 L\u000eM4L\nLL8 δ∠(TXLYDOHQW\u0003\nLPSHGDQFH %ODFN\u0010ER[\n\u0003\n)LJ\u0011\u0003\u0014\u0011\u00036LQJOH\u0010PDFKLQH\u0003EODFN\u0010ER[\u0003V\\VWHP\u0003\n7KH\u0003JLYHQ\u0003UHIHUHQFH\u0003GLUHFWLRQ\u0003IRU\u0003SRZHU\u0003LV\u0003IURP\u0003WKH\u0003V\\VWHP\u0003\nVLGH\u0003 WRZDUGV\u0003 WKH\u0003 EODFN\u0003 ER[\u0011\u0003 %DVHG\u0003 RQ\u0003 WKH\u0003 IXQGDPHQWDO\u0003\nHTXDWLRQV\u0003 RI\u0003 WKH\u0003 FLUFXLW\u000f\u0003 WKH\u0003 SRZHU\u0003 IORZ\u0003 HTXDWLRQV\u0003 DUH\u0003\nIRUPXODWHG\u0003DV\u0003IROORZV\u0003>\u0014\u0017@\u001d\u0003\n\u0003\n()\n()\nFRV FRV\u000b \f FRV\nVLQ VLQ\u000b \f VLQ\nL\nLW K ( L L\nWK\nL\nLW K ( L L\nWK\n86( 8 =\n86( 8 =\nϕ θδδ θ\nϕ θδδ θ\n­ ªº=− − −¬¼°°®\n° ªº=− − −¬¼°¯\n\u0003\u000b \u0014 \f \u0003\n,Q\u0003\u000b\u0014\f\u001d\u00036L\u0003UHSUHVHQWV\u0003WKH\u0003DSSDUHQW\u0003SRZHU\u0003PDJQLWXGH\u0003DW\u0003QRGH\u0003\nL\u001e\u00038L\u0003 UHSUHVHQWV\u0003 WKH\u0003 YROWDJH\u0003 PDJQLWXGH\u0003 DW\u0003 QRGH\u0003L\u001e\u0003įL\u0003U H S U H V H Q W V \u0003\nWKH\u0003YROWDJH\u0003SKDVH\u0003DQJOH\u0003DW\u0003QRGH\u0003L\u001e\u0003(WK\u0003UHSUHVHQWV\u0003WKH\u0003PDJQLWXGH\u0003\nRI\u00037KHYHQLQ\u0003HTXLYDOHQW\u0003VRXUFH\u001e\u0003į(\u0003UHSUHVHQWV\u0003WKH\u0003SKDVH\u0003DQJOH\u0003RI\u0003\n7KHYHQLQ\u0003 HTXLYDOHQW\u0003 VRXUFH\u001e\u0003=WK\u0003 UHSUHVHQWV\u0003 WKH\u0003 PDJQLWXGH\u0003 RI\u0003\n7KHYHQLQ\u0003 HTXLYDOHQW\u0003 LPSHGDQFH\u001e\u0003ș\u0003 UHSUHVHQWV\u0003 WKH\u0003 DQJOH\u0003 RI\u0003\n7KHYHQLQ\u0003HTXLYDOHQW\u0003LPSHGDQFH\u001e\u0003ĳ\u0003UHSUHVHQWV\u0003WKH\u0003SRZHU\u0003IDFWRU\u0003\nDQJOH\u0003RI\u0003WKH\u0003EODFN\u0010ER[\u0003HOHPHQW\u0011\u0003%\\\u0003VLPXOWDQHRXVO\\\u0003HOLPLQDWLQJ\u0003\n\u000bį(\u0010įL\f\u000f\u0003 DQ\u0003 DQDO\\WLFDO\u0003 H[SUHVVLRQ\u0003 GHVFULELQJ\u0003 WKH\u0003 UHODWLRQVKLS\u0003\nEHWZHHQ\u0003WKH\u0003YROWDJH\u0003DQG\u0003SRZHU\u0003DW\u0003QRGHV\u0003LQ\u0003WKH\u0003GHSLFWHG\u0003VLQJOH\u0010\nPDFKLQH\u0003EODFN\u0010ER[\u0003V\\VWHP\u0003FDQ\u0003EH\u0003REWDLQHG\u0011\u0003\n\u0003 ()\n\u0015\u0015\u0015 \u0015 \u0015 \u0015>\u0015 FRV\u000b \f @ \u0013LW K L W K L W K L8= 6 ( 8 = 6θϕ+− − + = \u0003\u000b \u0015 \f \u0003\n,Q\u0003 \u000b\u0015\f\u000f\u0003 WKH\u0003 7KHYHQLQ\u0003 HTXLYDOHQW\u0003 SDUDPHWHUV\u0003(WK\u000f\u0003=WK\u000f\u0003ș\u000f\u0003 DQG\u0003\nWKH\u0003 SRZHU\u0003 IDFWRU\u0003 DQJOH\u0003ĳ\u0003 RI\u0003 WKH\u0003 EODFN\u0010ER[\u0003 HOHPHQW\u0003 DUH\u0003 DOO\u0003\nNQRZQ\u0003TXDQWLWLHV\u0011\u00036ROYLQJ\u0003\u000b\u0015\f\u0003DOORZV\u0003XV\u0003WR\u0003GHWHUPLQH\u0003WKH\u0003SRZHU\u0003\nIORZ\u0003 VWDWH\u0003RI\u0003 WKH\u0003 V\\VWHP\u0011\u0003 ,I\u0003SRZHU\u0003 IORZV\u0003 IURP\u0003 WKH\u0003 V\\VWHP\u0003 VLGH\u0003\nWRZDUGV\u0003 WKH\u0003 EODFN\u0003 ER[\u000f\u0003 WKHQ\u0003 WKH\u0003 EODFN\u0003 ER[\u0003 UHSUHVHQWV\u0003 D\u0003 ORDG\u0011\u0003\n&RQYHUVHO\\\u000f\u0003 LI\u0003 SRZHU\u0003 IORZV\u0003 IURP\u0003 WKH\u0003 EODFN\u0003 ER[\u0003 WRZDUGV\u0003 WKH\u0003\nV\\VWHP\u0003VLGH\u000f\u0003WKHQ\u0003WKH\u0003EODFN\u0003ER[\u0003UHSUHVHQWV\u0003D\u0003UHQHZDEOH\u0003HQHUJ\\\u0003\nVWDWLRQ\u0011\u0003\n,,,\u0011\u00037+(\u0003(;35(66,21\u0003)25\u000392/7$*(\u000367$%,/,7<\u00030$5*,1\u0003,1'(;\u0003\n21\u00037+(\u00036285&(\u0003$1'\u0003/2$'\u00036,'(6\u0003\u0003\n$\u0011\u00037KH\u0003H[SUHVVLRQ\u0003IRU\u0003WKH\u0003YROWDJH\u0003PDUJLQ\u0003LQGH[\u0003.8\u0003RQ\u0003WKH\u0003\nVRXUFH\u0003DQG\u0003ORDG\u0003VLGHV\u0003\n7KH\u0003 YROWDJH\u0003 PDUJLQ\u0003 LQGH[\u0003.8\u0003 LV\u0003 WKH\u0003 VLPSOHVW\u0003 LQGH[\u0003 WR\u0003\nGHWHUPLQH\u0003ZKHWKHU\u0003WKH\u0003YROWDJH\u0003DW\u0003D\u0003FHUWDLQ\u0003QRGH\u0003LV\u0003RQ\u0003WKH\u0003YHUJH\u0003\nRI\u0003FROODSVH\u0011\u00037KLV\u0003LQGH[\u0003GLUHFWO\\\u0003UHIOHFWV\u0003WKH\u0003YROWDJH\u0003DW\u0003WKH\u0003QRGH\u000f\u0003\nSURYLGLQJ\u0003D\u0003FOHDU\u0003SK\\VLFDO\u0003PHDQLQJ\u0011\u00037DNLQJ\u00038L\u0015\u0003DV\u0003WKH\u0003XQNQRZQ\u0003\nLQ\u0003 VROYLQJ\u0003 \u000b\u0015\f\u0003 DV\u0003 D\u0003 V\\VWHP\u0003 RI\u0003 TXDGUDWLF\u0003 HTXDWLRQV\u000f\u0003 WKH\u0003\nH[SUHVVLRQ\u0003 IRU\u0003 WKH\u0003 QRGH\u0003 YROWDJH\u0003 RI\u0003 WKH\u0003 EODFN\u0003 ER[\u0003 FRPSRQHQW\u0003\nFDQ\u0003EH\u0003REWDLQHG\u0003DV\u0003IROORZV\u001d\u0003\n\u0003\n\u0015\nFRV\u000b \f\u0015\nWK\nLW K L\n(8= 6 $ θϕ=− − ± \u0003\u000b \u0016 \f \u0003\n\u0003\n\u0017\n\u0015\u0015\u000b",
+  "conclusion": "CONCLUSION \nThis study proposes the use of the voltage stability margin \nindex to analyze the static voltage stability of the system from \nthe perspective of renewable energy power stations. A \nnormalized expression of the index is derived based on a \nsingle-machine black-box system, extending its application \nscenarios. The main contributions are as follows: \nThe normalized expressions of the index on the load and \nrenewable energy sides are derived. The characteristics of three \nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:49:45 UTC from IEEE Xplore.  Restrictions apply. \nGLIIHUHQW\u0003 LQGLFHV\u0003 DUH\u0003 DQDO\\]HG\u0003 DQG\u0003 FRPSDUHG\u0003 ZLWK\u0003 WKH\u0003\nFRPPRQO\\\u0003 XVHG\u0003 VKRUW\u0010FLUFXLW\u0003 UDWLR\u0003 LQGH[\u000f\u0003 HIIHFWLYHO\\\u0003 DYRLGLQJ\u0003\nWKH\u0003 GLIILFXOWLHV\u0003 LQ\u0003 FDOFXODWLQJ\u0003 WKH\u0003 FULWLFDO\u0003 VKRUW\u0010FLUFXLW\u0003 UDWLR\u0003\nLQGH[\u0011\u0003\n7KH\u0003 HIIHFWLYHQHVV\u0003 RI\u0003 WKH\u0003 PDUJLQ\u0003 LQGH[\nV\u0003 HYDOXDWLRQ\u0003 LV\u0003\nLQIOXHQFHG\u0003 E\\\u0003 WKH\u0003 DFFXUDF\\\u0003 RI\u0003 WKH\u0003 FDOFXODWLRQ\u0003 RI\u0003 7KHYHQLQ\u0003\nHTXLYDOHQW\u0003 SDUDPHWHUV\u0011\u0003 ,Q\u0003 WKH\u0003 FDOFXODWLRQ\u0003 RI\u0003 7KHYHQLQ\u0003\nHTXLYDOHQWV\u000f\u0003WKH\u0003SURSRVHG\u0003DSSURDFK\u0003DVVXPHV\u0003WKDW\u0003WKH\u0003VHQVLWLYLW\\\u0003\nRI\u0003 YROWDJH\u0003 WR\u0003 SRZHU\u0003 UHPDLQV\u0003 XQFKDQJHG\u0003 EHIRUH\u0003 DQG\u0003 DIWHU\u0003\nHTXLYDOHQFH\u0011\u0003 7KLV\u0003 PHWKRG\u0003 RI\u0003 HTXLYDOHQFH\u0003 LV\u0003 PRUH\u0003 VXLWDEOH\u0003 IRU\u0003\nVWDWLF\u0003VWDELOLW\\\u0003HYDOXDWLRQ\u0003FRPSDUHG\u0003WR\u0003FRPPRQO\\\u0003XVHG\u0003PHWKRGV\u0003\nLQ\u0003H[LVWLQJ\u0003OLWHUDWXUH\u000f\u0003\\LHOGLQJ\u0003PRUH\u0003DFFXUDWH\u0003UHVXOWV\u0011\u0003\n5()(5(1&(6\u0003\n>\u0014@\u00034 \u0011 \u0003= K R X \u000f \u0003& \u0011 \u00036 K H Q \u000f \u0003' \u0011 \u0003: D Q J \u000f \u0003/ \u0011 \u0003/ L X \u000f \u00033 \u0011 \u0003* D R \u0003D Q G \u00036 \u0011 \u0003< D Q J \u000f \u0003\u0005 6 F H Q D U LRV\u000f\u0003\n&KDOOHQJHV\u0003 DQG\u0003 6XJJHVWLRQV\u0003 IRU\u0003 )XWXUH\u0003 1HZ\u0003 3RZHU\u0003 6\\VWHPV\u0003 ZLWK\u0003 +LJK\u0003\n3URSRUWLRQ\u0003 RI\u0003 5HQHZDEOH\u0003 HQHUJ\\\u0003 *ULG\u0010FRQQHFWHG\u0003 RI\u0003 *DQVX\u000f\u0005\u0003 \u0015\u0013\u0015\u0015\u0003 \u0016UG\u0003\n,QWHUQDWLRQDO\u0003 &RQIHUHQFH\u0003 RQ\u0003 $GYDQFHG\u0003 (OHFWULFDO\u0003 DQG\u0003 (QHUJ\\\u0003 6\\VWHPV\u0003\n\u000b$((6\f\u000f\u0003/DQ]KRX\u000f\u0003&KLQD\u000f\u0003\u0015\u0013\u0015\u0015\u000f\u0003SS\u0011\u0003\u0016\u001c\u001a\u0010\u0017\u0013\u0014\u0003\n>\u0015@\u0003<\u0011\u0003/L\u0003HW\u0003DO\u0011\u000f\u0003\u00055HVHDUFK\u0003RQ\u0003&DSDFLW\\\u00033ODQQLQJ\u0003RI\u00035HQHZDEOH\u0003(QHUJ\\\u0003*ULG\u0003\n,QWHJUDWLRQ\u0003 %DVHG\u0003 RQ\u0003 (IIHFWLYH\u0003 6KRUW\u0003 &LUFXLW\u0003 5DWLR\u000f\u0005\u0003 \u0015\u0013\u0015\u0013\u0003 ,(((\u0003\n6XVWDLQDEOH\u0003 3RZHU\u0003 DQG\u0003 (QHUJ\\\u0003 &RQIHUHQFH\u0003 \u000bL63(&\f\u000f\u0003 &KHQJGX\u000f\u0003 &KLQD\u000f\u0003\n\u0015\u0013\u0015\u0013\u000f\u0003SS\u0011\u0003\u0019\u0015\u0015\u0010\u0019\u0015\u001a\u0003\n>\u0016@\u0003:$1*\u0003 1LQJER\u000f\u0003 0$\u0003 0LQJ\u000f\u0003 4$1*\u0003 7RQJER\u0011\u0003 'HYHORSPHQW\u0003\nRSSRUWXQLWLHV\u000f\u0003 FKDOOHQJHV\u0003 DQG\u0003 FRXQWHUPHDVXUHV\u0003 RI\u0003 KLJK\u0003 SURSRUWLRQ\u0003 RI\u0003\nUHQHZDEOH\u0003HQHUJ\\\u0003SRZHU\u0003V\\VWHP>-@\u0011\u0003(OHFWULF\u00033RZHU\u000f\u0003\u0015\u0013\u0014\u001b\u000f\u0003\u0018\u0014\u000b\u0014\f\u001d\u0003\u0015\u001c\u0010\u0016\u0018\u000f\u0003\n\u0018\u0013\u0011\u0003\n>\u0017@\u0003%(*29,&\u0003 0\u0003 0\u000f\u0003 3+$'.(\u0003 $\u0003 *\u0011\u0003 &RQWURO\u0003 RI\u0003 YROWDJH\u0003 VWDELOLW\\\u0003 XVLQJ\u0003\nVHQVLWLYLW\\\u0003 DQDO\\VLV>-@\u0011\u0003 ,(((\u0003 7UDQVDFWLRQV\u0003 RQ\u0003 3RZHU\u0003 6\\VWHPV\u000f\u0003 \u0014\u001c\u001c\u0015\u000f\u0003 \u001a\u000b\u0014\f\u001d\u0003\n\u0014\u0014\u0017\u0010\u0014\u0015\u0016\u0011\u0003\n>\u0018@\u0003=+(1*\u0003 :X\u000f\u0003 /,\u0003 +XDTLDQJ\u000f\u0003 /,8\u0003 +XL\u0011\u0003 $QDO\\VLV\u0003 RI\u0003 YROWDJH\u0003 ZHDN\u0003 QRGHV\u0003\nEDVHG\u0003RQ\u0003VWDWLF\u0003HQHUJ\\\u0003IXQFWLRQ\u0003PHWKRG>-@\u0011\u00033RZHU\u00036\\VWHP\u00033URWHFWLRQ\u0003DQG\u0003\n&RQWURO\u000f\u0003\u0015\u0013\u0014\u0013\u000f\u0003\u0016\u001b\u000b\u0014\u0017\f\u001d\u0003\u001a\u001c\u0010\u001b\u0016\u0011\u0003\n>\u0019@\u0003;8\u0003 =KL\\RX\u000f\u0003 /8$1\u0003 =KDRZHQ\u000f\u0003 )$1\u0003 7DR\u0011\u0003 6LQJXODU\u0003 YDOXH\u0003 PHWKRG\u0003 DQG\u0003\nVWDELOLW\\\u0003 LQGH[\u0003 WR\u0003 PHDVXUH\u0003 QRGH\u0003 YROWDJH\u0003 VWDELOLW\\>-@\u0011\u0003 $XWRPDWLRQ\u0003 RI\u0003\n(OHFWULF\u00033RZHU\u00036\\VWHPV\u000f\u0003\u0014\u001c\u001c\u001a\u000b\u0013\u001b\f\u001d\u0003\u0017\u0015\u0010\u0017\u0017\u0011\u0003\n>\u001a@\u0003/,8\u0003<XQ[LQ\u000f\u0003<$2\u0003/LDQJ]KRQJ\u000f\u0003/,$2\u00036L\\DQJ\u0011\u00036WXG\\\u0003RQ\u0003WKH\u0003LQIOXHQFH\u0003RI\u0003\nSKRWRYROWDLF\u0003SHUPHDELOLW\\\u0003RQ\u0003VWDWLF\u0003YROWDJH\u0003VWDELOLW\\\u0003RI\u0003SRZHU\u0003V\\VWHP>-@\u0011\u0003\n3URFHHGLQJV\u0003RI\u0003WKH\u0003&6((\u000f\u0003\u0015\u0013\u0015\u0015\u000f\u0003\u0017\u0015\u000b\u0014\u0018\f\u001d\u0003\u0018\u0017\u001b\u0017\u0010\u0018\u0017\u001c\u001a\u0011\u0003\n>\u001b@\u0003:$1*\u0003)DQJ]RQJ\u000f\u0003:$1*\u0003<DQJWLDQ\u000f\u0003/,\u0003)DQ\u0011\u00039ROWDJH\u0003VWDELOLW\\\u0003DQDO\\VLV\u0003\nPHWKRG\u0003 RI\u0003 UDGLDO\u0003 GLVWULEXWLRQ\u0003 V\\VWHP\u0003 EDVHG\u0003 RQ\u0003 LPSHGDQFH\u0003 PDWFKLQJ\u0003\nPHWKRG>-@\u0011\u00033RZHU\u00036\\VWHP\u00037HFKQRORJ\\\u000f\u0003\u0015\u0013\u0015\u0014\u000f\u0003\u0017\u0018\u000b\u0013\u0015\f\u001d\u0003\u0019\u0019\u0018\u0010\u0019\u001a\u0014\u0011\u0003\n>\u001c@\u0003$ G D S W D E L O L W \\ \u0003D Q D O \\ V L V \u0003R I \u0003L P S H G D Q F H \u0003P R G X O X V \u0003P D U J L Q \u0003L Q G H [ \u0003L Q \u0003V W D WLF\u0003\nYROWDJH\u0003 VWDELOLW\\\u0003 HYDOXDWLRQ\u0003 RI\u0003 PXOWL\u0010LQIHHG\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003 SRZHU\u0003\nV\\VWHP\u0011\u0003 3URFHHGLQJV\u0003 RI\u0003 WKH\u0003 &6((\u001d\u0003 \u0014\u0010\u0014\u0019>\u0015\u0013\u0015\u0016\u0010\u0014\u0013\u0015\u0015@\u0011\u0003\nKWWS\u001d\u0012\u0012NQV\u0011FQNL\u0011QHW\u0012NFPV\u0012GHWDLO\u0012\u0014\u0014\u0011\u0015\u0014\u0013\u001a\u001170\u0011\u0015\u0013\u0015\u0015\u0014\u0015\u0015\u0016\u0011\u0013\u001c\u0015\u0013\u0011\u0013\u0013\u0015\u0011KWPO\u0003\n>\u0014\u0013@\u00037 $ < / 2 5 \u0003& \u0011 \u0003: \u0011 \u0003\u000f \u00033 R Z H U \u0003V \\ V W H P \u0003Y R O W D J H \u0003V W D E L O L W \\ > 0 @ \u0011 \u00031 H Z \u0003< R U N \u001d \u0003\n0F*UDZ\u0010+LOO\u000f\u0003\u0014\u001c\u001c\u0017\u0011\u0003\n>\u0014\u0014@\u0003;,1\u0003+XDQKDL\u000f\u0003'21*\u0003:HL\u000f\u0003<8$1\u0003;LDRPLQJ\u0011\u0003*HQHUDOL]HG\u0003VKRUW\u0003FLUFXLW\u0003\nUDWLR\u0003RI\u0003SRZHU\u0003HOHFWURQLFV\u0003PXOWL\u0010LQIHHG\u0003SRZHU\u0003V\\VWHP>-@\u0011\u00033URFHHGLQJV\u0003RI\u0003\nWKH\u0003&6((\u000f\u0003\u0015\u0013\u0014\u0019\u000f\u0003\u0016\u0019\u000b\u0015\u0015\f\u001d\u0003\u0019\u0013\u0014\u0016\u0010\u0019\u0013\u0015\u001a\u0011\u0003\n>\u0014\u0015@\u0003681\u0003 +XDGRQJ\u000f\u0003 ;8\u0003 6KL\\XQ\u000f\u0003 ;8\u0003 7DR\u0011\u0003 'HILQLWLRQ\u0003 DQG\u0003 LQGH[\u0003 RI\u0003 VKRUW\u0003\nFLUFXLW\u0003 UDWLR\u0003 RI\u0003 UHQHZDEOH\u0003 HQHUJ\\\u0003 PXOWL\u0010ILHOG\u0003 VWDWLRQ>-@\u0011\u0003 3URFHHGLQJV\u0003 RI\u0003\nWKH\u0003&6((\u000f\u0003\u0015\u0013\u0015\u0014\u000f\u0003\u0017\u0014\u000b\u0013\u0015\f\u001d\u0003\u0017\u001c\u001a\u0010\u0018\u0013\u0019\u0011\u0003\n>\u0014\u0016@\u0003<8\u0003 /LQ\u000f\u0003 681\u0003 +XDGRQJ\u000f\u0003 =+$2\u0003 %LQJ\u0011\u0003 $QDO\\VLV\u0003 RI\u0003 VKRUW\u0010FLUFXLW\u0003 UDWLR\u0003\nLQGH[\u0003DQG\u0003FDOFXODWLRQ\u0003PHWKRG\u0003RI\u0003FULWLFDO\u0003VKRUW\u0010FLUFXLW\u0003UDWLR\u0003RI\u0003UHQHZDEOH\u0003\nHQHUJ\\\u0003 JULG\u0010FRQQHFWHG\u0003 V\\VWHP>-@\u0011\u0003 3URFHHGLQJV\u0003 RI\u0003 WKH\u0003 &6((\u000f\u0003 \u0015\u0013\u0015\u0015\u000f\u0003\n\u0017\u0015\u000b\u0013\u0016\f\u001d\u0003\u001c\u0014\u001c\u0010\u001c\u0015\u001c\u0011\u0003\n>\u0014\u0017@\u0003%$,\u0003 .XQ\u0011\u0003 9ROWDJH\u0003 VWDELOLW\\\u0003 HYDOXDWLRQ\u0003 EDVHG\u0003 RQ\u0003 FRQVLVWHQF\\\u0003 UHVROXWLRQ\u0003\nPDUJLQ\u0003LQGH[>'@\u0011\u0003+DUELQ\u0003,QVWLWXWH\u0003RI\u00037HFKQRORJ\\\u000f\u0003\u0015\u0013\u0015\u0015\u0011\u0003\n>\u0014\u0018@\u0003*8$1\u0003 =KDQTL\u0011\u0003 6WDWLF\u0003 YROWDJH\u0003 VWDELOLW\\\u0003 DQDO\\VLV\u0003 EDVHG\u0003 RQ\u0003 7KHYHQLQ\u0003\nHTXLYDOHQFH>'@\u0011\u0003+DUELQ\u0003,QVWLWXWH\u0003RI\u00037HFKQRORJ\\\u000f\u0003\u0015\u0013\u0015\u0013\u0011\u0003\n\u0003\n794\ndifferent indices are analyzed and compared with the \ncommonly used short-circuit ratio index, effectively avoiding \nthe dif ficulties in calculating the critical short-circuit ratio \nindex. \nThe effectiveness of the margin index's evaluation is \ninfluenced by the accuracy of the calculation of Thevenin \nequivalent parameters. In the calculation of Thevenin \nequivalents, the proposed approach assumes that the sensitivity \nof voltage to power remains unchanged before and after \nequivalence. This method of equivalence is more suitable for \nstatic stability evaluation compared to commonly used methods \nin existing literature, yielding more accurate results. \n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Static_Voltage_Stability_Analysis_of_Renewable_Energy_Multi-Infeed_Systems_Based_on_Margin_Index.pdf",
+  "file_sha256": "0e473f1001693bb8c8c6ab3132b6757eae4a739dd8068658e682154dcd3274b0",
+  "target_ids": [
+    "P10"
+  ]
+}

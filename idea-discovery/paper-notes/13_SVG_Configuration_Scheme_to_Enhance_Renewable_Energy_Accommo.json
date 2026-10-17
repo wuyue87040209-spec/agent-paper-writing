@@ -1,0 +1,247 @@
+{
+  "schema_version": 2,
+  "filename": "SVG Configuration Scheme to Enhance Renewable Energy Accommodation Considering Voltage Stability Constraints in Renewable Power Grids.pdf",
+  "pages": 5,
+  "status": "needs_review",
+  "text_status": "readable",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/TCSII.2025.3588112",
+  "year_candidates": [
+    "2026",
+    "2025",
+    "1903",
+    "1902"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—This brief proposes an effective Static Var Generator\n(SVG) conﬁguration scheme to enhance renewable energy\naccommodation while considering cost efﬁciency and voltage\nstability constraints. First, the multiple renewable short-circuit\nratio (MRSCR) is employed as a voltage stability indicator,\nproviding a computationally efﬁcient representation of voltage\nstability constraints. Subsequently, a double-loop multi-objective\noptimization framework is developed to generate an optimal SVG\nconﬁguration scheme. The hierarchical structure consists of: (1)\nan inner-loop optimal power dispatch model that determines the\nminimum curtailment of renewable energy under both voltage\nstability constraints and the SVG conﬁguration provided by\nthe outer loop; (2) an outer-loop multi-objective optimization\nmodel that simultaneously minimizes SVG conﬁguration costs\nand annual renewable energy curtailment to establish the\nSVG conﬁguration. Experimental validation on the SG-118 test\nsystem demonstrates the superiority of the proposed framework.\nThrough a comparative analysis of MRSCR characteristics and\nrenewable energy accommodation levels, this brief presents\nan innovative SVG conﬁguration methodology that effectively\nbalances voltage stability maintenance with renewable energy\nintegration enhancement.\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 422
+      },
+      "end": {
+        "page": 1,
+        "offset": 1732
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1732
+      },
+      "heading": "abstract—thisbriefproposesaneffectivestaticvargenerator",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1310,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. I NTRODUCTION\nU\nNDER the dual imperatives of environmental sustainabil-\nity and low-carbon transition, power systems worldwide\nhave witnessed rapid integration of renewable energy (RE) such\nas photovoltaics (PVs) and wind turbines. While these resources\nreduce carbon emissions, their inherent intermittency and lack\nof traditional grid-support functionalities introduce critical\nchallenges to power balance and system stability [1], [2], [3].\nThese limitations often exacerbate RE curtailment.\nReceived 1 April 2025; revised 14 June 2025; accepted 8 July 2025. Date\nof publication 11 July 2025; date of current version 26 November 2025.\nThis work was supported by the State Grid Corporation of China Technology\nthrough Research on Quantiﬁcation and Control of V oltage Construction\nCapability in Power Systems with High Proportion of Renewable Energy\nunder Project 5100-202255327A-2-0-Y . This brief was recommended by\nAssociate Editor S. Du. (Corresponding author: Xi Zhang.)\nWenshuang Liu, Jie Yang, and Xi Zhang are with the School of\nAutomation, Beijing Institute of Technology, Beijing 100081, China (e-mail:\nxizhang@bit.edu.cn).\nKui Luo, Tiezhu Wang, and Shicong Ma are with the Power System\nDepartment, China Electric Power Research Institute, Beijing 100192, China.\nLiangyi Zhang is with the Power Grid Technology Center, State Grid Hubei\nElectric Power Company Ltd., Electric Power Science Research Institute,\nWuhan 430075, China.\nDigital Object Identiﬁer 10.1109/TCSII.2025.3588112\nTo address RE integration barriers, planning strategies such\nas large-scale energy storage deployment and coal-ﬁred power\nplant ﬂexibility retroﬁts have been widely proposed, primarily\ntargeting intermittency mitigation [4], [5]. However, a less\napparent yet increasingly critical constraint lies in the voltage\nstability of modern power systems–the ability to maintain\nacceptable voltage levels across all nodes under normal and\ndisturbed conditions. RE-dominated power systems inherently\nlack the short-circuit capacity and dynamic voltage support\nprovided by synchronous generators, increasing susceptibility\nto voltage instability [6]. V oltage stability manifests in two\nforms: static stability and transient stability (overvoltage trig-\ngered by faults).\nIn practice, reactive power compensation devices, such\nas Static Var Compensator (SVC), Static Synchronous\nCompensator (STATCOM), Synchronous Condenser(SC), etc,\nhave been used to regulate voltage magnitudes and enhance\ngrid strength by dynamically injecting or absorbing reac-\ntive power. Existing research investigated the placement and\nsizing of reactive power compensation devices to ensure\ndynamic voltage support during faults by integrating tran-\nsient overvoltage constraints [7]. Typical approaches include\nsensitivity indices, intelligent optimization algorithms [8],\netc. While current SVG conﬁguration frameworks address\nvoltage stability requirements in operational timescales [9],\nthey neglect a critical dimension: long-term RE curtailment\nreduction. By focusing solely on improving transient sta-\nbility for a speciﬁc operation condition, these models fail\nto account for RE output variations and long-term beneﬁts,\nsuch as minimized annual RE curtailment. This oversight\nleads to suboptimal planning outcomes where SVG invest-\nments prioritize immediate stability over sustained renewable\nutilization.\nDue to the complex dynamics and nonlinear interdepen-\ndencies between grid topology, renewable generation, and\nloads, accurately as well as simply quantifying voltage stability\nin power systems is inherently complex. The Short-Circuit\nRatio (SCR) remains a cornerstone metric for evaluating\nsystem strength and voltage stability in numerous relevant\nstudies [10]. Recent advancements extend SCR formula-\ntions to address modern grid challenges, such as high\npenetrations of RE and hybrid AC/DC networks, yielding\nmethods like generalized short-circuit ratio for overvoltage\n(gSCR-TOV) [11], generalized short circuit ratio (gSCR) for\nmulti-infeed system [12], Site-Dependent SCR (SDSCR) [13],\netc. Speciﬁcally, Yu et al. [14] demonstrated that the Multiple\n1549-7747 c⃝ 2025 IEEE. All rights reserved, including rights for text and data mining, and training of artiﬁcial intelligence\nand similar technologies. Personal use is permitted, but republication/redistribution requires IEEE permission.\nSee https://www.ieee.org/publications/rights/index.html for more information.Authorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:10:47 UTC from IEEE Xplore.  Restrictions apply. \nLIU et al.: SVG CONFIGURATION SCHEME TO ENHANCE RE ACCOMMODATION CONSIDERING VOLTAGE STABILITY CONSTRAINTS 1903\nRenewable SCR (MRSCR)—a weighted aggregation of indi-\nvidual renewable plant SCRs—effectively captures voltage\nsensitivity to power ﬂuctuations in weak grids dominated by\ninverter-based resources. Similar to reactive power compensa-\ntion device conﬁgurations, a critical gap persists in long-term\nplanning studies, though MRSCR has been applied to short-\nterm operational frameworks like voltage security-constrained\nunit commitment [15].\nIn this brief, we propose a double-loop multi-objective\noptimization framework for conﬁguring Static Var Generators\n(SVGs) in renewable power systems to address the coupled\nchallenges of voltage instability and RE curtailment in power\nsystems. Section II establishes the foundational analysis for\nrepresenting voltage stability constraints. Building on this,\nSection III introduces the double-loop optimization frame-\nwork. The outer loop formulates a multi-objective optimization\nproblem to minimize SVG conﬁguration costs and annual RE\ncurtailment, while the inner loop solves a stochastic planning-\nscheduling problem that enforces MRSCR constraints under\nvarying renewable generation scenarios. To validate the frame-\nwork, Section IV presents a comprehensive case study on the\nSG118 test system. These outcomes underscore the frame-\nwork’s ability to simultaneously ensure grid stability and\nmaximize renewable utilization, offering a practical pathway\nfor high-penetration renewable integration.\n",
+      "page_start": 1,
+      "page_end": 2,
+      "start": {
+        "page": 1,
+        "offset": 1880
+      },
+      "end": {
+        "page": 2,
+        "offset": 1553
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 1553
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 6164,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "V. C\nONCLUSION\nThis brief proposes a SVG conﬁguration framework that\nmaximizes RE accommodation while ensuring voltage sta-\nbility at minimal cost. Through a double-loop optimization\nframework integrating power dispatch and SVG conﬁguration,\nthe method determines the most effective SVG conﬁguration\nscheme. Simulation results on the SG118 system demonstrate\nthat the proposed solution signiﬁcantly enhances renewable\nutilization without compromising voltage stability, offering\na practical approach for large-scale RE integration. Future\nresearch will include dedicated studies on SVG installation\ncost modeling and the characterization of mutual interaction\neffects.\n",
+      "page_start": 5,
+      "page_end": 5,
+      "start": {
+        "page": 5,
+        "offset": 1125
+      },
+      "end": {
+        "page": 5,
+        "offset": 1794
+      },
+      "preview_end": {
+        "page": 5,
+        "offset": 1794
+      },
+      "heading": "v.conclusion",
+      "method": "joined_heading",
+      "end_reason": "references",
+      "total_chars": 669,
+      "truncated": false,
+      "quality_flags": [
+        "joined_heading"
+      ],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "conclusion:joined_heading",
+    "introduction:numbered_boundary_candidate"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 422,
+      "heading": "abstract—thisbriefproposesaneffectivestaticvargenerator",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1732,
+      "heading": "indexterms—staticvargeneratorconfiguration,mrscr,",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 1880,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 1553,
+      "heading": "ii.r",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 4295,
+      "heading": "iii.d",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 3680,
+      "heading": "c.solutionmethod",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 567,
+      "heading": "iv.c",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 2765,
+      "heading": "c.demonstrationofadvantagesoverothersvg",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 5,
+      "offset": 1125,
+      "heading": "v.conclusion",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 5,
+      "offset": 1794,
+      "heading": "references",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 6490
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5407
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4007
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3531
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5936
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 1,
+      "cue": "limitation",
+      "snippet": "ces\nreduce carbon emissions, their inherent intermittency and lack\nof traditional grid-support functionalities introduce critical\nchallenges to power balance and system stability [1], [2], [3].\nThese limitations often exacerbate RE curtailment.\nReceived 1 April 2025; revised 14 June 2025; accepted 8 July 2025. Date\nof publication 11 July 2025; date of current version 26 November 2025.\nThis work was supporte"
+    },
+    {
+      "page": 3,
+      "cue": "we assume",
+      "snippet": "an be inﬂuenced\nby multiple factors such as capacity rating, voltage level,\ngeographical location, etc. In this brief, to avoid complicating\nthe mechanism with secondary variables and for simplicity,\nwe assume all conﬁgured SVGs have the same capacity and\nuniform speciﬁcations, using a simple quantity–unit price\nproduct to represent installation costs:\nmin f\n1(x) = λ\nn∑\ni=1\nxi (5)\nwhere λ is the price for"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/13_SVG_Configuration_Scheme_to_Enhance_Renewable_Energy_Accommo_pages.json",
+  "abstract": "Abstract—This brief proposes an effective Static Var Generator\n(SVG) conﬁguration scheme to enhance renewable energy\naccommodation while considering cost efﬁciency and voltage\nstability constraints. First, the multiple renewable short-circuit\nratio (MRSCR) is employed as a voltage stability indicator,\nproviding a computationally efﬁcient representation of voltage\nstability constraints. Subsequently, a double-loop multi-objective\noptimization framework is developed to generate an optimal SVG\nconﬁguration scheme. The hierarchical structure consists of: (1)\nan inner-loop optimal power dispatch model that determines the\nminimum curtailment of renewable energy under both voltage\nstability constraints and the SVG conﬁguration provided by\nthe outer loop; (2) an outer-loop multi-objective optimization\nmodel that simultaneously minimizes SVG conﬁguration costs\nand annual renewable energy curtailment to establish the\nSVG conﬁguration. Experimental validation on the SG-118 test\nsystem demonstrates the superiority of the proposed framework.\nThrough a comparative analysis of MRSCR characteristics and\nrenewable energy accommodation levels, this brief presents\nan innovative SVG conﬁguration methodology that effectively\nbalances voltage stability maintenance with renewable energy\nintegration enhancement.\n",
+  "introduction": "I. I NTRODUCTION\nU\nNDER the dual imperatives of environmental sustainabil-\nity and low-carbon transition, power systems worldwide\nhave witnessed rapid integration of renewable energy (RE) such\nas photovoltaics (PVs) and wind turbines. While these resources\nreduce carbon emissions, their inherent intermittency and lack\nof traditional grid-support functionalities introduce critical\nchallenges to power balance and system stability [1], [2], [3].\nThese limitations often exacerbate RE curtailment.\nReceived 1 April 2025; revised 14 June 2025; accepted 8 July 2025. Date\nof publication 11 July 2025; date of current version 26 November 2025.\nThis work was supported by the State Grid Corporation of China Technology\nthrough Research on Quantiﬁcation and Control of V oltage Construction\nCapability in Power Systems with High Proportion of Renewable Energy\nunder Project 5100-202255327A-2-0-Y . This brief was recommended by\nAssociate Editor S. Du. (Corresponding author: Xi Zhang.)\nWenshuang Liu, Jie Yang, and Xi Zhang are with the School of\nAutomation, Beijing Institute of Technology, Beijing 100081, China (e-mail:\nxizhang@bit.edu.cn).\nKui Luo, Tiezhu Wang, and Shicong Ma are with the Power System\nDepartment, China Electric Power Research Institute, Beijing 100192, China.\nLiangyi Zhang is with the Power Grid Technology Center, State Grid Hubei\nElectric Power Company Ltd., Electric Power Science Research Institute,\nWuhan 430075, China.\nDigital Object Identiﬁer 10.1109/TCSII.2025.3588112\nTo address RE integration barriers, planning strategies such\nas large-scale energy storage deployment and coal-ﬁred power\nplant ﬂexibility retroﬁts have been widely proposed, primarily\ntargeting intermittency mitigation [4], [5]. However, a less\napparent yet increasingly critical constraint lies in the voltage\nstability of modern power systems–the ability to maintain\nacceptable voltage levels across all nodes under normal and\ndisturbed conditions. RE-dominated power systems inherently\nlack the short-circuit capacity and dynamic voltage support\nprovided by synchronous generators, increasing susceptibility\nto voltage instability [6]. V oltage stability manifests in two\nforms: static stability and transient stability (overvoltage trig-\ngered by faults).\nIn practice, reactive power compensation devices, such\nas Static Var Compensator (SVC), Static Synchronous\nCompensator (STATCOM), Synchronous Condenser(SC), etc,\nhave been used to regulate voltage magnitudes and enhance\ngrid strength by dynamically injecting or absorbing reac-\ntive power. Existing research investigated the placement and\nsizing of reactive power compensation devices to ensure\ndynamic voltage support during faults by integrating tran-\nsient overvoltage constraints [7]. Typical approaches include\nsensitivity indices, intelligent optimization algorithms [8],\netc. While current SVG conﬁguration frameworks address\nvoltage stability requirements in operational timescales [9],\nthey neglect a critical dimension: long-term RE curtailment\nreduction. By focusing solely on improving transient sta-\nbility for a speciﬁc operation condition, these models fail\nto account for RE output variations and long-term beneﬁts,\nsuch as minimized annual RE curtailment. This oversight\nleads to suboptimal planning outcomes where SVG invest-\nments prioritize immediate stability over sustained renewable\nutilization.\nDue to the complex dynamics and nonlinear interdepen-\ndencies between grid topology, renewable generation, and\nloads, accurately as well as simply quantifying voltage stability\nin power systems is inherently complex. The Short-Circuit\nRatio (SCR) remains a cornerstone metric for evaluating\nsystem strength and voltage stability in numerous relevant\nstudies [10]. Recent advancements extend SCR formula-\ntions to address modern grid challenges, such as high\npenetrations of RE and hybrid AC/DC networks, yielding\nmethods like generalized short-circuit ratio for overvoltage\n(gSCR-TOV) [11], generalized short circuit ratio (gSCR) for\nmulti-infeed system [12], Site-Dependent SCR (SDSCR) [13],\netc. Speciﬁcally, Yu et al. [14] demonstrated that the Multiple\n1549-7747 c⃝ 2025 IEEE. All rights reserved, including rights for text and data mining, and training of artiﬁcial intelligence\nand similar technologies. Personal use is permitted, but republication/redistribution requires IEEE permission.\nSee https://www.ieee.org/publications/rights/index.html for more information.Authorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:10:47 UTC from IEEE Xplore.  Restrictions apply. \nLIU et al.: SVG CONFIGURATION SCHEME TO ENHANCE RE ACCOMMODATION CONSIDERING VOLTAGE STABILITY CONSTRAINTS 1903\nRenewable SCR (MRSCR)—a weighted aggregation of indi-\nvidual renewable plant SCRs—effectively captures voltage\nsensitivity to power ﬂuctuations in weak grids dominated by\ninverter-based resources. Similar to reactive power compensa-\ntion device conﬁgurations, a critical gap persists in long-term\nplanning studies, though MRSCR has been applied to short-\nterm operational frameworks like voltage security-constrained\nunit commitment [15].\nIn this brief, we propose a double-loop multi-objective\noptimization framework for conﬁguring Static Var Generators\n(SVGs) in renewable power systems to address the coupled\nchallenges of voltage instability and RE curtailment in power\nsystems. Section II establishes the foundational analysis for\nrepresenting voltage stability constraints. Building on this,\nSection III introduces the double-loop optimization frame-\nwork. The outer loop formulates a multi-objective optimization\nproblem to minimize SVG conﬁguration costs and annual RE\ncurtailment, while the inner loop solves a stochastic planning-\nscheduling problem that enforces MRSCR constraints under\nvarying renewable generation scenarios. To validate the frame-\nwork, Section IV presents a comprehensive case study on the\nSG118 test system. These outcomes underscore the frame-\nwork’s ability to simultaneously ensure grid stability and\nmaximize renewable utilization, offering a practical pathway\nfor high-penetration renewable integration.\n",
+  "conclusion": "V. C\nONCLUSION\nThis brief proposes a SVG conﬁguration framework that\nmaximizes RE accommodation while ensuring voltage sta-\nbility at minimal cost. Through a double-loop optimization\nframework integrating power dispatch and SVG conﬁguration,\nthe method determines the most effective SVG conﬁguration\nscheme. Simulation results on the SG118 system demonstrate\nthat the proposed solution signiﬁcantly enhances renewable\nutilization without compromising voltage stability, offering\na practical approach for large-scale RE integration. Future\nresearch will include dedicated studies on SVG installation\ncost modeling and the characterization of mutual interaction\neffects.\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/SVG Configuration Scheme to Enhance Renewable Energy Accommodation Considering Voltage Stability Constraints in Renewable Power Grids.pdf",
+  "file_sha256": "82e1f0615069d648f5d0f6fc3b2cf17c2bf025dc74097010454d756a46f510d9",
+  "target_ids": [
+    "P02"
+  ]
+}

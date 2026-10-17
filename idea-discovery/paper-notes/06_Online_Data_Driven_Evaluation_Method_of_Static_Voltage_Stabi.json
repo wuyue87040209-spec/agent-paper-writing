@@ -1,0 +1,413 @@
+{
+  "schema_version": 2,
+  "filename": "Online_Data-Driven_Evaluation_Method_of_Static_Voltage_Stability_Margin_for_AC_DC_Hybrid_Power_Systems_Considering_Uncertainty_of_Renewable_Energy.pdf",
+  "pages": 18,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/TIA.2026.3675151",
+  "year_candidates": [
+    "2026"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract\n—\nThe increasing integration of renewable energy and \nHVDC technology has significantly heightened the \noperational \ncomplexity of large\n-\nscale power systems and amplified the risk of \nvoltage collapse. To enable rapid and effective voltage stability \nassessment of such highly uncertain AC/DC hybrid systems, a \ndata\n-\ndriven online probabilistic predictive framewor\nk for the \nstatic voltage stability margin (SVSM) is proposed. A LightGBM\n–\nSHAP\n–\nKDE algorithm is developed within this framework, where \nSHAP is employed for feature selection and explanatory analysis, \nLightGBM is utilized to ensure prediction efficiency, and\n \nKDE \nextends point predictions to probabilistic distributions, thereby \nenabling accurate, fast, and interpretable probabilistic SVSM \nprediction. Case studies on the modified IEEE 39\n-\nbus system and \nthe Polish 2383\n-\nbus winter\n-\npeak system demonstrate that the\n \nproposed approach achieves superior accuracy and computational \nefficiency compared with EXtreme Gradient Boosting (XGBoost), \nrandom forest (RF), and support vector machine (SVM), and also \nachieves better real\n-\ntime performance compared with the \ntraditional\n \nCumulant\n-\nbased interval calculation method. \nAdditional evaluations under PMU/WAMS data latency and \nasynchrony\n,\n \ntopology changes, measurement noise and missing \ndata further confirm the robustness and scalability of the \nproposed framework under complex oper\nating conditions.\n \n \n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 469
+      },
+      "end": {
+        "page": 1,
+        "offset": 1932
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1932
+      },
+      "heading": "abstract",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1463,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I.\n \nI\nNTRODUCTION\n \n \nITH the large\n-\nscale integration of renewable energy \nsources such as wind and photovoltaic generation, \ntogether with the extensive deployment of high\n-\nvoltage direct current (HVDC) technology, modern power \nsystems are undergoing profound structural and oper\national \ntransformations. While these developments promote \nsustainability and energy diversification, they also introduce \nnew challenges to ensuring secure and stable grid operation. \nAmong these challenges, static voltage stability has become \nparticularly c\nritical, as the risk of voltage collapse increases \nsignificantly in complex AC/DC hybrid systems with high \nrenewable penetration. Addressing how to maintain voltage \nstability under such conditions has become a key issue in both \npower system research and pr\nactical operation [1]\n.\n \nThe Static Voltage Stability Margin (SVSM) is widely \nused as an indicator to assess the degree of static voltage \nstability, representing the maximum load increase that a system \ncan withstand under given operating conditions. With the\n \nlarge\n-\nscale integration of renewable energy and the rapid \ndevelopment of AC/DC hybrid architectures, SVSM estimation \nfaces new challenges, including high uncertainty, \ninterdependent constraints, and stringent real\n-\ntime \nrequirements.\n \nIn recent years, resea\nrch on SVSM evaluation has \nmainly advanced along \nthe following \ndirections: \ntraditional \nmodel\n-\nbased computation methods, deterministic data\n-\ndriven \nprediction methods, \nand probabilistic prediction methods\n.\n \n \nT\nraditional \nmodel\n-\nbased computation methods\n \nof SVSM \ninclude\n \nContinuous Power Flow (CPF) [2], Thevenin \nEquivalent Method [3], Sensitivity Analysis Method [4], and \nModal Analysis Method [5]. Although these methods have high \ncomputational accuracy and strong interpretability, they are \ncomplex to model\n \nand have high computational costs, making \nthem unsuitable for real\n-\ntime monitoring and early warning of \npower grid operation status. \nTo alleviate these drawbacks, \nseveral acceleration strategies have been reported, such as the \nenhanced CPF of Kim et al. [\n6] and the energy\n-\nfunction \nsensitivity hybrid method of Zhang et al. [7], have accelerated \ncalculations. Despite these advances, physics\n-\nbased methods \nremain challenged by stochastic variability and frequent \ntopological changes in large\n-\nscale systems, and \ntheir scalability \nW\nThis article has been accepted for publication in IEEE Transactions on Industry Applications. This is the author's version which has not been fully edited and \ncontent may change prior to final publication. Citation information: DOI 10.1109/TIA.2026.3675151\n© 2026 IEEE. All rights reserved, including rights for text and data mining and training of artificial intelligence and similar technologies. Personal use is permitted,\nbut republication/redistribution requires IEEE permission. See https://www.ieee.org/publications/rights/index.html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 16,2026 at 01:41:20 UTC from IEEE Xplore.  Restrictions apply. \n2\n \n> REPLACE THIS LINE WITH YOUR MANUSCRIPT ID NUMBER (DOUBLE\n-\nCLICK HERE TO EDIT) <\n \n \nto high\n-\ndimensional data and online applications\n.\n \nWith the increasing deployment of wide\n-\narea \nmeasurement systems (WAMS) and phasor measurement units \n(PMUs), data\n-\ndriven approaches have been widely adopted for \nonline evaluation of the SVS\n",
+      "page_start": 1,
+      "page_end": 2,
+      "start": {
+        "page": 1,
+        "offset": 3164
+      },
+      "end": {
+        "page": 2,
+        "offset": 342
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 342
+      },
+      "heading": "i.introduction",
+      "method": "joined_heading",
+      "end_reason": "section",
+      "total_chars": 3494,
+      "truncated": false,
+      "quality_flags": [
+        "joined_heading",
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "V.\n \nC\nONCLUSION\n \nThis paper proposed a data\n-\ndriven framework for online \nSVSM estimation based on LightGBM\n–\nSHAP\n–\nKDE, designed \nto address the high\n-\ndimensional uncertainties introduced by \nrenewable integration and VSC\n-\nHVDC. The appro\nach enables \nefficient, accurate, and interpretable prediction of SVSM and \nits probabilistic distribution.\n \nIn the modified IEEE 39\n-\nbus \nsystem, the proposed method achieved a mean absolute \npercentage error of 2.8% on 3,400 samples, with training and \npredicti\non times of 0.533 s and 0.017 s, respectively, \ndemonstrating both high accuracy and computational efficiency. \nThe probability distributions estimated by KDE closely \nmatched the actual distributions, while SHAP analysis reduced \nthe feature dimension from 14\n4 to 55, improved interpretability, \nquantified the importance and directional influence of system \nvariables, and provided simple control guidance for enhancing \nvoltage stability. \nThe scalability of the method is further \nverified using the \nmodified Polish 2\n383\n-\nbus winter\n-\npeak system\n, \ntogether with a performance comparison against the traditional \nCumulant interval\n-\ncalculation method. Additional robustness \ntests, including data latency and asynchronism, network \ntopology changes, measurement noise, and \nmissing data, \nconfirm that the proposed approach consistently maintains high \nprediction accuracy and fast computational performance under \na variety of challenging operating conditions\n.\n \n \nThis article has been accepted for publication in IEEE Transactions on Industry Applications. This is the author's version which has not been fully edited and \ncontent may change prior to final publication. Citation information: DOI 10.1109/TIA.2026.3675151\n© 2026 IEEE. All rights reserved, including rights for text and data mining and training of artificial intelligence and similar technologies. Personal use is permitted,\nbut republication/redistribution requires IEEE permission. See https://www.ieee.org/publications/rights/index.html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 16,2026 at 01:41:20 UTC from IEEE Xplore.  Restrictions apply. \n11\n \n> REPLACE THIS LINE WITH YOUR MANUSCRIPT ID NUMBER (DOUBLE\n-\nCLICK HERE TO EDIT) <\n \n \n",
+      "page_start": 17,
+      "page_end": 18,
+      "start": {
+        "page": 17,
+        "offset": 3514
+      },
+      "end": {
+        "page": 18,
+        "offset": 92
+      },
+      "preview_end": {
+        "page": 18,
+        "offset": 92
+      },
+      "heading": "v.conclusion",
+      "method": "joined_heading",
+      "end_reason": "references",
+      "total_chars": 2307,
+      "truncated": false,
+      "quality_flags": [
+        "joined_heading"
+      ],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "conclusion:joined_heading",
+    "introduction:joined_heading",
+    "introduction:numbered_boundary_candidate",
+    "page:10:fragmented_text",
+    "page:13:fragmented_text",
+    "page:3:fragmented_text",
+    "page:4:fragmented_text",
+    "page:5:fragmented_text",
+    "page:6:fragmented_text",
+    "page:7:fragmented_text",
+    "page:8:fragmented_text"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 469,
+      "heading": "abstract",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1932,
+      "heading": "indexterms",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 3164,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 342,
+      "heading": "m.typicalmethodsinclude",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 17,
+      "offset": 3514,
+      "heading": "v.conclusion",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 18,
+      "offset": 92,
+      "heading": "references",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 18,
+      "offset": 2977,
+      "heading": "m.cui,f.li,h.cui,s.bu,andd.shi,",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 18,
+      "offset": 3247,
+      "heading": "m.alzubaidi,k.n.hasan,l.meegahapola,andm.t.rahman,",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 18,
+      "offset": 4764,
+      "heading": "m.ma,z.liu,p.he,etal.,\"probabilisticcontinuationpowerflowmethod",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 18,
+      "offset": 5322,
+      "heading": "x.xiaandl.xiao,\"probabilisticpowerflowmethodforhybridac/dc",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 18,
+      "offset": 6474,
+      "heading": "l.yuan,h.ma,",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 18,
+      "offset": 6970,
+      "heading": "c.kim,\"awindpowerscenariogeneration",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 18,
+      "offset": 7376,
+      "heading": "c.xingetal.,\"disturbancefrequencytrajectorypredictioninpower",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 18,
+      "offset": 7539,
+      "heading": "c.zheng,v.malbasa,andm.kezunovic,\"anonlinepredicti",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 18,
+      "offset": 7756,
+      "heading": "x.wang,y.zhang,andz.li,\"assessingvoltagestabilityindistribution",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 6315
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [],
+      "chars": 7114
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 4568
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 6611
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 6419
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 6626
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 4164
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 5541
+    },
+    {
+      "page": 9,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5184
+    },
+    {
+      "page": 10,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 4446
+    },
+    {
+      "page": 11,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4658
+    },
+    {
+      "page": 12,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3798
+    },
+    {
+      "page": 13,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 6399
+    },
+    {
+      "page": 14,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4882
+    },
+    {
+      "page": 15,
+      "error": null,
+      "quality_flags": [],
+      "chars": 6107
+    },
+    {
+      "page": 16,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5679
+    },
+    {
+      "page": 17,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5728
+    },
+    {
+      "page": 18,
+      "error": null,
+      "quality_flags": [],
+      "chars": 8902
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 2,
+      "cue": "limitation",
+      "snippet": "t\nems, important \nchallenges remain. Physics\n-\nbased approaches are often \ncomputationally intensive and difficult to scale, whereas data\n-\ndriven models frequently sacrifice interpretability. These \nlimitations highlight the necessity of developing SVSM \nprediction\n \nmethods that are interpretable, probabilistic, and \nsuitable for real\n-\ntime application\n—\nproviding the motivation for \nthe methodology prop"
+    },
+    {
+      "page": 3,
+      "cue": "not considered",
+      "snippet": "LINE WITH YOUR MANUSCRIPT ID NUMBER (DOUBLE\n-\nCLICK HERE TO EDIT) <\n \n \nTABLE I\n \nC\nOMPARISON OF THE \nP\nROPOSED \nM\nETHOD WITH \nP\nREVIOUS \nM\nETHODS \n \n∗\n \n√\n: The item is considered. \n–\n: The item is not considered\nII.\n \nP\nROBLEM \nF\nORMULATION\n \nA.\n \nStatic Voltage Stability Margin Index\n \nThe problem of static voltage stability in power system is \nmainly caused by the system’s inability to provide sufficient"
+    },
+    {
+      "page": 4,
+      "cue": "it is assumed",
+      "snippet": "−\nቀ\n௩\n௖\nቁ\n௞\n൨\n \n(\n5\n)\n \nwhere\n \nݒ\n \nis the wind speed; \n݇\n \nand\n \nܿ\n \nis the two parameters of the \nWeibull distribution.\n \nFor the normalized \nsolar irradiation\n \nintensity\n \ns\n∈\n \n(\n \n0\n,\n1\n \n)\n, \nit is assumed that it obeys the Beta distribution\n:\n \n \n \n݂\nPV\n(\nݏ\n)\n=\n௰\n(\nఈ\nା\nఉ\n)\n௰\n(\nఈ\n)\n⋅\n௰\n(\nఉ\n)\n(\n௦\n௦\n೘ೌೣ\n)\nఈ\nି\nଵ\n(\n1\n−\n௦\n௦\n೘ೌೣ\n)\nఉ\nି\nଵ\n \n(\n6\n)\n \nThis article has been accepted for publication in IEEE Transac"
+    },
+    {
+      "page": 5,
+      "cue": "simplified",
+      "snippet": "behavior, load composition, and electricity pricing. Since the \nfocus of this study is the generation and prediction of SVSM \nsamples rather than reconstructing a detailed load forecasting \nmodel, a simplified yet reasonable modeling approach is \nadopted. The \nsystem under study is assumed to be a highly \naggregated system, where numerous heterogeneous individual \nloads are represented collectively as a si"
+    },
+    {
+      "page": 11,
+      "cue": "simplified",
+      "snippet": "hance SVSM and thereby improve \nsystem voltage stability\n.\n \nE\n. \nSHAP\n-\nGuided Decision Support and Control Adjustments\n \n \nTo illustrate the usefuln\ness of the SHAP\n-\nbased \nexplanatory analysis, a simplified decision\n-\nsupport procedure is \nconstructed using the most influential control variables \nidentified from the SHAP rankings and dependency plots. The \nadjustment directions follow the positive or ne"
+    },
+    {
+      "page": 14,
+      "cue": "restricted to",
+      "snippet": "e fastest among the three approaches and \nhighly suitable for real\n-\ntime applications. The CPF method, \nserving as the benchmark for true SVSM values, requires the \nlongest computation time and is\n \nrestricted to offline analysis. \nRegarding the ICM, although it attains a 96.5% interval \ncoverage rate by incorporating high\n-\norder statistics to handle \nnon\n-\nGaussianity, its reliance on linearized sensitivity"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/06_Online_Data_Driven_Evaluation_Method_of_Static_Voltage_Stabi_pages.json",
+  "abstract": "Abstract\n—\nThe increasing integration of renewable energy and \nHVDC technology has significantly heightened the \noperational \ncomplexity of large\n-\nscale power systems and amplified the risk of \nvoltage collapse. To enable rapid and effective voltage stability \nassessment of such highly uncertain AC/DC hybrid systems, a \ndata\n-\ndriven online probabilistic predictive framewor\nk for the \nstatic voltage stability margin (SVSM) is proposed. A LightGBM\n–\nSHAP\n–\nKDE algorithm is developed within this framework, where \nSHAP is employed for feature selection and explanatory analysis, \nLightGBM is utilized to ensure prediction efficiency, and\n \nKDE \nextends point predictions to probabilistic distributions, thereby \nenabling accurate, fast, and interpretable probabilistic SVSM \nprediction. Case studies on the modified IEEE 39\n-\nbus system and \nthe Polish 2383\n-\nbus winter\n-\npeak system demonstrate that the\n \nproposed approach achieves superior accuracy and computational \nefficiency compared with EXtreme Gradient Boosting (XGBoost), \nrandom forest (RF), and support vector machine (SVM), and also \nachieves better real\n-\ntime performance compared with the \ntraditional\n \nCumulant\n-\nbased interval calculation method. \nAdditional evaluations under PMU/WAMS data latency and \nasynchrony\n,\n \ntopology changes, measurement noise and missing \ndata further confirm the robustness and scalability of the \nproposed framework under complex oper\nating conditions.\n \n \n",
+  "introduction": "I.\n \nI\nNTRODUCTION\n \n \nITH the large\n-\nscale integration of renewable energy \nsources such as wind and photovoltaic generation, \ntogether with the extensive deployment of high\n-\nvoltage direct current (HVDC) technology, modern power \nsystems are undergoing profound structural and oper\national \ntransformations. While these developments promote \nsustainability and energy diversification, they also introduce \nnew challenges to ensuring secure and stable grid operation. \nAmong these challenges, static voltage stability has become \nparticularly c\nritical, as the risk of voltage collapse increases \nsignificantly in complex AC/DC hybrid systems with high \nrenewable penetration. Addressing how to maintain voltage \nstability under such conditions has become a key issue in both \npower system research and pr\nactical operation [1]\n.\n \nThe Static Voltage Stability Margin (SVSM) is widely \nused as an indicator to assess the degree of static voltage \nstability, representing the maximum load increase that a system \ncan withstand under given operating conditions. With the\n \nlarge\n-\nscale integration of renewable energy and the rapid \ndevelopment of AC/DC hybrid architectures, SVSM estimation \nfaces new challenges, including high uncertainty, \ninterdependent constraints, and stringent real\n-\ntime \nrequirements.\n \nIn recent years, resea\nrch on SVSM evaluation has \nmainly advanced along \nthe following \ndirections: \ntraditional \nmodel\n-\nbased computation methods, deterministic data\n-\ndriven \nprediction methods, \nand probabilistic prediction methods\n.\n \n \nT\nraditional \nmodel\n-\nbased computation methods\n \nof SVSM \ninclude\n \nContinuous Power Flow (CPF) [2], Thevenin \nEquivalent Method [3], Sensitivity Analysis Method [4], and \nModal Analysis Method [5]. Although these methods have high \ncomputational accuracy and strong interpretability, they are \ncomplex to model\n \nand have high computational costs, making \nthem unsuitable for real\n-\ntime monitoring and early warning of \npower grid operation status. \nTo alleviate these drawbacks, \nseveral acceleration strategies have been reported, such as the \nenhanced CPF of Kim et al. [\n6] and the energy\n-\nfunction \nsensitivity hybrid method of Zhang et al. [7], have accelerated \ncalculations. Despite these advances, physics\n-\nbased methods \nremain challenged by stochastic variability and frequent \ntopological changes in large\n-\nscale systems, and \ntheir scalability \nW\nThis article has been accepted for publication in IEEE Transactions on Industry Applications. This is the author's version which has not been fully edited and \ncontent may change prior to final publication. Citation information: DOI 10.1109/TIA.2026.3675151\n© 2026 IEEE. All rights reserved, including rights for text and data mining and training of artificial intelligence and similar technologies. Personal use is permitted,\nbut republication/redistribution requires IEEE permission. See https://www.ieee.org/publications/rights/index.html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 16,2026 at 01:41:20 UTC from IEEE Xplore.  Restrictions apply. \n2\n \n> REPLACE THIS LINE WITH YOUR MANUSCRIPT ID NUMBER (DOUBLE\n-\nCLICK HERE TO EDIT) <\n \n \nto high\n-\ndimensional data and online applications\n.\n \nWith the increasing deployment of wide\n-\narea \nmeasurement systems (WAMS) and phasor measurement units \n(PMUs), data\n-\ndriven approaches have been widely adopted for \nonline evaluation of the SVS\n",
+  "conclusion": "V.\n \nC\nONCLUSION\n \nThis paper proposed a data\n-\ndriven framework for online \nSVSM estimation based on LightGBM\n–\nSHAP\n–\nKDE, designed \nto address the high\n-\ndimensional uncertainties introduced by \nrenewable integration and VSC\n-\nHVDC. The appro\nach enables \nefficient, accurate, and interpretable prediction of SVSM and \nits probabilistic distribution.\n \nIn the modified IEEE 39\n-\nbus \nsystem, the proposed method achieved a mean absolute \npercentage error of 2.8% on 3,400 samples, with training and \npredicti\non times of 0.533 s and 0.017 s, respectively, \ndemonstrating both high accuracy and computational efficiency. \nThe probability distributions estimated by KDE closely \nmatched the actual distributions, while SHAP analysis reduced \nthe feature dimension from 14\n4 to 55, improved interpretability, \nquantified the importance and directional influence of system \nvariables, and provided simple control guidance for enhancing \nvoltage stability. \nThe scalability of the method is further \nverified using the \nmodified Polish 2\n383\n-\nbus winter\n-\npeak system\n, \ntogether with a performance comparison against the traditional \nCumulant interval\n-\ncalculation method. Additional robustness \ntests, including data latency and asynchronism, network \ntopology changes, measurement noise, and \nmissing data, \nconfirm that the proposed approach consistently maintains high \nprediction accuracy and fast computational performance under \na variety of challenging operating conditions\n.\n \n \nThis article has been accepted for publication in IEEE Transactions on Industry Applications. This is the author's version which has not been fully edited and \ncontent may change prior to final publication. Citation information: DOI 10.1109/TIA.2026.3675151\n© 2026 IEEE. All rights reserved, including rights for text and data mining and training of artificial intelligence and similar technologies. Personal use is permitted,\nbut republication/redistribution requires IEEE permission. See https://www.ieee.org/publications/rights/index.html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 16,2026 at 01:41:20 UTC from IEEE Xplore.  Restrictions apply. \n11\n \n> REPLACE THIS LINE WITH YOUR MANUSCRIPT ID NUMBER (DOUBLE\n-\nCLICK HERE TO EDIT) <\n \n \n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Online_Data-Driven_Evaluation_Method_of_Static_Voltage_Stability_Margin_for_AC_DC_Hybrid_Power_Systems_Considering_Uncertainty_of_Renewable_Energy.pdf",
+  "file_sha256": "0427d720c93599a46136e545695a1eaf8d2e5b7ffeee555165ea2c1dc66a11b3",
+  "target_ids": [
+    "P20"
+  ]
+}

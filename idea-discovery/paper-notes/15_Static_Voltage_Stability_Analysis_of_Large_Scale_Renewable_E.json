@@ -1,0 +1,260 @@
+{
+  "schema_version": 2,
+  "filename": "Static_Voltage_Stability_Analysis_of_Large_Scale_Renewable_Energy_Delivered_via_Multi-Voltage-Level_Transmission_Sections.pdf",
+  "pages": 5,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/POWERCON66300.2025.11295124",
+  "year_candidates": [
+    "2026",
+    "2025"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—This paper addresses t he static voltage stability \nconstraints and complex coupling relationships in multi -\nvoltage-level transmission sections for large -scale renewable \nenergy integration systems . The study extracts two typica l \ntopological structures —parallel coupling and series  coupling \nsections—from ac tual grid features and analyz es their \ninteractive mechanisms affecting static voltage stability  limits. \nResearch reveals that  in parallel systems, power flow \ndistribution significantly impacts the overall transmission limit, \nwith optimal limits achieved when heavily loaded branches \nconcentrate on low -impedance paths . In series systems, the \ncontribution of proximal station power growth to total \ntransmission capacity exhibits nonli near variation (sensitivity \ndecreases with increasing output). Validated through actual \ngrid simulations, the sensitivity of key node power flow to \nsection limits is quantified, demonstrating that uniform power \nverification may cause conservatism or securi ty risks. The \nfindings provide theoretical support for online ass essment of \nmulti-level transmission  section limit and active power \noptimization control, enhancing utilization rates while ensuring \nsecurity to promote renewable energy accommodation. \n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 802
+      },
+      "end": {
+        "page": 1,
+        "offset": 2091
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 2091
+      },
+      "heading": "abstract—thispaperaddressesthestaticvoltagestability",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1289,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. INTRODUCTION  \nDue to the uneven distribution of resources, renewable \nenergy bases are often geographically distant from load \ncenters in many cases, making direct power supply to end -\nusers challenging. Consequently, it is necessary to connect \nenergy bases with load centers through multi -voltage-level \nhigh-voltage transmission lines and substations to achieve \nlong-distance power transmission and dispatch. With the \nincreasing scale of renewable energy installations and the \ngrowing hierarchy of power aggregation, the scenario of \ndelivering renewable energy through multi -voltage-level \ntransmission sections has become increasingly preval ent [1-\n2]. In such delivery systems, volt age security issues emerge \nas critical constraints limiting the power transfer capacity of \ntransmission sections at all levels, primarily due to the \nabsence of conventional power support and the extended \nelectrical distance of renewable energy delivery corridors [3]. \nIn practical operations, voltage security verification is \npredominantly incorporated into renewable energy \noperational limit assessments through offline calculations. \nAmong these, static voltage stability constraints constitute \none of the prima ry operational limitations for renewable \nenergy-integrated grids  [4]. Taking China's Jibei regional \npower grids as an example, static voltage stability constraints \nserve as decisive factors in determining power transfer limits \nfor certain renewable energ y delivery sections. Analytical \nmethods for static voltage stability problems mainly include \nthe continuation power flow method  [5], Jacobian matrix \nsingularity method [6], and sensitivity analysis method [7]. \nThe PV curve provides an intuitive understanding  of static \nvoltage stability by illustrating how system voltage varies \nand potentially collapses as wind power active output \nincreases. Ref [8] demonstrates that as system operation \napproaches static voltage stability limits, voltage fluctuations \ncaused by  equivalent wind power active power variations \nbecome significantly amplified. \nStatic voltage stability exhibits strong coupling with \npower flow distribution across transmission sections. This \nresults in varying static voltage stability characteristics \namong different voltage -level transmission sections within \nthe same region as their power flow distributions change. \nExisting voltage security risk assessment methods, which \nassume uniform renewable energy generation across all \nsections, can only evaluate static voltage security risks under \ntypical operating conditions. Such approaches may yield \noverly conservative limits that underutilize transmission \ncapacity or produce optimistic estimates that jeopardize \nsystem operational security [9]. \nThis paper conducts the analysis of static voltage stability \nin large -scale renewable energy delivery systems through \nmulti-level transmission sections. First, by examining the \ntopological characteristics of multi -voltage-level \ntransmission networks, typical section couplin g types are \nidentified, with mechanistic analysis performed on the \ncoupling relationships of transmission limits for each type. \nCase studies based on actual grid simulations are developed, \nemploying sensitivity analysis to quantify the contributions \nof key node power flow states to section transfer capacity.  \n2025 International Conference on New Power System Technology (PowerCon) | 979-8-3315-6552-7/25/$31.00 ©2025 IEEE | DOI: 10.1109/POWERCON66300.2025.11295124\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 17:14:33 UTC from IEEE Xplore.  Restrictions apply. \n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 2189
+      },
+      "end": {
+        "page": 2,
+        "offset": 0
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 0
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 3688,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "V. CONCLUSION \nThis paper studies the static voltage stability issues of \nrenewable energy through multi -voltage-level section \ntransmission systems faced by ac tual power grids. The \ncomplex section coupling problem is decomposed into a \nseries coupling transmission system and a parallel coupling \ntransmission system. A complementary approach combining \nsimplified model analytical analysis and actual system \nsimulation results is adopted to investigate the interactive \ninfluence laws of power limits of each coupling section \nunder static voltage stability constraints. The study shows \nthat the power flow distribution of different -level sections \nand different power flow gr owth patterns between sections \nhave obvious regular influences on th e overall renewable \nenergy transmission capacity of the region. The research \nfindings can provide a theoretical basis for the online \nassessment of tr ansmission limits in multi -voltage-level \nsection transmission systems. On the premise of ensuring \nsafety, from the perspective of fully releasing the \ntransmission capacity of sections, it is conducive to \npromoting renewable energy consumption. \n \n",
+      "page_start": 5,
+      "page_end": 5,
+      "start": {
+        "page": 5,
+        "offset": 76
+      },
+      "end": {
+        "page": 5,
+        "offset": 1236
+      },
+      "preview_end": {
+        "page": 5,
+        "offset": 1236
+      },
+      "heading": "v.conclusion",
+      "method": "heading_match",
+      "end_reason": "backmatter",
+      "total_chars": 1160,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "introduction:numbered_boundary_candidate",
+    "page:2:private_use_characters",
+    "page:3:private_use_characters",
+    "page:4:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 802,
+      "heading": "abstract—thispaperaddressesthestaticvoltagestability",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 2091,
+      "heading": "keywords—renewableenergy,staticvoltagestability,multi-",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 2189,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 0,
+      "heading": "ii.thestaticvoltagestabilitylimitofthe",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 2168,
+      "heading": "iii.topologicalcharacteristicsandstatic",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 1551,
+      "heading": "iv.analysisofstaticvoltagestabilitylimitfor",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 1064,
+      "heading": "c.outputchangescenario3",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 1386,
+      "heading": "c.seriescouplingtransmissionsystem",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 5,
+      "offset": 76,
+      "heading": "v.conclusion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "backmatter",
+      "page": 5,
+      "offset": 1236,
+      "heading": "acknowledgment",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 5,
+      "offset": 1370,
+      "heading": "references",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5876
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 3690
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 4210
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 4540
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3420
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 1,
+      "cue": "limitation",
+      "snippet": "minantly incorporated into renewable energy \noperational limit assessments through offline calculations. \nAmong these, static voltage stability constraints constitute \none of the prima ry operational limitations for renewable \nenergy-integrated grids [4]. Taking China's Jibei regional \npower grids as an example, static voltage stability constraints \nserve as decisive factors in determining power transfer li"
+    },
+    {
+      "page": 5,
+      "cue": "simplified",
+      "snippet": "ac tual power grids. The \ncomplex section coupling problem is decomposed into a \nseries coupling transmission system and a parallel coupling \ntransmission system. A complementary approach combining \nsimplified model analytical analysis and actual system \nsimulation results is adopted to investigate the interactive \ninfluence laws of power limits of each coupling section \nunder static voltage stability cons"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/15_Static_Voltage_Stability_Analysis_of_Large_Scale_Renewable_E_pages.json",
+  "abstract": "Abstract—This paper addresses t he static voltage stability \nconstraints and complex coupling relationships in multi -\nvoltage-level transmission sections for large -scale renewable \nenergy integration systems . The study extracts two typica l \ntopological structures —parallel coupling and series  coupling \nsections—from ac tual grid features and analyz es their \ninteractive mechanisms affecting static voltage stability  limits. \nResearch reveals that  in parallel systems, power flow \ndistribution significantly impacts the overall transmission limit, \nwith optimal limits achieved when heavily loaded branches \nconcentrate on low -impedance paths . In series systems, the \ncontribution of proximal station power growth to total \ntransmission capacity exhibits nonli near variation (sensitivity \ndecreases with increasing output). Validated through actual \ngrid simulations, the sensitivity of key node power flow to \nsection limits is quantified, demonstrating that uniform power \nverification may cause conservatism or securi ty risks. The \nfindings provide theoretical support for online ass essment of \nmulti-level transmission  section limit and active power \noptimization control, enhancing utilization rates while ensuring \nsecurity to promote renewable energy accommodation. \n",
+  "introduction": "I. INTRODUCTION  \nDue to the uneven distribution of resources, renewable \nenergy bases are often geographically distant from load \ncenters in many cases, making direct power supply to end -\nusers challenging. Consequently, it is necessary to connect \nenergy bases with load centers through multi -voltage-level \nhigh-voltage transmission lines and substations to achieve \nlong-distance power transmission and dispatch. With the \nincreasing scale of renewable energy installations and the \ngrowing hierarchy of power aggregation, the scenario of \ndelivering renewable energy through multi -voltage-level \ntransmission sections has become increasingly preval ent [1-\n2]. In such delivery systems, volt age security issues emerge \nas critical constraints limiting the power transfer capacity of \ntransmission sections at all levels, primarily due to the \nabsence of conventional power support and the extended \nelectrical distance of renewable energy delivery corridors [3]. \nIn practical operations, voltage security verification is \npredominantly incorporated into renewable energy \noperational limit assessments through offline calculations. \nAmong these, static voltage stability constraints constitute \none of the prima ry operational limitations for renewable \nenergy-integrated grids  [4]. Taking China's Jibei regional \npower grids as an example, static voltage stability constraints \nserve as decisive factors in determining power transfer limits \nfor certain renewable energ y delivery sections. Analytical \nmethods for static voltage stability problems mainly include \nthe continuation power flow method  [5], Jacobian matrix \nsingularity method [6], and sensitivity analysis method [7]. \nThe PV curve provides an intuitive understanding  of static \nvoltage stability by illustrating how system voltage varies \nand potentially collapses as wind power active output \nincreases. Ref [8] demonstrates that as system operation \napproaches static voltage stability limits, voltage fluctuations \ncaused by  equivalent wind power active power variations \nbecome significantly amplified. \nStatic voltage stability exhibits strong coupling with \npower flow distribution across transmission sections. This \nresults in varying static voltage stability characteristics \namong different voltage -level transmission sections within \nthe same region as their power flow distributions change. \nExisting voltage security risk assessment methods, which \nassume uniform renewable energy generation across all \nsections, can only evaluate static voltage security risks under \ntypical operating conditions. Such approaches may yield \noverly conservative limits that underutilize transmission \ncapacity or produce optimistic estimates that jeopardize \nsystem operational security [9]. \nThis paper conducts the analysis of static voltage stability \nin large -scale renewable energy delivery systems through \nmulti-level transmission sections. First, by examining the \ntopological characteristics of multi -voltage-level \ntransmission networks, typical section couplin g types are \nidentified, with mechanistic analysis performed on the \ncoupling relationships of transmission limits for each type. \nCase studies based on actual grid simulations are developed, \nemploying sensitivity analysis to quantify the contributions \nof key node power flow states to section transfer capacity.  \n2025 International Conference on New Power System Technology (PowerCon) | 979-8-3315-6552-7/25/$31.00 ©2025 IEEE | DOI: 10.1109/POWERCON66300.2025.11295124\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 17:14:33 UTC from IEEE Xplore.  Restrictions apply. \n",
+  "conclusion": "V. CONCLUSION \nThis paper studies the static voltage stability issues of \nrenewable energy through multi -voltage-level section \ntransmission systems faced by ac tual power grids. The \ncomplex section coupling problem is decomposed into a \nseries coupling transmission system and a parallel coupling \ntransmission system. A complementary approach combining \nsimplified model analytical analysis and actual system \nsimulation results is adopted to investigate the interactive \ninfluence laws of power limits of each coupling section \nunder static voltage stability constraints. The study shows \nthat the power flow distribution of different -level sections \nand different power flow gr owth patterns between sections \nhave obvious regular influences on th e overall renewable \nenergy transmission capacity of the region. The research \nfindings can provide a theoretical basis for the online \nassessment of tr ansmission limits in multi -voltage-level \nsection transmission systems. On the premise of ensuring \nsafety, from the perspective of fully releasing the \ntransmission capacity of sections, it is conducive to \npromoting renewable energy consumption. \n \n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Static_Voltage_Stability_Analysis_of_Large_Scale_Renewable_Energy_Delivered_via_Multi-Voltage-Level_Transmission_Sections.pdf",
+  "file_sha256": "138972c691c7ea4e9c8f3b5c8fc7ab374083fb9f506663246afe745df4b05a2a",
+  "target_ids": [
+    "P16"
+  ]
+}

@@ -1,0 +1,31 @@
+# LLM 配置（通过 TiMi CC 中转调用 GPT-5）
+#
+# 使用说明：
+#   1. 将下面的 api_key 替换为你在 TiMi CC 创建的 Codex 分组令牌
+#      获取地址: https://timicc.com/keys
+#   2. 也可以通过环境变量 TIMICC_API_KEY 覆盖 api_key 的值（脚本已支持）
+#      兼容旧变量名 MINIMAX_API_KEY（fallback）
+
+llm:
+  provider: timicc
+  api_key: "YOUR_API_KEY"     # 替换为你的 TiMi CC API Key；也可以用环境变量 TIMICC_API_KEY 覆盖
+  base_url: "https://timicc.com"
+  model: "gpt-5.5"
+  endpoint: "/v1/chat/completions"
+  timeout: 60                             # 请求超时时间（秒）
+
+# 默认调用参数（非流式）
+default_request:
+  max_completion_tokens: 1024
+  temperature: 0.7
+  top_p: 0.95
+  stream: false
+  max_retries: 3                       # 遇到 5xx 网关错误时的最大重试次数
+
+# GPT-5 系列的推理控制（TiMi CC 使用嵌套格式 reasoning.effort）
+#   - low:    简单问答、抽取、格式化、快速编辑（响应最快、消耗最低）
+#   - medium: 普通编码、分析、调试、写作（默认，平衡质量与速度）
+#   - high:   复杂规划、困难 bug、架构设计、数学、多步推理（更准但更慢）
+# 留空或设为 null 则不发送 reasoning 字段。
+reasoning:
+  effort: "medium"

@@ -1,0 +1,354 @@
+{
+  "schema_version": 2,
+  "filename": "Identification_of_the_Worst-Case_Static_Voltage_Stability_Margin_Interval_of_AC_DC_Power_System_Considering_Uncertainty_of_Renewables.pdf",
+  "pages": 14,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.17775/CSEEJPES.2022.06390",
+  "year_candidates": [
+    "2096",
+    "2045",
+    "2024",
+    "2023"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—Calculation of static voltage stability margin\n(SVSM) of AC/DC power systems with lots of renewable energy\nsources (RESs) integration requires consideration of uncertain\nload growth and renewable energy generation output. This paper\npresents a bi-level optimal power ﬂow (BLOPF) model to identify\nthe worst-case SVSM of an AC/DC power system with line\ncommutation converter-based HVDC and multi-terminal voltage\nsourced converter-based HVDC transmission lines. Constraints\nof uncertain load growth’s hypercone model and control mode\nswitching of DC converter stations are considered in the BLOPF\nmodel. Moreover, uncertain RES output ﬂuctuations are de-\nscribed as intervals, and two three-level optimal power ﬂow\n(TLOPF) models are established to identify interval bounds\nof the system worst-case SVSM. The two TLOPF models are\nboth transformed into max–min bi-level optimization models\naccording to independent characteristics of different uncertain\nvariables. Then, transforming the inner level model into its dual\nform, max–min BLOPF models are simpliﬁed to single-level\noptimization models for direct solution. Calculation results on\nthe modiﬁed IEEE-39 bus AC/DC case and an actual large-scale\nAC/DC case in China indicate correctness and efﬁciency of the\nproposed identiﬁcation method.\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 358
+      },
+      "end": {
+        "page": 1,
+        "offset": 1660
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1660
+      },
+      "heading": "abstract—calculationofstaticvoltagestabilitymargin",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1302,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. I NTRODUCTION\nN\nOW ADAYS, LCC-HVDC and multi-terminal voltage\nsourced converter-based HVDC (MTVSC-HVDC) trans-\nmission technologies are widely used in actual power\ngrids [1]–[3]. For example, in China Southern Power Grid,\nan ±800 kV/8000 MW ‘Kun-Liu-Long’ ultra-high-voltage\nMTVSC-HVDC transmission system was put into operation,\nand AC/DC power grid now includes eight AC and eleven DC\ntransmission channels [4]. Different operation characteristics\nand control modes of the HVDC transmission system will have\nsigniﬁcant impact on the operation state of the entire AC/DC\npower system and will also affect static voltage stability\ndegree of the system. In addition, with many renewable energy\ngeneration stations connected to the power grid, uncertain\nﬂuctuation of their power outputs will result in uncertain\nﬂuctuation of the system operation state, which brings great\nchallenges to maintain voltage stability of the AC/DC power\nsystem [5], [6]. Static voltage stability margin (SVSM) is a\ncommonly used index for evaluating static voltage stability\ndegree of a power system, which represents maximum load\ngrowth the system can bear in the current operation state [5]–\n[7]. Therefore, it is urgent to propose an SVSM calculation\nmethod for AC/DC power systems with LCC-HVDC and\nMTVSC-HVDC considering uncertain renewable energy out-\nput.\nRecently, several publications have focused on SVS analysis\nof AC/DC power systems. Reference [8] analyzed the inﬂu-\nence of VSC-HVDC on LCC-HVDC at the same bus, and it\nalso analyzed the SVS of the system, including LCC-HVDC\nor VSC-HVDC, with maximum available power as the index.\nIn [9], a single-infeed model is derived to represent a multi-\ninfeed DC transmission system, and the effective short-circuit\nratio is applied to voltage stability analysis of a single-infeed\nHVDC system was extended to analyze stability of a multi-\ninfeed HVDC system. Reference [10] proposed a general SVS\nanalysis method, deduced a general voltage stability index\ncalled the hybrid generalized short circuit ratio, and solved\nvoltage stability critical point of the hybrid multi-infeed DC\nsystem. Reference [11] proposed a control algorithm based on\nthe VSC-HVDC system to improve SVS, which showed VSC\ncontrol input will affect the local and global SVSM. Based on\nthe aforementioned studies, it can be concluded establishing an\naccurate steady-state model of LCC-HVDC and VSC-HVDC\nconverter stations is helpful to reﬂect power ﬂow distribution\nof the system more accurately. However, in SVS analysis of the\naforementioned studies, the control mode of HVDC was ﬁxed\nand did not take into account the control mode of HVDC will\nchange with load growth in the system [12], [13]. Switching\nof the HVDC control mode will affect calculation results of\nthe SVSM of an AC/DC power system, so it is necessary to\nmodel switching of control modes in SVSM calculation.\nFor a power system integrating numerous RESs, if the\nuncertainty of RES output is considered, SVSM of the system\nwill be an uncertain quantity instead of a deﬁnite value [14].\nInterval method is widely used for uncertain analysis because\nit only needs to give RES output range in advance without\nexcessive sampling, and RES output range is easy to obtain\naccording to historical operation data. In [15], [16], interval\nnumber was used to describe uncertainty of RES output, and\ncorresponding SVSM interval was calculated by the afﬁne\ninterval algorithm and continuous power ﬂow method. Ref-\nerence [17] proposed the interval optimization algorithm and\nthe OPF method to calculate the SVSM interval considering\nuncertain RES output. However, aforementioned studies only\ninvestigated calculation of SVSM interval under a ﬁxed load\ngrowth direction (LGD), i.e., initial LGD, and did not consider\nuncertainty of LGD in actual operation of the power grid.\nThere are two main methods for considering uncertainty of\nLGD. One is to calculate SVSM corresponding to various\npossible LGDs to form a boundary of the SVS region, as\nshown in [18]. Another is to analyze the worst case of the\nsystem considering uncertain LGD to assess SVS, which im-\nposes less computation burden. References [19], [20] proposed\na calculation method for the local closest bifurcation point to\nthe current operation point. Minimum SVSM from the load\npower parameter space to the local closest bifurcation point\nwas used as the voltage collapse index. Considering uncertain\nLGD, [21] introduced the calculation method for the worst-\ncase SVSM. However, the aforementioned studies only applied\nthe proposed methods to pure AC power systems and did not\nconsider uncertain RES output. Therefore, how to calculate\nthe worst-case SVSM interval of an AC/DC power system\nconsidering uncertain RES output and the uncertain LGD still\nrequires further research.\nThe contributions of this paper are as follows: 1) A method\nto identify the worst-case SVSM interval of an AC/DC power\nsystem with LCC-HVDC and MTVSC-HVDC transmission\nlines considering control mode switching of DC converter\nstations is proposed, along with the hypercone model to\ndescribe uncertain LGD. 2) Two TLOPF models are con-\nstructed to solve two bounds of the worst-case SVSM interval\nof an AC/DC power system, and a method to transform\nTLOPF models into single-level convex optimization models\nfor solution is proposed. The proposed method has much\nhigher computational efﬁciency than the Monte Carlo or Latin\n976 CSEE JOURNAL OF POWER AND ENERGY SYSTEMS, VOL. 10, NO. 3, MAY 2024\nhypercube sampling method, which can be applied to the\nworst-case SVSM identiﬁcation in actual large-scale AC/DC\nsystems accurately and efﬁciently.\nThe rest of this paper is organized as follows. Section II\npresents worst-case SVSM identiﬁcation model for AC/DC\npower systems based on the OPF method and two TLOPF\nmodels for worst-case SVSM interval identiﬁcation. Sec-\ntion III proposes the solution method for three-level optimiza-\ntion models. Section IV details case studies on a modiﬁed\nIEEE-39 bus system and an actual 8733 bus AC/DC power\ngrid in China. Section V presents the conclusions.\n",
+      "page_start": 2,
+      "page_end": 3,
+      "start": {
+        "page": 2,
+        "offset": 888
+      },
+      "end": {
+        "page": 3,
+        "offset": 668
+      },
+      "preview_end": {
+        "page": 3,
+        "offset": 668
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 6093,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "V. C ONCLUSION\nIn this study, an identiﬁcation method for worst-case SVSM\ninterval of AC/DC power systems considering uncertain RES\noutput is proposed. The proposed method uses a hypercone\nmodel to describe LGD uncertainty. A bi-level identiﬁcation\nmodel is established to solve worst-case SVSM. Two TLOPF\nmodels are proposed to identify worst-case SVSM interval\nwith uncertain RES output. Control mode switching of DC\nconverter station along with load growth is considered in\ncalculation models. The two TLOPF models can both be\ntransformed into max–min bi-level OPF models at ﬁrst. By\ntransforming inner level model into its dual form, bi-level\nmax–min OPF models can be transformed into two single-level\noptimization models for solution. Case studies on modiﬁed\nIEEE-39 bus AC/DC system and an actual AC/DC power grid\nin China indicate correctness and efﬁciency of the proposed\nmethod. Moreover, obtained worst-case SVSM intervals are\nmore conservative than traditional SVSM intervals under the\ninitial LGD.\nThis study only calculates worst-case SVSM intervals of\nAC/DC power systems considering uncertainties of LGD and\nrenewables. In actual operation of an AC/DC power grid,\nworst-case SVSM value must be bigger than allowable secure\nlevel. Thus, our future approach will be to increase worst-\ncase SVSM value by adjusting system operation parameters\n986 CSEE JOURNAL OF POWER AND ENERGY SYSTEMS, VOL. 10, NO. 3, MAY 2024\nand implementing some control measures, especially by es-\ntablishing a new control mode of HVDC transmission system\nwith some methods.\n",
+      "page_start": 12,
+      "page_end": 13,
+      "start": {
+        "page": 12,
+        "offset": 2842
+      },
+      "end": {
+        "page": 13,
+        "offset": 206
+      },
+      "preview_end": {
+        "page": 13,
+        "offset": 206
+      },
+      "heading": "v.conclusion",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 1562,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "introduction:numbered_boundary_candidate",
+    "page:5:private_use_characters",
+    "page:6:private_use_characters",
+    "page:7:fragmented_text",
+    "page:7:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 358,
+      "heading": "abstract—calculationofstaticvoltagestabilitymargin",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1660,
+      "heading": "indexterms—ac/dcpowersystem,controlmodeswitching,",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 1,
+      "offset": 3887,
+      "heading": "c.variables",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 2,
+      "offset": 888,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 668,
+      "heading": "ii.theworst-casesvsmintervalidentification",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 1758,
+      "heading": "iii.convexsolutionmethodoftheworst-case",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 6,
+      "offset": 3257,
+      "heading": "di.similarly,thesenon-",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 107,
+      "heading": "i.thenitcanbe",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 2623,
+      "heading": "iv.casestudies",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 160,
+      "heading": "dcvariablevaluesofhvdctransmissionlines",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 10,
+      "offset": 3742,
+      "heading": "c.actualac/dcpowergridinchina",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 12,
+      "offset": 2842,
+      "heading": "v.conclusion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 13,
+      "offset": 206,
+      "heading": "references",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 13,
+      "offset": 2900,
+      "heading": "c.booth,“apredictivecontrolstrategyformitigationofcommutation",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 14,
+      "offset": 697,
+      "heading": "m.s.degreewiththeschoolofelectricpower",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4446
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [],
+      "chars": 6312
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4406
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4792
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 5117
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 4084
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 4002
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5677
+    },
+    {
+      "page": 9,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4766
+    },
+    {
+      "page": 10,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4901
+    },
+    {
+      "page": 11,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5324
+    },
+    {
+      "page": 12,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4197
+    },
+    {
+      "page": 13,
+      "error": null,
+      "quality_flags": [],
+      "chars": 8352
+    },
+    {
+      "page": 14,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1981
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 3,
+      "cue": "it is assumed",
+      "snippet": "ange.\nIn this paper, φ is introduced to represent deviation degree of\nactual LGD from initial LGD, and the hypercone model of\nthe uncertainty of LGD is described as (2a)–(2c). To simplify\ndiscussion, it is assumed the uncertain deviation degrees of\nLGD of all the load buses are the same, i.e., their βi values\nare equal. In addition, (2c) indicates each load bus maintains\na constant power factor during the load"
+    },
+    {
+      "page": 10,
+      "cue": "it is assumed",
+      "snippet": "ﬂuctuation interval is [700 MW, 1300 MW].\nTwo RES respectively connected at buses 1 and 18 are added\nand named as RES 2 and RES 3, their given active power\nﬂuctuation intervals are the same as RES 1. It is assumed there\nis no correlation between active power outputs of the three\nRESs. Comparison of obtained worst-case SVSM intervals\nunder different RES connected locations and different number\nof RESs is shown"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/04_Identification_of_the_Worst_Case_Static_Voltage_Stability_Ma_pages.json",
+  "abstract": "Abstract—Calculation of static voltage stability margin\n(SVSM) of AC/DC power systems with lots of renewable energy\nsources (RESs) integration requires consideration of uncertain\nload growth and renewable energy generation output. This paper\npresents a bi-level optimal power ﬂow (BLOPF) model to identify\nthe worst-case SVSM of an AC/DC power system with line\ncommutation converter-based HVDC and multi-terminal voltage\nsourced converter-based HVDC transmission lines. Constraints\nof uncertain load growth’s hypercone model and control mode\nswitching of DC converter stations are considered in the BLOPF\nmodel. Moreover, uncertain RES output ﬂuctuations are de-\nscribed as intervals, and two three-level optimal power ﬂow\n(TLOPF) models are established to identify interval bounds\nof the system worst-case SVSM. The two TLOPF models are\nboth transformed into max–min bi-level optimization models\naccording to independent characteristics of different uncertain\nvariables. Then, transforming the inner level model into its dual\nform, max–min BLOPF models are simpliﬁed to single-level\noptimization models for direct solution. Calculation results on\nthe modiﬁed IEEE-39 bus AC/DC case and an actual large-scale\nAC/DC case in China indicate correctness and efﬁciency of the\nproposed identiﬁcation method.\n",
+  "introduction": "I. I NTRODUCTION\nN\nOW ADAYS, LCC-HVDC and multi-terminal voltage\nsourced converter-based HVDC (MTVSC-HVDC) trans-\nmission technologies are widely used in actual power\ngrids [1]–[3]. For example, in China Southern Power Grid,\nan ±800 kV/8000 MW ‘Kun-Liu-Long’ ultra-high-voltage\nMTVSC-HVDC transmission system was put into operation,\nand AC/DC power grid now includes eight AC and eleven DC\ntransmission channels [4]. Different operation characteristics\nand control modes of the HVDC transmission system will have\nsigniﬁcant impact on the operation state of the entire AC/DC\npower system and will also affect static voltage stability\ndegree of the system. In addition, with many renewable energy\ngeneration stations connected to the power grid, uncertain\nﬂuctuation of their power outputs will result in uncertain\nﬂuctuation of the system operation state, which brings great\nchallenges to maintain voltage stability of the AC/DC power\nsystem [5], [6]. Static voltage stability margin (SVSM) is a\ncommonly used index for evaluating static voltage stability\ndegree of a power system, which represents maximum load\ngrowth the system can bear in the current operation state [5]–\n[7]. Therefore, it is urgent to propose an SVSM calculation\nmethod for AC/DC power systems with LCC-HVDC and\nMTVSC-HVDC considering uncertain renewable energy out-\nput.\nRecently, several publications have focused on SVS analysis\nof AC/DC power systems. Reference [8] analyzed the inﬂu-\nence of VSC-HVDC on LCC-HVDC at the same bus, and it\nalso analyzed the SVS of the system, including LCC-HVDC\nor VSC-HVDC, with maximum available power as the index.\nIn [9], a single-infeed model is derived to represent a multi-\ninfeed DC transmission system, and the effective short-circuit\nratio is applied to voltage stability analysis of a single-infeed\nHVDC system was extended to analyze stability of a multi-\ninfeed HVDC system. Reference [10] proposed a general SVS\nanalysis method, deduced a general voltage stability index\ncalled the hybrid generalized short circuit ratio, and solved\nvoltage stability critical point of the hybrid multi-infeed DC\nsystem. Reference [11] proposed a control algorithm based on\nthe VSC-HVDC system to improve SVS, which showed VSC\ncontrol input will affect the local and global SVSM. Based on\nthe aforementioned studies, it can be concluded establishing an\naccurate steady-state model of LCC-HVDC and VSC-HVDC\nconverter stations is helpful to reﬂect power ﬂow distribution\nof the system more accurately. However, in SVS analysis of the\naforementioned studies, the control mode of HVDC was ﬁxed\nand did not take into account the control mode of HVDC will\nchange with load growth in the system [12], [13]. Switching\nof the HVDC control mode will affect calculation results of\nthe SVSM of an AC/DC power system, so it is necessary to\nmodel switching of control modes in SVSM calculation.\nFor a power system integrating numerous RESs, if the\nuncertainty of RES output is considered, SVSM of the system\nwill be an uncertain quantity instead of a deﬁnite value [14].\nInterval method is widely used for uncertain analysis because\nit only needs to give RES output range in advance without\nexcessive sampling, and RES output range is easy to obtain\naccording to historical operation data. In [15], [16], interval\nnumber was used to describe uncertainty of RES output, and\ncorresponding SVSM interval was calculated by the afﬁne\ninterval algorithm and continuous power ﬂow method. Ref-\nerence [17] proposed the interval optimization algorithm and\nthe OPF method to calculate the SVSM interval considering\nuncertain RES output. However, aforementioned studies only\ninvestigated calculation of SVSM interval under a ﬁxed load\ngrowth direction (LGD), i.e., initial LGD, and did not consider\nuncertainty of LGD in actual operation of the power grid.\nThere are two main methods for considering uncertainty of\nLGD. One is to calculate SVSM corresponding to various\npossible LGDs to form a boundary of the SVS region, as\nshown in [18]. Another is to analyze the worst case of the\nsystem considering uncertain LGD to assess SVS, which im-\nposes less computation burden. References [19], [20] proposed\na calculation method for the local closest bifurcation point to\nthe current operation point. Minimum SVSM from the load\npower parameter space to the local closest bifurcation point\nwas used as the voltage collapse index. Considering uncertain\nLGD, [21] introduced the calculation method for the worst-\ncase SVSM. However, the aforementioned studies only applied\nthe proposed methods to pure AC power systems and did not\nconsider uncertain RES output. Therefore, how to calculate\nthe worst-case SVSM interval of an AC/DC power system\nconsidering uncertain RES output and the uncertain LGD still\nrequires further research.\nThe contributions of this paper are as follows: 1) A method\nto identify the worst-case SVSM interval of an AC/DC power\nsystem with LCC-HVDC and MTVSC-HVDC transmission\nlines considering control mode switching of DC converter\nstations is proposed, along with the hypercone model to\ndescribe uncertain LGD. 2) Two TLOPF models are con-\nstructed to solve two bounds of the worst-case SVSM interval\nof an AC/DC power system, and a method to transform\nTLOPF models into single-level convex optimization models\nfor solution is proposed. The proposed method has much\nhigher computational efﬁciency than the Monte Carlo or Latin\n976 CSEE JOURNAL OF POWER AND ENERGY SYSTEMS, VOL. 10, NO. 3, MAY 2024\nhypercube sampling method, which can be applied to the\nworst-case SVSM identiﬁcation in actual large-scale AC/DC\nsystems accurately and efﬁciently.\nThe rest of this paper is organized as follows. Section II\npresents worst-case SVSM identiﬁcation model for AC/DC\npower systems based on the OPF method and two TLOPF\nmodels for worst-case SVSM interval identiﬁcation. Sec-\ntion III proposes the solution method for three-level optimiza-\ntion models. Section IV details case studies on a modiﬁed\nIEEE-39 bus system and an actual 8733 bus AC/DC power\ngrid in China. Section V presents the conclusions.\n",
+  "conclusion": "V. C ONCLUSION\nIn this study, an identiﬁcation method for worst-case SVSM\ninterval of AC/DC power systems considering uncertain RES\noutput is proposed. The proposed method uses a hypercone\nmodel to describe LGD uncertainty. A bi-level identiﬁcation\nmodel is established to solve worst-case SVSM. Two TLOPF\nmodels are proposed to identify worst-case SVSM interval\nwith uncertain RES output. Control mode switching of DC\nconverter station along with load growth is considered in\ncalculation models. The two TLOPF models can both be\ntransformed into max–min bi-level OPF models at ﬁrst. By\ntransforming inner level model into its dual form, bi-level\nmax–min OPF models can be transformed into two single-level\noptimization models for solution. Case studies on modiﬁed\nIEEE-39 bus AC/DC system and an actual AC/DC power grid\nin China indicate correctness and efﬁciency of the proposed\nmethod. Moreover, obtained worst-case SVSM intervals are\nmore conservative than traditional SVSM intervals under the\ninitial LGD.\nThis study only calculates worst-case SVSM intervals of\nAC/DC power systems considering uncertainties of LGD and\nrenewables. In actual operation of an AC/DC power grid,\nworst-case SVSM value must be bigger than allowable secure\nlevel. Thus, our future approach will be to increase worst-\ncase SVSM value by adjusting system operation parameters\n986 CSEE JOURNAL OF POWER AND ENERGY SYSTEMS, VOL. 10, NO. 3, MAY 2024\nand implementing some control measures, especially by es-\ntablishing a new control mode of HVDC transmission system\nwith some methods.\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Identification_of_the_Worst-Case_Static_Voltage_Stability_Margin_Interval_of_AC_DC_Power_System_Considering_Uncertainty_of_Renewables.pdf",
+  "file_sha256": "b4a4161e79be3e748da28835b405d21403870df77658a0627e72366e4cde1d47",
+  "target_ids": [
+    "P04"
+  ]
+}

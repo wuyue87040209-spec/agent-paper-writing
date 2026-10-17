@@ -1,0 +1,3206 @@
+{
+  "schema_version": 2,
+  "filename": "基于PMU数据的新能源场站静态电压稳定在线评估_孔贺.pdf",
+  "pages": 124,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": null,
+  "year_candidates": [],
+  "sections": {
+    "abstract": {
+      "text": "摘\n\n要\n摘\n\n要\n集 中\n送\n出 的\n新\n能\n源\n场\n站\n电\n压\n支\n撑\n能 力 弱 ，\n且\n有 功\n送\n电\n距\n离 大 多 较\n长\n， 随\n着\n其 有 功 出 力 的 增 加 ，\n新\n能\n源\n控 制 方 式 的 日\n益\n复 杂 ， 系 统\n可\n能\n会\n出\n现\n新\n型\n的 电\n压\n稳 定 问\n题\n。 另\n一\n方 面\n， 由\n于\n诸 多 因 素 ， 用\n于\n评\n估\n电\n压\n稳\n定 的 同 步 相\n量\n测\n量\n单\n元\n（\nｐ ｈ ａ ｓ ｏ ｒ \nｍ\nｅ ａ ｓ\nｕ\nｒ ｅ\nｍ\nｅ ｎ ｔ \nｕ\nｎ\nｉ ｔ\n，  Ｐ\nＭ\nＵ ） 数\n据\n存\n在\n质\n量\n问\n题\n，\n严\n重\n影\n响 了\n新\n能\n源\n场\n站\n电\n压\n稳 定\n性\n的\n评\n估 。 有 鉴\n于\n此\n， 论\n文 研\n宄 了Ｐ\nＭ\nＵ 异 常 数 据 的 修\n正\n、\n考\n虑\n新\n能\n源\n低 穿\n控\n制 的 电\n压\n失\n稳\n机\n理\n分\n析 、 以\n及\n电\n压 稳\n定\n裕\n度\n在\n线\n评\n估\n指\n标\n的\n建\n立\n，\n可\n提 升 Ｐ\nＭ\nＵ 数 据 质\n量\n，\n保\n障 新 能\n源\n场 站 的 安\n全\n运\n行 ，\n论\n文 的\n主\n要\n工\n作\n及\n创\n新\n点\n如 下 ：\n针\n对\n实 测 ； Ｐ\nＭ\nＵ\n数 据 中\n存\n在 的 幅\n值\n异 常\n数 据\n问\n题\n， 提 出 了\n一\n种\n与 同 步\n误 差\n无\n关 的 Ｐ\nＭ\nＵ 幅\n值\n数 据 恢 复 方\n法\n。 具\n体\n地\n， 首\n先\n，\n展\n示 了 实 测 Ｐ\nＭ\nＵ\n数\n据\n中\n存\n在\n的\n长\n期 的 、\n连\n续 的 幅 值\n数\n据\n丢 失\n现\n象 ， 并 分 析 了 数 据\n丢\n失\n对\n静\n态\n电\n压\n稳\n定 指 标\n一\n阻\n抗\n模\n指 标 的\n影\n响 ； 其 次 ，\n基\n于\n密 度 空 间 聚 类 算\n法\n对\n历\n史\n数\n据\n进\n行 筛\n选\n■\n，\n进\n一\n步\n地\n，\n建\n立\n数 据\n恢\n复\n模\n型 ，\n通\n过\n历 史 数 据\n计\n算 恢 复 系 数 ，\n对 丢\n失 的 幅\n值\n数\n据\n进\n行 恢\n复\n，\n最\n后\n，\n通 过\n仿 真 数\n据\n和 实 测 数\n据\n验\n证\n了 该\n方\n法\n的 有 效\n性\n和 实 用 性 。\n针\n对\n实\n测\nＰ\nＭ\nＵ 数\n据\n中 存 在 的\n长\n期 的\n、\n连\n续 的\n、\n时\n变\n的 相 角 差\n偏\n差 ，\n提\n出\n了\n一\n种 线\n路\n参\n数 未 知 情\n况\n下\nＰ\nＭ\nＵ 相 角 差 的 时 变 偏\n差\n校\n正\n方\n法\n。\n具\n体\n地\n， 首 先 ，\n展\n示\n了\n在\n实 际 电 网 中 发\n现\n的 相 角 差 时 变 偏\n差\n， 并\n分\n析 了 相 角 差 偏 差\n对\n静\n态\n电\n压\n稳\n定 指 标\n一\nＬ Ｖ 指 标 的\n影\n响 ； 其 次 ， 以 多 个 时 间 断\n面\n下 的 电\n压\n相 角 差 为\n未\n知\n变\n量\n，\n建\n立\n了 用\n于\n估 计 相 角 差 的\n一\n般\n模\n型\n？\n，\n进\n一\n步\n地\n，\n基\n于\n交\n流\n潮\n流\n和\n泰\n勒\n展\n开\n，\n将\n多 个 时 间 断\n面\n、\n多\n个\n未 知 变\n量\n的 相 角\n差\n估\n计\n转\n化\n为 以 少\n量\n线\n路\n参\n数\n为\n变\n量\n的\n估\n计 模 型 ， 实\n现\n了 电\n压\n相 角\n差\n时 变 偏 差 的 校\n正\n； 最 后 ，\n基\n于\n仿 真\n和\n实 测 算 例\n验\n证\n了 所 提\n方\n法\n的 有 效 性\n。\n针\n对\n实 际\n风\n电\n场\n中 出\n现\n的 低 电 压 穿\n越\n控 制\n方\n式 导\n致\n的 电 压\n振\n荡 失\n稳\n现\n象\n，\n分 析 了 其 失\n稳\n的\n机\n理\n， 并 建\n立\n了\n裕\n度 指 标 。 首\n先\n，\n基\n于\n实\n际\n案 例 ，\n对\n陆\n上\n风\n电\n场 在 无 故 障\n、\n高 出 力 下\n、\n低 穿 控 制\n方\n式 导 致 的 电\n压\n振\n荡\n现\n象\n进\n行\n了\n机\n理\n分\n析\n，\n说 明\n该\n振\n荡\n现\n象\n对\n应 于\n高 出 力 下 低 电\n压\n穿\n越 控\n制\n诱\n导 的 非\n光\n滑\n分\n岔 （\nＨ\nｉ\nｇ ｈ\nＯ ｕ ｔ\nｐ ｕ ｔ  Ｅ\nｘ\nｃ ｉ ｔ ｅ ｄ  Ｌ ｏ\nｗ\n\nｖ\nｏ ｌ ｔ ａ ｇ ｅ  ｒ ｉ ｄ ｅ  ｔ ｈ ｒ ｏ\nｕ\nｇ ｈ  ｃ ｏ ｎ ｔ ｒ ｏ ｌ  Ｉ ｎ ｄ\nｕ\nｃ ｅ ｄ\nＮ\nｏ\nｎ\n－\nｓ\nｍ\nｏ ｏ ｔ ｈ Ｂ ｉ ｆｕ ｒ ｃ ａ ｔ ｉ ｏ ｎ ，\nＨ Ｌ Ｉ\nＮ\nＢ ） ； 其 次 ， 推 导 了\nＨ\nＬ Ｉ Ｎ Ｂ  与 鞍 结 分 岔 （ Ｓ ａ ｄ ｄ ｌ ｅ ｎ ｏ ｄ ｅ  ｂ ｉ ｆ\nｕ\nｒ ｃ ａ ｔ ｉ ｏ ｎ ，  Ｓ\nＮ\nＢ ） 发\n生\n的\n边\n界 条 件 ， 结 果 表 明 ， 在 典\n型\n低 穿\n控\n制\n方\n式 下 ， 陆\n上 风\n电\n场\n更\n容 易\n发\n生\nＨ Ｌ Ｉ\nＮ\nＢ\n而\n非 Ｓ Ｎ Ｂ ；\n进\n一\n步\n地\n，\n基\n于\n二\n阶 锥 算\n法\n，\n给\n出 了 考 虑 Ｈ Ｌ Ｉ\nＮ\nＢ\n约\n束 的\n风\n电 场 的 最\n 大\n输\n出 功 率\n 计\n算\n 方\n法\n； 最 后 ，\n通\n过\n仿\n 真\n算 例\n 验\n证\n了 所\n 提\n方\n法\n的 有\n 效 性\n。\nＩ\n\n华\n北\n电 力 大 学\n博\n士\n学\n位\n论\n文\n针\n对\n鞍\n结\n分\n岔 ，\n将\n传 统 的\n阻\n抗\n模 指\n标\n的 应 用\n对\n象 由 负 荷\n推\n广\n至\n新\n能\n源\n场\n站\n，\n扩\n大 了\n阻\n抗\n模 指\n标\n的\n适\n应\n性\n。\n具\n体\n地\n， 首\n先\n，\n分\n析 了 新 能\n源\n单\n馈\n入\n系 统 的 临\n界\n静 态 电\n压\n稳\n定\n条 件 ， 并 据\n此\n给\n出 了 用\n于\n评\n估\n新\n能\n源\n场\n站\n静\n态\n电\n压\n稳\n定 性 的\n阻\n抗\n模\n裕\n度\n指\n标\n及\n稳 定\n判\n据\n； 其 次 ， 分 析 了 指\n标\n在\n不\n同 场 景\n下\n的\n适\n应 性 ，\n包\n括\n含\n无\n功\n补\n偿\n的\n新\n能\n源\n场\n站\n、\n新\n能 源\n集\n群\n馈\n入\n系\n统\n、\n以\n及\n多\n机\n多\n馈\n入\n系 统 。 最 后 ，\n通\n过\n仿\n真 算\n例\n验\n证\n了\n所\n提 方\n法\n的\n有\n效 性 。\n提\n出 了\n基\n于 Ｐ\nＭ\nＵ\n数\n据\n的\n新\n能\n源\n场 站 静 态 电\n压\n稳 定\n在\n线\n评\n估 方 案 ， 功 能\n包\n括\nＰ\nＭ\nＵ\n幅\n值\n数\n据\n修\n正\n、\nＰ\nＭ\nＵ\n相 角 数 据 修\n正\n、\n计\n算\n针\n对\nＨＬ Ｉ\nＮ\nＢ 的 功 率\n裕\n度 指\n标\n，\n计\n算\n针\n对\nＳ\nＮ\nＢ 的 阻\n抗\n模\n裕\n度 指 标 ， 仿 真 算 例\n表\n明 ，\n所\n提 方\n案\n可\n有 效 的\n对\n系\n统\n进\n行\n监\n控\n和\n评\n估\n，\n具\n有 良\n好\n的 实 用\n性\n。\n",
+      "page_start": 4,
+      "page_end": 5,
+      "start": {
+        "page": 4,
+        "offset": 0
+      },
+      "end": {
+        "page": 5,
+        "offset": 659
+      },
+      "preview_end": {
+        "page": 5,
+        "offset": 659
+      },
+      "heading": "摘要",
+      "method": "joined_heading",
+      "end_reason": "keywords",
+      "total_chars": 2911,
+      "truncated": false,
+      "quality_flags": [
+        "joined_heading",
+        "multiple_heading_candidates",
+        "text:fragmented_text",
+        "text:private_use_characters"
+      ],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "第 １ 章 绪\n论\n第 １\n章\n绪\n论\n１ ． １\n课\n题\n背\n景\n及\n意\n义\n随 着\n“\n双\n碳\n”\n目 标 的 提 出 ，\n我\n国\n大\n力 发\n展\n风\n电\n、\n光\n伏 等\n新\n能\n源\n［\n１ ］\n－\n１ ２ ］\n，\n截\n止\n２ ０ ２ ３ 年 底 ，\n全\n国\n太\n阳 能 发 电\n装\n机 容\n量\n约 ６ ． １\n亿\n千\n瓦\n， 同 比 增\n长\n５ ５ ． ２\n％\n；\n风\n电\n装\n机\n容\n量\n约 ４\n．\n４\n亿\n千\n瓦\n， 同 比 增\n长\n２ ０ ． ７\n％\n［\n３ ］\n。 随\n着\n新 能\n源\n容\n量\n的 増 加 ， 大\n规\n模\n的 电\n力 电\n子\n设 备\n接\n入\n电 网 ， 大\n量\n复 杂 的\n控\n制\n方\n式 导\n致\n电 力 系\n统\n的 动\n态\n行 为\n更 加\n复\n杂\n［\n４\nＨ\n５ ］\n。\n此\n外\n，\n集\n中 式 新 能\n源\n大\n多\n位\n于 电 网\n末\n端\n， 其 有\n功\n送\n电\n距\n离\n长\n， 因\n此\n易 出\n现\n电\n压\n失\n稳\n［ ６ ］\n。\n大 型 电 力 系 统 的 电\n压\n失 稳\n常 常\n造\n成\n髙\n成\n本\n的 停 电\n事\n故 ， 例 如 １ ９ ８ ３\n年\n１ ２ 月\n２ ７ 日 ，\n在\n瑞\n典\n南\n部 的 ｈ ａ\nｍ\nｒ ａ\n变\n电\n站\n， 由\n于\n错\n误\n的\n切\n除 了\n母\n线 ，\n导\n致\n部 分 线\n路\n过\n负\n荷\n而\n出\n现\n电\n压\n失\n稳\n， 最\n终\n导\n致\n负\n荷\n停 电 １ １ ４ ０ ０\nＭ\nＷ\n， 占\n该\n电 力 系 统 负\n荷\n的 ６ ７\n％\n，\n影\n响 时 间 约 ７ ｈ\nｍ\n； 在 １ ９ ８ ７ 年 ７ 月 ２ ３ 日 日 本 东 京 电 力\n系\n统 的 停 电\n事\n故\n中 ，\n午\n后\n负 荷 以 每\n分\n钟 ４ ０ ０\nＭ\nＷ\n的\n速\n率\n极\n速\n增\n长\n， 负\n荷\n上\n涨\n到 了 历 史 新\n记\n录\n３ ９ ３ ０ ０\nＭ\nＷ\n，\n在\n此\n过\n程\n中 ，\n尽\n管 投\n入\n了\n所\n有\n可\n用 的\n并\n联\n电\n容\n器\n组\n和\n增\n发 了\n可\n能 的\n旋\n转\n备\n用\n无\n功 ， 电\n压\n仍\n不 断 下\n跌\n， 最\n终\n导\n致\n三\n处\n的 变 电\n站\n保\n护 动 作 ， 最\n终\n负 荷\n损\n失\n达\n８ １ ６ ８\nＭ\nＷ\n， 有 ２ ８ ０\n万\n用 户\n受\n事 故\n影\n响 ；\n此\n外 ，\n类\n似\n的\n事 故\n还\n有 １ ９ ８ ７\n年\n法\n国\n西\n部\n电 力 系 统 电\n压\n稳\n定\n性\n事 故\n、\n１ ９ ９ ６ 年 美 国\n西\n部 电 力 系 统 大\n停\n电 事\n故\n［ ８ ］\n、\n１ ９ ８ ４\n年\n美\n国 东\n北\n部 大 停 电 事 故 等 ｔ ９ ］\n。\n此\n外 ， 随 着 新 能\n源\n控 制 方 式 的 日\n益\n复 杂 ， 系 统\n也\n可\n能\n会\n出\n现\n新\n的 电\n压\n失\n稳\n类\n型\n， 例 如 ， 在\n冀\n北\n电 网 发\n生\n的\n风\n电\n汇\n集\n系 统 ，\n在\n风\n电\n场\n低\n电\n压\n穿\n越\n控\n制\n方\n式\n的\n影\n响 下 ， 出\n现\n了 电\n压\n非\n周\n期\n反\n复\n波 动 的\n现\n象 ，\n数 次\n造\n成\n风\n电\n机\n组\n大\n面\n积\n脱\n网 ，\n最 高 损 失\n风\n电 出 力 ４ ７ ６\nＭ\nＷ\n［ １ Ｇ ］\n。\n由\n上\n述\n实 例\n可\n知 ，\n对\n电 力 系 统 的 电\n压\n稳\n定\n裕\n度\n进\n行\n计\n算\n和\n监\n控\n十 分\n必\n要\n。\n电\n压\n稳\n定\n裕\n度 的\n计\n算 中 ， 需\n要\n以 快\n速\n、\n大\n量\n、\n准 确 的 实 时 数\n据\n作 为\n基\n础\n。\n基\n于\n同 步 相\n量\n测\n量\n单\n元\n（ ｐ ｈ ａ ｓ ｏｒ \nｍ\nｅ ａ ｓ\nｕ\nｒ ｅ\nｍ\nｅ\nｎ\nｔ \nｕ\nｎ\nｉ ｔ ，\nＰ\nＭ\nＵ\n） 构 成 的 广\n域\n测\n量\n系\n统\n（\nｗ\nｉ ｄ ｅ  ａｒ ｅ ａ \nｍ\nｅ ａ ｓ\nｕ\nｒ ｅ\nｍ\nｅ\nｎ\nｔ  ｓ ｙ ｓ ｔ ｅ\nｍ\n，\nＷ\nＡ\nＭ\nＳ ） 因\n其 数\n据 的 同 步\n性\n与\n测\n量\n的\n快\n速\n性\n被\n广\n泛\n部 署 ，\n现\n己\n成\n为 电 力 系 统 电\n压\n稳 定\n监\n测 的\n基\n础\n工\n具\n［\n１ １\n］\n。\n然\n而\n， 值 得\n关\n注\n的 是 ， 由\n于\n互\n感\n器\n误\n差 ［\n１ ２\nＨ\n１ ３ ］\n、\n同 步 性 问\n题\n［\n１ ４\nＨ\n１ ５ ］\n、\n栅\n栏\n效\n应 、\n泄\n漏 误 差 ［\n１ ６ ］\n、 甚\n至\nＰ\nＭ\nＵ\n设 备\n老\n化\n等 因 素 ， Ｐ\nＭ\nＵ 的\n量\n测 数\n据\n中\n常\n常\n存 在\n误 差 、 异 常 数 据\n、\n甚\n至\n是\n数\n据\n丢 失\n。\n美\n国 加 州 电 力\n调\n度 中\n心\n（ Ｃ ａ ｌ ｉ ｆｏ\nｍ\nｉ ａ ｌ Ｓ Ｏ ） 的\n一\n份 报 告 指 出 ， 在 北\n美\n同 步 相\n量\n数 据 中 ， 异 常 比 例 为 １ ０\n％\n到 １ ７\n％\n［\n１ ８ ］\n，\n而\n在\n我\n国 Ｐ\nＭ\nＵ\n的 异 常 数 据 比 例\n 甚\n至\n达\n到 了 ２ ０\n％\n到 ３ ０\n％\n［\n１ ９ １\n，\n这\n些\n异 常 数\n 据 将\n会\n严\n重\n影\n响 到 Ｐ\nＭ\nＵ\n］\n\n华\n北\n电 力\n大\n学\n博\n士\n学\n位\n论\n文\n的\n各\n类\n应 用 例 如 ，\n在 我\n国 东 北\n地\n区 ， 在 频 率 偏 离 ５ ０ １１ ２ 时 ， 某\n直\n流\n换\n流\n站\n的 Ｐ\nＭ\nＵ\n量\n测 数\n据\n中 出\n现\n了\n振\n荡 ， 后\n经\n查\n实 ， 该\n振\n荡 在 实 际 电 力 系\n统\n中 并\n不\n存\n在 ，\n是\n由\n于\nＰ\nＭ\nＵ\n相\n量\n算\n法\n缺\n陷\n而\n导\n致\n的 伪\n振\n荡 。 因\n此\n，\n在\n对\n系 统\n进\n行 电\n压\n稳\n定\n裕\n度\n评\n估 时 ，\n必\n须\n考 虑 Ｐ\nＭ\nＵ 数 据 中\n存\n在 的 异 常 数\n据\n［\n２２ ］\n。\n总\n体\n上\n， 需 要\n对\nＰ\nＭ\nＵ 数\n据\n进\n行\n修\n正\n、\n研\n宄 静\n态\n电\n压\n失\n稳\n机\n理\n、\n建\n立\n静\n态\n电\n压\n稳\n定\n裕\n度 指 标\n。\n具\n体\n地\n， 本\n文\n首 先\n研\n宄 了 考 虑 同 步\n误\n差 的 Ｐ\nＭ\nＵ 幅 值 数 据\n恢\n复\n方\n法\n； 其 次 ，\n研\n宄 了\n参\n数 未 知 情\n况\n下 的 Ｐ\nＭ\nＵ\n相 角 差 时 变 偏 差 校\n正\n方\n法\n；\n再\n次 ，\n针\n对\n风\n电\n场\n中\n低\n电\n压\n穿\n越\n控 制\n诱\n导 的 电\n压\n振\n荡\n现\n象 ，\n进\n行\n了 机\n理\n分\n析 和\n判\n据 建\n立\n；\n再\n次 ，\n分\n析\n了\n阻\n抗\n模\n指\n标\n在 新 能\n源\n多\n馈\n入\n系 统 的\n适\n应\n性 ； 最 后 ，\n提\n出 了\n基\n于\nＰ\nＭ\nＵ\n数\n据\n的\n新\n能\n源\n场 站\n静\n态\n电\n压\n稳\n定 在 线\n预\n警\n方\n案 ，\n论\n文\n研\n究 有 助\n于\n提\n升\nＰ\nＭ\nＵ\n数\n据 质\n量\n， 有 效\n评\n估 系 统 的 静 态 电\n压\n稳\n定\n性 ，\n支 撑\n电 力 系 统 的 安\n全\n稳\n定\n运\n行\n。\n１ ． ２ 国 内\n外\n研\n究\n现\n状\n１\n．\n２ ． １ 同\n步\n相\n量\n异\n常\n数 据\n的 修\n正\nＰ\nＭ\nＵ\n异 常\n数\n据\n的\n修\n正\n对\n提\n升\nＰ\nＭ\nＵ\n数\n据\n质\n量\n十 分\n必\n要 ，\n根\n据\n修\n正\n过\n程\n中 使\n用 的\n数\n据\n范\n围 ，\n可\n将\nＰ\nＭ\nＵ\n的\n数\n据\n修\n正\n方\n法\n分 为 １ ）\n本\n地\n层\n级\n的 数\n据\n恢\n复\n； ２ ）\n区\n域\n层\n级 的\n数 据\n恢\n复 ； ３ ） 系 统\n层\n级 的 数\n据\n恢\n复\n。\n１\n．\n２\n．\n１ ． １ 本\n地\n层\n级\n本\n地\n层\n级 的\n数\n据 修\n正\n大 多\n指\n针 对\n单\n个\nＰ\nＭ\nＵ\n的\n数\n据\n进\n行\n恢\n复 ，\n可\n包\n括\n（\n１\n）\n插\n值\n法\n，\n（ ２ ）\n基\n于\n校\n准\n器\n的\n校\n准\n算\n法\n，\n（ ３ ）\nＰ\nＭ\nＵ 算\n法\n的 改\n进\n。\n（ １\n）\n插\n值\n法\n插\n值\n法\n基\n于\nＰ\nＭ\nＵ\n自 身 的\n数\n据\n，\n通\n过\n三\n次\n样\n条\n插\n值\n、\n拉 格 朗 日 插\n值\n法\n等\n对\nＰ\nＭ\nＵ\n的 异 常\n数\n据\n进\n行\n修\n正\n， 具\n体\n地\n， 文\n献\n［ ２ ３ ］\n提\n出 了\n一\n种\n基\n于 模 式\n识\n别\n的 异 常\n数\n据\n检 测\n方\n法\n， 并\n基\n于\n平\n均\n插\n值\n法\n对\n异 常\n数\n据\n进\n行\n恢\n复 ； 文\n献\n［\n２ ４ ］\n提\n出 了\n一\n种\n基\n于\n改\n进\n三\n次 样 条\n插\n值\n法\n和\n优 先\n级\n分\n配\n策\n略\n的 数\n据\n恢\n复\n方\n法 ，\n对\n不 同\n类\n型 的 丢\n失\n数\n据\n进\n行\n恢\n复 ；\n文\n献 ［\n２ ５ ］ 分 析 了 多 种 数 据 丢 失\n类\n型 ，\n并 基\n于\n拉\n格\n朗 日 插 值 法\n恢\n复\n数\n据 ，\n适\n用\n于\n少\n量\n数\n据\n丢 失 的 情\n况\n；\n总\n的\n来\n说 ，\n插\n值\n法\n大 多\n基\n于 单\n个\nＰ\nＭ\nＵ 的 已 有 数\n据\n， 对\n丢\n失 ／ 异 常 的 数 据\n进\n行\n恢\n复\n，\n这\n类\n方\n法\n仅\n能\n恢\n复\n少\n量\n的 Ｐ\nＭ\nＵ\n数 据 ，\n对\n大\n量\n丢\n失 的 Ｐ\nＭ\nＵ\n数\n据\n的 恢 复\n精 度\n较\n差 。\n（\n２ ）\n基\n于\n校\n准\n器\n的\n校\n准\n方\n法\n在\n实\n 验\n室\n和\n 现\n场\n的 Ｐ\nＭ\nＵ 中 ，\n可\n放\n置\n高\n精 度 的 Ｐ\nＭ\nＵ\n校\n准\n 器\n， 将 测\n 试\n信 号 同\n２\n\n第 １ 章 绪\n论\n时\n输\n入\n待 校\n准\n的 Ｐ\nＭ\nＵ\n和\nＰ\nＭ\nＵ\n校\n准\n器\n， 并\n基\n于\n校\n准\n器\n的 信 号\n输\n出\n结\n果\n对\nＰ\nＭ\nＵ\n进\n行 测\n试\n和\n校\n准\n。\n现\n有\n工\n作 大 多 围\n绕\n在\n校\n准\n器\n算\n法\n的\n开\n发\n上\n，\n例\n如\n文\n献\n［\n２ ６ ］\n构\n建 拟\n合 残\n差\n二\n次\n方\n和\n最 小 的 最 优\n化\n模\n型 ，\n提\n出 相\n量\n非 线\n性\n迭\n代\n求\n解\n方\n法\n，\n解 决\n了 相\n量\n非\n线 性 模 型 的 非 凸\n性\n所 导\n致\n的 多 解 问\n题\n；\n文\n献\n［\n２ ７ ］ 在\n一\n般\n信 号\n拟\n合\n模\n型\n的\n基 础\n上\n， 提 出 了\n一\n种 基\n于\n非 线 性 拟\n合\n的 相\n量\n和 频 率\n迭\n代 估\n计\n算\n法\n， 并\n基\n于\n最\n小\n二\n乘\n滤\n波\n器\n提\n升 动 态 条 件 下 的 频 率 变\n化\n率 的\n测 量\n精 度 ；\n尽\n管\n基\n于\nＰ\nＭ\nＵ\n校\n准\n器\n的 校 准 方\n法\n能 够\n对\nＰ\nＭ\nＵ\n进\n行\n高 精\n度\n的\n校\n正\n，\n但\n在\n其\n实 际\n应\n用 中 ， 需\n要\n额 外 的\n校\n准 设 备 ，\n针 对\n现\n场\n数 据 的\n校\n正\n可\n能\n较\n为 不 便\n。\n（\n３ ）\nＰ\nＭ\nＵ\n算\n法\n的 改\n进\nＰ\nＭ\nＵ 算\n法\n的 改\n进\n主\n要 围 绕 着 降\n低\n栅 栏\n效 应\n和\n泄\n露\n误\n差\n进\n行\nｔ\n２ ８ ］\nｄ\n， 例 如\n文\n献\n［\n２ ８ ］ 提 出 了\n一\n种\n基\n于\nＣ ｌ ａ ｒ ｋ ｅ 变 换 的\nＤ\nＦ Ｔ 同 步 相\n量\n估\n计\n算\n法\n来\n消 除\n频\n谱\n泄\n漏\n；\n文\n献\n［\n２ ９ ］ 针 对 电 网 频 率 波 动 和 不 同 Ｐ\nＭ\nＵ\n厂\n家 Ｄ Ｆ Ｔ 中\n所\n使 用\n不\n同 电 网\n频\n率\n跟\n踪\n算\n法\n的\n影\n响 ，\n给\n出 了 剔 除\n计\n算 电\n压\n相\n量\n间 相 角\n差\n误\n差\n因 素 的 方\n法\n。\n对\nＰ\nＭ\nＵ\n算\n法\n的 改\n进\n可\n显\n著\n提\n升\nＰ\nＭ\nＵ 的 数\n据\n质\n量\n， 但\n是\n，\n该\n方\n法 无\n法\n校\n正\n连\n接\nＰ\nＭ\nＵ\n的 电\n压\n互\n感\n器\n和 电\n流\n互\n感\n器\n的\n误\n差 。\n１\n．\n２\n．\n１ ． ２ 区\n域\n层\n级\n基\n于\n区 域\n层\n级 的 数 据 修\n正\n方\n法\n大 多\n基\n于\n小\n范\n围 内 的 Ｐ\nＭ\nＵ\n数 据\n对\n异 常\n的\nＰ\nＭ\nＵ\n数\n据\n进\n行\n修\n正\n，\n主\n要\n包\n括\n１ ）\n基\n于 线\n路\n两\n端 Ｐ\nＭ\nＵ 数\n据\n的 修\n正\n方\n法\n；\n２ ）\n其\n他\n方\n法\n（\n１\n）\n基\n于\n输 电 线\n路\n模 型 的 数 据 修\n正\n方\n法\n基\n于\n输\n电 线\n路\n模 型 的 数 据 修\n正\n方\n法\n是\n指 ，\n基\n于\n线\n路\n两\n端 ： Ｐ\nＭ\nＵ\n数 据\n和\n输\n电\n线\n路 的 模 型\n对\nＰ\nＭ\nＵ 的 异 常 数 据\n进\n行 修\n正\n，\n具\n体\n地\n， 文\n献\n［\n３ ３ ］\n通\n过\n在 假\n定 Ｐ\nＭ\nＵ\n为\n零 均 值\n噪\n声 的 情\n况\n下\n，\n通\n过\n在 系 统 中 设\n置\n高 质\n量\n的 Ｐ\nＭ\nＵ\n，\n基\n于\n线\n路\n模 型 ，\n降\n低\nＰ\nＭ\nＵ 的\n误\n差\n；\n文\n献\n［\n３ ４ ］ 将 同 步 相\n量\n测\n量\n数\n据\n和 电 力 系 统 的\n运\n行\n计\n划 数\n据 结\n合\n，\n基\n于\n最\n小\n二\n乘\n法\n， 牛\n顿 拉\n夫\n逊\n法\n等\n对\nＰ\nＭ\nＵ\n的 实 时 相\n量 进\n行\n校\n正\n；\n文\n献\n［\n３ ５ ］\n利\n用\n非 线 性 最 优 估\n计\n理\n论\n，\n基\n于 传 统 的\n不\n平\n衡 负 荷\n输\n电 线 路\n模\n型\n计\n算\n校\n正\n因\n子\n，\n对\nＰ\nＭ\nＵ\n的\n量\n测\n量\n进\n行\n校\n正\n。\n文\n献\n［\n３ ６ ］\n基\n于\n灵\n敏\n度 分\n析\n的 方\n法\n， 并 结\n合\nＤ\nＢ Ｓ Ｃ\nＡ\nＮ\n聚\n类 ，\n可\n修\n正\n较 小 的 Ｐ\nＭ\nＵ 偏 差 ；\n需\n要 说\n明 的\n是\n， 文\n献\n［\n３ ３ ］\n－\n［\n３ ６ ］ 是\n在\n假\n定 线 路\n参\n数\n己 知 的 情\n况\n下 对\n数\n据\n进\n行\n修\n正\n的 。\n但\n是\n， 在 实 际 的 电 力 系 统 中 ， 由\n于\n天\n气\n，\n工\n况\n， 甚\n至\n运\n行\n人\n员 的\n操\n作\n失 误 ， 常 常 导\n致\n离 线 参 数 与 线 路 真 实 参 数\n之\n间 出\n现\n偏 差 ，\n此\n时 ，\n文\n献\n［\n３ ３ ］\n－\n［\n３ ５ ］\n中 的\n方\n法\n可\n能\n不\n再\n适\n用 ， 因\n此\n， 较 多 文\n献\n开\n始\n考\n虑 线\n路\n参\n数 中 存\n在\n的\n误 差\n情\n况\n。\n例 如 ， 文\n献\n［\n３ ８ ］ ， ［\n３ ９ ］\n基\n于\n线 路 参 数 短 时 不\n变\n的\n假\n设 ，\n在\n不\n使\n用 线\n路 参\n数 离\n线\n值 的\n情\n况\n下\n，\n对\n线\n 路\n两\n端\n的 恒 定 相 角 差 偏 差\n进\n行\n校\n正\n；\n然\n而\n， 文\n献\n［\n３ ８ ］ ， ［\n３ ９ ］\n仅\n能\n对\n恒\n３\n\n华\n北 电 力 大 学 博\n士\n学 位\n论\n文\n定 的\n相\n角 差\n偏\n差\n进\n行\n校\n正\n，\n而\n无\n法\n校\n正\n时 变 的 相 角\n差\n偏 差\n。\n（\n２ ）\n基\n于\n低 秩 矩\n阵 特 性 的 数 据 恢 复 方 法\n在\n电 力 系 统 中 ， 各\n节\n点 的 Ｐ\nＭ\nＵ\n数\n据\n理\n论\n上\n应 满\n足\n基\n尔 霍 夫 电\n压\n定 律 和\n基\n尔\n霍\n夫\n电\n流\n定 律 ， 因\n此\n， 各\n节\n点 的 Ｐ\nＭ\nＵ\n数\n据 在 时 间\n和 空\n间\n上\n有\n一\n定 的 关 联 关 系 ，\n那\n么\n各\n节\n点 Ｐ\nＭ\nＵ\n数 据\n组\n成\n的\n矩\n阵\n将\n具\n有\n低\n秩\n特\n性\n，\n可\n据\n此\n实\n现\n数 据 的\n校\n正\n和\n恢\n复\n。\n如 文\n献\n［\n４ ０ ］ 分 别\n基\n于 时 间 相\n关\n性 和\n通\n道\n相 关 性 ， 建\n立\n了\n两\n个 数 据\n恢\n复\n矩\n阵 ，\n实\n现\n了 Ｐ\nＭ\nＵ\n异 常\n数\n据\n的 在 线 修\n正\n；\n文\n献\n［\n４ １\n］\n提\n出 了\n一\n种 数\n据\n驱\n动 方\n法\n，\n通\n过\n使\n用\n低\n秩\nＨ\nａ ｎ ｋ ｅ ｌ\n矩\n阵\n来\n表 征\n系 统 动 力 学 以 恢 复 同 步 相\n量\n数\n据\n， 将 非 线 性 系 统\n提\n升\n为\n无\n限 维\n线\n性 系 统 ； 文\n献\n［\n４ ２ ］\n基\n于\n低 秩\n矩\n阵 分\n解\n法\n， 建\n立\n用\n于\n修 复 坏 数 据\n的\n模\n型 ， 并\n基\n于\n迭\n代 算\n法\n进\n行 求\n解\n。\n值\n得\n说 明 的 是 ，\n基\n于\n低\n秩 矩\n阵 特 性 的 数\n据\n修\n正\n方\n法\n大 多\n基\n于\n数 据\n驱\n动 ， 能\n够\n有 效 的\n规\n避\n线 路\n参 数\n误 差\n的\n影\n响 ，\n但\n是\n却\n无\n法\n恢 复\nＰ\nＭ\nＵ\n量\n测 数 据 中\n长\n期 的\n、\n连\n续\n的 相 角\n误\n差\n。\n（\n３ ）\n基\n于\n人\n工\n智 能 的 数 据\n修\n正\n方\n法\n基\n于\n人\n工\n智 能 的\n方\n法\n大 多\n对\n各\n类\n神\n经\n网\n络\n进\n行 训\n练\n， 并 以 神\n经\n网\n络\n的\n输\n出\n值\n作\n为\n数\n据\n的\n修\n正\n值\n， 具\n体\n地\n， 文\n献\n［\n４ ３ ］\n基\n于\n无\n监\n督\n生 成\n对\n抗\n训\n练\n方 式 ，\n通\n过\n二\n维\n卷\n积\n的\n重\n构 模 型\n和\n量\n测 数\n据\n二\n维 灰 度 图\n像\n化\n实\n现\n了 丢 失 数 据 的 恢 复 ；\n文\n献\n［\n４ ４ ］\n为\n解\n决 由\n于\n通\n信\n延\n迟\n而\n导 致 的 电 力 系 统\n状\n态\n变\n量\n丢 失 问\n题\n５\n基\n于 门\n控\n递\n归\n单\n元\n建\n立\n迭\n代\n预\n测 方\n案\n， 实\n现\n数\n据\n修\n正\n； 文\n献\n［\n４ ５ ］ 利 用 改\n进\n的\n生\n成\n式 对\n抗\n网 络 ，\n利\n用\n真\n实 性\n约\n束\n及\n上\n下\n文 相\n似\n性\n约\n束\n优 化 隐 变\n量\n， 实\n现\n量\n测\n数\n据\n缺\n失 的\n重\n建\n。\n值\n得\n说 明 的\n是\n，\n基\n于\nＡ\nＩ 的 数\n据\n修\n正\n方\n法\n大 多 需\n要\n对\n模 型\n进\n行\n大\n量\n的 离 线 训\n练\n，\n一\n方\n面\n需\n要\n耗\n费 大\n量\n的 算 力 ， 另\n一\n方\n面\n，\n可\n能 会\n造\n成\n模 型 的\n过\n拟\n合\n， 如 何\n提\n高 模 型 的\n泛\n化\n能 力\n是\n一\n件\n值 得\n研\n究 的\n事\n情\n。\n１ ． ２ ． １ ． ３ 系\n统\n层\n级\n系\n统\n层 级 的 Ｐ\nＭ\nＵ\n数 据\n校\n正\n方\n法 大\n多\n基\n于\n电 力 系 统\n状\n态\n估\n计\n＾ 将 待\n修\n正\n的 相\n量\n作 为 变\n量\n，\n加\n入\n电 力 系 统\n状\n态\n估\n计\n中 ， 在\n保\n证\n方\n程\n冗\n余 度 的\n前 提\n下 ， 在 电 力\n系\n统\n状 态\n估\n计 的 同 时 即\n可\n修\n正\n异 常 数\n据\n。 具\n体\n地\n，\n文\n献\n［\n４ ６ ］\n通\n过\n对\n不\n同 节 点 的\nＰ\nＭ\nＵ\n数 据\n进\n行\n补\n偿\n，\n基\n于\n电 力 系 统 状 态 估\n计 对\n异 常 数 据\n进\n行 检 测 和 校\n正\n； 文 献\n［\n４ ７ ］\n认\n为 ， 电\n压\n的 幅 值 和 相 角 数 据\n近\n似\n独\n立\n， 因\n此\n以 极\n坐\n标 作 为 状 态 变 量 ， 将\n状\n态\n估\n计\n转 化\n为\n迭\n代\n最\n小\n二\n乘\n问\n题\n，\n对\n异 常 数\n据\n进\n行 检 测 和 校\n正\n； 文\n献\n［\n４ ８ ］\n通\n过\n在\n多 个 Ｐ\nＭ\nＵ 数 据 中\n添\n加\n不 同 的 偏\n移\n量\n，\n通\n过\n偏\n移\n量\n对\n状\n态\n估\n计\n目 标 函 数 值\n的\n变\n化\n， 确 定 Ｐ\nＭ\nＵ 异 常 数 据 的 位\n置\n， 实\n现\n了\n配\n电 网 中 异 常 数 据 的 检 测 与 修\n正\n。\n需 要\n注\n意 的\n是\n，\n基\n于\n电 力 系 统 状\n态\n估\n计\n的\n数\n据\n校\n正\n方\n法\n大 多 需 要 己\n知\n输 电\n线\n路\n参\n数 ，\n而\n实 际 电 网 中 的\n输\n电 线 路 参 数 常 常 因\n工\n况\n变 化 等 原 因 偏 离 离 线 值 ，\n４\n\n第 １ 章 绪 论\n此\n时 ，\n上\n述\n校\n正\n方\n法\n可\n能 存 在\n一\n定 的\n误\n差\n。\n１\n．\n２ ． ２\n静\n态\n电\n压\n失 稳\n对\n应 的 分 岔 类\n型\n在 机\n理\n方\n面\n，\n从\n数 学 角 度\n看\n， 电 力 系 统 的\n静 态\n电\n压\n失 稳\n对\n应\n着 不\n同 的\n分\n岔\n类 型 ，\n包 括\n鞍\n结 分 岔 ［\n４ ９ ＞ ［\n５ ３ ］\n、\n极 限 诱 导\n分\n岔 ［\n５ ４ ］ ［\n５ ８ ］\n、 奇 异\n诱\n导\n分\n岔 ［\n５ ９ ］\n－\n［\n６ １\n］\n等\n。\n１ ． ２ ． ２ ．\n１\n鞍\n结\n分 岔\n当\n不\n考 虑 系 统 约 束 时 ， 随 着 系 统\n某\n一\n参\n数 的 缓\n慢\n增\n长\n， 系 统\n平\n衡\n点\n在\n某\n点\n后 消 失 ，\n此\n时 系 统 出\n现\n电\n压\n失\n稳\n，\n可\n对\n应\n鞍\n结\n分\n岔 。 具\n体\n地\n，\n文\n献\n［\n４ ９ ］ 以 ３\n节\n点 的 小 系 统 为\n对\n象 ，\n基\n于 局\n部\n参 数\n延\n拓\n法\n求\n解\n系 统 的\n平\n衡\n流\n形\n，\n分\n析\n了\n风\n速\n变\n化 对\n鞍 结\n分\n岔 点 的\n影\n响 ；\n文\n献\n［\n５ ０ ］ 以\n风\n电 场\n注\n入\n有 功 功 率 为 控 制\n参\n数\n，\n进\n行\n了\n单\n参\n数 电\n压\n稳\n定 性 分 岔 分 析 ， 分 析 结\n果\n表\n明 ， 当\n对\n系 统\n进\n行\n有\n效 电\n容\n补\n偿\n时\n，\n鞍\n结\n分\n岔 的\n边\n界 将 被 有 效 的 扩\n展\n； 文\n献\n［\n５ ３ ］ 提 出 了\n一\n种 新 的 Ｓ\nＮ\nＢ\n分 岔\n点\n计\n算\n方\n法\n，\n称\n为\n边\n界\n导 数\n直\n接\n法\n， 用\n反\n映\n平\n衡\n流 形\n斜\n率 的\n一\n维\n边\n界\n条 件\n代\n替 崩\n溃\n点 的\n多 维 条 件 ，\n减\n少 了 系 数 矩 阵 的 维 数 ， 实\n现\n了Ｓ\nＮ\nＢ\n分\n岔 点 的\n计\n算\n。\n１\n．\n２ ． ２ ． ２ 极\n限\n诱\n导\n分 岔\n当 系 统\n运\n行\n过\n程 抵\n达\n某\n些\n约 束\n边\n界 时 ， 系 统 的 代 数 方\n程\n将\n发\n生\n突 变 ，\n平\n衡\n解 曲 线 将 出\n现\n偏 折 ， 导\n致\n平\n衡 点\n进\n入\n电\n压\n不\n稳\n定 区 域 ，\n可\n对\n应\n发\n生\n极\n限\n诱\n导\n分\n岔 。 具\n体\n地\n，\n文\n献\n［\n５ ８ ］\n首\n次\n发 现\n了 极 限\n诱\n导 分 岔\n现\n象 ， 即 随 着 负 荷 的 增 加 ， 当\n发 电\n机\n到\n达\n无\n功 功 率 极 限 时 ， 系 统\n将\n会\n失 去\n稳\n定 ；\n文\n献\n［\n５ ４ ］ 构\n建\n动\n态\n风\n力\n发\n电\n系 统 的 极 限\n诱\n导 分 岔 模 型 ， 利 用\n准\n静\n态\n分 析\n法 计\n算 优\n化\n模 型 初\n值\n，\n搜\n索\n风\n电\n系\n统\n稳\n定 流\n形\n的 极 限 诱 导 分 岔 ； 文\n献\n［\n５ ６ ］\n研\n究 了 由\n于\n发 电\n机\n励\n磁 电\n压\n限 制 导\n致\n的\n极 限 诱 导 分 岔 ， 并 指 出 ， 极 限 诱 导 分 岔\n反\n映 了 动\n态\n无\n功\n源\n在\n维 持 系\n统\n电\n压\n稳\n定\n性 中 十 分\n重\n要 ；\n１ ． ２\n．\n２ ． ３\n奇\n异\n诱\n导\n分 岔\n描\n述\n微\n分\n代\n数\n方\n程\n系 统 中 ， 随 着\n参\n数 的 变 化 ， 代 数\n方\n程\n发\n生\n了\n奇\n异\n而\n导\n致\n的 电 压 失 稳\n现\n象 ［\n５ ９ ］\n＿\n［\n６ １\n］\n。\n例 如 ， 文\n献\n［\n５ ９ ］\n通\n过\n理\n论\n分\n析 和 时 域 仿 真\n表\n明 ，\n风\n力 发\n电\n机\n与 系 统 弱\n连\n接 时 ， 在 短\n路\n故 障 并 不\n严\n重\n的 情\n况\n下 也\n可\n能 发\n生\n失\n稳\n，\n这\n种\n失\n稳 主 要 是 由 系 统 轨\n迹\n接\n触\n代 数 约 束 方 程\n形 成\n的\n奇\n异\n面\n导\n致\n。\n文\n献\n［\n６ ０ ］ 系\n统\n地\n讨\n论 了\n无\n阻\n尼\n项\n和\n包 括\n阻\n尼 项 的 电 力 系 统\n微\n分\n代\n数 模 型 （ Ｄ Ａ Ｅ ）\n发\n生\n奇\n异\n诱\n导\n分\n岔 （\nＳ Ｉ Ｂ ） 的\n特\n点 ， 并 明 确 了 奇 异 诱 导\n分\n岔 的\n一\n般\n定 义 。\n此\n外 ，\n还\n有 其 他 分 岔 类 型 也\n可\n能 会 导\n致\n电\n压\n失\n稳\n， 如 Ｈ ｏ ｐ ｆ\n分\n岔 ［\n６ ２ ］\n＿\n［\n６ ４ ］\n， 同\n宿\n分\n岔 ［\n６ ５ ］\n等 ，\n具\n体\n地\n， 文\n献\n［\n６ ２ ］ 发\n现\n，\n对\n系 统 中 的 等 值 发 电 机 角\n速\n度\n施\n加\n线\n性\n反\n馈\n控\n制 后\n可\n延\n迟\n甚\n至\n完 全 消 除\n亚\n临\n界\nＨ ｏ ｐ ｆ 分 岔 ，\n从\n而 可\n使 系 统 以\n鞍\n结\n分\n岔\n点 作 为 系 统 的 电 压\n稳\n定 临\n界\n点 ， 大 幅\n扩\n大 了 电\n压\n稳\n定\n域\n； 文 献 ［\n６ ３ ］\n通\n过\n双\n参\n 数\n５\n\n华\n北\n电 力 大 学 博\n士\n学\n位\n论\n文\n“\n两\n步\n法\n”\n追\n踪\n系 统\n二\n维\nＨ\nｏ ｐ ｆ 分\n岔\n曲 线 ， 分 析\n风\n电 集\n群\n地\n区\n无\n功 补 偿\n设\n备 动\n态\n响 应\n特\n性\n及\n电\n压\n控 制 效\n果\n。\n然\n而\n，\n值\n得\n注\n意 的\n是\n，\n对\n于\n新\n能\n源\n场\n站\n系 统 ，\n上\n述\n方\n法\n存 在\n两\n个 问\n题\n，\n一\n是\n上\n述\n分 析 中\n大\n多 以 恒 功 率 模 型 或\n恒\n阻\n抗\n模 型 代 替 新 能\n源\n场\n站\n， 未 考 虑 新 能\n源\n场\n站\n的\n控\n制\n方\n式\n及\n自 身 的\n状\n态\n切\n换\n， 其 结 果\n可\n能\n不\n准\n确 ； 另\n一\n方\n面\n，\n上\n述\n文\n献\n大 多\n针\n对\n传 统 的\n鞍\n结\n分\n岔 、 极 限\n诱\n导\n分\n岔\n、\n奇\n异\n诱\n导 分 岔 等 ，\n上\n述\n分 岔 无 法\n解\n释 新\n能\n源\n并 网 点 电 压\n在\n０\n．\n９\n－\nｌ\n．\nＯ ｐ ．\nｕ\n．\n之\n间 反 复 剧 烈 波 动 ，\n且\n伴 随 有 功 出 力 的 波 动 的\n现\n象 ［\n１ （ ）\n］\n。\n而\n实 际\n上\n， 伴 随 着\n控\n制 的 切 换 ，\n失\n稳\n对\n应\n的 数 学\n模\n型 是 切 换 系 统 ，\n不\n是\n光\n滑 系 统 ，\n也\n不\n是 极 限\n诱\n导\n分\n岔\n对 应\n的 非 光\n滑\n系 统 ， 因\n此\n，\n上\n述\n电\n压\n失\n稳\n现\n象\n无\n法\n用 传 统 的 电\n压\n失\n稳\n机\n理\n解 释\n， 需\n要\n用\n非 光\n滑 分\n岔 来\n解\n释\n。\n１\n．\n２ ． ３\n静\n态 电\n压\n评\n估\n判\n据 研\n究\n为\n便\n于\n运\n行 人\n员\n对\n监\n视\n和\n控\n制 系 统 电\n压\n稳\n定 性 ，\n研\n宄\n人\n员\n提\n出 了 诸 多 静\n态\n电\n压\n稳\n定 指 标 ，\n主\n要\n包\n括\n短\n路\n比 指\n标\n、\n奇 异\n值\n指 标 ／ 特 征\n值\n指\n标\n、\n阻\n抗\n彳\n吴\n指 标\n、\n灵\n敏\n度\n指\n标\n等\n等\n。\n１\n．\n２\n．\n３ ． １\n短\n路\n比\n指\n标\n（ Ｓ Ｃ Ｒ ）\n在\n基\n于\n短 路\n比 的 静\n态\n电\n压\n稳\n定\n评\n估\n方\n面\n， 文\n献\n［\n６ ６ ］\n提\n出 了\n一\n种 考 虑 新 能 源 无\n功\n出 力\n、\n静\n止\n无\n功 发\n生\n器\n、\n阻\n抗 角 以\n及\n初 始 相 位 角 的 改\n进\n的\n新\n能\n源\n集\n群\n等 效 短\n路\n比\n计\n算\n方\n法\n， 能 够\n反\n映\n集\n群\n接\n入\n下\n新 能\n源\n电\n站\n的 电 网\n强\n度 ； 文 献 ［\n６ ７ ］\n基\n于\n短\n路\n比 的\n物\n理\n本\n质 ， 提 出\n计 及\n场\n站\n间 相\n互\n影\n响 的 新 能\n源\n多\n场\n站\n短 路 比 定\n义\n及\n计\n算\n方\n法\n，\n并\n根\n据 系 统 阻\n抗\n比 与\n短\n路 比 间 的 关\n联\n关 系 ， 给 出 了\n针 对\n不\n同 阻\n抗\n比 范 围\n的\n计\n算\n解 析 表\n达\n式\n； 文\n献\n［\n６ ８ ］ 指 出 ， 提 升 系 统 Ｓ Ｃ Ｒ\n可\n有 助\n于\n改 善 静\n态\n电\n压\n稳\n定\n性 ， 并 考 虑 了 系 ",
+      "page_start": 12,
+      "page_end": 21,
+      "start": {
+        "page": 12,
+        "offset": 0
+      },
+      "end": {
+        "page": 21,
+        "offset": 1069
+      },
+      "preview_end": {
+        "page": 17,
+        "offset": 1364
+      },
+      "heading": "第1章绪论",
+      "method": "joined_heading",
+      "end_reason": "section",
+      "total_chars": 19923,
+      "truncated": true,
+      "quality_flags": [
+        "joined_heading",
+        "multiple_heading_candidates",
+        "numbered_boundary_candidate",
+        "text:fragmented_text",
+        "text:private_use_characters",
+        "truncated"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "第 ７\n章\n结 论\n与 展 望\n７\n．\n１\n论\n文\n工\n作\n总\n结\n新 能\n源\n场\n站\n多 位\n于\n电 网\n末\n端 ， 电\n压\n稳\n定 问\n题\n不\n可\n忽\n视\n。\n而\nＰ\nＭ\nＵ 作 为 电\n压\n稳\n定\n评\n估 的\n重\n要\n数 据\n源\n， 其 数 据 质\n量\n将\n严\n重\n影\n响 新 能\n源\n场 站 电\n压\n稳 定 性 的\n监\n测 。\n针\n对\nＰ\nＭ\nＵ 数\n据\n在\n新\n能\n源\n场\n站\n静\n态\n电\n压\n稳\n定 在 线\n评\n估\n的 问\n题\n研\n宄 中 ，\n论\n文\n开\n展\n了Ｐ\nＭ\nＵ\n数\n据\n修\n正\n、\n电\n压\n稳\n定\n机\n理\n分\n析 以\n及\n电\n压\n裕\n度\n指 标 的\n建\n立\n研 宄 ，\n论\n文\n的\n主\n要\n工\n作 如 下 ：\n（\n１\n）\n提\n出 了\n一\n种\nＰ\nＭ\nＵ\n幅 值 数 据\n恢\n复 方\n法\n， 该 方\n法\n在 线\n路 参\n数\n不 准\n和\n相\n角 数\n据\n中\n存\n在\n同 步\n误 差\n的 情\n况\n下\n仍 然\n适\n用\n。\n具\n体\n地\n， 首 先 ， 展\n示\n了 实 测 Ｐ\nＭ\nＵ 数 据\n中\n存\n在\n的 相 角\n数 据\n质\n量\n问\n题\n以\n及\n幅 值\n数\n据 丢 失\n现\n象 ， 并 分 析 了 幅 值 数 据 丢 失\n对\n静\n态\n电\n压\n稳\n定\n指\n标\n一\n阻\n抗\n模\n指 标 的\n影\n响 ； 其 次 ，\n基\n于 带 噪 声 的\n密\n度\n空\n间 聚 类\n（\nＤ\nＢ Ｓ Ｃ\nＡ\nＮ\n） ， 提 出 了\n一\n种 高 质\n量\n历\n史 数 据 的 筛\n选\n方\n法\n；\n进\n一\n步\n地\n，\n基\n于\n线\n路\n的 Ｐ Ｉ 型 等\n值\n模\n型 ， 建\n立\n了 数 据 恢 复 模 型 ， 利 用\n历\n史\n幅\n值\n数 据\n计\n算 相 关 恢\n复\n系\n数\n，\n并\n依\n次 恢\n复\n幅\n值\n数\n据\n；\n最\n后 ，\n通\n过 仿\n真 算\n例\n和\n实 测 数\n据\n验\n证\n了 该 方\n法\n的 有 效 性\n和\n实 用\n性\n。\n（\n２ ） 提 出 了\n一\n种 Ｐ\nＭ\nＵ\n相 角\n差\n的 时\n变\n偏 差 校\n正\n方\n法\n， 该 方\n法\n能\n够 在 线 路\n参\n数\n未\n知\n的 情\n况\n下 ，\n对\n长\n期\n的\n、\n连\n续\n的\n、\n时 变 相 角\n差\n偏\n差\n进\n行\n修\n正\n。\n具 体\n地\n， 首 先 ，\n展\n示\n了\n在\n实 际 电 网 中 发\n现\n的 相 角\n差\n时 变 偏\n差\n， 并\n分\n析 了 相 角 差\n偏\n差 对\n静\n态\n电\n压\n稳\n定 指 标 ｉ Ｋ 指 标 的\n影\n响 ； 其 次 ， 以 多 个 时 间 断 面 下 的 电\n压\n相 角 差 为 未 知 变\n量\n，\n建\n立\n了 用\n于\n估 计 ＰＡ Ｄ 的\n一\n般\n模 型 ；\n进\n一\n步\n地\n，\n基\n于\n直\n流\n潮\n流\n，\n将\n多 个 时 间 断 面\n、\n多 个 未 知 变\n量\n的 相 角\n差\n估\n计\n转\n化\n为\n以 单\n一\n线\n路\n参\n数 为\n变\n量\n的\n初\n步\n估 计 模 型 ； 再\n次 ， 以 初 步 估\n计\n的 结 果 为 初 值 ，\n基\n于\n二\n阶\n泰\n勒\n展\n开\n，\n对\nＰＡ\nＤ\n进\n行\n精 确 估 计 ； 最\n后\n，\n基\n于\n仿 真\n和\n实 测 算 例\n验\n证\n了\n所\n提\n方\n法\n的\n有\n效 性 。\n（\n３ ） 针\n对\n实 际\n风\n电\n场\n中 出\n现\n的 低 电\n压\n穿\n越\n控 制 方 式 导 致 的 电\n压\n振\n荡 失\n稳\n现\n象 ， 分 析 了 相 应 的 机\n理\n， 并 建\n立\n了\n裕\n度 指 标 。 具\n体\n地\n， 首 先 ，\n基\n于 实 际 案 例 ，\n对\n陆\n上\n风\n电\n场\n无\n故 障 、 高 出 力 下 、 低 穿 控 制\n方\n式 导\n致\n的 电 压 振 荡\n现\n象\n进\n行 了 机\n理\n分\n析\n，\n说 明 了 该\n振\n荡\n现\n象 对\n应\n于\nＨ Ｌ Ｉ Ｎ Ｂ ； 其 次 ，\n推\n导 了 Ｈ Ｌ Ｉ\nＮ\nＢ 与 Ｓ\nＮ\nＢ 发 生\n的\n边 界\n条\n件\n， 结 果\n表\n明 ，\n在\n风\n电\n场\n的 典 型\n低\n穿 控 制\n方\n式\n下 ， 陆\n上\n风\n电 场 在 高 出\n力 时\n更 容\n易 发\n生\nＨ Ｌ Ｉ\nＮ\nＢ\n而\n非 传 统 的 Ｓ Ｎ Ｂ ；\n进\n一\n步\n地\n，\n基\n于\n二\n阶\n锥 算\n法\n， 给 出\n了 考\n虑\n风\n电\n场\n无\n功 控 制\n方\n式\n及\n无\n功 约 束 下 ，\n计\n及\nＨ\n",
+      "page_start": 113,
+      "page_end": 113,
+      "start": {
+        "page": 113,
+        "offset": 26
+      },
+      "end": {
+        "page": 113,
+        "offset": 1887
+      },
+      "preview_end": {
+        "page": 113,
+        "offset": 1887
+      },
+      "heading": "第7章结论与展望",
+      "method": "joined_heading",
+      "end_reason": "section",
+      "total_chars": 1861,
+      "truncated": false,
+      "quality_flags": [
+        "joined_heading",
+        "multiple_heading_candidates",
+        "numbered_boundary_candidate",
+        "text:fragmented_text",
+        "text:private_use_characters"
+      ],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "abstract:joined_heading",
+    "abstract:multiple_heading_candidates",
+    "abstract:text:fragmented_text",
+    "abstract:text:private_use_characters",
+    "conclusion:joined_heading",
+    "conclusion:multiple_heading_candidates",
+    "conclusion:numbered_boundary_candidate",
+    "conclusion:text:fragmented_text",
+    "conclusion:text:private_use_characters",
+    "introduction:joined_heading",
+    "introduction:multiple_heading_candidates",
+    "introduction:numbered_boundary_candidate",
+    "introduction:text:fragmented_text",
+    "introduction:text:private_use_characters",
+    "introduction:truncated",
+    "page:100:fragmented_text",
+    "page:100:private_use_characters",
+    "page:101:fragmented_text",
+    "page:101:private_use_characters",
+    "page:102:fragmented_text",
+    "page:102:private_use_characters",
+    "page:103:fragmented_text",
+    "page:103:private_use_characters",
+    "page:104:fragmented_text",
+    "page:104:private_use_characters",
+    "page:105:fragmented_text",
+    "page:105:private_use_characters",
+    "page:106:fragmented_text",
+    "page:106:private_use_characters",
+    "page:107:fragmented_text",
+    "page:107:private_use_characters",
+    "page:108:fragmented_text",
+    "page:108:private_use_characters",
+    "page:109:fragmented_text",
+    "page:109:private_use_characters",
+    "page:10:fragmented_text",
+    "page:10:private_use_characters",
+    "page:110:fragmented_text",
+    "page:110:private_use_characters",
+    "page:111:fragmented_text",
+    "page:111:private_use_characters",
+    "page:112:fragmented_text",
+    "page:112:private_use_characters",
+    "page:113:fragmented_text",
+    "page:113:private_use_characters",
+    "page:114:fragmented_text",
+    "page:114:private_use_characters",
+    "page:115:fragmented_text",
+    "page:115:private_use_characters",
+    "page:116:fragmented_text",
+    "page:116:private_use_characters",
+    "page:117:fragmented_text",
+    "page:117:private_use_characters",
+    "page:118:fragmented_text",
+    "page:118:private_use_characters",
+    "page:119:fragmented_text",
+    "page:119:private_use_characters",
+    "page:11:private_use_characters",
+    "page:120:fragmented_text",
+    "page:120:private_use_characters",
+    "page:121:fragmented_text",
+    "page:121:private_use_characters",
+    "page:122:fragmented_text",
+    "page:122:private_use_characters",
+    "page:123:fragmented_text",
+    "page:123:private_use_characters",
+    "page:124:fragmented_text",
+    "page:124:private_use_characters",
+    "page:12:fragmented_text",
+    "page:12:private_use_characters",
+    "page:13:fragmented_text",
+    "page:13:private_use_characters",
+    "page:14:fragmented_text",
+    "page:14:private_use_characters",
+    "page:15:fragmented_text",
+    "page:15:private_use_characters",
+    "page:16:fragmented_text",
+    "page:16:private_use_characters",
+    "page:17:fragmented_text",
+    "page:17:private_use_characters",
+    "page:18:fragmented_text",
+    "page:18:private_use_characters",
+    "page:19:fragmented_text",
+    "page:19:private_use_characters",
+    "page:1:fragmented_text",
+    "page:1:private_use_characters",
+    "page:20:fragmented_text",
+    "page:20:private_use_characters",
+    "page:21:fragmented_text",
+    "page:21:private_use_characters",
+    "page:22:fragmented_text",
+    "page:22:private_use_characters",
+    "page:23:fragmented_text",
+    "page:23:private_use_characters",
+    "page:24:fragmented_text",
+    "page:24:private_use_characters",
+    "page:25:fragmented_text",
+    "page:25:private_use_characters",
+    "page:26:fragmented_text",
+    "page:26:private_use_characters",
+    "page:27:fragmented_text",
+    "page:27:private_use_characters",
+    "page:28:fragmented_text",
+    "page:28:private_use_characters",
+    "page:29:fragmented_text",
+    "page:29:private_use_characters",
+    "page:2:fragmented_text",
+    "page:2:private_use_characters",
+    "page:30:fragmented_text",
+    "page:30:private_use_characters",
+    "page:31:fragmented_text",
+    "page:31:private_use_characters",
+    "page:32:fragmented_text",
+    "page:32:private_use_characters",
+    "page:33:fragmented_text",
+    "page:33:private_use_characters",
+    "page:34:fragmented_text",
+    "page:34:private_use_characters",
+    "page:35:fragmented_text",
+    "page:35:private_use_characters",
+    "page:36:fragmented_text",
+    "page:36:private_use_characters",
+    "page:37:fragmented_text",
+    "page:37:private_use_characters",
+    "page:38:fragmented_text",
+    "page:38:private_use_characters",
+    "page:39:fragmented_text",
+    "page:39:private_use_characters",
+    "page:3:fragmented_text",
+    "page:3:private_use_characters",
+    "page:40:fragmented_text",
+    "page:40:private_use_characters",
+    "page:41:fragmented_text",
+    "page:41:private_use_characters",
+    "page:42:fragmented_text",
+    "page:42:private_use_characters",
+    "page:43:fragmented_text",
+    "page:43:private_use_characters",
+    "page:44:fragmented_text",
+    "page:44:private_use_characters",
+    "page:45:fragmented_text",
+    "page:45:private_use_characters",
+    "page:46:fragmented_text",
+    "page:46:private_use_characters",
+    "page:47:fragmented_text",
+    "page:47:private_use_characters",
+    "page:48:fragmented_text",
+    "page:48:private_use_characters",
+    "page:49:fragmented_text",
+    "page:49:private_use_characters",
+    "page:4:fragmented_text",
+    "page:4:private_use_characters",
+    "page:50:fragmented_text",
+    "page:50:private_use_characters",
+    "page:51:fragmented_text",
+    "page:51:private_use_characters",
+    "page:52:fragmented_text",
+    "page:52:private_use_characters",
+    "page:53:fragmented_text",
+    "page:53:private_use_characters",
+    "page:54:fragmented_text",
+    "page:54:private_use_characters",
+    "page:55:fragmented_text",
+    "page:55:private_use_characters",
+    "page:56:fragmented_text",
+    "page:56:private_use_characters",
+    "page:57:fragmented_text",
+    "page:57:private_use_characters",
+    "page:58:fragmented_text",
+    "page:58:private_use_characters",
+    "page:59:fragmented_text",
+    "page:59:private_use_characters",
+    "page:5:fragmented_text",
+    "page:5:private_use_characters",
+    "page:60:fragmented_text",
+    "page:60:private_use_characters",
+    "page:61:fragmented_text",
+    "page:61:private_use_characters",
+    "page:62:fragmented_text",
+    "page:62:private_use_characters",
+    "page:63:fragmented_text",
+    "page:63:private_use_characters",
+    "page:64:fragmented_text",
+    "page:64:private_use_characters",
+    "page:65:fragmented_text",
+    "page:65:private_use_characters",
+    "page:66:fragmented_text",
+    "page:66:private_use_characters",
+    "page:67:fragmented_text",
+    "page:67:private_use_characters",
+    "page:68:fragmented_text",
+    "page:68:private_use_characters",
+    "page:69:fragmented_text",
+    "page:69:private_use_characters",
+    "page:6:fragmented_text",
+    "page:6:private_use_characters",
+    "page:70:fragmented_text",
+    "page:70:private_use_characters",
+    "page:71:fragmented_text",
+    "page:71:private_use_characters",
+    "page:72:fragmented_text",
+    "page:72:private_use_characters",
+    "page:73:fragmented_text",
+    "page:73:private_use_characters",
+    "page:74:fragmented_text",
+    "page:74:private_use_characters",
+    "page:75:fragmented_text",
+    "page:75:private_use_characters",
+    "page:76:fragmented_text",
+    "page:76:private_use_characters",
+    "page:77:fragmented_text",
+    "page:77:private_use_characters",
+    "page:78:fragmented_text",
+    "page:78:private_use_characters",
+    "page:79:fragmented_text",
+    "page:79:private_use_characters",
+    "page:7:fragmented_text",
+    "page:7:private_use_characters",
+    "page:80:fragmented_text",
+    "page:80:private_use_characters",
+    "page:81:fragmented_text",
+    "page:81:private_use_characters",
+    "page:82:fragmented_text",
+    "page:82:private_use_characters",
+    "page:83:fragmented_text",
+    "page:83:private_use_characters",
+    "page:84:fragmented_text",
+    "page:84:private_use_characters",
+    "page:85:fragmented_text",
+    "page:85:private_use_characters",
+    "page:86:fragmented_text",
+    "page:86:private_use_characters",
+    "page:87:fragmented_text",
+    "page:87:private_use_characters",
+    "page:88:fragmented_text",
+    "page:88:private_use_characters",
+    "page:89:fragmented_text",
+    "page:89:private_use_characters",
+    "page:8:fragmented_text",
+    "page:8:private_use_characters",
+    "page:90:fragmented_text",
+    "page:90:private_use_characters",
+    "page:91:fragmented_text",
+    "page:91:private_use_characters",
+    "page:92:fragmented_text",
+    "page:92:private_use_characters",
+    "page:93:fragmented_text",
+    "page:93:private_use_characters",
+    "page:94:fragmented_text",
+    "page:94:private_use_characters",
+    "page:95:fragmented_text",
+    "page:95:private_use_characters",
+    "page:96:fragmented_text",
+    "page:96:private_use_characters",
+    "page:97:fragmented_text",
+    "page:97:private_use_characters",
+    "page:98:fragmented_text",
+    "page:98:private_use_characters",
+    "page:99:fragmented_text",
+    "page:99:private_use_characters",
+    "page:9:fragmented_text",
+    "page:9:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 4,
+      "offset": 0,
+      "heading": "摘要",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "abstract",
+      "page": 4,
+      "offset": 8,
+      "heading": "摘要",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 1180,
+      "heading": "lv指标的",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 1940,
+      "heading": "linb与鞍结分岔(saddlenodebif",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 5,
+      "offset": 659,
+      "heading": "关键词:电",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "abstract",
+      "page": 6,
+      "offset": 0,
+      "heading": "abstract",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "abstract",
+      "page": 6,
+      "offset": 18,
+      "heading": "abstract",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 1567,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 3476,
+      "heading": "is)",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 12,
+      "offset": 0,
+      "heading": "第1章绪论",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "introduction",
+      "page": 12,
+      "offset": 12,
+      "heading": "第1章绪论",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "introduction",
+      "page": 14,
+      "offset": 0,
+      "heading": "第1章绪论",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "introduction",
+      "page": 16,
+      "offset": 0,
+      "heading": "第1章绪论",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "introduction",
+      "page": 18,
+      "offset": 0,
+      "heading": "第1章绪论",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "introduction",
+      "page": 20,
+      "offset": 0,
+      "heading": "第1章绪论",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 21,
+      "offset": 1069,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 21,
+      "offset": 1158,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 21,
+      "offset": 1268,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 21,
+      "offset": 1449,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 22,
+      "offset": 0,
+      "heading": "第1章绪论",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 22,
+      "offset": 307,
+      "heading": "lv指",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 22,
+      "offset": 919,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 22,
+      "offset": 944,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 22,
+      "offset": 1052,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 22,
+      "offset": 1148,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 23,
+      "offset": 26,
+      "heading": "第2章",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 24,
+      "offset": 0,
+      "heading": "第2章与同步",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 24,
+      "offset": 896,
+      "heading": "vp",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 26,
+      "offset": 0,
+      "heading": "第2章与同步",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 26,
+      "offset": 949,
+      "heading": "lvi线",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 26,
+      "offset": 1002,
+      "heading": "lvii",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 27,
+      "offset": 1279,
+      "heading": "dbsc",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 27,
+      "offset": 1412,
+      "heading": "dbsca",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 28,
+      "offset": 0,
+      "heading": "第2章与同步",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 28,
+      "offset": 316,
+      "heading": "dbsca",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 28,
+      "offset": 804,
+      "heading": "dbscan聚类",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 29,
+      "offset": 105,
+      "heading": "dbsca",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 29,
+      "offset": 220,
+      "heading": "dbsc",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 30,
+      "offset": 0,
+      "heading": "第2章与同步",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 30,
+      "offset": 1194,
+      "heading": "dd",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 32,
+      "offset": 0,
+      "heading": "第2章与同步",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 34,
+      "offset": 0,
+      "heading": "第2章与同步",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 38,
+      "offset": 0,
+      "heading": "第2章与同步",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 38,
+      "offset": 454,
+      "heading": "dbsca",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 39,
+      "offset": 755,
+      "heading": "ii",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 39,
+      "offset": 885,
+      "heading": "iii仅",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 40,
+      "offset": 0,
+      "heading": "第2章与同步",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 42,
+      "offset": 0,
+      "heading": "第3章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 42,
+      "offset": 56,
+      "heading": "第3章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 44,
+      "offset": 0,
+      "heading": "第3章参数未知情",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 46,
+      "offset": 0,
+      "heading": "第3章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 48,
+      "offset": 0,
+      "heading": "第3章参数未知",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 50,
+      "offset": 0,
+      "heading": "第3章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 52,
+      "offset": 0,
+      "heading": "第3章",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 52,
+      "offset": 1378,
+      "heading": "igg的权",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 53,
+      "offset": 1121,
+      "heading": "it",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 54,
+      "offset": 0,
+      "heading": "第3章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 54,
+      "offset": 134,
+      "heading": "igg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 54,
+      "offset": 1216,
+      "heading": "igg和",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 54,
+      "offset": 1230,
+      "heading": "igg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 54,
+      "offset": 2127,
+      "heading": "igg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 54,
+      "offset": 2149,
+      "heading": "igg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 55,
+      "offset": 1114,
+      "heading": "ig",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 55,
+      "offset": 1229,
+      "heading": "igg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 55,
+      "offset": 1320,
+      "heading": "igg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 55,
+      "offset": 1527,
+      "heading": "igg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 55,
+      "offset": 1639,
+      "heading": "igg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 56,
+      "offset": 0,
+      "heading": "第3章参数未知情",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 56,
+      "offset": 649,
+      "heading": "igg1〇7l8",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 56,
+      "offset": 921,
+      "heading": "igg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 56,
+      "offset": 1012,
+      "heading": "igg10.49",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 56,
+      "offset": 1876,
+      "heading": "igg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 58,
+      "offset": 0,
+      "heading": "第3章参数未知情",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 59,
+      "offset": 548,
+      "heading": "igg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 59,
+      "offset": 568,
+      "heading": "igg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 59,
+      "offset": 1147,
+      "heading": "igg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 60,
+      "offset": 0,
+      "heading": "第4章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 60,
+      "offset": 68,
+      "heading": "第4章",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 60,
+      "offset": 658,
+      "heading": "linb),并分析了",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 60,
+      "offset": 679,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 60,
+      "offset": 796,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 60,
+      "offset": 984,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 60,
+      "offset": 1013,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 60,
+      "offset": 1281,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 60,
+      "offset": 1856,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 60,
+      "offset": 1883,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 61,
+      "offset": 1530,
+      "heading": "lvrt",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 62,
+      "offset": 0,
+      "heading": "第4章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 63,
+      "offset": 700,
+      "heading": "lvrtcontrol",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 64,
+      "offset": 0,
+      "heading": "第4章低电",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "conclusion",
+      "page": 64,
+      "offset": 1313,
+      "heading": "总结",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 65,
+      "offset": 145,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 65,
+      "offset": 294,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 65,
+      "offset": 1350,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 66,
+      "offset": 0,
+      "heading": "第4章低电压穿",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 66,
+      "offset": 762,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 67,
+      "offset": 108,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 67,
+      "offset": 327,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 67,
+      "offset": 715,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 67,
+      "offset": 1296,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 68,
+      "offset": 0,
+      "heading": "第4章低电压穿",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "conclusion",
+      "page": 68,
+      "offset": 68,
+      "heading": "结论",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "conclusion",
+      "page": 68,
+      "offset": 136,
+      "heading": "结论",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 68,
+      "offset": 208,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 68,
+      "offset": 378,
+      "heading": "结论",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 68,
+      "offset": 939,
+      "heading": "linb约",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 69,
+      "offset": 1663,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 70,
+      "offset": 0,
+      "heading": "第4章低电",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 71,
+      "offset": 468,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 71,
+      "offset": 706,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 72,
+      "offset": 0,
+      "heading": "第4章低电",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 72,
+      "offset": 649,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 73,
+      "offset": 1035,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 75,
+      "offset": 578,
+      "heading": "lvrt",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 75,
+      "offset": 760,
+      "heading": "linb意义下的",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 76,
+      "offset": 0,
+      "heading": "第4章低电",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 77,
+      "offset": 54,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 77,
+      "offset": 558,
+      "heading": "lvr7^1",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 77,
+      "offset": 1434,
+      "heading": "linb的临",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 78,
+      "offset": 0,
+      "heading": "第4章低电",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 78,
+      "offset": 2210,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 78,
+      "offset": 2290,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 78,
+      "offset": 2318,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 79,
+      "offset": 610,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 80,
+      "offset": 0,
+      "heading": "第4章低电",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 80,
+      "offset": 214,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 80,
+      "offset": 284,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 81,
+      "offset": 124,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 81,
+      "offset": 296,
+      "heading": "lvrt",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 81,
+      "offset": 564,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 82,
+      "offset": 0,
+      "heading": "第4章低电",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 82,
+      "offset": 512,
+      "heading": "linb",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 82,
+      "offset": 833,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 82,
+      "offset": 909,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 83,
+      "offset": 26,
+      "heading": "第5章适用",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 84,
+      "offset": 0,
+      "heading": "第5章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 86,
+      "offset": 0,
+      "heading": "第5章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 88,
+      "offset": 0,
+      "heading": "第5章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "conclusion",
+      "page": 89,
+      "offset": 264,
+      "heading": "结论",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 90,
+      "offset": 0,
+      "heading": "第5章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 90,
+      "offset": 1154,
+      "heading": "ii",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 92,
+      "offset": 0,
+      "heading": "第5章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 92,
+      "offset": 1478,
+      "heading": "ih",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 94,
+      "offset": 0,
+      "heading": "第5章",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 95,
+      "offset": 961,
+      "heading": "it'",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 96,
+      "offset": 0,
+      "heading": "第5章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 98,
+      "offset": 0,
+      "heading": "第5章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 100,
+      "offset": 0,
+      "heading": "第5章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 100,
+      "offset": 1144,
+      "heading": "cscr",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 102,
+      "offset": 58,
+      "heading": "第6章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 103,
+      "offset": 438,
+      "heading": "lv",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 103,
+      "offset": 499,
+      "heading": "lvrt",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 103,
+      "offset": 557,
+      "heading": "li",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 104,
+      "offset": 0,
+      "heading": "第6章基于p",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 105,
+      "offset": 577,
+      "heading": "i.i",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 106,
+      "offset": 0,
+      "heading": "第6章基于p",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 108,
+      "offset": 0,
+      "heading": "第6章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 110,
+      "offset": 0,
+      "heading": "第6章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 110,
+      "offset": 856,
+      "heading": "第5章中",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 112,
+      "offset": 0,
+      "heading": "第6章",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "conclusion",
+      "page": 113,
+      "offset": 26,
+      "heading": "第7章结论与展望",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "conclusion",
+      "page": 113,
+      "offset": 58,
+      "heading": "总结",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 113,
+      "offset": 1887,
+      "heading": "linb约束的",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 114,
+      "offset": 0,
+      "heading": "第7章结论与展望",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 114,
+      "offset": 836,
+      "heading": "dbsca",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 115,
+      "offset": 26,
+      "heading": "参考文献",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "references",
+      "page": 116,
+      "offset": 0,
+      "heading": "参考文献",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 116,
+      "offset": 1282,
+      "heading": "iso,2011",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 116,
+      "offset": 1511,
+      "heading": "ieeetra",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 116,
+      "offset": 1923,
+      "heading": "ieeetra",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 116,
+      "offset": 2310,
+      "heading": "ieee",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 117,
+      "offset": 2325,
+      "heading": "ieeetra",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 118,
+      "offset": 0,
+      "heading": "参考文献",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 118,
+      "offset": 319,
+      "heading": "ieeetra",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 120,
+      "offset": 0,
+      "heading": "参考文献",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 120,
+      "offset": 1901,
+      "heading": "ieeetransactio",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 121,
+      "offset": 1414,
+      "heading": "ieee,2019:",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 121,
+      "offset": 2148,
+      "heading": "ieee",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 122,
+      "offset": 0,
+      "heading": "参考文献",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 122,
+      "offset": 941,
+      "heading": "ieee",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 122,
+      "offset": 1319,
+      "heading": "ieee",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 123,
+      "offset": 1845,
+      "heading": "ieeetransactio",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 124,
+      "offset": 0,
+      "heading": "参考文献",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 124,
+      "offset": 79,
+      "heading": "lcc",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 124,
+      "offset": 91,
+      "heading": "dc交",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 124,
+      "offset": 358,
+      "heading": "lcc",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 124,
+      "offset": 370,
+      "heading": "dc",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 124,
+      "offset": 474,
+      "heading": "ieee",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 124,
+      "offset": 1290,
+      "heading": "iet",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [
+    8,
+    9,
+    10,
+    11
+  ],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 263
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 339
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 982
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2251
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 771
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 5312
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 5016
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1160
+    },
+    {
+      "page": 9,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1675
+    },
+    {
+      "page": 10,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1519
+    },
+    {
+      "page": 11,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 101
+    },
+    {
+      "page": 12,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2214
+    },
+    {
+      "page": 13,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1858
+    },
+    {
+      "page": 14,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2209
+    },
+    {
+      "page": 15,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2201
+    },
+    {
+      "page": 16,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2149
+    },
+    {
+      "page": 17,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2256
+    },
+    {
+      "page": 18,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2172
+    },
+    {
+      "page": 19,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2154
+    },
+    {
+      "page": 20,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1632
+    },
+    {
+      "page": 21,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2325
+    },
+    {
+      "page": 22,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1926
+    },
+    {
+      "page": 23,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1369
+    },
+    {
+      "page": 24,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1748
+    },
+    {
+      "page": 25,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1820
+    },
+    {
+      "page": 26,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1483
+    },
+    {
+      "page": 27,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1532
+    },
+    {
+      "page": 28,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1431
+    },
+    {
+      "page": 29,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1462
+    },
+    {
+      "page": 30,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1282
+    },
+    {
+      "page": 31,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1417
+    },
+    {
+      "page": 32,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1672
+    },
+    {
+      "page": 33,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1150
+    },
+    {
+      "page": 34,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1680
+    },
+    {
+      "page": 35,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1931
+    },
+    {
+      "page": 36,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1755
+    },
+    {
+      "page": 37,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2126
+    },
+    {
+      "page": 38,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1481
+    },
+    {
+      "page": 39,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1557
+    },
+    {
+      "page": 40,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1738
+    },
+    {
+      "page": 41,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 675
+    },
+    {
+      "page": 42,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1396
+    },
+    {
+      "page": 43,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1580
+    },
+    {
+      "page": 44,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1839
+    },
+    {
+      "page": 45,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1832
+    },
+    {
+      "page": 46,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1672
+    },
+    {
+      "page": 47,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1476
+    },
+    {
+      "page": 48,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1533
+    },
+    {
+      "page": 49,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1958
+    },
+    {
+      "page": 50,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1814
+    },
+    {
+      "page": 51,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1703
+    },
+    {
+      "page": 52,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1930
+    },
+    {
+      "page": 53,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1712
+    },
+    {
+      "page": 54,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2187
+    },
+    {
+      "page": 55,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2073
+    },
+    {
+      "page": 56,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2383
+    },
+    {
+      "page": 57,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1964
+    },
+    {
+      "page": 58,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1868
+    },
+    {
+      "page": 59,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1347
+    },
+    {
+      "page": 60,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2071
+    },
+    {
+      "page": 61,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1544
+    },
+    {
+      "page": 62,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1688
+    },
+    {
+      "page": 63,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1294
+    },
+    {
+      "page": 64,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1688
+    },
+    {
+      "page": 65,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1609
+    },
+    {
+      "page": 66,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1876
+    },
+    {
+      "page": 67,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2311
+    },
+    {
+      "page": 68,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1581
+    },
+    {
+      "page": 69,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1903
+    },
+    {
+      "page": 70,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1656
+    },
+    {
+      "page": 71,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1795
+    },
+    {
+      "page": 72,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1882
+    },
+    {
+      "page": 73,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1226
+    },
+    {
+      "page": 74,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1667
+    },
+    {
+      "page": 75,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1689
+    },
+    {
+      "page": 76,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2255
+    },
+    {
+      "page": 77,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1733
+    },
+    {
+      "page": 78,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2447
+    },
+    {
+      "page": 79,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1927
+    },
+    {
+      "page": 80,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1654
+    },
+    {
+      "page": 81,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1719
+    },
+    {
+      "page": 82,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1009
+    },
+    {
+      "page": 83,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1770
+    },
+    {
+      "page": 84,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1849
+    },
+    {
+      "page": 85,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1784
+    },
+    {
+      "page": 86,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1580
+    },
+    {
+      "page": 87,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1752
+    },
+    {
+      "page": 88,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1647
+    },
+    {
+      "page": 89,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1299
+    },
+    {
+      "page": 90,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1769
+    },
+    {
+      "page": 91,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1843
+    },
+    {
+      "page": 92,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1518
+    },
+    {
+      "page": 93,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1584
+    },
+    {
+      "page": 94,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 972
+    },
+    {
+      "page": 95,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1633
+    },
+    {
+      "page": 96,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2143
+    },
+    {
+      "page": 97,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1854
+    },
+    {
+      "page": 98,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2078
+    },
+    {
+      "page": 99,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1315
+    },
+    {
+      "page": 100,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1931
+    },
+    {
+      "page": 101,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 890
+    },
+    {
+      "page": 102,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1200
+    },
+    {
+      "page": 103,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1582
+    },
+    {
+      "page": 104,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1426
+    },
+    {
+      "page": 105,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1170
+    },
+    {
+      "page": 106,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1640
+    },
+    {
+      "page": 107,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1126
+    },
+    {
+      "page": 108,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1323
+    },
+    {
+      "page": 109,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1272
+    },
+    {
+      "page": 110,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1568
+    },
+    {
+      "page": 111,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1350
+    },
+    {
+      "page": 112,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 735
+    },
+    {
+      "page": 113,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2062
+    },
+    {
+      "page": 114,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2012
+    },
+    {
+      "page": 115,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2918
+    },
+    {
+      "page": 116,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 3822
+    },
+    {
+      "page": 117,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 3692
+    },
+    {
+      "page": 118,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 3344
+    },
+    {
+      "page": 119,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 3084
+    },
+    {
+      "page": 120,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 3103
+    },
+    {
+      "page": 121,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2832
+    },
+    {
+      "page": 122,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 3660
+    },
+    {
+      "page": 123,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 3106
+    },
+    {
+      "page": 124,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1929
+    }
+  ],
+  "limitation_hits": [],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/21_基于PMU数据的新能源场站静态电压稳定在线评估_孔贺_pages.json",
+  "abstract": "摘\n\n要\n摘\n\n要\n集 中\n送\n出 的\n新\n能\n源\n场\n站\n电\n压\n支\n撑\n能 力 弱 ，\n且\n有 功\n送\n电\n距\n离 大 多 较\n长\n， 随\n着\n其 有 功 出 力 的 增 加 ，\n新\n能\n源\n控 制 方 式 的 日\n益\n复 杂 ， 系 统\n可\n能\n会\n出\n现\n新\n型\n的 电\n压\n稳 定 问\n题\n。 另\n一\n方 面\n， 由\n于\n诸 多 因 素 ， 用\n于\n评\n估\n电\n压\n稳\n定 的 同 步 相\n量\n测\n量\n单\n元\n（\nｐ ｈ ａ ｓ ｏ ｒ \nｍ\nｅ ａ ｓ\nｕ\nｒ ｅ\nｍ\nｅ ｎ ｔ \nｕ\nｎ\nｉ ｔ\n，  Ｐ\nＭ\nＵ ） 数\n据\n存\n在\n质\n量\n问\n题\n，\n严\n重\n影\n响 了\n新\n能\n源\n场\n站\n电\n压\n稳 定\n性\n的\n评\n估 。 有 鉴\n于\n此\n， 论\n文 研\n宄 了Ｐ\nＭ\nＵ 异 常 数 据 的 修\n正\n、\n考\n虑\n新\n能\n源\n低 穿\n控\n制 的 电\n压\n失\n稳\n机\n理\n分\n析 、 以\n及\n电\n压 稳\n定\n裕\n度\n在\n线\n评\n估\n指\n标\n的\n建\n立\n，\n可\n提 升 Ｐ\nＭ\nＵ 数 据 质\n量\n，\n保\n障 新 能\n源\n场 站 的 安\n全\n运\n行 ，\n论\n文 的\n主\n要\n工\n作\n及\n创\n新\n点\n如 下 ：\n针\n对\n实 测 ； Ｐ\nＭ\nＵ\n数 据 中\n存\n在 的 幅\n值\n异 常\n数 据\n问\n题\n， 提 出 了\n一\n种\n与 同 步\n误 差\n无\n关 的 Ｐ\nＭ\nＵ 幅\n值\n数 据 恢 复 方\n法\n。 具\n体\n地\n， 首\n先\n，\n展\n示 了 实 测 Ｐ\nＭ\nＵ\n数\n据\n中\n存\n在\n的\n长\n期 的 、\n连\n续 的 幅 值\n数\n据\n丢 失\n现\n象 ， 并 分 析 了 数 据\n丢\n失\n对\n静\n态\n电\n压\n稳\n定 指 标\n一\n阻\n抗\n模\n指 标 的\n影\n响 ； 其 次 ，\n基\n于\n密 度 空 间 聚 类 算\n法\n对\n历\n史\n数\n据\n进\n行 筛\n选\n■\n，\n进\n一\n步\n地\n，\n建\n立\n数 据\n恢\n复\n模\n型 ，\n通\n过\n历 史 数 据\n计\n算 恢 复 系 数 ，\n对 丢\n失 的 幅\n值\n数\n据\n进\n行 恢\n复\n，\n最\n后\n，\n通 过\n仿 真 数\n据\n和 实 测 数\n据\n验\n证\n了 该\n方\n法\n的 有 效\n性\n和 实 用 性 。\n针\n对\n实\n测\nＰ\nＭ\nＵ 数\n据\n中 存 在 的\n长\n期 的\n、\n连\n续 的\n、\n时\n变\n的 相 角 差\n偏\n差 ，\n提\n出\n了\n一\n种 线\n路\n参\n数 未 知 情\n况\n下\nＰ\nＭ\nＵ 相 角 差 的 时 变 偏\n差\n校\n正\n方\n法\n。\n具\n体\n地\n， 首 先 ，\n展\n示\n了\n在\n实 际 电 网 中 发\n现\n的 相 角 差 时 变 偏\n差\n， 并\n分\n析 了 相 角 差 偏 差\n对\n静\n态\n电\n压\n稳\n定 指 标\n一\nＬ Ｖ 指 标 的\n影\n响 ； 其 次 ， 以 多 个 时 间 断\n面\n下 的 电\n压\n相 角 差 为\n未\n知\n变\n量\n，\n建\n立\n了 用\n于\n估 计 相 角 差 的\n一\n般\n模\n型\n？\n，\n进\n一\n步\n地\n，\n基\n于\n交\n流\n潮\n流\n和\n泰\n勒\n展\n开\n，\n将\n多 个 时 间 断\n面\n、\n多\n个\n未 知 变\n量\n的 相 角\n差\n估\n计\n转\n化\n为 以 少\n量\n线\n路\n参\n数\n为\n变\n量\n的\n估\n计 模 型 ， 实\n现\n了 电\n压\n相 角\n差\n时 变 偏 差 的 校\n正\n； 最 后 ，\n基\n于\n仿 真\n和\n实 测 算 例\n验\n证\n了 所 提\n方\n法\n的 有 效 性\n。\n针\n对\n实 际\n风\n电\n场\n中 出\n现\n的 低 电 压 穿\n越\n控 制\n方\n式 导\n致\n的 电 压\n振\n荡 失\n稳\n现\n象\n，\n分 析 了 其 失\n稳\n的\n机\n理\n， 并 建\n立\n了\n裕\n度 指 标 。 首\n先\n，\n基\n于\n实\n际\n案 例 ，\n对\n陆\n上\n风\n电\n场 在 无 故 障\n、\n高 出 力 下\n、\n低 穿 控 制\n方\n式 导 致 的 电\n压\n振\n荡\n现\n象\n进\n行\n了\n机\n理\n分\n析\n，\n说 明\n该\n振\n荡\n现\n象\n对\n应 于\n高 出 力 下 低 电\n压\n穿\n越 控\n制\n诱\n导 的 非\n光\n滑\n分\n岔 （\nＨ\nｉ\nｇ ｈ\nＯ ｕ ｔ\nｐ ｕ ｔ  Ｅ\nｘ\nｃ ｉ ｔ ｅ ｄ  Ｌ ｏ\nｗ\n\nｖ\nｏ ｌ ｔ ａ ｇ ｅ  ｒ ｉ ｄ ｅ  ｔ ｈ ｒ ｏ\nｕ\nｇ ｈ  ｃ ｏ ｎ ｔ ｒ ｏ ｌ  Ｉ ｎ ｄ\nｕ\nｃ ｅ ｄ\nＮ\nｏ\nｎ\n－\nｓ\nｍ\nｏ ｏ ｔ ｈ Ｂ ｉ ｆｕ ｒ ｃ ａ ｔ ｉ ｏ ｎ ，\nＨ Ｌ Ｉ\nＮ\nＢ ） ； 其 次 ， 推 导 了\nＨ\nＬ Ｉ Ｎ Ｂ  与 鞍 结 分 岔 （ Ｓ ａ ｄ ｄ ｌ ｅ ｎ ｏ ｄ ｅ  ｂ ｉ ｆ\nｕ\nｒ ｃ ａ ｔ ｉ ｏ ｎ ，  Ｓ\nＮ\nＢ ） 发\n生\n的\n边\n界 条 件 ， 结 果 表 明 ， 在 典\n型\n低 穿\n控\n制\n方\n式 下 ， 陆\n上 风\n电\n场\n更\n容 易\n发\n生\nＨ Ｌ Ｉ\nＮ\nＢ\n而\n非 Ｓ Ｎ Ｂ ；\n进\n一\n步\n地\n，\n基\n于\n二\n阶 锥 算\n法\n，\n给\n出 了 考 虑 Ｈ Ｌ Ｉ\nＮ\nＢ\n约\n束 的\n风\n电 场 的 最\n 大\n输\n出 功 率\n 计\n算\n 方\n法\n； 最 后 ，\n通\n过\n仿\n 真\n算 例\n 验\n证\n了 所\n 提\n方\n法\n的 有\n 效 性\n。\nＩ\n\n华\n北\n电 力 大 学\n博\n士\n学\n位\n论\n文\n针\n对\n鞍\n结\n分\n岔 ，\n将\n传 统 的\n阻\n抗\n模 指\n标\n的 应 用\n对\n象 由 负 荷\n推\n广\n至\n新\n能\n源\n场\n站\n，\n扩\n大 了\n阻\n抗\n模 指\n标\n的\n适\n应\n性\n。\n具\n体\n地\n， 首\n先\n，\n分\n析 了 新 能\n源\n单\n馈\n入\n系 统 的 临\n界\n静 态 电\n压\n稳\n定\n条 件 ， 并 据\n此\n给\n出 了 用\n于\n评\n估\n新\n能\n源\n场\n站\n静\n态\n电\n压\n稳\n定 性 的\n阻\n抗\n模\n裕\n度\n指\n标\n及\n稳 定\n判\n据\n； 其 次 ， 分 析 了 指\n标\n在\n不\n同 场 景\n下\n的\n适\n应 性 ，\n包\n括\n含\n无\n功\n补\n偿\n的\n新\n能\n源\n场\n站\n、\n新\n能 源\n集\n群\n馈\n入\n系\n统\n、\n以\n及\n多\n机\n多\n馈\n入\n系 统 。 最 后 ，\n通\n过\n仿\n真 算\n例\n验\n证\n了\n所\n提 方\n法\n的\n有\n效 性 。\n提\n出 了\n基\n于 Ｐ\nＭ\nＵ\n数\n据\n的\n新\n能\n源\n场 站 静 态 电\n压\n稳 定\n在\n线\n评\n估 方 案 ， 功 能\n包\n括\nＰ\nＭ\nＵ\n幅\n值\n数\n据\n修\n正\n、\nＰ\nＭ\nＵ\n相 角 数 据 修\n正\n、\n计\n算\n针\n对\nＨＬ Ｉ\nＮ\nＢ 的 功 率\n裕\n度 指\n标\n，\n计\n算\n针\n对\nＳ\nＮ\nＢ 的 阻\n抗\n模\n裕\n度 指 标 ， 仿 真 算 例\n表\n明 ，\n所\n提 方\n案\n可\n有 效 的\n对\n系\n统\n进\n行\n监\n控\n和\n评\n估\n，\n具\n有 良\n好\n的 实 用\n性\n。\n",
+  "introduction": "第 １ 章 绪\n论\n第 １\n章\n绪\n论\n１ ． １\n课\n题\n背\n景\n及\n意\n义\n随 着\n“\n双\n碳\n”\n目 标 的 提 出 ，\n我\n国\n大\n力 发\n展\n风\n电\n、\n光\n伏 等\n新\n能\n源\n［\n１ ］\n－\n１ ２ ］\n，\n截\n止\n２ ０ ２ ３ 年 底 ，\n全\n国\n太\n阳 能 发 电\n装\n机 容\n量\n约 ６ ． １\n亿\n千\n瓦\n， 同 比 增\n长\n５ ５ ． ２\n％\n；\n风\n电\n装\n机\n容\n量\n约 ４\n．\n４\n亿\n千\n瓦\n， 同 比 增\n长\n２ ０ ． ７\n％\n［\n３ ］\n。 随\n着\n新 能\n源\n容\n量\n的 増 加 ， 大\n规\n模\n的 电\n力 电\n子\n设 备\n接\n入\n电 网 ， 大\n量\n复 杂 的\n控\n制\n方\n式 导\n致\n电 力 系\n统\n的 动\n态\n行 为\n更 加\n复\n杂\n［\n４\nＨ\n５ ］\n。\n此\n外\n，\n集\n中 式 新 能\n源\n大\n多\n位\n于 电 网\n末\n端\n， 其 有\n功\n送\n电\n距\n离\n长\n， 因\n此\n易 出\n现\n电\n压\n失\n稳\n［ ６ ］\n。\n大 型 电 力 系 统 的 电\n压\n失 稳\n常 常\n造\n成\n髙\n成\n本\n的 停 电\n事\n故 ， 例 如 １ ９ ８ ３\n年\n１ ２ 月\n２ ７ 日 ，\n在\n瑞\n典\n南\n部 的 ｈ ａ\nｍ\nｒ ａ\n变\n电\n站\n， 由\n于\n错\n误\n的\n切\n除 了\n母\n线 ，\n导\n致\n部 分 线\n路\n过\n负\n荷\n而\n出\n现\n电\n压\n失\n稳\n， 最\n终\n导\n致\n负\n荷\n停 电 １ １ ４ ０ ０\nＭ\nＷ\n， 占\n该\n电 力 系 统 负\n荷\n的 ６ ７\n％\n，\n影\n响 时 间 约 ７ ｈ\nｍ\n； 在 １ ９ ８ ７ 年 ７ 月 ２ ３ 日 日 本 东 京 电 力\n系\n统 的 停 电\n事\n故\n中 ，\n午\n后\n负 荷 以 每\n分\n钟 ４ ０ ０\nＭ\nＷ\n的\n速\n率\n极\n速\n增\n长\n， 负\n荷\n上\n涨\n到 了 历 史 新\n记\n录\n３ ９ ３ ０ ０\nＭ\nＷ\n，\n在\n此\n过\n程\n中 ，\n尽\n管 投\n入\n了\n所\n有\n可\n用 的\n并\n联\n电\n容\n器\n组\n和\n增\n发 了\n可\n能 的\n旋\n转\n备\n用\n无\n功 ， 电\n压\n仍\n不 断 下\n跌\n， 最\n终\n导\n致\n三\n处\n的 变 电\n站\n保\n护 动 作 ， 最\n终\n负 荷\n损\n失\n达\n８ １ ６ ８\nＭ\nＷ\n， 有 ２ ８ ０\n万\n用 户\n受\n事 故\n影\n响 ；\n此\n外 ，\n类\n似\n的\n事 故\n还\n有 １ ９ ８ ７\n年\n法\n国\n西\n部\n电 力 系 统 电\n压\n稳\n定\n性\n事 故\n、\n１ ９ ９ ６ 年 美 国\n西\n部 电 力 系 统 大\n停\n电 事\n故\n［ ８ ］\n、\n１ ９ ８ ４\n年\n美\n国 东\n北\n部 大 停 电 事 故 等 ｔ ９ ］\n。\n此\n外 ， 随 着 新 能\n源\n控 制 方 式 的 日\n益\n复 杂 ， 系 统\n也\n可\n能\n会\n出\n现\n新\n的 电\n压\n失\n稳\n类\n型\n， 例 如 ， 在\n冀\n北\n电 网 发\n生\n的\n风\n电\n汇\n集\n系 统 ，\n在\n风\n电\n场\n低\n电\n压\n穿\n越\n控\n制\n方\n式\n的\n影\n响 下 ， 出\n现\n了 电\n压\n非\n周\n期\n反\n复\n波 动 的\n现\n象 ，\n数 次\n造\n成\n风\n电\n机\n组\n大\n面\n积\n脱\n网 ，\n最 高 损 失\n风\n电 出 力 ４ ７ ６\nＭ\nＷ\n［ １ Ｇ ］\n。\n由\n上\n述\n实 例\n可\n知 ，\n对\n电 力 系 统 的 电\n压\n稳\n定\n裕\n度\n进\n行\n计\n算\n和\n监\n控\n十 分\n必\n要\n。\n电\n压\n稳\n定\n裕\n度 的\n计\n算 中 ， 需\n要\n以 快\n速\n、\n大\n量\n、\n准 确 的 实 时 数\n据\n作 为\n基\n础\n。\n基\n于\n同 步 相\n量\n测\n量\n单\n元\n（ ｐ ｈ ａ ｓ ｏｒ \nｍ\nｅ ａ ｓ\nｕ\nｒ ｅ\nｍ\nｅ\nｎ\nｔ \nｕ\nｎ\nｉ ｔ ，\nＰ\nＭ\nＵ\n） 构 成 的 广\n域\n测\n量\n系\n统\n（\nｗ\nｉ ｄ ｅ  ａｒ ｅ ａ \nｍ\nｅ ａ ｓ\nｕ\nｒ ｅ\nｍ\nｅ\nｎ\nｔ  ｓ ｙ ｓ ｔ ｅ\nｍ\n，\nＷ\nＡ\nＭ\nＳ ） 因\n其 数\n据 的 同 步\n性\n与\n测\n量\n的\n快\n速\n性\n被\n广\n泛\n部 署 ，\n现\n己\n成\n为 电 力 系 统 电\n压\n稳 定\n监\n测 的\n基\n础\n工\n具\n［\n１ １\n］\n。\n然\n而\n， 值 得\n关\n注\n的 是 ， 由\n于\n互\n感\n器\n误\n差 ［\n１ ２\nＨ\n１ ３ ］\n、\n同 步 性 问\n题\n［\n１ ４\nＨ\n１ ５ ］\n、\n栅\n栏\n效\n应 、\n泄\n漏 误 差 ［\n１ ６ ］\n、 甚\n至\nＰ\nＭ\nＵ\n设 备\n老\n化\n等 因 素 ， Ｐ\nＭ\nＵ 的\n量\n测 数\n据\n中\n常\n常\n存 在\n误 差 、 异 常 数 据\n、\n甚\n至\n是\n数\n据\n丢 失\n。\n美\n国 加 州 电 力\n调\n度 中\n心\n（ Ｃ ａ ｌ ｉ ｆｏ\nｍ\nｉ ａ ｌ Ｓ Ｏ ） 的\n一\n份 报 告 指 出 ， 在 北\n美\n同 步 相\n量\n数 据 中 ， 异 常 比 例 为 １ ０\n％\n到 １ ７\n％\n［\n１ ８ ］\n，\n而\n在\n我\n国 Ｐ\nＭ\nＵ\n的 异 常 数 据 比 例\n 甚\n至\n达\n到 了 ２ ０\n％\n到 ３ ０\n％\n［\n１ ９ １\n，\n这\n些\n异 常 数\n 据 将\n会\n严\n重\n影\n响 到 Ｐ\nＭ\nＵ\n］\n\n华\n北\n电 力\n大\n学\n博\n士\n学\n位\n论\n文\n的\n各\n类\n应 用 例 如 ，\n在 我\n国 东 北\n地\n区 ， 在 频 率 偏 离 ５ ０ １１ ２ 时 ， 某\n直\n流\n换\n流\n站\n的 Ｐ\nＭ\nＵ\n量\n测 数\n据\n中 出\n现\n了\n振\n荡 ， 后\n经\n查\n实 ， 该\n振\n荡 在 实 际 电 力 系\n统\n中 并\n不\n存\n在 ，\n是\n由\n于\nＰ\nＭ\nＵ\n相\n量\n算\n法\n缺\n陷\n而\n导\n致\n的 伪\n振\n荡 。 因\n此\n，\n在\n对\n系 统\n进\n行 电\n压\n稳\n定\n裕\n度\n评\n估 时 ，\n必\n须\n考 虑 Ｐ\nＭ\nＵ 数 据 中\n存\n在 的 异 常 数\n据\n［\n２２ ］\n。\n总\n体\n上\n， 需 要\n对\nＰ\nＭ\nＵ 数\n据\n进\n行\n修\n正\n、\n研\n宄 静\n态\n电\n压\n失\n稳\n机\n理\n、\n建\n立\n静\n态\n电\n压\n稳\n定\n裕\n度 指 标\n。\n具\n体\n地\n， 本\n文\n首 先\n研\n宄 了 考 虑 同 步\n误\n差 的 Ｐ\nＭ\nＵ 幅 值 数 据\n恢\n复\n方\n法\n； 其 次 ，\n研\n宄 了\n参\n数 未 知 情\n况\n下 的 Ｐ\nＭ\nＵ\n相 角 差 时 变 偏 差 校\n正\n方\n法\n；\n再\n次 ，\n针\n对\n风\n电\n场\n中\n低\n电\n压\n穿\n越\n控 制\n诱\n导 的 电\n压\n振\n荡\n现\n象 ，\n进\n行\n了 机\n理\n分\n析 和\n判\n据 建\n立\n；\n再\n次 ，\n分\n析\n了\n阻\n抗\n模\n指\n标\n在 新 能\n源\n多\n馈\n入\n系 统 的\n适\n应\n性 ； 最 后 ，\n提\n出 了\n基\n于\nＰ\nＭ\nＵ\n数\n据\n的\n新\n能\n源\n场 站\n静\n态\n电\n压\n稳\n定 在 线\n预\n警\n方\n案 ，\n论\n文\n研\n究 有 助\n于\n提\n升\nＰ\nＭ\nＵ\n数\n据 质\n量\n， 有 效\n评\n估 系 统 的 静 态 电\n压\n稳\n定\n性 ，\n支 撑\n电 力 系 统 的 安\n全\n稳\n定\n运\n行\n。\n１ ． ２ 国 内\n外\n研\n究\n现\n状\n１\n．\n２ ． １ 同\n步\n相\n量\n异\n常\n数 据\n的 修\n正\nＰ\nＭ\nＵ\n异 常\n数\n据\n的\n修\n正\n对\n提\n升\nＰ\nＭ\nＵ\n数\n据\n质\n量\n十 分\n必\n要 ，\n根\n据\n修\n正\n过\n程\n中 使\n用 的\n数\n据\n范\n围 ，\n可\n将\nＰ\nＭ\nＵ\n的\n数\n据\n修\n正\n方\n法\n分 为 １ ）\n本\n地\n层\n级\n的 数\n据\n恢\n复\n； ２ ）\n区\n域\n层\n级 的\n数 据\n恢\n复 ； ３ ） 系 统\n层\n级 的 数\n据\n恢\n复\n。\n１\n．\n２\n．\n１ ． １ 本\n地\n层\n级\n本\n地\n层\n级 的\n数\n据 修\n正\n大 多\n指\n针 对\n单\n个\nＰ\nＭ\nＵ\n的\n数\n据\n进\n行\n恢\n复 ，\n可\n包\n括\n（\n１\n）\n插\n值\n法\n，\n（ ２ ）\n基\n于\n校\n准\n器\n的\n校\n准\n算\n法\n，\n（ ３ ）\nＰ\nＭ\nＵ 算\n法\n的 改\n进\n。\n（ １\n）\n插\n值\n法\n插\n值\n法\n基\n于\nＰ\nＭ\nＵ\n自 身 的\n数\n据\n，\n通\n过\n三\n次\n样\n条\n插\n值\n、\n拉 格 朗 日 插\n值\n法\n等\n对\nＰ\nＭ\nＵ\n的 异 常\n数\n据\n进\n行\n修\n正\n， 具\n体\n地\n， 文\n献\n［ ２ ３ ］\n提\n出 了\n一\n种\n基\n于 模 式\n识\n别\n的 异 常\n数\n据\n检 测\n方\n法\n， 并\n基\n于\n平\n均\n插\n值\n法\n对\n异 常\n数\n据\n进\n行\n恢\n复 ； 文\n献\n［\n２ ４ ］\n提\n出 了\n一\n种\n基\n于\n改\n进\n三\n次 样 条\n插\n值\n法\n和\n优 先\n级\n分\n配\n策\n略\n的 数\n据\n恢\n复\n方\n法 ，\n对\n不 同\n类\n型 的 丢\n失\n数\n据\n进\n行\n恢\n复 ；\n文\n献 ［\n２ ５ ］ 分 析 了 多 种 数 据 丢 失\n类\n型 ，\n并 基\n于\n拉\n格\n朗 日 插 值 法\n恢\n复\n数\n据 ，\n适\n用\n于\n少\n量\n数\n据\n丢 失 的 情\n况\n；\n总\n的\n来\n说 ，\n插\n值\n法\n大 多\n基\n于 单\n个\nＰ\nＭ\nＵ 的 已 有 数\n据\n， 对\n丢\n失 ／ 异 常 的 数 据\n进\n行\n恢\n复\n，\n这\n类\n方\n法\n仅\n能\n恢\n复\n少\n量\n的 Ｐ\nＭ\nＵ\n数 据 ，\n对\n大\n量\n丢\n失 的 Ｐ\nＭ\nＵ\n数\n据\n的 恢 复\n精 度\n较\n差 。\n（\n２ ）\n基\n于\n校\n准\n器\n的\n校\n准\n方\n法\n在\n实\n 验\n室\n和\n 现\n场\n的 Ｐ\nＭ\nＵ 中 ，\n可\n放\n置\n高\n精 度 的 Ｐ\nＭ\nＵ\n校\n准\n 器\n， 将 测\n 试\n信 号 同\n２\n\n第 １ 章 绪\n论\n时\n输\n入\n待 校\n准\n的 Ｐ\nＭ\nＵ\n和\nＰ\nＭ\nＵ\n校\n准\n器\n， 并\n基\n于\n校\n准\n器\n的 信 号\n输\n出\n结\n果\n对\nＰ\nＭ\nＵ\n进\n行 测\n试\n和\n校\n准\n。\n现\n有\n工\n作 大 多 围\n绕\n在\n校\n准\n器\n算\n法\n的\n开\n发\n上\n，\n例\n如\n文\n献\n［\n２ ６ ］\n构\n建 拟\n合 残\n差\n二\n次\n方\n和\n最 小 的 最 优\n化\n模\n型 ，\n提\n出 相\n量\n非 线\n性\n迭\n代\n求\n解\n方\n法\n，\n解 决\n了 相\n量\n非\n线 性 模 型 的 非 凸\n性\n所 导\n致\n的 多 解 问\n题\n；\n文\n献\n［\n２ ７ ］ 在\n一\n般\n信 号\n拟\n合\n模\n型\n的\n基 础\n上\n， 提 出 了\n一\n种 基\n于\n非 线 性 拟\n合\n的 相\n量\n和 频 率\n迭\n代 估\n计\n算\n法\n， 并\n基\n于\n最\n小\n二\n乘\n滤\n波\n器\n提\n升 动 态 条 件 下 的 频 率 变\n化\n率 的\n测 量\n精 度 ；\n尽\n管\n基\n于\nＰ\nＭ\nＵ\n校\n准\n器\n的 校 准 方\n法\n能 够\n对\nＰ\nＭ\nＵ\n进\n行\n高 精\n度\n的\n校\n正\n，\n但\n在\n其\n实 际\n应\n用 中 ， 需\n要\n额 外 的\n校\n准 设 备 ，\n针 对\n现\n场\n数 据 的\n校\n正\n可\n能\n较\n为 不 便\n。\n（\n３ ）\nＰ\nＭ\nＵ\n算\n法\n的 改\n进\nＰ\nＭ\nＵ 算\n法\n的 改\n进\n主\n要 围 绕 着 降\n低\n栅 栏\n效 应\n和\n泄\n露\n误\n差\n进\n行\nｔ\n２ ８ ］\nｄ\n， 例 如\n文\n献\n［\n２ ８ ］ 提 出 了\n一\n种\n基\n于\nＣ ｌ ａ ｒ ｋ ｅ 变 换 的\nＤ\nＦ Ｔ 同 步 相\n量\n估\n计\n算\n法\n来\n消 除\n频\n谱\n泄\n漏\n；\n文\n献\n［\n２ ９ ］ 针 对 电 网 频 率 波 动 和 不 同 Ｐ\nＭ\nＵ\n厂\n家 Ｄ Ｆ Ｔ 中\n所\n使 用\n不\n同 电 网\n频\n率\n跟\n踪\n算\n法\n的\n影\n响 ，\n给\n出 了 剔 除\n计\n算 电\n压\n相\n量\n间 相 角\n差\n误\n差\n因 素 的 方\n法\n。\n对\nＰ\nＭ\nＵ\n算\n法\n的 改\n进\n可\n显\n著\n提\n升\nＰ\nＭ\nＵ 的 数\n据\n质\n量\n， 但\n是\n，\n该\n方\n法 无\n法\n校\n正\n连\n接\nＰ\nＭ\nＵ\n的 电\n压\n互\n感\n器\n和 电\n流\n互\n感\n器\n的\n误\n差 。\n１\n．\n２\n．\n１ ． ２ 区\n域\n层\n级\n基\n于\n区 域\n层\n级 的 数 据 修\n正\n方\n法\n大 多\n基\n于\n小\n范\n围 内 的 Ｐ\nＭ\nＵ\n数 据\n对\n异 常\n的\nＰ\nＭ\nＵ\n数\n据\n进\n行\n修\n正\n，\n主\n要\n包\n括\n１ ）\n基\n于 线\n路\n两\n端 Ｐ\nＭ\nＵ 数\n据\n的 修\n正\n方\n法\n；\n２ ）\n其\n他\n方\n法\n（\n１\n）\n基\n于\n输 电 线\n路\n模 型 的 数 据 修\n正\n方\n法\n基\n于\n输\n电 线\n路\n模 型 的 数 据 修\n正\n方\n法\n是\n指 ，\n基\n于\n线\n路\n两\n端 ： Ｐ\nＭ\nＵ\n数 据\n和\n输\n电\n线\n路 的 模 型\n对\nＰ\nＭ\nＵ 的 异 常 数 据\n进\n行 修\n正\n，\n具\n体\n地\n， 文\n献\n［\n３ ３ ］\n通\n过\n在 假\n定 Ｐ\nＭ\nＵ\n为\n零 均 值\n噪\n声 的 情\n况\n下\n，\n通\n过\n在 系 统 中 设\n置\n高 质\n量\n的 Ｐ\nＭ\nＵ\n，\n基\n于\n线\n路\n模 型 ，\n降\n低\nＰ\nＭ\nＵ 的\n误\n差\n；\n文\n献\n［\n３ ４ ］ 将 同 步 相\n量\n测\n量\n数\n据\n和 电 力 系 统 的\n运\n行\n计\n划 数\n据 结\n合\n，\n基\n于\n最\n小\n二\n乘\n法\n， 牛\n顿 拉\n夫\n逊\n法\n等\n对\nＰ\nＭ\nＵ\n的 实 时 相\n量 进\n行\n校\n正\n；\n文\n献\n［\n３ ５ ］\n利\n用\n非 线 性 最 优 估\n计\n理\n论\n，\n基\n于 传 统 的\n不\n平\n衡 负 荷\n输\n电 线 路\n模\n型\n计\n算\n校\n正\n因\n子\n，\n对\nＰ\nＭ\nＵ\n的\n量\n测\n量\n进\n行\n校\n正\n。\n文\n献\n［\n３ ６ ］\n基\n于\n灵\n敏\n度 分\n析\n的 方\n法\n， 并 结\n合\nＤ\nＢ Ｓ Ｃ\nＡ\nＮ\n聚\n类 ，\n可\n修\n正\n较 小 的 Ｐ\nＭ\nＵ 偏 差 ；\n需\n要 说\n明 的\n是\n， 文\n献\n［\n３ ３ ］\n－\n［\n３ ６ ］ 是\n在\n假\n定 线 路\n参\n数\n己 知 的 情\n况\n下 对\n数\n据\n进\n行\n修\n正\n的 。\n但\n是\n， 在 实 际 的 电 力 系 统 中 ， 由\n于\n天\n气\n，\n工\n况\n， 甚\n至\n运\n行\n人\n员 的\n操\n作\n失 误 ， 常 常 导\n致\n离 线 参 数 与 线 路 真 实 参 数\n之\n间 出\n现\n偏 差 ，\n此\n时 ，\n文\n献\n［\n３ ３ ］\n－\n［\n３ ５ ］\n中 的\n方\n法\n可\n能\n不\n再\n适\n用 ， 因\n此\n， 较 多 文\n献\n开\n始\n考\n虑 线\n路\n参\n数 中 存\n在\n的\n误 差\n情\n况\n。\n例 如 ， 文\n献\n［\n３ ８ ］ ， ［\n３ ９ ］\n基\n于\n线 路 参 数 短 时 不\n变\n的\n假\n设 ，\n在\n不\n使\n用 线\n路 参\n数 离\n线\n值 的\n情\n况\n下\n，\n对\n线\n 路\n两\n端\n的 恒 定 相 角 差 偏 差\n进\n行\n校\n正\n；\n然\n而\n， 文\n献\n［\n３ ８ ］ ， ［\n３ ９ ］\n仅\n能\n对\n恒\n３\n\n华\n北 电 力 大 学 博\n士\n学 位\n论\n文\n定 的\n相\n角 差\n偏\n差\n进\n行\n校\n正\n，\n而\n无\n法\n校\n正\n时 变 的 相 角\n差\n偏 差\n。\n（\n２ ）\n基\n于\n低 秩 矩\n阵 特 性 的 数 据 恢 复 方 法\n在\n电 力 系 统 中 ， 各\n节\n点 的 Ｐ\nＭ\nＵ\n数\n据\n理\n论\n上\n应 满\n足\n基\n尔 霍 夫 电\n压\n定 律 和\n基\n尔\n霍\n夫\n电\n流\n定 律 ， 因\n此\n， 各\n节\n点 的 Ｐ\nＭ\nＵ\n数\n据 在 时 间\n和 空\n间\n上\n有\n一\n定 的 关 联 关 系 ，\n那\n么\n各\n节\n点 Ｐ\nＭ\nＵ\n数 据\n组\n成\n的\n矩\n阵\n将\n具\n有\n低\n秩\n特\n性\n，\n可\n据\n此\n实\n现\n数 据 的\n校\n正\n和\n恢\n复\n。\n如 文\n献\n［\n４ ０ ］ 分 别\n基\n于 时 间 相\n关\n性 和\n通\n道\n相 关 性 ， 建\n立\n了\n两\n个 数 据\n恢\n复\n矩\n阵 ，\n实\n现\n了 Ｐ\nＭ\nＵ\n异 常\n数\n据\n的 在 线 修\n正\n；\n文\n献\n［\n４ １\n］\n提\n出 了\n一\n种 数\n据\n驱\n动 方\n法\n，\n通\n过\n使\n用\n低\n秩\nＨ\nａ ｎ ｋ ｅ ｌ\n矩\n阵\n来\n表 征\n系 统 动 力 学 以 恢 复 同 步 相\n量\n数\n据\n， 将 非 线 性 系 统\n提\n升\n为\n无\n限 维\n线\n性 系 统 ； 文\n献\n［\n４ ２ ］\n基\n于\n低 秩\n矩\n阵 分\n解\n法\n， 建\n立\n用\n于\n修 复 坏 数 据\n的\n模\n型 ， 并\n基\n于\n迭\n代 算\n法\n进\n行 求\n解\n。\n值\n得\n说 明 的 是 ，\n基\n于\n低\n秩 矩\n阵 特 性 的 数\n据\n修\n正\n方\n法\n大 多\n基\n于\n数 据\n驱\n动 ， 能\n够\n有 效 的\n规\n避\n线 路\n参 数\n误 差\n的\n影\n响 ，\n但\n是\n却\n无\n法\n恢 复\nＰ\nＭ\nＵ\n量\n测 数 据 中\n长\n期 的\n、\n连\n续\n的 相 角\n误\n差\n。\n（\n３ ）\n基\n于\n人\n工\n智 能 的 数 据\n修\n正\n方\n法\n基\n于\n人\n工\n智 能 的\n方\n法\n大 多\n对\n各\n类\n神\n经\n网\n络\n进\n行 训\n练\n， 并 以 神\n经\n网\n络\n的\n输\n出\n值\n作\n为\n数\n据\n的\n修\n正\n值\n， 具\n体\n地\n， 文\n献\n［\n４ ３ ］\n基\n于\n无\n监\n督\n生 成\n对\n抗\n训\n练\n方 式 ，\n通\n过\n二\n维\n卷\n积\n的\n重\n构 模 型\n和\n量\n测 数\n据\n二\n维 灰 度 图\n像\n化\n实\n现\n了 丢 失 数 据 的 恢 复 ；\n文\n献\n［\n４ ４ ］\n为\n解\n决 由\n于\n通\n信\n延\n迟\n而\n导 致 的 电 力 系 统\n状\n态\n变\n量\n丢 失 问\n题\n５\n基\n于 门\n控\n递\n归\n单\n元\n建\n立\n迭\n代\n预\n测 方\n案\n， 实\n现\n数\n据\n修\n正\n； 文\n献\n［\n４ ５ ］ 利 用 改\n进\n的\n生\n成\n式 对\n抗\n网 络 ，\n利\n用\n真\n实 性\n约\n束\n及\n上\n下\n文 相\n似\n性\n约\n束\n优 化 隐 变\n量\n， 实\n现\n量\n测\n数\n据\n缺\n失 的\n重\n建\n。\n值\n得\n说 明 的\n是\n，\n基\n于\nＡ\nＩ 的 数\n据\n修\n正\n方\n法\n大 多 需\n要\n对\n模 型\n进\n行\n大\n量\n的 离 线 训\n练\n，\n一\n方\n面\n需\n要\n耗\n费 大\n量\n的 算 力 ， 另\n一\n方\n面\n，\n可\n能 会\n造\n成\n模 型 的\n过\n拟\n合\n， 如 何\n提\n高 模 型 的\n泛\n化\n能 力\n是\n一\n件\n值 得\n研\n究 的\n事\n情\n。\n１ ． ２ ． １ ． ３ 系\n统\n层\n级\n系\n统\n层 级 的 Ｐ\nＭ\nＵ\n数 据\n校\n正\n方\n法 大\n多\n基\n于\n电 力 系 统\n状\n态\n估\n计\n＾ 将 待\n修\n正\n的 相\n量\n作 为 变\n量\n，\n加\n入\n电 力 系 统\n状\n态\n估\n计\n中 ， 在\n保\n证\n方\n程\n冗\n余 度 的\n前 提\n下 ， 在 电 力\n系\n统\n状 态\n估\n计 的 同 时 即\n可\n修\n正\n异 常 数\n据\n。 具\n体\n地\n，\n文\n献\n［\n４ ６ ］\n通\n过\n对\n不\n同 节 点 的\nＰ\nＭ\nＵ\n数 据\n进\n行\n补\n偿\n，\n基\n于\n电 力 系 统 状 态 估\n计 对\n异 常 数 据\n进\n行 检 测 和 校\n正\n； 文 献\n［\n４ ７ ］\n认\n为 ， 电\n压\n的 幅 值 和 相 角 数 据\n近\n似\n独\n立\n， 因\n此\n以 极\n坐\n标 作 为 状 态 变 量 ， 将\n状\n态\n估\n计\n转 化\n为\n迭\n代\n最\n小\n二\n乘\n问\n题\n，\n对\n异 常 数\n据\n进\n行 检 测 和 校\n正\n； 文\n献\n［\n４ ８ ］\n通\n过\n在\n多 个 Ｐ\nＭ\nＵ 数 据 中\n添\n加\n不 同 的 偏\n移\n量\n，\n通\n过\n偏\n移\n量\n对\n状\n态\n估\n计\n目 标 函 数 值\n的\n变\n化\n， 确 定 Ｐ\nＭ\nＵ 异 常 数 据 的 位\n置\n， 实\n现\n了\n配\n电 网 中 异 常 数 据 的 检 测 与 修\n正\n。\n需 要\n注\n意 的\n是\n，\n基\n于\n电 力 系 统 状\n态\n估\n计\n的\n数\n据\n校\n正\n方\n法\n大 多 需 要 己\n知\n输 电\n线\n路\n参\n数 ，\n而\n实 际 电 网 中 的\n输\n电 线 路 参 数 常 常 因\n工\n况\n变 化 等 原 因 偏 离 离 线 值 ，\n４\n\n第 １ 章 绪 论\n此\n时 ，\n上\n述\n校\n正\n方\n法\n可\n能 存 在\n一\n定 的\n误\n差\n。\n１\n．\n２ ． ２\n静\n态\n电\n压\n失 稳\n对\n应 的 分 岔 类\n型\n在 机\n理\n方\n面\n，\n从\n数 学 角 度\n看\n， 电 力 系 统 的\n静 态\n电\n压\n失 稳\n对\n应\n着 不\n同 的\n分\n岔\n类 型 ，\n包 括\n鞍\n结 分 岔 ［\n４ ９ ＞ ［\n５ ３ ］\n、\n极 限 诱 导\n分\n岔 ［\n５ ４ ］ ［\n５ ８ ］\n、 奇 异\n诱\n导\n分\n岔 ［\n５ ９ ］\n－\n［\n６ １\n］\n等\n。\n１ ． ２ ． ２ ．\n１\n鞍\n结\n分 岔\n当\n不\n考 虑 系 统 约 束 时 ， 随 着 系 统\n某\n一\n参\n数 的 缓\n慢\n增\n长\n， 系 统\n平\n衡\n点\n在\n某\n点\n后 消 失 ，\n此\n时 系 统 出\n现\n电\n压\n失\n稳\n，\n可\n对\n应\n鞍\n结\n分\n岔 。 具\n体\n地\n，\n文\n献\n［\n４ ９ ］ 以 ３\n节\n点 的 小 系 统 为\n对\n象 ，\n基\n于 局\n部\n参 数\n延\n拓\n法\n求\n解\n系 统 的\n平\n衡\n流\n形\n，\n分\n析\n了\n风\n速\n变\n化 对\n鞍 结\n分\n岔 点 的\n影\n响 ；\n文\n献\n［\n５ ０ ］ 以\n风\n电 场\n注\n入\n有 功 功 率 为 控 制\n参\n数\n，\n进\n行\n了\n单\n参\n数 电\n压\n稳\n定 性 分 岔 分 析 ， 分 析 结\n果\n表\n明 ， 当\n对\n系 统\n进\n行\n有\n效 电\n容\n补\n偿\n时\n，\n鞍\n结\n分\n岔 的\n边\n界 将 被 有 效 的 扩\n展\n； 文\n献\n［\n５ ３ ］ 提 出 了\n一\n种 新 的 Ｓ\nＮ\nＢ\n分 岔\n点\n计\n算\n方\n法\n，\n称\n为\n边\n界\n导 数\n直\n接\n法\n， 用\n反\n映\n平\n衡\n流 形\n斜\n率 的\n一\n维\n边\n界\n条 件\n代\n替 崩\n溃\n点 的\n多 维 条 件 ，\n减\n少 了 系 数 矩 阵 的 维 数 ， 实\n现\n了Ｓ\nＮ\nＢ\n分\n岔 点 的\n计\n算\n。\n１\n．\n２ ． ２ ． ２ 极\n限\n诱\n导\n分 岔\n当 系 统\n运\n行\n过\n程 抵\n达\n某\n些\n约 束\n边\n界 时 ， 系 统 的 代 数 方\n程\n将\n发\n生\n突 变 ，\n平\n衡\n解 曲 线 将 出\n现\n偏 折 ， 导\n致\n平\n衡 点\n进\n入\n电\n压\n不\n稳\n定 区 域 ，\n可\n对\n应\n发\n生\n极\n限\n诱\n导\n分\n岔 。 具\n体\n地\n，\n文\n献\n［\n５ ８ ］\n首\n次\n发 现\n了 极 限\n诱\n导 分 岔\n现\n象 ， 即 随 着 负 荷 的 增 加 ， 当\n发 电\n机\n到\n达\n无\n功 功 率 极 限 时 ， 系 统\n将\n会\n失 去\n稳\n定 ；\n文\n献\n［\n５ ４ ］ 构\n建\n动\n态\n风\n力\n发\n电\n系 统 的 极 限\n诱\n导 分 岔 模 型 ， 利 用\n准\n静\n态\n分 析\n法 计\n算 优\n化\n模 型 初\n值\n，\n搜\n索\n风\n电\n系\n统\n稳\n定 流\n形\n的 极 限 诱 导 分 岔 ； 文\n献\n［\n５ ６ ］\n研\n究 了 由\n于\n发 电\n机\n励\n磁 电\n压\n限 制 导\n致\n的\n极 限 诱 导 分 岔 ， 并 指 出 ， 极 限 诱 导 分 岔\n反\n映 了 动\n态\n无\n功\n源\n在\n维 持 系\n统\n电\n压\n稳\n定\n性 中 十 分\n重\n要 ；\n１ ． ２\n．\n２ ． ３\n奇\n异\n诱\n导\n分 岔\n描\n述\n微\n分\n代\n数\n方\n程\n系 统 中 ， 随 着\n参\n数 的 变 化 ， 代 数\n方\n程\n发\n生\n了\n奇\n异\n而\n导\n致\n的 电 压 失 稳\n现\n象 ［\n５ ９ ］\n＿\n［\n６ １\n］\n。\n例 如 ， 文\n献\n［\n５ ９ ］\n通\n过\n理\n论\n分\n析 和 时 域 仿 真\n表\n明 ，\n风\n力 发\n电\n机\n与 系 统 弱\n连\n接 时 ， 在 短\n路\n故 障 并 不\n严\n重\n的 情\n况\n下 也\n可\n能 发\n生\n失\n稳\n，\n这\n种\n失\n稳 主 要 是 由 系 统 轨\n迹\n接\n触\n代 数 约 束 方 程\n形 成\n的\n奇\n异\n面\n导\n致\n。\n文\n献\n［\n６ ０ ］ 系\n统\n地\n讨\n论 了\n无\n阻\n尼\n项\n和\n包 括\n阻\n尼 项 的 电 力 系 统\n微\n分\n代\n数 模 型 （ Ｄ Ａ Ｅ ）\n发\n生\n奇\n异\n诱\n导\n分\n岔 （\nＳ Ｉ Ｂ ） 的\n特\n点 ， 并 明 确 了 奇 异 诱 导\n分\n岔 的\n一\n般\n定 义 。\n此\n外 ，\n还\n有 其 他 分 岔 类 型 也\n可\n能 会 导\n致\n电\n压\n失\n稳\n， 如 Ｈ ｏ ｐ ｆ\n分\n岔 ［\n６ ２ ］\n＿\n［\n６ ４ ］\n， 同\n宿\n分\n岔 ［\n６ ５ ］\n等 ，\n具\n体\n地\n， 文\n献\n［\n６ ２ ］ 发\n现\n，\n对\n系 统 中 的 等 值 发 电 机 角\n速\n度\n施\n加\n线\n性\n反\n馈\n控\n制 后\n可\n延\n迟\n甚\n至\n完 全 消 除\n亚\n临\n界\nＨ ｏ ｐ ｆ 分 岔 ，\n从\n而 可\n使 系 统 以\n鞍\n结\n分\n岔\n点 作 为 系 统 的 电 压\n稳\n定 临\n界\n点 ， 大 幅\n扩\n大 了 电\n压\n稳\n定\n域\n； 文 献 ［\n６ ３ ］\n通\n过\n双\n参\n 数\n５\n\n华\n北\n电 力 大 学 博\n士\n学\n位\n论\n文\n“\n两\n步\n法\n”\n追\n踪\n系 统\n二\n维\nＨ\nｏ ｐ ｆ 分\n岔\n曲 线 ， 分 析\n风\n电 集\n群\n地\n区\n无\n功 补 偿\n设\n备 动\n态\n响 应\n特\n性\n及\n电\n压\n控 制 效\n果\n。\n然\n而\n，\n值\n得\n注\n意 的\n是\n，\n对\n于\n新\n能\n源\n场\n站\n系 统 ，\n上\n述\n方\n法\n存 在\n两\n个 问\n题\n，\n一\n是\n上\n述\n分 析 中\n大\n多 以 恒 功 率 模 型 或\n恒\n阻\n抗\n模 型 代 替 新 能\n源\n场\n站\n， 未 考 虑 新 能\n源\n场\n站\n的\n控\n制\n方\n式\n及\n自 身 的\n状\n态\n切\n换\n， 其 结 果\n可\n能\n不\n准\n确 ； 另\n一\n方\n面\n，\n上\n述\n文\n献\n大 多\n针\n对\n传 统 的\n鞍\n结\n分\n岔 、 极 限\n诱\n导\n分\n岔\n、\n奇\n异\n诱\n导 分 岔 等 ，\n上\n述\n分 岔 无 法\n解\n释 新\n能\n源\n并 网 点 电 压\n在\n０\n．\n９\n－\nｌ\n．\nＯ ｐ ．\nｕ\n．\n之\n间 反 复 剧 烈 波 动 ，\n且\n伴 随 有 功 出 力 的 波 动 的\n现\n象 ［\n１ （ ）\n］\n。\n而\n实 际\n上\n， 伴 随 着\n控\n制 的 切 换 ，\n失\n稳\n对\n应\n的 数 学\n模\n型 是 切 换 系 统 ，\n不\n是\n光\n滑 系 统 ，\n也\n不\n是 极 限\n诱\n导\n分\n岔\n对 应\n的 非 光\n滑\n系 统 ， 因\n此\n，\n上\n述\n电\n压\n失\n稳\n现\n象\n无\n法\n用 传 统 的 电\n压\n失\n稳\n机\n理\n解 释\n， 需\n要\n用\n非 光\n滑 分\n岔 来\n解\n释\n。\n１\n．\n２ ． ３\n静\n态 电\n压\n评\n估\n判\n据 研\n究\n为\n便\n于\n运\n行 人\n员\n对\n监\n视\n和\n控\n制 系 统 电\n压\n稳\n定 性 ，\n研\n宄\n人\n员\n提\n出 了 诸 多 静\n态\n电\n压\n稳\n定 指 标 ，\n主\n要\n包\n括\n短\n路\n比 指\n标\n、\n奇 异\n值\n指 标 ／ 特 征\n值\n指\n标\n、\n阻\n抗\n彳\n吴\n指 标\n、\n灵\n敏\n度\n指\n标\n等\n等\n。\n１\n．\n２\n．\n３ ． １\n短\n路\n比\n指\n标\n（ Ｓ Ｃ Ｒ ）\n在\n基\n于\n短 路\n比 的 静\n态\n电\n压\n稳\n定\n评\n估\n方\n面\n， 文\n献\n［\n６ ６ ］\n提\n出 了\n一\n种 考 虑 新 能 源 无\n功\n出 力\n、\n静\n止\n无\n功 发\n生\n器\n、\n阻\n抗 角 以\n及\n初 始 相 位 角 的 改\n进\n的\n新\n能\n源\n集\n群\n等 效 短\n路\n比\n计\n算\n方\n法\n， 能 够\n反\n映\n集\n群\n接\n入\n下\n新 能\n源\n电\n站\n的 电 网\n强\n度 ； 文 献 ［\n６ ７ ］\n基\n于\n短\n路\n比 的\n物\n理\n本\n质 ， 提 出\n计 及\n场\n站\n间 相\n互\n影\n响 的 新 能\n源\n多\n场\n站\n短 路 比 定\n义\n及\n计\n算\n方\n法\n，\n并\n根\n据 系 统 阻\n抗\n比 与\n短\n路 比 间 的 关\n联\n关 系 ， 给 出 了\n针 对\n不\n同 阻\n抗\n比 范 围\n的\n计\n算\n解 析 表\n达\n式\n； 文\n献\n［\n６ ８ ］ 指 出 ， 提 升 系 统 Ｓ Ｃ Ｒ\n可\n有 助\n于\n改 善 静\n态\n电\n压\n稳\n定\n性 ， 并 考 虑 了 系 ",
+  "conclusion": "第 ７\n章\n结 论\n与 展 望\n７\n．\n１\n论\n文\n工\n作\n总\n结\n新 能\n源\n场\n站\n多 位\n于\n电 网\n末\n端 ， 电\n压\n稳\n定 问\n题\n不\n可\n忽\n视\n。\n而\nＰ\nＭ\nＵ 作 为 电\n压\n稳\n定\n评\n估 的\n重\n要\n数 据\n源\n， 其 数 据 质\n量\n将\n严\n重\n影\n响 新 能\n源\n场 站 电\n压\n稳 定 性 的\n监\n测 。\n针\n对\nＰ\nＭ\nＵ 数\n据\n在\n新\n能\n源\n场\n站\n静\n态\n电\n压\n稳\n定 在 线\n评\n估\n的 问\n题\n研\n宄 中 ，\n论\n文\n开\n展\n了Ｐ\nＭ\nＵ\n数\n据\n修\n正\n、\n电\n压\n稳\n定\n机\n理\n分\n析 以\n及\n电\n压\n裕\n度\n指 标 的\n建\n立\n研 宄 ，\n论\n文\n的\n主\n要\n工\n作 如 下 ：\n（\n１\n）\n提\n出 了\n一\n种\nＰ\nＭ\nＵ\n幅 值 数 据\n恢\n复 方\n法\n， 该 方\n法\n在 线\n路 参\n数\n不 准\n和\n相\n角 数\n据\n中\n存\n在\n同 步\n误 差\n的 情\n况\n下\n仍 然\n适\n用\n。\n具\n体\n地\n， 首 先 ， 展\n示\n了 实 测 Ｐ\nＭ\nＵ 数 据\n中\n存\n在\n的 相 角\n数 据\n质\n量\n问\n题\n以\n及\n幅 值\n数\n据 丢 失\n现\n象 ， 并 分 析 了 幅 值 数 据 丢 失\n对\n静\n态\n电\n压\n稳\n定\n指\n标\n一\n阻\n抗\n模\n指 标 的\n影\n响 ； 其 次 ，\n基\n于 带 噪 声 的\n密\n度\n空\n间 聚 类\n（\nＤ\nＢ Ｓ Ｃ\nＡ\nＮ\n） ， 提 出 了\n一\n种 高 质\n量\n历\n史 数 据 的 筛\n选\n方\n法\n；\n进\n一\n步\n地\n，\n基\n于\n线\n路\n的 Ｐ Ｉ 型 等\n值\n模\n型 ， 建\n立\n了 数 据 恢 复 模 型 ， 利 用\n历\n史\n幅\n值\n数 据\n计\n算 相 关 恢\n复\n系\n数\n，\n并\n依\n次 恢\n复\n幅\n值\n数\n据\n；\n最\n后 ，\n通\n过 仿\n真 算\n例\n和\n实 测 数\n据\n验\n证\n了 该 方\n法\n的 有 效 性\n和\n实 用\n性\n。\n（\n２ ） 提 出 了\n一\n种 Ｐ\nＭ\nＵ\n相 角\n差\n的 时\n变\n偏 差 校\n正\n方\n法\n， 该 方\n法\n能\n够 在 线 路\n参\n数\n未\n知\n的 情\n况\n下 ，\n对\n长\n期\n的\n、\n连\n续\n的\n、\n时 变 相 角\n差\n偏\n差\n进\n行\n修\n正\n。\n具 体\n地\n， 首 先 ，\n展\n示\n了\n在\n实 际 电 网 中 发\n现\n的 相 角\n差\n时 变 偏\n差\n， 并\n分\n析 了 相 角 差\n偏\n差 对\n静\n态\n电\n压\n稳\n定 指 标 ｉ Ｋ 指 标 的\n影\n响 ； 其 次 ， 以 多 个 时 间 断 面 下 的 电\n压\n相 角 差 为 未 知 变\n量\n，\n建\n立\n了 用\n于\n估 计 ＰＡ Ｄ 的\n一\n般\n模 型 ；\n进\n一\n步\n地\n，\n基\n于\n直\n流\n潮\n流\n，\n将\n多 个 时 间 断 面\n、\n多 个 未 知 变\n量\n的 相 角\n差\n估\n计\n转\n化\n为\n以 单\n一\n线\n路\n参\n数 为\n变\n量\n的\n初\n步\n估 计 模 型 ； 再\n次 ， 以 初 步 估\n计\n的 结 果 为 初 值 ，\n基\n于\n二\n阶\n泰\n勒\n展\n开\n，\n对\nＰＡ\nＤ\n进\n行\n精 确 估 计 ； 最\n后\n，\n基\n于\n仿 真\n和\n实 测 算 例\n验\n证\n了\n所\n提\n方\n法\n的\n有\n效 性 。\n（\n３ ） 针\n对\n实 际\n风\n电\n场\n中 出\n现\n的 低 电\n压\n穿\n越\n控 制 方 式 导 致 的 电\n压\n振\n荡 失\n稳\n现\n象 ， 分 析 了 相 应 的 机\n理\n， 并 建\n立\n了\n裕\n度 指 标 。 具\n体\n地\n， 首 先 ，\n基\n于 实 际 案 例 ，\n对\n陆\n上\n风\n电\n场\n无\n故 障 、 高 出 力 下 、 低 穿 控 制\n方\n式 导\n致\n的 电 压 振 荡\n现\n象\n进\n行 了 机\n理\n分\n析\n，\n说 明 了 该\n振\n荡\n现\n象 对\n应\n于\nＨ Ｌ Ｉ Ｎ Ｂ ； 其 次 ，\n推\n导 了 Ｈ Ｌ Ｉ\nＮ\nＢ 与 Ｓ\nＮ\nＢ 发 生\n的\n边 界\n条\n件\n， 结 果\n表\n明 ，\n在\n风\n电\n场\n的 典 型\n低\n穿 控 制\n方\n式\n下 ， 陆\n上\n风\n电 场 在 高 出\n力 时\n更 容\n易 发\n生\nＨ Ｌ Ｉ\nＮ\nＢ\n而\n非 传 统 的 Ｓ Ｎ Ｂ ；\n进\n一\n步\n地\n，\n基\n于\n二\n阶\n锥 算\n法\n， 给 出\n了 考\n虑\n风\n电\n场\n无\n功 控 制\n方\n式\n及\n无\n功 约 束 下 ，\n计\n及\nＨ\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/基于PMU数据的新能源场站静态电压稳定在线评估_孔贺.pdf",
+  "file_sha256": "92d78238f52782f0a8c1a40bebca7d99d9de9958dc2d5c894bb2d612d881f875",
+  "target_ids": [
+    "P25"
+  ]
+}

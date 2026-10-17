@@ -1,0 +1,586 @@
+{
+  "schema_version": 2,
+  "filename": "Research on Static Voltage Stability During Low-voltage Ride-through Under Short-circuit Fault Conditions in Renewable Energy Integrated Power Grids.pdf",
+  "pages": 13,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.13334/j.0258-8013.pcsee.240256",
+  "year_candidates": [
+    "2025"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "ABSTRACT: During the steady -state period of low -voltage \nride-through in renewable energy integrated power grid with \nfaults, inappropriate active and reactive current injections can \nlead to system instability, causing static voltage stability issues. \nThis paper extends the normal steady -state static voltage \nstability analysis method to the low-voltage ride-through period \nof new energy generator, analyzes its mechanism, and defines \nthe static stability index for short circuit faults.  Firstly, \nconsidering the  low -voltage ride -through control strategy of  \nthe renewable energy generator, the critical current value for \nvoltage stability during the low -voltage ride-through period of \na single renewable energy source integrated power grid is \nobtained. A low -voltage ride -through static voltage stability \nmargin index (LTSVSMI) is defined. Difference is compared in \nstatic stability characteristics between new energy generator s \nduring low-voltage ride -through period and in the normal \nsteady state , and there are significant differences between the \ntwo stability limits. Secondly, to calculate the stability index \nfor an asymmetric fault in a single renewable energy integrated \npower grid, the negative-sequence and zero-sequence networks \nare treated as additional impe dances connected to the fault \npoint, and the impact of asymmetric faults is analyzed. In a \nmulti-source renewable energy power grid, the fault ports are \nspecially treated according to symmetric and asymmetric fault  \ntypes, and the influence of other renewab le energy sources is \nincorporated into virtual impedances, extending the application \nof the method to multi -source renewable energy integrated \npower grids. Finally, a single renewable energy source \ngrid -connected system and a multi -source renewable  \n基金项目：国网冀北电力公司科技项目(SGTYHT/23-JS-001)。 \nState Grid Corporation of China, Hebei North Power Company \nTechnology Project (SGTYHT/23-JS-001). \nenergy grid-connected system are simulated based on the IEEE \n33-node distribution network to validate the correctness of the \nderived results. \n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 673
+      },
+      "end": {
+        "page": 1,
+        "offset": 2780
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 2780
+      },
+      "heading": "abstract:duringthesteady-stateperiodoflow-voltage",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 2107,
+      "truncated": false,
+      "quality_flags": [
+        "multiple_heading_candidates"
+      ],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "0  引言 \n短路故障引起的稳定问题包括暂态稳定问题、\n静态电压稳定问题等[1]。随着新能源接入比例的增\n加， 新能源在故障低电压穿越期间的特性逐渐成为\n影响电力系统安全稳定的重要因素[2]，接入弱电网\n的新能源场站发生短路故障低电压穿越期间存在\n6778 中  国  电  机  工  程  学  报 第 45 卷 \n稳定问题， 研究新能源场站接入电网在故障期间的\n稳定问题及产生机理具有重要意义。 \n短路故障发生后新能源接入电网保持稳定， 则\n必须保证不发生各类稳定问题。故障大扰动后，新\n能源接入电网存在暂态稳定问题， 同时也可能引发\n次超同步振荡问题[1-3]。 新能源电源在故障期间特性\n不同于传统发电机[4]，故障期间新能源按照国标进\n行低电压穿越控制， 其数学模型可等效为非线性的\n压控电流源， 因此进行新能源电网的短路电流计算\n需要使用迭代法[5-7]。 故障低电压穿越期间新能源向\n电网注入一定的有功电流和无功电流， 类似于正常\n潮流中的 PQ 节点，因此低电压穿越稳态期间可能\n存在类似于潮流方程的静态电压稳定性问题。 当新\n能源在系统电压很低时按照低电压穿越控制策略\n向电网注入一定的有功电流和无功电流， 若注入的\n电流不合适， 则新能源低电压穿越期间将失去静态\n电压稳定性，此时即使不发生其他稳定问题，故障\n期间系统一定是不稳定的。 \n目前， 针对新能源接入电网正常稳态运行状态\n下的静态电压稳定或临界电压失稳问题的研究较\n多，方法可以分为解析法、连续潮流法、雅克比矩\n阵奇异分析法、非线性规划的方法，形成了静态电\n压稳定极限的评价指标 [8]，如短路比 [9-10]、阻抗模\n裕度[11]、 特征值[12]等。 电网正常运行静态电压稳定\n分析通常利用单机无穷大模型可以得到 PQ 节点的\n电压幅值解析表达式， 在假定注入有功和注入无功\n比例不变，即功率因数角不变的条件下，得到注入\n功率最大的工作状态。 而新能源低电压穿越期间按\n照控制策略注入一定的有功电流和无功电流， 与正\n常稳态的静态电压稳定分析类似。 由于正常稳态时\n控制量是有功和无功， 而新能源低电压穿越期间控\n制量是有功电流和无功电流， 低电压穿越期间的稳\n定极限是电流最大的工作状态，两者存在明显差\n异， 所以新能源故障低电压穿越期间的静态稳定分\n析不同于正常稳态运行状态，需要进行深入研究。 \n已有少量文献对新能源故障低电压穿越期间\n的稳定问题进行研究。文献[13]利用作图法得到电\n流传输极限，并且发现，注入电流超过电流传输极\n限时锁相环同样不稳定，引起暂态同步稳定问题。\n文献[14-15]利用相平面法 在对称故障电压跌落下\n研究了变流器低穿控制策略对故障稳态平衡点存\n在性影响，认为在电流传输极限较小时，变流器按\n照典型低电压穿越控制策略进行控制， 其无功电流\n增益系数必须合理设置，否则容易发生失稳问题。\n针对新能源低电压穿越期间失稳问题，文献 [16]提\n出利用储能装置 注入有功电流来 改善注入电流特\n性以维持系统稳定的措施；文献[17]提出弱电网下\n双馈风电机组有功电流和无功电流的分配原则。文\n献[13-17]说明， 在故障低电压下系统阻抗有电阻分\n量时， 新能源需要注入适量有功电流来保证低电压\n穿越期间的稳定。 现有文献一般是从新能源低电压\n穿越的控制结构和控制策略入手， 建立状态空间方\n程进行分析，方程较为复杂，难以分析多新能源接\n入电网低电压穿越期间的稳定性[16-17]。 部分文献采\n用大干扰稳定性分析方法， 通过建立系统的准稳态\n模型进行稳定性分析[13-15]。然而，这些文献并未使\n用正常稳态下成熟的静态电压稳定性分析方法， 并\n且未讨论多新能源接入电网的情境。文献[18]在不\n对称故障下对辐射状风电场电压稳定性进行分析，\n提出利用 零点存在性定理 判断短路计算方程解的\n存在性。但文献[18]没有给出评价故障低电压穿越\n期间电压稳定性的指标，显然此时传统的短路比、\n阻抗模裕度指标存在适用性问题。 \n本文首先明确新能源接入电网故障低穿期间\n存在静态电压稳定问题，引发系统失稳，并导致短\n路电流计算不收敛。 提出一种评价新能源低电压穿\n越期间静态电压稳定性的指标， 能够实现对多新能\n源接入电网静态电压稳定性分析。 \n1）将正常稳态运行下的静态电压稳定分析 方\n法扩展应用于故障低电压穿越场景， 考虑新能源低\n电压穿越控制策略的特殊性，推导电压解存在的临\n界电流值， 定义短路故障稳态期间的低电压穿越静\n态电压稳定裕度指标。 \n2）揭示低电压穿越稳态 期间静态电压稳定性\n与正常稳态静态电压稳定性问题之间的差异。 \n3）提出多新能源接入电网的静态电压稳定分\n析方法，在多新能源电网中对故障端口进行特殊处\n理，并将其他新能源的影响纳入虚拟阻抗中，推导\n稳定裕度指标。 \n",
+      "page_start": 1,
+      "page_end": 2,
+      "start": {
+        "page": 1,
+        "offset": 3421
+      },
+      "end": {
+        "page": 2,
+        "offset": 1876
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 1876
+      },
+      "heading": "0引言",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 2000,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "6  结论 \n1）新能源接入电网故障低穿期间存在静态电\n6788 中  国  电  机  工  程  学  报 第 45 卷 \n压稳定问题，并导致短路电流计算不收敛。从单新\n能源场站并网系统节点电压方程中推导得到电压\n唯一解时对应的临界电流，定义了 LTSVSMI。临\n界电流和 LTSVSMI 受交流系统电源幅值、系统阻\n抗、DG 输出电流功率因数角的影响。系统电源幅\n值越小、 系统阻抗越大， 临界电流越小。 当LTSVSMI\n等于 1 时系统处于临界状态，LTSVSMI 小于 1，系\n统失去静态电压稳定。 选取合适的功率因数角可以\n增加临界电流和 LTSVSMI。 \n2）新能源低电压穿越 稳态期间静态电压稳定\n极限和正常稳态静态电压稳定极限的电压值、 电流\n值和视在功率一般不同，仅在为 0 时相同。 \n3）不对称故障和负荷影响戴维南等值电势和\n等值阻抗，假设阻抗角和不发生改变，则不对称\n故障会导致临界电流值和 LTSVSMI 减小。 \n4）将其余 DG 影响计入戴维南等值阻抗中，\n得到 多 新 能 源 场 站 并 网 系 统 的 临 界 电 流 值 和\nLTSVSMI 计算方法， 充分考虑不同DG 之间的相互\n影响，计算误差较小。 \n下一步工作在参考正常稳态静态电压稳定分\n析方法的基础上， 充分考虑新能源低电压穿越期间\n的不同控制策略， 进行更深入、 场景更多样的分析。 \n",
+      "page_start": 11,
+      "page_end": 12,
+      "start": {
+        "page": 11,
+        "offset": 2119
+      },
+      "end": {
+        "page": 12,
+        "offset": 571
+      },
+      "preview_end": {
+        "page": 12,
+        "offset": 571
+      },
+      "heading": "6结论",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 599,
+      "truncated": false,
+      "quality_flags": [
+        "text:private_use_characters"
+      ],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "abstract:multiple_heading_candidates",
+    "conclusion:text:private_use_characters",
+    "introduction:numbered_boundary_candidate",
+    "page:10:private_use_characters",
+    "page:11:private_use_characters",
+    "page:12:private_use_characters",
+    "page:3:private_use_characters",
+    "page:4:private_use_characters",
+    "page:5:private_use_characters",
+    "page:6:private_use_characters",
+    "page:7:fragmented_text",
+    "page:7:private_use_characters",
+    "page:8:private_use_characters",
+    "page:9:fragmented_text",
+    "page:9:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 673,
+      "heading": "abstract:duringthesteady-stateperiodoflow-voltage",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 2780,
+      "heading": "keywords:renewableenergypowersystem;low-voltage",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 2876,
+      "heading": "摘要:接入电网的新能源故障低电压穿越稳态期间不合适的",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 3394,
+      "heading": "关键词:新能源电力系统;低电压穿越;静态电压稳定性",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 3421,
+      "heading": "0引言",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 1876,
+      "heading": "1单新能源场站并网系统在低电压穿越期",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 45,
+      "heading": "1.1短路故障下新能源场站等效模型",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 1176,
+      "heading": "1.2单新能源场站在低电压穿越期间的电压失稳",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 963,
+      "heading": "1.3单新能源场站并网统低电压穿越期间的静态",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 2076,
+      "heading": "iez",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 2082,
+      "heading": "ien",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 1243,
+      "heading": "1.4从相量合成的角度得出临界电流值",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 1797,
+      "heading": "1.5提高短路低穿期间静态电压稳定裕度的措施",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 6,
+      "offset": 877,
+      "heading": "2新能源故障低电压穿越期间静态电压稳",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 6,
+      "offset": 1267,
+      "heading": "2.1正常稳态静态电压稳定极限对应电流值",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 6,
+      "offset": 1544,
+      "heading": "izeiz",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 6,
+      "offset": 1754,
+      "heading": "2.2正常稳态与故障低电压穿越静态电压稳定极",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 288,
+      "heading": "3.2负荷对于静态电压稳定性的影响",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 875,
+      "heading": "4多新能源场站并网系统的静态电压稳定",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 968,
+      "heading": "4.1多新能源场站集中接入电网下静态电压稳定",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 1467,
+      "heading": "4.2多新能源场站分散接入电网下静态电压稳定",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 10,
+      "offset": 36,
+      "heading": "5.1单新能源场站并网系统算例",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 10,
+      "offset": 92,
+      "heading": "5.1.1单新能源场站并网系统对称故障低电压穿",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 10,
+      "offset": 906,
+      "heading": "5.1.2单新能源场站并网系统不对称故障低电压",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 10,
+      "offset": 1475,
+      "heading": "5.1.3单新能源场站并网系统中最大功率的电流",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 10,
+      "offset": 2158,
+      "heading": "5.2多新能源场站并网系统算例",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 11,
+      "offset": 72,
+      "heading": "5.2.1多新能源场站并网系统对称故障低电压穿",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 11,
+      "offset": 1447,
+      "heading": "5.2.2多新能源场站并网系统不对称故障低电压",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 11,
+      "offset": 2119,
+      "heading": "6结论",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 12,
+      "offset": 571,
+      "heading": "参考文献",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 12,
+      "offset": 950,
+      "heading": "lihui,liudong,yaodanyang.analysisandreflection",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 13,
+      "offset": 2922,
+      "heading": "lilaifu,liujin,yujilai,etal.asimpleanddirect",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "backmatter",
+      "page": 13,
+      "offset": 3877,
+      "heading": "附录",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3544
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1999
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1998
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 2143
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1845
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 2074
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1937
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1785
+    },
+    {
+      "page": 9,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2322
+    },
+    {
+      "page": 10,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 2273
+    },
+    {
+      "page": 11,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 2146
+    },
+    {
+      "page": 12,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 3636
+    },
+    {
+      "page": 13,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4177
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 2,
+      "cue": "难以",
+      "snippet": "间失稳问题，文献 [16]提\n出利用储能装置 注入有功电流来 改善注入电流特\n性以维持系统稳定的措施；文献[17]提出弱电网下\n双馈风电机组有功电流和无功电流的分配原则。文\n献[13-17]说明， 在故障低电压下系统阻抗有电阻分\n量时， 新能源需要注入适量有功电流来保证低电压\n穿越期间的稳定。 现有文献一般是从新能源低电压\n穿越的控制结构和控制策略入手， 建立状态空间方\n程进行分析，方程较为复杂，难以分析多新能源接\n入电网低电压穿越期间的稳定性[16-17]。 部分文献采\n用大干扰稳定性分析方法， 通过建立系统的准稳态\n模型进行稳定性分析[13-15]。然而，这些文献并未使\n用正常稳态下成熟的静态电压稳定性分析方法， 并\n且未讨论多新能源接入电网的情境。文献[18]在不\n对称故障下对辐射状风电场电压稳定性进行分析，\n提出利用 零点存在性定理 判断短路计算方程解的\n存在性。但文献[18]没有给出"
+    },
+    {
+      "page": 4,
+      "cue": "假设",
+      "snippet": "“幅相特\n性” ，明显不同于正常运行时的功率特性[19]。 \n在单新能源场站并网系统正常运行的静态电\n压稳定性分析中，当 DG 输出功率很大时潮流方程\n无解，产生了静态电压稳定问题。在单新能源场站\n并网系统短路故障低电压穿越期间，持续增大 DG\n输出电流幅值发生了短路计算不收敛现象， 说明出\n现了类似的静态电压稳定问题。 \n1.3 单新能源场站并网统 低电压穿越期间 的静态\n电压稳定机理及判据 \n假设 DG 低穿控制策略下其输出电流滞后机端\n电压的角度恒定。 根据单新能源场站并网系统故障\n等值电路图 5，DG 并网点电压 U有如下关系式： \n \n( ) 0U IZ E           (3) \n将 DG 输出电流产生的电压分量移到方程左\n边，并用欧拉公式展开，得到： \n \n[ cos cos( )] j[ sin\n sin( )]\nU IZ U\nIZ E\n"
+    },
+    {
+      "page": 6,
+      "cue": "假设",
+      "snippet": "手，推\n导出当视在功率最大时对应的电流值 ；然后，进\n一步推导出最大功率状态与临界电流值对应的临\n界电压和视在功率 ，以凸显这两种临界状态之间\n的差异 。本节 聚焦于静态电压稳定概念在正常稳\n态与故障低电压穿越期间的演变，突显其在不同\n运行条件下的差异 ，表明 正常稳态静态电压稳定\n指标不能简单直接应用于 故障低电压穿越期间静\n态电压稳定评估。 \n2.1 正常稳态静态电压稳定极限对应电流值 \n同样假设 DG 输出电流滞后机端电压的角度\n恒定，得到视在功率幅值表达式。 \n \n2 2 2 2 2cos( ) sin ( )S I Z I E I Z         (15) \n式(15)根号取正时 S 更大，S 取最大值时，P 和\nQ 同时达到最大值。式(15)对 DG 输出电流幅值 I\n求导，得到： \n2 2 2 2 2\n2 2 2 2 2 2 2\nd [2 cos( ) s"
+    },
+    {
+      "page": 7,
+      "cue": "假设",
+      "snippet": " 为故障附加阻抗；\ngrid gridZ   \n为故障点到交流系统的正序阻抗；Z为故障点到\nDG 的正序阻抗。计算得到戴维南参数： \n \ngrid grid\nT\ngrid grid\nT\ngrid grid\n()\n \n\n\n\n\n\n           \nZZZZ\nZZ\nZEE\nZZ\n \n\n\n (23) \n假设阻抗角相同， 将式(23)代入式(12)中， 得到： \nmax\ngrid grid\nmax\ngrid grid\n, 90( / )sin\n, 90/\nEI Z Z Z Z Z\nEI Z Z Z Z Z\n  \n\n\n   \n\n   \n\n  \n\n    \n\n    \n (24)"
+    },
+    {
+      "page": 8,
+      "cue": "忽略",
+      "snippet": "Z\nEI Z\nEI Z\n\n\n\n \n\n   \n\n   \n (26) \n通过式(26)可知，在 DG 节点处接入负荷影响\n戴维南等值阻抗相位， 进而影响到计算得到的临界\n电流值， 使LTSVSMI 变化。 当负荷使减小， 则临\n界电流值增加，LTSVSMI 增加，稳定裕度增加。\n但负荷阻抗一般较大[21]， 而故障期间电压较低， 因\n此负荷影响较小，可以忽略。 \n综上，当计及不对称故障和负荷的影响后，阻\n抗矩阵发生改变， 对戴维南等值电势E 和等值阻抗\nZ 产生影响，影响临界电流值，使LTSVSMI 变化。 \n4 多新能源场站并网系统的静态电压稳定\n分析及 LTSVSMI 计算 \n高比例新能源接入电网中包含多个新能源场\n站， 必须考察临界电流值计算方法在多新能源场站\n并网系统中的适用性。 \n4.1 多新能源场站集中接入电网下静态电压稳定\n分析及 LT"
+    },
+    {
+      "page": 10,
+      "cue": "假设",
+      "snippet": "6786 中 国 电 机 工 程 学 报 第 45 卷 \n5.1 单新能源场站并网系统算例 \n本节首先验证单新能源场站并网系统故障期\n间 LTSVSMI 的适用性。 \n5.1.1 单新能源场 站并网系统对称故障低电压穿\n越期间 LTSVSMI 的验证 \n图 16 中，假设仅在节点 33 接入 DG，外部电\n网等值电抗为 2，电网发生对称故障后外部电网\n等值电势由 1.05pu 跌落至 0.3pu， 低电压穿越期间\nDG 只输出无功电流。利用短路电流计算程序计算\n短路电流，DG 输出电流幅值不断增加，输出节点\n33 的 LTSVSMI以及电压幅值， 迭代次数上限为500\n次， 迭代算法采用文献[7]提出的迭代算法， 收敛条\n件为不平衡量绝对值之和小于 11"
+    },
+    {
+      "page": 10,
+      "cue": "假设",
+      "snippet": "算得到临界电流值为 Imax0.7247pu， 与图17 中 DG\n输出最大电流值基本相同，当 LTSVSMI 小于 1，\n系统失去静态电压稳定性， 短路电流迭代计算无法\n收敛。此外， 仿真发现，LTSVSMI 较大时， 文献[7]\n迭代算法收敛很快，随着 LTSVSMI 逐渐减小，迭\n代步数随之增加。 \n5.1.2 单新能源场站并网系统不对称故障低电压\n穿越期间 LTSVSMI 的验证 \n假设图 16 中电网节点 2 发生两相相间短路，\n负序阻抗等于正序阻抗，低电压穿越期间DG 仅输\n出正序电流，外部电网等值电势为 1.050，其余\n条件与 5.1.1 节相同，结果如图 18 所示。 \n节点 33 看 向 电 网 的 系 统 阻 抗 为0.411  \n0.397ipu，戴维南等值电势为 0.5250pu，式(12)\n计算得到临界电流值为 Imax1.277pu，与"
+    },
+    {
+      "page": 10,
+      "cue": "简化",
+      "snippet": "， 单新能源场站并网算例表明在固定的条\n件下， 式(12)计算单新能源场站并网系统故障低电压\n穿越期间临界电流值， 得到L TSVSMI可以准确评估\n单新能源场站并网系统低电压穿越期间的静态电压\n稳定性。式(18)可以得到最大功率对应的电流值， 算\n例说明临界电流和最大功率对应的状态不同。 \n5.2 多新能源场站并网系统算例 \n在多新能源场站并网系统中， 计算临界电流值\n需要对电网进行戴维南等值简化为单新能源场站\n并网模型来计算。本节将其余 DG 影响考虑到戴维\n南等值阻抗中，通过 IEEE 33 节点配电网来验证临"
+    },
+    {
+      "page": 11,
+      "cue": "假设",
+      "snippet": "第 17 期 谢德兴等：新能源接入电网短路故障低电压穿越期间静态电压稳定研究 6787 \n界电流值计算公式在多新能源场站并网系统的适\n用性。 \n5.2.1 多新能源场站并网系统对称故障低电压穿\n越期间 LTSVSMI 的验证 \n图 16 中， 外部电网等值电抗为2， 红色节点\n接入 DG，全发无功，假设电网发生对称故障后外\n部电网等值电势由 1.05pu 跌落至 0.3pu。 利用短路\n电流计算程序计算短路电流， 其余条件与单新能源\n场站并网算例相同。令节点 27 的 DG 输出电流幅\n值不断增加，其余 DG 节点容量为 1MW，输出节\n点 27 LTSVSMI 以及节点 27 电压幅值结果如图 20\n所示。 \n节点27处DG输出电流幅值/pu\n1.1 1.2 1.3 1.4 1.5 1."
+    },
+    {
+      "page": 11,
+      "cue": "假设",
+      "snippet": "G 容量不断增加，其余 DG 容\n量为 1MW， 其余条件与图20 相同。 各节点在最大\n容量下计算得到的临界电流值与此时的输出电流\n如附表 A1 所示。 \n从附表 A1 可以看出，当某个 DG 增加输出电\n流，其余 DG 容量为 1MW 时，线路末端节点 DG\n能够输出的电流较小，越靠近交流电网，DG 输出\n电流越大。 \n由附表 A1 还可以看出， 节点15 接入 DG 临界\n电流值最小。 假设电网发生对称故障后外部电网等\n值电势由 1.05pu 跌落至 0.05pu， 节点15 处 DG 容\n量由 0.5MW 不断增加， 其余DG 容量为 1MW，其\n余条件与图 20 相同，结果如附图 A1 所示。 \n由附图 A1 可以看出， 节点15 处 DG 能够输出\n的最大电流小于 0.1pu，因此在电压严重跌落下，\n线路末端 DG 输出电流受限，不能注入额定无功电\n流。若要保持稳定，则"
+    },
+    {
+      "page": 11,
+      "cue": "假设",
+      "snippet": "相同。 可以看出， 当按\n照阻抗角输出电流后，LTSVSMI 增加，在大电流\n的作用下，节点 15 处电压较高，这表明要在严重\n故障下维持高电压，需要 DG 输出大电流，而只有\n在阻抗角匹配的情况下 DG 输出大电流才会稳定运\n行。 实际上， 阻抗角匹配下DG 类似于一个电压源，\n能满足所带阻抗的功率需求。 \n5.2.2 多新能源场站并网系统不对称故障低电压\n穿越期间 LTSVSMI 的验证 \n假设图 16 中电网节点 2 发生两相相间短路，\n负序阻抗等于正序阻抗，DG 全发正序无功，外部\n电网等值电势为 1.050，其余条件与图 20 相同，\n结果如附图 A3 所示。 \n附图 A3 中临界稳定时节点27 看向电网的等值\n阻抗 0.168+0.186ipu，等值电势幅值为 0.525pu，\n式(12)计算得到临界电流值为 Imax3.118pu，DG 输\n出电流十分接近临界电流值"
+    },
+    {
+      "page": 12,
+      "cue": "假设",
+      "snippet": "幅\n值越小、 系统阻抗越大， 临界电流越小。 当LTSVSMI\n等于 1 时系统处于临界状态，LTSVSMI 小于 1，系\n统失去静态电压稳定。 选取合适的功率因数角可以\n增加临界电流和 LTSVSMI。 \n2）新能源低电压穿越 稳态期间静态电压稳定\n极限和正常稳态静态电压稳定极限的电压值、 电流\n值和视在功率一般不同，仅在为 0 时相同。 \n3）不对称故障和负荷影响戴维南等值电势和\n等值阻抗，假设阻抗角和不发生改变，则不对称\n故障会导致临界电流值和 LTSVSMI 减小。 \n4）将其余 DG 影响计入戴维南等值阻抗中，\n得到 多 新 能 源 场 站 并 网 系 统 的 临 界 电 流 值 和\nLTSVSMI 计算方法， 充分考虑不同DG 之间的相互\n影响，计算误差较小。 \n下一步工作在参考正常稳态静态电压稳定分\n析方法的基础上， 充分考虑新能源低电压穿越期间\n的不同控制策略， 进行更深入"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/11_Research_on_Static_Voltage_Stability_During_Low_voltage_Ride_pages.json",
+  "abstract": "ABSTRACT: During the steady -state period of low -voltage \nride-through in renewable energy integrated power grid with \nfaults, inappropriate active and reactive current injections can \nlead to system instability, causing static voltage stability issues. \nThis paper extends the normal steady -state static voltage \nstability analysis method to the low-voltage ride-through period \nof new energy generator, analyzes its mechanism, and defines \nthe static stability index for short circuit faults.  Firstly, \nconsidering the  low -voltage ride -through control strategy of  \nthe renewable energy generator, the critical current value for \nvoltage stability during the low -voltage ride-through period of \na single renewable energy source integrated power grid is \nobtained. A low -voltage ride -through static voltage stability \nmargin index (LTSVSMI) is defined. Difference is compared in \nstatic stability characteristics between new energy generator s \nduring low-voltage ride -through period and in the normal \nsteady state , and there are significant differences between the \ntwo stability limits. Secondly, to calculate the stability index \nfor an asymmetric fault in a single renewable energy integrated \npower grid, the negative-sequence and zero-sequence networks \nare treated as additional impe dances connected to the fault \npoint, and the impact of asymmetric faults is analyzed. In a \nmulti-source renewable energy power grid, the fault ports are \nspecially treated according to symmetric and asymmetric fault  \ntypes, and the influence of other renewab le energy sources is \nincorporated into virtual impedances, extending the application \nof the method to multi -source renewable energy integrated \npower grids. Finally, a single renewable energy source \ngrid -connected system and a multi -source renewable  \n基金项目：国网冀北电力公司科技项目(SGTYHT/23-JS-001)。 \nState Grid Corporation of China, Hebei North Power Company \nTechnology Project (SGTYHT/23-JS-001). \nenergy grid-connected system are simulated based on the IEEE \n33-node distribution network to validate the correctness of the \nderived results. \n",
+  "introduction": "0  引言 \n短路故障引起的稳定问题包括暂态稳定问题、\n静态电压稳定问题等[1]。随着新能源接入比例的增\n加， 新能源在故障低电压穿越期间的特性逐渐成为\n影响电力系统安全稳定的重要因素[2]，接入弱电网\n的新能源场站发生短路故障低电压穿越期间存在\n6778 中  国  电  机  工  程  学  报 第 45 卷 \n稳定问题， 研究新能源场站接入电网在故障期间的\n稳定问题及产生机理具有重要意义。 \n短路故障发生后新能源接入电网保持稳定， 则\n必须保证不发生各类稳定问题。故障大扰动后，新\n能源接入电网存在暂态稳定问题， 同时也可能引发\n次超同步振荡问题[1-3]。 新能源电源在故障期间特性\n不同于传统发电机[4]，故障期间新能源按照国标进\n行低电压穿越控制， 其数学模型可等效为非线性的\n压控电流源， 因此进行新能源电网的短路电流计算\n需要使用迭代法[5-7]。 故障低电压穿越期间新能源向\n电网注入一定的有功电流和无功电流， 类似于正常\n潮流中的 PQ 节点，因此低电压穿越稳态期间可能\n存在类似于潮流方程的静态电压稳定性问题。 当新\n能源在系统电压很低时按照低电压穿越控制策略\n向电网注入一定的有功电流和无功电流， 若注入的\n电流不合适， 则新能源低电压穿越期间将失去静态\n电压稳定性，此时即使不发生其他稳定问题，故障\n期间系统一定是不稳定的。 \n目前， 针对新能源接入电网正常稳态运行状态\n下的静态电压稳定或临界电压失稳问题的研究较\n多，方法可以分为解析法、连续潮流法、雅克比矩\n阵奇异分析法、非线性规划的方法，形成了静态电\n压稳定极限的评价指标 [8]，如短路比 [9-10]、阻抗模\n裕度[11]、 特征值[12]等。 电网正常运行静态电压稳定\n分析通常利用单机无穷大模型可以得到 PQ 节点的\n电压幅值解析表达式， 在假定注入有功和注入无功\n比例不变，即功率因数角不变的条件下，得到注入\n功率最大的工作状态。 而新能源低电压穿越期间按\n照控制策略注入一定的有功电流和无功电流， 与正\n常稳态的静态电压稳定分析类似。 由于正常稳态时\n控制量是有功和无功， 而新能源低电压穿越期间控\n制量是有功电流和无功电流， 低电压穿越期间的稳\n定极限是电流最大的工作状态，两者存在明显差\n异， 所以新能源故障低电压穿越期间的静态稳定分\n析不同于正常稳态运行状态，需要进行深入研究。 \n已有少量文献对新能源故障低电压穿越期间\n的稳定问题进行研究。文献[13]利用作图法得到电\n流传输极限，并且发现，注入电流超过电流传输极\n限时锁相环同样不稳定，引起暂态同步稳定问题。\n文献[14-15]利用相平面法 在对称故障电压跌落下\n研究了变流器低穿控制策略对故障稳态平衡点存\n在性影响，认为在电流传输极限较小时，变流器按\n照典型低电压穿越控制策略进行控制， 其无功电流\n增益系数必须合理设置，否则容易发生失稳问题。\n针对新能源低电压穿越期间失稳问题，文献 [16]提\n出利用储能装置 注入有功电流来 改善注入电流特\n性以维持系统稳定的措施；文献[17]提出弱电网下\n双馈风电机组有功电流和无功电流的分配原则。文\n献[13-17]说明， 在故障低电压下系统阻抗有电阻分\n量时， 新能源需要注入适量有功电流来保证低电压\n穿越期间的稳定。 现有文献一般是从新能源低电压\n穿越的控制结构和控制策略入手， 建立状态空间方\n程进行分析，方程较为复杂，难以分析多新能源接\n入电网低电压穿越期间的稳定性[16-17]。 部分文献采\n用大干扰稳定性分析方法， 通过建立系统的准稳态\n模型进行稳定性分析[13-15]。然而，这些文献并未使\n用正常稳态下成熟的静态电压稳定性分析方法， 并\n且未讨论多新能源接入电网的情境。文献[18]在不\n对称故障下对辐射状风电场电压稳定性进行分析，\n提出利用 零点存在性定理 判断短路计算方程解的\n存在性。但文献[18]没有给出评价故障低电压穿越\n期间电压稳定性的指标，显然此时传统的短路比、\n阻抗模裕度指标存在适用性问题。 \n本文首先明确新能源接入电网故障低穿期间\n存在静态电压稳定问题，引发系统失稳，并导致短\n路电流计算不收敛。 提出一种评价新能源低电压穿\n越期间静态电压稳定性的指标， 能够实现对多新能\n源接入电网静态电压稳定性分析。 \n1）将正常稳态运行下的静态电压稳定分析 方\n法扩展应用于故障低电压穿越场景， 考虑新能源低\n电压穿越控制策略的特殊性，推导电压解存在的临\n界电流值， 定义短路故障稳态期间的低电压穿越静\n态电压稳定裕度指标。 \n2）揭示低电压穿越稳态 期间静态电压稳定性\n与正常稳态静态电压稳定性问题之间的差异。 \n3）提出多新能源接入电网的静态电压稳定分\n析方法，在多新能源电网中对故障端口进行特殊处\n理，并将其他新能源的影响纳入虚拟阻抗中，推导\n稳定裕度指标。 \n",
+  "conclusion": "6  结论 \n1）新能源接入电网故障低穿期间存在静态电\n6788 中  国  电  机  工  程  学  报 第 45 卷 \n压稳定问题，并导致短路电流计算不收敛。从单新\n能源场站并网系统节点电压方程中推导得到电压\n唯一解时对应的临界电流，定义了 LTSVSMI。临\n界电流和 LTSVSMI 受交流系统电源幅值、系统阻\n抗、DG 输出电流功率因数角的影响。系统电源幅\n值越小、 系统阻抗越大， 临界电流越小。 当LTSVSMI\n等于 1 时系统处于临界状态，LTSVSMI 小于 1，系\n统失去静态电压稳定。 选取合适的功率因数角可以\n增加临界电流和 LTSVSMI。 \n2）新能源低电压穿越 稳态期间静态电压稳定\n极限和正常稳态静态电压稳定极限的电压值、 电流\n值和视在功率一般不同，仅在为 0 时相同。 \n3）不对称故障和负荷影响戴维南等值电势和\n等值阻抗，假设阻抗角和不发生改变，则不对称\n故障会导致临界电流值和 LTSVSMI 减小。 \n4）将其余 DG 影响计入戴维南等值阻抗中，\n得到 多 新 能 源 场 站 并 网 系 统 的 临 界 电 流 值 和\nLTSVSMI 计算方法， 充分考虑不同DG 之间的相互\n影响，计算误差较小。 \n下一步工作在参考正常稳态静态电压稳定分\n析方法的基础上， 充分考虑新能源低电压穿越期间\n的不同控制策略， 进行更深入、 场景更多样的分析。 \n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Research on Static Voltage Stability During Low-voltage Ride-through Under Short-circuit Fault Conditions in Renewable Energy Integrated Power Grids.pdf",
+  "file_sha256": "8bf357e10cf1599824e72e5e887310471b474cd31b72a75cf7f0889f068f6612",
+  "target_ids": [
+    "P17"
+  ]
+}

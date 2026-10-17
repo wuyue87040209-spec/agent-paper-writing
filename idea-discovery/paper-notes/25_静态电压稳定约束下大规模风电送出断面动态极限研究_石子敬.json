@@ -1,0 +1,1249 @@
+{
+  "schema_version": 2,
+  "filename": "静态电压稳定约束下大规模风电送出断面动态极限研究_石子敬.pdf",
+  "pages": 70,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": null,
+  "year_candidates": [],
+  "sections": {
+    "abstract": {
+      "text": "摘\n\n要\n随 着\n我\n国\n经\n济 的 快\n速\n增 长 ， 能\n源\n需 求 大 大\n提\n升 ， 大\n规\n模 开 采\n和\n使 用 化\n石\n能\n源\n给\n环\n境 带 来 了 巨\n大\n的 危 害\n。\n我 国 北 方\n地\n区\n风\n力 资\n源\n充\n足\n，\n近\n些\n年 随\n着\n碳\n中\n和\n碳\n达\n峰 目 标 的 提 出 ， 建 设 投 产 了\n一\n大\n批\n风\n场\n。\n但\n风\n电 资\n源\n充\n足\n的\n地\n区\n往\n往\n远\n离\n经\n济\n活\n动 中\n心\n， 因\n此\n大\n规\n模\n风\n电 场 需\n要\n经\n过\n外\n送\n通\n道\n接\n入\n电 网\n。\n为\n了 电 网 的 安\n全\n稳\n定 ， 调 度 需\n要\n监\n视\n并\n限\n制\n风\n电\n汇\n集\n与\n送\n出 断\n面\n功 率 ， 断\n面\n功 率 限 值\n通\n常\n是\n一\n个\n保 守 的 定\n值\n。\n一\n个\n地\n区 的\n风\n电 系 统\n包\n含 多\n级\n送\n出 断\n面\n， 断\n面\n之\n间 相\n互\n嵌\n套\n耦 合 ， 使 用 固 定 的 断\n面\n功\n率\n限 值\n严 重\n制 约 了\n风\n电 外\n送\n，\n造\n成\n了\n大\n量\n弃\n风\n。\n因\n此 ， 本\n文\n研\n究 大 规 模\n风\n电\n汇\n集 与\n送\n出\n地\n区 在 静\n态\n电\n压\n稳 定 约 束\n下\n送\n出 断\n面\n的\n动\n态 极 限 ， 充\n分\n利 用 断\n面\n传\n输 容\n量\n，\n提\n高\n风\n电\n外\n送\n功 率\n。\n本 文 的\n主\n要\n工\n作 如\n下\n：\n（ １ ） 阐\n述\n了\n连 续\n潮\n流\n法\n的\n基 本\n原\n理\n并\n建\n立\n数\n学\n模\n型 ，\n连\n续\n潮\n流\n法\n是\n计\n算\n静\n态 电\n压\n稳 定\n极\n限 的\n重\n要\n方\n法\n。\n首 先\n建\n立\n常 规 潮\n流\n计\n算 的 数 学 模\n型\n， 然\n后\n根\n据\n局\n部 参\n数\n化\n或\n弧 长 参 数\n化\n方\n法\n建\n立\n参 数\n方 程\n， 在 常 规 潮\n流\n模 型 中\n添\n加 参\n数 方\n程\n构\n造\n扩\n展 方\n程\n。 将\n扩\n展\n方\n程\n从 潮\n流\n初 始 点 出 发 ， 按\n照\n步 长\n控\n制\n、\n预\n测\n环\n节\n、\n校\n正\n环\n节\n步\n骤\n进\n行 循\n环\n计\n算\n， 求\n解\n静\n稳\n极 限\n。\n（ ２ ） 建\n立\n了\n大\n规 模\n风\n电\n汇\n集 与\n送\n出 系 统 仿 真 模 型 ，\n给\n出 了 断\n面\n的\n基\n本\n概\n念\n以\n及\n划 分 原 则 ，\n进\n行\n了\n场\n景\n聚 类\n和\n断\n面\n极\n限\n仿\n真\n计\n算\n。\n对\n电 力 系\n统 综\n合\n分\n析\n程\n序 （ Ｐ Ｓ\nＡ\nＳ Ｐ ） 进 行 简 单 的 介 绍 ，\n根\n据\n风\n电\n汇\n集 与\n送\n出 系 统 的 网 架 结 构 参\n数\n， 在\n仿 真 软 件 中 搭\n建\n模 型\n。\n基\n于\n风\n电\n汇\n集 与\n送\n出\n地\n区 的 年 历 史\n运\n行 数 据 ，\n根\n据\n时\n部\n法\n则 和 轮 廓 系 数 确 定 聚 类 簇 数 ， 并\n进\n行\n典 型\n场\n景 聚 类\n。\n对\n典 型\n场\n景\n的\n风\n电\n数\n据\n使 用 仿 真 模 型 求\n解\n断\n面\n极 限 。\n（ ３ ） 基 于 改\n进\n的 神\n经\n网\n络\n算 法\n求\n取 了\n大\n规\n模\n风\n电\n汇\n集\n与\n送\n出 断\n面\n的\n动\n态\n功\n率\n极\n限 。 阐\n述\n了 神\n经\n网\n络\n和\n遗\n传 算\n法\n的 基 本 原\n理\n及\n其\n特\n点 。 将\n遗\n传\n算\n法\n引\n入\n神\n经\n网\n络\n形 成 了 改\n进\n神\n经\n网\n络\n算\n法\n。 神\n经\n网\n络\n的 初 始\n参\n数 权 值\n和\n阈 值\n具 有\n随\n机\n性 ，\n影\n响 神\n经\n网 络\n运\n行 的 效 率\n和\n性 能 。 利 用\n遗\n传\n算\n法\n对\n网\n络\n初\n始\n参 数\n寻\n优\n可\n以\n有 效\n解\n决\n这\n个 问 题\n。\n基 于 改\n进\n神\n经\n网\n络\n算\n法\n对\n典 型 场 景 的 断 面 极 限\n进\n行\n拟\n合\n，\n得 到\n各\n断 面 的 动\n态\n极\n限 。\n",
+      "page_start": 4,
+      "page_end": 4,
+      "start": {
+        "page": 4,
+        "offset": 28
+      },
+      "end": {
+        "page": 4,
+        "offset": 1726
+      },
+      "preview_end": {
+        "page": 4,
+        "offset": 1726
+      },
+      "heading": "摘要",
+      "method": "joined_heading",
+      "end_reason": "keywords",
+      "total_chars": 1698,
+      "truncated": false,
+      "quality_flags": [
+        "joined_heading",
+        "multiple_heading_candidates",
+        "text:fragmented_text",
+        "text:private_use_characters"
+      ],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "第 １\n章\n绪\n论\n１\n．\n１\n研\n究\n背\n景\n及\n意\n义\n化\n石\n能\n源\n的\n燃\n烧\n产 生 了\n二\n氧 化 碳 ，\n二\n氧 化\n硫\n等\n温\n室\n气 体 和\n工\n业\n废\n物\n，\n温 室\n气\n体\n排 放\n到 大 气 中 加\n剧\n了\n温\n室\n效 应 带 来 了 酸\n雨\n等 危 害 ，\n工\n业\n废\n物\n中 含\n有\n的 Ｐ\nＭ\n２\n．\n５\n等\n粉\n尘\n导\n致\n严\n重\n的 雾 霾\n天\n气\n。\n日\n益 严\n峻 的\n环\n境\n问\n题\n， 引\n起\n了\n人\n们\n对\n能\n源\n问\n题\n的\n反\n思\n，\n人\n们\n对\n于\n绿\n色\n环\n保 能\n源\n呼\n声\n逐\n渐 增\n加\n。\n随 着\n经\n济 发\n展\n的\n进\n一\n步\n跨\n越\n，\n我\n国\n也\n亟\n需\n从\n过\n去 粗\n放\n式\n地\n发\n展\n转 变 为 精 细 化\n地\n发\n展\n。\n近\n年\n来\n， 国\n际\n上\n达 成\n减\n少\n温\n室\n气\n体 排\n放\n保\n护 环 境 的 共\n识\n， 国 内\n提\n出 了 碳 中\n和\n碳\n达\n峰 的 目\n标\n， 大 力 发\n展\n以\n光\n伏\n和\n风\n电 为 代\n表\n的 清 洁 能\n源\n， 加 快 了 我 国 能\n源\n向\n低\n碳\n环\n保\n的\n转\n型 。\n在\n众 多\n可\n再\n生\n能\n源\n发 电 中 ，\n风\n力 发 电\n具\n有 清\n洁\n环\n保\n、 廉\n储\n量\n丰\n富\n、\n运\n维\n成\n本\n低\n、\n经\n济 效\n益\n显\n著\n等\n特 点 。\n我\n国\n领\n土\n辽\n阔 ，\n风\n能\n储\n量\n巨 大 ，\n据\n统 计 ，\n可\n供\n开\n发 的\n陆\n上\n风\n电 资\n源\n约\n为 ２\n．\n５ ３ 亿\n千\n瓦\n，\n海\n洋\n风\n电 资\n源\n约 为 ７ ． ５ 亿\n千\n瓦\n［ １ ］\n。\n随 着\n政\n府 的 支\n持 与\n风\n力 发 电\n技\n术 的 飞\n速\n发\n展\n， 我 国\n风\n电\n装\n机\n容\n量\n逐\n年\n递\n增 ， ２ ０ ２ ３\n全\n年\n新 增\n风\n电\n并 网\n装\n机\n７ ５ ９ ０\n万\n千\n瓦\n，\n截\n止\n２ ０ ２ ３\n年\n底 ，\n我\n国\n风\n电 累\n计装\n机 ４ ． ４ １\n亿 千\n瓦\n。\n近\n年 来\n我\n国\n风\n电 装\n机\n容\n量\n大 幅 度 增 长 ，\n但\n随 着\n风\n电\n装\n机\n规\n模 的\n扩\n大\n，\n风\n电\n外\n送\n的 问\n题\n日\n益\n显\n著\n。\n我\n国\n地\n域\n广 阔 ，\n风\n电 资\n源\n丰\n富\n其\n分 布 大 多 位\n于\n西\n北\n、\n华\n北\n等\n地\n区 ，\n远\n离\n经\n济\n活\n动 中\n心\n。\n因\n此\n， 大\n规\n模\n风\n电\n场\n大 多\n经\n过\n高\n压\n线\n路\n接\n入\n电 网\n。\n由\n于\n风\n电\n场\n出 力\n不\n确 定 性 和\n远\n距\n离\n输\n电 特 点 ，\n大\n规\n模\n风\n电\n场\n的\n接\n入\n通\n常\n给\n电 网 带\n来\n了 系 统\n稳\n定 性\n方\n面 的 问\n题\n，\n包\n括\n静\n态 电\n压\n稳\n定 性\n和\n暂 态 电\n压\n稳\n定\n性\n。\n在 实\n际\n电 网\n的\n运\n行\n过\n程\n中 ， 为 了 确 保\n整\n个 电 力 系 统 的\n稳\n定\n运\n行\n，\n通\n常\n将\n风\n电\n场\n送\n出 功 率 的\n限\n值 固\n定\n为\n一\n定 值 ， 在 该 定 值 下 既\n可\n以 满\n足\n系 统 的\n静\n态\n电\n压 稳\n定\n又\n可\n以\n满\n足\n系\n统\n的\n暂\n态\n电\n压\n稳\n定\n。\n输\n电 断\n面\n（ 简\n称\n断\n面\n）\n是\n指\n在\n电 网 安\n全\n或\n电\n量\n交 易\n上\n相\n互\n关\n联\n的\n一\n组\n输\n电 线 路 （\n也\n可\n以 是\n变\n压\n器\n或 发\n电\n机\n等 ）\n。\n在 电 力 系 统 中 ， 断\n面\n一\n般\n是\n指\n起\n点\n和\n终\n点 相 同\n或\n相\n近\n， 功 率\n流\n向\n一\n致\n的\n一\n条\n或\n多 条 线 路 的\n组\n合\n［\n２ ］\n。\n然\n而\n为 了 系 统 的 稳 定\n运\n行\n，\n风\n电\n汇\n集\n与\n送\n出 断\n面\n的 功 率 限 值 作\n为\n定\n值\n通\n常\n较\n为 保 守\n。\n风\n电\n运\n行 场 景 多 ， 系 统 潮\n流\n变\n化\n复\n杂 ，\n严\n格 限 制 断\n面\n送\n出 功\n率\n导\n致\n大\n量\n的\n风\n电 资\n源\n无\n法\n输\n入\n电 网\n。\n大 规 模\n风\n电\n汇\n集\n与\n送\n出\n地\n区 ，\n送\n出 断\n面\n的 功 率\n限\n值\n制\n约\n风\n电 功 率 外\n送\n，\n成\n为\n影\n响\n风\n电 消\n纳\n严\n重\n问\n题\n。\n因\n此\n，\n根\n据\n风\n电 出 力\n和\n系\n统\n潮\n流\n变 化 ，\n得 到 关\n于\n断\n面\n送\n出 功 率 的\n动\n态\n极 限 ，\n提\n高\n风\n电 外\n送\n能 力 具\n有\n十\n分\n重\n要\n的\n意\n义\n。\n１\n\n华\n北\n电 力 大 学 硕\n士\n学 位 论\n文\n１ ． ２ 国 内\n外\n研\n究\n现\n状\n１ ． ２ ． １\n静\n态 电\n压\n稳\n定\n风\n电 区 别\n于 传\n统 的 发 电 方 式 ，\n风\n电 的\n接\n入\n会\n对\n系 统 产\n生\n冲\n击\n。\n风\n电 场 输 出 有\n功 功\n率\n较\n大 时 会\n造\n成\n风\n电\n接\n入\n点 和\n机\n端 电\n压\n的 突\n然\n下\n降 ， 电\n压\n的 下 降\n进\n而\n会 导 致\n系 统\n无\n功 需\n求\n的 增 加 ， 若\n无\n功\n不\n能\n及\n时 获 得 ， 系 统 会 出\n现\n电\n压\n崩 溃 的 情\n况\n［\n３ ］\n。\n电\n压\n稳\n定\n直\n接\n反\n应 出 电 力 系\n统\n的\n稳\n定\n程\n度 ，\n是\n分\n析\n电 力 系 统 稳 定 性 的 重\n要\n指 标\n。\n静 态 电\n压\n稳\n定 性\n是\n指 系 统 在\n遭\n受 小\n干\n扰\n后 ， 系 统 内 的 所 有 节 点 的 电\n压\n能 够 控\n制\n在\n允 许 的 范 围 内\n而\n不\n发\n生\n电\n压\n崩 溃 的 能 力 。 潮\n流\n方 程\n常 用\n于\n分 析 静\n态\n电\n压\n稳\n定\n问\n题\n，\n对\n电\n压\n稳 定 的\n分\n析\n过\n程\n即\n是 方\n程 的 求\n解\n过\n程\n。\n静\n态 电\n压\n稳 定 性 问\n题\n的 分 析\n方\n法\n有\nＰ Ｖ 曲 线\n法\n、\n",
+      "page_start": 9,
+      "page_end": 10,
+      "start": {
+        "page": 9,
+        "offset": 26
+      },
+      "end": {
+        "page": 10,
+        "offset": 588
+      },
+      "preview_end": {
+        "page": 10,
+        "offset": 588
+      },
+      "heading": "第1章绪论",
+      "method": "joined_heading",
+      "end_reason": "section",
+      "total_chars": 2554,
+      "truncated": false,
+      "quality_flags": [
+        "joined_heading",
+        "multiple_heading_candidates",
+        "numbered_boundary_candidate",
+        "text:fragmented_text",
+        "text:private_use_characters"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "第 ５ 章\n结\n论\n与 展 望\n５\n．\n１\n论\n文\n工\n作\n总\n结\n我\n国 北 方\n地\n区\n风\n力 资\n源\n充\n足\n，\n近\n些\n年 随 着 碳 中 和 碳\n达\n峰 目\n标\n的 提 出 ，\n北\n方\n地\n区\n建\n设 投 产 了\n一\n大\n批\n风\n力 场\n。\n但\n风\n电 资\n源\n充 足 的\n地\n区 往\n往\n远\n离\n经\n济\n活\n动 中\n心\n， 因\n此\n大\n规\n模\n风\n电 场 需\n要\n经\n过\n风\n电 外\n送\n通\n道\n接\n入\n电 网\n。\n为 了 电 网 的 安\n全\n稳 定 考 虑 ，\n调\n度 需\n要\n严\n格\n监\n视\n并 限 制\n风\n电\n汇\n集 与\n送\n出 断\n面\n功 率\n。\n当 前\n风\n电 并 网 系\n统\n规 模\n庞\n大 ，\n一\n个\n地\n区 的\n风\n电 系\n统\n通\n常\n包\n含 多\n层\n送\n出 断\n面\n， 断\n面\n之\n间\n往\n往 嵌 套 耦 合 相\n互\n影\n响\n。\n目 前 ，\n工\n程\n上\n经\n常 使 用 的\n断\n面\n功 率 固 定 限 值\n造\n成\n了 大\n量\n弃\n风\n， 断\n面\n传\n输 容\n量 无\n法\n得\n到 充 分 利 用 ，\n严 重\n制 约 了\n风\n电 外\n送\n和 消 纳\n。\n因\n此\n， 本 文\n研\n究\n大 规\n模\n风\n电\n汇\n集 与\n送\n出\n地\n区 在 静\n态\n电\n压\n稳 定 约 束\n下\n送\n出 断 面 的 动\n态\n极 限 ， 使 得 断 面 功 率 极 限 随 潮\n流\n状\n态\n而\n调 整 ， 充\n分\n利 用 传\n输\n容\n量\n，\n提\n高\n风\n电 外\n送\n功 率\n。\n本\n文\n主\n要\n工\n作 内\n容\n如\n下\n：\n（ ］ ） 阐\n述\n了 用 来\n求\n解\n静\n态\n电\n压\n稳 定 极 限 的\n连\n续 潮\n流\n法\n的 基\n本\n原\n理\n，\n建\n立\n了\n连\n续\n潮\n流 法\n的 数\n学\n模\n型\n。\n当 常\n规\n潮 流\n计\n算\n方 法\n用\n于\n连\n续\n潮\n流\n计\n算 时 ， 在 Ｐ\n－\nＶ 曲 线\n的 拐 点\n处\n会\n出\n现\n雅\n克 比\n矩\n阵\n奇\n异\n的\n现\n象 。\n连\n续\n潮\n流\n法\n在 常\n规\n潮\n流\n计 算\n方\n程\n中\n添\n加\n参 数\n方\n程\n， 构\n造\n扩\n展 方\n程\n，\n可\n以 有\n效\n解\n决\n雅\n克 比\n矩\n阵\n奇\n异 的 问\n题\n。\n参\n数 方\n程\n有\n两\n种 构\n造\n方 法\n， 分 别\n是\n局 部\n参\n数\n化\n和\n弧\n长\n参\n数\n化\n。\n扩\n展\n方\n程\n从 潮\n流\n起 始 点 出 发 ， 按\n照\n确\n定\n步\n长\n，\n预\n测\n环\n节\n，\n校\n正\n环\n节 的\n顺\n序\n进\n行 循\n环\n计\n算 ， 将\n满\n足\n精 度 要 求 的 解 绘\n制\n在\nＰ\n－\nＶ 曲 线 中\n。\n最\n终\n根据\nＰ\n－\nＶ\n曲 线 ，\n可\n以\n得\n到 某\n一\n母\n线 或 断\n面\n静\n态\n电 压 稳 定 功\n率 极 限 ， 灵 敏 度\n或\n有\n功\n裕\n度\n等 信 息\n。\n（ ２ ） 建\n立\n了\n大\n规\n模\n风\n电\n汇\n集 与\n送\n出 系 统 仿 真 模 型 ，\n通\n过\n场\n景\n聚 类 和 仿 真 计\n算\n获\n得\n了 断\n面\n功\n率\n极 限 样\n本\n。\n论\n述\n了 大\n规\n模\n风\n电\n汇\n集\n与\n送\n出 系 统\n输\n电 断 面 的\n基\n本\n概\n念\n以\n及\n划 分\n方\n法\n，\n介\n绍\n了 本\n文\n所\n研\n宄 的\n大\n规\n模\n风\n电\n汇\n集\n与\n送\n出 系 统 的 基 本 概\n况\n和\n该\n地\n区 的\n三\n级\n送\n出 断\n面\n。\n利 用 Ｐ Ｓ Ａ Ｓ Ｐ 仿 真 软 件 建\n立\n了 大 规\n模\n风\n电\n汇\n集 与\n送\n出 系\n统 模\n型 ， 求\n取\n了 系 统 的 静\n态\n电\n压\n稳 定 极\n限\n以\n及\n输 出 Ｐ\n－\nＶ 曲 线\n。\n基\n于\n该\n地\n区\n风\n电 的\n年\n历\n史\n运\n行 数\n据\n，\n进\n行\n风\n电\n运\n行\n场\n景\n聚 类 。 根 据 肘 部\n法\n则 和\n轮\n廓 系 数 确 定\n风\n电 聚\n类\n的\n簇\n数 ， 最\n终\n得\n到 六 种\n典\n型\n场 景\n。\n将 各 类 典 型 场 景 的 数 据\n输\n入\n仿\n真 模 型 ， 使 用\n静\n态\n电\n压\n稳 定 求\n解\n方\n法\n可\n以 计\n算\n得 到 大\n量\n的 断 面 功 率 极 限 数 据 。\n（ ３ ）\n基\n于\nＧ\nＡ\n优 化 Ｂ Ｐ 神\n经\n网\n络\n方\n法\n， 实\n现\n了 大\n规\n模\n风\n电\n汇\n集\n与\n送\n出 系\n统\n的\n断\n面\n功 率\n极\n限 的\n动 态\n计\n算 。\n针\n对\nＢ Ｐ 神\n经\n网\n络\n的 初 始\n参\n数 、\n权 值\n和 阈 值 随 机 给 定\n导\n致\n的 网\n络\n学 习 容 易 陷\n入\n局\n部\n最 优 、 学 习\n速\n度 慢 等 问\n题\n， 将\n遗\n传 算\n法\n引\n入\nＢ Ｐ 神\n５ ４\n\n华 北 电 力 大 学\n硕\n士\n学 位\n论\n文\n经\n网\n络\n的\n优\n化\n算\n法\n。\n引\n入\n遗 传 算\n法 对\n初 始\n权\n值 和 阈 值\n进\n行 寻\n优\n，\n提\n高 了 神\n经\n网\n络\n的 效 率\n和\n性 能\n。\n基\n于\n大\n量\n的 断\n面\n功 率 极 限\n样\n本 数 据 ，\n进\n行\n神\n经\n网\n络\n训\n练\n，\n得\n到\n了\n典 型 场 景 下 各 断 面 的 动\n态\n极 限\n。\n５ ． ２\n后\n续\n工\n作 展\n望\n本\n文\n针\n对\n大 规 模\n风\n电\n汇\n集\n与\n送\n出 断\n面\n动 态\n极\n限\n展\n开 了\n深\n入\n研\n究 ，\n但\n仍\n有\n一\n些\n问\n题\n有 待\n解\n决 ：\n（ １ ） 本 文 在\n风\n电 典 型\n场\n景 聚 类 时 ，\n通\n过\n肘\n部\n法\n则 和\n轮\n廓 系 数 确 定 了\n最\n佳\n聚\n类\n簇 数\n。\n根\n据 最 佳 聚 类 簇 数\n进\n行\n风\n电 场 景 聚 类 ， 发\n现\n场\n景\n５ 的 数 据 聚 类\n规\n律\n不 是\n很 明\n晰\n。\n对\n于\n这\n种\n情\n况\n，\n并\n非\n是\n内 部 聚\n和\n的 作 用 ，\n而\n是 因 为\n场\n景\n５ 的\n数\n据\n与\n其\n他\n场\n景 的\n数\n据 差 异\n性\n过\n大\n， 因\n此\n将\n这\n些\n数 据 聚\n合\n在\n一\n起\n。\n在\n后 续 的 研 宄 中 ，\n可\n以\n针\n对\n聚 类 后 的 数\n据\n，\n采 用 其 他\n距\n离 公\n式\n如\n兰\n氏\n距\n离\n、\n余\n弦\n距\n离 和\n其\n他\n评\n价\n方\n法\n如 最\n小\n距\n离\n代\n价 函 数\n法\n则\n等\n， 更\n进\n一\n步\n细\n分 ，\n挖\n掘 其 中 的 规\n律\n。\n（ ２ ） 本 文 在\n对\n典 型 场\n景\n断\n面\n极 限 拟\n合\n时 ，\n选\n择 了Ｇ\nＡ\n改\n进\n的 Ｂ Ｐ 神\n经\n网\n络\n算\n法\n。\n神\n经\n网\n络\n算 法 的\n优\n点\n是\n在\n不\n清\n楚 函\n数\n表\n达\n式 的\n情\n况\n下\n，\n只\n要\n设\n置\n足\n够 多 的 神\n经\n元\n和\n隐 含\n层\n，\n理\n论\n上\n能 够 拟 合 任 意 曲 线\n。\n但\n这\n也\n给 表\n达\n式 的\n输\n出 带 来 困\n难\n，\n表\n达\n式 的\n将\n会 非 常\n庞\n大\n。\n因\n此\n在 后 续 的\n研\n宄 中 ，\n可\n以 尝\n试\n其\n他\n的\n拟\n合 方\n法\n， 例\n如\n支\n持 向\n量\n机 回 归\n、\n随 机 森 林 回 归 等\n方\n法\n， 简 化 输 出 的 表\n达\n式\n， 与 神\n经\n网\n络\n方\n法\n进\n行\n对\n比\n。\n５ ５\n\n华\n北 电 力 大 学 硕 士 学 位 论 文\n",
+      "page_start": 62,
+      "page_end": 64,
+      "start": {
+        "page": 62,
+        "offset": 26
+      },
+      "end": {
+        "page": 64,
+        "offset": 26
+      },
+      "preview_end": {
+        "page": 64,
+        "offset": 26
+      },
+      "heading": "第5章结论与展望",
+      "method": "joined_heading",
+      "end_reason": "references",
+      "total_chars": 3121,
+      "truncated": false,
+      "quality_flags": [
+        "joined_heading",
+        "multiple_heading_candidates",
+        "text:fragmented_text",
+        "text:private_use_characters"
+      ],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "abstract:joined_heading",
+    "abstract:multiple_heading_candidates",
+    "abstract:text:fragmented_text",
+    "abstract:text:private_use_characters",
+    "conclusion:joined_heading",
+    "conclusion:multiple_heading_candidates",
+    "conclusion:text:fragmented_text",
+    "conclusion:text:private_use_characters",
+    "introduction:joined_heading",
+    "introduction:multiple_heading_candidates",
+    "introduction:numbered_boundary_candidate",
+    "introduction:text:fragmented_text",
+    "introduction:text:private_use_characters",
+    "page:10:fragmented_text",
+    "page:10:private_use_characters",
+    "page:11:fragmented_text",
+    "page:11:private_use_characters",
+    "page:12:fragmented_text",
+    "page:12:private_use_characters",
+    "page:13:fragmented_text",
+    "page:13:private_use_characters",
+    "page:14:fragmented_text",
+    "page:14:private_use_characters",
+    "page:15:fragmented_text",
+    "page:15:private_use_characters",
+    "page:16:fragmented_text",
+    "page:16:private_use_characters",
+    "page:17:fragmented_text",
+    "page:17:private_use_characters",
+    "page:18:fragmented_text",
+    "page:18:private_use_characters",
+    "page:19:fragmented_text",
+    "page:19:private_use_characters",
+    "page:1:fragmented_text",
+    "page:1:private_use_characters",
+    "page:20:fragmented_text",
+    "page:20:private_use_characters",
+    "page:21:fragmented_text",
+    "page:21:private_use_characters",
+    "page:22:fragmented_text",
+    "page:22:private_use_characters",
+    "page:23:fragmented_text",
+    "page:23:private_use_characters",
+    "page:24:fragmented_text",
+    "page:24:private_use_characters",
+    "page:25:fragmented_text",
+    "page:25:private_use_characters",
+    "page:26:fragmented_text",
+    "page:26:private_use_characters",
+    "page:27:fragmented_text",
+    "page:27:private_use_characters",
+    "page:28:fragmented_text",
+    "page:28:private_use_characters",
+    "page:29:fragmented_text",
+    "page:29:private_use_characters",
+    "page:2:fragmented_text",
+    "page:2:private_use_characters",
+    "page:30:fragmented_text",
+    "page:30:private_use_characters",
+    "page:31:fragmented_text",
+    "page:31:private_use_characters",
+    "page:32:fragmented_text",
+    "page:32:private_use_characters",
+    "page:33:fragmented_text",
+    "page:33:private_use_characters",
+    "page:34:fragmented_text",
+    "page:34:private_use_characters",
+    "page:35:fragmented_text",
+    "page:35:private_use_characters",
+    "page:36:fragmented_text",
+    "page:36:private_use_characters",
+    "page:37:fragmented_text",
+    "page:37:private_use_characters",
+    "page:38:fragmented_text",
+    "page:38:private_use_characters",
+    "page:39:fragmented_text",
+    "page:39:private_use_characters",
+    "page:3:fragmented_text",
+    "page:3:private_use_characters",
+    "page:40:fragmented_text",
+    "page:40:private_use_characters",
+    "page:41:fragmented_text",
+    "page:41:private_use_characters",
+    "page:42:fragmented_text",
+    "page:42:private_use_characters",
+    "page:43:fragmented_text",
+    "page:43:private_use_characters",
+    "page:44:fragmented_text",
+    "page:44:private_use_characters",
+    "page:45:fragmented_text",
+    "page:45:private_use_characters",
+    "page:46:fragmented_text",
+    "page:46:private_use_characters",
+    "page:47:fragmented_text",
+    "page:47:private_use_characters",
+    "page:48:fragmented_text",
+    "page:48:private_use_characters",
+    "page:49:fragmented_text",
+    "page:49:private_use_characters",
+    "page:4:fragmented_text",
+    "page:4:private_use_characters",
+    "page:50:fragmented_text",
+    "page:50:private_use_characters",
+    "page:51:fragmented_text",
+    "page:51:private_use_characters",
+    "page:52:fragmented_text",
+    "page:52:private_use_characters",
+    "page:53:fragmented_text",
+    "page:53:private_use_characters",
+    "page:54:fragmented_text",
+    "page:54:private_use_characters",
+    "page:55:fragmented_text",
+    "page:55:private_use_characters",
+    "page:56:fragmented_text",
+    "page:56:private_use_characters",
+    "page:57:fragmented_text",
+    "page:57:private_use_characters",
+    "page:58:fragmented_text",
+    "page:58:private_use_characters",
+    "page:59:fragmented_text",
+    "page:59:private_use_characters",
+    "page:5:fragmented_text",
+    "page:5:private_use_characters",
+    "page:60:fragmented_text",
+    "page:60:private_use_characters",
+    "page:61:fragmented_text",
+    "page:61:private_use_characters",
+    "page:62:fragmented_text",
+    "page:62:private_use_characters",
+    "page:63:fragmented_text",
+    "page:63:private_use_characters",
+    "page:64:fragmented_text",
+    "page:64:private_use_characters",
+    "page:65:fragmented_text",
+    "page:65:private_use_characters",
+    "page:66:fragmented_text",
+    "page:66:private_use_characters",
+    "page:67:fragmented_text",
+    "page:67:private_use_characters",
+    "page:68:fragmented_text",
+    "page:68:private_use_characters",
+    "page:69:fragmented_text",
+    "page:69:private_use_characters",
+    "page:6:fragmented_text",
+    "page:6:private_use_characters",
+    "page:70:fragmented_text",
+    "page:70:private_use_characters",
+    "page:7:fragmented_text",
+    "page:7:private_use_characters",
+    "page:8:fragmented_text",
+    "page:8:private_use_characters",
+    "page:9:fragmented_text",
+    "page:9:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 4,
+      "offset": 28,
+      "heading": "摘要",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 4,
+      "offset": 1726,
+      "heading": "关键词:",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "abstract",
+      "page": 5,
+      "offset": 26,
+      "heading": "abstract",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 6,
+      "offset": 2192,
+      "heading": "keywords:",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 9,
+      "offset": 26,
+      "heading": "第1章绪论",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 9,
+      "offset": 38,
+      "heading": "1.1研究背景",
+      "level": 2,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 10,
+      "offset": 588,
+      "heading": "vq曲线",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 14,
+      "offset": 26,
+      "heading": "第2章",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 21,
+      "offset": 25,
+      "heading": "第3章大",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 24,
+      "offset": 1398,
+      "heading": "it",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 27,
+      "offset": 768,
+      "heading": "is里",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 27,
+      "offset": 910,
+      "heading": "vli",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 27,
+      "offset": 988,
+      "heading": "vki",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 27,
+      "offset": 1077,
+      "heading": "vlo",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 27,
+      "offset": 1157,
+      "heading": "vh",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 27,
+      "offset": 1252,
+      "heading": "vl1",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 27,
+      "offset": 1326,
+      "heading": "vh1",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 27,
+      "offset": 1398,
+      "heading": "vi2",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 27,
+      "offset": 1464,
+      "heading": "vk2",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 33,
+      "offset": 221,
+      "heading": "itti",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 39,
+      "offset": 26,
+      "heading": "第4章",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 44,
+      "offset": 593,
+      "heading": "lj",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "backmatter",
+      "page": 47,
+      "offset": 72,
+      "heading": "附录",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "section",
+      "page": 47,
+      "offset": 1585,
+      "heading": "iu",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 48,
+      "offset": 119,
+      "heading": "mw",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 54,
+      "offset": 665,
+      "heading": "ll",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 62,
+      "offset": 26,
+      "heading": "第5章结论与展望",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 62,
+      "offset": 58,
+      "heading": "总结",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 64,
+      "offset": 26,
+      "heading": "参考文献",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 64,
+      "offset": 2324,
+      "heading": "ieee",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 64,
+      "offset": 3653,
+      "heading": "lr",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 65,
+      "offset": 2329,
+      "heading": "doi:10.13334/j.0258",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 65,
+      "offset": 2739,
+      "heading": "ietgeneration,",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 65,
+      "offset": 4224,
+      "heading": "ieee",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 66,
+      "offset": 1333,
+      "heading": "doi:10",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 66,
+      "offset": 3492,
+      "heading": "doi:10.13335/j.l000",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 67,
+      "offset": 1668,
+      "heading": "ijits",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "backmatter",
+      "page": 68,
+      "offset": 26,
+      "heading": "附录",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": true
+    }
+  ],
+  "toc_pages": [
+    7,
+    8
+  ],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 312
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 326
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 928
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1806
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 5229
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2499
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1127
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 316
+    },
+    {
+      "page": 9,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1991
+    },
+    {
+      "page": 10,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2352
+    },
+    {
+      "page": 11,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2390
+    },
+    {
+      "page": 12,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2357
+    },
+    {
+      "page": 13,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1827
+    },
+    {
+      "page": 14,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1700
+    },
+    {
+      "page": 15,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1815
+    },
+    {
+      "page": 16,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1610
+    },
+    {
+      "page": 17,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1628
+    },
+    {
+      "page": 18,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1302
+    },
+    {
+      "page": 19,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1701
+    },
+    {
+      "page": 20,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 955
+    },
+    {
+      "page": 21,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1904
+    },
+    {
+      "page": 22,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1595
+    },
+    {
+      "page": 23,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1717
+    },
+    {
+      "page": 24,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1642
+    },
+    {
+      "page": 25,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1707
+    },
+    {
+      "page": 26,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1308
+    },
+    {
+      "page": 27,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2874
+    },
+    {
+      "page": 28,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1690
+    },
+    {
+      "page": 29,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1929
+    },
+    {
+      "page": 30,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2021
+    },
+    {
+      "page": 31,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 924
+    },
+    {
+      "page": 32,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1609
+    },
+    {
+      "page": 33,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1452
+    },
+    {
+      "page": 34,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1089
+    },
+    {
+      "page": 35,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1319
+    },
+    {
+      "page": 36,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1118
+    },
+    {
+      "page": 37,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1511
+    },
+    {
+      "page": 38,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1344
+    },
+    {
+      "page": 39,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1892
+    },
+    {
+      "page": 40,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1055
+    },
+    {
+      "page": 41,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1820
+    },
+    {
+      "page": 42,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1039
+    },
+    {
+      "page": 43,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1385
+    },
+    {
+      "page": 44,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 933
+    },
+    {
+      "page": 45,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1536
+    },
+    {
+      "page": 46,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1466
+    },
+    {
+      "page": 47,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1948
+    },
+    {
+      "page": 48,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1801
+    },
+    {
+      "page": 49,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 482
+    },
+    {
+      "page": 50,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1006
+    },
+    {
+      "page": 51,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1358
+    },
+    {
+      "page": 52,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 952
+    },
+    {
+      "page": 53,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1218
+    },
+    {
+      "page": 54,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 749
+    },
+    {
+      "page": 55,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1013
+    },
+    {
+      "page": 56,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1433
+    },
+    {
+      "page": 57,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 812
+    },
+    {
+      "page": 58,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1275
+    },
+    {
+      "page": 59,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 620
+    },
+    {
+      "page": 60,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1173
+    },
+    {
+      "page": 61,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1808
+    },
+    {
+      "page": 62,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2033
+    },
+    {
+      "page": 63,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1086
+    },
+    {
+      "page": 64,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 3816
+    },
+    {
+      "page": 65,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 4270
+    },
+    {
+      "page": 66,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 3539
+    },
+    {
+      "page": 67,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2218
+    },
+    {
+      "page": 68,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 3672
+    },
+    {
+      "page": 69,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 4265
+    },
+    {
+      "page": 70,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 2220
+    }
+  ],
+  "limitation_hits": [],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/25_静态电压稳定约束下大规模风电送出断面动态极限研究_石子敬_pages.json",
+  "abstract": "摘\n\n要\n随 着\n我\n国\n经\n济 的 快\n速\n增 长 ， 能\n源\n需 求 大 大\n提\n升 ， 大\n规\n模 开 采\n和\n使 用 化\n石\n能\n源\n给\n环\n境 带 来 了 巨\n大\n的 危 害\n。\n我 国 北 方\n地\n区\n风\n力 资\n源\n充\n足\n，\n近\n些\n年 随\n着\n碳\n中\n和\n碳\n达\n峰 目 标 的 提 出 ， 建 设 投 产 了\n一\n大\n批\n风\n场\n。\n但\n风\n电 资\n源\n充\n足\n的\n地\n区\n往\n往\n远\n离\n经\n济\n活\n动 中\n心\n， 因\n此\n大\n规\n模\n风\n电 场 需\n要\n经\n过\n外\n送\n通\n道\n接\n入\n电 网\n。\n为\n了 电 网 的 安\n全\n稳\n定 ， 调 度 需\n要\n监\n视\n并\n限\n制\n风\n电\n汇\n集\n与\n送\n出 断\n面\n功 率 ， 断\n面\n功 率 限 值\n通\n常\n是\n一\n个\n保 守 的 定\n值\n。\n一\n个\n地\n区 的\n风\n电 系 统\n包\n含 多\n级\n送\n出 断\n面\n， 断\n面\n之\n间 相\n互\n嵌\n套\n耦 合 ， 使 用 固 定 的 断\n面\n功\n率\n限 值\n严 重\n制 约 了\n风\n电 外\n送\n，\n造\n成\n了\n大\n量\n弃\n风\n。\n因\n此 ， 本\n文\n研\n究 大 规 模\n风\n电\n汇\n集 与\n送\n出\n地\n区 在 静\n态\n电\n压\n稳 定 约 束\n下\n送\n出 断\n面\n的\n动\n态 极 限 ， 充\n分\n利 用 断\n面\n传\n输 容\n量\n，\n提\n高\n风\n电\n外\n送\n功 率\n。\n本 文 的\n主\n要\n工\n作 如\n下\n：\n（ １ ） 阐\n述\n了\n连 续\n潮\n流\n法\n的\n基 本\n原\n理\n并\n建\n立\n数\n学\n模\n型 ，\n连\n续\n潮\n流\n法\n是\n计\n算\n静\n态 电\n压\n稳 定\n极\n限 的\n重\n要\n方\n法\n。\n首 先\n建\n立\n常 规 潮\n流\n计\n算 的 数 学 模\n型\n， 然\n后\n根\n据\n局\n部 参\n数\n化\n或\n弧 长 参 数\n化\n方\n法\n建\n立\n参 数\n方 程\n， 在 常 规 潮\n流\n模 型 中\n添\n加 参\n数 方\n程\n构\n造\n扩\n展 方\n程\n。 将\n扩\n展\n方\n程\n从 潮\n流\n初 始 点 出 发 ， 按\n照\n步 长\n控\n制\n、\n预\n测\n环\n节\n、\n校\n正\n环\n节\n步\n骤\n进\n行 循\n环\n计\n算\n， 求\n解\n静\n稳\n极 限\n。\n（ ２ ） 建\n立\n了\n大\n规 模\n风\n电\n汇\n集 与\n送\n出 系 统 仿 真 模 型 ，\n给\n出 了 断\n面\n的\n基\n本\n概\n念\n以\n及\n划 分 原 则 ，\n进\n行\n了\n场\n景\n聚 类\n和\n断\n面\n极\n限\n仿\n真\n计\n算\n。\n对\n电 力 系\n统 综\n合\n分\n析\n程\n序 （ Ｐ Ｓ\nＡ\nＳ Ｐ ） 进 行 简 单 的 介 绍 ，\n根\n据\n风\n电\n汇\n集 与\n送\n出 系 统 的 网 架 结 构 参\n数\n， 在\n仿 真 软 件 中 搭\n建\n模 型\n。\n基\n于\n风\n电\n汇\n集 与\n送\n出\n地\n区 的 年 历 史\n运\n行 数 据 ，\n根\n据\n时\n部\n法\n则 和 轮 廓 系 数 确 定 聚 类 簇 数 ， 并\n进\n行\n典 型\n场\n景 聚 类\n。\n对\n典 型\n场\n景\n的\n风\n电\n数\n据\n使 用 仿 真 模 型 求\n解\n断\n面\n极 限 。\n（ ３ ） 基 于 改\n进\n的 神\n经\n网\n络\n算 法\n求\n取 了\n大\n规\n模\n风\n电\n汇\n集\n与\n送\n出 断\n面\n的\n动\n态\n功\n率\n极\n限 。 阐\n述\n了 神\n经\n网\n络\n和\n遗\n传 算\n法\n的 基 本 原\n理\n及\n其\n特\n点 。 将\n遗\n传\n算\n法\n引\n入\n神\n经\n网\n络\n形 成 了 改\n进\n神\n经\n网\n络\n算\n法\n。 神\n经\n网\n络\n的 初 始\n参\n数 权 值\n和\n阈 值\n具 有\n随\n机\n性 ，\n影\n响 神\n经\n网 络\n运\n行 的 效 率\n和\n性 能 。 利 用\n遗\n传\n算\n法\n对\n网\n络\n初\n始\n参 数\n寻\n优\n可\n以\n有 效\n解\n决\n这\n个 问 题\n。\n基 于 改\n进\n神\n经\n网\n络\n算\n法\n对\n典 型 场 景 的 断 面 极 限\n进\n行\n拟\n合\n，\n得 到\n各\n断 面 的 动\n态\n极\n限 。\n",
+  "introduction": "第 １\n章\n绪\n论\n１\n．\n１\n研\n究\n背\n景\n及\n意\n义\n化\n石\n能\n源\n的\n燃\n烧\n产 生 了\n二\n氧 化 碳 ，\n二\n氧 化\n硫\n等\n温\n室\n气 体 和\n工\n业\n废\n物\n，\n温 室\n气\n体\n排 放\n到 大 气 中 加\n剧\n了\n温\n室\n效 应 带 来 了 酸\n雨\n等 危 害 ，\n工\n业\n废\n物\n中 含\n有\n的 Ｐ\nＭ\n２\n．\n５\n等\n粉\n尘\n导\n致\n严\n重\n的 雾 霾\n天\n气\n。\n日\n益 严\n峻 的\n环\n境\n问\n题\n， 引\n起\n了\n人\n们\n对\n能\n源\n问\n题\n的\n反\n思\n，\n人\n们\n对\n于\n绿\n色\n环\n保 能\n源\n呼\n声\n逐\n渐 增\n加\n。\n随 着\n经\n济 发\n展\n的\n进\n一\n步\n跨\n越\n，\n我\n国\n也\n亟\n需\n从\n过\n去 粗\n放\n式\n地\n发\n展\n转 变 为 精 细 化\n地\n发\n展\n。\n近\n年\n来\n， 国\n际\n上\n达 成\n减\n少\n温\n室\n气\n体 排\n放\n保\n护 环 境 的 共\n识\n， 国 内\n提\n出 了 碳 中\n和\n碳\n达\n峰 的 目\n标\n， 大 力 发\n展\n以\n光\n伏\n和\n风\n电 为 代\n表\n的 清 洁 能\n源\n， 加 快 了 我 国 能\n源\n向\n低\n碳\n环\n保\n的\n转\n型 。\n在\n众 多\n可\n再\n生\n能\n源\n发 电 中 ，\n风\n力 发 电\n具\n有 清\n洁\n环\n保\n、 廉\n储\n量\n丰\n富\n、\n运\n维\n成\n本\n低\n、\n经\n济 效\n益\n显\n著\n等\n特 点 。\n我\n国\n领\n土\n辽\n阔 ，\n风\n能\n储\n量\n巨 大 ，\n据\n统 计 ，\n可\n供\n开\n发 的\n陆\n上\n风\n电 资\n源\n约\n为 ２\n．\n５ ３ 亿\n千\n瓦\n，\n海\n洋\n风\n电 资\n源\n约 为 ７ ． ５ 亿\n千\n瓦\n［ １ ］\n。\n随 着\n政\n府 的 支\n持 与\n风\n力 发 电\n技\n术 的 飞\n速\n发\n展\n， 我 国\n风\n电\n装\n机\n容\n量\n逐\n年\n递\n增 ， ２ ０ ２ ３\n全\n年\n新 增\n风\n电\n并 网\n装\n机\n７ ５ ９ ０\n万\n千\n瓦\n，\n截\n止\n２ ０ ２ ３\n年\n底 ，\n我\n国\n风\n电 累\n计装\n机 ４ ． ４ １\n亿 千\n瓦\n。\n近\n年 来\n我\n国\n风\n电 装\n机\n容\n量\n大 幅 度 增 长 ，\n但\n随 着\n风\n电\n装\n机\n规\n模 的\n扩\n大\n，\n风\n电\n外\n送\n的 问\n题\n日\n益\n显\n著\n。\n我\n国\n地\n域\n广 阔 ，\n风\n电 资\n源\n丰\n富\n其\n分 布 大 多 位\n于\n西\n北\n、\n华\n北\n等\n地\n区 ，\n远\n离\n经\n济\n活\n动 中\n心\n。\n因\n此\n， 大\n规\n模\n风\n电\n场\n大 多\n经\n过\n高\n压\n线\n路\n接\n入\n电 网\n。\n由\n于\n风\n电\n场\n出 力\n不\n确 定 性 和\n远\n距\n离\n输\n电 特 点 ，\n大\n规\n模\n风\n电\n场\n的\n接\n入\n通\n常\n给\n电 网 带\n来\n了 系 统\n稳\n定 性\n方\n面 的 问\n题\n，\n包\n括\n静\n态 电\n压\n稳\n定 性\n和\n暂 态 电\n压\n稳\n定\n性\n。\n在 实\n际\n电 网\n的\n运\n行\n过\n程\n中 ， 为 了 确 保\n整\n个 电 力 系 统 的\n稳\n定\n运\n行\n，\n通\n常\n将\n风\n电\n场\n送\n出 功 率 的\n限\n值 固\n定\n为\n一\n定 值 ， 在 该 定 值 下 既\n可\n以 满\n足\n系 统 的\n静\n态\n电\n压 稳\n定\n又\n可\n以\n满\n足\n系\n统\n的\n暂\n态\n电\n压\n稳\n定\n。\n输\n电 断\n面\n（ 简\n称\n断\n面\n）\n是\n指\n在\n电 网 安\n全\n或\n电\n量\n交 易\n上\n相\n互\n关\n联\n的\n一\n组\n输\n电 线 路 （\n也\n可\n以 是\n变\n压\n器\n或 发\n电\n机\n等 ）\n。\n在 电 力 系 统 中 ， 断\n面\n一\n般\n是\n指\n起\n点\n和\n终\n点 相 同\n或\n相\n近\n， 功 率\n流\n向\n一\n致\n的\n一\n条\n或\n多 条 线 路 的\n组\n合\n［\n２ ］\n。\n然\n而\n为 了 系 统 的 稳 定\n运\n行\n，\n风\n电\n汇\n集\n与\n送\n出 断\n面\n的 功 率 限 值 作\n为\n定\n值\n通\n常\n较\n为 保 守\n。\n风\n电\n运\n行 场 景 多 ， 系 统 潮\n流\n变\n化\n复\n杂 ，\n严\n格 限 制 断\n面\n送\n出 功\n率\n导\n致\n大\n量\n的\n风\n电 资\n源\n无\n法\n输\n入\n电 网\n。\n大 规 模\n风\n电\n汇\n集\n与\n送\n出\n地\n区 ，\n送\n出 断\n面\n的 功 率\n限\n值\n制\n约\n风\n电 功 率 外\n送\n，\n成\n为\n影\n响\n风\n电 消\n纳\n严\n重\n问\n题\n。\n因\n此\n，\n根\n据\n风\n电 出 力\n和\n系\n统\n潮\n流\n变 化 ，\n得 到 关\n于\n断\n面\n送\n出 功 率 的\n动\n态\n极 限 ，\n提\n高\n风\n电 外\n送\n能 力 具\n有\n十\n分\n重\n要\n的\n意\n义\n。\n１\n\n华\n北\n电 力 大 学 硕\n士\n学 位 论\n文\n１ ． ２ 国 内\n外\n研\n究\n现\n状\n１ ． ２ ． １\n静\n态 电\n压\n稳\n定\n风\n电 区 别\n于 传\n统 的 发 电 方 式 ，\n风\n电 的\n接\n入\n会\n对\n系 统 产\n生\n冲\n击\n。\n风\n电 场 输 出 有\n功 功\n率\n较\n大 时 会\n造\n成\n风\n电\n接\n入\n点 和\n机\n端 电\n压\n的 突\n然\n下\n降 ， 电\n压\n的 下 降\n进\n而\n会 导 致\n系 统\n无\n功 需\n求\n的 增 加 ， 若\n无\n功\n不\n能\n及\n时 获 得 ， 系 统 会 出\n现\n电\n压\n崩 溃 的 情\n况\n［\n３ ］\n。\n电\n压\n稳\n定\n直\n接\n反\n应 出 电 力 系\n统\n的\n稳\n定\n程\n度 ，\n是\n分\n析\n电 力 系 统 稳 定 性 的 重\n要\n指 标\n。\n静 态 电\n压\n稳\n定 性\n是\n指 系 统 在\n遭\n受 小\n干\n扰\n后 ， 系 统 内 的 所 有 节 点 的 电\n压\n能 够 控\n制\n在\n允 许 的 范 围 内\n而\n不\n发\n生\n电\n压\n崩 溃 的 能 力 。 潮\n流\n方 程\n常 用\n于\n分 析 静\n态\n电\n压\n稳\n定\n问\n题\n，\n对\n电\n压\n稳 定 的\n分\n析\n过\n程\n即\n是 方\n程 的 求\n解\n过\n程\n。\n静\n态 电\n压\n稳 定 性 问\n题\n的 分 析\n方\n法\n有\nＰ Ｖ 曲 线\n法\n、\n",
+  "conclusion": "第 ５ 章\n结\n论\n与 展 望\n５\n．\n１\n论\n文\n工\n作\n总\n结\n我\n国 北 方\n地\n区\n风\n力 资\n源\n充\n足\n，\n近\n些\n年 随 着 碳 中 和 碳\n达\n峰 目\n标\n的 提 出 ，\n北\n方\n地\n区\n建\n设 投 产 了\n一\n大\n批\n风\n力 场\n。\n但\n风\n电 资\n源\n充 足 的\n地\n区 往\n往\n远\n离\n经\n济\n活\n动 中\n心\n， 因\n此\n大\n规\n模\n风\n电 场 需\n要\n经\n过\n风\n电 外\n送\n通\n道\n接\n入\n电 网\n。\n为 了 电 网 的 安\n全\n稳 定 考 虑 ，\n调\n度 需\n要\n严\n格\n监\n视\n并 限 制\n风\n电\n汇\n集 与\n送\n出 断\n面\n功 率\n。\n当 前\n风\n电 并 网 系\n统\n规 模\n庞\n大 ，\n一\n个\n地\n区 的\n风\n电 系\n统\n通\n常\n包\n含 多\n层\n送\n出 断\n面\n， 断\n面\n之\n间\n往\n往 嵌 套 耦 合 相\n互\n影\n响\n。\n目 前 ，\n工\n程\n上\n经\n常 使 用 的\n断\n面\n功 率 固 定 限 值\n造\n成\n了 大\n量\n弃\n风\n， 断\n面\n传\n输 容\n量 无\n法\n得\n到 充 分 利 用 ，\n严 重\n制 约 了\n风\n电 外\n送\n和 消 纳\n。\n因\n此\n， 本 文\n研\n究\n大 规\n模\n风\n电\n汇\n集 与\n送\n出\n地\n区 在 静\n态\n电\n压\n稳 定 约 束\n下\n送\n出 断 面 的 动\n态\n极 限 ， 使 得 断 面 功 率 极 限 随 潮\n流\n状\n态\n而\n调 整 ， 充\n分\n利 用 传\n输\n容\n量\n，\n提\n高\n风\n电 外\n送\n功 率\n。\n本\n文\n主\n要\n工\n作 内\n容\n如\n下\n：\n（ ］ ） 阐\n述\n了 用 来\n求\n解\n静\n态\n电\n压\n稳 定 极 限 的\n连\n续 潮\n流\n法\n的 基\n本\n原\n理\n，\n建\n立\n了\n连\n续\n潮\n流 法\n的 数\n学\n模\n型\n。\n当 常\n规\n潮 流\n计\n算\n方 法\n用\n于\n连\n续\n潮\n流\n计\n算 时 ， 在 Ｐ\n－\nＶ 曲 线\n的 拐 点\n处\n会\n出\n现\n雅\n克 比\n矩\n阵\n奇\n异\n的\n现\n象 。\n连\n续\n潮\n流\n法\n在 常\n规\n潮\n流\n计 算\n方\n程\n中\n添\n加\n参 数\n方\n程\n， 构\n造\n扩\n展 方\n程\n，\n可\n以 有\n效\n解\n决\n雅\n克 比\n矩\n阵\n奇\n异 的 问\n题\n。\n参\n数 方\n程\n有\n两\n种 构\n造\n方 法\n， 分 别\n是\n局 部\n参\n数\n化\n和\n弧\n长\n参\n数\n化\n。\n扩\n展\n方\n程\n从 潮\n流\n起 始 点 出 发 ， 按\n照\n确\n定\n步\n长\n，\n预\n测\n环\n节\n，\n校\n正\n环\n节 的\n顺\n序\n进\n行 循\n环\n计\n算 ， 将\n满\n足\n精 度 要 求 的 解 绘\n制\n在\nＰ\n－\nＶ 曲 线 中\n。\n最\n终\n根据\nＰ\n－\nＶ\n曲 线 ，\n可\n以\n得\n到 某\n一\n母\n线 或 断\n面\n静\n态\n电 压 稳 定 功\n率 极 限 ， 灵 敏 度\n或\n有\n功\n裕\n度\n等 信 息\n。\n（ ２ ） 建\n立\n了\n大\n规\n模\n风\n电\n汇\n集 与\n送\n出 系 统 仿 真 模 型 ，\n通\n过\n场\n景\n聚 类 和 仿 真 计\n算\n获\n得\n了 断\n面\n功\n率\n极 限 样\n本\n。\n论\n述\n了 大\n规\n模\n风\n电\n汇\n集\n与\n送\n出 系 统\n输\n电 断 面 的\n基\n本\n概\n念\n以\n及\n划 分\n方\n法\n，\n介\n绍\n了 本\n文\n所\n研\n宄 的\n大\n规\n模\n风\n电\n汇\n集\n与\n送\n出 系 统 的 基 本 概\n况\n和\n该\n地\n区 的\n三\n级\n送\n出 断\n面\n。\n利 用 Ｐ Ｓ Ａ Ｓ Ｐ 仿 真 软 件 建\n立\n了 大 规\n模\n风\n电\n汇\n集 与\n送\n出 系\n统 模\n型 ， 求\n取\n了 系 统 的 静\n态\n电\n压\n稳 定 极\n限\n以\n及\n输 出 Ｐ\n－\nＶ 曲 线\n。\n基\n于\n该\n地\n区\n风\n电 的\n年\n历\n史\n运\n行 数\n据\n，\n进\n行\n风\n电\n运\n行\n场\n景\n聚 类 。 根 据 肘 部\n法\n则 和\n轮\n廓 系 数 确 定\n风\n电 聚\n类\n的\n簇\n数 ， 最\n终\n得\n到 六 种\n典\n型\n场 景\n。\n将 各 类 典 型 场 景 的 数 据\n输\n入\n仿\n真 模 型 ， 使 用\n静\n态\n电\n压\n稳 定 求\n解\n方\n法\n可\n以 计\n算\n得 到 大\n量\n的 断 面 功 率 极 限 数 据 。\n（ ３ ）\n基\n于\nＧ\nＡ\n优 化 Ｂ Ｐ 神\n经\n网\n络\n方\n法\n， 实\n现\n了 大\n规\n模\n风\n电\n汇\n集\n与\n送\n出 系\n统\n的\n断\n面\n功 率\n极\n限 的\n动 态\n计\n算 。\n针\n对\nＢ Ｐ 神\n经\n网\n络\n的 初 始\n参\n数 、\n权 值\n和 阈 值 随 机 给 定\n导\n致\n的 网\n络\n学 习 容 易 陷\n入\n局\n部\n最 优 、 学 习\n速\n度 慢 等 问\n题\n， 将\n遗\n传 算\n法\n引\n入\nＢ Ｐ 神\n５ ４\n\n华 北 电 力 大 学\n硕\n士\n学 位\n论\n文\n经\n网\n络\n的\n优\n化\n算\n法\n。\n引\n入\n遗 传 算\n法 对\n初 始\n权\n值 和 阈 值\n进\n行 寻\n优\n，\n提\n高 了 神\n经\n网\n络\n的 效 率\n和\n性 能\n。\n基\n于\n大\n量\n的 断\n面\n功 率 极 限\n样\n本 数 据 ，\n进\n行\n神\n经\n网\n络\n训\n练\n，\n得\n到\n了\n典 型 场 景 下 各 断 面 的 动\n态\n极 限\n。\n５ ． ２\n后\n续\n工\n作 展\n望\n本\n文\n针\n对\n大 规 模\n风\n电\n汇\n集\n与\n送\n出 断\n面\n动 态\n极\n限\n展\n开 了\n深\n入\n研\n究 ，\n但\n仍\n有\n一\n些\n问\n题\n有 待\n解\n决 ：\n（ １ ） 本 文 在\n风\n电 典 型\n场\n景 聚 类 时 ，\n通\n过\n肘\n部\n法\n则 和\n轮\n廓 系 数 确 定 了\n最\n佳\n聚\n类\n簇 数\n。\n根\n据 最 佳 聚 类 簇 数\n进\n行\n风\n电 场 景 聚 类 ， 发\n现\n场\n景\n５ 的 数 据 聚 类\n规\n律\n不 是\n很 明\n晰\n。\n对\n于\n这\n种\n情\n况\n，\n并\n非\n是\n内 部 聚\n和\n的 作 用 ，\n而\n是 因 为\n场\n景\n５ 的\n数\n据\n与\n其\n他\n场\n景 的\n数\n据 差 异\n性\n过\n大\n， 因\n此\n将\n这\n些\n数 据 聚\n合\n在\n一\n起\n。\n在\n后 续 的 研 宄 中 ，\n可\n以\n针\n对\n聚 类 后 的 数\n据\n，\n采 用 其 他\n距\n离 公\n式\n如\n兰\n氏\n距\n离\n、\n余\n弦\n距\n离 和\n其\n他\n评\n价\n方\n法\n如 最\n小\n距\n离\n代\n价 函 数\n法\n则\n等\n， 更\n进\n一\n步\n细\n分 ，\n挖\n掘 其 中 的 规\n律\n。\n（ ２ ） 本 文 在\n对\n典 型 场\n景\n断\n面\n极 限 拟\n合\n时 ，\n选\n择 了Ｇ\nＡ\n改\n进\n的 Ｂ Ｐ 神\n经\n网\n络\n算\n法\n。\n神\n经\n网\n络\n算 法 的\n优\n点\n是\n在\n不\n清\n楚 函\n数\n表\n达\n式 的\n情\n况\n下\n，\n只\n要\n设\n置\n足\n够 多 的 神\n经\n元\n和\n隐 含\n层\n，\n理\n论\n上\n能 够 拟 合 任 意 曲 线\n。\n但\n这\n也\n给 表\n达\n式 的\n输\n出 带 来 困\n难\n，\n表\n达\n式 的\n将\n会 非 常\n庞\n大\n。\n因\n此\n在 后 续 的\n研\n宄 中 ，\n可\n以 尝\n试\n其\n他\n的\n拟\n合 方\n法\n， 例\n如\n支\n持 向\n量\n机 回 归\n、\n随 机 森 林 回 归 等\n方\n法\n， 简 化 输 出 的 表\n达\n式\n， 与 神\n经\n网\n络\n方\n法\n进\n行\n对\n比\n。\n５ ５\n\n华\n北 电 力 大 学 硕 士 学 位 论 文\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/静态电压稳定约束下大规模风电送出断面动态极限研究_石子敬.pdf",
+  "file_sha256": "8f55d877f0eb6510caa739da5440dd2f82ab6a09908b189363abba80613601e2",
+  "target_ids": [
+    "P26"
+  ]
+}

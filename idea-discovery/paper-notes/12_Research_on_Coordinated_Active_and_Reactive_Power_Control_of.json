@@ -1,0 +1,367 @@
+{
+  "schema_version": 2,
+  "filename": "Research_on_Coordinated_Active_and_Reactive_Power_Control_of_VSC-HVDC_Connected_Renewable_Energy_System_for_Enhancing_Static_Voltage_Stability.pdf",
+  "pages": 6,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/ICPST65050.2025.11089174",
+  "year_candidates": [
+    "2026",
+    "2025"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—The static voltage stability studies of the AC system \nwith VSC-HVDC (Voltage Source Converter-based High Voltage \nDirect Current) connected renewable energy mainly focus on \nreactive power control. This paper proposes a coordinated active \nand reactive power control strategy based on the L -index to \nimprove the static voltage stability of the receiving-end AC system. \nFirstly, for a power system including the VSC-HVDC connected \nrenewable energy , the L -index and its sensitivity to different \nvariables are calculated. Secondly, an optimization model for \ncoordinated control of the VSC -HVDC connected renewable \nenergy is established  by using  the L -index of the receiving -end \nsystem as the optimization objective, and power flow, node voltage, \nand transmission power as co nstraints. Finally, the optimization \nmodel is solved using the Particle Swarm Optimization (PSO) \nalgorithm to obtain the optimal active and reactive power support \nvalues. Simulation results show that the coordinated control \nmethod can significantly improve the static voltage stability of the \nreceiving-end AC system while ensuring the safe operation of the \nsystem. \n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 1098
+      },
+      "end": {
+        "page": 1,
+        "offset": 2269
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 2269
+      },
+      "heading": "abstract—thestaticvoltagestabilitystudiesoftheacsystem",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1171,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. INTRODUCTION  \nWith the implementation of the \"dual carbon\" goals, the \nproportion of renewable energy has increased significantly. \nFlexible DC transmission technology, with its advantages in \nintegrating renewable energy, has become an important \ncomponent of modern power systems. However, this also poses \ngreater challenges to system voltage stability [1-3]. In normal \nworking conditions, the onshore converter station lacks active \nresponse and support for grid voltage disturbances, and the \ndynamic response capabilities for active and reactive power of \nthe flexible DC system cannot be fully utilized [4]. Therefore, it \nis essential to propose a coordinated active and reactive power \ncontrol strategy for the  power system including the VSC-HVDC \nconnected renewable energy . \nStatic voltage stability is an important indicator for \nmeasuring the ability of a power system to maintain stable \nvoltage levels under normal operating conditions. The main \nresearch methods for static voltage stability include the \ncontinuation power flow method [5], sensitivity analysis [6], \neigenvalue analysis [7], singular value analysis [8], L index, and \nartificial intelligence methods [9]. Among these methods, the L \nindex is widely used due to its fast computation speed, clear \nphysical meaning, and sensitivity to parameter changes. \nReference[10] combined power flow equations to propose the \nsensitivity of the L index to load and the relationship between \nthe L index and eigenvalues, and based on this, pointed out \nmethods to determine the threshold of the L index. Reference[11] \nproposed an improved PEM to calculate the moments and semi-\ninvariants of the L index for calculating voltage instability risk. \nReference[12] constructed a static voltage stability assessment \nmodel based on the L index using extended affine arithmetic, \nand then quantitatively evaluated the importance of each \nvariable's impact on static voltage stability. Although the above \nreferences have reasonably assessed the static voltage stability \nperformance based on the L index, they are all limited to AC \nsystems and rarely consider the impact of renewable energy \nintegration via VSC-HVDC. \nCurrently, research on the static voltage stability of a power \nsystem including the VSC-HVDC connected renewable energy \nmostly focuses on reactive power. Reference[13] uses the \nJacobian matrix at the system voltage collapse point to derive \nthe sensitivity of the system load margin to VSC-HVDC control \nparameters. It prioritizes adjusting the parameters with higher \nsensitivity to enhance static voltage stability. Reference[14 ] \nidentifies critical nodes and lines in AC/DC hybrid systems \nthrough modal analysis and improves the overall system's static \nvoltage stability by providing reactive power compensation to This work was supported by the Science & Technology Project of SGCC \n(Research on frequency and voltage support for deep-sea wind power \nintegrated through VSC-HVDC system, 4000-202318465A-3-2-ZN). \n1568\n2025 IEEE 3rd International Conference on Power Science and Technology\n979-8-3315-1182-1/25/$31.00 ©2025 IEEE\n2025 IEEE 3rd International Conference on Power Science and Technology (ICPST) | 979-8-3315-1182-1/25/$31.00 ©2025 IEEE | DOI: 10.1109/ICPST65050.2025.11089174\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 17:18:48 UTC from IEEE Xplore.  Restrictions apply. \nthese nodes or lines. Reference[15] establishes an optimization \nmodel with voltage deviation, L index, active power loss, and \ntotal reactive power compensation as optimization objectives to \nsolve the reactive power compensation capacity for offshore \nwind power integration via VSC-HVDC systems. It can be seen \nthat the primary focus of all the above references is given to the \noptimization of  reactive power compensation, neglecting the \ncontribution from active power regulation of the converter \nstations, which will be shown in the paper to play a significant \nrole in system static voltage stability as well.  \nIn light of the shortcomings of previous research, this paper \nproposes a coordinated active and reactive power control \nstrategy based on the L index. Firstly, for a power system \nincluding the VSC -HVDC connected renewable energy , the L \nindex and its sensitivity to different variables  are calculated \nbased on the power flow equations, and the renewable energy \nintegration via VSC-HVDC is modeled as a power source. Then, \nan optimization model for coordinated control of the VSC -\nHVDC connected renewable energy is established . The \noptimization model is solved using the PSO algorithm to obtain \nthe optimal active and reactive power support capacities. Finally, \nthe effectiveness of the proposed coordinated control method are \nverified in a model containing a VSC-HVDC system. \n",
+      "page_start": 1,
+      "page_end": 2,
+      "start": {
+        "page": 1,
+        "offset": 2400
+      },
+      "end": {
+        "page": 2,
+        "offset": 1414
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 1414
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 4867,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate",
+        "text:private_use_characters"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "V. CONCLUSION \nThis paper proposes a coordinated active and reactive power \ncontrol strategy for VSC-HVDC connected renewable energy  \nto improve system static voltage stability represented by the L \nindex. The sensitivity of L index to different variables are \ntheoretically explained and validated through simulations , \npresenting a calculation error that is less than 3% . Compared \nwith the methods providing only active power support, the \nproposed coordinated control strategy can improve the L index \nby almost 25% . Compared with the methods providing only \nreactive power support, the proposed strategy can not only \nbetter enhance the L index  but also ensure that the system's \nvoltage is within the safety limit. Comprehensive case studies \nhave demonstrated the effectiveness of the proposed control \nstrategy in improving system voltage stability. In the future, the \nimpact of the coordinated control strategy on other voltage \nstability indexes will be investigated. \n",
+      "page_start": 6,
+      "page_end": 6,
+      "start": {
+        "page": 6,
+        "offset": 520
+      },
+      "end": {
+        "page": 6,
+        "offset": 1505
+      },
+      "preview_end": {
+        "page": 6,
+        "offset": 1505
+      },
+      "heading": "v.conclusion",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 985,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "introduction:numbered_boundary_candidate",
+    "introduction:text:private_use_characters",
+    "page:2:private_use_characters",
+    "page:3:fragmented_text",
+    "page:3:private_use_characters",
+    "page:4:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 1098,
+      "heading": "abstract—thestaticvoltagestabilitystudiesoftheacsystem",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 2269,
+      "heading": "keywords—vsc-hvdcconnectedrenewableenergy,",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 2400,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 1414,
+      "heading": "ii.lindexandcorrespondingsensitivity",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 1695,
+      "heading": "llglllnl",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 1719,
+      "heading": "iyyyu",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 2210,
+      "heading": "iyyu=yyui",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 2477,
+      "heading": "lllnnnn",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 2606,
+      "heading": "llllz=y",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 3578,
+      "heading": "luu",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 90,
+      "heading": "lll",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 419,
+      "heading": "iri",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 447,
+      "heading": "lll",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 455,
+      "heading": "lll",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 1144,
+      "heading": "lllll",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 1164,
+      "heading": "lllll",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 1357,
+      "heading": "iii.coordinatedactiveandreactivepower",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 1669,
+      "heading": "c.thesolutionoftheoptimizationmodel",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 2767,
+      "heading": "iv.casestudy",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 1020,
+      "heading": "c.theimpactofactiveandreactivepowersupportonthe",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 2557,
+      "heading": "d.discussionsontheresultsofcoordinatedactiveand",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 6,
+      "offset": 520,
+      "heading": "v.conclusion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 6,
+      "offset": 1505,
+      "heading": "references",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5852
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 4469
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 3576
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 3506
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4873
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5576
+    }
+  ],
+  "limitation_hits": [],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/12_Research_on_Coordinated_Active_and_Reactive_Power_Control_of_pages.json",
+  "abstract": "Abstract—The static voltage stability studies of the AC system \nwith VSC-HVDC (Voltage Source Converter-based High Voltage \nDirect Current) connected renewable energy mainly focus on \nreactive power control. This paper proposes a coordinated active \nand reactive power control strategy based on the L -index to \nimprove the static voltage stability of the receiving-end AC system. \nFirstly, for a power system including the VSC-HVDC connected \nrenewable energy , the L -index and its sensitivity to different \nvariables are calculated. Secondly, an optimization model for \ncoordinated control of the VSC -HVDC connected renewable \nenergy is established  by using  the L -index of the receiving -end \nsystem as the optimization objective, and power flow, node voltage, \nand transmission power as co nstraints. Finally, the optimization \nmodel is solved using the Particle Swarm Optimization (PSO) \nalgorithm to obtain the optimal active and reactive power support \nvalues. Simulation results show that the coordinated control \nmethod can significantly improve the static voltage stability of the \nreceiving-end AC system while ensuring the safe operation of the \nsystem. \n",
+  "introduction": "I. INTRODUCTION  \nWith the implementation of the \"dual carbon\" goals, the \nproportion of renewable energy has increased significantly. \nFlexible DC transmission technology, with its advantages in \nintegrating renewable energy, has become an important \ncomponent of modern power systems. However, this also poses \ngreater challenges to system voltage stability [1-3]. In normal \nworking conditions, the onshore converter station lacks active \nresponse and support for grid voltage disturbances, and the \ndynamic response capabilities for active and reactive power of \nthe flexible DC system cannot be fully utilized [4]. Therefore, it \nis essential to propose a coordinated active and reactive power \ncontrol strategy for the  power system including the VSC-HVDC \nconnected renewable energy . \nStatic voltage stability is an important indicator for \nmeasuring the ability of a power system to maintain stable \nvoltage levels under normal operating conditions. The main \nresearch methods for static voltage stability include the \ncontinuation power flow method [5], sensitivity analysis [6], \neigenvalue analysis [7], singular value analysis [8], L index, and \nartificial intelligence methods [9]. Among these methods, the L \nindex is widely used due to its fast computation speed, clear \nphysical meaning, and sensitivity to parameter changes. \nReference[10] combined power flow equations to propose the \nsensitivity of the L index to load and the relationship between \nthe L index and eigenvalues, and based on this, pointed out \nmethods to determine the threshold of the L index. Reference[11] \nproposed an improved PEM to calculate the moments and semi-\ninvariants of the L index for calculating voltage instability risk. \nReference[12] constructed a static voltage stability assessment \nmodel based on the L index using extended affine arithmetic, \nand then quantitatively evaluated the importance of each \nvariable's impact on static voltage stability. Although the above \nreferences have reasonably assessed the static voltage stability \nperformance based on the L index, they are all limited to AC \nsystems and rarely consider the impact of renewable energy \nintegration via VSC-HVDC. \nCurrently, research on the static voltage stability of a power \nsystem including the VSC-HVDC connected renewable energy \nmostly focuses on reactive power. Reference[13] uses the \nJacobian matrix at the system voltage collapse point to derive \nthe sensitivity of the system load margin to VSC-HVDC control \nparameters. It prioritizes adjusting the parameters with higher \nsensitivity to enhance static voltage stability. Reference[14 ] \nidentifies critical nodes and lines in AC/DC hybrid systems \nthrough modal analysis and improves the overall system's static \nvoltage stability by providing reactive power compensation to This work was supported by the Science & Technology Project of SGCC \n(Research on frequency and voltage support for deep-sea wind power \nintegrated through VSC-HVDC system, 4000-202318465A-3-2-ZN). \n1568\n2025 IEEE 3rd International Conference on Power Science and Technology\n979-8-3315-1182-1/25/$31.00 ©2025 IEEE\n2025 IEEE 3rd International Conference on Power Science and Technology (ICPST) | 979-8-3315-1182-1/25/$31.00 ©2025 IEEE | DOI: 10.1109/ICPST65050.2025.11089174\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 17:18:48 UTC from IEEE Xplore.  Restrictions apply. \nthese nodes or lines. Reference[15] establishes an optimization \nmodel with voltage deviation, L index, active power loss, and \ntotal reactive power compensation as optimization objectives to \nsolve the reactive power compensation capacity for offshore \nwind power integration via VSC-HVDC systems. It can be seen \nthat the primary focus of all the above references is given to the \noptimization of  reactive power compensation, neglecting the \ncontribution from active power regulation of the converter \nstations, which will be shown in the paper to play a significant \nrole in system static voltage stability as well.  \nIn light of the shortcomings of previous research, this paper \nproposes a coordinated active and reactive power control \nstrategy based on the L index. Firstly, for a power system \nincluding the VSC -HVDC connected renewable energy , the L \nindex and its sensitivity to different variables  are calculated \nbased on the power flow equations, and the renewable energy \nintegration via VSC-HVDC is modeled as a power source. Then, \nan optimization model for coordinated control of the VSC -\nHVDC connected renewable energy is established . The \noptimization model is solved using the PSO algorithm to obtain \nthe optimal active and reactive power support capacities. Finally, \nthe effectiveness of the proposed coordinated control method are \nverified in a model containing a VSC-HVDC system. \n",
+  "conclusion": "V. CONCLUSION \nThis paper proposes a coordinated active and reactive power \ncontrol strategy for VSC-HVDC connected renewable energy  \nto improve system static voltage stability represented by the L \nindex. The sensitivity of L index to different variables are \ntheoretically explained and validated through simulations , \npresenting a calculation error that is less than 3% . Compared \nwith the methods providing only active power support, the \nproposed coordinated control strategy can improve the L index \nby almost 25% . Compared with the methods providing only \nreactive power support, the proposed strategy can not only \nbetter enhance the L index  but also ensure that the system's \nvoltage is within the safety limit. Comprehensive case studies \nhave demonstrated the effectiveness of the proposed control \nstrategy in improving system voltage stability. In the future, the \nimpact of the coordinated control strategy on other voltage \nstability indexes will be investigated. \n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Research_on_Coordinated_Active_and_Reactive_Power_Control_of_VSC-HVDC_Connected_Renewable_Energy_System_for_Enhancing_Static_Voltage_Stability.pdf",
+  "file_sha256": "90c96a9948e296065b04d29b225e64123a96db685a22dafdcd7c3282451bb2ab",
+  "target_ids": [
+    "P18"
+  ]
+}

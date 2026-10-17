@@ -1,0 +1,1206 @@
+{
+  "schema_version": 2,
+  "scope": {
+    "manifest": "idea-discovery/paper-notes/_targets.json",
+    "mode": "target_manifest",
+    "excluded": [
+      {
+        "id": "P27",
+        "file": null,
+        "discovery_source": "local_pdf",
+        "reason": "local_source"
+      },
+      {
+        "id": "P28",
+        "file": null,
+        "discovery_source": "local_pdf",
+        "reason": "local_source"
+      },
+      {
+        "id": "P29",
+        "file": null,
+        "discovery_source": "local_pdf",
+        "reason": "local_source"
+      },
+      {
+        "id": "P30",
+        "file": null,
+        "discovery_source": "local_pdf",
+        "reason": "local_source"
+      },
+      {
+        "id": "P31",
+        "file": null,
+        "discovery_source": "local_pdf",
+        "reason": "local_source"
+      },
+      {
+        "id": "P32",
+        "file": null,
+        "discovery_source": "local_pdf",
+        "reason": "local_source"
+      },
+      {
+        "id": "P33",
+        "file": null,
+        "discovery_source": "local_pdf",
+        "reason": "local_source"
+      },
+      {
+        "id": "P34",
+        "file": null,
+        "discovery_source": "local_pdf",
+        "reason": "local_source"
+      },
+      {
+        "id": "P35",
+        "file": null,
+        "discovery_source": "local_pdf",
+        "reason": "local_source"
+      },
+      {
+        "id": "L-A01",
+        "file": null,
+        "discovery_source": "local_pdf",
+        "reason": "local_source"
+      },
+      {
+        "id": "L-A02",
+        "file": null,
+        "discovery_source": "local_pdf",
+        "reason": "local_source"
+      },
+      {
+        "id": "L-A03",
+        "file": null,
+        "discovery_source": "local_pdf",
+        "reason": "local_source"
+      },
+      {
+        "id": "L-A04",
+        "file": null,
+        "discovery_source": "local_pdf",
+        "reason": "local_source"
+      },
+      {
+        "id": "L-A05",
+        "file": null,
+        "discovery_source": "local_pdf",
+        "reason": "local_source"
+      }
+    ],
+    "missing": [],
+    "matched": [
+      {
+        "id": "P01",
+        "title": "An Extended Continuation Power Flow Method for Static Voltage Stability Assessment of Renewable Power Generation-Penetrated Power Systems",
+        "file": "An_Extended_Continuation_Power_Flow_Method_for_Static_Voltage_Stability_Assessment_of_Renewable_Power_Generation-Penetrated_Power_Systems.pdf",
+        "discovery_source": "IEEE Xplore Journals",
+        "user_requested_local": false
+      },
+      {
+        "id": "P02",
+        "title": "SVG Configuration Scheme to Enhance Renewable Energy Accommodation Considering Voltage Stability Constraints in Renewable Power Grids",
+        "file": "SVG Configuration Scheme to Enhance Renewable Energy Accommodation Considering Voltage Stability Constraints in Renewable Power Grids.pdf",
+        "discovery_source": "IEEE Xplore Journals",
+        "user_requested_local": false
+      },
+      {
+        "id": "P03",
+        "title": "A Static Voltage Stability Enhancement Method for Power Systems With a High Proportion of Voltage Source Converters",
+        "file": "A_Static_Voltage_Stability_Enhancement_Method_for_Power_Systems_With_a_High_Proportion_of_Voltage_Source_Converters.pdf",
+        "discovery_source": "IEEE Xplore Journals",
+        "user_requested_local": false
+      },
+      {
+        "id": "P04",
+        "title": "Identification of the Worst-Case Static Voltage Stability Margin Interval of AC/DC Power System Considering Uncertainty of Renewables",
+        "file": "Identification_of_the_Worst-Case_Static_Voltage_Stability_Margin_Interval_of_AC_DC_Power_System_Considering_Uncertainty_of_Renewables.pdf",
+        "discovery_source": "IEEE Xplore Journals",
+        "user_requested_local": false
+      },
+      {
+        "id": "P05",
+        "title": "Optimal Enhancement Control of Static Voltage Stability Margin for AC/DC Power System With Renewables Considering Control Mode Switching of DC Converter Stations",
+        "file": "Optimal_Enhancement_Control_of_Static_Voltage_Stability_Margin_for_AC_DC_Power_System_With_Renewables_Considering_Control_Mode_Switching_of_DC_Converter_Stations.pdf",
+        "discovery_source": "IEEE Xplore Journals",
+        "user_requested_local": false
+      },
+      {
+        "id": "P06",
+        "title": "Power System Voltage Stability Evaluation Considering Renewable Energy With Correlated Variabilities",
+        "file": "Power_System_Voltage_Stability_Evaluation_Considering_Renewable_Energy_With_Correlated_Variabilities.pdf",
+        "discovery_source": "IEEE Xplore Journals",
+        "user_requested_local": false
+      },
+      {
+        "id": "P07",
+        "title": "A Scalable Method of Adaptive LVRT Settings Adjustment for Voltage Security Enhancement in Power Systems With High Renewable Penetration",
+        "file": "A_Scalable_Method_of_Adaptive_LVRT_Settings_Adjustment_for_Voltage_Security_Enhancement_in_Power_Systems_With_High_Renewable_Penetration.pdf",
+        "discovery_source": "IEEE Xplore Journals",
+        "user_requested_local": false
+      },
+      {
+        "id": "P08",
+        "title": "TPCPF: Three-Phase Continuation Power Flow Tool for Voltage Stability Assessment of Distribution Networks With Distributed Energy Resources",
+        "file": "TPCPF_Three-Phase_Continuation_Power_Flow_Tool_for_Voltage_Stability_Assessment_of_Distribution_Networks_With_Distributed_Energy_Resources.pdf",
+        "discovery_source": "IEEE Xplore Journals",
+        "user_requested_local": false
+      },
+      {
+        "id": "P09",
+        "title": "Renewable Power Hosting Capacity Assessment Considering L-Index for Static Voltage Stability",
+        "file": "Renewable_Power_Hosting_Capacity_Assessment_Considering_L-Index_for_Static_Voltage_Stability.pdf",
+        "discovery_source": "IEEE Conferences",
+        "user_requested_local": false
+      },
+      {
+        "id": "P10",
+        "title": "Static Voltage Stability Analysis of Renewable Energy Multi-Infeed Systems Based on Margin Index",
+        "file": "Static_Voltage_Stability_Analysis_of_Renewable_Energy_Multi-Infeed_Systems_Based_on_Margin_Index.pdf",
+        "discovery_source": "IEEE Conferences",
+        "user_requested_local": false
+      },
+      {
+        "id": "P11",
+        "title": "Static Voltage Stability Based Maximum Integration Ratio of Distributed Renewable Energy in Distribution Power System",
+        "file": "Static_Voltage_Stability_Based_Maximum_Integration_Ratio_of_Distributed_Renewable_Energy_in_Distribution_Power_System.pdf",
+        "discovery_source": "IEEE Conferences",
+        "user_requested_local": false
+      },
+      {
+        "id": "P12",
+        "title": "Probabilistic Static Voltage Stability Assessment for Distribution Network Considering Correlated Renewable Energy",
+        "file": "Probabilistic_Static_Voltage_Stability_Assessment_for_Distribution_Network_Considering_Correlated_Renewable_Energy.pdf",
+        "discovery_source": "IEEE Conferences",
+        "user_requested_local": false
+      },
+      {
+        "id": "P13",
+        "title": "Static Voltage Stability Analysis and Control Strategy of Distribution Network with High Proportion Distributed PV Generation During Fault",
+        "file": "Static_Voltage_Stability_Analysis_and_Control_Strategy_of_Distribution_Network_with_High_Proportion_Distributed_PV_Generation_During_Fault.pdf",
+        "discovery_source": "IEEE Conferences",
+        "user_requested_local": false
+      },
+      {
+        "id": "P14",
+        "title": "Static Voltage Stability Criterion of Renewable Energy Sources based on Power Flow Analysis",
+        "file": "Static_Voltage_Stability_Criterion_of_Renewable_Energy_Sources_based_on_Power_Flow_Analysis.pdf",
+        "discovery_source": "Engineering Village",
+        "user_requested_local": false
+      },
+      {
+        "id": "P15",
+        "title": "Jacobian-Free Krylov-Arnoldi Framework for Static Voltage Stability Estimation of Power Systems With 100% Renewable Energy",
+        "file": "Jacobian-Free_Krylov-Arnoldi_Framework_for_Static_Voltage_Stability_Estimation_of_Power_Systems_With_100_Renewable_Energy.pdf",
+        "discovery_source": "Engineering Village",
+        "user_requested_local": false
+      },
+      {
+        "id": "P16",
+        "title": "Static Voltage Stability Analysis of Large Scale Renewable Energy Delivered via Multi-Voltage-Level Transmission Sections",
+        "file": "Static_Voltage_Stability_Analysis_of_Large_Scale_Renewable_Energy_Delivered_via_Multi-Voltage-Level_Transmission_Sections.pdf",
+        "discovery_source": "Engineering Village",
+        "user_requested_local": false
+      },
+      {
+        "id": "P17",
+        "title": "Research on Static Voltage Stability During Low-voltage Ride-through Under Short-circuit Fault Conditions in Renewable Energy Integrated Power Grids",
+        "file": "Research on Static Voltage Stability During Low-voltage Ride-through Under Short-circuit Fault Conditions in Renewable Energy Integrated Power Grids.pdf",
+        "discovery_source": "Engineering Village",
+        "user_requested_local": false
+      },
+      {
+        "id": "P18",
+        "title": "Research on Coordinated Active and Reactive Power Control of VSC-HVDC Connected Renewable Energy System for Enhancing Static Voltage Stability",
+        "file": "Research_on_Coordinated_Active_and_Reactive_Power_Control_of_VSC-HVDC_Connected_Renewable_Energy_System_for_Enhancing_Static_Voltage_Stability.pdf",
+        "discovery_source": "Engineering Village",
+        "user_requested_local": false
+      },
+      {
+        "id": "P19",
+        "title": "Study of Static Voltage Stability Region Considering Integration of Renewable Energy Through VSC-HVDC System",
+        "file": "Study_of_Static_Voltage_Stability_Region_Considering_Integration_of_Renewable_Energy_Through_VSC-HVDC_System.pdf",
+        "discovery_source": "Engineering Village",
+        "user_requested_local": false
+      },
+      {
+        "id": "P20",
+        "title": "Online Data-Driven Evaluation Method of Static Voltage Stability Margin for AC/DC Hybrid Power Systems Considering Uncertainty of Renewable Energy",
+        "file": "Online_Data-Driven_Evaluation_Method_of_Static_Voltage_Stability_Margin_for_AC_DC_Hybrid_Power_Systems_Considering_Uncertainty_of_Renewable_Energy.pdf",
+        "discovery_source": "Engineering Village",
+        "user_requested_local": false
+      },
+      {
+        "id": "P21",
+        "title": "考虑新能源功率波动的静态电压稳定边界直接算法",
+        "file": "考虑新能源功率波动的静态电压稳定边界直接算法_李安然.pdf",
+        "discovery_source": "CNKI",
+        "user_requested_local": false
+      },
+      {
+        "id": "P22",
+        "title": "考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法",
+        "file": "考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法_赵冬梅.pdf",
+        "discovery_source": "CNKI",
+        "user_requested_local": false
+      },
+      {
+        "id": "P23",
+        "title": "计及静态电压稳定裕度的电力系统新能源承载能力评估方法",
+        "file": "计及静态电压稳定裕度的电力系统新能源承载能力评估方法_陈沁昊.pdf",
+        "discovery_source": "CNKI",
+        "user_requested_local": false
+      },
+      {
+        "id": "P24",
+        "title": "风电并网系统的静态电压稳定性研究",
+        "file": "风电并网系统的静态电压稳定性研究_葛飞飞.pdf",
+        "discovery_source": "CNKI",
+        "user_requested_local": false
+      },
+      {
+        "id": "P25",
+        "title": "基于PMU数据的新能源场站静态电压稳定在线评估",
+        "file": "基于PMU数据的新能源场站静态电压稳定在线评估_孔贺.pdf",
+        "discovery_source": "CNKI",
+        "user_requested_local": false
+      },
+      {
+        "id": "P26",
+        "title": "静态电压稳定约束下大规模风电送出断面动态极限研究",
+        "file": "静态电压稳定约束下大规模风电送出断面动态极限研究_石子敬.pdf",
+        "discovery_source": "CNKI",
+        "user_requested_local": false
+      }
+    ],
+    "unlisted": [],
+    "counts": {
+      "report_records": 40,
+      "excluded_records": 14,
+      "target_records": 26,
+      "matched_records": 26,
+      "missing_records": 0,
+      "matched_files": 26,
+      "unlisted_files": 0
+    }
+  },
+  "papers": [
+    {
+      "file": "A_Scalable_Method_of_Adaptive_LVRT_Settings_Adjustment_for_Voltage_Security_Enhancement_in_Power_Systems_With_High_Renewable_Penetration.pdf",
+      "target_ids": [
+        "P07"
+      ],
+      "pages": 12,
+      "head_chars": 14115,
+      "status": "text_detected",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": []
+        }
+      ]
+    },
+    {
+      "file": "A_Static_Voltage_Stability_Enhancement_Method_for_Power_Systems_With_a_High_Proportion_of_Voltage_Source_Converters.pdf",
+      "target_ids": [
+        "P03"
+      ],
+      "pages": 14,
+      "head_chars": 14676,
+      "status": "text_detected",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": []
+        }
+      ]
+    },
+    {
+      "file": "An_Extended_Continuation_Power_Flow_Method_for_Static_Voltage_Stability_Assessment_of_Renewable_Power_Generation-Penetrated_Power_Systems.pdf",
+      "target_ids": [
+        "P01"
+      ],
+      "pages": 5,
+      "head_chars": 13318,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": [
+            "fragmented_text"
+          ]
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": []
+        }
+      ]
+    },
+    {
+      "file": "Identification_of_the_Worst-Case_Static_Voltage_Stability_Margin_Interval_of_AC_DC_Power_System_Considering_Uncertainty_of_Renewables.pdf",
+      "target_ids": [
+        "P04"
+      ],
+      "pages": 14,
+      "head_chars": 12812,
+      "status": "text_detected",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": []
+        }
+      ]
+    },
+    {
+      "file": "Jacobian-Free_Krylov-Arnoldi_Framework_for_Static_Voltage_Stability_Estimation_of_Power_Systems_With_100_Renewable_Energy.pdf",
+      "target_ids": [
+        "P15"
+      ],
+      "pages": 12,
+      "head_chars": 13960,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": [
+            "control_characters_encoding_suspect"
+          ]
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "control_characters_encoding_suspect"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Online_Data-Driven_Evaluation_Method_of_Static_Voltage_Stability_Margin_for_AC_DC_Hybrid_Power_Systems_Considering_Uncertainty_of_Renewable_Energy.pdf",
+      "target_ids": [
+        "P20"
+      ],
+      "pages": 18,
+      "head_chars": 14497,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "fragmented_text"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Optimal_Enhancement_Control_of_Static_Voltage_Stability_Margin_for_AC_DC_Power_System_With_Renewables_Considering_Control_Mode_Switching_of_DC_Converter_Stations.pdf",
+      "target_ids": [
+        "P05"
+      ],
+      "pages": 13,
+      "head_chars": 14966,
+      "status": "text_detected",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": []
+        }
+      ]
+    },
+    {
+      "file": "Power_System_Voltage_Stability_Evaluation_Considering_Renewable_Energy_With_Correlated_Variabilities.pdf",
+      "target_ids": [
+        "P06"
+      ],
+      "pages": 10,
+      "head_chars": 13180,
+      "status": "text_detected",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": []
+        }
+      ]
+    },
+    {
+      "file": "Probabilistic_Static_Voltage_Stability_Assessment_for_Distribution_Network_Considering_Correlated_Renewable_Energy.pdf",
+      "target_ids": [
+        "P12"
+      ],
+      "pages": 5,
+      "head_chars": 12517,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Renewable_Power_Hosting_Capacity_Assessment_Considering_L-Index_for_Static_Voltage_Stability.pdf",
+      "target_ids": [
+        "P09"
+      ],
+      "pages": 5,
+      "head_chars": 12223,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters",
+            "fragmented_text"
+          ]
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Research on Static Voltage Stability During Low-voltage Ride-through Under Short-circuit Fault Conditions in Renewable Energy Integrated Power Grids.pdf",
+      "target_ids": [
+        "P17"
+      ],
+      "pages": 13,
+      "head_chars": 6465,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Research_on_Coordinated_Active_and_Reactive_Power_Control_of_VSC-HVDC_Connected_Renewable_Energy_System_for_Enhancing_Static_Voltage_Stability.pdf",
+      "target_ids": [
+        "P18"
+      ],
+      "pages": 6,
+      "head_chars": 10935,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters",
+            "fragmented_text"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "SVG Configuration Scheme to Enhance Renewable Energy Accommodation Considering Voltage Stability Constraints in Renewable Power Grids.pdf",
+      "target_ids": [
+        "P02"
+      ],
+      "pages": 5,
+      "head_chars": 13646,
+      "status": "text_detected",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": []
+        }
+      ]
+    },
+    {
+      "file": "Static_Voltage_Stability_Analysis_and_Control_Strategy_of_Distribution_Network_with_High_Proportion_Distributed_PV_Generation_During_Fault.pdf",
+      "target_ids": [
+        "P13"
+      ],
+      "pages": 5,
+      "head_chars": 11330,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Static_Voltage_Stability_Analysis_of_Large_Scale_Renewable_Energy_Delivered_via_Multi-Voltage-Level_Transmission_Sections.pdf",
+      "target_ids": [
+        "P16"
+      ],
+      "pages": 5,
+      "head_chars": 11390,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Static_Voltage_Stability_Analysis_of_Renewable_Energy_Multi-Infeed_Systems_Based_on_Margin_Index.pdf",
+      "target_ids": [
+        "P10"
+      ],
+      "pages": 8,
+      "head_chars": 28267,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": [
+            "control_characters_encoding_suspect"
+          ]
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": [
+            "replacement_characters",
+            "control_characters_encoding_suspect"
+          ]
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "replacement_characters",
+            "control_characters_encoding_suspect",
+            "fragmented_text"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Static_Voltage_Stability_Based_Maximum_Integration_Ratio_of_Distributed_Renewable_Energy_in_Distribution_Power_System.pdf",
+      "target_ids": [
+        "P11"
+      ],
+      "pages": 5,
+      "head_chars": 9347,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Static_Voltage_Stability_Criterion_of_Renewable_Energy_Sources_based_on_Power_Flow_Analysis.pdf",
+      "target_ids": [
+        "P14"
+      ],
+      "pages": 5,
+      "head_chars": 11183,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "Study_of_Static_Voltage_Stability_Region_Considering_Integration_of_Renewable_Energy_Through_VSC-HVDC_System.pdf",
+      "target_ids": [
+        "P19"
+      ],
+      "pages": 5,
+      "head_chars": 12677,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters"
+          ]
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters",
+            "fragmented_text"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "TPCPF_Three-Phase_Continuation_Power_Flow_Tool_for_Voltage_Stability_Assessment_of_Distribution_Networks_With_Distributed_Energy_Resources.pdf",
+      "target_ids": [
+        "P08"
+      ],
+      "pages": 12,
+      "head_chars": 12887,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "fragmented_text"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "基于PMU数据的新能源场站静态电压稳定在线评估_孔贺.pdf",
+      "target_ids": [
+        "P25"
+      ],
+      "pages": 124,
+      "head_chars": 708,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters",
+            "fragmented_text"
+          ]
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters",
+            "fragmented_text"
+          ]
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters",
+            "fragmented_text"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "考虑新能源功率波动的静态电压稳定边界直接算法_李安然.pdf",
+      "target_ids": [
+        "P21"
+      ],
+      "pages": 8,
+      "head_chars": 5736,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": [
+            "fragmented_text"
+          ]
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "fragmented_text"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法_赵冬梅.pdf",
+      "target_ids": [
+        "P22"
+      ],
+      "pages": 15,
+      "head_chars": 5332,
+      "status": "text_detected",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": []
+        }
+      ]
+    },
+    {
+      "file": "计及静态电压稳定裕度的电力系统新能源承载能力评估方法_陈沁昊.pdf",
+      "target_ids": [
+        "P23"
+      ],
+      "pages": 13,
+      "head_chars": 6270,
+      "status": "text_detected",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": []
+        }
+      ]
+    },
+    {
+      "file": "静态电压稳定约束下大规模风电送出断面动态极限研究_石子敬.pdf",
+      "target_ids": [
+        "P26"
+      ],
+      "pages": 70,
+      "head_chars": 713,
+      "status": "needs_text_review",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters",
+            "fragmented_text"
+          ]
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters",
+            "fragmented_text"
+          ]
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": [
+            "private_use_characters",
+            "fragmented_text"
+          ]
+        }
+      ]
+    },
+    {
+      "file": "风电并网系统的静态电压稳定性研究_葛飞飞.pdf",
+      "target_ids": [
+        "P24"
+      ],
+      "pages": 61,
+      "head_chars": 379,
+      "status": "text_detected",
+      "reason": null,
+      "sampled_pages": [
+        1,
+        2,
+        3
+      ],
+      "page_quality": [
+        {
+          "page": 1,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 2,
+          "error": null,
+          "quality_flags": []
+        },
+        {
+          "page": 3,
+          "error": null,
+          "quality_flags": []
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "text_detected": 9,
+    "needs_text_review": 17
+  }
+}

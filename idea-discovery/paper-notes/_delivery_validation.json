@@ -1,0 +1,182 @@
+{
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/RESEARCH_DIRECTIONS_新能源切换连续潮流_CN.md",
+  "heading_count": 28,
+  "template_structure_match": true,
+  "matrix_rows": 26,
+  "paper_links_manifest_match": true,
+  "missing_local_links": [],
+  "pdf_hashes_verified": 26,
+  "attachment_cited_pages": {
+    "P01": [
+      4,
+      5
+    ],
+    "P02": [
+      2,
+      4,
+      5
+    ],
+    "P03": [
+      1,
+      9,
+      12
+    ],
+    "P04": [
+      3,
+      4,
+      12
+    ],
+    "P05": [
+      3,
+      4,
+      10,
+      11
+    ],
+    "P06": [
+      3,
+      6,
+      9
+    ],
+    "P07": [
+      3,
+      8
+    ],
+    "P08": [
+      2,
+      4,
+      5
+    ],
+    "P09": [
+      3,
+      4,
+      5
+    ],
+    "P10": [
+      2,
+      5,
+      8
+    ],
+    "P11": [
+      2,
+      3,
+      4
+    ],
+    "P12": [
+      3,
+      4,
+      5
+    ],
+    "P13": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "P14": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "P15": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ],
+    "P16": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "P17": [
+      1,
+      2,
+      3,
+      11,
+      12
+    ],
+    "P18": [
+      1,
+      2,
+      5,
+      6
+    ],
+    "P19": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "P20": [
+      1,
+      2,
+      8,
+      9,
+      16,
+      17,
+      18
+    ],
+    "P21": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "P22": [
+      1,
+      2,
+      3,
+      4,
+      9,
+      12
+    ],
+    "P23": [
+      1,
+      2,
+      3,
+      7,
+      9,
+      10
+    ],
+    "P24": [
+      46,
+      49,
+      51,
+      58
+    ],
+    "P25": [
+      60,
+      64,
+      72,
+      73,
+      74,
+      75,
+      82,
+      113,
+      114,
+      115
+    ],
+    "P26": [
+      9,
+      10,
+      13,
+      14,
+      27,
+      28,
+      37,
+      43,
+      62,
+      63,
+      64
+    ]
+  },
+  "final_direction_review": "main-agent review; final independent review incomplete due quota",
+  "implementation_or_experiments_performed": false,
+  "cited_pages_outside_reviewed_pages": {},
+  "page_text_hashes_verified": 26
+}

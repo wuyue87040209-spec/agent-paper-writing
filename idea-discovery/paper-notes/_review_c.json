@@ -1,0 +1,376 @@
+{
+  "review_batch": "C",
+  "papers": [
+    {
+      "target_id": "P24",
+      "identity_verified": true,
+      "identity_evidence": {
+        "pages": [
+          1,
+          2
+        ],
+        "title": "风电并网系统的静态电压稳定性研究",
+        "author": "葛飞飞",
+        "year": 2024
+      },
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/风电并网系统的静态电压稳定性研究_葛飞飞.pdf",
+      "pdf_sha256": "c7f39a41d073e4cd39e6a6f2a0977f60ad410ba70e02d0b08566ac85ba4f36c5",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/26_风电并网系统的静态电压稳定性研究_葛飞飞_pages.json",
+      "pages_sha256": "6e2009a28da3eeed722c7c6a91a18facff83a4e4601e14d6b7f89b0c1f2db37a",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "code_audit 子agent，独立文本核验",
+      "read_ranges": [
+        {
+          "page_start": 1,
+          "page_end": 2,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 4,
+          "page_end": 4,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 7,
+          "page_end": 9,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 18,
+          "page_end": 20,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 32,
+          "page_end": 32,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 42,
+          "page_end": 46,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 48,
+          "page_end": 51,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 54,
+          "page_end": 59,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 49,
+          "start_offset": 544,
+          "end_offset": 791,
+          "quote": "应用连\n续潮流方法计算在 SNB 点处预测出力 0S 的实际负荷裕度 0λS ，同时可以获得在 SNB 点处\n雅可比矩阵零特征值对应的非零左特征向量 0ωS ，场景 iS 负荷裕度相对于预测场景 0S 负\n荷裕度变化量的估算值Δλ\ni\ne\nS 可由下式计算：\n0\nΔλ ω Δ\ni\ne\ns s\nf Pp\n \n （4.2）\n式中，   0 0 0\n/ /s s s f      ，因此任一场景 iS 下系统负荷裕度λ\ni\ne\nS 可采用式（4.3）进\n行估算。",
+          "interpretation": "在SNB点利用左特征向量构造出力场景负荷裕度灵敏度近似，已有裕度参与的场景削减机制。",
+          "kind": "method"
+        },
+        {
+          "page": 51,
+          "start_offset": 304,
+          "end_offset": 429,
+          "quote": "利用蒙特卡罗方法，成功生成了 300\n个风机出力场景，通过概率距离分析和削减技术，逐步将场景数量缩减至 35 个，确保\n剩余场景既具有代表性又不过于冗余。详细记录了削减后的场景数据，并得出了风电机\n组 1、风电机组 2 和风电机组 3 的等效出力值。",
+          "interpretation": "已有300场景削减至35并构造等效出力；此为文内报告，不是本项目实验。",
+          "kind": "method"
+        },
+        {
+          "page": 58,
+          "start_offset": 871,
+          "end_offset": 940,
+          "quote": "由于目前只考虑了风电并网后的静态电压稳定，没有考虑风电并网在动态和\n暂态稳定的情况，还需要进一步深入研究来提高动态和暂态电压稳定计算速度。",
+          "interpretation": "作者明确未研究动态/暂态稳定；不能由静态场景削减推得LVRT振荡判据。",
+          "kind": "author_limitation"
+        },
+        {
+          "page": 46,
+          "start_offset": 137,
+          "end_offset": 284,
+          "quote": "方案一：将 IEEE-14 节点系统中 8 号节点替换成 A 风电节点；\n方案二：将 IEEE-14 节点系统中 8 号节点替换成 B 风电节点；\n方案三：将 IEEE-14 节点系统中 3 号节点替换成 A 风电节点；\n方案四：将 IEEE-14 节点系统中 3 号节点替换成 B 风电节点。",
+          "interpretation": "四种实验方案分别单个节点替换，已读实验未提供多个新能源独立出力全域搜索证据。",
+          "kind": "experimental_scope"
+        }
+      ],
+      "section_boundary_review": "摘要物理p.4边界正确。引言正文为p.9–19；机器索引到p.20章2标题，预览截断，不作为完整绪论。结论与展望完整为p.58，p.59开始参考文献。只读所列范围。",
+      "issues": [
+        "机器预览/章节边界不足以代表完整章节",
+        "部分公式或图中文字提取错序/私用字符，不能直接抄录公式"
+      ],
+      "resolution": [
+        "依据目录和实际章页核对，另记证据范围，未篡改机器索引",
+        "按原始逐页文本确定逐字引文与offset；为阅读仅去空白/私用字符显示，原文文件保持不变"
+      ],
+      "unresolved": [
+        "未核验全部公式与未读页面；不据此声称全文无某内容"
+      ],
+      "status": "已核验该范围",
+      "usable_for_direction_evidence": true
+    },
+    {
+      "target_id": "P25",
+      "identity_verified": true,
+      "identity_evidence": {
+        "pages": [
+          1,
+          2
+        ],
+        "title": "基于PMU数据的新能源场站静态电压稳定在线评估",
+        "author": "孔贺",
+        "year": 2024
+      },
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/基于PMU数据的新能源场站静态电压稳定在线评估_孔贺.pdf",
+      "pdf_sha256": "92d78238f52782f0a8c1a40bebca7d99d9de9958dc2d5c894bb2d612d881f875",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/21_基于PMU数据的新能源场站静态电压稳定在线评估_孔贺_pages.json",
+      "pages_sha256": "1cd308600a0c37cd421d06909c357138b660ce253408a3b30dcd1e7258ebc716",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "code_audit 子agent，独立文本核验",
+      "read_ranges": [
+        {
+          "page_start": 1,
+          "page_end": 2,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 4,
+          "page_end": 5,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 9,
+          "page_end": 12,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 21,
+          "page_end": 23,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 60,
+          "page_end": 66,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 72,
+          "page_end": 75,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 79,
+          "page_end": 82,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 113,
+          "page_end": 115,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 60,
+          "start_offset": 422,
+          "end_offset": 1328,
+          "quote": "在 机\n理\n分 析 方\n面\n， 说 明 其\n对\n应\n一\n种 高 出 力\n下\n低\n电\n压\n穿\n越\n控\n制\n诱\n导 的\n非 光\n滑\n分 岔 （\nＨ\nｉ\nｇ ｈ Ｏ\nｕ\nｔ\nｐ\nｕ\nｔ  Ｅ ｘ ｃ ｉ ｔ ｅ ｄ Ｌ ｏ\nｗ\n ｖ ｏ ｌ ｔ ａ ｇ ｅ  ｒ ｉ ｄ ｅ  ｔ ｈｒｏ\nｕ\nｇｈ ｃ ｏ\nｎ\nｔ ｒ ｏ ｌ  Ｉ ｎ ｄ\nｕ\nｃ ｅ ｄ\nＮ\nｏ ｎ\n－\nｓ\nｍ\nｏ ｏ ｔ ｈ\nＢ ｉ ｆ ｕｒ ｃ ａ ｔ ｉ ｏ ｎ ， \nＨ\nＬ ＩＮＢ ） ， 并 分 析 了\nＨ\nＬ Ｉ\nＮ\nＢ  与\n鞍\n结\n分\n岔 （ Ｓ ａ ｄ ｄ ｌ ｅ \nｎ\nｏ ｄ ｅ ｂ ｉ ｆｕｒ ｃ ａ ｔ ｉ ｏ\nｎ\n，\nＳ\nＮ\nＢ ）\n发\n生\n的\n边\n界\n条\n件 ；\n在\n判\n据\n方\n面\n， 给 出 了 发\n生\nＨ\nＬ Ｉ\nＮ\nＢ 的 判\n据\n， 并 结\n合\n二\n阶\n锥 算\n法\n给 出 判 据 的 阈 值\n计\n算 方 法 。\n具\n体\n地\n， 首 先 ， 基\n于\n实 际 案 例 ，\n对\n陆\n上\n风\n电 场\n无\n故 障\n、\n高 出 力\n下\n， 由\n低\n穿\n控\n制\n方\n式 导\n致\n的 电\n压\n振\n荡\n现\n象\n进\n行\n了\n分\n析 ，\n说\n明 了 该\n振\n荡\n现\n象\n对\n应\n于\nＨ\nＬ Ｉ\nＮ\nＢ ，\n进\n一\n步\n，\n推\n导 了\nＨ\nＬ Ｉ\nＮ\nＢ 与 Ｓ\nＮ\nＢ 发\n生\n的\n边\n界\n条\n件 ， 结\n果\n表\n明 ，\n在\n风\n电\n场\n的 典\n型\n低 穿\n控\n制\n方\n式\n下\n，\n陆\n上\n风\n电 场\n在\n高 出 力 时\n更\n容\n易 发\n生\nＨ Ｌ Ｉ\nＮ\nＢ\n而\n非\nＳ\nＮ\nＢ ；\n其\n次 ，\n分 析 了 其\n他\n风\n电 场\n无\n功\n控\n制\n方\n式\n对\n于\n待\n评\n估\n风\n电\n场\n的 最 大\n输\n出\n功\n率 的\n影\n响 ，\n并\n基\n于\n二\n阶\n锥\n算 法 ，\n给\n出 了 考 虑\n风\n电 场 无 功\n控\n制 方 式\n及\n无\n功 约 束 下 ，\n计\n及\nＨ\nＬ Ｉ\nＮ\nＢ\n约 束 的\n风\n电 场 的 最 大 输 出 功 率 的 计 算\n方 法\n；",
+          "interpretation": "已提出HLINB与SNB边界条件，并考虑无功控制/无功约束求最大输出功率。",
+          "kind": "method"
+        },
+        {
+          "page": 75,
+          "start_offset": 108,
+          "end_offset": 237,
+          "quote": "在\n本\n文\n中 ， 暂\n不\n考 虑\n改\n变 中\n其\n他\n风\n电 场 的 有 功 功 率 的 改 变 ， 因\n此\n， 当 其\n他\n风\n电\n场\n采\n用 定 功 率 因\n数\n控 制 时 ， 其 无 功 功 率\n不\n变\n，\n可\n被 等 值 为 Ｐ Ｑ 节 点\n。",
+          "interpretation": "计算待评估风电场极限时固定其他风电场有功；该范围限制可支持研究多个独立有功工况的有限推断。",
+          "kind": "author_assumption"
+        },
+        {
+          "page": 82,
+          "start_offset": 879,
+          "end_offset": 1000,
+          "quote": "值\n得 说\n明 的 是 ，\n本\n文\n目 前 仅\n针\n对\nＨ\nＬ Ｉ\nＮ\nＢ 的 特 定 算 例 ，\n给\n出 了\n振\n荡 的\n过\n程\n分 析 ，\n数\n学\n机\n理\n方\n面\n尚\n有\n所\n欠\n缺\n，\n这\n将\n成\n为\n未\n来\n工\n作\n的\n重\n点\n。",
+          "interpretation": "作者自述特定算例过程分析，数学机理仍欠缺。",
+          "kind": "author_limitation"
+        },
+        {
+          "page": 114,
+          "start_offset": 1426,
+          "end_offset": 1721,
+          "quote": "在\n低\n电\n压\n穿\n越\n控\n制\n诱\n导 的 陆\n上\n风\n电\n场\n电\n压\n振\n荡 失\n稳\n机\n理\n研\n宄\n方\n面\n，\n在\n风\n电 场 的 模 型 中 ， 考 虑 了\n风\n电 场\n正\n常\n状\n态\n下 的 有 功\n和\n无\n功\n控\n制 ， 考\n虑\n了 简\n化\n的\n低\n电 压 穿\n越\n控\n制 ，\n而\n对\n于\nＣ ｒ ｏ\nｗ\nｂ ａ ｒ 的\n投\n切\n， 换\n流\n器\n的\n模\n型 等\n都\n未 考\n虑\n，\n这\n可\n能\n导\n致\n仿 真 的\n振\n荡 模 型 与 实 际 的 模 型 略 有 差 异 ， 未\n来\n需\n进\n一\n步\n细\n化\n模\n型\n，\n进\n一\n步\n研\n宄 电\n压\n振\n荡\n现\n象 。",
+          "interpretation": "作者自述采用简化LVRT，未考虑Crowbar投切和换流器模型。",
+          "kind": "author_limitation"
+        },
+        {
+          "page": 64,
+          "start_offset": 1131,
+          "end_offset": 1310,
+          "quote": "注\n２ ： 在\n上\n述\n过 程\n中 ，\n并 未 设\n置\n故 障 ， 与\n一\n般\n的 故 障 导\n致\n风\n电\n场\n进\n入\n低\n穿\n不 同 ，\n本\n文\n是 在\n无\n故 障 下 ， 由\n于\n风\n电 场 有 功\n输\n出\n过\n高 导\n致\n电\n压\n低\n于\n低\n穿 阈\n值\n而\n进\n入\n低\n穿 的\n。\n这\n与 文\n献\n［\n１ ０ ］\n提\n到 的\n现\n象 相 同\n。",
+          "interpretation": "研究的是无故障、高有功导致进入低穿，并非仅故障恢复；不能把该机理再称空白。",
+          "kind": "scope"
+        },
+        {
+          "page": 75,
+          "start_offset": 887,
+          "end_offset": 1331,
+          "quote": "本 小\n节\n应\n用 图 ４\n－\n１ ０ 改\n造\n的 ３\n机\n９ 节 点 系 统\n验\n证\n所\n提\n方\n法\n最\n大\n功 率 计 算 结\n果\n的 有 效\n性\n。\n设\n置\nＷ\n２\n为\n定 功 率 因\n数\n控\n制 ｃ ｏ ｓ （ （\nｐ ）\n＝\nｌ ， 初\n始\n功 率 出 力\n为\n１ ． ２ｐ\n．\nｕ\n．\n； 设\n置\nＷ\n３ 为 定 功\n率\n因\n数\n控\n制 ｃ ｏ ｓ （ （\nｐ ）\n＝\n〇 ． ９ ８ ６ ， 出 力 为 １\n．\n５\n＋\nｊ ０\n．\n２ ５ ｐ\nｍ\n．\n。\n基\n于\n所\n提\n方\n法\n进\n行\n计\n算 ，\n在\n此\n情\n况\n下\n，\nＷ\n３ 的 Ｐ\nｏ\nＴｊ ｒ 为 １ ． ４ ２ ｐ\n．\nｕ\n．\n，\n进\n一\n步\n地\n，\n在\nＰ Ｓ\nＤ\n－\nＢ ＰＡ 中\n分\n别\n设\n置\nＷ\n３ 的 有 功 功 率 增\n长\n至\n１ ． ４ ０ 和 １ ． ４ ５  ｐ\n．\nｕ\n．\n，\n观\n察\nＷ\n３ 的 有 功\n及\n电 压 曲 线 图 ，\n如 图 ４\n－\n１ ５\n所\n示\n。",
+          "interpretation": "以PSD-BPA进行阈值两侧时域验证；数值仅为原论文算例。",
+          "kind": "validation"
+        }
+      ],
+      "section_boundary_review": "摘要p.4–5正确。引言实际p.12–22，机器在p.21的1.4前停止且预览截断，不能认为全文绪论已读。结论机器只到p.113而漏掉p.114结论续文和7.2展望；人工证据范围修正为p.113–114，p.115开始参考文献。",
+      "issues": [
+        "机器预览/章节边界不足以代表完整章节",
+        "部分公式或图中文字提取错序/私用字符，不能直接抄录公式"
+      ],
+      "resolution": [
+        "依据目录和实际章页核对，另记证据范围，未篡改机器索引",
+        "按原始逐页文本确定逐字引文与offset；为阅读仅去空白/私用字符显示，原文文件保持不变",
+        "关键物理p.75经pdftoppm渲染并视觉核对，确认固定其他风电场有功假设"
+      ],
+      "unresolved": [
+        "未核验全部公式与未读页面；不据此声称全文无某内容"
+      ],
+      "status": "已核验该范围",
+      "usable_for_direction_evidence": true
+    },
+    {
+      "target_id": "P26",
+      "identity_verified": true,
+      "identity_evidence": {
+        "pages": [
+          1,
+          2
+        ],
+        "title": "静态电压稳定约束下大规模风电送出断面动态极限研究",
+        "author": "石子敬",
+        "year": 2024
+      },
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/静态电压稳定约束下大规模风电送出断面动态极限研究_石子敬.pdf",
+      "pdf_sha256": "8f55d877f0eb6510caa739da5440dd2f82ab6a09908b189363abba80613601e2",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/25_静态电压稳定约束下大规模风电送出断面动态极限研究_石子敬_pages.json",
+      "pages_sha256": "023901742a131df31b88efaa31ad246059d262fa9efd44cd6ac043dca0330e6d",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "code_audit 子agent，独立文本核验",
+      "read_ranges": [
+        {
+          "page_start": 1,
+          "page_end": 2,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 4,
+          "page_end": 4,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 7,
+          "page_end": 10,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 13,
+          "page_end": 14,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 21,
+          "page_end": 22,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 26,
+          "page_end": 29,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 31,
+          "page_end": 31,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 37,
+          "page_end": 38,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 42,
+          "page_end": 46,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        },
+        {
+          "page_start": 62,
+          "page_end": 65,
+          "scope": "逐页原文全部文本；公式乱码不作数学推导证据"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 37,
+          "start_offset": 1299,
+          "end_offset": 1502,
+          "quote": "将 表 ３\n－\n５ 中 的\n风\n电 出 力 数 据 输\n入 风\n电\n汇\n集 与\n送\n出 系 统\n仿\n真\n模\n型 中 作 为 初\n始\n潮\n流\n状\n态 ， 将 模 型 中 的\n风\n机 出 力 和 负 荷 功\n率\n设\n置\n均 匀 增\n长\n方 式 ，\n根\n据\n连\n续 潮\n流\n法\n进\n行\n静\n态\n电\n压\n稳 定\n极\n限\n计\n算 ， 即\n可\n得 到 各 断 面\n送\n出\n极\n限 如\n表\n３\n－\n６\n所\n示\n。",
+          "interpretation": "各典型场景作为基潮流，内层采用风机和负荷均匀增长。与本课题固定新能源、其他电源/负荷增长的路径不同。",
+          "kind": "author_assumption"
+        },
+        {
+          "page": 28,
+          "start_offset": 1334,
+          "end_offset": 1681,
+          "quote": "本 文\n选 取\n了 该\n地\n区 ３ ８ 个\n风\n电 场\n一\n年 内 每\n天\n每 间 隔 １ ５ 分 钟 采 样\n一\n次 的\n风\n电 功 率 数 据 ， 每 个\n风\n电 场 都\n有\n３ ５ ０ ４ ０ 个\n风\n电 出 力 数 据 ， 数 据\n量\n非 常 庞 大 。\n直\n接 使 用 该 数 据 求 解 断 面 功 率 极 限 ，\n耗 时\n量\n非 常 巨 大\n且\n难\n以\n寻\n找\n断\n面\n功 率 极\n限\n的\n规\n律\n。\n因\n此\n，\n对\n于\n十 分\n庞 大 的 数 据\n量\n，\n本\n文\n首 先 使 用 聚\n类\n算\n法\n对\n风\n电 功 率 数\n据\n进\n行 聚 类\n处\n理\n，\n提\n取\n出\n风\n电 场 典 型 出\n力\n场\n景 ， 以\n减\n小\n后\n续 求\n解\n过\n程\n的 计 算\n量\n。",
+          "interpretation": "38风电场一年历史数据通过聚类提取典型场景，已有高维数据降维处理。",
+          "kind": "method"
+        },
+        {
+          "page": 43,
+          "start_offset": 983,
+          "end_offset": 1188,
+          "quote": "对\n于\n每\n一\n种\n风\n电 典 型\n场\n景\n，\n将\n６\n个\n区\n域\n风\n电 场 的\n风\n电 出 力\n数\n据 作 为 输\n入\n层 变\n量\n，\n断\n面\n功 率 极 限 作 为 输 出\n层\n变\n量\n， 中 间\n层\n神\n经\n元\n个 数 设\n置\n为\n５ ，\n利 用 神\n经\n网\n络\n算\n法\n可\n以 拟 合\n得\n到 关\n于\n断 面 功\n率\n极 限 的\n表\n达\n式 ， 从\n而\n得 到 断\n面\n动\n态\n极 限 。",
+          "interpretation": "已有六区域风电功率输入、断面极限输出的神经网络拟合；动态一词指工况相关限值，不是动态稳定。",
+          "kind": "method"
+        },
+        {
+          "page": 63,
+          "start_offset": 310,
+          "end_offset": 711,
+          "quote": "本 文 在\n风\n电 典 型\n场\n景 聚 类 时 ，\n通\n过\n肘\n部\n法\n则 和\n轮\n廓 系 数 确 定 了\n最\n佳\n聚\n类\n簇 数\n。\n根\n据 最 佳 聚 类 簇 数\n进\n行\n风\n电 场 景 聚 类 ， 发\n现\n场\n景\n５ 的 数 据 聚 类\n规\n律\n不 是\n很 明\n晰\n。\n对\n于\n这\n种\n情\n况\n，\n并\n非\n是\n内 部 聚\n和\n的 作 用 ，\n而\n是 因 为\n场\n景\n５ 的\n数\n据\n与\n其\n他\n场\n景 的\n数\n据 差 异\n性\n过\n大\n， 因\n此\n将\n这\n些\n数 据 聚\n合\n在\n一\n起\n。\n在\n后 续 的 研 宄 中 ，\n可\n以\n针\n对\n聚 类 后 的 数\n据\n，\n采 用 其 他\n距\n离 公\n式\n如\n兰\n氏\n距\n离\n、\n余\n弦\n距\n离 和\n其\n他\n评\n价\n方\n法\n如 最\n小\n距\n离\n代\n价 函 数\n法\n则\n等\n， 更\n进\n一\n步\n细\n分 ，\n挖\n掘 其 中 的 规\n律\n。",
+          "interpretation": "作者明确场景5并非内部聚合，而是与其他场景差异过大被合为一类，建议细分。",
+          "kind": "author_limitation"
+        },
+        {
+          "page": 63,
+          "start_offset": 720,
+          "end_offset": 1077,
+          "quote": "本 文 在\n对\n典 型 场\n景\n断\n面\n极 限 拟\n合\n时 ，\n选\n择 了Ｇ\nＡ\n改\n进\n的 Ｂ Ｐ 神\n经\n网\n络\n算\n法\n。\n神\n经\n网\n络\n算 法 的\n优\n点\n是\n在\n不\n清\n楚 函\n数\n表\n达\n式 的\n情\n况\n下\n，\n只\n要\n设\n置\n足\n够 多 的 神\n经\n元\n和\n隐 含\n层\n，\n理\n论\n上\n能 够 拟 合 任 意 曲 线\n。\n但\n这\n也\n给 表\n达\n式 的\n输\n出 带 来 困\n难\n，\n表\n达\n式 的\n将\n会 非 常\n庞\n大\n。\n因\n此\n在 后 续 的\n研\n宄 中 ，\n可\n以 尝\n试\n其\n他\n的\n拟\n合 方\n法\n， 例\n如\n支\n持 向\n量\n机 回 归\n、\n随 机 森 林 回 归 等\n方\n法\n， 简 化 输 出 的 表\n达\n式\n， 与 神\n经\n网\n络\n方\n法\n进\n行\n对\n比\n。",
+          "interpretation": "作者自述神经网络表达式庞大，建议对照其他回归方法；简单换回归器不足以构成本课题深化贡献。",
+          "kind": "author_limitation"
+        },
+        {
+          "page": 27,
+          "start_offset": 40,
+          "end_offset": 271,
+          "quote": "本 文 所\n研\n宄 的\n风\n电\n场\n均 使 用\n双\n馈\n风\n力 发 电 机 ， 在 发 电 机\n及\n其\n调\n节\n器\n数\n据\n设\n置\n界\n面\n中\n选\n择 模 型 １ ２ 即 ２ 型\n双\n馈\n风\n力\n发\n电 机 ， 该\n风\n机\n模\n型\n的\n参\n数\n设 置\n界\n面\n如 图 ３\n－\n６\n所\n示\n。 在 图 ３\n－\n６ 中 ，\n可\n以\n对\n发 电\n机\n模\n型\n、\n变\n流\n器\n模 型\n、\n高 低\n穿\n控\n制\n等\n模 块\n进\n行 详 细\n地\n参 数 设\n置\n。",
+          "interpretation": "PSASP模型界面包含高低穿参数，不能声称文章完全未考虑LVRT；已读静态求限流程并未给出HLINB判据。",
+          "kind": "model_scope"
+        }
+      ],
+      "section_boundary_review": "摘要p.4正确。实际绪论p.9–13，机器在p.10的1.2.1附近结束，仅部分绪论，需以目录/正文确认范围。总结展望p.62–63，p.64开始参考文献，机器跨入p.64的页眉可排除。",
+      "issues": [
+        "机器预览/章节边界不足以代表完整章节",
+        "部分公式或图中文字提取错序/私用字符，不能直接抄录公式"
+      ],
+      "resolution": [
+        "依据目录和实际章页核对，另记证据范围，未篡改机器索引",
+        "按原始逐页文本确定逐字引文与offset；为阅读仅去空白/私用字符显示，原文文件保持不变"
+      ],
+      "unresolved": [
+        "未核验全部公式与未读页面；不据此声称全文无某内容"
+      ],
+      "status": "已核验该范围",
+      "usable_for_direction_evidence": true
+    }
+  ],
+  "scope_note": "三篇均为目标清单纳入的CNKI人工下载论文；未读local排除资料。非全文通读；关键叙述证据可用，未核验公式不得支撑理论结论。"
+}

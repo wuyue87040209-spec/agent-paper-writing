@@ -1,0 +1,557 @@
+{
+  "schema_version": 2,
+  "filename": "A_Static_Voltage_Stability_Enhancement_Method_for_Power_Systems_With_a_High_Proportion_of_Voltage_Source_Converters.pdf",
+  "pages": 14,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/TPWRS.2025.3552756",
+  "year_candidates": [
+    "2026",
+    "2025",
+    "2024",
+    "2022"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—One of the main characteristics of power systems with\na high proportion of renewable energy is that the power system is\nbecoming a power system with a high proportion of voltage source\nconverters (VSCs). Owing to the current limitation of VSCs, the\nreactive power regulation range is limited, thus greatly weaken-\ning the effective reactive power reserve and reducing the static\nvoltage stability. In this paper, the PQ regulation characteristics\nof the VSC are ﬁrst analyzed considering the current limitation.\nBy establishing the PQ characteristic analytical model of a single\ngrid-connected VSC system, the changes in the system reactive\npower reserve and system static voltage stability evolution law\nunder different penetration ratios of VSCs are analyzed. On this\nbasis, according to the proposed reactive power support sensitivity\nof each source bus, it is proposed to optimally determine the voltage\nand effective reactive power reserve of each source bus to realize\neffective enhancement of the static voltage stability margin of the\npower system with a high proportion of VSCs. Simulation analyses\nare carried out in a system with multiple grid-connected VSCs and\nan extended IEEE-39 bus system, which validate the effectiveness\nand accuracy of the proposed method.\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 329
+      },
+      "end": {
+        "page": 1,
+        "offset": 1614
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1614
+      },
+      "heading": "abstract—oneofthemaincharacteristicsofpowersystemswith",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1285,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. I NTRODUCTION\nT\nHE deployment of renewable energy such as wind power\nand photovoltaics, which are connected to the grid via in-\nverters, is increasing worldwide to meet decarbonization targets.\nRenewable energy is the backbone of the shift from fossil fuels\nto clean and net zero emission systems [1], [2]. In this context,\nReceived 5 June 2024; revised 24 October 2024, 12 December 2024, and\n10 February 2025; accepted 13 March 2025. Date of publication 19 March\n2025; date of current version 21 August 2025. This work was supported by the\nNational Key R&D Program of China “Key technologies for system stability and\nHVDC transmission of large-scale renewable energy generation base without\nconventional power support” under Grant 2022YFB2402700 through “Topic 2:\nConﬁguration and transmission optimization technologies considering stability\nand economy for large-scale renewable energy generation base” under Grant\n2022YFB2402702. Paper no. TPWRS-00934-2024. (Corresponding author:\nLiangzhong Yao.)\nThe authors are with the Hubei Engineering and Technology Research Cen-\nter for AC/DC Intelligent Distribution Network, School of Electrical Engi-\nneering and Automation, Wuhan University, Wuhan 430072, China (e-mail:\n2022102070037@whu.edu.cn; yaoliangzhong@whu.edu.cn; liaosiyang@whu.\nedu.cn; xujian@whu.edu.cn; chengfan5566@163.com).\nColor versions of one or more ﬁgures in this article are available at\nhttps://doi.org/10.1109/TPWRS.2025.3552756.\nDigital Object Identiﬁer 10.1109/TPWRS.2025.3552756\nmany synchronous generators are replaced by renewable energy,\nand direct-driven wind and photovoltaic power sources with\nvoltage source converters (VSCs) as grid-connected interfaces\nbecome the main power sources. However, the current limitation\nof VSCs results in a smaller reactive power regulation range than\nthat of a synchronous generator of the same capacity. This will\ncause many new problems in the safe and stable operation of\nthe system, one of which is system static voltage stability [3],\n[4], [5].\nThe connection of VSCs can signiﬁcantly impact the voltage\nconditions of consumers and utility equipment, especially under\nhigh penetration levels. These impacts can be positive or negative\ndepending on the system operating characteristics and the VSC\nitself [6], [7]. The impact of VSCs on the voltage stability\nphenomenon is an important issue that needs investigation.\nV oltage instability is characterized by a progressive de-crease\nin voltage magnitude and occurs essentially because of the\nsystem inability to meet a growing demand for reactive power\nat certain buses in stressed situations [8]. V oltage instability is\nusually of slow nature (minutes or hours), and is driven by the\naction of discrete type devices and load variations [9]. The static\nvoltage instability phenomenon is not new.\nHowever, most studies address the impact of VSCs on short-\nterm voltage stability and fault-ride-through requirements [10],\n[11], [12].I n [13], their study focused on current limitation for\nvoltage-controlled inverters during overloads caused by poor\ntransient load sharing between inverters and synchronous gen-\nerators in islanded microgrids. In[14], a two-stage simultaneous\ncontrol scheme was proposed for improving the transient stabil-\nity of a VSC while considering the current limitation during\nthe fault state and voltage support after fault clearance. To the\nbest of the authors’ knowledge, the current literature still lacks\na wider and detailed analysis considering the current limitation\nimpacts of VSC on static voltage stability with a detailed rep-\nresentation of system dynamic. Furthermore, this paper focuses\nonly on static voltage stability because of the high proportion\nof VSCs, and transient voltage problems during fault conditions\nare beyond the scope of the proposed model.\nMany studies have been carried out on the problem of static\nvoltage stability with a high proportion of VSCs [15], [16], [17].\nHowever, most studies have focused on constructing stability\nindicators and analyzing the change in static voltage stability\nwith increasing penetration ratio. In [18], on the basis of Norton\n0885-8950 © 2025 IEEE. All rights reserved, including rights for text and data mining, and training of artiﬁcial intelligence and similar technologi es.\nPersonal use is permitted, but republication/redistribution requires IEEE permission. See https://www.ieee.org/publications/rights/index. html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:13:56 UTC from IEEE Xplore.  Restrictions apply. \n4020 IEEE TRANSACTIONS ON POWER SYSTEMS, VOL. 40, NO. 5, SEPTEMBER 2025\nFig. 1. P-V curve considering the current limitation of VSC.\ncurrent distribution characteristics, a node static voltage sta-\nbility index named the H index was constructed, which was\nadapted for wind farms. In [19], the load conductivity of the\ndistribution network was constructed to study the static voltage\nstability change under different penetration ratios of distributed\nphotovoltaics. For the impact of different PCCs of VSCs on\nstatic voltage stability, in[20], the inﬂuence of the penetration of\nwind power, different points of common coupling of wind farms,\nload growth patterns and other factors on static voltage stability\nwas analyzed. Overall, these results are based on the current\noperating status. However, the impact of the current limitation\non the static voltage stability problem has received less attention.\nWhen the voltage of the points of common coupling of the\nVSC is continuously low, the current dispatched by the VSC will\nreach the limit value. Moreover, the reactive power dispatched by\nthe VSC decreases with decreasing reduction. When the system\napproaches the point of the voltage collapse, the limitation\ncharacteristic of the VSC will form a positive feedback loop\nof the voltage drop-reactive power drop, further deteriorating\nthe system static voltage stability. The P-V curve reﬂecting the\nimpacts of the current limitation is shown in the Fig. 1.\nBecause of the current limitation, the point of voltage collapse\nchanges from point D to point C, and the distance from the initial\npower ﬂow to the point of voltage collapse is shortened from l1\nto l2. However, this impact has not yet been quantiﬁed.\nIt is well known that effective reactive power reserve op-\ntimization can improve system stability without adding any\nother reactive power resources, since reactive power support\nis strongly related to voltage instability problems. In terms of\nreactive power limit of VSC, in [21], [22], current limits are\nused to deﬁne the active and reactive power limits of VSC.\nHowever, no basis is given for the setting of active and reactive\ncurrent limits. Recently, the interconnection and interoperability\nof VSC standards such as IEEE Std 1547-2018 [23], IEEE Std\n2800-2022 [24], GB/T 19964-2024 (China) [25], and GB/T\n36547-2024 (China) [26] have been drafted, in [23], [24], [25],\n[26], the minimum range for the reactive power capability of\ninverter-based resources is required. Based on the standards, we\ncan get the reactive power capability shall be met for all active\npower output levels (including at zero) of the VSC.\nThe method keeps more reactive power reserves [27], [28],\n[29] of the generator, the reactive power weight of which is\nlarger. One previous study[30] relied on the concept of effective\nreactive power reserves and evaluates the impact of generators\non the maximum permissible loading power. Another study[31]\nexplored the underaddressed topic of reactive power reserve\nduring the energy transition. In [32], [33], the sensitivity of the\nreactive power dispatched by the synchronous generator bus to\nthe reactive power growth of the load bus was measured.\nThe above study investigated the value of the reactive power\nreserve for a synchronous generator in detail. However, owing\nto the current limitation of VSCs, the traditional reactive power\nweight is not suitable for systems with a high proportion of\nvoltage source converters. The inﬂuence on the system reactive\npower reserve of grid-connected VSCs will need to consider the\nbus voltage immunity.\nThe contributions of this paper are summarized as follows:\n1) To the best of the authors’ knowledge, the impact of\nVSC current limitation on static voltage stability has not\nbeen well studied. Many of the new components based on\npower electronics will require a dynamic representation to\naccurately represent limits. However, proper modeling of\ntraditional steady-state conditions is also important. The\nderivations of the VSC limitations are therefore useful.\nAccordingly, the authors attempt to analyze the effect of\nVSC current limitation on the static voltage stability.\n2) In this paper, a PQ characteristic analytical model of a\nsingle grid-connected VSC system considering the current\nlimitation is ﬁrst established, and the inﬂuencing mecha-\nnism of the current limitation on the static voltage stability\ndomain of the system is analyzed.\n3) By analyzing the PQ regulation characteristics of the VSC\nand considering the ability to maintain the static voltage\nstability and voltage immunity of generator bus, the reac-\ntive power support sensitivity is proposed.\n4) It is proposed to optimally determine the voltage and\nreactive power of generator bus in base case. The generator\nbus with a large reactive power support sensitivity will\nretain a more effective reactive power reserve. So, the\nstatic voltage stability margin of the system with a high\nproportion of VSCs can be improved more effectively.\nThe remainder of the paper is organized as follows. Section II\nintroduces the reactive power regulation range and current lim-\nitation of VSCs. Section III presents the static voltage stability\nanalysis of a single grid-connected VSC system. Section IV\nintroduces the static voltage stability enhancement method for a\npower system with a high proportion of VSCs. Simulations are\nprovided in Sections V, and VI concludes the paper.\n",
+      "page_start": 1,
+      "page_end": 2,
+      "start": {
+        "page": 1,
+        "offset": 1789
+      },
+      "end": {
+        "page": 2,
+        "offset": 5426
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 5426
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 10044,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "V. C ONCLUSION\nIn this paper, the static voltage stability enhancement method\nfor a power system with a high proportion of VSCs is studied.\nIn a single grid-connected VSC system, this paper ﬁrst analyzes\nthe PQ regulation characteristics of the VSC and synchronous\ngenerator and establishes an analytical model of static voltage\nstability by considering the current limitation. The analytical\nresults show that when the penetration ratio of the VSC reached\n40%, the system static voltage stability domain would be re-\nduced by 3.76% on average.\nBy determining the current voltage and effective reactive\npower reserve of each source bus according to the reactive power\nsupport sensitivity, the proposed method can effectively improve\nthe static voltage stability. Two simulation cases have shown that\nat medium and high VSC penetration ratios (≥40%), compared\nwith the traditional method, the static voltage stability enhance-\nment method proposed in this paper is able to better improve\nthe static voltage stability of a system with a high proportion\nof VSCs. In the test system, at penetration ratio of 40%, the\nproposed methodology has 2.71% and 2.85% more lift than the\nconventional method, respectively. In the extended IEEE-39 bus\nsystem, at high penetration ratio, the proposed methodology has\n2.84% and 2.69% more lift than the conventional method does.\nHowever, this paper has not yet considered the intermittence\nand variability of VSC resource power output. Non-continuous\nvariable reactive power compensation devices such as casting\ncapacitors are not considered. In future work, the model will\nbe transformed into a mixed-integer linear programming model.\nAnd an intraday reactive power reserve optimization method can\nbe explored for adoption in hard real-time systems.\n",
+      "page_start": 12,
+      "page_end": 12,
+      "start": {
+        "page": 12,
+        "offset": 608
+      },
+      "end": {
+        "page": 12,
+        "offset": 2391
+      },
+      "preview_end": {
+        "page": 12,
+        "offset": 2391
+      },
+      "heading": "v.conclusion",
+      "method": "heading_match",
+      "end_reason": "backmatter",
+      "total_chars": 1783,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "introduction:numbered_boundary_candidate",
+    "page:5:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 329,
+      "heading": "abstract—oneofthemaincharacteristicsofpowersystemswith",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1614,
+      "heading": "indexterms—currentlimitation,effectivereactivepower",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 1789,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 5426,
+      "heading": "ii.analysisofthepqcharacteristicsofvscs",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 767,
+      "heading": "c.analysisofthepqregulationcapabilityofthevsc",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 3368,
+      "heading": "iii.staticvoltagestabilityanalysisofasingle",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 1605,
+      "heading": "vxs+jp",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 1614,
+      "heading": "vxs(17)",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 6,
+      "offset": 3717,
+      "heading": "iv.staticvoltagestabilityenhancementmethodfor",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 867,
+      "heading": "c.theimprovedcontinuationpowerflowforbetter",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 9,
+      "offset": 162,
+      "heading": "d.solvingalgorithms",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 9,
+      "offset": 1259,
+      "heading": "vi.simulationandanalysis",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 11,
+      "offset": 1773,
+      "heading": "c.comparativeanalysisofthestaticvoltagestability",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 11,
+      "offset": 3379,
+      "heading": "d.performanceofcomputationalefficiency",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 12,
+      "offset": 608,
+      "heading": "v.conclusion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "backmatter",
+      "page": 12,
+      "offset": 2391,
+      "heading": "appendixa",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "backmatter",
+      "page": 12,
+      "offset": 3693,
+      "heading": "appendixb",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 12,
+      "offset": 3761,
+      "heading": "immiofeachloadbusinieee-39bussystem",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 12,
+      "offset": 3805,
+      "heading": "references",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 6406
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [],
+      "chars": 6159
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4837
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4474
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 3612
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4579
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4713
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4663
+    },
+    {
+      "page": 9,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3643
+    },
+    {
+      "page": 10,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3543
+    },
+    {
+      "page": 11,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4184
+    },
+    {
+      "page": 12,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4711
+    },
+    {
+      "page": 13,
+      "error": null,
+      "quality_flags": [],
+      "chars": 10007
+    },
+    {
+      "page": 14,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3272
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 1,
+      "cue": "limitation",
+      "snippet": "istics of power systems with\na high proportion of renewable energy is that the power system is\nbecoming a power system with a high proportion of voltage source\nconverters (VSCs). Owing to the current limitation of VSCs, the\nreactive power regulation range is limited, thus greatly weaken-\ning the effective reactive power reserve and reducing the static\nvoltage stability. In this paper, the PQ regulation char"
+    },
+    {
+      "page": 1,
+      "cue": "limitation",
+      "snippet": "n analyses\nare carried out in a system with multiple grid-connected VSCs and\nan extended IEEE-39 bus system, which validate the effectiveness\nand accuracy of the proposed method.\nIndex Terms —Current limitation, effective reactive power\nreserve, high proportion of voltage source converters, reactive\npower support sensitivity, static voltage stability.\nI. I NTRODUCTION\nT\nHE deployment of renewable energy suc"
+    },
+    {
+      "page": 1,
+      "cue": "limitation",
+      "snippet": "laced by renewable energy,\nand direct-driven wind and photovoltaic power sources with\nvoltage source converters (VSCs) as grid-connected interfaces\nbecome the main power sources. However, the current limitation\nof VSCs results in a smaller reactive power regulation range than\nthat of a synchronous generator of the same capacity. This will\ncause many new problems in the safe and stable operation of\nthe syste"
+    },
+    {
+      "page": 1,
+      "cue": "limitation",
+      "snippet": "phenomenon is not new.\nHowever, most studies address the impact of VSCs on short-\nterm voltage stability and fault-ride-through requirements [10],\n[11], [12].I n [13], their study focused on current limitation for\nvoltage-controlled inverters during overloads caused by poor\ntransient load sharing between inverters and synchronous gen-\nerators in islanded microgrids. In[14], a two-stage simultaneous\ncontrol"
+    },
+    {
+      "page": 1,
+      "cue": "limitation",
+      "snippet": "ation during\nthe fault state and voltage support after fault clearance. To the\nbest of the authors’ knowledge, the current literature still lacks\na wider and detailed analysis considering the current limitation\nimpacts of VSC on static voltage stability with a detailed rep-\nresentation of system dynamic. Furthermore, this paper focuses\nonly on static voltage stability because of the high proportion\nof VSCs,"
+    },
+    {
+      "page": 2,
+      "cue": "limitation",
+      "snippet": "4020 IEEE TRANSACTIONS ON POWER SYSTEMS, VOL. 40, NO. 5, SEPTEMBER 2025\nFig. 1. P-V curve considering the current limitation of VSC.\ncurrent distribution characteristics, a node static voltage sta-\nbility index named the H index was constructed, which was\nadapted for wind farms. In [19], the load conductivity of the\ndistri"
+    },
+    {
+      "page": 2,
+      "cue": "limitation",
+      "snippet": "ng of wind farms,\nload growth patterns and other factors on static voltage stability\nwas analyzed. Overall, these results are based on the current\noperating status. However, the impact of the current limitation\non the static voltage stability problem has received less attention.\nWhen the voltage of the points of common coupling of the\nVSC is continuously low, the current dispatched by the VSC will\nreach the"
+    },
+    {
+      "page": 2,
+      "cue": "limitation",
+      "snippet": "ic of the VSC will form a positive feedback loop\nof the voltage drop-reactive power drop, further deteriorating\nthe system static voltage stability. The P-V curve reﬂecting the\nimpacts of the current limitation is shown in the Fig. 1.\nBecause of the current limitation, the point of voltage collapse\nchanges from point D to point C, and the distance from the initial\npower ﬂow to the point of voltage collapse"
+    },
+    {
+      "page": 2,
+      "cue": "limitation",
+      "snippet": "us to\nthe reactive power growth of the load bus was measured.\nThe above study investigated the value of the reactive power\nreserve for a synchronous generator in detail. However, owing\nto the current limitation of VSCs, the traditional reactive power\nweight is not suitable for systems with a high proportion of\nvoltage source converters. The inﬂuence on the system reactive\npower reserve of grid-connected VSC"
+    },
+    {
+      "page": 2,
+      "cue": "limitation",
+      "snippet": "n\npower electronics will require a dynamic representation to\naccurately represent limits. However, proper modeling of\ntraditional steady-state conditions is also important. The\nderivations of the VSC limitations are therefore useful.\nAccordingly, the authors attempt to analyze the effect of\nVSC current limitation on the static voltage stability.\n2) In this paper, a PQ characteristic analytical model of a\nsi"
+    },
+    {
+      "page": 2,
+      "cue": "limitation",
+      "snippet": "ll-scale converters. If the\ncurrent is too high, damage may occur to the semiconductors\nin converts. Any control designed to operate under abnormal\ngrid conditions must adhere to the physical current limitation of\nthe semiconductors, and a limit is set for the converter current.\nTherefore, a VSC is usually connected to a grid via the control\nstrategy shown in Fig. 2 [34].\nAuthorized licensed use limited to:"
+    },
+    {
+      "page": 3,
+      "cue": "limitation",
+      "snippet": "LIU et al.: STA TIC VOLTAGE STABILITY ENHANCEMENT METHOD 4021\nFig. 2. The constant V control strategy of the VSC.\nThe maximum current limitation is usually based on the d-axis\ncurrent priority limitation or the dq-axis current proportional\nlimitation. To provide both active power and reactive power\nsupport, this paper uses the dq-axis axis cu"
+    },
+    {
+      "page": 3,
+      "cue": "limitation",
+      "snippet": "rol\nstrategies such as constant Q, constant I or constant power factor\nand regardless of whether the VSC adopts a grid-forming or\ngrid-following control strategy, when the current reaches the\nmaximum limitation value, the VSC presents the current source\ncharacteristic.\nIn [21], [22], the power limit is set as follows:\nPVSC max = udNI∗\nd max = kdqSVSC (5)\nQVSC max = udNI∗\nq max =\n√\n1−k2\ndqSVSC (6)\nFig. 3. P-"
+    },
+    {
+      "page": 3,
+      "cue": "limitation",
+      "snippet": "g that all phases in Fig. 3\nare multiplied by UpccN/X, where the length of the OB in Fig. 3\nrepresents the rated apparent power SVSC of the VSC.\nFig. 3 shows that, due to the existence of the current limitation,\nwhen Upcc is continuously low, the current dispatched by the\nVSC will reach the limit value. Moreover, the power dispatched\nby the VSC decreases with the reduction in Upcc.\nOn the basis of the opera"
+    },
+    {
+      "page": 3,
+      "cue": "not considered",
+      "snippet": "capacity. I2max = I2dmax + I2qmax, so we can obtain the value of\nIqmax. The VSC can operate in- four quadrants,Idmin =−Idmax,\nand Iqmin =−Iqmax. While Photovoltaic and direct-drive wind\nturbines are not considered to absorb active power, Idmin is set\nas Idmin = 0.\nIn Fig. 2, on the basis of the grid voltage vector ˙Upcc oriented,\nwhere uq = 0 and ud = Upcc, PVSC, and QVSC are numerically\nshown in (3) and (4) ["
+    },
+    {
+      "page": 4,
+      "cue": "limitation",
+      "snippet": "lated studies have been performed\n[39], [40], and the stability mechanism has been clariﬁed. On\nthe basis of previous studies, the paper focuses on the reactive\npower regulation range and the current limitation of VSCs. The\neffects of multiple grid-connected VSCs are further analyzed in\nsubsequent sections.\nDepending on the PCC, the topology of a single grid-\nconnected VSC system can be classiﬁed into two t"
+    },
+    {
+      "page": 4,
+      "cue": "not considered",
+      "snippet": "table output power characteristics of the VSC,\nand the optimization of the control parameters is not the focus\nof this research. Thus, the optimization of the PI parameters of\nthe control strategy is not considered in this paper. The stability\nand control accuracy of the VSC control strategy are of greater\nconcern in this paper, and the response speed is not a priority.\nFig. 5 shows the PQ regulation characteri"
+    },
+    {
+      "page": 5,
+      "cue": "limitation",
+      "snippet": "an remain constant throughout the load growth to the static\nvoltage stability limit; therefore, the static voltage stabilization\ndomain of the system shown in Fig. 6(a) is not affected by the\ncurrent limitation.\nThere is a relationship between E and V:\n˙E = ˙V + Q\nV XS +jP\nV XS (17)\nThen, it can be obtained via (17):\nE2 = V 2 +2QXS + (P 2 +Q2)X2\nS\nV 2 (18)\nTherefore, by solving (18), we can obtain:\nV 2 = (E"
+    },
+    {
+      "page": 5,
+      "cue": "it is assumed",
+      "snippet": "E2/2XS. To ensure that the system still transmits\nthe maximum apparent power in either direction of load power\ngrowth, the effective system reactive power reserve is taken to\nbe E2/2XS.\nIn Fig. 6(a), it is assumed that the reactive power reserve\nof the synchronous generator QGres is E2/2XS before the VSC\nreplaces the synchronous generator. The voltage of BUS1 can\nbe maintained constant until the reactive power"
+    },
+    {
+      "page": 6,
+      "cue": "limitation",
+      "snippet": "ed bifurcation occurs immediately after the re-\nactive power reserve of BUS2 is exhausted, resulting in system\nvoltage collapse. Therefore, there is also no need to consider\nthe effect of the current limitation. The variation in the system\nstatic voltage stability domain with increasing penetration ratio\nis similar to that in Fig. 6 and will not be discussed in detail here.\nIn case 2, the VSC can be equated"
+    },
+    {
+      "page": 6,
+      "cue": "limitation",
+      "snippet": "ction of the\npower factor and penetration ratio of the VSC:\nPmax =\n−k +\n√\nk2 −4(1−η)2 XS1\nE2 c\n2(1−η)2XS1\nE2 (33)\nFig. 8. The static voltage stability domain changes after the inﬂuence of the\ncurrent limitation on the PQ plane is considered.\nc = I2\nmaxXS2 + (η2 −1)E2\n4XS1\n−\n√\n1−k2\ndqUI max (34)\nAccording to (33)–(34), the system static voltage stabilization\ndomain, considering the effect of the current limi"
+    },
+    {
+      "page": 6,
+      "cue": "limitation",
+      "snippet": "stability analysis of a single grid-\nconnected VSC system is used to illustrate the research implica-\ntions of this paper, showing that the inﬂuence of reactive power\nregulation range and the current limitation of VSCs on static\nvoltage stability cannot be ignored. And it is not the focus and\ninnovation of the research in this paper. It is used to analyze\nthe effect of the control characteristics and relate"
+    },
+    {
+      "page": 6,
+      "cue": "it is assumed",
+      "snippet": "t in the voltage drops,\nthere is a relationship between Upcc and E:\nE −QBUS1XS1\nE = V (24)\nUpcc −QBUS2XS2\nUpcc\n= V (25)\nwhere QBUS1 is the reactive power of BUS1; QBUS2 is the\nreactive power of BUS2. It is assumed that the maximum reactive\npower of the synchronous generator is (1-η)E2/2XS1,s oa tL I B ,\nit is known that QBUS1 and QBUS2 are as follows:\nQBUS1 = (1−η)E2\n2XS1\n(26)\nQBUS2 =\n√\n1−k2\ndqUpccImax (27)\nwh"
+    },
+    {
+      "page": 7,
+      "cue": "limitation",
+      "snippet": "on of the jth load bus;\nΔQLj is the reactive power variation of the jth load bus.\nA. Reactive Power Support Sensitivity Adapted to the PQ\nRegulation Characteristics of the VSC\nConsidering the current limitation characteristics of the VSC,\nthis paper measures the value of the reactive power reserve in\nterms of the role of the reactive power reserve in maintaining\nthe static voltage stability of the system an"
+    },
+    {
+      "page": 8,
+      "cue": "limitation",
+      "snippet": "sformed from a PV bus to a PQ\nbus. It is therefore necessary to improve the CPF to make it\nmore applicable to the power systems with a high proportion\nof VSC. Synchronous generator excitation current limitation\nand VSC current limitation are dynamic processes. Considering\ntheir inﬂuence in CPF, it is necessary to combine the reactive\npower characteristics of synchronous generator excitation cur-\nrent limita"
+    },
+    {
+      "page": 8,
+      "cue": "limitation",
+      "snippet": "itation and VSC current limitation with the CPF from\nthe steady-state condition. This paper proposes an improved\nCPF that considers synchronous generator excitation current\nlimitation and VSC current limitation. The ﬂow is shown in\nFig. 10.\nThe speciﬁc steps are as follows:\n1) Before CPF calculation, calculate the maximum internal\npotential Eqmax corresponding to the maximum long-term\nmaintained excitation"
+    },
+    {
+      "page": 8,
+      "cue": "limitation",
+      "snippet": "ax and the max-\nimum reactive current Iqmax of each VSC. If the reac-\ntive power output QGi of the ith synchronous generator\nFig. 10. Improved CPF considering synchronous generator excitation current\nlimitation and VSC current limitation.\nexceeds QGimax after the end of the nth correction, the\nsynchronous generator node is converted to P-Eq node.\nIf the active power output PVSCi exceeds PVSCimax or\nreactive"
+    },
+    {
+      "page": 8,
+      "cue": "limitation",
+      "snippet": "as the parameter of the\nreference equation, and the n+1 correction is iteratively\nsolved until convergence is achieved. Thus, the actual\nreactive power output Q’Gi considering the excitation\ncurrent limitation could be obtained. P’VSCi and Q’VSCi\nconsidering current limitation could also be obtained.\n4) If the power output of other nodes is limited, the same\nmeasures shall be taken to iteratively solve the"
+    },
+    {
+      "page": 9,
+      "cue": "limitation",
+      "snippet": "sumed\nthat the excitation limit is controlled by integration, and\nthat terminal voltage does not affect the limiting ability of\nthe excitation current. The VSC adopts the dq-axis current\nproportional limitation method, and it is assumed that the\nvoltage reduction at the point of common coupling will\nnot affect the limiting ability of the current limitation.\n4) When the synchronous generator is replaced by t"
+    },
+    {
+      "page": 10,
+      "cue": "limitation",
+      "snippet": "is much greater than that of the traditional\nmethod, and the higher the penetration ratio is, the better the\noptimization results of static voltage stability.\nB. Quantitative Analysis of the Current Limitation and\nReactive Power Regulation Ability of the VSCs\nThe detailed system parameters of the extended IEEE-39 bus\nsystem with a high proportion of VSCs (Fig.13) are described in\nthe MA TPOWER 4.1[47]. The"
+    },
+    {
+      "page": 10,
+      "cue": "limitation",
+      "snippet": "able VI, the IMMI of load bus 20 is the smallest, so load bus\n20 is selected as the key load bus. The following three cases are\nconsidered:\nCase 1: There is no grid-connected VSC.\nCase 2: The current limitation is not considered with the grid-\nconnected VSC.\nCase 3: The current limitation is considered with a grid-\nconnected VSC.\nA comparison of the P-V curves of key load buses tracked\nunder different penet"
+    },
+    {
+      "page": 11,
+      "cue": "limitation",
+      "snippet": "sults of the static voltage stability\nunder different penetration ratios.\na signiﬁcant tendency toward inward contraction. The higher\nthe penetration ratio is, the greater the inﬂuence of the current\nlimitation, and the greater the difference between the P-V curves\nof Case 3 and Case 2. Case 2 which does not consider the current\nlimitation in VSCs yields more optimistic results. In Case 3, the\n“moment” when"
+    },
+    {
+      "page": 11,
+      "cue": "limitation",
+      "snippet": "69% more lift than the\nconventional method.\nThe static voltage stability enhancement method based on\nreactive power reserve optimization proposed in this paper con-\nsiders the inﬂuence of the current limitation, which can better\ndistinguish the reactive power value of each source bus in a\ncomplex power system with a high proportion of VSCs. Such\nthat the system static voltage stability can be enhanced more"
+    },
+    {
+      "page": 12,
+      "cue": "limitation",
+      "snippet": "VSC system, this paper ﬁrst analyzes\nthe PQ regulation characteristics of the VSC and synchronous\ngenerator and establishes an analytical model of static voltage\nstability by considering the current limitation. The analytical\nresults show that when the penetration ratio of the VSC reached\n40%, the system static voltage stability domain would be re-\nduced by 3.76% on average.\nBy determining the current volt"
+    },
+    {
+      "page": 12,
+      "cue": "future work",
+      "snippet": "er has not yet considered the intermittence\nand variability of VSC resource power output. Non-continuous\nvariable reactive power compensation devices such as casting\ncapacitors are not considered. In future work, the model will\nbe transformed into a mixed-integer linear programming model.\nAnd an intraday reactive power reserve optimization method can\nbe explored for adoption in hard real-time systems.\nAPPEND"
+    },
+    {
+      "page": 13,
+      "cue": "limitation",
+      "snippet": "p. 3302–3310, Aug. 2013.\n[12] L. Huang, H. Xin, Z. Wang, L. Zhang, K. Wu, and J. Hu, “Transient stability\nanalysis and control design of droop-controlled voltage source converters\nconsidering current limitation,” IEEE Trans. Smart Grid , vol. 10, no. 1,\npp. 578–591, Jan. 2019.\n[13] A. D. Paquette and D. M. Divan, “Virtual impedance current limiting for\ninverters in microgrids with synchronous generators,” I"
+    },
+    {
+      "page": 13,
+      "cue": "limitation",
+      "snippet": "pl., vol. 51, no. 2, pp. 1630–1638, Mar./Apr. 2015.\n[14] K. Sun, W. Y ao, J. Wen, and L. Jiang, “A two-stage simultaneous con-\ntrol scheme for the transient angle stability of VSG considering current\nlimitation and voltage support,” IEEE Trans. Power Syst. , vol. 37, no. 3,\npp. 2137–2150, May 2022.\n[15] L. Meegahapola and D. Flynn, “Impact on transient and frequency stability\nfor a power system at very high"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/02_A_Static_Voltage_Stability_Enhancement_Method_for_Power_Syst_pages.json",
+  "abstract": "Abstract—One of the main characteristics of power systems with\na high proportion of renewable energy is that the power system is\nbecoming a power system with a high proportion of voltage source\nconverters (VSCs). Owing to the current limitation of VSCs, the\nreactive power regulation range is limited, thus greatly weaken-\ning the effective reactive power reserve and reducing the static\nvoltage stability. In this paper, the PQ regulation characteristics\nof the VSC are ﬁrst analyzed considering the current limitation.\nBy establishing the PQ characteristic analytical model of a single\ngrid-connected VSC system, the changes in the system reactive\npower reserve and system static voltage stability evolution law\nunder different penetration ratios of VSCs are analyzed. On this\nbasis, according to the proposed reactive power support sensitivity\nof each source bus, it is proposed to optimally determine the voltage\nand effective reactive power reserve of each source bus to realize\neffective enhancement of the static voltage stability margin of the\npower system with a high proportion of VSCs. Simulation analyses\nare carried out in a system with multiple grid-connected VSCs and\nan extended IEEE-39 bus system, which validate the effectiveness\nand accuracy of the proposed method.\n",
+  "introduction": "I. I NTRODUCTION\nT\nHE deployment of renewable energy such as wind power\nand photovoltaics, which are connected to the grid via in-\nverters, is increasing worldwide to meet decarbonization targets.\nRenewable energy is the backbone of the shift from fossil fuels\nto clean and net zero emission systems [1], [2]. In this context,\nReceived 5 June 2024; revised 24 October 2024, 12 December 2024, and\n10 February 2025; accepted 13 March 2025. Date of publication 19 March\n2025; date of current version 21 August 2025. This work was supported by the\nNational Key R&D Program of China “Key technologies for system stability and\nHVDC transmission of large-scale renewable energy generation base without\nconventional power support” under Grant 2022YFB2402700 through “Topic 2:\nConﬁguration and transmission optimization technologies considering stability\nand economy for large-scale renewable energy generation base” under Grant\n2022YFB2402702. Paper no. TPWRS-00934-2024. (Corresponding author:\nLiangzhong Yao.)\nThe authors are with the Hubei Engineering and Technology Research Cen-\nter for AC/DC Intelligent Distribution Network, School of Electrical Engi-\nneering and Automation, Wuhan University, Wuhan 430072, China (e-mail:\n2022102070037@whu.edu.cn; yaoliangzhong@whu.edu.cn; liaosiyang@whu.\nedu.cn; xujian@whu.edu.cn; chengfan5566@163.com).\nColor versions of one or more ﬁgures in this article are available at\nhttps://doi.org/10.1109/TPWRS.2025.3552756.\nDigital Object Identiﬁer 10.1109/TPWRS.2025.3552756\nmany synchronous generators are replaced by renewable energy,\nand direct-driven wind and photovoltaic power sources with\nvoltage source converters (VSCs) as grid-connected interfaces\nbecome the main power sources. However, the current limitation\nof VSCs results in a smaller reactive power regulation range than\nthat of a synchronous generator of the same capacity. This will\ncause many new problems in the safe and stable operation of\nthe system, one of which is system static voltage stability [3],\n[4], [5].\nThe connection of VSCs can signiﬁcantly impact the voltage\nconditions of consumers and utility equipment, especially under\nhigh penetration levels. These impacts can be positive or negative\ndepending on the system operating characteristics and the VSC\nitself [6], [7]. The impact of VSCs on the voltage stability\nphenomenon is an important issue that needs investigation.\nV oltage instability is characterized by a progressive de-crease\nin voltage magnitude and occurs essentially because of the\nsystem inability to meet a growing demand for reactive power\nat certain buses in stressed situations [8]. V oltage instability is\nusually of slow nature (minutes or hours), and is driven by the\naction of discrete type devices and load variations [9]. The static\nvoltage instability phenomenon is not new.\nHowever, most studies address the impact of VSCs on short-\nterm voltage stability and fault-ride-through requirements [10],\n[11], [12].I n [13], their study focused on current limitation for\nvoltage-controlled inverters during overloads caused by poor\ntransient load sharing between inverters and synchronous gen-\nerators in islanded microgrids. In[14], a two-stage simultaneous\ncontrol scheme was proposed for improving the transient stabil-\nity of a VSC while considering the current limitation during\nthe fault state and voltage support after fault clearance. To the\nbest of the authors’ knowledge, the current literature still lacks\na wider and detailed analysis considering the current limitation\nimpacts of VSC on static voltage stability with a detailed rep-\nresentation of system dynamic. Furthermore, this paper focuses\nonly on static voltage stability because of the high proportion\nof VSCs, and transient voltage problems during fault conditions\nare beyond the scope of the proposed model.\nMany studies have been carried out on the problem of static\nvoltage stability with a high proportion of VSCs [15], [16], [17].\nHowever, most studies have focused on constructing stability\nindicators and analyzing the change in static voltage stability\nwith increasing penetration ratio. In [18], on the basis of Norton\n0885-8950 © 2025 IEEE. All rights reserved, including rights for text and data mining, and training of artiﬁcial intelligence and similar technologi es.\nPersonal use is permitted, but republication/redistribution requires IEEE permission. See https://www.ieee.org/publications/rights/index. html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:13:56 UTC from IEEE Xplore.  Restrictions apply. \n4020 IEEE TRANSACTIONS ON POWER SYSTEMS, VOL. 40, NO. 5, SEPTEMBER 2025\nFig. 1. P-V curve considering the current limitation of VSC.\ncurrent distribution characteristics, a node static voltage sta-\nbility index named the H index was constructed, which was\nadapted for wind farms. In [19], the load conductivity of the\ndistribution network was constructed to study the static voltage\nstability change under different penetration ratios of distributed\nphotovoltaics. For the impact of different PCCs of VSCs on\nstatic voltage stability, in[20], the inﬂuence of the penetration of\nwind power, different points of common coupling of wind farms,\nload growth patterns and other factors on static voltage stability\nwas analyzed. Overall, these results are based on the current\noperating status. However, the impact of the current limitation\non the static voltage stability problem has received less attention.\nWhen the voltage of the points of common coupling of the\nVSC is continuously low, the current dispatched by the VSC will\nreach the limit value. Moreover, the reactive power dispatched by\nthe VSC decreases with decreasing reduction. When the system\napproaches the point of the voltage collapse, the limitation\ncharacteristic of the VSC will form a positive feedback loop\nof the voltage drop-reactive power drop, further deteriorating\nthe system static voltage stability. The P-V curve reﬂecting the\nimpacts of the current limitation is shown in the Fig. 1.\nBecause of the current limitation, the point of voltage collapse\nchanges from point D to point C, and the distance from the initial\npower ﬂow to the point of voltage collapse is shortened from l1\nto l2. However, this impact has not yet been quantiﬁed.\nIt is well known that effective reactive power reserve op-\ntimization can improve system stability without adding any\nother reactive power resources, since reactive power support\nis strongly related to voltage instability problems. In terms of\nreactive power limit of VSC, in [21], [22], current limits are\nused to deﬁne the active and reactive power limits of VSC.\nHowever, no basis is given for the setting of active and reactive\ncurrent limits. Recently, the interconnection and interoperability\nof VSC standards such as IEEE Std 1547-2018 [23], IEEE Std\n2800-2022 [24], GB/T 19964-2024 (China) [25], and GB/T\n36547-2024 (China) [26] have been drafted, in [23], [24], [25],\n[26], the minimum range for the reactive power capability of\ninverter-based resources is required. Based on the standards, we\ncan get the reactive power capability shall be met for all active\npower output levels (including at zero) of the VSC.\nThe method keeps more reactive power reserves [27], [28],\n[29] of the generator, the reactive power weight of which is\nlarger. One previous study[30] relied on the concept of effective\nreactive power reserves and evaluates the impact of generators\non the maximum permissible loading power. Another study[31]\nexplored the underaddressed topic of reactive power reserve\nduring the energy transition. In [32], [33], the sensitivity of the\nreactive power dispatched by the synchronous generator bus to\nthe reactive power growth of the load bus was measured.\nThe above study investigated the value of the reactive power\nreserve for a synchronous generator in detail. However, owing\nto the current limitation of VSCs, the traditional reactive power\nweight is not suitable for systems with a high proportion of\nvoltage source converters. The inﬂuence on the system reactive\npower reserve of grid-connected VSCs will need to consider the\nbus voltage immunity.\nThe contributions of this paper are summarized as follows:\n1) To the best of the authors’ knowledge, the impact of\nVSC current limitation on static voltage stability has not\nbeen well studied. Many of the new components based on\npower electronics will require a dynamic representation to\naccurately represent limits. However, proper modeling of\ntraditional steady-state conditions is also important. The\nderivations of the VSC limitations are therefore useful.\nAccordingly, the authors attempt to analyze the effect of\nVSC current limitation on the static voltage stability.\n2) In this paper, a PQ characteristic analytical model of a\nsingle grid-connected VSC system considering the current\nlimitation is ﬁrst established, and the inﬂuencing mecha-\nnism of the current limitation on the static voltage stability\ndomain of the system is analyzed.\n3) By analyzing the PQ regulation characteristics of the VSC\nand considering the ability to maintain the static voltage\nstability and voltage immunity of generator bus, the reac-\ntive power support sensitivity is proposed.\n4) It is proposed to optimally determine the voltage and\nreactive power of generator bus in base case. The generator\nbus with a large reactive power support sensitivity will\nretain a more effective reactive power reserve. So, the\nstatic voltage stability margin of the system with a high\nproportion of VSCs can be improved more effectively.\nThe remainder of the paper is organized as follows. Section II\nintroduces the reactive power regulation range and current lim-\nitation of VSCs. Section III presents the static voltage stability\nanalysis of a single grid-connected VSC system. Section IV\nintroduces the static voltage stability enhancement method for a\npower system with a high proportion of VSCs. Simulations are\nprovided in Sections V, and VI concludes the paper.\n",
+  "conclusion": "V. C ONCLUSION\nIn this paper, the static voltage stability enhancement method\nfor a power system with a high proportion of VSCs is studied.\nIn a single grid-connected VSC system, this paper ﬁrst analyzes\nthe PQ regulation characteristics of the VSC and synchronous\ngenerator and establishes an analytical model of static voltage\nstability by considering the current limitation. The analytical\nresults show that when the penetration ratio of the VSC reached\n40%, the system static voltage stability domain would be re-\nduced by 3.76% on average.\nBy determining the current voltage and effective reactive\npower reserve of each source bus according to the reactive power\nsupport sensitivity, the proposed method can effectively improve\nthe static voltage stability. Two simulation cases have shown that\nat medium and high VSC penetration ratios (≥40%), compared\nwith the traditional method, the static voltage stability enhance-\nment method proposed in this paper is able to better improve\nthe static voltage stability of a system with a high proportion\nof VSCs. In the test system, at penetration ratio of 40%, the\nproposed methodology has 2.71% and 2.85% more lift than the\nconventional method, respectively. In the extended IEEE-39 bus\nsystem, at high penetration ratio, the proposed methodology has\n2.84% and 2.69% more lift than the conventional method does.\nHowever, this paper has not yet considered the intermittence\nand variability of VSC resource power output. Non-continuous\nvariable reactive power compensation devices such as casting\ncapacitors are not considered. In future work, the model will\nbe transformed into a mixed-integer linear programming model.\nAnd an intraday reactive power reserve optimization method can\nbe explored for adoption in hard real-time systems.\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/A_Static_Voltage_Stability_Enhancement_Method_for_Power_Systems_With_a_High_Proportion_of_Voltage_Source_Converters.pdf",
+  "file_sha256": "a15a0ca39a12adda24e76adc814b08d0bdde5d0b8acc9557611328a1fbbe9377",
+  "target_ids": [
+    "P03"
+  ]
+}

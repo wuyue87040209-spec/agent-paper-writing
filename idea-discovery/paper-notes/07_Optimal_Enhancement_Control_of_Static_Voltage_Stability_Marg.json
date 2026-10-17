@@ -1,0 +1,348 @@
+{
+  "schema_version": 2,
+  "filename": "Optimal_Enhancement_Control_of_Static_Voltage_Stability_Margin_for_AC_DC_Power_System_With_Renewables_Considering_Control_Mode_Switching_of_DC_Converter_Stations.pdf",
+  "pages": 13,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/TIA.2025.3530868",
+  "year_candidates": [
+    "2026",
+    "2025",
+    "2024",
+    "2022"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—In an AC/DC power system with high penetration of\nrenewable energy stations (RESs), the injected bus power has high\nrandom ﬂuctuation, which brings great challenges to ensuring the\nsufﬁcient static voltage stability margin (SVSM) of the system. In\nthis paper, considering the impact of uncertain RES output and DC\nconverter stations’ control mode switching with the load growth,\nan optimal SVSM enhancement control model for AC/DC power\nsystem is proposed. In the model, the SVSM of the system under\nuncertain RES power is enhanced by regulating the power output\nand terminal voltage of generators and the parameters of multiple\ncontrol modes of DC converter stations. By proposing a triangular\nconvex hull relaxation method and using the uncertainty-aware\nmodel (UaM) method and the Karush–Kuhn–Tucker condition\nof inner-layer optimization model, the proposed bi-layer optimal\nSVSM enhancement control model is transformed into a single-\nlayer nonlinear programming model, which can be directly solved\nby the CONOPT solver with high efﬁciency. Case study on the mod-\niﬁed 39-bus AC/DC power system demonstrates that the obtained\nSVSM enhancement control scheme can accurately consider the\ninﬂuence of DC converter stations’ control mode switching with\nthe load growth, identify the inﬂuence of uncertain injected bus\npower on the system SVSM, and enhance the SVSM to satisfy the\nrequired secure operation level.\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 415
+      },
+      "end": {
+        "page": 1,
+        "offset": 1837
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1837
+      },
+      "heading": "abstract—inanac/dcpowersystemwithhighpenetrationof",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1422,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. I NTRODUCTION\nS\nTATIC voltage stability margin (SVSM) is a commonly\nused index for reﬂecting the voltage stability degree of the\ncurrent operating point of a power system, which is useful for\nguiding the secure operation of the power system [1].I ft h e\nSVSM of a power system is small, voltage instability cases are\neasy to occur with the load growth in the system operation, which\nwill result in the power outage of the system. There have been\nsome power outage accidents related to voltage instability in\nactual power systems, such as the off-grid accident in Texas, the\nUnited States of America in 2022, and the repeated crossing of\nlow voltage problems in the northern Hebei power grid of China\nin 2021, and so on [2], [3]. Thus, to ensure the secure operation\nof a power system, the SVSM is required to be maintained above\na given level, such as 0.15 in the Code on security and stability\nfor power system in China [4]. With the increasing penetration\nof renewable energy generation into power systems, the impact\nof uncertain power output of renewable energy stations (RESs)\non SVSM is becoming signiﬁcant [5], [6]. Meanwhile, with the\nrapid increase of line-commutated converter-based high voltage\ndirect current (LCC-HVDC) and voltage source converter-based\nhigh voltage direct current (VSC-HVDC) transmission lines in\npower systems, they can increase the ﬂexible regulating ability of\nthe system to enhance the SVSM. Thus, how to coordinate vari-\nous regulation measures to enhance the SVSM of AC/DC power\nsystem considering the uncertain RES power output poses great\nchallenge [7], [8]. The optimal SVSM enhancement control is\nattributed to the optimal static voltage stability (SVS) control\nproblem, which is mainly divided into two categories[9].O n ei s\nthe control strategies of regulating the current operation point to\nprevent voltage collapse at a future moment after load ﬂuctuation\nor before an accident, which is called preventive SVS control\n[10], [11]. The other is the control strategies to alleviate voltage\ninstability after the occurrence of a large disturbance in the power\nsystem and a voltage collapse, called corrective SVS control\n[12], [13]. The optimal SVSM enhancement control in this paper\nbelongs to the preventive SVS control. It aims to regulate the\ncurrent operation point to ensure that the SVSM meet the secure\noperation requirements of the system considering the uncertain\nRES output.\n0093-9994 © 2025 IEEE. All rights reserved, including rights for text and data mining, and training of artiﬁcial intelligence and similar technologi es.\nPersonal use is permitted, but republication/redistribution requires IEEE permission. See https://www.ieee.org/publications/rights/index. html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:17:41 UTC from IEEE Xplore.  Restrictions apply. \n2566 IEEE TRANSACTIONS ON INDUSTRY APPLICATIONS, VOL. 61, NO. 2, MARCH/APRIL 2025\nNowadays, many scholars have studied the optimal preventive\nSVS control problem. In [14], an optimal reactive power reserve\nmanagement scheme to improve the system SVS based on\noptimal power ﬂow (OPF) model is proposed. Mahdavi et al.[15]\nproposes a predictive SVS control method in a power distribution\nsystem with high penetration of photovoltaic units to maintain\nsystem voltages within an appropriate bandwidth. Hao et al.\n[16] proposes a multi-contingency preventive control method for\nSVS, and comprehensively considers the SVSM requirements\nunder multi-contingency. Wang et al.[17] proposes a preventive\ncontrol strategy based on efﬁcient power plant model of electric\nvehicles to maintain the SVSM above a predeﬁned security\nlevel. However, the above literatures do not take into account\nthe uncertainty of RES output. There are two main categories\nto deal with the uncertain RES output in the optimal preventive\nSVS control problem. One is to consider the uncertainty as a\nwhole in the control process, and the most conservative con-\ntrol strategy can be obtained. In [18], the uncertain ﬂuctuation\nranges of wind farm output are described as intervals, and a\nmulti-objective optimal SVS control model is proposed. In [19],\nan optimal SVSM control model considering the uncertain wind\nfarm output is proposed, and a probabilistic distribution control\nmethod is proposed to solve the optimal SVSM control model.\nThe other is to establish an online preventive control model to\nensure that the optimal control strategy can be updated during\nthe change of uncertain RES output. In[20], an online preventive\ncontrol optimization model for on-line voltage stability of large\npower grids considering multiple critical emergencies is pro-\nposed. However, when the penetration of renewable energy is\nhigh, the system state varies frequently, and the required trigger\ntime of system regulation often leads to the failure of online\npreventive control to meet the actual operation requirements.\nHence these two categories still have limitations in practical\napplications under the high uncertainty environment. Thus, to\npropose a new method to better accommodate the uncertainties\nin optimal SVS control to obtain a more secure and accurate\ncontrol strategy is required.\nIn addition, different from pure AC power systems, more extra\nDC control measures can be used in AC/DC power systems.\nHence the SVSM can also be enhanced by optimizing the control\nmodes and control parameters of DC converter stations. In\n[21], a novel control algorithm for improving SVS by using\nan embedded VSC-HVDC system is proposed. In [22], a coor-\ndinate strategy of control modes of inverter and transformer is\nproposed to improve the SVS of AC/DC systems. The above\nresearch demonstrates that regulating the control performance\nof LCC/VSC-HVDC is beneﬁcial to enhance the system SVSM.\nSince SVSM is reﬂecting the maximum load growth that a power\nsystem can bear in the current operating state. In actual situation,\nwith the load growth, the control modes of a DC converter station\nmay switch from one to another. If the DC converter stations’\ncontrol mode switching with the load growth is not considered,\nthe obtained SVSM of AC/DC power system will be inaccurate.\nIf the SVSM value is evaluated to be bigger than actual situation,\nit will bring risks to the secure operation of the system. If the\nSVSM value is evaluated to be smaller than actual situation, it\nwill bring extra control costs to the system operation. Thus, this\npaper will study various control modes of DC converter stations\nand their switching with the load growth, and take them into\naccount in the optimal SVSM enhancement control model of\nAC / DC power system with renewables.\nThis paper makes two contributions. 1) A bi-level opti-\nmization model for optimal SVSM enhancement control of\nAC/DC power system with renewables is proposed, in which\nthe inner-layer SVSM calculation model includes the constraints\nfor describing the control mode switching of DC converter\nstations with the load growth. It can reﬂect the impact of DC\nconverter stations’ control mode switching with the load growth\non the SVSM of AC/DC power system. 2) A triangle convex\nhull relaxation method is proposed to convexify the nonlinear\ncontrol mode switching constraints of DC converter stations.\nThe improved relaxed least absolute shrinkage and selection\noperator (IR-LASSO) regression based convex approximation\nmethod is used to identify the approximately convex relation-\nship between the uncertain RES output and the bus voltage in\nthe extended power ﬂow equation (PFE) constraints. They can\nimprove the solution efﬁciency and reliability of the optimal\nSVSM enhancement control model.\nThe rest of this paper is organized as follows. Section II\ndescribes the optimal SVSM enhancement control model of\nAC/DC power system with renewables. Section III introduces\nthe solution method of the optimal SVSM enhancement control\nmodel. The case study and conclusions of the modiﬁed 39-bus\nAC/DC hybrid power system are displayed in SectionsIV and V,\nrespectively.\n",
+      "page_start": 1,
+      "page_end": 2,
+      "start": {
+        "page": 1,
+        "offset": 3231
+      },
+      "end": {
+        "page": 2,
+        "offset": 5168
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 5168
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 8079,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "V. C ONCLUSION\nIn this study, an optimal SVSM enhancement control model\nof AC/DC power system with RESs is proposed. In this model,\nthe control mode switching constraints of DC converter stations\ndescribed by multiple complementary equations are added. By\nadjusting the generators’ initial active power output and terminal\nvoltage and the parameters of various control modes of DC\nconverter stations, the system SVSM under the uncertain RES\noutput is enhanced. By convex approximation of the extended\nPFEs, and the triangular convex hull relaxation of the control\nmode switching constraints of DC converter stations, the inner-\nlayer SVSM calculation model is transformed into its KKT con-\nditions, then the proposed bi-layer optimal SVSM enhancement\ncontrol model is transformed into a single-layer optimization\nmodel for direct solution. Case study on the modiﬁed IEEE-39\nbus system shows that the proposed convex approximation and\nthe triangular convex hull relaxation method have high com-\nputational accuracy. The optimal control scheme obtained by\nsolving the proposed model can effectively enhance SVSM to\nbe bigger than the secure operation requirements. Taking the\ncontrol mode switching of the DC converter stations with the\nload growth into account in the optimal SVSM enhancement\ncontrol is beneﬁcial to improve the SVSM of the AC/DC power\nsystem.\nThe proposed method can be applied to guide the operation of\nactual AC/DC power systems to execute the preventive control\nmeasures to increase the SVSM of current operating point to\nmeet the secure operation requirements. The preventive control\nmeasures include regulating the generators’ initial active power\noutput and terminal voltage and DC stations’ control mode\nparameters. It can effectively avoid the occurrence of voltage\ninstability and power outage cases in the system operation.\nThis paper only focuses on the optimal SVSM enhancement\ncontrol problem under normal operation of an AC/DC power\nsystem. However, the inﬂuence of DC converter stations’ control\nmode switching on SVSM can also be considered in the optimal\nSVSM enhancement control problem under multiple N-1 con-\ntingencies. How to solve this problem is a possible direction of\nfuture work.\n",
+      "page_start": 11,
+      "page_end": 11,
+      "start": {
+        "page": 11,
+        "offset": 2828
+      },
+      "end": {
+        "page": 11,
+        "offset": 5052
+      },
+      "preview_end": {
+        "page": 11,
+        "offset": 5052
+      },
+      "heading": "v.conclusion",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 2224,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "introduction:numbered_boundary_candidate",
+    "page:7:private_use_characters",
+    "page:8:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "section",
+      "page": 1,
+      "offset": 223,
+      "heading": "dcconverterstations",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 415,
+      "heading": "abstract—inanac/dcpowersystemwithhighpenetrationof",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1837,
+      "heading": "indexterms—ac/dcpowersystem,controlmodeswitching,",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 3231,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 5168,
+      "heading": "ii.optimalsvsmenhancementcontrolmodelof",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 152,
+      "heading": "c.inner-layersvsmcalculationmodelconstraints",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 2784,
+      "heading": "i.e.,theintersectionpointoftwobrokenlinesoftherectifier",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 2130,
+      "heading": "iii.solutionmethodology",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 504,
+      "heading": "c.kktconditiontransformationoftheinner-layersvsm",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 1686,
+      "heading": "iv.casestudy",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 2056,
+      "heading": "dcvariablevaluesofhvdctransmissionlines",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 10,
+      "offset": 3371,
+      "heading": "c.analysisofoptimalsvsmenhancementcontrolresults",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 11,
+      "offset": 1545,
+      "heading": "d.comparisonwithotheroptimalsvsmenhancement",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 11,
+      "offset": 2828,
+      "heading": "v.conclusion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 11,
+      "offset": 5052,
+      "heading": "references",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 6141
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [],
+      "chars": 6396
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5208
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5509
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5082
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4589
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 4384
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 3969
+    },
+    {
+      "page": 9,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4684
+    },
+    {
+      "page": 10,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4768
+    },
+    {
+      "page": 11,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5958
+    },
+    {
+      "page": 12,
+      "error": null,
+      "quality_flags": [],
+      "chars": 7421
+    },
+    {
+      "page": 13,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1397
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 2,
+      "cue": "limitation",
+      "snippet": "frequently, and the required trigger\ntime of system regulation often leads to the failure of online\npreventive control to meet the actual operation requirements.\nHence these two categories still have limitations in practical\napplications under the high uncertainty environment. Thus, to\npropose a new method to better accommodate the uncertainties\nin optimal SVS control to obtain a more secure and accurate\nco"
+    },
+    {
+      "page": 2,
+      "cue": "not considered",
+      "snippet": "te. In actual situation,\nwith the load growth, the control modes of a DC converter station\nmay switch from one to another. If the DC converter stations’\ncontrol mode switching with the load growth is not considered,\nthe obtained SVSM of AC/DC power system will be inaccurate.\nIf the SVSM value is evaluated to be bigger than actual situation,\nit will bring risks to the secure operation of the system. If the\nSVSM"
+    },
+    {
+      "page": 11,
+      "cue": "future work",
+      "snippet": "tations’ control\nmode switching on SVSM can also be considered in the optimal\nSVSM enhancement control problem under multiple N-1 con-\ntingencies. How to solve this problem is a possible direction of\nfuture work.\nREFERENCES\n[1] H. D. Chiang, A. J. Flueck, K. S. Shah, and N. Balu, “CPFLOW: A\npractical tool for tracing power system steady state stationary behavior\ndue to load and generation variations,” IEEE T"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/07_Optimal_Enhancement_Control_of_Static_Voltage_Stability_Marg_pages.json",
+  "abstract": "Abstract—In an AC/DC power system with high penetration of\nrenewable energy stations (RESs), the injected bus power has high\nrandom ﬂuctuation, which brings great challenges to ensuring the\nsufﬁcient static voltage stability margin (SVSM) of the system. In\nthis paper, considering the impact of uncertain RES output and DC\nconverter stations’ control mode switching with the load growth,\nan optimal SVSM enhancement control model for AC/DC power\nsystem is proposed. In the model, the SVSM of the system under\nuncertain RES power is enhanced by regulating the power output\nand terminal voltage of generators and the parameters of multiple\ncontrol modes of DC converter stations. By proposing a triangular\nconvex hull relaxation method and using the uncertainty-aware\nmodel (UaM) method and the Karush–Kuhn–Tucker condition\nof inner-layer optimization model, the proposed bi-layer optimal\nSVSM enhancement control model is transformed into a single-\nlayer nonlinear programming model, which can be directly solved\nby the CONOPT solver with high efﬁciency. Case study on the mod-\niﬁed 39-bus AC/DC power system demonstrates that the obtained\nSVSM enhancement control scheme can accurately consider the\ninﬂuence of DC converter stations’ control mode switching with\nthe load growth, identify the inﬂuence of uncertain injected bus\npower on the system SVSM, and enhance the SVSM to satisfy the\nrequired secure operation level.\n",
+  "introduction": "I. I NTRODUCTION\nS\nTATIC voltage stability margin (SVSM) is a commonly\nused index for reﬂecting the voltage stability degree of the\ncurrent operating point of a power system, which is useful for\nguiding the secure operation of the power system [1].I ft h e\nSVSM of a power system is small, voltage instability cases are\neasy to occur with the load growth in the system operation, which\nwill result in the power outage of the system. There have been\nsome power outage accidents related to voltage instability in\nactual power systems, such as the off-grid accident in Texas, the\nUnited States of America in 2022, and the repeated crossing of\nlow voltage problems in the northern Hebei power grid of China\nin 2021, and so on [2], [3]. Thus, to ensure the secure operation\nof a power system, the SVSM is required to be maintained above\na given level, such as 0.15 in the Code on security and stability\nfor power system in China [4]. With the increasing penetration\nof renewable energy generation into power systems, the impact\nof uncertain power output of renewable energy stations (RESs)\non SVSM is becoming signiﬁcant [5], [6]. Meanwhile, with the\nrapid increase of line-commutated converter-based high voltage\ndirect current (LCC-HVDC) and voltage source converter-based\nhigh voltage direct current (VSC-HVDC) transmission lines in\npower systems, they can increase the ﬂexible regulating ability of\nthe system to enhance the SVSM. Thus, how to coordinate vari-\nous regulation measures to enhance the SVSM of AC/DC power\nsystem considering the uncertain RES power output poses great\nchallenge [7], [8]. The optimal SVSM enhancement control is\nattributed to the optimal static voltage stability (SVS) control\nproblem, which is mainly divided into two categories[9].O n ei s\nthe control strategies of regulating the current operation point to\nprevent voltage collapse at a future moment after load ﬂuctuation\nor before an accident, which is called preventive SVS control\n[10], [11]. The other is the control strategies to alleviate voltage\ninstability after the occurrence of a large disturbance in the power\nsystem and a voltage collapse, called corrective SVS control\n[12], [13]. The optimal SVSM enhancement control in this paper\nbelongs to the preventive SVS control. It aims to regulate the\ncurrent operation point to ensure that the SVSM meet the secure\noperation requirements of the system considering the uncertain\nRES output.\n0093-9994 © 2025 IEEE. All rights reserved, including rights for text and data mining, and training of artiﬁcial intelligence and similar technologi es.\nPersonal use is permitted, but republication/redistribution requires IEEE permission. See https://www.ieee.org/publications/rights/index. html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:17:41 UTC from IEEE Xplore.  Restrictions apply. \n2566 IEEE TRANSACTIONS ON INDUSTRY APPLICATIONS, VOL. 61, NO. 2, MARCH/APRIL 2025\nNowadays, many scholars have studied the optimal preventive\nSVS control problem. In [14], an optimal reactive power reserve\nmanagement scheme to improve the system SVS based on\noptimal power ﬂow (OPF) model is proposed. Mahdavi et al.[15]\nproposes a predictive SVS control method in a power distribution\nsystem with high penetration of photovoltaic units to maintain\nsystem voltages within an appropriate bandwidth. Hao et al.\n[16] proposes a multi-contingency preventive control method for\nSVS, and comprehensively considers the SVSM requirements\nunder multi-contingency. Wang et al.[17] proposes a preventive\ncontrol strategy based on efﬁcient power plant model of electric\nvehicles to maintain the SVSM above a predeﬁned security\nlevel. However, the above literatures do not take into account\nthe uncertainty of RES output. There are two main categories\nto deal with the uncertain RES output in the optimal preventive\nSVS control problem. One is to consider the uncertainty as a\nwhole in the control process, and the most conservative con-\ntrol strategy can be obtained. In [18], the uncertain ﬂuctuation\nranges of wind farm output are described as intervals, and a\nmulti-objective optimal SVS control model is proposed. In [19],\nan optimal SVSM control model considering the uncertain wind\nfarm output is proposed, and a probabilistic distribution control\nmethod is proposed to solve the optimal SVSM control model.\nThe other is to establish an online preventive control model to\nensure that the optimal control strategy can be updated during\nthe change of uncertain RES output. In[20], an online preventive\ncontrol optimization model for on-line voltage stability of large\npower grids considering multiple critical emergencies is pro-\nposed. However, when the penetration of renewable energy is\nhigh, the system state varies frequently, and the required trigger\ntime of system regulation often leads to the failure of online\npreventive control to meet the actual operation requirements.\nHence these two categories still have limitations in practical\napplications under the high uncertainty environment. Thus, to\npropose a new method to better accommodate the uncertainties\nin optimal SVS control to obtain a more secure and accurate\ncontrol strategy is required.\nIn addition, different from pure AC power systems, more extra\nDC control measures can be used in AC/DC power systems.\nHence the SVSM can also be enhanced by optimizing the control\nmodes and control parameters of DC converter stations. In\n[21], a novel control algorithm for improving SVS by using\nan embedded VSC-HVDC system is proposed. In [22], a coor-\ndinate strategy of control modes of inverter and transformer is\nproposed to improve the SVS of AC/DC systems. The above\nresearch demonstrates that regulating the control performance\nof LCC/VSC-HVDC is beneﬁcial to enhance the system SVSM.\nSince SVSM is reﬂecting the maximum load growth that a power\nsystem can bear in the current operating state. In actual situation,\nwith the load growth, the control modes of a DC converter station\nmay switch from one to another. If the DC converter stations’\ncontrol mode switching with the load growth is not considered,\nthe obtained SVSM of AC/DC power system will be inaccurate.\nIf the SVSM value is evaluated to be bigger than actual situation,\nit will bring risks to the secure operation of the system. If the\nSVSM value is evaluated to be smaller than actual situation, it\nwill bring extra control costs to the system operation. Thus, this\npaper will study various control modes of DC converter stations\nand their switching with the load growth, and take them into\naccount in the optimal SVSM enhancement control model of\nAC / DC power system with renewables.\nThis paper makes two contributions. 1) A bi-level opti-\nmization model for optimal SVSM enhancement control of\nAC/DC power system with renewables is proposed, in which\nthe inner-layer SVSM calculation model includes the constraints\nfor describing the control mode switching of DC converter\nstations with the load growth. It can reﬂect the impact of DC\nconverter stations’ control mode switching with the load growth\non the SVSM of AC/DC power system. 2) A triangle convex\nhull relaxation method is proposed to convexify the nonlinear\ncontrol mode switching constraints of DC converter stations.\nThe improved relaxed least absolute shrinkage and selection\noperator (IR-LASSO) regression based convex approximation\nmethod is used to identify the approximately convex relation-\nship between the uncertain RES output and the bus voltage in\nthe extended power ﬂow equation (PFE) constraints. They can\nimprove the solution efﬁciency and reliability of the optimal\nSVSM enhancement control model.\nThe rest of this paper is organized as follows. Section II\ndescribes the optimal SVSM enhancement control model of\nAC/DC power system with renewables. Section III introduces\nthe solution method of the optimal SVSM enhancement control\nmodel. The case study and conclusions of the modiﬁed 39-bus\nAC/DC hybrid power system are displayed in SectionsIV and V,\nrespectively.\n",
+  "conclusion": "V. C ONCLUSION\nIn this study, an optimal SVSM enhancement control model\nof AC/DC power system with RESs is proposed. In this model,\nthe control mode switching constraints of DC converter stations\ndescribed by multiple complementary equations are added. By\nadjusting the generators’ initial active power output and terminal\nvoltage and the parameters of various control modes of DC\nconverter stations, the system SVSM under the uncertain RES\noutput is enhanced. By convex approximation of the extended\nPFEs, and the triangular convex hull relaxation of the control\nmode switching constraints of DC converter stations, the inner-\nlayer SVSM calculation model is transformed into its KKT con-\nditions, then the proposed bi-layer optimal SVSM enhancement\ncontrol model is transformed into a single-layer optimization\nmodel for direct solution. Case study on the modiﬁed IEEE-39\nbus system shows that the proposed convex approximation and\nthe triangular convex hull relaxation method have high com-\nputational accuracy. The optimal control scheme obtained by\nsolving the proposed model can effectively enhance SVSM to\nbe bigger than the secure operation requirements. Taking the\ncontrol mode switching of the DC converter stations with the\nload growth into account in the optimal SVSM enhancement\ncontrol is beneﬁcial to improve the SVSM of the AC/DC power\nsystem.\nThe proposed method can be applied to guide the operation of\nactual AC/DC power systems to execute the preventive control\nmeasures to increase the SVSM of current operating point to\nmeet the secure operation requirements. The preventive control\nmeasures include regulating the generators’ initial active power\noutput and terminal voltage and DC stations’ control mode\nparameters. It can effectively avoid the occurrence of voltage\ninstability and power outage cases in the system operation.\nThis paper only focuses on the optimal SVSM enhancement\ncontrol problem under normal operation of an AC/DC power\nsystem. However, the inﬂuence of DC converter stations’ control\nmode switching on SVSM can also be considered in the optimal\nSVSM enhancement control problem under multiple N-1 con-\ntingencies. How to solve this problem is a possible direction of\nfuture work.\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Optimal_Enhancement_Control_of_Static_Voltage_Stability_Margin_for_AC_DC_Power_System_With_Renewables_Considering_Control_Mode_Switching_of_DC_Converter_Stations.pdf",
+  "file_sha256": "3ebc6c08da7078256b6426bbd9a0dc7297f658278bfd41979e7e5058298ddf58",
+  "target_ids": [
+    "P05"
+  ]
+}

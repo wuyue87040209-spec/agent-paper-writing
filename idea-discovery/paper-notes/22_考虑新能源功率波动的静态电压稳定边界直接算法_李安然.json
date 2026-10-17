@@ -1,0 +1,319 @@
+{
+  "schema_version": 2,
+  "filename": "考虑新能源功率波动的静态电压稳定边界直接算法_李安然.pdf",
+  "pages": 8,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": null,
+  "year_candidates": [
+    "2026",
+    "2025",
+    "1984"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "摘　要 ： 为考虑新能源不确定性 、 波动性等特点对电力系统静态电压稳定边界 （ SSVSM ） 的影响 ， 以蒙特卡洛抽样方法为基础\n的传统做法需反复多次调取连续潮流获取 SSVSM ， 计算效率低 。 寻求一种能兼顾计算效率和准确性的 SSVSM 计算分析方法\n具有重要的意义及价值 。 该文提出一种基于全导数算法的仿射区间方法 ， 以计算考虑系统在不稳定功率源影响下 SSVSM 的波\n动范围 。 借助 IEEE 标准输电系统 ， 采用同型算法进行对比 ， 证明了所提算法的高效及准确性 。\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 475
+      },
+      "end": {
+        "page": 1,
+        "offset": 724
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 724
+      },
+      "heading": "摘要:为考虑新能源不确定性、波动性等特点对电力系统静态电压稳定边界(ssvsm)的影响,以蒙特卡洛抽样方法为基础",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 249,
+      "truncated": false,
+      "quality_flags": [
+        "multiple_heading_candidates"
+      ],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "0 　引　言\n在 “ 双碳 ” 背景\n［ 1 ］\n下 ， 新能源发展迅速 。 新能源多时空尺\n度不确定性给电力系统安全稳定运行及分析计算带来诸多\n难题\n［ 2 - 3 ］\n。 随着中国电力系统输电网络的扩张及电力需求的\n迅速增长 ， 电网运行点逐步逼近电压稳定边界\n［ 4 - 8 ］\n。 研究一种\n考虑系统不稳定功率波动影响下 ， 静态电压稳定波动区间的\n快速计算方法 ， 给出系统安全稳定运行范围 ， 能有效防止功\n率 波 动 引 发 的 静 态 电 压 稳 定 问 题 ， 预 防 系 统 中 的 电 压 崩\n溃\n［ 9 - 10 ］\n隐患 。\n为 求 解 静 态 电 压 稳 定 边 界 （ steady - state voltage stability \nmargin ，  SSVSM ） ，  常 用 的 方 法 包 括 连 续 潮 流 （ continuous \npower flow ，  CPF ）\n［ 11 - 14 ］\n、 直 接 法 （ direct method ， DM ）\n［ 5 ， 15 - 19 ］\n等 。\n此类方法通过设定既有的增长模式或方向计算 SSVSM 。 为\n考虑新能源输出功率的不稳定性 ， 采用蒙特卡洛及高效率抽\n样算法结合这些经典方法能够获得 SSVSM 的概率分布及区\n间\n［ 20 ］\n。 这虽能获取丰富的静态电压稳定信息 ， 但计算效率低\n下 。 为保障系统的安全运行 ， 通常仅需要在所有的波动中寻\n求最危险边界作为指标保障电力系统的稳定运行即可 。 因\n此 ， 获取 SSVSM 的概率分布有时信息过冗余 ， 相反采用计算\n量较小的区间算法计算在新能源波动影响下可能出现的安\n全裕度区间则可达到计算目的 。\n仿 射 算 术 （ affine arithmetic ，  AA ） 与 区 间 算 术 （ interval \narithmetic ，  IA ） 是 区 间 算 法 中 常 用 的 两 种 算 术\n［ 21 ］\n。 相 较 于\nIA ， AA 由 于 避 免 了 解 耦 变 量 的 过 估 计 保 障 了 其 准 确 性\n［ 22 ］\n。\n文献 ［ 21 ］ 利用 AA 结合潮流计算 ， 获得了在考虑数据波动时\n状态变量的波动范围 。 文献 ［ 23 ］ 将 AA 运用于静态电压稳定\n分析中 ， 结合局部参数 CPF 方法获取 PV 曲线波动区间 ， 是\nAA 在静态 电压稳定分析运用的开端 。 文献 ［ 24 ］ 基于文献 ［ 23 ］\n通过修改 AA 的乘法算子进一步缩小了过估计现象 。 AA 与\n连续潮流的结合算法已得到应用\n［ 25 ］\n， 但该方法计算效率及准\n确性与 CPF 方法步长选取相关 ， 小步长才可获取较准确的计\n算信息 ， 但计算效率大幅下降 ， 反之亦然 。\n定 位 SSVSM 的 算 法 还 有 一 类 直 接 算 法 （ direct method ，  \nDM ）\n［ 26 ］\n。 由于 DM 能直接计算 SSVSM ， 相对于 AA - CPF 能大\n幅提高计算效率 。 但是 ， 经典 DM 方程维数大\n［ 16 ， 27 ］\n； 若采用降\n维措施\n［ 27 - 28 ］\n， 则需要大量的数学运算 ， 较为复杂 ； 另一方面 ，\nDM 往往受制于其计算稳定性 ， 尤其当系统存在约束时易发\n散\n［ 5 ］\n。 以上缺陷使得 AA 与 DM 的结合未得到充分发展 ， 鲜\n有 报 道 。 近 年 来 ， 一 种 利 用 全 导 数 直 接 计 算 SSVSM 方 法\n（ derivative direct method ，  DDM ）\n［ 19 ， 26 ］\n得到研究 ， 其计算稳定性\n好 ， 维数低 ， 取得了不错的运用效果 。\n本文提出将 AA 与 DDM 结合的计算方法 ， 称为全导数仿\n射区间算法 （ AA - DDM ） ； 推导了 AA - DDM 计算公式 ， 扩展了\n算法的运用范围 ， 可直接计算系统指定电压功率曲线导数点\n及考虑 约束时系统 SSVSM 的波动区间 。 最后 ， 采 用 IEEE - 14 、\nIEEE - 118 标准输电系统进行仿真计算 ， 对算法的计算性能进\n行验证 。\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 808
+      },
+      "end": {
+        "page": 1,
+        "offset": 2586
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 2586
+      },
+      "heading": "0引言",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 1778,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "5 　结　论\n提出一种仿射算术与全导数结合的算法 ， 用以计算考虑\n新能源波动的 SSVSM 区间 ， 并将 AA - DDM 扩展用于考虑系\n统约束的情形 。 采用 IEEE - 14 节点标准输电系统仿真算例\n在考虑及不考虑系统约束的情形下证明所提算法能够准确\n计 算 在 新 能 源 功 率 波 动 影 响 下 的 SNB 及 LIB 的 波 动 区 间 。\n采用 IEEE - 118 节点标准输电系统算例证明了所提算法具有\n高于 AA - CPF 的计算效率 。 仿真结果表明仿射全导数算法是\n一种兼 顾准确性及计算效率的算法 ， 能有效运用于含新能源\n功率波动的静态电压稳定分析之中 。\n",
+      "page_start": 5,
+      "page_end": 6,
+      "start": {
+        "page": 5,
+        "offset": 2369
+      },
+      "end": {
+        "page": 6,
+        "offset": 48
+      },
+      "preview_end": {
+        "page": 6,
+        "offset": 48
+      },
+      "heading": "5结论",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 300,
+      "truncated": false,
+      "quality_flags": [
+        "text:control_characters_encoding_suspect"
+      ],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "abstract:multiple_heading_candidates",
+    "conclusion:text:control_characters_encoding_suspect",
+    "introduction:numbered_boundary_candidate",
+    "page:2:fragmented_text",
+    "page:3:fragmented_text",
+    "page:4:control_characters_encoding_suspect",
+    "page:5:control_characters_encoding_suspect",
+    "page:8:fragmented_text"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 475,
+      "heading": "摘要:为考虑新能源不确定性、波动性等特点对电力系统静态电压稳定边界(ssvsm)的影响,以蒙特卡洛抽样方法为基础",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 724,
+      "heading": "关键词:新能源;随机过程;电压稳定;区间算法;仿射算术;数值方法",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 808,
+      "heading": "0引言",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 1,
+      "offset": 2586,
+      "heading": "1静态电压稳定问题与仿射算术",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 0,
+      "heading": "1期李安然等:考虑新能源功率波动的静态电压稳定边界直接算法409",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 452,
+      "heading": "4仿真分析",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 5,
+      "offset": 2369,
+      "heading": "5结论",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 6,
+      "offset": 48,
+      "heading": "[参考文献]",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 6,
+      "offset": 3299,
+      "heading": "lix,liucr,caih,etal.fastcalculationmethodfor",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 6,
+      "offset": 4698,
+      "heading": "1期李安然等:考虑新能源功率波动的静态电压稳定边界直接算法411",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "abstract",
+      "page": 8,
+      "offset": 364,
+      "heading": "abstract:toaddresstheimpactoftheuncertaintyandvolatilityofnewenergyonthesteady-statevoltagestabilitymargin(ssvsm)of",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 8,
+      "offset": 1250,
+      "heading": "keywords:newenergy;randomprocesses;voltagestability;intervalalgorithm;affinearithmetic;numericalmethods",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "backmatter",
+      "page": 8,
+      "offset": 1377,
+      "heading": "附录a",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 2752
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 3271
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 2563
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 2439
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 2620
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4739
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3147
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 2517
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 2,
+      "cue": "假设",
+      "snippet": "IB 与 SNB 均属于 SSVSM\n［ 25 ］\n。\n1 . 2 　仿射算术\n1 . 2 . 1 　仿射式\n区间算法所解决的问题是 ， 当系统中存在多个相互独立\n区间变量输入时 ， 如何计算获取系统状态变量及输出变量区\n间 。 当前区间算法的一大难点在于当系统复杂且区间较大\n时 ， 如何保证计算获取输出区间的准确性 。 区间算法中 ， IA\n要求满足输入量对系统所有状态量的区间变化是相对独立\n的假设条件 。 若不满足该假设条件 ， 获得的输出变量将过估\n计\n［ 21 ］\n， 这一问题也被称之为独立性问题 。 AA 能弱化这一问\n题带来的影响 。 AA 持续追踪输入变量的一阶微分量对状态\n变 量 及 输 出 变 量 的 影 响 ， 考 虑 了 非 独 立 性 的 因 素 影 响 。 因\n此 ， 相较于 IA 算法具有较高的准确性 。\nAA 基本状态变量可表示为仿射式 （ 2 ） ， 即 ：\nx"
+    },
+    {
+      "page": 2,
+      "cue": "假设",
+      "snippet": "ε\nn\ny\nn\n（ 5 ）\n仿射式的线性运算 ， 满足式 （ 6 ） ：\nα x ̂ + β y ̂ + γ = ( )α x\n0\n+ β y\n0\n+ γ + ( )α x\n1\n+ β y\n1\nε\n1\n+\n( )α x\n2\n+ β y\n2\nε\n2\n+ ⋯ + ( )α x\nn\n+ β y\nn\nε\nn\n（ 6 ）\n式中 ： α ， β ， γ ∈ R 。\n仿射式的非线性运算 较为复杂 ， 首先 ， 假设存在非线性\n运算 z = f ( )x , y ， 满足 ：\nz = f ( )x , y = f ( )x ̂ , y ̂ = f\n͂\n( )ε\n1\n, ε\n2\n, ⋯ , ε\nn\n（ 7 ）\n假 设 存 在 一 个 仿 射 式 f\na\n( )ε\n1\n, ε\n2\n, ⋯ , ε\nn\n能 够 近 似 替 代\nf\n͂\n( )ε\n1\n, ε\n2\n, ⋯ , ε\nn\n的仿射表达且满足 ：\n|| f\n͂"
+    },
+    {
+      "page": 2,
+      "cue": "假设",
+      "snippet": "衡 方 程 ， F ( )x , S , λ 为 全 导 数 方 程 。\nF ( )x , S , λ 推导过程及相关计算方法可参考文献 ［ 19 ］ 。 该方\n法能够直接计算 SNB ， 较经典直接法具有更高的稳定性 ， 在\nSSVSM 的直接计算中被证明具有不错的运用效果\n［ 19 ］\n。\n2 . 2 全导数仿射区间算法 （ AA - DDM ）\n基于 DDM ， 提出 AA - DDM 。 假设新能源功率注入源 S 为\n相互独立可波动变化的区间 。 在区间输入 ：\nS\nu n c\n= [ ]S\nε 1\n, S\nε 2\n, ⋯ , S\nε n\nT\n（ 12 ）\n的影响下 ， 系统状态变量及不可控变量可分别表示为仿射式\n（ 13 ） 、 式 （ 14 ） 。\nx ̂ = x\n0\n+\n∂ x\n∂ G\nS\nε 1\nΔ S\nε 1\nε\ns 1\n+ ⋯ +\n∂ x\n∂ G\nS\nε n\nΔ S\nε n"
+    },
+    {
+      "page": 4,
+      "cue": "忽略",
+      "snippet": "系统进行调整 ： 将节点 2 发电机组及节\n点 3 调相机组均调整为具有 50 MW 有功功率输出的新能源\n发电机组 。 调整后 ， 新能源输出占比约为 35 % 。 仿真时 ， 认\n为新能源场站不确定性有功输出为计划量的 ± 30 % 。 式 （ 11 ）\n中 λ 设置为负荷增长率 ， λ 增加表明系统负荷按原比例增长 。\n4 . 1 . 1 　不考虑系统约束\n为 验证所 提方法的准确性 ， 先忽略系统约束 ， 采用 AA - DDM\n直接计算 SNB 的分布区间与 3 . 1 节所述 λ ′ = 0 . 5 pu 时对应 λ\n的 分 布 区 间 ， 记 为 λ\n0 . 5\n。 采 用 AA - DDM 、 仿 射 连 续 潮 流 （ AA -\nCPF ） 、 蒙 特 卡 洛 - 连 续 潮 流 （ MC - CPF ） 以 及 蒙 特 卡 洛 - 直 接 法\n（ MC - DM ） 的 计"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/22_考虑新能源功率波动的静态电压稳定边界直接算法_李安然_pages.json",
+  "abstract": "摘　要 ： 为考虑新能源不确定性 、 波动性等特点对电力系统静态电压稳定边界 （ SSVSM ） 的影响 ， 以蒙特卡洛抽样方法为基础\n的传统做法需反复多次调取连续潮流获取 SSVSM ， 计算效率低 。 寻求一种能兼顾计算效率和准确性的 SSVSM 计算分析方法\n具有重要的意义及价值 。 该文提出一种基于全导数算法的仿射区间方法 ， 以计算考虑系统在不稳定功率源影响下 SSVSM 的波\n动范围 。 借助 IEEE 标准输电系统 ， 采用同型算法进行对比 ， 证明了所提算法的高效及准确性 。\n",
+  "introduction": "0 　引　言\n在 “ 双碳 ” 背景\n［ 1 ］\n下 ， 新能源发展迅速 。 新能源多时空尺\n度不确定性给电力系统安全稳定运行及分析计算带来诸多\n难题\n［ 2 - 3 ］\n。 随着中国电力系统输电网络的扩张及电力需求的\n迅速增长 ， 电网运行点逐步逼近电压稳定边界\n［ 4 - 8 ］\n。 研究一种\n考虑系统不稳定功率波动影响下 ， 静态电压稳定波动区间的\n快速计算方法 ， 给出系统安全稳定运行范围 ， 能有效防止功\n率 波 动 引 发 的 静 态 电 压 稳 定 问 题 ， 预 防 系 统 中 的 电 压 崩\n溃\n［ 9 - 10 ］\n隐患 。\n为 求 解 静 态 电 压 稳 定 边 界 （ steady - state voltage stability \nmargin ，  SSVSM ） ，  常 用 的 方 法 包 括 连 续 潮 流 （ continuous \npower flow ，  CPF ）\n［ 11 - 14 ］\n、 直 接 法 （ direct method ， DM ）\n［ 5 ， 15 - 19 ］\n等 。\n此类方法通过设定既有的增长模式或方向计算 SSVSM 。 为\n考虑新能源输出功率的不稳定性 ， 采用蒙特卡洛及高效率抽\n样算法结合这些经典方法能够获得 SSVSM 的概率分布及区\n间\n［ 20 ］\n。 这虽能获取丰富的静态电压稳定信息 ， 但计算效率低\n下 。 为保障系统的安全运行 ， 通常仅需要在所有的波动中寻\n求最危险边界作为指标保障电力系统的稳定运行即可 。 因\n此 ， 获取 SSVSM 的概率分布有时信息过冗余 ， 相反采用计算\n量较小的区间算法计算在新能源波动影响下可能出现的安\n全裕度区间则可达到计算目的 。\n仿 射 算 术 （ affine arithmetic ，  AA ） 与 区 间 算 术 （ interval \narithmetic ，  IA ） 是 区 间 算 法 中 常 用 的 两 种 算 术\n［ 21 ］\n。 相 较 于\nIA ， AA 由 于 避 免 了 解 耦 变 量 的 过 估 计 保 障 了 其 准 确 性\n［ 22 ］\n。\n文献 ［ 21 ］ 利用 AA 结合潮流计算 ， 获得了在考虑数据波动时\n状态变量的波动范围 。 文献 ［ 23 ］ 将 AA 运用于静态电压稳定\n分析中 ， 结合局部参数 CPF 方法获取 PV 曲线波动区间 ， 是\nAA 在静态 电压稳定分析运用的开端 。 文献 ［ 24 ］ 基于文献 ［ 23 ］\n通过修改 AA 的乘法算子进一步缩小了过估计现象 。 AA 与\n连续潮流的结合算法已得到应用\n［ 25 ］\n， 但该方法计算效率及准\n确性与 CPF 方法步长选取相关 ， 小步长才可获取较准确的计\n算信息 ， 但计算效率大幅下降 ， 反之亦然 。\n定 位 SSVSM 的 算 法 还 有 一 类 直 接 算 法 （ direct method ，  \nDM ）\n［ 26 ］\n。 由于 DM 能直接计算 SSVSM ， 相对于 AA - CPF 能大\n幅提高计算效率 。 但是 ， 经典 DM 方程维数大\n［ 16 ， 27 ］\n； 若采用降\n维措施\n［ 27 - 28 ］\n， 则需要大量的数学运算 ， 较为复杂 ； 另一方面 ，\nDM 往往受制于其计算稳定性 ， 尤其当系统存在约束时易发\n散\n［ 5 ］\n。 以上缺陷使得 AA 与 DM 的结合未得到充分发展 ， 鲜\n有 报 道 。 近 年 来 ， 一 种 利 用 全 导 数 直 接 计 算 SSVSM 方 法\n（ derivative direct method ，  DDM ）\n［ 19 ， 26 ］\n得到研究 ， 其计算稳定性\n好 ， 维数低 ， 取得了不错的运用效果 。\n本文提出将 AA 与 DDM 结合的计算方法 ， 称为全导数仿\n射区间算法 （ AA - DDM ） ； 推导了 AA - DDM 计算公式 ， 扩展了\n算法的运用范围 ， 可直接计算系统指定电压功率曲线导数点\n及考虑 约束时系统 SSVSM 的波动区间 。 最后 ， 采 用 IEEE - 14 、\nIEEE - 118 标准输电系统进行仿真计算 ， 对算法的计算性能进\n行验证 。\n",
+  "conclusion": "5 　结　论\n提出一种仿射算术与全导数结合的算法 ， 用以计算考虑\n新能源波动的 SSVSM 区间 ， 并将 AA - DDM 扩展用于考虑系\n统约束的情形 。 采用 IEEE - 14 节点标准输电系统仿真算例\n在考虑及不考虑系统约束的情形下证明所提算法能够准确\n计 算 在 新 能 源 功 率 波 动 影 响 下 的 SNB 及 LIB 的 波 动 区 间 。\n采用 IEEE - 118 节点标准输电系统算例证明了所提算法具有\n高于 AA - CPF 的计算效率 。 仿真结果表明仿射全导数算法是\n一种兼 顾准确性及计算效率的算法 ， 能有效运用于含新能源\n功率波动的静态电压稳定分析之中 。\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/考虑新能源功率波动的静态电压稳定边界直接算法_李安然.pdf",
+  "file_sha256": "f230187790c161dd74e84f29a217357256fb7d18f88185b2d74c135fede2fd23",
+  "target_ids": [
+    "P21"
+  ]
+}

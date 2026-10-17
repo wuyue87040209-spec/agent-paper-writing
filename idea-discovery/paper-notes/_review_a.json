@@ -1,0 +1,1724 @@
+{
+  "reviewer": "Codex /root/review_a",
+  "scope": "P01–P12，独立Step1.5审查，2026-10-11",
+  "papers": [
+    {
+      "target_id": "P01",
+      "title": "An Extended Continuation Power Flow Method for Static Voltage Stability Assessment of Renewable Power Generation-Penetrated Power Systems",
+      "identity_verified": true,
+      "identity_basis": "首页题名与清单一致；提取DOI核对",
+      "doi": "10.1109/TCSII.2022.3209335",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/An_Extended_Continuation_Power_Flow_Method_for_Static_Voltage_Stability_Assessment_of_Renewable_Power_Generation-Penetrated_Power_Systems.pdf",
+      "pdf_sha256": "f66781a013bb1290ed622a2cca6455d6026febd54f92a14c906c224aada05ac2",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/03_An_Extended_Continuation_Power_Flow_Method_for_Static_Voltag_pages.json",
+      "pages_sha256": "7c254be04abcac73d95976eb224939ecea896a297c39b816a530bf47d1dba378",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "Codex /root/review_a",
+      "read_ranges": [
+        {
+          "kind": "abstract",
+          "start": {
+            "page": 1,
+            "offset": 380
+          },
+          "end": {
+            "page": 1,
+            "offset": 1657
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "introduction",
+          "start": {
+            "page": 1,
+            "offset": 1773
+          },
+          "end": {
+            "page": 2,
+            "offset": 1277
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "conclusion",
+          "start": {
+            "page": 5,
+            "offset": 1017
+          },
+          "end": {
+            "page": 5,
+            "offset": 1702
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 5214,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 4,
+          "start_offset": 0,
+          "end_offset": 4318,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 500,
+          "status": "已核验题名身份区域"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 4,
+          "start_offset": 78,
+          "end_offset": 772,
+          "quote": "3) Update the control mode of CVRPG nodes according to\nthe convergent power ﬂow calculation results.\n4) Obtain the extended Jacobian matrix J′.\n5) Judge whether the minimum eigenvalue of J′ is zero or\nclose to zero. If yes, the static voltage stability limit is\nreached; Otherwise, return to step 2).\nBy incorporating the dynamics of SG and CVRPG nodes in\nthe conventional power ﬂow model, the extended CPF based\non J\n′ makes the solution of the static voltage stability limit\nmore accurate. Meanwhile, J′ slightly increases the computa-\ntion cost by merely introducing several terms in the diagonal\nelements compared with J, and that is only a small part of the\nwhole CPF calculation process.\n",
+          "interpretation": "扩展CPF随收敛潮流更新CVRPG控制模式并用扩展Jacobian最小特征值判断极限。",
+          "kind": "method"
+        },
+        {
+          "page": 4,
+          "start_offset": 2809,
+          "end_offset": 3403,
+          "quote": "The critical load power at Bus-15 is selected as the object\nof static voltage stability analysis, that is, the load power at\nBus-15 is increased until the static stability limit is reached.\nTo compare the SVSA accuracy of conventional CPF and\nextended CPF and to examine the impact of control parame-\nters, the following four cases are concerned:\n• Case 1: SVSA based on conventional CPF where CVRPG\nand SG nodes are treated as PV nodes;\n• Case 2: SVSA based on extended CPF and KPi = 0.5;\n• Case 3: SVSA based on extended CPF and KPi = 1.0;\n• Case 4: SVSA based on extended CPF and KPi = 2.0.\n",
+          "interpretation": "算例沿Bus-15负荷增长并比较控制系数；此处不是多个新能源出力箱域的最坏搜索。",
+          "kind": "scope"
+        },
+        {
+          "page": 5,
+          "start_offset": 1524,
+          "end_offset": 1702,
+          "quote": "The work can be used for ﬁguring out the good operation con-\nditions of power systems and optimizing control parameters of\nCVRPG, and will be further studied in our future work.\n",
+          "interpretation": "优化CVRPG控制参数列为未来工作。",
+          "kind": "author_future"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "start": {
+            "page": 1,
+            "offset": 380
+          },
+          "end": {
+            "page": 1,
+            "offset": 1657
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "introduction": {
+          "start": {
+            "page": 1,
+            "offset": 1773
+          },
+          "end": {
+            "page": 2,
+            "offset": 1277
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "conclusion": {
+          "start": {
+            "page": 5,
+            "offset": 1017
+          },
+          "end": {
+            "page": 5,
+            "offset": 1702
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        }
+      },
+      "issues": [
+        "机器numbered_boundary_candidate已结合下节标题复核；无全文已读声明。"
+      ],
+      "resolution": "使用上述精确正文范围；机器索引保持pending且未改动。",
+      "unresolved": [],
+      "nonblocking_limitations": [
+        "未审读全文所有页；公式和未引用数值未认证；缺口判断仅限已读范围。"
+      ],
+      "status": "已核验该范围"
+    },
+    {
+      "target_id": "P02",
+      "title": "SVG Configuration Scheme to Enhance Renewable Energy Accommodation Considering Voltage Stability Constraints in Renewable Power Grids",
+      "identity_verified": true,
+      "identity_basis": "首页题名与清单一致；提取DOI核对",
+      "doi": "10.1109/TCSII.2025.3588112",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/SVG Configuration Scheme to Enhance Renewable Energy Accommodation Considering Voltage Stability Constraints in Renewable Power Grids.pdf",
+      "pdf_sha256": "82e1f0615069d648f5d0f6fc3b2cf17c2bf025dc74097010454d756a46f510d9",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/13_SVG_Configuration_Scheme_to_Enhance_Renewable_Energy_Accommo_pages.json",
+      "pages_sha256": "fb5ff02f86a29a47f3563b9bae24b79980cbc053051aeab21c5f4512a6a46517",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "Codex /root/review_a",
+      "read_ranges": [
+        {
+          "kind": "abstract",
+          "start": {
+            "page": 1,
+            "offset": 422
+          },
+          "end": {
+            "page": 1,
+            "offset": 1732
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "introduction",
+          "start": {
+            "page": 1,
+            "offset": 1880
+          },
+          "end": {
+            "page": 2,
+            "offset": 1553
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "conclusion",
+          "start": {
+            "page": 5,
+            "offset": 1125
+          },
+          "end": {
+            "page": 5,
+            "offset": 1794
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 5407,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 4,
+          "start_offset": 0,
+          "end_offset": 3531,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 500,
+          "status": "已核验题名身份区域"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 2,
+          "start_offset": 2965,
+          "end_offset": 3511,
+          "quote": "In compliance with international grid codes, post-fault\ntransient voltage rise must remain below 0.3 p.u. So we\nconsider the maximum voltage rise during the post-fault\ntransient process not exceeding 0.3 p.u. as the voltage stability\nmargin. The veriﬁcation in Table I indicates that enhanced\nsystem strength increases the MRSCR, thereby stabilizing the\noriginally unstable nodes. For the system to maintain voltage\nstability, the following conditions must be satisﬁed:\nR\ni(t) ≥ Rcritical (2)\nwhere Rcritical is the critical short circuit ratio.\n",
+          "interpretation": "MRSCR约束关联故障后瞬态电压上升限制，不能直接等同切换CPF的SNB认证。",
+          "kind": "scope"
+        },
+        {
+          "page": 4,
+          "start_offset": 959,
+          "end_offset": 1525,
+          "quote": "To simplify the calculation process, we cluster the RE sce-\nnarios across the entire year using k-means method and obtain\nthe total annual RE curtailment through the weighted calcula-\ntion of the curtailment under typical scenarios. Therefore, the\nsecond objective of the outer loop is changed as:\nmin f\n2(x) =\nK∑\nk=1\nϵkAk(x) (13)\nwhere Ak(x) = ∑NRE\ni=1\n∑24\nt=1 (Pmax\nRE,i,k(t) − PRE,i,k(t)),i st h e\nRE curtailment for scenario k in one day. ϵk is the weight\ncoefﬁcient of scene k, which is the number of days this type\nof scene appears during a year in the model.\n",
+          "interpretation": "全年场景k-means聚类后加权弃电量；目标为规划收益。",
+          "kind": "method"
+        },
+        {
+          "page": 5,
+          "start_offset": 1657,
+          "end_offset": 1794,
+          "quote": "Future\nresearch will include dedicated studies on SVG installation\ncost modeling and the characterization of mutual interaction\neffects.\n",
+          "interpretation": "SVG成本与相互作用效应留待未来研究。",
+          "kind": "author_future"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "start": {
+            "page": 1,
+            "offset": 422
+          },
+          "end": {
+            "page": 1,
+            "offset": 1732
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "introduction": {
+          "start": {
+            "page": 1,
+            "offset": 1880
+          },
+          "end": {
+            "page": 2,
+            "offset": 1553
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "conclusion": {
+          "start": {
+            "page": 5,
+            "offset": 1125
+          },
+          "end": {
+            "page": 5,
+            "offset": 1794
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        }
+      },
+      "issues": [
+        "机器numbered_boundary_candidate已结合下节标题复核；无全文已读声明。"
+      ],
+      "resolution": "使用上述精确正文范围；机器索引保持pending且未改动。",
+      "unresolved": [],
+      "nonblocking_limitations": [
+        "未审读全文所有页；公式和未引用数值未认证；缺口判断仅限已读范围。"
+      ],
+      "status": "已核验该范围"
+    },
+    {
+      "target_id": "P03",
+      "title": "A Static Voltage Stability Enhancement Method for Power Systems With a High Proportion of Voltage Source Converters",
+      "identity_verified": true,
+      "identity_basis": "首页题名与清单一致；提取DOI核对",
+      "doi": "10.1109/TPWRS.2025.3552756",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/A_Static_Voltage_Stability_Enhancement_Method_for_Power_Systems_With_a_High_Proportion_of_Voltage_Source_Converters.pdf",
+      "pdf_sha256": "a15a0ca39a12adda24e76adc814b08d0bdde5d0b8acc9557611328a1fbbe9377",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/02_A_Static_Voltage_Stability_Enhancement_Method_for_Power_Syst_pages.json",
+      "pages_sha256": "2294ab1223afcb33d51b136af3cb0eadc9a9531dadb44694a9019406a5565746",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "Codex /root/review_a",
+      "read_ranges": [
+        {
+          "kind": "abstract",
+          "start": {
+            "page": 1,
+            "offset": 329
+          },
+          "end": {
+            "page": 1,
+            "offset": 1614
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "introduction",
+          "start": {
+            "page": 1,
+            "offset": 1789
+          },
+          "end": {
+            "page": 2,
+            "offset": 5426
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "conclusion",
+          "start": {
+            "page": 12,
+            "offset": 608
+          },
+          "end": {
+            "page": 12,
+            "offset": 2391
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "page": 3,
+          "start_offset": 0,
+          "end_offset": 4837,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 9,
+          "start_offset": 0,
+          "end_offset": 3643,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 500,
+          "status": "已核验题名身份区域"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 9,
+          "start_offset": 2300,
+          "end_offset": 3300,
+          "quote": "In addition, this paper assumes the following:\n1) The load increases with a constant power factor.\n2) The active power dispatched by the synchronous generator\nand VSC increases in equal proportions to the initial\nbenchmark value.\n3) When the reactive power of the synchronous generator\nor VSC exceeds the limit, the synchronous generator\nrated excitation current is the maximum excitation current\nthat can be maintained for a long time. It is assumed\nthat the excitation limit is controlled by integration, and\nthat terminal voltage does not affect the limiting ability of\nthe excitation current. The VSC adopts the dq-axis current\nproportional limitation method, and it is assumed that the\nvoltage reduction at the point of common coupling will\nnot affect the limiting ability of the current limitation.\n4) When the synchronous generator is replaced by the VSC,\nthe reactive power reserve of the replacement bus will\ndecrease from the original QG to Q’G = (1−0.39η) QG\nfor kdq = 0.909 and K1 = 0.8.\n",
+          "interpretation": "算例同步机/VSC有功按初始值同比增长，负荷恒功率因数。",
+          "kind": "assumptions"
+        },
+        {
+          "page": 12,
+          "start_offset": 1969,
+          "end_offset": 2391,
+          "quote": "However, this paper has not yet considered the intermittence\nand variability of VSC resource power output. Non-continuous\nvariable reactive power compensation devices such as casting\ncapacitors are not considered. In future work, the model will\nbe transformed into a mixed-integer linear programming model.\nAnd an intraday reactive power reserve optimization method can\nbe explored for adoption in hard real-time systems.\n",
+          "interpretation": "明确未计及VSC出力间歇和变化、离散无功补偿设备。",
+          "kind": "author_limitation"
+        },
+        {
+          "page": 1,
+          "start_offset": 5404,
+          "end_offset": 5608,
+          "quote": "Furthermore, this paper focuses\nonly on static voltage stability because of the high proportion\nof VSCs, and transient voltage problems during fault conditions\nare beyond the scope of the proposed model.\n",
+          "interpretation": "故障暂态电压问题明确超出模型范围。",
+          "kind": "author_scope"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "start": {
+            "page": 1,
+            "offset": 329
+          },
+          "end": {
+            "page": 1,
+            "offset": 1614
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "introduction": {
+          "start": {
+            "page": 1,
+            "offset": 1789
+          },
+          "end": {
+            "page": 2,
+            "offset": 5426
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "conclusion": {
+          "start": {
+            "page": 12,
+            "offset": 608
+          },
+          "end": {
+            "page": 12,
+            "offset": 2391
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        }
+      },
+      "issues": [
+        "机器numbered_boundary_candidate已结合下节标题复核；无全文已读声明。"
+      ],
+      "resolution": "使用上述精确正文范围；机器索引保持pending且未改动。",
+      "unresolved": [],
+      "nonblocking_limitations": [
+        "未审读全文所有页；公式和未引用数值未认证；缺口判断仅限已读范围。"
+      ],
+      "status": "已核验该范围"
+    },
+    {
+      "target_id": "P04",
+      "title": "Identification of the Worst-Case Static Voltage Stability Margin Interval of AC/DC Power System Considering Uncertainty of Renewables",
+      "identity_verified": true,
+      "identity_basis": "首页题名与清单一致；提取DOI核对",
+      "doi": "10.17775/CSEEJPES.2022.06390",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Identification_of_the_Worst-Case_Static_Voltage_Stability_Margin_Interval_of_AC_DC_Power_System_Considering_Uncertainty_of_Renewables.pdf",
+      "pdf_sha256": "b4a4161e79be3e748da28835b405d21403870df77658a0627e72366e4cde1d47",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/04_Identification_of_the_Worst_Case_Static_Voltage_Stability_Ma_pages.json",
+      "pages_sha256": "a75133ae551538125a915d5bb4dc5a4ca2c20841b34e6a6c49953a541e98c4b5",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "Codex /root/review_a",
+      "read_ranges": [
+        {
+          "kind": "abstract",
+          "start": {
+            "page": 1,
+            "offset": 358
+          },
+          "end": {
+            "page": 1,
+            "offset": 1660
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "introduction",
+          "start": {
+            "page": 2,
+            "offset": 888
+          },
+          "end": {
+            "page": 3,
+            "offset": 668
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "conclusion",
+          "start": {
+            "page": 12,
+            "offset": 2842
+          },
+          "end": {
+            "page": 13,
+            "offset": 206
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 4446,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 3,
+          "start_offset": 0,
+          "end_offset": 4406,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 4,
+          "start_offset": 0,
+          "end_offset": 4792,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 8,
+          "start_offset": 0,
+          "end_offset": 5677,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 12,
+          "start_offset": 0,
+          "end_offset": 4197,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 13,
+          "start_offset": 0,
+          "end_offset": 8352,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 500,
+          "status": "已核验题名身份区域"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 3,
+          "start_offset": 3697,
+          "end_offset": 3775,
+          "quote": "Assuming RESs operate with a constant power factor, then\nQREi = PREi∗tanφREi. ",
+          "interpretation": "RES自身按恒功率因数，直流站的模式切换并非RES自身LVRT控制。",
+          "kind": "assumptions"
+        },
+        {
+          "page": 4,
+          "start_offset": 2099,
+          "end_offset": 3790,
+          "quote": "As system loads increase, AC bus voltage of inverter side\nof the LCC-HVDC system will decrease. If control mode\nis constant DC voltage, to keep UdIi unchanged, inverter\ncontrol angle ξIi is required to decrease. To prevent commu-\ntation failure of converters, ξIi has a minimum limit value\nξIimin [23]. Therefore, whenξIi is decreased to minimum limit\nvalue ξIimin, to ensure normal commutation of converters, it\nis necessary to change control mode to constant minimum\ncontrol angle of the inverter. Hence, UdIi will be reduced.\nEquation (7c) indicates under constant DC current control\nmode, variations of UdRi and UdIi will be the same. Added\nconstraints representing control mode switching of the LCC-\nHVDC converter station with load growth in the OPF model\nare expressed in (13a)–(13d).\n(cosξIi min− cosξIi)Vdi = 0 (13a)\nUdRi =UdRiref−Vdi (13b)\nUdIi =UdIiref−Vdi (13c)\nVdi≥ 0 (13d)\nMoreover, as system loads increase, AC bus voltage of\nthe VSC-HVDC system will decrease, especially for inverter\nside bus under a heavy load. To prevent AC bus voltage of\ninverter side of VSC-HVDC system from exceeding secure\noperation limit, it is necessary to change control mode from\nconstant AC reactive powerQvdi to constant AC bus voltage of\ninverter side. Hence, Qvdi will be reduced. Added constraints\nrepresenting control mode switching of VSC-HVDC converter\nstation with load growth in OPF model are expressed in\n(14a)–(14c).\n(Vi−Vimin)Qei = 0 (14a)\nQvdi =Qvdiref−Qei (14b)\nQei≥ 0 (14c)\nTherefore, the proposed bi-level OPF model for calculating\nworst-case SVSM of an AC/DC power system considering\ncontrol mode switching includes (2b), (3)–(6), (7a), (7b), (8a),\n(8b), (9)–(11) and (13)–(14).\n",
+          "interpretation": "LCC灭角限值和VSC无功/电压控制切换均显式考虑。",
+          "kind": "method"
+        },
+        {
+          "page": 12,
+          "start_offset": 3853,
+          "end_offset": 4197,
+          "quote": "This study only calculates worst-case SVSM intervals of\nAC/DC power systems considering uncertainties of LGD and\nrenewables. In actual operation of an AC/DC power grid,\nworst-case SVSM value must be bigger than allowable secure\nlevel. Thus, our future approach will be to increase worst-\ncase SVSM value by adjusting system operation parameters",
+          "interpretation": "作者研究最差裕度区间，未来做运行参数调整与增强控制；跨页后续已核验。",
+          "kind": "author_scope"
+        },
+        {
+          "page": 12,
+          "start_offset": 1785,
+          "end_offset": 2555,
+          "quote": "Figure 8 shows the changing process wherein VSC inverter\nstation Longmen switches to constant AC voltage control when\nAC voltage of VSC inverter station reaches lower limit due to\nload growth. When Vi decreases to 0.95 p.u., control mode is\nswitched to constant Vi control, and then Qdci cannot remain\nconstant and decreases with load growth. Moreover, Figs. 7\nand 8 show in a large-scale power system, since there are\nmore HVDC transmission lines, control mode switching of\nthe HVDC inverter station is more common than in a small-\nscale power system. Therefore, in the proposed the worst-\ncase SVSM calculation model for an AC/DC power system,\nusing (13) and (14) to describe control mode switching of DC\nconverter station with load growth is necessary and effective.\n",
+          "interpretation": "大型系统VSC站电压触限引发Q到V控制切换。",
+          "kind": "validation"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "start": {
+            "page": 1,
+            "offset": 358
+          },
+          "end": {
+            "page": 1,
+            "offset": 1660
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "introduction": {
+          "start": {
+            "page": 2,
+            "offset": 888
+          },
+          "end": {
+            "page": 3,
+            "offset": 668
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "conclusion": {
+          "start": {
+            "page": 12,
+            "offset": 2842
+          },
+          "end": {
+            "page": 13,
+            "offset": 206
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        }
+      },
+      "issues": [
+        "机器numbered_boundary_candidate已结合下节标题复核；无全文已读声明。",
+        "p5–7私用字符/公式未用于证据；本次不认证优化推导和表格全部数值。"
+      ],
+      "resolution": "使用上述精确正文范围；机器索引保持pending且未改动。",
+      "unresolved": [],
+      "nonblocking_limitations": [
+        "未审读全文所有页；公式和未引用数值未认证；缺口判断仅限已读范围。"
+      ],
+      "status": "已核验该范围"
+    },
+    {
+      "target_id": "P05",
+      "title": "Optimal Enhancement Control of Static Voltage Stability Margin for AC/DC Power System With Renewables Considering Control Mode Switching of DC Converter Stations",
+      "identity_verified": true,
+      "identity_basis": "首页题名与清单一致；提取DOI核对",
+      "doi": "10.1109/TIA.2025.3530868",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Optimal_Enhancement_Control_of_Static_Voltage_Stability_Margin_for_AC_DC_Power_System_With_Renewables_Considering_Control_Mode_Switching_of_DC_Converter_Stations.pdf",
+      "pdf_sha256": "3ebc6c08da7078256b6426bbd9a0dc7297f658278bfd41979e7e5058298ddf58",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/07_Optimal_Enhancement_Control_of_Static_Voltage_Stability_Marg_pages.json",
+      "pages_sha256": "1e88551878d45ccd7d7048171c99d53991072da7c71c6b77b6ade94a12f28db9",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "Codex /root/review_a",
+      "read_ranges": [
+        {
+          "kind": "abstract",
+          "start": {
+            "page": 1,
+            "offset": 415
+          },
+          "end": {
+            "page": 1,
+            "offset": 1837
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "introduction",
+          "start": {
+            "page": 1,
+            "offset": 3231
+          },
+          "end": {
+            "page": 2,
+            "offset": 5168
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "conclusion",
+          "start": {
+            "page": 11,
+            "offset": 2828
+          },
+          "end": {
+            "page": 11,
+            "offset": 5052
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "page": 3,
+          "start_offset": 0,
+          "end_offset": 5208,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 4,
+          "start_offset": 0,
+          "end_offset": 5509,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 7,
+          "start_offset": 0,
+          "end_offset": 4384,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 8,
+          "start_offset": 0,
+          "end_offset": 3969,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 10,
+          "start_offset": 0,
+          "end_offset": 4768,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 11,
+          "start_offset": 0,
+          "end_offset": 5958,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 500,
+          "status": "已核验题名身份区域"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 3,
+          "start_offset": 1834,
+          "end_offset": 1892,
+          "quote": "Assuming that RESs operate in constant power factor\nmode. ",
+          "interpretation": "RES恒功率因数；需区分RES控制与DC站控制切换。",
+          "kind": "assumptions"
+        },
+        {
+          "page": 4,
+          "start_offset": 1744,
+          "end_offset": 2077,
+          "quote": "References [24], [25] proposed that the control mode of a DC\nconverter station is switched according to a certain default order.\nThis method avoids the occurrence of unreasonable control\nmode switching strategy. Therefore, assuming that the LCC- and\nVSC- HVDC converter stations’ control modes switch according\nto the default order. ",
+          "interpretation": "DC模式按默认顺序切换。",
+          "kind": "assumptions"
+        },
+        {
+          "page": 10,
+          "start_offset": 3446,
+          "end_offset": 3895,
+          "quote": "In order to reﬂect the scenario of high penetration of RESs,\nthe situation of multiple RESs integrated into the modiﬁed IEEE\n39-bus system is analyzed. The RES connected at bus 9 is\ndenoted as RES1, whose active power ﬂuctuation interval of\nRES1 is [600, 1000] MW. Two RESs denoted as RES2 and\nRES3 are added in the system, and they are connected at bus\n1 and bus 18, respectively. Their given active power ﬂuctuation\nranges are both [100, 300] MW. ",
+          "interpretation": "IEEE39三RES各有出力区间，不能声称现有工作未处理多RES。",
+          "kind": "validation"
+        },
+        {
+          "page": 11,
+          "start_offset": 4679,
+          "end_offset": 5052,
+          "quote": "This paper only focuses on the optimal SVSM enhancement\ncontrol problem under normal operation of an AC/DC power\nsystem. However, the inﬂuence of DC converter stations’ control\nmode switching on SVSM can also be considered in the optimal\nSVSM enhancement control problem under multiple N-1 con-\ntingencies. How to solve this problem is a possible direction of\nfuture work.\n",
+          "interpretation": "仅正常运行，多个N-1故障下控制问题为未来方向。",
+          "kind": "author_limitation"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "start": {
+            "page": 1,
+            "offset": 415
+          },
+          "end": {
+            "page": 1,
+            "offset": 1837
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "introduction": {
+          "start": {
+            "page": 1,
+            "offset": 3231
+          },
+          "end": {
+            "page": 2,
+            "offset": 5168
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "conclusion": {
+          "start": {
+            "page": 11,
+            "offset": 2828
+          },
+          "end": {
+            "page": 11,
+            "offset": 5052
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        }
+      },
+      "issues": [
+        "机器numbered_boundary_candidate已结合下节标题复核；无全文已读声明。"
+      ],
+      "resolution": "使用上述精确正文范围；机器索引保持pending且未改动。",
+      "unresolved": [],
+      "nonblocking_limitations": [
+        "未审读全文所有页；公式和未引用数值未认证；缺口判断仅限已读范围。"
+      ],
+      "status": "已核验该范围"
+    },
+    {
+      "target_id": "P06",
+      "title": "Power System Voltage Stability Evaluation Considering Renewable Energy With Correlated Variabilities",
+      "identity_verified": true,
+      "identity_basis": "首页题名与清单一致；提取DOI核对",
+      "doi": "10.1109/TPWRS.2017.2784812",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Power_System_Voltage_Stability_Evaluation_Considering_Renewable_Energy_With_Correlated_Variabilities.pdf",
+      "pdf_sha256": "4bf905765ee584549d99f724d5dbf6dd08536f6f89368016716b0b386d865fae",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/08_Power_System_Voltage_Stability_Evaluation_Considering_Renewa_pages.json",
+      "pages_sha256": "203def8dd24b477585b829611222d05bb8e0be5ef61182a9e3f6a864bf9850bc",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "Codex /root/review_a",
+      "read_ranges": [
+        {
+          "kind": "abstract",
+          "start": {
+            "page": 1,
+            "offset": 291
+          },
+          "end": {
+            "page": 1,
+            "offset": 1722
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "introduction",
+          "start": {
+            "page": 2,
+            "offset": 122
+          },
+          "end": {
+            "page": 2,
+            "offset": 4872
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "conclusion",
+          "start": {
+            "page": 8,
+            "offset": 3262
+          },
+          "end": {
+            "page": 9,
+            "offset": 1032
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "page": 3,
+          "start_offset": 0,
+          "end_offset": 4785,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 6,
+          "start_offset": 0,
+          "end_offset": 4158,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 500,
+          "status": "已核验题名身份区域"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 3,
+          "start_offset": 1132,
+          "end_offset": 2422,
+          "quote": "Besides, there exist correlations among uncertain power sys-\ntem variables; for example, adjacent renewable generators will\nusually have correlated power outputs due to similar weather\nconditions. Copula is a popular method to establish the joint\ndistribution of multiple variables and Gaussian Copula is se-\nlected in this paper to model correlations among non-normally\ndistributed variables [23]–[24]. Note that other Copula func-\ntions, such as t Copula and Archimedean Copula, can also be\nused. The Gaussian Copula is stated as\nC (u1, ..., un )=Φ n\n(\nΦ− 1 (u1) , ...,Φ− 1 (un );Σ\n)\n(5)\nwhere u1,...,u n are uniformly distributed random variables\nin [0, 1 ], Φ is the cumulative distribution function (CDF) of\na normally distributed variable, and Φn is an n-dimensional\nmultivariate normal distribution with the covariance matrix Σ.\nHere, (1) represents a nonlinear optimization problem with\nrandom variables. Given the information on input variables, the\nprobabilistic voltage stability analysis will obtain probability\ndistributions and statistical indices of load margins. Consider-\ning a high penetration level of renewable power, we apply the\nproposed GSA method to identify critical variables among vari-\nabilities pertaining to the power system static voltage stability\nanalysis.\n",
+          "interpretation": "Gaussian Copula刻画非正态相关变量，概率裕度与关键变量识别。",
+          "kind": "method"
+        },
+        {
+          "page": 9,
+          "start_offset": 623,
+          "end_offset": 1032,
+          "quote": "In our future work, we will combine SRSM with the sparse-\nadaptive scheme to further improve the computation efﬁciency\nof GSA in large-scale power system problems. Besides, we will\nadopt the application of the proposed GSA method in heuristic\nblack-box algorithms such as artiﬁcial neural networks to the\ncomplicated power system problems in which it is difﬁcult to\nobtain an analytical closed-form solution.\n",
+          "interpretation": "稀疏自适应SRSM与黑箱应用属于作者未来工作。",
+          "kind": "author_future"
+        },
+        {
+          "page": 6,
+          "start_offset": 582,
+          "end_offset": 2018,
+          "quote": "In Table I, the sensitivities of input variables are given. For\neach variable, Sy is almost equal to Ssobol , which demonstrates\nthe accuracy of the proposed GSA results. Sy is different from\nSloc since they belong to different categories of sensitivity anal-\nysis methods. The rankings of variables are the same for LSA\nand GSA. However, there is a difference between LSA and GSA\nwith respect to the relative importance of variables. For exam-\nple, according to GSA, Sy of bP 9 is 0.543, which is much larger\nthan Sy of bP 5 and bP 7 , which means that bP 9 is signiﬁcantly\nmore important than bP 5 and bP 7 . However, according to LSA,\nthe values of Sloc for bP 5,b P 7 and bP 9 are similar. Hence, the\nthree variables have similar inﬂuences on the load margin.\nIn order to analyze the impacts of variables, let bP 5,b P 7 and\nbP 9 be deterministic as the probability densities of load margins\nare compared in Fig. 4. When bP 5 and bP 7 are respectively\ntreated as deterministic inputs, the probability distributions of\nload margins are similar. When bP 9 becomes deterministic, the\nprobability distribution will be quite different from the other\ntwo. This result indicates that bP 5 and bP 7 have similar impacts,\nand bP 9 has a higher inﬂuence than bP 5 and bP 7 , which is\nconsistent with the GSA conclusion. Therefore, for independent\ninput variables, compared with LSA, GSA is more accurate to\ndescribe the impacts of variables.\n",
+          "interpretation": "GSA与局部灵敏度比较的是变量相对重要性，不是最坏点认证。",
+          "kind": "validation"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "start": {
+            "page": 1,
+            "offset": 291
+          },
+          "end": {
+            "page": 1,
+            "offset": 1722
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "introduction": {
+          "start": {
+            "page": 2,
+            "offset": 122
+          },
+          "end": {
+            "page": 2,
+            "offset": 4872
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "conclusion": {
+          "start": {
+            "page": 8,
+            "offset": 3262
+          },
+          "end": {
+            "page": 9,
+            "offset": 1032
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        }
+      },
+      "issues": [
+        "机器numbered_boundary_candidate已结合下节标题复核；无全文已读声明。",
+        "公式/图形字流不作为已验证推导；已读自然语言证据可用。"
+      ],
+      "resolution": "使用上述精确正文范围；机器索引保持pending且未改动。",
+      "unresolved": [],
+      "nonblocking_limitations": [
+        "未审读全文所有页；公式和未引用数值未认证；缺口判断仅限已读范围。"
+      ],
+      "status": "已核验该范围"
+    },
+    {
+      "target_id": "P07",
+      "title": "A Scalable Method of Adaptive LVRT Settings Adjustment for Voltage Security Enhancement in Power Systems With High Renewable Penetration",
+      "identity_verified": true,
+      "identity_basis": "首页题名与清单一致；提取DOI核对",
+      "doi": "10.1109/TSTE.2021.3116102",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/A_Scalable_Method_of_Adaptive_LVRT_Settings_Adjustment_for_Voltage_Security_Enhancement_in_Power_Systems_With_High_Renewable_Penetration.pdf",
+      "pdf_sha256": "dbc805871500fd7a41e64d4a8162f19b339b87aa6502c7f15478b817cf3eec99",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/01_A_Scalable_Method_of_Adaptive_LVRT_Settings_Adjustment_for_V_pages.json",
+      "pages_sha256": "843a39c946e5a905b6ea6b1128a770597c6dda3854adbb7a791a485c54824df3",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "Codex /root/review_a",
+      "read_ranges": [
+        {
+          "kind": "abstract",
+          "start": {
+            "page": 1,
+            "offset": 319
+          },
+          "end": {
+            "page": 1,
+            "offset": 1702
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "introduction",
+          "start": {
+            "page": 1,
+            "offset": 1819
+          },
+          "end": {
+            "page": 2,
+            "offset": 5599
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "conclusion",
+          "start": {
+            "page": 11,
+            "offset": 1366
+          },
+          "end": {
+            "page": 11,
+            "offset": 2647
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "page": 3,
+          "start_offset": 0,
+          "end_offset": 4107,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 8,
+          "start_offset": 0,
+          "end_offset": 3197,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 500,
+          "status": "已核验题名身份区域"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 3,
+          "start_offset": 2076,
+          "end_offset": 2351,
+          "quote": "It is important to clarify here that since\nwe are looking at the steady-state voltage stability, this article\nwill be focusing on adjusting the ﬁnal constant part value of the\ncurve. The steady state voltage at PCC being lower than this\nconstant will trigger the RG to trip.\n",
+          "interpretation": "只调LVRT曲线最终恒定部分，低于阈值触发脱网。",
+          "kind": "author_scope"
+        },
+        {
+          "page": 3,
+          "start_offset": 2351,
+          "end_offset": 2874,
+          "quote": "Since the connection status of RGs can be represented by\ndiscrete variables, the overall system is modeled as a hybrid\nFig. 2. Renewables tripping by violation of L VRT limit.\nsystem,\nf (x, λ,ΓRG)= F (x,ΓRG)+ bλ (2)\nwhere ΓRG ∈ZNRG×1\n2 represents the connection statuses (0–\nofﬂine/1–online) of RGs; NRG is the number of RGs. Clearly,\nthere are2NRG combinations of possible RG connection statuses\nwith their associated P-V curves and the system will jump/\nswitch from one curve to the other on violation of L VRT limit(s).\n",
+          "interpretation": "二进制并网状态与多条PV曲线跳转；不是LVRT进入/退出控制振荡模型。",
+          "kind": "method"
+        },
+        {
+          "page": 8,
+          "start_offset": 1062,
+          "end_offset": 1282,
+          "quote": "On the Base Curve, 6 RGs trip events and one generation bus\nreaches Q limit before reaching the SNB as shown in Table II.\nThe LM of the Base Curve is 2.7157. Let the additional LM\nrequired be 0.3, i.e., λlimit =3 .0157.\n",
+          "interpretation": "算例记录六个脱网事件及一个无功限值事件，支持事件顺序已被使用。",
+          "kind": "validation"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "start": {
+            "page": 1,
+            "offset": 319
+          },
+          "end": {
+            "page": 1,
+            "offset": 1702
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "introduction": {
+          "start": {
+            "page": 1,
+            "offset": 1819
+          },
+          "end": {
+            "page": 2,
+            "offset": 5599
+          },
+          "decision": "机器误把LVRT文字当结束候选；实际延至II. IMPACTS之前"
+        },
+        "conclusion": {
+          "start": {
+            "page": 11,
+            "offset": 1366
+          },
+          "end": {
+            "page": 11,
+            "offset": 2647
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        }
+      },
+      "issues": [
+        "机器numbered_boundary_candidate已结合下节标题复核；无全文已读声明。"
+      ],
+      "resolution": "使用上述精确正文范围；机器索引保持pending且未改动。",
+      "unresolved": [],
+      "nonblocking_limitations": [
+        "未审读全文所有页；公式和未引用数值未认证；缺口判断仅限已读范围。"
+      ],
+      "status": "已核验该范围"
+    },
+    {
+      "target_id": "P08",
+      "title": "TPCPF: Three-Phase Continuation Power Flow Tool for Voltage Stability Assessment of Distribution Networks With Distributed Energy Resources",
+      "identity_verified": true,
+      "identity_basis": "首页题名与清单一致；提取DOI核对",
+      "doi": "10.1109/TIA.2021.3088384",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/TPCPF_Three-Phase_Continuation_Power_Flow_Tool_for_Voltage_Stability_Assessment_of_Distribution_Networks_With_Distributed_Energy_Resources.pdf",
+      "pdf_sha256": "f090a814407918bf9753706e7c3af5ab4321d378a1d5527d097da6cc9b33273d",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/20_TPCPF_Three_Phase_Continuation_Power_Flow_Tool_for_Voltage_S_pages.json",
+      "pages_sha256": "bbeddaa91bb224067beb2f38882aebc37fbc37b9a6fe501c4eba981e2ca42457",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "Codex /root/review_a",
+      "read_ranges": [
+        {
+          "kind": "abstract",
+          "start": {
+            "page": 1,
+            "offset": 394
+          },
+          "end": {
+            "page": 1,
+            "offset": 1703
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "introduction",
+          "start": {
+            "page": 1,
+            "offset": 1826
+          },
+          "end": {
+            "page": 2,
+            "offset": 2946
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "conclusion",
+          "start": {
+            "page": 11,
+            "offset": 2491
+          },
+          "end": {
+            "page": 12,
+            "offset": 309
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "page": 4,
+          "start_offset": 0,
+          "end_offset": 3190,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 5,
+          "start_offset": 0,
+          "end_offset": 4122,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 500,
+          "status": "已核验题名身份区域"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 2,
+          "start_offset": 2182,
+          "end_offset": 2453,
+          "quote": "1) Developed formulation and algorithm for CPF for un-\nbalanced three-phase distribution power systems with\nDERs using the current injection power ﬂow method, the\nadaptive step predictor–corrector, thePV –PQ switching\nalgorithm, and the nose point convergence criterion.\n",
+          "interpretation": "三相CPF已含自适应步长、PV-PQ切换和鼻点判据。",
+          "kind": "method"
+        },
+        {
+          "page": 4,
+          "start_offset": 1258,
+          "end_offset": 2189,
+          "quote": "CPF is used to determine the system loading limit as the\nload is increased from the base case in small increments. CPF\ntraces theP –V curve using a series of predictor–corrector steps.\nNonlinear power ﬂow equations are parameterized in terms of\nthe loading parameter λ to solve the CPF. The parameterized\nnonlinear power ﬂow equationsf(x, λ)= 0 are solved to obtain\nVr (real part of voltages),Vm (imaginary part of voltages), and λ\n(loading parameter). The CPF discussed in [7] traces the solution\ncurve for any network to determine the voltage collapse point\n(in power system terms) or the saddle-node bifurcation point\n(in mathematical terms). Thus, the determined bifurcation point\nrepresents the system maximum loading limit. Power injection\nequations in terms of the loading parameter λ are described as\nfollows:\nΔPk =( Pg −(1+ λ)Pl)−P cal\nk (25)\nΔQk =( Qg −(1+ λ)Ql)−Qcal\nk . (26)\nFig. 1. Three-phase continuation power ﬂow.\n",
+          "interpretation": "负荷λ参数化下三相CPF；已读范围未提供RES独立出力箱域最坏搜索。",
+          "kind": "scope"
+        },
+        {
+          "page": 5,
+          "start_offset": 1977,
+          "end_offset": 2890,
+          "quote": "In this work, the proposed algorithm is tested on four test\nsystems. The ﬁrst test system is the IEEE 13-node feeder, which\nis an unbalanced radial distribution network. The second test\nsystem is the 18-bus shipboard system, which is a balanced radial\nsystem. The third test system is the 13-bus CIGRE benchmark\nsystem, which is a meshed medium-voltage system possessing\nlarge amounts of distributed generation. In addition to small\nmeshed and radial distribution networks, the developed tool is\nalso used to demonstrate a large 136-bus radial distribution\nfeeder’s voltage stability analysis. Different case studies are\nconsidered for validation of the proposed three-phase CPF algo-\nrithm, which includes considering the impact of load increase,\nthe impact of the DER model, the impact of unbalance, and the\nFig. 2. IEEE 13-bus system.\nimpact of meshed and radial conﬁguration on the system loading\ncapability.\n",
+          "interpretation": "四系统验证不平衡、DER模型和拓扑影响。",
+          "kind": "validation"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "start": {
+            "page": 1,
+            "offset": 394
+          },
+          "end": {
+            "page": 1,
+            "offset": 1703
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "introduction": {
+          "start": {
+            "page": 1,
+            "offset": 1826
+          },
+          "end": {
+            "page": 2,
+            "offset": 2946
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "conclusion": {
+          "start": {
+            "page": 11,
+            "offset": 2491
+          },
+          "end": {
+            "page": 12,
+            "offset": 309
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        }
+      },
+      "issues": [
+        "机器numbered_boundary_candidate已结合下节标题复核；无全文已读声明。",
+        "公式/图形字流不作为已验证推导；已读自然语言证据可用。"
+      ],
+      "resolution": "使用上述精确正文范围；机器索引保持pending且未改动。",
+      "unresolved": [],
+      "nonblocking_limitations": [
+        "未审读全文所有页；公式和未引用数值未认证；缺口判断仅限已读范围。"
+      ],
+      "status": "已核验该范围"
+    },
+    {
+      "target_id": "P09",
+      "title": "Renewable Power Hosting Capacity Assessment Considering L-Index for Static Voltage Stability",
+      "identity_verified": true,
+      "identity_basis": "首页题名与清单一致；提取DOI核对",
+      "doi": "10.1109/APPEEC61255.2024.10922669",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Renewable_Power_Hosting_Capacity_Assessment_Considering_L-Index_for_Static_Voltage_Stability.pdf",
+      "pdf_sha256": "f34d780d4931b27cebcac23bae89b609744229ae3590afcf983783ab9e3ba044",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/10_Renewable_Power_Hosting_Capacity_Assessment_Considering_L_In_pages.json",
+      "pages_sha256": "50c5a744d9330b6b954e16942785f458c29f08553775b0f3f947ebda9f1fcf73",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "Codex /root/review_a",
+      "read_ranges": [
+        {
+          "kind": "abstract",
+          "start": {
+            "page": 1,
+            "offset": 660
+          },
+          "end": {
+            "page": 1,
+            "offset": 1737
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "introduction",
+          "start": {
+            "page": 1,
+            "offset": 1832
+          },
+          "end": {
+            "page": 1,
+            "offset": 4776
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "conclusion",
+          "start": {
+            "page": 5,
+            "offset": 701
+          },
+          "end": {
+            "page": 5,
+            "offset": 1709
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "page": 3,
+          "start_offset": 0,
+          "end_offset": 5065,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 4,
+          "start_offset": 0,
+          "end_offset": 5635,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 500,
+          "status": "已核验题名身份区域"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 3,
+          "start_offset": 270,
+          "end_offset": 504,
+          "quote": "3) Constraints on renewable energy output \n \nmax\nmax\n0\n0\npp\ni\nww\ni\nPP\nPP\n≤≤\n≤≤\n\n\n\n (15) \nIn the equation, max\np\nP and max\nw\nP  represent the theoretical \nmaximum power generation of photovoltaic (PV) and wind \npower respectively. \n",
+          "interpretation": "风光出力分别受0至最大值约束。",
+          "kind": "constraints"
+        },
+        {
+          "page": 3,
+          "start_offset": 1246,
+          "end_offset": 1641,
+          "quote": "The improved IEEE 30 -node network structure used in \nthis section is depicted in the following figure. In this scenario \nsetup, conventional generator units are connected to nodes 1, \n2, 13, 22, 23, and 27. Additionally, a photovoltaic power plant \nis connected to node 5, and a wind energy plant is connected \nto node 28. The base voltage is set at 115 kV, and the base \ncapacity is 100 MVA. \n",
+          "interpretation": "IEEE30中一个光伏和一个风电场。",
+          "kind": "validation"
+        },
+        {
+          "page": 5,
+          "start_offset": 714,
+          "end_offset": 1709,
+          "quote": "This article first studies the static voltage stability \nindicators and related analysis and calculation methods of the \npower system. The L indicator is selected to evaluate the static \nvoltage stability of the studied system. Subsequently, based on \nthe static voltage stability L index, a renewable energy hosting \ncapacity assessment model considering the L index was \nestablished. By comparing the evaluation results of the \nsystem's absorption capacity under different L\nmax settings, it \nwas found that the evaluat ion results of the system's \nabsorption capacity were basically positively correlated with \nthe value of L\nmax, that is, the larger the L max value, the better \nthe evaluation results of the system's absorption capacity. The \nconclusion can be achieved that when renewable energy units \nare connected to nodes with higher L index, the system's \nabsorption rate and amount are higher. This conclusion can \nhave certain reference value for renewable energy site \nselection. \n",
+          "interpretation": "L-index承载力模型与阈值/选址比较；不是切换CPF路径分析。",
+          "kind": "scope"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "start": {
+            "page": 1,
+            "offset": 660
+          },
+          "end": {
+            "page": 1,
+            "offset": 1737
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "introduction": {
+          "start": {
+            "page": 1,
+            "offset": 1832
+          },
+          "end": {
+            "page": 1,
+            "offset": 4776
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "conclusion": {
+          "start": {
+            "page": 5,
+            "offset": 701
+          },
+          "end": {
+            "page": 5,
+            "offset": 1709
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        }
+      },
+      "issues": [
+        "机器numbered_boundary_candidate已结合下节标题复核；无全文已读声明。",
+        "p4文字与表III的场景1/2容量对应存在不一致；不引用其数值性能结论。"
+      ],
+      "resolution": "使用上述精确正文范围；机器索引保持pending且未改动。",
+      "unresolved": [],
+      "nonblocking_limitations": [
+        "未审读全文所有页；公式和未引用数值未认证；缺口判断仅限已读范围。"
+      ],
+      "status": "已核验该范围"
+    },
+    {
+      "target_id": "P10",
+      "title": "Static Voltage Stability Analysis of Renewable Energy Multi-Infeed Systems Based on Margin Index",
+      "identity_verified": true,
+      "identity_basis": "首页题名与清单一致；提取DOI核对",
+      "doi": "10.1109/CIEEC60922.2024.10583313",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Static_Voltage_Stability_Analysis_of_Renewable_Energy_Multi-Infeed_Systems_Based_on_Margin_Index.pdf",
+      "pdf_sha256": "0e473f1001693bb8c8c6ab3132b6757eae4a739dd8068658e682154dcd3274b0",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/16_Static_Voltage_Stability_Analysis_of_Renewable_Energy_Multi__pages.json",
+      "pages_sha256": "606d2ea6f82aed06aed74d3cab859724fb309518298160dd2193707454a9cf7d",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "Codex /root/review_a",
+      "read_ranges": [
+        {
+          "page": 1,
+          "start_offset": 6709,
+          "end_offset": 12736,
+          "status": "已核验可读英文层该范围"
+        },
+        {
+          "page": 2,
+          "start_offset": 5588,
+          "end_offset": 7337,
+          "status": "已核验可读英文层该范围"
+        },
+        {
+          "page": 5,
+          "start_offset": 5106,
+          "end_offset": 9692,
+          "status": "已核验可读英文层该范围"
+        },
+        {
+          "page": 7,
+          "start_offset": 6691,
+          "end_offset": 7177,
+          "status": "已核验可读英文层该范围"
+        },
+        {
+          "page": 8,
+          "start_offset": 3871,
+          "end_offset": 4535,
+          "status": "已核验可读英文层该范围"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 2,
+          "start_offset": 7192,
+          "end_offset": 7283,
+          "quote": "This study focuses on renewable energy stations \nutilizing constant power factor control. \n",
+          "interpretation": "研究恒功率因数新能源场站；可读层与PDF渲染核对一致。",
+          "kind": "author_scope"
+        },
+        {
+          "page": 5,
+          "start_offset": 8687,
+          "end_offset": 9092,
+          "quote": "Let the wind power station at node 32 grow according to \nthe manner described in (2 1) while keeping the active power \noutput of the other generators unchanged. Throughout the \ngrowth process, maintain the power factor of the station \nconstant. The incremental power of the wind power station is \nbalanced by a propmtional increase in the overall load. This \ncontinues until the system becomes unstable. \n",
+          "interpretation": "一次增长一个风电站、其他有功不变、负荷平衡；不是全组合最坏搜索。",
+          "kind": "scope"
+        },
+        {
+          "page": 8,
+          "start_offset": 4063,
+          "end_offset": 4535,
+          "quote": "The effectiveness of the margin index's evaluation is \ninfluenced by the accuracy of the calculation of Thevenin \nequivalent parameters. In the calculation of Thevenin \nequivalents, the proposed approach assumes that the sensitivity \nof voltage to power remains unchanged before and after \nequivalence. This method of equivalence is more suitable for \nstatic stability evaluation compared to commonly used methods \nin existing literature, yielding more accurate results. \n",
+          "interpretation": "指标依赖Thevenin参数精度；等值保持电压对功率灵敏度假设。",
+          "kind": "author_assumptions"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "page": 1,
+          "start_offset": 6952,
+          "end_offset": 8043,
+          "decision": "去除误并入关键词"
+        },
+        "introduction": {
+          "segments": [
+            {
+              "page": 1,
+              "start_offset": 8166,
+              "end_offset": 12736
+            },
+            {
+              "page": 2,
+              "start_offset": 5588,
+              "end_offset": 6501
+            }
+          ],
+          "decision": "双层文本：机器跨页混入字码错误层与方法内容；改按可读层分段取证"
+        },
+        "conclusion": {
+          "segments": [
+            {
+              "page": 7,
+              "start_offset": 6691,
+              "end_offset": 7177
+            },
+            {
+              "page": 8,
+              "start_offset": 3871,
+              "end_offset": 4535
+            }
+          ],
+          "decision": "剔除页8前部乱码重复层及参考文献；PDF p2/p8视觉核验可读层语义"
+        }
+      },
+      "issues": [
+        "机器numbered_boundary_candidate已结合下节标题复核；无全文已读声明。",
+        "存在乱码层与可读重复层；只引用可读层，p2/p8已渲染肉眼核对，不需要新OCR。"
+      ],
+      "resolution": "使用上述精确正文范围；机器索引保持pending且未改动。",
+      "unresolved": [],
+      "nonblocking_limitations": [
+        "未审读全文所有页；公式和未引用数值未认证；缺口判断仅限已读范围。"
+      ],
+      "status": "已核验该范围"
+    },
+    {
+      "target_id": "P11",
+      "title": "Static Voltage Stability Based Maximum Integration Ratio of Distributed Renewable Energy in Distribution Power System",
+      "identity_verified": true,
+      "identity_basis": "首页题名与清单一致；提取DOI核对",
+      "doi": "10.1109/ICCEPE62686.2024.10931356",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Static_Voltage_Stability_Based_Maximum_Integration_Ratio_of_Distributed_Renewable_Energy_in_Distribution_Power_System.pdf",
+      "pdf_sha256": "fa4ce4581bfb1b4930b34196fdd8686fc3cbf03e6beece2c2eccde5e39f1558b",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/17_Static_Voltage_Stability_Based_Maximum_Integration_Ratio_of__pages.json",
+      "pages_sha256": "b2016d58fb4d8f2a1c6f28a1c26a2f95320c84ababef62550f1be389c64a739d",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "Codex /root/review_a",
+      "read_ranges": [
+        {
+          "kind": "abstract",
+          "start": {
+            "page": 1,
+            "offset": 301
+          },
+          "end": {
+            "page": 1,
+            "offset": 1143
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "introduction",
+          "start": {
+            "page": 1,
+            "offset": 1266
+          },
+          "end": {
+            "page": 1,
+            "offset": 4133
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "conclusion",
+          "start": {
+            "page": 4,
+            "offset": 2010
+          },
+          "end": {
+            "page": 4,
+            "offset": 3285
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 3088,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 3,
+          "start_offset": 0,
+          "end_offset": 2691,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 500,
+          "status": "已核验题名身份区域"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 2,
+          "start_offset": 767,
+          "end_offset": 881,
+          "quote": "Assuming the DREs work at the maximum power point\ntracking point, which means the output reactive power is 0, the\n",
+          "interpretation": "假设最大功率点运行且无功为0。",
+          "kind": "assumptions"
+        },
+        {
+          "page": 4,
+          "start_offset": 3144,
+          "end_offset": 3285,
+          "quote": "The impact of the reactive power on the allocation method\nsuitable for the distribution with a ring network will be studied\nin further work.\n",
+          "interpretation": "无功及环网适用性为未来工作。",
+          "kind": "author_future"
+        },
+        {
+          "page": 3,
+          "start_offset": 1280,
+          "end_offset": 1561,
+          "quote": "Step 1: The maximum integration ratio of DREs in the\ndistribution system is always subjected to the\novervoltage problem, which means the DREs amount\nis larger than the total power load. So in the first step,\nthe initial DREs amount\nDREsS is set to equal to the\ntotal power load.\n∂ ",
+          "interpretation": "搜索的是分配规则下过电压接入容量，不等于低电压SNB边界。",
+          "kind": "method"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "start": {
+            "page": 1,
+            "offset": 301
+          },
+          "end": {
+            "page": 1,
+            "offset": 1143
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "introduction": {
+          "start": {
+            "page": 1,
+            "offset": 1266
+          },
+          "end": {
+            "page": 1,
+            "offset": 4133
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "conclusion": {
+          "start": {
+            "page": 4,
+            "offset": 2010
+          },
+          "end": {
+            "page": 4,
+            "offset": 3285
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        }
+      },
+      "issues": [
+        "机器numbered_boundary_candidate已结合下节标题复核；无全文已读声明。",
+        "p2–3公式符号抽取损坏；不采用公式或数值结论，仅使用清晰英文假设和范围。"
+      ],
+      "resolution": "使用上述精确正文范围；机器索引保持pending且未改动。",
+      "unresolved": [],
+      "nonblocking_limitations": [
+        "未审读全文所有页；公式和未引用数值未认证；缺口判断仅限已读范围。"
+      ],
+      "status": "已核验该范围"
+    },
+    {
+      "target_id": "P12",
+      "title": "Probabilistic Static Voltage Stability Assessment for Distribution Network Considering Correlated Renewable Energy",
+      "identity_verified": true,
+      "identity_basis": "首页完整题名及作者一致；本PDF抽取未找到DOI，不伪称DOI已核验",
+      "doi": null,
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Probabilistic_Static_Voltage_Stability_Assessment_for_Distribution_Network_Considering_Correlated_Renewable_Energy.pdf",
+      "pdf_sha256": "06c82758cc3c16ba6d24324cb422acb6ef01aa1ea2bf6d3f891a332c9aedd4b9",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/09_Probabilistic_Static_Voltage_Stability_Assessment_for_Distri_pages.json",
+      "pages_sha256": "bfd3cd3afa683b300bdcebd1b880b5f25879bf7d5fa0c772e65d10d54e93a358",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "Codex /root/review_a",
+      "read_ranges": [
+        {
+          "kind": "abstract",
+          "start": {
+            "page": 1,
+            "offset": 452
+          },
+          "end": {
+            "page": 1,
+            "offset": 1360
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "introduction",
+          "start": {
+            "page": 1,
+            "offset": 1472
+          },
+          "end": {
+            "page": 1,
+            "offset": 4750
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "kind": "conclusion",
+          "start": {
+            "page": 5,
+            "offset": 1347
+          },
+          "end": {
+            "page": 5,
+            "offset": 2520
+          },
+          "status": "已核验该范围"
+        },
+        {
+          "page": 3,
+          "start_offset": 0,
+          "end_offset": 4404,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 4,
+          "start_offset": 0,
+          "end_offset": 3814,
+          "status": "已核验该页提取文字；非公式排版认证"
+        },
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 500,
+          "status": "已核验题名身份区域"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 3,
+          "start_offset": 2090,
+          "end_offset": 2617,
+          "quote": "(7) d=1, let Xd be the d-th column of matrix X. \n(8) Based on the random input variable Xd, calculate the load \nmargin of the distribution network by continuous power \nflow. \n(9) d=d+1, if d>n, proceed to the next calculation, otherwise go \nto (8); \n(10) Obtain the probability distribution curve of load margin and \nanalyze the operation risk of distribution network. \n \nUG\n1 2 3456789 1 0 1 1 1 2\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28 29 30 31 32 33\nWT2\nWT1\nDG\n \nFig. 1.  Structure of 36-bus distribution network. \n",
+          "interpretation": "QMC外层样本逐次调用CPF得到概率裕度分布。",
+          "kind": "method"
+        },
+        {
+          "page": 4,
+          "start_offset": 2945,
+          "end_offset": 3182,
+          "quote": "The reason is that the proportion of wind \npower output in the distribution network system is relatively \nsmall in this paper, and thus, its correlation has a relatively small \nimpact on the probability distribution of the load margin. \n",
+          "interpretation": "算例风电比例较小，作者据此解释相关性影响较小。",
+          "kind": "author_scope"
+        },
+        {
+          "page": 5,
+          "start_offset": 2013,
+          "end_offset": 2520,
+          "quote": "(1) The QMC simulation based on Sobol sequence can improve \nthe calculation efficiency and guarantee accuracy of results. \nCompared with the SRS-based MCS, it is more suitable for \nthe probabilistic static voltage stability assessment of the \ndistribution network. \n(2) The correlation among DG and loads has a significant \nimpact on the static voltage stability of the distribution \nnetwork. \n(3) The reasonable configuration for DG units is beneficial to \nimprove the static voltage stability of system. \n",
+          "interpretation": "Sobol QMC与SRS比较概率精度，不认证最坏组合。",
+          "kind": "validation"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "start": {
+            "page": 1,
+            "offset": 452
+          },
+          "end": {
+            "page": 1,
+            "offset": 1360
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "introduction": {
+          "start": {
+            "page": 1,
+            "offset": 1472
+          },
+          "end": {
+            "page": 1,
+            "offset": 4750
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        },
+        "conclusion": {
+          "start": {
+            "page": 5,
+            "offset": 1347
+          },
+          "end": {
+            "page": 5,
+            "offset": 2520
+          },
+          "decision": "起止标题上下文已复核；排除页眉页脚的语义噪声，引用只取正文"
+        }
+      },
+      "issues": [
+        "机器numbered_boundary_candidate已结合下节标题复核；无全文已读声明。",
+        "公式/图形字流不作为已验证推导；已读自然语言证据可用。"
+      ],
+      "resolution": "使用上述精确正文范围；机器索引保持pending且未改动。",
+      "unresolved": [],
+      "nonblocking_limitations": [
+        "未审读全文所有页；公式和未引用数值未认证；缺口判断仅限已读范围。"
+      ],
+      "status": "已核验该范围"
+    }
+  ]
+}

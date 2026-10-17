@@ -1,0 +1,661 @@
+{
+  "schema_version": 2,
+  "filename": "考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法_赵冬梅.pdf",
+  "pages": 15,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": null,
+  "year_candidates": [
+    "2096",
+    "2026",
+    "1999"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "摘要：“沙戈荒”新能源基地同步支撑不足，系统强度偏低，汇集站侧无功支撑能力受限，导致静态电压稳定裕度随送出功率增\n长而降低。合理配置构网型场站与无功源，可协同增强系统强度和无功支撑能力，从而改善基地静态电压稳定水平。为此，提出\n一种构网型场站与无功源分层配置方法。首先，分析系统强度、无功支撑对静态电压稳定边界的影响；其次，以广义短路比\n（generalized short-circuit ratio，gSCR）为约束，确定场站侧构网配置位置和容量；然后，构建电压稳定解距离及其灵敏度指标，\n识别汇集站侧无功补偿候选节点；进一步，建立兼顾静态电压稳定裕度、无功配置容量和网损的多目标优化模型。最后，基于西\n北某新能源基地等值算例验证，结果表明所提方法可提升静态电压稳定裕度，同时兼顾无功配置容量与系统网损水平。 \n",
+      "page_start": 2,
+      "page_end": 2,
+      "start": {
+        "page": 2,
+        "offset": 147
+      },
+      "end": {
+        "page": 2,
+        "offset": 505
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 505
+      },
+      "heading": "摘要:“沙戈荒”新能源基地同步支撑不足,系统强度偏低,汇集站侧无功支撑能力受限,导致静态电压稳定裕度随送出功率增",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 358,
+      "truncated": false,
+      "quality_flags": [
+        "multiple_heading_candidates"
+      ],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "0  引  言 \n \n投稿日期：2026-05-27. \n基金项目：国家重点研发计划项目(2022YFB2402700);国家电网公司科\n技项目(52272222001J). \n“沙戈荒”大型新能源基地多位于西北等远离负\n荷中心的资源富集地区，通常经多级汇集后通过高\n压交流或直流输电通道实现大规模外送消纳。随着\n风电、光伏等新能源集中接入，送端常规同步电源\n占比降低，新能源机组主要经电力电子变流器并网，\n系统同步支撑能力和短路容量相对不足，呈现典型\n弱电网特征[1-3]。 在新能源高出力和外送功率持续增\n网络首发时间：2026-07-23 15:46:14       网络首发地址：https://link.cnki.net/urlid/10.1999.tm.20260722.1825.002\n 华北电力大学学报  \n \n长条件下，节点电压对有功功率扰动及无功功率分\n布变化更加敏感， 系统运行点易接近PV 曲线鼻点，\n即静态电压稳定临界点，从而限制基地安全稳定送\n出能力[4-5]。 \n弱网条件下，新能源基地静态电压稳定性主要\n受系统强度和汇集站侧无功支撑能力共同制约。系\n统强度不足时，跟网型新能源机组对外部电网电压\n支撑的依赖增强，送出功率增长会加剧节点电压下\n降，使 PV 曲线鼻点向小功率侧移动，降低系统最\n大稳定送出能力[4-6]。而构网型场站具备电压源支撑\n特性，可提升场站侧并网强度，从而改善系统整体\n电压支撑水平。与此同时，新能源基地内部存在多\n级集电线路和多个汇集站节点，远端汇集节点受线\n路电抗、电气距离及场站侧剩余无功能力限制，仍\n可能存在无功支撑不足，进一步削弱静态电压稳定\n裕度[7-8]。在汇集站侧配置无功补偿装置可就地提供\n无功支撑，改善关键节点电压稳定水平。针对弱支\n撑送端系统，仅依靠单一支撑手段难以同时满足系\n统强度提升和局部无功电压支撑需求。因此，有必\n要统筹场站侧构网支撑与汇集站侧无功补偿，建立\n二者协调的分层配置方法。 \n在系统强度评估方面， 传统短路比 （short-circuit \nratio，SCR）可用于衡量单馈入系统的电压支撑能\n力，但难以表征多新能源场站之间的电气耦合关系。\n文献 [9]提出广义短路比（ generalized short -circuit \nratio，gSCR） ， 从特征值角度建立了交流系统强度\n与静态电压稳定之间的联系；文献 [10]进一步将\ngSCR 推广至电力电子多馈入系统，统一了单馈入\n和多馈入场景下系统强度的物理意义与数学表达。\n针对新能源多场站送出场景，文献 [11]提出多新能\n源场站短路比定义及指标，用于反映场站间耦合作\n用对电压支撑能力的影响；文献 [12]提出新能源多\n场站短路比（multiple renewable short-circuit ratio，\nMRSCR） ， 进一步计及接入点间相互作用， 并建立\n了系统强度与电压稳定裕度之间的联系。文献 [13]\n提出静态电压稳定裕度比指标，可用于评价不同运\n行方式下新能源多场站送出系统的稳定裕度。上述\n研究为弱网新能源基地系统强度评价提供了基础，\n但多侧重运行状态评估，对如何依据最弱强度模态\n确定构网型场站配置位置和配置数量研究仍不充\n分。 \n在电压支撑能力提升方面， 文献[14]基于 PV 曲\n线分析弱网下跟网型变流器静态电压失稳机理，指\n出构网型变流器可改善静态电压稳定性。文献 [15]\n研究构网型与跟网型变流器容量配比对新能源场\n站稳定性的影响；文献 [16]研究构网型变流器功能\n定位与容量配置问题； 文献[17]提出基于 gSCR-IMR\n的构网型变流器选址定容方法；文献 [18]提出基于\n新能源多场站短路比的构网型 SVG 优化配置方法。\n上述研究表明，构网型资源可从系统强度层面改善\n弱网电压支撑，但对构网后汇集站侧局部无功支撑\n不足考虑不够。 \n在无功配置方面，文献 [19]提出复合电压薄弱\n性指标，并以薄弱节点集合作为无功优化待补偿节\n点集。文献[20]研究含风电交直流系统的静态电压\n稳定分析与无功优化问题，说明无功配置对改善静\n态电压稳定具有积极作用。文献 [21]建立计及静态\n电压稳定的无功优化模型；文献 [22]考虑多运行场\n景和多目标需求，研究无功补偿装置选址定容问题；\n文献[23]面向新能源基地电压支撑能力不足问题，\n提出构网型场站与无功源优化配置方法。现有的研\n究为无功配置提供了基础，但单一指标难以同时反\n映当前薄弱程度、裕度衰减特性及无功注入响应能\n力。 \n综上， 现有研究仍存在以下不足：1） 系统强度\n提升与局部无功支撑多独立开展研究，缺乏面向不\n同电压层级和支撑需求的分层配置方法；2） 构网型\n场站配置多以短路比或系统强度达标为目标，对构\n网支撑后汇集站侧局部电压薄弱环节考虑不足；3）\n无功补偿候选节点识别多依赖全网遍历或单一薄\n弱性指标，尚缺乏兼顾节点当前薄弱程度、功率增\n长敏感性和无功支撑响应能力的筛选机制；4） 无功\n补偿容量配置中，对静态电压稳定裕度、补偿容量\n和网损之间协调关系的刻画仍不充分。 \n针对上述问题，本文提出一种场站侧构网支撑\n与汇集站侧无功补偿的分层配置方法，兼顾系统强\n度提升与无功电压支撑能力改善。首先，从系统强\n度和无功支撑角度分析静态电压稳定边界影响机\n理；其次，以广义短路比为强度约束，引入参与因\n子并结合贪心迭代方法确定场站侧构网型新能源\n的配置位置与容量方案；然后，基于电压稳定解距\n离及其对功率增长、无功注入的灵敏度识别汇集站\n侧无功补偿候选节点；最后，以复合静态电压稳定\n裕度、无功总配置容量和系统网损为目标建立无功\n容量优化模型，并通过西北某新能源基地等值算例\n验证所提方法的有效性。 \n 赵冬梅等：考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法  \n \n",
+      "page_start": 2,
+      "page_end": 4,
+      "start": {
+        "page": 2,
+        "offset": 2569
+      },
+      "end": {
+        "page": 4,
+        "offset": 40
+      },
+      "preview_end": {
+        "page": 4,
+        "offset": 40
+      },
+      "heading": "0引言",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 2426,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate",
+        "text:private_use_characters"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "5  结论 \n本文面向“沙戈荒”新能源基地弱网外送场景，\n针对新能源高比例接入下系统强度偏低、汇集站侧\n局部无功支撑能力不足以及送出功率提升 过程中\n电压稳定裕度下降等问题，提出了场站侧构网支撑\n与汇集站侧无功补偿分层配置方法。通过机理推导、\n指标辨识和 DigSILENT 算例分析， 验证了所提方法\n的有效性。主要结论如下： \n1） 从系统强度和无功支撑角度， 推导了gSCR、\n节点电压稳定边界及无功注入对最大送出功率的\n影响机理，明确了构网支撑和无功补偿提升静态电\n压稳定裕度的作用路径。 \n2） 基于gSCR 约束、 参与因子分析， 提出了场\n站侧构网型支撑配置方法，可在满足系统强度要求\n的前提下，优先选择对系统强度提升贡献较大的场\n站进行构网改造，从而提高送端系统强度，并控制\n构网改造规模。 \n3）构建了\nvL 、\nvL  和 Lv-Q 指标用于识别无功\n补偿候选节点，并以稳定裕度、无功容量和网损为\n目标协同优化，可在提升静态电压稳定裕度的同时\n兼顾配置经济性。 \n本文主要面向规划层面的静态电压稳定问题，\n尚未计及构网型与跟网型机组在暂态过程中的控\n制交互。后续将结合两类机组的详细控制模型，开\n展机电暂态与电磁暂态仿真，进一步研究其在动态\n电压调节、故障响应等过程中的协同特性与控制耦\n合机理。 \n",
+      "page_start": 12,
+      "page_end": 12,
+      "start": {
+        "page": 12,
+        "offset": 40
+      },
+      "end": {
+        "page": 12,
+        "offset": 602
+      },
+      "preview_end": {
+        "page": 12,
+        "offset": 602
+      },
+      "heading": "5结论",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 562,
+      "truncated": false,
+      "quality_flags": [
+        "text:private_use_characters"
+      ],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "abstract:multiple_heading_candidates",
+    "conclusion:text:private_use_characters",
+    "introduction:numbered_boundary_candidate",
+    "introduction:text:private_use_characters",
+    "page:10:private_use_characters",
+    "page:11:private_use_characters",
+    "page:12:private_use_characters",
+    "page:15:fragmented_text",
+    "page:15:private_use_characters",
+    "page:4:private_use_characters",
+    "page:5:private_use_characters",
+    "page:6:private_use_characters",
+    "page:7:private_use_characters",
+    "page:8:private_use_characters",
+    "page:9:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 2,
+      "offset": 147,
+      "heading": "摘要:“沙戈荒”新能源基地同步支撑不足,系统强度偏低,汇集站侧无功支撑能力受限,导致静态电压稳定裕度随送出功率增",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 2,
+      "offset": 505,
+      "heading": "关键词:新能源基地;静态电压稳定;构网型场站;无功补偿;多目标优化",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "abstract",
+      "page": 2,
+      "offset": 877,
+      "heading": "abstract:the\"desertandgobi\"newenergybasesarecharacterizedbyinsufficientsynchronoussupport,weaksystemstrength,andlimited",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 2,
+      "offset": 2426,
+      "heading": "keywords:newenergybase;staticvoltagestability;grid-formingstation;reactivepowercompensation;multi-objectiveoptimization",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 2,
+      "offset": 2569,
+      "heading": "0引言",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 40,
+      "heading": "1新能源基地静态电压稳定机理",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 58,
+      "heading": "1.1系统强度对静态电压稳定的影响",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 1161,
+      "heading": "1.2无功支撑对静态电压稳定的影响",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 871,
+      "heading": "2场站侧gfm与汇集站侧无功源分",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 899,
+      "heading": "2.1场站侧gfm配置方法",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 6,
+      "offset": 70,
+      "heading": "2.2无功源候选节点识别方法",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 6,
+      "offset": 717,
+      "heading": "llq",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 14,
+      "heading": "3计及静态电压稳定的无功优化配",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 140,
+      "heading": "3.1优化变量",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 375,
+      "heading": "3.2优化目标",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 476,
+      "heading": "3.2.1复合静态电压稳定裕度",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 1296,
+      "heading": "3.2.2无功总配置容量",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 1443,
+      "heading": "3.2.3系统网损",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 1872,
+      "heading": "3.3约束条件",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 84,
+      "heading": "3.3.1潮流平衡约束",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 387,
+      "heading": "3.3.2节点运行约束",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 530,
+      "heading": "3.3.3无功补偿容量约束",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 738,
+      "heading": "3.3.4功率增长系数约束",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 8,
+      "offset": 1051,
+      "heading": "3.4求解算法与决策准则",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 9,
+      "offset": 122,
+      "heading": "4算例分析",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 9,
+      "offset": 131,
+      "heading": "4.1算例系统",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 9,
+      "offset": 703,
+      "heading": "4.2场站侧gfm配置结果分析",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 10,
+      "offset": 147,
+      "heading": "4.3汇集站侧候选节点识别结果分析",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 10,
+      "offset": 1213,
+      "heading": "4.4汇集站侧无功优化配置结果与效果验证",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 10,
+      "offset": 1402,
+      "heading": "4.4.1无功优化配置结果分析",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 11,
+      "offset": 902,
+      "heading": "4.4.2优化配置效果验证",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 11,
+      "offset": 1655,
+      "heading": "4.4.3不同算法求解结果对比",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 12,
+      "offset": 40,
+      "heading": "5结论",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 12,
+      "offset": 602,
+      "heading": "参考文献",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "backmatter",
+      "page": 15,
+      "offset": 16,
+      "heading": "附录",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 15,
+      "offset": 262,
+      "heading": "la",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 15,
+      "offset": 956,
+      "heading": "xexluuuu",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 999
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [],
+      "chars": 2920
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [],
+      "chars": 2033
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1887
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1943
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1687
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1924
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 2082
+    },
+    {
+      "page": 9,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1928
+    },
+    {
+      "page": 10,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1746
+    },
+    {
+      "page": 11,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 2233
+    },
+    {
+      "page": 12,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 3183
+    },
+    {
+      "page": 13,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4158
+    },
+    {
+      "page": 14,
+      "error": null,
+      "quality_flags": [],
+      "chars": 2613
+    },
+    {
+      "page": 15,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1077
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 2,
+      "cue": "不足",
+      "snippet": "华北电力大学学报 \n Journal of North China Electric Power University \n \n \n考虑静态电压稳定的新能源基地构网型场站与无功源优\n化配置方法 \n赵冬梅，赵健博，白俊辉 \n（华北电力大学 电气与电子工程学院，北京 102206） \n \n摘要：“沙戈荒”新能源基地同步支撑不足，系统强度偏低，汇集站侧无功支撑能力受限，导致静态电压稳定裕度随送出功率增\n长而降低。合理配置构网型场站与无功源，可协同增强系统强度和无功支撑能力，从而改善基地静态电压稳定水平。为此，提出\n一种构网型场站与无功源分层配置方法。首先，分析系统强度、无功支撑对静态电压稳定边界的影响；其次，以广义短路比\n（generalized short-circuit ratio，gSCR）为约束，确定场站侧构网配"
+    },
+    {
+      "page": 2,
+      "cue": "不足",
+      "snippet": "6-05-27. \n基金项目：国家重点研发计划项目(2022YFB2402700);国家电网公司科\n技项目(52272222001J). \n“沙戈荒”大型新能源基地多位于西北等远离负\n荷中心的资源富集地区，通常经多级汇集后通过高\n压交流或直流输电通道实现大规模外送消纳。随着\n风电、光伏等新能源集中接入，送端常规同步电源\n占比降低，新能源机组主要经电力电子变流器并网，\n系统同步支撑能力和短路容量相对不足，呈现典型\n弱电网特征[1-3]。 在新能源高出力和外送功率持续增\n网络首发时间：2026-07-23 15:46:14 网络首发地址：https://link.cnki.net/urlid/10.1999.tm.20260722.1825.002"
+    },
+    {
+      "page": 3,
+      "cue": "不足",
+      "snippet": "华北电力大学学报 \n \n长条件下，节点电压对有功功率扰动及无功功率分\n布变化更加敏感， 系统运行点易接近PV 曲线鼻点，\n即静态电压稳定临界点，从而限制基地安全稳定送\n出能力[4-5]。 \n弱网条件下，新能源基地静态电压稳定性主要\n受系统强度和汇集站侧无功支撑能力共同制约。系\n统强度不足时，跟网型新能源机组对外部电网电压\n支撑的依赖增强，送出功率增长会加剧节点电压下\n降，使 PV 曲线鼻点向小功率侧移动，降低系统最\n大稳定送出能力[4-6]。而构网型场站具备电压源支撑\n特性，可提升场站侧并网强度，从而改善系统整体\n电压支撑水平。与此同时，新能源基地内部存在多\n级集电线路和多个汇集站节点，远端汇集节点受线\n路电抗、电气距离及场站侧剩余无功能力限制，仍\n可能存在无功支撑不足，进一步削"
+    },
+    {
+      "page": 3,
+      "cue": "不足",
+      "snippet": "型变流器可改善静态电压稳定性。文献 [15]\n研究构网型与跟网型变流器容量配比对新能源场\n站稳定性的影响；文献 [16]研究构网型变流器功能\n定位与容量配置问题； 文献[17]提出基于 gSCR-IMR\n的构网型变流器选址定容方法；文献 [18]提出基于\n新能源多场站短路比的构网型 SVG 优化配置方法。\n上述研究表明，构网型资源可从系统强度层面改善\n弱网电压支撑，但对构网后汇集站侧局部无功支撑\n不足考虑不够。 \n在无功配置方面，文献 [19]提出复合电压薄弱\n性指标，并以薄弱节点集合作为无功优化待补偿节\n点集。文献[20]研究含风电交直流系统的静态电压\n稳定分析与无功优化问题，说明无功配置对改善静\n态电压稳定具有积极作用。文献 [21]建立计及静态\n电压稳定的无功优化模型；文献 [22]考虑多运行场\n景和多目标需求，研究无功补偿装置选址定容问题；\n文献[23]面向新能源基地电压支撑能力不足问"
+    },
+    {
+      "page": 3,
+      "cue": "难以",
+      "snippet": "压稳定\n裕度[7-8]。在汇集站侧配置无功补偿装置可就地提供\n无功支撑，改善关键节点电压稳定水平。针对弱支\n撑送端系统，仅依靠单一支撑手段难以同时满足系\n统强度提升和局部无功电压支撑需求。因此，有必\n要统筹场站侧构网支撑与汇集站侧无功补偿，建立\n二者协调的分层配置方法。 \n在系统强度评估方面， 传统短路比 （short-circuit \nratio，SCR）可用于衡量单馈入系统的电压支撑能\n力，但难以表征多新能源场站之间的电气耦合关系。\n文献 [9]提出广义短路比（ generalized short -circuit \nratio，gSCR） ， 从特征值角度建立了交流系统强度\n与静态电压稳定之间的联系；文献 [10]进一步将\ngSCR 推广至电力电子多馈入系统，统一了单馈入\n和多馈入场景下系统强度的物理意义与数学表达。\n针对新能源多场站送出场景，文献 [11]提出多新能\n源场站短路比定义及"
+    },
+    {
+      "page": 4,
+      "cue": "不足",
+      "snippet": "S 为 GFM 容量矩阵，\nMB 为 GFM 引入的\n附加等效电纳矩阵。 式(2)表明，GFM 接入后通过增\n强外部系统等效支撑能力提高 gSCR，从而减弱节\n点电压对功率转移的脆弱性[24]。 \n从静态电压稳定机理看，gSCR 的提高有助于\n减缓节点电压随送出功率增长的下降趋势，使系统\n运行点不易提前逼近 PV 曲线鼻点，静态电压稳定\n边界相应后移， 最大稳定送出能力随之提高。 反之，\n系统强度不足时，并网点电压支撑能力减弱，节点\n电压对有功传输水平变化更加敏感，系统运行点更\n易接近静态电压失稳边界。 \n因此，可在场站侧配置构网型场站，以提升系\n统整体并网强度，从而提高新能源基地静态电压稳\n定水平。 \n1.2 无功支撑对静态电压稳定的影响 \n为揭示无功支撑对静态电压稳定边界的作用\n机理，在统一等值框架下将研究节点 i 表述为单馈\n入等值系统，建立图 2 所示等效分析模型。 \niE\nii ii"
+    },
+    {
+      "page": 4,
+      "cue": "难以",
+      "snippet": "赵冬梅等：考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法 \n \n1 新能源基地静态电压稳定机理 \n1.1 系统强度对静态电压稳定的影响 \n在多馈入新能源并网场景下，各场站经网络阻\n抗相互耦合，系统强度呈现明显的多节点关联特征，\n其分析模型如图 1 所示。传统单馈入短路比难以准\n确表征该类系统的整体并网强度，故本文采用广义\n短路比（gSCR）[9]表征新能源基地的系统强度，其\n表达式为： \n \n   \n1\nmin\nmax\n1gSCR B\nB\nSB ZS \n (1) \n式中：\nBS 为设备额定容量矩阵，B 与 Z 分别为系统\n电纳矩阵和阻抗矩阵，\nmin ()  与\nmax ()  分别表示矩\n阵最小和最大特征值。由式(1)可知，gSCR 同时"
+    },
+    {
+      "page": 5,
+      "cue": "难以",
+      "snippet": ") \n式中：\niQ 为第 i 个构网型变流器的输出无功功率；\nQref,i 和 Uref,i 分别为无功参考值和电压参考值；kq,i \n为无功下垂系数；Ui,min 和 Qi,max 分别为电压下限和\n无功输出上限。 \n根据上述分析，GFM 可在一定范围内参与节点\n电压调节，但其无功支撑能力受设备容量上限约束。\n随着基地外送功率的提高，汇集网络及关键节点的\n无功支撑需求增加，仅依靠场站侧 GFM 难以提供\n充分且持续的无功支撑[26]。 \n因而，在确定场站侧构网支撑配置后，仍需针\n对关键汇集节点配置无功补偿装置，以改善局部无\n功电压支撑条件并进一步提高静态电压稳定裕度。 \n2 场站侧 GFM 与汇集站侧无功源分\n层配置方法 \n2.1 场站侧 GFM 配置方法 \n本文场站侧构网配置采用将部分原有 新能源\n机组改造为构网控制的技术路线。场站侧 GFM 的\n主要作用在于提升系统强度，故以系统强度约束"
+    },
+    {
+      "page": 6,
+      "cue": "尚未",
+      "snippet": "点识别\n基于构网后网络状态\n计算 Lv、Lv-λ和Lv-Q\nY\nN\n \n图 3 分层配置流程 \nFig. 3 Hierarchical configuration processz \n上述分层配置以构网改造后潮流解存在，且节\n点电压、机组无功输出等稳态运行约束得到满足为\n前提，重点研究构网配置对系统强度和静态电压稳\n定的影响。鉴于本文侧重静态分析，构网型与跟网\n型机组控制环节在暂态过程中的耦合特性尚未进\n一步展开。"
+    },
+    {
+      "page": 8,
+      "cue": "难以",
+      "snippet": "   (39) \n式中：λmax,0 为基准方案下的最大负荷增长系数；\n\n为最大功率增长系数相对提升要求。 \n综上，式（34）—式（39）共同构成新能源基\n地汇集站侧无功优化配置模型的约束体系。 \n3.4 求解算法与决策准则 \n3.4.1 AGE-MOEA-II 求解流程 \n本文 所建立模型属于多目标非线性耦合优化\n问题。各目标相互制约，且目标函数值需借助潮流\n与连续潮流计算结果获得，难以采用传统解析方法\n直接求解，因此本文采用 AGE-MOEA-II 算法进行\n求解。 \nAGE-MOEA-II 是一种面向 Pareto 前沿几何特\n征的多目标进化算法[28]。 该算法在非支配排序基础\n上引入前沿几何信息，以改善环境选择过程，从而\n兼顾解集收敛性与分布均匀性。鉴于本文重点在于\n无功优化模型及其工程应用，算法细节不再展开。 \n在具体求解过程中，首先根据场站侧构网预配\n置结果和汇集站侧"
+    },
+    {
+      "page": 8,
+      "cue": "难以",
+      "snippet": "数以及约束\n条件，完成个体目标函数值和约束违背量的评价。\n在进化过程中，通过选择、交叉和变异生成子代种\n群，将父代与子代合并后进行非支配排序和环境选\n择，得到下一代种群。重复上述过程直至满足终止\n条件，最终获得 Pareto 非支配解集。 \n3.4.2 TOPSIS 决策准则 \n获得 Pareto 非支配解集后， 各候选方案在复合\n静态电压稳定裕度、无功补偿总配置容量和系统网\n损目标之间相互制约，难以直接确定唯一最优方案。\n为此，本文采用 TOPSIS 方法[29]进行折中决策。 \n设 Pareto 解集为 P={x1,x2,...,xNp}，第 r 个方案\n对应的三个目标函数分别为 F1(xr)、F2(xr)和 F3(xr)。\n将各目标统一为极小化形式并归一化。目标权重用\n于反映不同的工程决策偏好，可根据系统安全、设\n备投资及运行经济性等实际需求确定，并满足权重\n之和为 1。则加权归一化后的"
+    },
+    {
+      "page": 9,
+      "cue": "不足",
+      "snippet": "基准工况。 \n系统包含 26 个节点和 25 条等值支路，平衡节\n点为节点 25， 基准容量为100MVA。 新能源基地由\n8 个风电场站和 8 个光伏场站构成，总装机容量为\n4100MW，其中风电、光伏装机容量分别为 2.9GW\n和 1.2GW，算例系统拓扑如图 4 所示。 在DigSILENT \n/PowerFactory 仿真平台中构建异构新能源基地等\n值算例系统。该系统常规同步电源支撑相对不足，\n新能源经多级汇集后通过弱联络线接入外部同步\n电网，具有典型弱网送出特征。 \n330MW\nLD\nXZ\n 3000MW\nC1\nD1\nD2\n140MW\n火电机组\n750kV汇集站\n风电场站\n光伏场站\nA2\n370MW\n130MW\n330kV汇集站\n \n图 4 算例系统拓扑结构 \nFig. 4 Topological structure of the test system \n4.2 场站侧 GFM"
+    },
+    {
+      "page": 9,
+      "cue": "尚未",
+      "snippet": "站自身额定容量的相应比例配置构网\n容量，并计算系统 gSCR。 \n表 2 不同构网容量配比下的系统强度 \nTab. 2 System strength under different GFM capacity \n构网容量配比/% 10 15 20 \ngSCR 1.806 2.031 2.271 \n由表 2 可知，系统 gSCR 随构网容量配比增加\n而提高。 10%配比下 gSCR 为 1.806，尚未达到\ngSCR≥2.0 的配置目标；15%配比下 gSCR 提高至"
+    },
+    {
+      "page": 10,
+      "cue": "不足",
+      "snippet": "值越大，表明节点对无功支\n撑的响应越明显。 \n计算结果如表 3，分析可知节点 20 和 22 的 Lv\n最小，说明其当前运行点更接近静态电压稳定边界；\n节点 22、20 和 24 在\nvL  指标下排序靠前，表明其\n在功率增长扰动下稳定裕度变化更为敏感； 节点24、\n22 和 20 的 Lv-Q 较高，说明其对无功补偿具有较强\n响应。相比之下，节点 23 虽具有较高无功响应能\n力，但当前薄弱性不足；节点 21 的 Lv 较低，但无\n功响应能力偏弱。 \n17 18 19 20 21 22 23 24\n0.0\n0.2\n0.4\n0.6\n0.8\n1.0指标值\n节点编号\nLv\nLv-Q\nLv-λ\n \n图 6 汇集站节点静态电压稳定指标对比 \nFig. 6 Comparison of static voltage stability indices of \ncollector buses \n因此，仅依"
+    },
+    {
+      "page": 12,
+      "cue": "不足",
+      "snippet": "赵冬梅等：考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法 \n \n5 结论 \n本文面向“沙戈荒”新能源基地弱网外送场景，\n针对新能源高比例接入下系统强度偏低、汇集站侧\n局部无功支撑能力不足以及送出功率提升 过程中\n电压稳定裕度下降等问题，提出了场站侧构网支撑\n与汇集站侧无功补偿分层配置方法。通过机理推导、\n指标辨识和 DigSILENT 算例分析， 验证了所提方法\n的有效性。主要结论如下： \n1） 从系统强度和无功支撑角度， 推导了gSCR、\n节点电压稳定边界及无功注入对最大送出功率的\n影响机理，明确了构网支撑和无功补偿提升静态电\n压稳定裕度的作用路径。 \n2） 基于gSCR 约束"
+    },
+    {
+      "page": 12,
+      "cue": "进一步研究",
+      "snippet": "站进行构网改造，从而提高送端系统强度，并控制\n构网改造规模。 \n3）构建了\nvL 、\nvL  和 Lv-Q 指标用于识别无功\n补偿候选节点，并以稳定裕度、无功容量和网损为\n目标协同优化，可在提升静态电压稳定裕度的同时\n兼顾配置经济性。 \n本文主要面向规划层面的静态电压稳定问题，\n尚未计及构网型与跟网型机组在暂态过程中的控\n制交互。后续将结合两类机组的详细控制模型，开\n展机电暂态与电磁暂态仿真，进一步研究其在动态\n电压调节、故障响应等过程中的协同特性与控制耦\n合机理。 \n参考文献 \n[1] 肖祥辉,林颖,林子铭,等.多样化并网场景下新能源基地\n稳 定 控 制 规 划 配 置 技 术 发 展 与 展 望 [J]. 电力建\n设,2026,47(03):64-79. \nXIAO Xianghui, LIN Ying, LIN Ziming, et al. \nDevelopment and prospec"
+    },
+    {
+      "page": 12,
+      "cue": "展望",
+      "snippet": "ration technologies for renewable energy bases \nunder diversified grid -connection scenarios[J]. Electric \nPower Construction, 2026, 47(3): 64-79 (in Chinese). \n[2] 卢婷,张军,韩一杰.沙戈荒新能源基地外送能力限制因\n素综述及系统性评估展望 [J]. 电力建\n设,2026,47(03):119-134. \nLU Ting, ZHANG Jun, HAN Yijie. Review of limiting \nfactors and systematic assessment prospects for \ntransmission capacity of desert and Gobi renewable energy \nbases[J"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/23_考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法_赵冬梅_pages.json",
+  "abstract": "摘要：“沙戈荒”新能源基地同步支撑不足，系统强度偏低，汇集站侧无功支撑能力受限，导致静态电压稳定裕度随送出功率增\n长而降低。合理配置构网型场站与无功源，可协同增强系统强度和无功支撑能力，从而改善基地静态电压稳定水平。为此，提出\n一种构网型场站与无功源分层配置方法。首先，分析系统强度、无功支撑对静态电压稳定边界的影响；其次，以广义短路比\n（generalized short-circuit ratio，gSCR）为约束，确定场站侧构网配置位置和容量；然后，构建电压稳定解距离及其灵敏度指标，\n识别汇集站侧无功补偿候选节点；进一步，建立兼顾静态电压稳定裕度、无功配置容量和网损的多目标优化模型。最后，基于西\n北某新能源基地等值算例验证，结果表明所提方法可提升静态电压稳定裕度，同时兼顾无功配置容量与系统网损水平。 \n",
+  "introduction": "0  引  言 \n \n投稿日期：2026-05-27. \n基金项目：国家重点研发计划项目(2022YFB2402700);国家电网公司科\n技项目(52272222001J). \n“沙戈荒”大型新能源基地多位于西北等远离负\n荷中心的资源富集地区，通常经多级汇集后通过高\n压交流或直流输电通道实现大规模外送消纳。随着\n风电、光伏等新能源集中接入，送端常规同步电源\n占比降低，新能源机组主要经电力电子变流器并网，\n系统同步支撑能力和短路容量相对不足，呈现典型\n弱电网特征[1-3]。 在新能源高出力和外送功率持续增\n网络首发时间：2026-07-23 15:46:14       网络首发地址：https://link.cnki.net/urlid/10.1999.tm.20260722.1825.002\n 华北电力大学学报  \n \n长条件下，节点电压对有功功率扰动及无功功率分\n布变化更加敏感， 系统运行点易接近PV 曲线鼻点，\n即静态电压稳定临界点，从而限制基地安全稳定送\n出能力[4-5]。 \n弱网条件下，新能源基地静态电压稳定性主要\n受系统强度和汇集站侧无功支撑能力共同制约。系\n统强度不足时，跟网型新能源机组对外部电网电压\n支撑的依赖增强，送出功率增长会加剧节点电压下\n降，使 PV 曲线鼻点向小功率侧移动，降低系统最\n大稳定送出能力[4-6]。而构网型场站具备电压源支撑\n特性，可提升场站侧并网强度，从而改善系统整体\n电压支撑水平。与此同时，新能源基地内部存在多\n级集电线路和多个汇集站节点，远端汇集节点受线\n路电抗、电气距离及场站侧剩余无功能力限制，仍\n可能存在无功支撑不足，进一步削弱静态电压稳定\n裕度[7-8]。在汇集站侧配置无功补偿装置可就地提供\n无功支撑，改善关键节点电压稳定水平。针对弱支\n撑送端系统，仅依靠单一支撑手段难以同时满足系\n统强度提升和局部无功电压支撑需求。因此，有必\n要统筹场站侧构网支撑与汇集站侧无功补偿，建立\n二者协调的分层配置方法。 \n在系统强度评估方面， 传统短路比 （short-circuit \nratio，SCR）可用于衡量单馈入系统的电压支撑能\n力，但难以表征多新能源场站之间的电气耦合关系。\n文献 [9]提出广义短路比（ generalized short -circuit \nratio，gSCR） ， 从特征值角度建立了交流系统强度\n与静态电压稳定之间的联系；文献 [10]进一步将\ngSCR 推广至电力电子多馈入系统，统一了单馈入\n和多馈入场景下系统强度的物理意义与数学表达。\n针对新能源多场站送出场景，文献 [11]提出多新能\n源场站短路比定义及指标，用于反映场站间耦合作\n用对电压支撑能力的影响；文献 [12]提出新能源多\n场站短路比（multiple renewable short-circuit ratio，\nMRSCR） ， 进一步计及接入点间相互作用， 并建立\n了系统强度与电压稳定裕度之间的联系。文献 [13]\n提出静态电压稳定裕度比指标，可用于评价不同运\n行方式下新能源多场站送出系统的稳定裕度。上述\n研究为弱网新能源基地系统强度评价提供了基础，\n但多侧重运行状态评估，对如何依据最弱强度模态\n确定构网型场站配置位置和配置数量研究仍不充\n分。 \n在电压支撑能力提升方面， 文献[14]基于 PV 曲\n线分析弱网下跟网型变流器静态电压失稳机理，指\n出构网型变流器可改善静态电压稳定性。文献 [15]\n研究构网型与跟网型变流器容量配比对新能源场\n站稳定性的影响；文献 [16]研究构网型变流器功能\n定位与容量配置问题； 文献[17]提出基于 gSCR-IMR\n的构网型变流器选址定容方法；文献 [18]提出基于\n新能源多场站短路比的构网型 SVG 优化配置方法。\n上述研究表明，构网型资源可从系统强度层面改善\n弱网电压支撑，但对构网后汇集站侧局部无功支撑\n不足考虑不够。 \n在无功配置方面，文献 [19]提出复合电压薄弱\n性指标，并以薄弱节点集合作为无功优化待补偿节\n点集。文献[20]研究含风电交直流系统的静态电压\n稳定分析与无功优化问题，说明无功配置对改善静\n态电压稳定具有积极作用。文献 [21]建立计及静态\n电压稳定的无功优化模型；文献 [22]考虑多运行场\n景和多目标需求，研究无功补偿装置选址定容问题；\n文献[23]面向新能源基地电压支撑能力不足问题，\n提出构网型场站与无功源优化配置方法。现有的研\n究为无功配置提供了基础，但单一指标难以同时反\n映当前薄弱程度、裕度衰减特性及无功注入响应能\n力。 \n综上， 现有研究仍存在以下不足：1） 系统强度\n提升与局部无功支撑多独立开展研究，缺乏面向不\n同电压层级和支撑需求的分层配置方法；2） 构网型\n场站配置多以短路比或系统强度达标为目标，对构\n网支撑后汇集站侧局部电压薄弱环节考虑不足；3）\n无功补偿候选节点识别多依赖全网遍历或单一薄\n弱性指标，尚缺乏兼顾节点当前薄弱程度、功率增\n长敏感性和无功支撑响应能力的筛选机制；4） 无功\n补偿容量配置中，对静态电压稳定裕度、补偿容量\n和网损之间协调关系的刻画仍不充分。 \n针对上述问题，本文提出一种场站侧构网支撑\n与汇集站侧无功补偿的分层配置方法，兼顾系统强\n度提升与无功电压支撑能力改善。首先，从系统强\n度和无功支撑角度分析静态电压稳定边界影响机\n理；其次，以广义短路比为强度约束，引入参与因\n子并结合贪心迭代方法确定场站侧构网型新能源\n的配置位置与容量方案；然后，基于电压稳定解距\n离及其对功率增长、无功注入的灵敏度识别汇集站\n侧无功补偿候选节点；最后，以复合静态电压稳定\n裕度、无功总配置容量和系统网损为目标建立无功\n容量优化模型，并通过西北某新能源基地等值算例\n验证所提方法的有效性。 \n 赵冬梅等：考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法  \n \n",
+  "conclusion": "5  结论 \n本文面向“沙戈荒”新能源基地弱网外送场景，\n针对新能源高比例接入下系统强度偏低、汇集站侧\n局部无功支撑能力不足以及送出功率提升 过程中\n电压稳定裕度下降等问题，提出了场站侧构网支撑\n与汇集站侧无功补偿分层配置方法。通过机理推导、\n指标辨识和 DigSILENT 算例分析， 验证了所提方法\n的有效性。主要结论如下： \n1） 从系统强度和无功支撑角度， 推导了gSCR、\n节点电压稳定边界及无功注入对最大送出功率的\n影响机理，明确了构网支撑和无功补偿提升静态电\n压稳定裕度的作用路径。 \n2） 基于gSCR 约束、 参与因子分析， 提出了场\n站侧构网型支撑配置方法，可在满足系统强度要求\n的前提下，优先选择对系统强度提升贡献较大的场\n站进行构网改造，从而提高送端系统强度，并控制\n构网改造规模。 \n3）构建了\nvL 、\nvL  和 Lv-Q 指标用于识别无功\n补偿候选节点，并以稳定裕度、无功容量和网损为\n目标协同优化，可在提升静态电压稳定裕度的同时\n兼顾配置经济性。 \n本文主要面向规划层面的静态电压稳定问题，\n尚未计及构网型与跟网型机组在暂态过程中的控\n制交互。后续将结合两类机组的详细控制模型，开\n展机电暂态与电磁暂态仿真，进一步研究其在动态\n电压调节、故障响应等过程中的协同特性与控制耦\n合机理。 \n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法_赵冬梅.pdf",
+  "file_sha256": "1523d79884ca5969d048080b7629b3da0fa7b0ac73f9a75558339f4dcb2ba400",
+  "target_ids": [
+    "P22"
+  ]
+}

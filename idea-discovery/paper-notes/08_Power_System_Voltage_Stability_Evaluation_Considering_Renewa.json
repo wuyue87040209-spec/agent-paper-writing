@@ -1,0 +1,332 @@
+{
+  "schema_version": 2,
+  "filename": "Power_System_Voltage_Stability_Evaluation_Considering_Renewable_Energy_With_Correlated_Variabilities.pdf",
+  "pages": 10,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/TPWRS.2017.2784812",
+  "year_candidates": [
+    "2026",
+    "2018",
+    "2017"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—Power system operation will encounter numerous\nvariabilities as the proliferation of renewable energy continues.\nSuch random events will require the evaluation of corresponding\nvariables and the assessment of their impacts on the monitoring\nand the control of stochastic power systems. In this paper, a global\nsensitivity analysis (GSA) method is proposed to perform a pri-\nority ranking of renewable energy variabilities that will affect the\nvoltage stability of power systems. First, a probabilistic model for\nthe load margin calculation is presented considering the renewable\npower generation. Then, GSA is applied to models with correlated\nrandom input variables and the importance index is designed\nfor evaluating the impacts of such variables. Next, the stochastic\nresponse surface method is adopted in GSA to improve the\ncomputation efﬁciency of the proposed evaluation method. Finally,\nthe overall procedure is presented to identify critical variables\nthat can affect the variability of load margins in voltage stability\nanalyses. The proposed method is applied to power systems with a\nlarge penetration of renewable power and the inﬂuences of critical\nvariabilities on voltage stability are analyzed. In this paper, the\nproposed method is tested using the IEEE 9-bus and the IEEE\n118-bus systems, and its accuracy is compared with those of the\nlocal sensitivity analysis method and the commonly used GSA\nmethods.\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 291
+      },
+      "end": {
+        "page": 1,
+        "offset": 1722
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1722
+      },
+      "heading": "abstract—powersystemoperationwillencounternumerous",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1431,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. I NTRODUCTION\nT\nHE variability of renewable energy has fundamentally\nchanged the planning and operation of electric power sys-\ntems. Over the last few decades, stochastic power system prob-\nlems including the probabilistic load ﬂow and probabilistic small\nsignal stability have been studied extensively [1]–[6]. Given the\nnature of variables, the stochastic methods have aimed at evalu-\nating the uncertain performance of power systems as traditional\ndeterministic methods cannot fully depict the characteristics of\nvariable power systems.\nThe solution of stochastic power system problems with a large\nnumber of random variables will be computationally intractable\nas we consider all practical variabilities in power systems [7].\nHowever, it may not be necessary to model all such variabili-\nties, in particular those with a minute impact on power system\noperations. Therefore, accurate identiﬁcations of most inﬂuenc-\ning variables will improve the operational efﬁciency of power\nsystems with less monitoring, and give a better understanding\nof relations between input and output variables in solving the\nstochastic power system problems.\nSensitivity analysis (SA) is a useful tool to evaluate the\nchanges in power system outputs as system inputs are varied. SA\nprovides the information on which input will have the largest ef-\nfect on designated system outputs. Broadly speaking, SA meth-\nods can be divided into two categories: local sensitivity analysis\n(LSA) and global sensitivity analysis (GSA). LSA usually con-\nsiders the partial derivative of the output with respect to the\ninput variable. In [8]–[10], the sensitivities of load margins with\nrespective to arbitrary parameters were derived. In [11], the ﬁrst\norder sensitivity of the available transfer capacity with respect\nto power system network variables was described. In [12], a\nmethod based on sensitivity analyses was proposed to rank syn-\nchronous generators according to their contributions to angular\nand voltage stability. Although LSA has been widely studied in\npower system analyses, it also has some shortcomings. Since\npower systems models are traditionally nonlinear, LSA would\nonly be valid for a small region of variabilities in the vicinity\nof the power system operating point. Moreover, LSA cannot\nconsider the correlation between different random variables.\nDifferent from LSA, GSA assesses the impact of a full range\nof possible variabilities and takes into account system nonlin-\nearities [13]–[14]. The variance-based sensitivity analysis, also\nknown as the Sobol method, is one of the most popular GSA\nmethods. By decomposing the variance of the system output\ninto fractions that can be attributed to inputs or sets of inputs,\nit evaluates the impact of input variables. GSA has been ap-\nplied to a host of system applications including artiﬁcial neural\nnetworks [15]–[16] and urban water supplies [17]. However,\nthere have been limited applications of GSA in power systems.\nRecently, [7] introduced GSA to power distribution system anal-\nyses. In [18], several SA methods including LSA, screening SA\nand GSA were compared for identifying critical parameters that\naffect the small disturbance stability of a power system.\nIn previous GSA applications, random input variables were\nassumed to be independent and statistical correlations of such\nvariables were not considered in evaluating the importance of\nvariabilities. Moreover, several GSA applications to power sys-\ntem analyses suffered from signiﬁcant computation burdens\nsince the Monte Carlo simulation (MCS) was used in global\nsensitivity (GS) calculations. Besides, GSA applications to the\nstatic voltage stability assessment of power systems with renew-\nable generation were not highlighted.\nIn this paper, power systems with a signiﬁcant penetration of\nrenewable generation are studied and an efﬁcient GSA method\nis proposed to analyze the inﬂuence of various variabilities on\nvoltage stability. First, the probabilistic load margin is con-\nsidered for power systems with renewable generation, and the\nCopula function is adopted to model the correlations among\nnon-normally distributed variables. Then, GSA for models with\ncorrelated variables is presented, and the importance index is\ndeﬁned for input variables. Moreover, the stochastic response\nsurface method (SRSM) is used to establish a surrogate model\nof the load margin in order to improve the efﬁciency of calcu-\nlating sensitivities. Finally, a procedure is designed to identify\nthe important variabilities that affect voltage stability. The pro-\nposed method is tested using the IEEE 9-bus and IEEE 118-bus\nsystems, and the results are compared with those of LSA and\nother GSA methods to validate the effectiveness of the proposed\nmethod.\n",
+      "page_start": 2,
+      "page_end": 2,
+      "start": {
+        "page": 2,
+        "offset": 122
+      },
+      "end": {
+        "page": 2,
+        "offset": 4872
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 4872
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 4750,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "VI. C ONCLUSION\nIn this paper, a GSA method is proposed to consider power\nsystem variabilities in the voltage stability evaluation. The pro-\nposed method is tested on IEEE 9-bus and IEEE 118-bus sys-\ntems, and the results are compared with those of other sensitivity\nanalysis methods. The following conclusions are drawn:\n1) Compared with LSA, the proposed GSA method is more\naccurate to consider the relative importance of variables.\n2) The results corresponding with the surrogate model of the\nload margin established by SRSM are accurate compared\nwith those of MCS with a large sample size. With the\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:20:58 UTC from IEEE Xplore.  Restrictions apply. \n3244 IEEE TRANSACTIONS ON POWER SYSTEMS, VOL. 33, NO. 3, MA Y 2018\nestablished surrogate model, the computation efﬁciency of\nGSA is signiﬁcantly improved.\n3) For power systems with high renewable penetration, the vari-\nabilities of renewable power are critical in determining prob-\nability distributions of load margins. Moreover, correlations\namong renewable power affect the variability of load margins.\n4) Certain variables affect power system operations signiﬁ-\ncantly. The proposed GSA method accurately identiﬁes such\nvariables and thus can be useful for an effective computation\nin stochastic power system analyses.\nIn our future work, we will combine SRSM with the sparse-\nadaptive scheme to further improve the computation efﬁciency\nof GSA in large-scale power system problems. Besides, we will\nadopt the application of the proposed GSA method in heuristic\nblack-box algorithms such as artiﬁcial neural networks to the\ncomplicated power system problems in which it is difﬁcult to\nobtain an analytical closed-form solution.\n",
+      "page_start": 8,
+      "page_end": 9,
+      "start": {
+        "page": 8,
+        "offset": 3262
+      },
+      "end": {
+        "page": 9,
+        "offset": 1032
+      },
+      "preview_end": {
+        "page": 9,
+        "offset": 1032
+      },
+      "heading": "vi.conclusion",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 1797,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "introduction:numbered_boundary_candidate",
+    "page:4:fragmented_text"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 291,
+      "heading": "abstract—powersystemoperationwillencounternumerous",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1722,
+      "heading": "indexterms—renewablepower,variability,voltagestability,",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 1,
+      "offset": 2477,
+      "heading": "x.xu,z.yan,h.wang,ands.chenarewiththedepartmentofelectrical",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 1,
+      "offset": 2714,
+      "heading": "m.shahidehpouriswiththegalvincenterforelectricityinnovation,illinois",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 1,
+      "offset": 3225,
+      "heading": "ccopulafunctionofcorrelatedvariables",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 1,
+      "offset": 3558,
+      "heading": "dtotalvarianceoff",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 2,
+      "offset": 122,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 4872,
+      "heading": "ii.probabilisticvoltagestabilityanalysis",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 2422,
+      "heading": "iii.globalsensitivityanalysis",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 331,
+      "heading": "c.performdeterministicvoltagestabilityanalyses",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 383,
+      "heading": "d.calculatepcecoefficients",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 537,
+      "heading": "c.calculategss",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 637,
+      "heading": "iv.procedureofvoltagestabilitygsa",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 1079,
+      "heading": "v.casestudies",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 8,
+      "offset": 3262,
+      "heading": "vi.conclusion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 9,
+      "offset": 1032,
+      "heading": "references",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [
+    4
+  ],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4907
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [],
+      "chars": 6091
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4785
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 4412
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3559
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4158
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4802
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4026
+    },
+    {
+      "page": 9,
+      "error": null,
+      "quality_flags": [],
+      "chars": 7707
+    },
+    {
+      "page": 10,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1583
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 2,
+      "cue": "not considered",
+      "snippet": "that\naffect the small disturbance stability of a power system.\nIn previous GSA applications, random input variables were\nassumed to be independent and statistical correlations of such\nvariables were not considered in evaluating the importance of\nvariabilities. Moreover, several GSA applications to power sys-\ntem analyses suffered from signiﬁcant computation burdens\nsince the Monte Carlo simulation (MCS) was us"
+    },
+    {
+      "page": 9,
+      "cue": "future work",
+      "snippet": "ect power system operations signiﬁ-\ncantly. The proposed GSA method accurately identiﬁes such\nvariables and thus can be useful for an effective computation\nin stochastic power system analyses.\nIn our future work, we will combine SRSM with the sparse-\nadaptive scheme to further improve the computation efﬁciency\nof GSA in large-scale power system problems. Besides, we will\nadopt the application of the proposed"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/08_Power_System_Voltage_Stability_Evaluation_Considering_Renewa_pages.json",
+  "abstract": "Abstract—Power system operation will encounter numerous\nvariabilities as the proliferation of renewable energy continues.\nSuch random events will require the evaluation of corresponding\nvariables and the assessment of their impacts on the monitoring\nand the control of stochastic power systems. In this paper, a global\nsensitivity analysis (GSA) method is proposed to perform a pri-\nority ranking of renewable energy variabilities that will affect the\nvoltage stability of power systems. First, a probabilistic model for\nthe load margin calculation is presented considering the renewable\npower generation. Then, GSA is applied to models with correlated\nrandom input variables and the importance index is designed\nfor evaluating the impacts of such variables. Next, the stochastic\nresponse surface method is adopted in GSA to improve the\ncomputation efﬁciency of the proposed evaluation method. Finally,\nthe overall procedure is presented to identify critical variables\nthat can affect the variability of load margins in voltage stability\nanalyses. The proposed method is applied to power systems with a\nlarge penetration of renewable power and the inﬂuences of critical\nvariabilities on voltage stability are analyzed. In this paper, the\nproposed method is tested using the IEEE 9-bus and the IEEE\n118-bus systems, and its accuracy is compared with those of the\nlocal sensitivity analysis method and the commonly used GSA\nmethods.\n",
+  "introduction": "I. I NTRODUCTION\nT\nHE variability of renewable energy has fundamentally\nchanged the planning and operation of electric power sys-\ntems. Over the last few decades, stochastic power system prob-\nlems including the probabilistic load ﬂow and probabilistic small\nsignal stability have been studied extensively [1]–[6]. Given the\nnature of variables, the stochastic methods have aimed at evalu-\nating the uncertain performance of power systems as traditional\ndeterministic methods cannot fully depict the characteristics of\nvariable power systems.\nThe solution of stochastic power system problems with a large\nnumber of random variables will be computationally intractable\nas we consider all practical variabilities in power systems [7].\nHowever, it may not be necessary to model all such variabili-\nties, in particular those with a minute impact on power system\noperations. Therefore, accurate identiﬁcations of most inﬂuenc-\ning variables will improve the operational efﬁciency of power\nsystems with less monitoring, and give a better understanding\nof relations between input and output variables in solving the\nstochastic power system problems.\nSensitivity analysis (SA) is a useful tool to evaluate the\nchanges in power system outputs as system inputs are varied. SA\nprovides the information on which input will have the largest ef-\nfect on designated system outputs. Broadly speaking, SA meth-\nods can be divided into two categories: local sensitivity analysis\n(LSA) and global sensitivity analysis (GSA). LSA usually con-\nsiders the partial derivative of the output with respect to the\ninput variable. In [8]–[10], the sensitivities of load margins with\nrespective to arbitrary parameters were derived. In [11], the ﬁrst\norder sensitivity of the available transfer capacity with respect\nto power system network variables was described. In [12], a\nmethod based on sensitivity analyses was proposed to rank syn-\nchronous generators according to their contributions to angular\nand voltage stability. Although LSA has been widely studied in\npower system analyses, it also has some shortcomings. Since\npower systems models are traditionally nonlinear, LSA would\nonly be valid for a small region of variabilities in the vicinity\nof the power system operating point. Moreover, LSA cannot\nconsider the correlation between different random variables.\nDifferent from LSA, GSA assesses the impact of a full range\nof possible variabilities and takes into account system nonlin-\nearities [13]–[14]. The variance-based sensitivity analysis, also\nknown as the Sobol method, is one of the most popular GSA\nmethods. By decomposing the variance of the system output\ninto fractions that can be attributed to inputs or sets of inputs,\nit evaluates the impact of input variables. GSA has been ap-\nplied to a host of system applications including artiﬁcial neural\nnetworks [15]–[16] and urban water supplies [17]. However,\nthere have been limited applications of GSA in power systems.\nRecently, [7] introduced GSA to power distribution system anal-\nyses. In [18], several SA methods including LSA, screening SA\nand GSA were compared for identifying critical parameters that\naffect the small disturbance stability of a power system.\nIn previous GSA applications, random input variables were\nassumed to be independent and statistical correlations of such\nvariables were not considered in evaluating the importance of\nvariabilities. Moreover, several GSA applications to power sys-\ntem analyses suffered from signiﬁcant computation burdens\nsince the Monte Carlo simulation (MCS) was used in global\nsensitivity (GS) calculations. Besides, GSA applications to the\nstatic voltage stability assessment of power systems with renew-\nable generation were not highlighted.\nIn this paper, power systems with a signiﬁcant penetration of\nrenewable generation are studied and an efﬁcient GSA method\nis proposed to analyze the inﬂuence of various variabilities on\nvoltage stability. First, the probabilistic load margin is con-\nsidered for power systems with renewable generation, and the\nCopula function is adopted to model the correlations among\nnon-normally distributed variables. Then, GSA for models with\ncorrelated variables is presented, and the importance index is\ndeﬁned for input variables. Moreover, the stochastic response\nsurface method (SRSM) is used to establish a surrogate model\nof the load margin in order to improve the efﬁciency of calcu-\nlating sensitivities. Finally, a procedure is designed to identify\nthe important variabilities that affect voltage stability. The pro-\nposed method is tested using the IEEE 9-bus and IEEE 118-bus\nsystems, and the results are compared with those of LSA and\nother GSA methods to validate the effectiveness of the proposed\nmethod.\n",
+  "conclusion": "VI. C ONCLUSION\nIn this paper, a GSA method is proposed to consider power\nsystem variabilities in the voltage stability evaluation. The pro-\nposed method is tested on IEEE 9-bus and IEEE 118-bus sys-\ntems, and the results are compared with those of other sensitivity\nanalysis methods. The following conclusions are drawn:\n1) Compared with LSA, the proposed GSA method is more\naccurate to consider the relative importance of variables.\n2) The results corresponding with the surrogate model of the\nload margin established by SRSM are accurate compared\nwith those of MCS with a large sample size. With the\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 16:20:58 UTC from IEEE Xplore.  Restrictions apply. \n3244 IEEE TRANSACTIONS ON POWER SYSTEMS, VOL. 33, NO. 3, MA Y 2018\nestablished surrogate model, the computation efﬁciency of\nGSA is signiﬁcantly improved.\n3) For power systems with high renewable penetration, the vari-\nabilities of renewable power are critical in determining prob-\nability distributions of load margins. Moreover, correlations\namong renewable power affect the variability of load margins.\n4) Certain variables affect power system operations signiﬁ-\ncantly. The proposed GSA method accurately identiﬁes such\nvariables and thus can be useful for an effective computation\nin stochastic power system analyses.\nIn our future work, we will combine SRSM with the sparse-\nadaptive scheme to further improve the computation efﬁciency\nof GSA in large-scale power system problems. Besides, we will\nadopt the application of the proposed GSA method in heuristic\nblack-box algorithms such as artiﬁcial neural networks to the\ncomplicated power system problems in which it is difﬁcult to\nobtain an analytical closed-form solution.\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Power_System_Voltage_Stability_Evaluation_Considering_Renewable_Energy_With_Correlated_Variabilities.pdf",
+  "file_sha256": "4bf905765ee584549d99f724d5dbf6dd08536f6f89368016716b0b386d865fae",
+  "target_ids": [
+    "P06"
+  ]
+}

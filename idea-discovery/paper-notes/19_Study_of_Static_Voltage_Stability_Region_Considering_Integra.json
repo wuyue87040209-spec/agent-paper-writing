@@ -1,0 +1,317 @@
+{
+  "schema_version": 2,
+  "filename": "Study_of_Static_Voltage_Stability_Region_Considering_Integration_of_Renewable_Energy_Through_VSC-HVDC_System.pdf",
+  "pages": 5,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/PESGM52009.2025.11225578",
+  "year_candidates": [
+    "2026",
+    "2025",
+    "2024",
+    "2021"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—With the development of large-scale renewable energy\nsources (RESs) and voltage source converter-based high voltage\ndirect current (VSC-HVDC) technologies, integrating RESs into\npower systems through VSC-HVDC systems has become\nincreasingly popular. The four-quadrant power control\ncharacteristics of VSC converters enable them to function as\nflexible reactive power sources, which help alleviate voltage\nstability issues in power systems. However, the implicit functional\nrelationship between the reactive power limits of VSC converters\nand their output active power, as well as the nonlinear DC power\nflow between VSC converters in a multi-terminal VSC-HVDC\nsystem, make the reactive power boundary of each VSC\nconverter a nonlinear dynamic variable. This adds further\ncomplexity to calculating the static voltage stability region\nboundary (SVSRB). In this paper, an approximate computation\nmodel for the SVSR of power systems integrated with large-scale\nRESs through VSC-HVDC systems is proposed, considering the\ninfluences of DC network topology, DC control strategies, control\nparameters, and other factors. The SVSR is displayed from the\nperspective of RESs, which helps intuitively evaluate the\ninfluence of the DC integration system on the SVSR.\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 568
+      },
+      "end": {
+        "page": 1,
+        "offset": 1831
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1831
+      },
+      "heading": "abstract—withthedevelopmentoflarge-scalerenewableenergy",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1263,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. I NTRODUCTION\nWith the development of power electronic technologies,\nvoltage source converter-based high voltage direct current\n(VSC-HVDC) transmission has attracted widespread attention\nfor integrating large-scale, remote renewable energy sources\n(RES). However, the increasing penetration level of renewable\nenergy introduces significant volatility and randomness from\nlarge-scale RESs, which has a non-negligible impact on the\nstatic voltage stability (SVS) of power systems and can lead to\nvoltage instability [1]. Therefore, evaluating the voltage\nstability margin (VSM) and preventing the system from\nvoltage collapse have become critical areas of focus for\nresearchers.\nA static voltage stability region (SVSR) is a subset of a\nsecurity region with respect to the active power injection\nsatisfying the voltage stability [2] And the space between the\noperating point of the system and the SVSR boundary\n(SVSRB) demonstrates the VSM with respect to a given stress\ndirection [3]. Mathematically, the SVSR is a hyper-surface in\nparameter space, providing an effective solution to stress\ndirection deviation problems caused by the fluctuating RESs .\nExisting studies on SVSR are primarily based on pure AC\nsystems [4-5], while research on SVSR considering the\nintegration of RESs with VSC-HVDC systems remains largely\nunexplored.\nThe integration of RES into power systems with HVDC\nsystems typically represents them as large power plants,\nwhose capacity is comparable to that of conventional coal-\nfired power plants. Due to the four-quadrant power control\ncapability of VSC converters, each terminal can continuously\nand independently control active and reactive power. VSC\nconverters can provide excellent reactive power regulation to\nthe AC system. The work in [6-7] depicted the reactive power\nboundaries of VSC converters, revealing the complex\ncoupling relationships between the reactive power limits of\nVSC converters and their output active power. When the DC\nsystem is a multi-terminal VSC-HVDC (MTDC) system, the\nsituation becomes more complicated. Due to the connections\nwithin the DC network, the active power of each terminal is\ncoupled with others and fluctuates with the RESs. As a result,\nthe reactive power boundary of each VSC converter on the AC\nsystem side becomes a nonlinear dynamic variable. The\nnonlinear dynamic characteristics of the converter reactive\npower limits further complicate the construction of the static\nvoltage stability region boundary (SVSRB) of the power\nsystem. Moreover, to ensure the accuracy of the SVSRB,\nmultiple AC/DC power flow calculations are required to\ndetermine the convergence of power flow and to obtain\nmultiple saddle-node bifurcation (SNB) points. This poses a\nsignificant challenge of high computational complexity when\nbuilding the SVSRB using traditional sampling-fitting\nmethods.\nIn this paper, an approximate computation model for\nSVSR of the power system integrated with large-scaled RESs\nby VSC-HVDC system is presented. Firstly, a linearized DC\npower flow model, considering different DC control strategies,\nThis project was supported by the National Natural Science Foundation\nof China (52177097), and the Scientific Research and Innovation Program of\nthe Shanghai Education Commission (2021-01-07-00-07-E00122).\n979-8-3315-0995-8/25/$31.00 ©2025 IEEE\n2025 IEEE Power & Energy Society General Meeting (PESGM) | 979-8-3315-0995-8/25/$31.00 ©2025 IEEE | DOI: 10.1109/PESGM52009.2025.11225578\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 17:19:37 UTC from IEEE Xplore.  Restrictions apply. \n2\nis developed to obtain the analytical expressions of the active\npower at the AC system side of the HVDC terminals with\nrespect to variations in RESs. Secondly, an approach\nsearching for dynamic converter reactive power constraints is\npresented, considering the parameters of the VSC converters\nand the DC power flow restrictions in the DC network. And\nthen an approximate computation model of SVSR of the\npower system is developed using the method of PV curves.\nSVSR of the AC system is depicted from the perspective of\nRESs for the first time, which helps to evaluate the\ncorresponding Voltage Stability Margin (VSM) of injecting\nRES power and ensures that the system operates within the\nSVSR, leveraging the flexible controllability of the VSC-\nHVDC system.\n",
+      "page_start": 1,
+      "page_end": 2,
+      "start": {
+        "page": 1,
+        "offset": 1945
+      },
+      "end": {
+        "page": 2,
+        "offset": 762
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 762
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 4388,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate",
+        "text:private_use_characters"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "Ⅲ. CONCLUSION\nIn this paper, an approach for developing an approximate\ncomputation model of SVSR considering the integration of\nlarge-scale RESs through a VSC-HVDC system is proposed.\nThe characteristics of the VSC-HVDC system, including the\nDC network, DC control strategy, and control parameters, are\nconsidered in the modeling of SVSR for the first time. The\nhigh precision and fast calculation speed of the method are\nalso demonstrated.\nThe proposed approach displays the SVSR from the\nperspective of RESs instead of the PCCs in the power system.\nThis allows for an intuitive evaluation of the corresponding\nVSM when injecting RES power and ensures that the\noperation of RESs remains within the SVSR, leveraging the\nflexible control capabilities of the VSC-HVDC system to their\nfullest extent.\n",
+      "page_start": 5,
+      "page_end": 5,
+      "start": {
+        "page": 5,
+        "offset": 3216
+      },
+      "end": {
+        "page": 5,
+        "offset": 4014
+      },
+      "preview_end": {
+        "page": 5,
+        "offset": 4014
+      },
+      "heading": "iii.conclusion",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 798,
+      "truncated": false,
+      "quality_flags": [
+        "text:private_use_characters"
+      ],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "conclusion:text:private_use_characters",
+    "introduction:numbered_boundary_candidate",
+    "introduction:text:private_use_characters",
+    "page:2:private_use_characters",
+    "page:3:fragmented_text",
+    "page:3:private_use_characters",
+    "page:4:private_use_characters",
+    "page:5:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 568,
+      "heading": "abstract—withthedevelopmentoflarge-scalerenewableenergy",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1831,
+      "heading": "keywords—renewableenergysource,vsc-hvdc,static",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 1945,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 762,
+      "heading": "iimodellingofsvsrforthepowersystem",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 5441,
+      "heading": "cccggg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 5453,
+      "heading": "cccggg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 5465,
+      "heading": "ccgggk",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 698,
+      "heading": "cccg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 706,
+      "heading": "cicccg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 718,
+      "heading": "cggcgcggcgcg",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 3248,
+      "heading": "ii",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 3502,
+      "heading": "iii",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 2607,
+      "heading": "c.approximatemodelofsvsr",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 4051,
+      "heading": "iiicasestudies",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 5,
+      "offset": 3216,
+      "heading": "iii.conclusion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 5,
+      "offset": 4014,
+      "heading": "references",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5570
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 5743
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 5032
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 4985
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 5949
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 4,
+      "cue": "simplified",
+      "snippet": "verter station on the RESs side\nⅢ CASE STUDIES\nThe proposed method will be validated with a four-\nterminal HVDC system, as illustrated in Fig.2 and the detailed\ndata are presented in Tables Ⅰ.\nFig.2. Simplified connection diagram of RESs and power system through a\nfour-terminal HVDC system\nTABLE Ⅰ\nPARAMETERS OF CONVERTER STATIONS IN SYSTEM\nParameters Udc\n(kV)\nkT Idcmax\n(p.u.)\nIxmax\n(p.u)\nIbmax\n(p.u)\nXeq\n(p."
+    },
+    {
+      "page": 5,
+      "cue": "limitation",
+      "snippet": "on of DC Power Transfer\nLimits for VSC Transmission,\" in 11th IET International Conference on\nAC and DC Power Transmission, Birmingham, 2015, pp. 1-8.\n[7] J. Z. Zhou and A. M. Gole, \"VSC transmission limitations imposed by\nAC system strength and AC impedance characteristics,\" in 10th IET\nInternational Conference on AC and DC Power Transmission (ACDC\n2012), Birmingham, 2012, pp. 1-6.\n[8] D. L. H. Aik and G."
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/19_Study_of_Static_Voltage_Stability_Region_Considering_Integra_pages.json",
+  "abstract": "Abstract—With the development of large-scale renewable energy\nsources (RESs) and voltage source converter-based high voltage\ndirect current (VSC-HVDC) technologies, integrating RESs into\npower systems through VSC-HVDC systems has become\nincreasingly popular. The four-quadrant power control\ncharacteristics of VSC converters enable them to function as\nflexible reactive power sources, which help alleviate voltage\nstability issues in power systems. However, the implicit functional\nrelationship between the reactive power limits of VSC converters\nand their output active power, as well as the nonlinear DC power\nflow between VSC converters in a multi-terminal VSC-HVDC\nsystem, make the reactive power boundary of each VSC\nconverter a nonlinear dynamic variable. This adds further\ncomplexity to calculating the static voltage stability region\nboundary (SVSRB). In this paper, an approximate computation\nmodel for the SVSR of power systems integrated with large-scale\nRESs through VSC-HVDC systems is proposed, considering the\ninfluences of DC network topology, DC control strategies, control\nparameters, and other factors. The SVSR is displayed from the\nperspective of RESs, which helps intuitively evaluate the\ninfluence of the DC integration system on the SVSR.\n",
+  "introduction": "I. I NTRODUCTION\nWith the development of power electronic technologies,\nvoltage source converter-based high voltage direct current\n(VSC-HVDC) transmission has attracted widespread attention\nfor integrating large-scale, remote renewable energy sources\n(RES). However, the increasing penetration level of renewable\nenergy introduces significant volatility and randomness from\nlarge-scale RESs, which has a non-negligible impact on the\nstatic voltage stability (SVS) of power systems and can lead to\nvoltage instability [1]. Therefore, evaluating the voltage\nstability margin (VSM) and preventing the system from\nvoltage collapse have become critical areas of focus for\nresearchers.\nA static voltage stability region (SVSR) is a subset of a\nsecurity region with respect to the active power injection\nsatisfying the voltage stability [2] And the space between the\noperating point of the system and the SVSR boundary\n(SVSRB) demonstrates the VSM with respect to a given stress\ndirection [3]. Mathematically, the SVSR is a hyper-surface in\nparameter space, providing an effective solution to stress\ndirection deviation problems caused by the fluctuating RESs .\nExisting studies on SVSR are primarily based on pure AC\nsystems [4-5], while research on SVSR considering the\nintegration of RESs with VSC-HVDC systems remains largely\nunexplored.\nThe integration of RES into power systems with HVDC\nsystems typically represents them as large power plants,\nwhose capacity is comparable to that of conventional coal-\nfired power plants. Due to the four-quadrant power control\ncapability of VSC converters, each terminal can continuously\nand independently control active and reactive power. VSC\nconverters can provide excellent reactive power regulation to\nthe AC system. The work in [6-7] depicted the reactive power\nboundaries of VSC converters, revealing the complex\ncoupling relationships between the reactive power limits of\nVSC converters and their output active power. When the DC\nsystem is a multi-terminal VSC-HVDC (MTDC) system, the\nsituation becomes more complicated. Due to the connections\nwithin the DC network, the active power of each terminal is\ncoupled with others and fluctuates with the RESs. As a result,\nthe reactive power boundary of each VSC converter on the AC\nsystem side becomes a nonlinear dynamic variable. The\nnonlinear dynamic characteristics of the converter reactive\npower limits further complicate the construction of the static\nvoltage stability region boundary (SVSRB) of the power\nsystem. Moreover, to ensure the accuracy of the SVSRB,\nmultiple AC/DC power flow calculations are required to\ndetermine the convergence of power flow and to obtain\nmultiple saddle-node bifurcation (SNB) points. This poses a\nsignificant challenge of high computational complexity when\nbuilding the SVSRB using traditional sampling-fitting\nmethods.\nIn this paper, an approximate computation model for\nSVSR of the power system integrated with large-scaled RESs\nby VSC-HVDC system is presented. Firstly, a linearized DC\npower flow model, considering different DC control strategies,\nThis project was supported by the National Natural Science Foundation\nof China (52177097), and the Scientific Research and Innovation Program of\nthe Shanghai Education Commission (2021-01-07-00-07-E00122).\n979-8-3315-0995-8/25/$31.00 ©2025 IEEE\n2025 IEEE Power & Energy Society General Meeting (PESGM) | 979-8-3315-0995-8/25/$31.00 ©2025 IEEE | DOI: 10.1109/PESGM52009.2025.11225578\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 17:19:37 UTC from IEEE Xplore.  Restrictions apply. \n2\nis developed to obtain the analytical expressions of the active\npower at the AC system side of the HVDC terminals with\nrespect to variations in RESs. Secondly, an approach\nsearching for dynamic converter reactive power constraints is\npresented, considering the parameters of the VSC converters\nand the DC power flow restrictions in the DC network. And\nthen an approximate computation model of SVSR of the\npower system is developed using the method of PV curves.\nSVSR of the AC system is depicted from the perspective of\nRESs for the first time, which helps to evaluate the\ncorresponding Voltage Stability Margin (VSM) of injecting\nRES power and ensures that the system operates within the\nSVSR, leveraging the flexible controllability of the VSC-\nHVDC system.\n",
+  "conclusion": "Ⅲ. CONCLUSION\nIn this paper, an approach for developing an approximate\ncomputation model of SVSR considering the integration of\nlarge-scale RESs through a VSC-HVDC system is proposed.\nThe characteristics of the VSC-HVDC system, including the\nDC network, DC control strategy, and control parameters, are\nconsidered in the modeling of SVSR for the first time. The\nhigh precision and fast calculation speed of the method are\nalso demonstrated.\nThe proposed approach displays the SVSR from the\nperspective of RESs instead of the PCCs in the power system.\nThis allows for an intuitive evaluation of the corresponding\nVSM when injecting RES power and ensures that the\noperation of RESs remains within the SVSR, leveraging the\nflexible control capabilities of the VSC-HVDC system to their\nfullest extent.\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Study_of_Static_Voltage_Stability_Region_Considering_Integration_of_Renewable_Energy_Through_VSC-HVDC_System.pdf",
+  "file_sha256": "ec02fc9c3d84cd5f67c2c5480e1ea81a939c2359b41b757e053919ba981d6390",
+  "target_ids": [
+    "P19"
+  ]
+}

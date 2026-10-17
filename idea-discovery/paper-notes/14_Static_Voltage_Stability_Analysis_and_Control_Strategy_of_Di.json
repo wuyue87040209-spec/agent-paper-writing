@@ -1,0 +1,234 @@
+{
+  "schema_version": 2,
+  "filename": "Static_Voltage_Stability_Analysis_and_Control_Strategy_of_Distribution_Network_with_High_Proportion_Distributed_PV_Generation_During_Fault.pdf",
+  "pages": 5,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/POWERCON66300.2025.11295112",
+  "year_candidates": [
+    "2026",
+    "2025"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—To address the issue of static voltage stability in \ndistribution networks with high proportion distributed pv \ngeneration(DG) during fault, this paper establish a fault \nequivalent model which consider the characteristics of PV \nequipment during low -voltage ride -through(LVRT). The \nmodel derives the constraints on the PV current phase angle \nrequired to maintain static voltage stability. Subsequently, the \nimpact of DG capacity at the point of common coupling and \nthe electrical distance between the distribution network and \nthe AC power source on the PV output current phase angle \nconstraint is quantitatively analyzed. On this basis, a current \ncontrol method is proposed: when there is a voltage stability \nrisk in the system, the active and reactive current injection \nfrom the PV is adjusted, while under no voltage stability risk, \nthe low -voltage ride -through control strategy remains \nunaffected. Finally, simulation examples based on the \nMatlab/Simulink testing platform verify the validity of the \nanalysis and the proposed control strategy. \n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 680
+      },
+      "end": {
+        "page": 1,
+        "offset": 1755
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1755
+      },
+      "heading": "abstract—toaddresstheissueofstaticvoltagestabilityin",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1075,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. INTRODUCTION \nThe sustainable development of DG contributes to \npromoting energy conservation , emission reduction , \nachieving sustainable economic and social development  [1]. \nHowever, the rapid growth of DG is accompanied by \nincreased operational risks to distribution networks and \nvoltage stability issues arise during low-voltage ride-through \n(LVRT) in certain areas.  Researching the voltage stability \nmechanism and control strategies of DG during LVRT has a \ngreat significance for improving power quality and supply \nreliability. \nCurrently, the main methods which is short circuit ratio \n[2][3], eigenvalue analysis  [4], and impedance margin  [5] is \nused to evaluate the static voltage stability of power systems. \nReference [6] considers the impact of different power \ngrowth modes on the static voltage stability of the system . \nThis academic proposes the short circuit ratio index for new \nenergy station. Reference  [7] establishes a bi -level optimal \npower flow model to determine the static voltage stability \nmargin interval , which considering the uncertainty of \nrenewable energy stations. Reference [ 8] base s on the \ncharacteristics of radial distribution systems . Then the \nacademic proposes a method a voltage stability analysis \nwhich is  suitable for distribution networks. Reference [9] \nuses the singularity of the power flow Jacobian matrix at the \nstatic voltage stability critical point, and describes this \ncharacteristic by setting the determinant of the Jacobian to \nzero [10]. \nDuring LVRT, the output current of DG is “Both \nmagnitude and phase are constrained.” Once integrated into \ndistribution networks, the traditional short circuit ratio and \nimpedance margin methods cannot fully consider the \ncharacteristics of PV devices  [12], which makes it difficult to \ndefine a clear boundary value for the corresponding results  \n[13]. The eigenvalue evaluation method requires computing \nthe eigenvalues of the Jacobian matrix, which entails \nsubstantial computational effort and low online calculation \nefficiency, making it unsuitable for online stability control \napplications [14]. Stability control based on constructing \ndynamic compensation control loops is more readily \nimplemented which apply on a large number of DG in \ndistribution networks  [15]. Current research mainly focuses \non transient stability of power angle and frequency, while \nresearch on this aspect is relatively limited [16]. \nThis paper analyzes the static voltage stability \nmechanism of DG during LVRT, and derives the range of \nDG current output angles that ensure voltage stability in the \ndistribution network. Based on this, the paper further \nexamines the influence of DG’s capacity and the electrical \ndistance ,which is between distribution network and AC \npower sources , on the range of PV output current angles. \nSubsequently, the critical current value for voltage stability is \nderived, and a current critical value calculation module is \ndesigned. When the classic LVRT strategy of DG would \notherwise lead to voltage instability, the current calculation \nmodule adjusts the DG output current dynamically. Finally, \nsimulation cases built in MATLAB/Simulink are used to \nverify the effectiveness of the proposed strategy. \n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 1840
+      },
+      "end": {
+        "page": 1,
+        "offset": 5106
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 5106
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 3266,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "V. CONCLUSION \nTo address the problem of system voltage instability \ncaused by photovoltaic current injection during faults, this \npaper proposes a static voltage stability analysis and control \nstrategy for distribution networks during faults. The \nfollowing conclusions are obtained through simulation \nverification: \n(1) The large access capacity of distributed photovoltaic \npower and the long electrical distance between the \ndistribution network and the AC power supply are the main \nfactors leading to static voltage instability during faults. \n(2) The strategy proposed in this paper calculates the \noutput Angle range of the photovoltaic current under the \ncondition of voltage stability during the fault period, and \nthen corrects the current reference value of the low -\npenetration strategy, which can effectively improve the static \nvoltage stability during the fault ride-through period. \nCompared with the classic low -voltage ride -through \ncontrol strategy, the strategy proposed in this paper has a \nsmaller computational load and does not require significant \nmodifications to the photovoltaic control structure, thus \nhaving stronger applicability. \n",
+      "page_start": 4,
+      "page_end": 4,
+      "start": {
+        "page": 4,
+        "offset": 2070
+      },
+      "end": {
+        "page": 4,
+        "offset": 3240
+      },
+      "preview_end": {
+        "page": 4,
+        "offset": 3240
+      },
+      "heading": "v.conclusion",
+      "method": "heading_match",
+      "end_reason": "backmatter",
+      "total_chars": 1170,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "introduction:numbered_boundary_candidate",
+    "page:2:private_use_characters",
+    "page:3:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 680,
+      "heading": "abstract—toaddresstheissueofstaticvoltagestabilityin",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1755,
+      "heading": "keywords—distributedpvgeneration;distributionnetworks;",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 1840,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 1,
+      "offset": 5106,
+      "heading": "ii.analysisofstaticvoltagestabilityofdg",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 136,
+      "heading": "iii.activevoltagecontrolstrategyfordgduring",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 1097,
+      "heading": "iv.simulationverification",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 4,
+      "offset": 2070,
+      "heading": "v.conclusion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "backmatter",
+      "page": 4,
+      "offset": 3240,
+      "heading": "acknowledgment",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 4,
+      "offset": 3411,
+      "heading": "references",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5926
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 4760
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 3277
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4612
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3209
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 5,
+      "cue": "limitation",
+      "snippet": "China, vol.43, no.24, pp.9470 -9481, \nDecember 2023. \n[15] H.Yang, W.Jiao, W.Huang, Y.Shi, and L.Yan, “Droop transient \ncontrol strategy considering transient power angle stability and fault \ncurrent limitation of a grid -connected inverter, ” Power System \nProtection and Control, China, vol.51, no.23, pp.59 -70, December \n2023. \n[16] Q.Ming, Y.Liu, G.Qiu, J.Liu, and J.Liu, “Online Computation of \nStatic Vo"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/14_Static_Voltage_Stability_Analysis_and_Control_Strategy_of_Di_pages.json",
+  "abstract": "Abstract—To address the issue of static voltage stability in \ndistribution networks with high proportion distributed pv \ngeneration(DG) during fault, this paper establish a fault \nequivalent model which consider the characteristics of PV \nequipment during low -voltage ride -through(LVRT). The \nmodel derives the constraints on the PV current phase angle \nrequired to maintain static voltage stability. Subsequently, the \nimpact of DG capacity at the point of common coupling and \nthe electrical distance between the distribution network and \nthe AC power source on the PV output current phase angle \nconstraint is quantitatively analyzed. On this basis, a current \ncontrol method is proposed: when there is a voltage stability \nrisk in the system, the active and reactive current injection \nfrom the PV is adjusted, while under no voltage stability risk, \nthe low -voltage ride -through control strategy remains \nunaffected. Finally, simulation examples based on the \nMatlab/Simulink testing platform verify the validity of the \nanalysis and the proposed control strategy. \n",
+  "introduction": "I. INTRODUCTION \nThe sustainable development of DG contributes to \npromoting energy conservation , emission reduction , \nachieving sustainable economic and social development  [1]. \nHowever, the rapid growth of DG is accompanied by \nincreased operational risks to distribution networks and \nvoltage stability issues arise during low-voltage ride-through \n(LVRT) in certain areas.  Researching the voltage stability \nmechanism and control strategies of DG during LVRT has a \ngreat significance for improving power quality and supply \nreliability. \nCurrently, the main methods which is short circuit ratio \n[2][3], eigenvalue analysis  [4], and impedance margin  [5] is \nused to evaluate the static voltage stability of power systems. \nReference [6] considers the impact of different power \ngrowth modes on the static voltage stability of the system . \nThis academic proposes the short circuit ratio index for new \nenergy station. Reference  [7] establishes a bi -level optimal \npower flow model to determine the static voltage stability \nmargin interval , which considering the uncertainty of \nrenewable energy stations. Reference [ 8] base s on the \ncharacteristics of radial distribution systems . Then the \nacademic proposes a method a voltage stability analysis \nwhich is  suitable for distribution networks. Reference [9] \nuses the singularity of the power flow Jacobian matrix at the \nstatic voltage stability critical point, and describes this \ncharacteristic by setting the determinant of the Jacobian to \nzero [10]. \nDuring LVRT, the output current of DG is “Both \nmagnitude and phase are constrained.” Once integrated into \ndistribution networks, the traditional short circuit ratio and \nimpedance margin methods cannot fully consider the \ncharacteristics of PV devices  [12], which makes it difficult to \ndefine a clear boundary value for the corresponding results  \n[13]. The eigenvalue evaluation method requires computing \nthe eigenvalues of the Jacobian matrix, which entails \nsubstantial computational effort and low online calculation \nefficiency, making it unsuitable for online stability control \napplications [14]. Stability control based on constructing \ndynamic compensation control loops is more readily \nimplemented which apply on a large number of DG in \ndistribution networks  [15]. Current research mainly focuses \non transient stability of power angle and frequency, while \nresearch on this aspect is relatively limited [16]. \nThis paper analyzes the static voltage stability \nmechanism of DG during LVRT, and derives the range of \nDG current output angles that ensure voltage stability in the \ndistribution network. Based on this, the paper further \nexamines the influence of DG’s capacity and the electrical \ndistance ,which is between distribution network and AC \npower sources , on the range of PV output current angles. \nSubsequently, the critical current value for voltage stability is \nderived, and a current critical value calculation module is \ndesigned. When the classic LVRT strategy of DG would \notherwise lead to voltage instability, the current calculation \nmodule adjusts the DG output current dynamically. Finally, \nsimulation cases built in MATLAB/Simulink are used to \nverify the effectiveness of the proposed strategy. \n",
+  "conclusion": "V. CONCLUSION \nTo address the problem of system voltage instability \ncaused by photovoltaic current injection during faults, this \npaper proposes a static voltage stability analysis and control \nstrategy for distribution networks during faults. The \nfollowing conclusions are obtained through simulation \nverification: \n(1) The large access capacity of distributed photovoltaic \npower and the long electrical distance between the \ndistribution network and the AC power supply are the main \nfactors leading to static voltage instability during faults. \n(2) The strategy proposed in this paper calculates the \noutput Angle range of the photovoltaic current under the \ncondition of voltage stability during the fault period, and \nthen corrects the current reference value of the low -\npenetration strategy, which can effectively improve the static \nvoltage stability during the fault ride-through period. \nCompared with the classic low -voltage ride -through \ncontrol strategy, the strategy proposed in this paper has a \nsmaller computational load and does not require significant \nmodifications to the photovoltaic control structure, thus \nhaving stronger applicability. \n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Static_Voltage_Stability_Analysis_and_Control_Strategy_of_Distribution_Network_with_High_Proportion_Distributed_PV_Generation_During_Fault.pdf",
+  "file_sha256": "32a160a8f6631145a73455fb0636e2cc8ec6745386e129edcfc2c3b00771189b",
+  "target_ids": [
+    "P13"
+  ]
+}

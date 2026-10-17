@@ -1,0 +1,240 @@
+{
+  "schema_version": 2,
+  "filename": "An_Extended_Continuation_Power_Flow_Method_for_Static_Voltage_Stability_Assessment_of_Renewable_Power_Generation-Penetrated_Power_Systems.pdf",
+  "pages": 5,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/TCSII.2022.3209335",
+  "year_candidates": [
+    "2026",
+    "2024",
+    "2022"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—The continuation power ﬂow method (CPF) has been\nextensively used for obtaining the static voltage stability limit of\npower systems, which provides important guidance for the sta-\nble operation. However, the conventional CPF cannot account for\nthe dynamic characteristics of renewable power generation, thus\nresulting in prominent errors for renewable power generation-\npenetrated power systems. In this brief, we investigate the static\nvoltage stability assessment (SVSA) of power systems with high\npenetration of renewable power generation (RPG) . An extended\nJacobian matrix is ﬁrstly established by considering the dynamic\ncharacteristics of synchronous generators (SG) and renewable\npower generation in constant AC voltage control mode (CVRPG).\nBased on the extended Jacobian matrix, an extended CPF method\nis proposed for SVSA of the power system and a reactive power\nsensitivity index is proposed to indicate the voltage support\ncapability of nodes. Simulation results show that the proposed\nextended CPF method has higher accuracy than conventional\nCPF in assessing the static voltage stability of power systems\nwith high penetration of RPG. It is also revealed that the voltage\nsupport capability of each node rises as the proportion coefﬁcient\nis increases.\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 380
+      },
+      "end": {
+        "page": 1,
+        "offset": 1657
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 1657
+      },
+      "heading": "abstract—thecontinuationpowerflowmethod(cpf)hasbeen",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1277,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. I NTRODUCTION\nS\nTATIC voltage stability characterizes the ability of a\npower system to retain stable voltages under small dis-\nturbances [1], [2]. Assessing the static voltage stability is\ncrucially important for power system operation. Recently, the\nincreasing integration of renewable power generation (RPG)\nbrings great challenges to the static voltage stability assess-\nment (SVSA), due to the distinct dynamic characteristics of\nRPG compared with conventional power plants.\nA set of previous studies investigated the inﬂuence of\nRPG on the power system’s static voltage stability. A voltage\nManuscript received 14 July 2022; revised 5 September 2022; accepted 14\nSeptember 2022. Date of publication 26 September 2022; date of current ver-\nsion 7 February 2024. This work was supported by the State Grid Corporation\nof China under Technology Project under Grant 5100-202255327A-2-0-YS:\nResearch on Quantiﬁcation and Control of V oltage Construction Capacity\nof Power Systems with High Proportion Renewable Energy. This brief\nwas recommended by Associate Editor X. Zhang. (Corresponding author:\nShicong Ma.)\nThe authors are with the Power System Department, China\nElectric Power Research Institute, Beijing 100192, China (e-mail:\nmashicong@epri.sgcc.com.cn).\nColor versions of one or more ﬁgures in this article are available at\nhttps://doi.org/10.1109/TCSII.2022.3209335.\nDigital Object Identiﬁer 10.1109/TCSII.2022.3209335\nstability margin index was proposed to reveal the relation-\nship between control parameters and the stability margin in\nreal-time [3]. This index can reﬂect the inﬂuence of different\npenetration levels of RPG on the static voltage stability limit of\nthe power system but with lower accuracy. The critical short-\ncircuit ratio were proposed in the literature to assess the static\nvoltage stability of the power system with integration of high\nvoltage direct current transmission (HVDC) [4], [5], [6], [7].\nA modiﬁed short-circuit ratio was further proposed [8] by tak-\ning into account the impact of RPG. However, due to the\nneed for simultaneous solution based on detailed model, it\nis too complicated to be applied to large-scale power systems.\nNodal voltage sensitivity that measures the weakness of a node\nwas adapted in [9] to study the impact of RPG on the power\nsystem’s voltage stability. But the RPG nodes are treated as\nconstant power sources without considering their ability to\nregulate the AC voltage. Data-driven methods based on AI\ntechniques were proposed in [10], [11], which have the poten-\ntial for fast SVSA of power systems containing large-scale\nRPG. But they require a large amount of online data and\nthe reliability of the results cannot be secured. Time-domain\nsimulations were used in [12] for assessing the static voltage\nstability of power systems penetrated by RPG. This method\nensures high accuracy of the analysis results, but takes huge\ncomputational costs.\nThe continuation power ﬂow method (CPF) has also been\nmost commonly used for SVSA of power systems, due to its\nhigh analysis accuracy and applicability to large-scale power\nsystems. CPF obtains a continuum of power ﬂow solutions\nfrom the intial power to the static voltage stability limit power\nof power systems, and the criterion of reaching the limit is\nwhether the minimum eigenvalue of Jacobian matrix is zero.\nHowever, its applicability declines with the continuous integra-\ntion of RPG. In the conventional CPF, synchronous generators\n(SG) are generally assumed with a constant voltage. This\ntreatment introduces insigniﬁcant errors because SG has a\nnearly constant internal electromotive force (EMF) and rel-\natively small transient reactance. But when applied to RPG,\nthis treatment poses prominent errors due to the absence of\nconstant internal EMF [13], [14], [15].\nIn order to achieve fast and accurate SVSA for power\nsystems with high penetration of RPG, it is necessary to\nimprove the conventional CPF method by considering the\ndynamic characteristics of RPG. In addition, a voltage support\n1549-7747 c⃝ 2022 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.\nSee https://www.ieee.org/publications/rights/index.html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 01:43:20 UTC from IEEE Xplore.  Restrictions apply. \nW ANGet al.: EXTENDED CPF METHOD FOR SVSA OF RPG-PENETRATED POWER SYSTEMS 893\nability index of nodes applicable to RPG is also conducive\nto the rapid SVSA, due to that the reactive power sensitiv-\nity can reﬂect the static voltage stability level [16].T h em a i n\ncontributions of this brief are summarized as follows:\n1) An extended Jacobian matrix is established that considers\nthe dynamic characteristics of SG and CVRPG;\n2) An extended CPF method based on the extended Jacobian\nmatrix was proposed to realize the accurate SVSA of\npower systems with high penetration of RPG ;\n3) A reactive power sensitivity index is proposed to indi-\ncate the capability of nodes in supporting static voltage\nstability of the power system.\nThe rest of this brief is organized as follows: In Section II,\nthe power ﬂow model is introduced where the extended\nJacobian matrix is established by considering the dynamics\nof SG and CVRPG nodes. In Section III, the extended CPF\nmethod is proposed for SVSA of power systems with high\npenetration of RPG and reactive power sensitivity index is\nproposed to measure the voltage support capability of nodes.\nIn Section IV, simulations are performed to verify the accuracy\nof the proposed SVSA method and to examine the inﬂuence\nof control parameters.\n",
+      "page_start": 1,
+      "page_end": 2,
+      "start": {
+        "page": 1,
+        "offset": 1773
+      },
+      "end": {
+        "page": 2,
+        "offset": 1277
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 1277
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 5651,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate",
+        "text:fragmented_text"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "V. C ONCLUSION\nIn this brief, we propose an extended CPF method for\nSVSA of RPG-penetrated power systems, where an extended\nJacobian matrix is established by considering the dynamics of\nSG and CVRPG nodes. Simulation results demonstrate that\nthe proposed method has higher accuracy than conventional\nCPF and that the control parameters of CVRPG affect on the\nvoltage stability of the system.\nFurthermore, the reactive power sensitivity index is\nproposed to indicate the voltage support capability of nodes.\nThe work can be used for ﬁguring out the good operation con-\nditions of power systems and optimizing control parameters of\nCVRPG, and will be further studied in our future work.\n",
+      "page_start": 5,
+      "page_end": 5,
+      "start": {
+        "page": 5,
+        "offset": 1017
+      },
+      "end": {
+        "page": 5,
+        "offset": 1702
+      },
+      "preview_end": {
+        "page": 5,
+        "offset": 1702
+      },
+      "heading": "v.conclusion",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 685,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "introduction:numbered_boundary_candidate",
+    "introduction:text:fragmented_text",
+    "page:2:fragmented_text"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 380,
+      "heading": "abstract—thecontinuationpowerflowmethod(cpf)hasbeen",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 1657,
+      "heading": "indexterms—continuationpowerflow,staticvoltagestability,",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 1773,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 1277,
+      "heading": "ii.p",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 2923,
+      "heading": "iii.staticvoltagestabilityassessment",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 4,
+      "offset": 2250,
+      "heading": "iv.simulationverification",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 5,
+      "offset": 1017,
+      "heading": "v.conclusion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 5,
+      "offset": 1702,
+      "heading": "references",
+      "level": 0,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 6146
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [
+        "fragmented_text"
+      ],
+      "chars": 5214
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4744
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4318
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5831
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 2,
+      "cue": "assumption",
+      "snippet": "age of the generator node and the derivatives of P\nGi\nand QGi with respect to Ui and θi in Hii and Nii. In order to\nmake the analysis more accurate for power systems with high\npenetration of RPG, the assumption needs to be modiﬁed by\nconsidering nodal dynamics.\n1) Dynamics of SG Nodes: For SGs, the assumption that the\ninternal EMF E\n′ is constant is more accurate, under which the\nSG node is described as a P"
+    },
+    {
+      "page": 3,
+      "cue": "assumption",
+      "snippet": "matrix elements. The typical control diagram of RPG\nthat participates in voltage regulation is shown in Fig. 1.\nSince this brief is concerned with the timescale at tens of\nmilliseconds, the following assumptions are made to ensure\nhigh accuracy without overcomplicating the analysis:\n1) Ignore the dynamics of the phase locking loop of the\nRPG, that is the phase angle used by the controller is\nthe exact value"
+    },
+    {
+      "page": 3,
+      "cue": "assumption",
+      "snippet": "integrator is much smaller than that of the\nproportional tuning. So output of the controller is the\nsum of the proportional tuning and the historical value\nof the integrator i\nq0i.\nBased on the above assumptions, the active and reactive\npower output by CVRPG can be deduced as\n⎧\n⎨\n⎩\nPGi = Uiidi\nQGi = Uiiqi\niqi = iq0i + KPi\n(\nUreﬁ − Ui\n) (10)\nwhere KPi and Ureﬁ are the proportional coefﬁcient and voltage\nrefe"
+    },
+    {
+      "page": 5,
+      "cue": "future work",
+      "snippet": "ltage support capability of nodes.\nThe work can be used for ﬁguring out the good operation con-\nditions of power systems and optimizing control parameters of\nCVRPG, and will be further studied in our future work.\nR\nEFERENCES\n[1] J. M. Ramirez and J. L. Murillo-Perez, “Steady-state voltage stability\nwith statcom,” IEEE Trans. Power Syst., vol. 21, no. 3, pp. 1453–1454,\nAug. 2006.\n[2] O. D. Montoya, W. Gil-Gon"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/03_An_Extended_Continuation_Power_Flow_Method_for_Static_Voltag_pages.json",
+  "abstract": "Abstract—The continuation power ﬂow method (CPF) has been\nextensively used for obtaining the static voltage stability limit of\npower systems, which provides important guidance for the sta-\nble operation. However, the conventional CPF cannot account for\nthe dynamic characteristics of renewable power generation, thus\nresulting in prominent errors for renewable power generation-\npenetrated power systems. In this brief, we investigate the static\nvoltage stability assessment (SVSA) of power systems with high\npenetration of renewable power generation (RPG) . An extended\nJacobian matrix is ﬁrstly established by considering the dynamic\ncharacteristics of synchronous generators (SG) and renewable\npower generation in constant AC voltage control mode (CVRPG).\nBased on the extended Jacobian matrix, an extended CPF method\nis proposed for SVSA of the power system and a reactive power\nsensitivity index is proposed to indicate the voltage support\ncapability of nodes. Simulation results show that the proposed\nextended CPF method has higher accuracy than conventional\nCPF in assessing the static voltage stability of power systems\nwith high penetration of RPG. It is also revealed that the voltage\nsupport capability of each node rises as the proportion coefﬁcient\nis increases.\n",
+  "introduction": "I. I NTRODUCTION\nS\nTATIC voltage stability characterizes the ability of a\npower system to retain stable voltages under small dis-\nturbances [1], [2]. Assessing the static voltage stability is\ncrucially important for power system operation. Recently, the\nincreasing integration of renewable power generation (RPG)\nbrings great challenges to the static voltage stability assess-\nment (SVSA), due to the distinct dynamic characteristics of\nRPG compared with conventional power plants.\nA set of previous studies investigated the inﬂuence of\nRPG on the power system’s static voltage stability. A voltage\nManuscript received 14 July 2022; revised 5 September 2022; accepted 14\nSeptember 2022. Date of publication 26 September 2022; date of current ver-\nsion 7 February 2024. This work was supported by the State Grid Corporation\nof China under Technology Project under Grant 5100-202255327A-2-0-YS:\nResearch on Quantiﬁcation and Control of V oltage Construction Capacity\nof Power Systems with High Proportion Renewable Energy. This brief\nwas recommended by Associate Editor X. Zhang. (Corresponding author:\nShicong Ma.)\nThe authors are with the Power System Department, China\nElectric Power Research Institute, Beijing 100192, China (e-mail:\nmashicong@epri.sgcc.com.cn).\nColor versions of one or more ﬁgures in this article are available at\nhttps://doi.org/10.1109/TCSII.2022.3209335.\nDigital Object Identiﬁer 10.1109/TCSII.2022.3209335\nstability margin index was proposed to reveal the relation-\nship between control parameters and the stability margin in\nreal-time [3]. This index can reﬂect the inﬂuence of different\npenetration levels of RPG on the static voltage stability limit of\nthe power system but with lower accuracy. The critical short-\ncircuit ratio were proposed in the literature to assess the static\nvoltage stability of the power system with integration of high\nvoltage direct current transmission (HVDC) [4], [5], [6], [7].\nA modiﬁed short-circuit ratio was further proposed [8] by tak-\ning into account the impact of RPG. However, due to the\nneed for simultaneous solution based on detailed model, it\nis too complicated to be applied to large-scale power systems.\nNodal voltage sensitivity that measures the weakness of a node\nwas adapted in [9] to study the impact of RPG on the power\nsystem’s voltage stability. But the RPG nodes are treated as\nconstant power sources without considering their ability to\nregulate the AC voltage. Data-driven methods based on AI\ntechniques were proposed in [10], [11], which have the poten-\ntial for fast SVSA of power systems containing large-scale\nRPG. But they require a large amount of online data and\nthe reliability of the results cannot be secured. Time-domain\nsimulations were used in [12] for assessing the static voltage\nstability of power systems penetrated by RPG. This method\nensures high accuracy of the analysis results, but takes huge\ncomputational costs.\nThe continuation power ﬂow method (CPF) has also been\nmost commonly used for SVSA of power systems, due to its\nhigh analysis accuracy and applicability to large-scale power\nsystems. CPF obtains a continuum of power ﬂow solutions\nfrom the intial power to the static voltage stability limit power\nof power systems, and the criterion of reaching the limit is\nwhether the minimum eigenvalue of Jacobian matrix is zero.\nHowever, its applicability declines with the continuous integra-\ntion of RPG. In the conventional CPF, synchronous generators\n(SG) are generally assumed with a constant voltage. This\ntreatment introduces insigniﬁcant errors because SG has a\nnearly constant internal electromotive force (EMF) and rel-\natively small transient reactance. But when applied to RPG,\nthis treatment poses prominent errors due to the absence of\nconstant internal EMF [13], [14], [15].\nIn order to achieve fast and accurate SVSA for power\nsystems with high penetration of RPG, it is necessary to\nimprove the conventional CPF method by considering the\ndynamic characteristics of RPG. In addition, a voltage support\n1549-7747 c⃝ 2022 IEEE. Personal use is permitted, but republication/redistribution requires IEEE permission.\nSee https://www.ieee.org/publications/rights/index.html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 01:43:20 UTC from IEEE Xplore.  Restrictions apply. \nW ANGet al.: EXTENDED CPF METHOD FOR SVSA OF RPG-PENETRATED POWER SYSTEMS 893\nability index of nodes applicable to RPG is also conducive\nto the rapid SVSA, due to that the reactive power sensitiv-\nity can reﬂect the static voltage stability level [16].T h em a i n\ncontributions of this brief are summarized as follows:\n1) An extended Jacobian matrix is established that considers\nthe dynamic characteristics of SG and CVRPG;\n2) An extended CPF method based on the extended Jacobian\nmatrix was proposed to realize the accurate SVSA of\npower systems with high penetration of RPG ;\n3) A reactive power sensitivity index is proposed to indi-\ncate the capability of nodes in supporting static voltage\nstability of the power system.\nThe rest of this brief is organized as follows: In Section II,\nthe power ﬂow model is introduced where the extended\nJacobian matrix is established by considering the dynamics\nof SG and CVRPG nodes. In Section III, the extended CPF\nmethod is proposed for SVSA of power systems with high\npenetration of RPG and reactive power sensitivity index is\nproposed to measure the voltage support capability of nodes.\nIn Section IV, simulations are performed to verify the accuracy\nof the proposed SVSA method and to examine the inﬂuence\nof control parameters.\n",
+  "conclusion": "V. C ONCLUSION\nIn this brief, we propose an extended CPF method for\nSVSA of RPG-penetrated power systems, where an extended\nJacobian matrix is established by considering the dynamics of\nSG and CVRPG nodes. Simulation results demonstrate that\nthe proposed method has higher accuracy than conventional\nCPF and that the control parameters of CVRPG affect on the\nvoltage stability of the system.\nFurthermore, the reactive power sensitivity index is\nproposed to indicate the voltage support capability of nodes.\nThe work can be used for ﬁguring out the good operation con-\nditions of power systems and optimizing control parameters of\nCVRPG, and will be further studied in our future work.\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/An_Extended_Continuation_Power_Flow_Method_for_Static_Voltage_Stability_Assessment_of_Renewable_Power_Generation-Penetrated_Power_Systems.pdf",
+  "file_sha256": "f66781a013bb1290ed622a2cca6455d6026febd54f92a14c906c224aada05ac2",
+  "target_ids": [
+    "P01"
+  ]
+}

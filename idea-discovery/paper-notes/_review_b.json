@@ -1,0 +1,1294 @@
+{
+  "schema_version": 1,
+  "review_scope": "P13–P23；逐页文本核验，不声称全文已读；当前最终抽取产物hash与所有引文偏移复核。",
+  "papers": [
+    {
+      "target_id": "P13",
+      "title": "Static Voltage Stability Analysis and Control Strategy of Distribution Network with High Proportion Distributed PV Generation During Fault",
+      "identity_verified": true,
+      "identity_basis": "首页题名（含中英文标题）及DOI与目标记录一致；空格/换行仅用于身份归一比较。",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Static_Voltage_Stability_Analysis_and_Control_Strategy_of_Distribution_Network_with_High_Proportion_Distributed_PV_Generation_During_Fault.pdf",
+      "pdf_sha256": "32a160a8f6631145a73455fb0636e2cc8ec6745386e129edcfc2c3b00771189b",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/14_Static_Voltage_Stability_Analysis_and_Control_Strategy_of_Di_pages.json",
+      "pages_sha256": "f2097b0bff418496738094ff9daba6bdb6e8be44c679db6598d07711bcdef31f",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "/root/review_b (independent agent)",
+      "read_ranges": [
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 5926,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 4760,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 3,
+          "start_offset": 0,
+          "end_offset": 3277,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 4,
+          "start_offset": 0,
+          "end_offset": 4612,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 1,
+          "start_offset": 5491,
+          "end_offset": 5607,
+          "quote": "Assuming that a symmetrical ground fault occurs on the 10 \nkV line between grid -connection points 1 and 2, with R f",
+          "interpretation": "模型针对主网侧DG及对称接地故障。",
+          "kind": "model_assumption"
+        },
+        {
+          "page": 4,
+          "start_offset": 2085,
+          "end_offset": 3240,
+          "quote": "To address the problem of system voltage instability \ncaused by photovoltaic current injection during faults, this \npaper proposes a static voltage stability analysis and control \nstrategy for distribution networks during faults. The \nfollowing conclusions are obtained through simulation \nverification: \n(1) The large access capacity of distributed photovoltaic \npower and the long electrical distance between the \ndistribution network and the AC power supply are the main \nfactors leading to static voltage instability during faults. \n(2) The strategy proposed in this paper calculates the \noutput Angle range of the photovoltaic current under the \ncondition of voltage stability during the fault period, and \nthen corrects the current reference value of the low -\npenetration strategy, which can effectively improve the static \nvoltage stability during the fault ride-through period. \nCompared with the classic low -voltage ride -through \ncontrol strategy, the strategy proposed in this paper has a \nsmaller computational load and does not require significant \nmodifications to the photovoltaic control structure, thus \nhaving stronger applicability. \n",
+          "interpretation": "故障期间按电流角范围修正LVRT参考值；已读范围未展示独立多有功组合空间与进出序列。",
+          "kind": "scope"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "machine_start": {
+            "page": 1,
+            "offset": 680
+          },
+          "machine_end": {
+            "page": 1,
+            "offset": 1755
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "introduction": {
+          "machine_start": {
+            "page": 1,
+            "offset": 1840
+          },
+          "machine_end": {
+            "page": 1,
+            "offset": 5106
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "conclusion": {
+          "machine_start": {
+            "page": 4,
+            "offset": 2070
+          },
+          "machine_end": {
+            "page": 4,
+            "offset": 3240
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        }
+      },
+      "issues": [
+        "数学公式存在编码/断行噪声，未据此验证公式推导或复制公式；所引用散文已逐字定位。"
+      ],
+      "resolution": "限制到可读散文及明确模型/验证范围；不把公式提取噪声当成全文不可读。",
+      "unresolved": [],
+      "status": "已核验该范围",
+      "matrix": {
+        "method_constraints_scenarios_validation": "故障等值、电流相角约束；容量/电气距离；MATLAB/Simulink",
+        "author_limitations_and_finite_inference": "未见明确自述局限；有限推断为已读建模与实验聚焦故障期间主网侧DG。",
+        "route": "LVRT/限流与故障稳态",
+        "evidence_pages": [
+          1,
+          4
+        ],
+        "citation": "[P13 · Static Voltage Stability Analysis and Control Strategy of Distribution Network with High Proportion Distributed PV Generation During Fault](</Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Static_Voltage_Stability_Analysis_and_Control_Strategy_of_Distribution_Network_with_High_Proportion_Distributed_PV_Generation_During_Fault.pdf>)，PDF pp. 1,4"
+      }
+    },
+    {
+      "target_id": "P14",
+      "title": "Static Voltage Stability Criterion of Renewable Energy Sources based on Power Flow Analysis",
+      "identity_verified": true,
+      "identity_basis": "首页题名（含中英文标题）及DOI与目标记录一致；空格/换行仅用于身份归一比较。",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Static_Voltage_Stability_Criterion_of_Renewable_Energy_Sources_based_on_Power_Flow_Analysis.pdf",
+      "pdf_sha256": "7e0bb1ad90fd0cc718b88d182455fe730739e49609bddf41cc2be1c28074f3df",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/18_Static_Voltage_Stability_Criterion_of_Renewable_Energy_Sourc_pages.json",
+      "pages_sha256": "b99f5a2b89cbf5d9f181e89cf42108b91b399357e57f443edce0e94f6e291ddf",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "/root/review_b (independent agent)",
+      "read_ranges": [
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 5118,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 3407,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 4,
+          "start_offset": 0,
+          "end_offset": 3944,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 5,
+          "start_offset": 0,
+          "end_offset": 5517,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 2,
+          "start_offset": 2934,
+          "end_offset": 3241,
+          "quote": "To reduce the dimensionality of complex power grid models\nand ensure that this method can adapt to new energy grid-\nconnected scenarios with different topological structures, this\nstudy simplifies the external power grid into a single-machine\ninfinite bus system, where the voltage amplitude is set to E and",
+          "interpretation": "将外网等效为单机无穷大。",
+          "kind": "model_assumption"
+        },
+        {
+          "page": 5,
+          "start_offset": 1852,
+          "end_offset": 2990,
+          "quote": "Considering the scenario where multiple renewable energy\nstations are connected to the grid, it is assumed that the\nparameters of VSC1 remain as presented in Table 1. VSC2 is\nconnected in parallel with VSC1, and all parameters of VSC2\nare identical to those of VSC1, except that its active power\nreference ( Pref) is increased to 1. This setup is intended to\nsimulate a fault occurring in VSC1 under the condition of two\nparallel-connected VSC stations. The objective of this study is\nto verify whether the stability criterion based on Criterion ∆\nremains applicable, and the simulation results are presented in\nFig. 7.\nIn comparison between Fig. 6 and Fig. 8, the values of both\nCriterion ∆ and terminal voltage are nearly identical between\nthe two scenarios. This indicates that under the condition of two\nparallel-connected VSC stations, when a fault occurs in one of\nthe VSC stations, the proposed stability criterion remains\naccurate. Therefore, this criterion is applicable to multi-VSC\nparallel operation scenarios.\n0 2 4 6 8 10\n0\n1\n2\n3\n4\n5\n6\nTime(s)\nSignal Value\nE\nV\nP\nΔ\nFig. 8. P, V, E, ∆ graph of the dual-VSC parallel system..\n",
+          "interpretation": "双VSC试验只改变一个站有功设定，不能外推至任意多维控制事件边界。",
+          "kind": "scope"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "machine_start": {
+            "page": 1,
+            "offset": 528
+          },
+          "machine_end": {
+            "page": 1,
+            "offset": 1503
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "introduction": {
+          "machine_start": {
+            "page": 1,
+            "offset": 1599
+          },
+          "machine_end": {
+            "page": 1,
+            "offset": 3448
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "conclusion": {
+          "machine_start": {
+            "page": 5,
+            "offset": 2990
+          },
+          "machine_end": {
+            "page": 5,
+            "offset": 3634
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        }
+      },
+      "issues": [
+        "数学公式存在编码/断行噪声，未据此验证公式推导或复制公式；所引用散文已逐字定位。"
+      ],
+      "resolution": "限制到可读散文及明确模型/验证范围；不把公式提取噪声当成全文不可读。",
+      "unresolved": [],
+      "status": "已核验该范围",
+      "matrix": {
+        "method_constraints_scenarios_validation": "潮流Jacobian奇异判据；单机及双VSC；Simulink",
+        "author_limitations_and_finite_inference": "未見明确自述局限；单机无穷大等值及有限双站例子限定证据外推。",
+        "route": "CPF/解析判据",
+        "evidence_pages": [
+          2,
+          5
+        ],
+        "citation": "[P14 · Static Voltage Stability Criterion of Renewable Energy Sources based on Power Flow Analysis](</Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Static_Voltage_Stability_Criterion_of_Renewable_Energy_Sources_based_on_Power_Flow_Analysis.pdf>)，PDF pp. 2,5"
+      }
+    },
+    {
+      "target_id": "P15",
+      "title": "Jacobian-Free Krylov-Arnoldi Framework for Static Voltage Stability Estimation of Power Systems With 100% Renewable Energy",
+      "identity_verified": true,
+      "identity_basis": "首页题名（含中英文标题）及DOI与目标记录一致；空格/换行仅用于身份归一比较。",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Jacobian-Free_Krylov-Arnoldi_Framework_for_Static_Voltage_Stability_Estimation_of_Power_Systems_With_100_Renewable_Energy.pdf",
+      "pdf_sha256": "0f91fb9e8df874021e1bddbe4fabb74f5ff5ed7dc988e95d06114a5f0ae09a28",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/05_Jacobian_Free_Krylov_Arnoldi_Framework_for_Static_Voltage_St_pages.json",
+      "pages_sha256": "8106608fa49932290bc820f5177742dbaeaa39ae3e63685bac4f802f313fd869",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "/root/review_b (independent agent)",
+      "read_ranges": [
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 6400,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 5333,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 3,
+          "start_offset": 0,
+          "end_offset": 4749,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 11,
+          "start_offset": 0,
+          "end_offset": 4568,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 12,
+          "start_offset": 0,
+          "end_offset": 5219,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 3,
+          "start_offset": 1052,
+          "end_offset": 2107,
+          "quote": "If the capacity of RES is not\nlarge enough, (set to 2.0 pu in this case), then the RES will\nswitch before the operating point reaches the saddle point. In\nFig. 2, when the operating point reaches the mode switching\npoint, as the load impedance decreases, the operating point\nwill shift from the PV curve in constant voltage control mode\nto the PV curve in constant current control mode. If the load\nimpedance continues to decrease, the system operating point\nwill move toward the origin along the PV curve in constant\ncurrent control mode. In this case, the load limit of the system\nis not at the saddle point, but at the mode switching point. If\nthe capacity of the RES is large enough (set to 5.0 pu in this\ncase), then the PV curve in constant current control mode will\nbe below the saddle point. As the load impedance decreases,\nthe operating point of the system will ﬁrst reach the saddle\npoint, and then reach the control mode switching point after\ncrossing the saddle point. In this case, the load limit of the\nsystem is still at the saddle point.\n",
+          "interpretation": "限流切换可能先于鞍点决定负荷极限，不可将所有极限叫SNB。",
+          "kind": "scope"
+        },
+        {
+          "page": 3,
+          "start_offset": 3581,
+          "end_offset": 4456,
+          "quote": "To ensure the form invariance of the system model, a\ncontinuous S-type function is used to ﬁt the e ﬀect of the\nlimiting link:\nIresi = Ilim i\n2\n66664\n2\n1 + exp\n \nkP\nj=1\n−α j\n\u0010\nIrefi\nIlim i\n\u00112 j−1\n!− 1\n3\n77775\n(8)\nwhere, Ilim i denotes the current limit of RES i, Iresi denotes the\noutput current magnitude of RES i,α j denotes the coeﬃcient,\nIrefi denotes the reference of the output current of RES i.\nAccording to (8), the highest power of the natural constant\nin the denominator is 2 k-1, and the ﬁtting e ﬀect will be\ndiﬀerent when choosing di ﬀerent k. Fig. 3 shows the ﬁtting\nresults with di ﬀerent powers. It can be seen from Fig. 3 that\nwhen k reaches 3, the error between the S-type function and\nthe limiting link can be almost ignored. Therefore, the S-type\nfunction can simultaneously guarantee the calculation accuracy\nand the form invariance of the system model.\n",
+          "interpretation": "使用连续S型函数拟合限流，k=3误差可忽略是文内经验描述；不能当作LVRT非光滑事件完全等价证明。",
+          "kind": "method_scope"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "machine_start": {
+            "page": 1,
+            "offset": 342
+          },
+          "machine_end": {
+            "page": 1,
+            "offset": 2145
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "introduction": {
+          "machine_start": {
+            "page": 1,
+            "offset": 2308
+          },
+          "machine_end": {
+            "page": 2,
+            "offset": 3534
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "conclusion": {
+          "machine_start": {
+            "page": 11,
+            "offset": 3569
+          },
+          "machine_end": {
+            "page": 12,
+            "offset": 150
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        }
+      },
+      "issues": [
+        "数学公式存在编码/断行噪声，未据此验证公式推导或复制公式；所引用散文已逐字定位。"
+      ],
+      "resolution": "限制到可读散文及明确模型/验证范围；不把公式提取噪声当成全文不可读。",
+      "unresolved": [],
+      "status": "已核验该范围",
+      "matrix": {
+        "method_constraints_scenarios_validation": "限流与GFM/GFL/PQ/PV；负荷增长；改进IEEE39、118",
+        "author_limitations_and_finite_inference": "已读范围未见LVRT进入退出滞回事件的认证；不意味着全篇或领域均没有。",
+        "route": "CPF扩展/控制模式切换",
+        "evidence_pages": [
+          3
+        ],
+        "citation": "[P15 · Jacobian-Free Krylov-Arnoldi Framework for Static Voltage Stability Estimation of Power Systems With 100% Renewable Energy](</Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Jacobian-Free_Krylov-Arnoldi_Framework_for_Static_Voltage_Stability_Estimation_of_Power_Systems_With_100_Renewable_Energy.pdf>)，PDF pp. 3"
+      }
+    },
+    {
+      "target_id": "P16",
+      "title": "Static Voltage Stability Analysis of Large Scale Renewable Energy Delivered via Multi-Voltage-Level Transmission Sections",
+      "identity_verified": true,
+      "identity_basis": "首页题名（含中英文标题）及DOI与目标记录一致；空格/换行仅用于身份归一比较。",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Static_Voltage_Stability_Analysis_of_Large_Scale_Renewable_Energy_Delivered_via_Multi-Voltage-Level_Transmission_Sections.pdf",
+      "pdf_sha256": "138972c691c7ea4e9c8f3b5c8fc7ab374083fb9f506663246afe745df4b05a2a",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/15_Static_Voltage_Stability_Analysis_of_Large_Scale_Renewable_E_pages.json",
+      "pages_sha256": "dfa0d17235dc0ddc5882d89816875adfc85233170ac6511b67479e33e74045a8",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "/root/review_b (independent agent)",
+      "read_ranges": [
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 5876,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 3690,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 4,
+          "start_offset": 0,
+          "end_offset": 4540,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 5,
+          "start_offset": 0,
+          "end_offset": 3420,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 1,
+          "start_offset": 4575,
+          "end_offset": 4961,
+          "quote": "Existing voltage security risk assessment methods, which \nassume uniform renewable energy generation across all \nsections, can only evaluate static voltage security risks under \ntypical operating conditions. Such approaches may yield \noverly conservative limits that underutilize transmission \ncapacity or produce optimistic estimates that jeopardize \nsystem operational security [9]. \n",
+          "interpretation": "统一新能源出力假设可能保守或乐观，是作者对现有方法的评价。",
+          "kind": "motivation"
+        },
+        {
+          "page": 4,
+          "start_offset": 2464,
+          "end_offset": 2737,
+          "quote": "This is a non-linear implicit equation that is difficult \nto express analytically. For practical systems, the \ntransmission limits under different operating conditions can \nbe obtained through simulation. For online applications, a \nlook-up table method is recommended.   \n",
+          "interpretation": "近端出力到远端极限关系难解析，实际系统建议仿真/查表。",
+          "kind": "author_limitation"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "machine_start": {
+            "page": 1,
+            "offset": 802
+          },
+          "machine_end": {
+            "page": 1,
+            "offset": 2091
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "introduction": {
+          "machine_start": {
+            "page": 1,
+            "offset": 2189
+          },
+          "machine_end": {
+            "page": 2,
+            "offset": 0
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "conclusion": {
+          "machine_start": {
+            "page": 5,
+            "offset": 76
+          },
+          "machine_end": {
+            "page": 5,
+            "offset": 1236
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        }
+      },
+      "issues": [
+        "数学公式存在编码/断行噪声，未据此验证公式推导或复制公式；所引用散文已逐字定位。"
+      ],
+      "resolution": "限制到可读散文及明确模型/验证范围；不把公式提取噪声当成全文不可读。",
+      "unresolved": [],
+      "status": "已核验该范围",
+      "matrix": {
+        "method_constraints_scenarios_validation": "串并联断面、近远端出力；实际冀北电网仿真",
+        "author_limitations_and_finite_inference": "作者明确非线性隐式关系难解析；已读范围无完整多事件组合边界认证。",
+        "route": "组合空间/场景与位置效应",
+        "evidence_pages": [
+          1,
+          4
+        ],
+        "citation": "[P16 · Static Voltage Stability Analysis of Large Scale Renewable Energy Delivered via Multi-Voltage-Level Transmission Sections](</Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Static_Voltage_Stability_Analysis_of_Large_Scale_Renewable_Energy_Delivered_via_Multi-Voltage-Level_Transmission_Sections.pdf>)，PDF pp. 1,4"
+      }
+    },
+    {
+      "target_id": "P17",
+      "title": "Research on Static Voltage Stability During Low-voltage Ride-through Under Short-circuit Fault Conditions in Renewable Energy Integrated Power Grids",
+      "identity_verified": true,
+      "identity_basis": "首页题名（含中英文标题）及DOI与目标记录一致；空格/换行仅用于身份归一比较。",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Research on Static Voltage Stability During Low-voltage Ride-through Under Short-circuit Fault Conditions in Renewable Energy Integrated Power Grids.pdf",
+      "pdf_sha256": "8bf357e10cf1599824e72e5e887310471b474cd31b72a75cf7f0889f068f6612",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/11_Research_on_Static_Voltage_Stability_During_Low_voltage_Ride_pages.json",
+      "pages_sha256": "19df137342b7bca82c4869a85b3fa205140fc759a7fed6b12c036241d1922229",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "/root/review_b (independent agent)",
+      "read_ranges": [
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 3544,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 1999,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 3,
+          "start_offset": 0,
+          "end_offset": 1998,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 11,
+          "start_offset": 0,
+          "end_offset": 2146,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 12,
+          "start_offset": 0,
+          "end_offset": 3636,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 3,
+          "start_offset": 1024,
+          "end_offset": 1071,
+          "quote": "对于确定的\n故障，进入 低电压穿越 后为 0~90固定的一个    \n角度[13]。 \n",
+          "interpretation": "确定故障进入LVRT后电流角固定，不能直接支撑进出切换振荡认证。",
+          "kind": "model_assumption"
+        },
+        {
+          "page": 12,
+          "start_offset": 500,
+          "end_offset": 571,
+          "quote": "下一步工作在参考正常稳态静态电压稳定分\n析方法的基础上， 充分考虑新能源低电压穿越期间\n的不同控制策略， 进行更深入、 场景更多样的分析。 \n",
+          "interpretation": "作者将不同LVRT控制策略与多样场景留待后续。",
+          "kind": "author_limitation"
+        },
+        {
+          "page": 11,
+          "start_offset": 233,
+          "end_offset": 314,
+          "quote": "令节点 27 的 DG 输出电流幅\n值不断增加，其余 DG 节点容量为 1MW，输出节\n点 27 LTSVSMI 以及节点 27 电压幅值结果如图 20\n所示。",
+          "interpretation": "多源验证在增加一个DG电流时其他DG容量固定。",
+          "kind": "validation_scope"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "machine_start": {
+            "page": 1,
+            "offset": 673
+          },
+          "machine_end": {
+            "page": 1,
+            "offset": 2780
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "introduction": {
+          "machine_start": {
+            "page": 1,
+            "offset": 3421
+          },
+          "machine_end": {
+            "page": 2,
+            "offset": 1876
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "conclusion": {
+          "machine_start": {
+            "page": 11,
+            "offset": 2119
+          },
+          "machine_end": {
+            "page": 12,
+            "offset": 571
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        }
+      },
+      "issues": [
+        "数学公式存在编码/断行噪声，未据此验证公式推导或复制公式；所引用散文已逐字定位。"
+      ],
+      "resolution": "限制到可读散文及明确模型/验证范围；不把公式提取噪声当成全文不可读。",
+      "unresolved": [],
+      "status": "已核验该范围",
+      "matrix": {
+        "method_constraints_scenarios_validation": "LTSVSMI、故障复合序网/虚拟阻抗；单源及IEEE33多源；仿真",
+        "author_limitations_and_finite_inference": "作者后续计划不同控制策略；已读多源试验单节点变化，其余固定。",
+        "route": "LVRT故障稳态/多馈入",
+        "evidence_pages": [
+          3,
+          11,
+          12
+        ],
+        "citation": "[P17 · Research on Static Voltage Stability During Low-voltage Ride-through Under Short-circuit Fault Conditions in Renewable Energy Integrated Power Grids](</Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Research on Static Voltage Stability During Low-voltage Ride-through Under Short-circuit Fault Conditions in Renewable Energy Integrated Power Grids.pdf>)，PDF pp. 3,11,12"
+      }
+    },
+    {
+      "target_id": "P18",
+      "title": "Research on Coordinated Active and Reactive Power Control of VSC-HVDC Connected Renewable Energy System for Enhancing Static Voltage Stability",
+      "identity_verified": true,
+      "identity_basis": "首页题名（含中英文标题）及DOI与目标记录一致；空格/换行仅用于身份归一比较。",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Research_on_Coordinated_Active_and_Reactive_Power_Control_of_VSC-HVDC_Connected_Renewable_Energy_System_for_Enhancing_Static_Voltage_Stability.pdf",
+      "pdf_sha256": "90c96a9948e296065b04d29b225e64123a96db685a22dafdcd7c3282451bb2ab",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/12_Research_on_Coordinated_Active_and_Reactive_Power_Control_of_pages.json",
+      "pages_sha256": "3878e1bb57977140ffb275ede1111624f5e199f63f495a29b9e3c975fc9ecbae",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "/root/review_b (independent agent)",
+      "read_ranges": [
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 5852,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 4469,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 5,
+          "start_offset": 0,
+          "end_offset": 4873,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 6,
+          "start_offset": 0,
+          "end_offset": 5576,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 6,
+          "start_offset": 1383,
+          "end_offset": 1505,
+          "quote": "In the future, the \nimpact of the coordinated control strategy on other voltage \nstability indexes will be investigated. \n",
+          "interpretation": "作者将其他电压稳定指标影响留待后续，当前目标为L-index。",
+          "kind": "author_limitation"
+        },
+        {
+          "page": 5,
+          "start_offset": 2639,
+          "end_offset": 3893,
+          "quote": "To verify the effectiveness of the proposed method, this \npaper compares the following three scenarios: \nScenario 1: The VSC -HVDC system provides only active \npower support. \nScenario 2: The VSC-HVDC system provides only reactive \npower support. \nScenario 3: The VSC -HVDC system provides coordinated \nactive and reactive power control. \nThe initial operating condition of the VSC-HVDC system is \nP0=0.8S, Q0=0. When the VSC -HVDC system provides only \nactive power support, the reactive power remains at the initial \nstate Q0, with the available active power support ranging from \n-0.8S to 0.2S. When the system provides only reactive power \nsupport, the active power remains at the initial state P0, with the \navailable reactive power support ranging from -0.6S to 0.6S. \nWhen the VSC -HVDC system provides both active and \nreactive power support, the available active power support \nranges from -0.8S to 0.2S, and the available reactive power \nsupport ranges from -S to S. The allowable voltage range at the \nAC system nodes is 0.9 pu to 1.1 pu. \nFor the PSO algorithm, the swarm size is set to 500 particles, \nwith a maximum of 200 iterations. Table  II shows the L index \nof the system after applying the power support under the three \nscenarios. \n",
+          "interpretation": "有功/无功/协调三策略，容量与电压约束，PSO求解。",
+          "kind": "validation_scope"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "machine_start": {
+            "page": 1,
+            "offset": 1098
+          },
+          "machine_end": {
+            "page": 1,
+            "offset": 2269
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "introduction": {
+          "machine_start": {
+            "page": 1,
+            "offset": 2400
+          },
+          "machine_end": {
+            "page": 2,
+            "offset": 1414
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "conclusion": {
+          "machine_start": {
+            "page": 6,
+            "offset": 520
+          },
+          "machine_end": {
+            "page": 6,
+            "offset": 1505
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        }
+      },
+      "issues": [
+        "数学公式存在编码/断行噪声，未据此验证公式推导或复制公式；所引用散文已逐字定位。",
+        "p.5表I存在3.2042%而正文/结论称误差小于3%；不采纳该准确率数值用于方向论证。"
+      ],
+      "resolution": "限制到可读散文及明确模型/验证范围；不把公式提取噪声当成全文不可读。",
+      "unresolved": [],
+      "status": "已核验该范围",
+      "matrix": {
+        "method_constraints_scenarios_validation": "VSC-HVDC有无功容量/电压约束；L-index灵敏度+PSO；数值算例",
+        "author_limitations_and_finite_inference": "作者未验证其他稳定指标；不是最危险独立新能源组合搜索的替代。",
+        "route": "无功支撑/优化控制",
+        "evidence_pages": [
+          5,
+          6
+        ],
+        "citation": "[P18 · Research on Coordinated Active and Reactive Power Control of VSC-HVDC Connected Renewable Energy System for Enhancing Static Voltage Stability](</Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Research_on_Coordinated_Active_and_Reactive_Power_Control_of_VSC-HVDC_Connected_Renewable_Energy_System_for_Enhancing_Static_Voltage_Stability.pdf>)，PDF pp. 5,6"
+      }
+    },
+    {
+      "target_id": "P19",
+      "title": "Study of Static Voltage Stability Region Considering Integration of Renewable Energy Through VSC-HVDC System",
+      "identity_verified": true,
+      "identity_basis": "首页题名（含中英文标题）及DOI与目标记录一致；空格/换行仅用于身份归一比较。",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Study_of_Static_Voltage_Stability_Region_Considering_Integration_of_Renewable_Energy_Through_VSC-HVDC_System.pdf",
+      "pdf_sha256": "ec02fc9c3d84cd5f67c2c5480e1ea81a939c2359b41b757e053919ba981d6390",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/19_Study_of_Static_Voltage_Stability_Region_Considering_Integra_pages.json",
+      "pages_sha256": "14579d1b92cedda247afcf9ebf19f0f9ea40784bd7b21edb66e0507a00f069e0",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "/root/review_b (independent agent)",
+      "read_ranges": [
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 5570,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 5743,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 4,
+          "start_offset": 0,
+          "end_offset": 4985,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 5,
+          "start_offset": 0,
+          "end_offset": 5949,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 2,
+          "start_offset": 3745,
+          "end_offset": 4007,
+          "quote": "Considering that variations of DC\nvoltage are limited in a small range during the static operation,\nthe voltage at DC node i satisfies d 1.0p.u.iU  . Thus,\nd d d*i j jU U U  (7)\nwhere Udi and Udj are the voltage magnitudes of the DC bus i\nand j, respectively.\n",
+          "interpretation": "小范围直流电压变化支持线性化。",
+          "kind": "model_assumption"
+        },
+        {
+          "page": 5,
+          "start_offset": 1092,
+          "end_offset": 1502,
+          "quote": "In order to validate the proposed computation model in\n(34), a global searching method is introduced to construct\nSVSR by searching the SVSRB with increasing output active\npower of RESs from 0.1 p.u. to the rated power. The voltage\ncollapse points of the power system are calculated one by one\nusing the method presented in [8]. Both master-slave control\nschemes and droop control schemes are considered here.\n",
+          "interpretation": "已有新能源从0.1pu至额定出力全局搜索对照，不能把组合空间或全局搜索本身称为新颖。",
+          "kind": "validation_scope"
+        },
+        {
+          "page": 5,
+          "start_offset": 2364,
+          "end_offset": 2625,
+          "quote": "Since there are two VSC\nstations on the RES side, the SVSR is a two-dimensional\nspace composed of the intersection area of two voltage\ninstability curves of the PCCs and two straight lines\nrepresenting the rated capacities of the VSC stations on the\nRES side.. ",
+          "interpretation": "研究给出两新能源侧VSC组成的二维稳定域。",
+          "kind": "scope"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "machine_start": {
+            "page": 1,
+            "offset": 568
+          },
+          "machine_end": {
+            "page": 1,
+            "offset": 1831
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "introduction": {
+          "machine_start": {
+            "page": 1,
+            "offset": 1945
+          },
+          "machine_end": {
+            "page": 2,
+            "offset": 762
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "conclusion": {
+          "machine_start": {
+            "page": 5,
+            "offset": 3216
+          },
+          "machine_end": {
+            "page": 5,
+            "offset": 4014
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        }
+      },
+      "issues": [
+        "数学公式存在编码/断行噪声，未据此验证公式推导或复制公式；所引用散文已逐字定位。"
+      ],
+      "resolution": "限制到可读散文及明确模型/验证范围；不把公式提取噪声当成全文不可读。",
+      "unresolved": [],
+      "status": "已核验该范围",
+      "matrix": {
+        "method_constraints_scenarios_validation": "直流下垂/主从、P-Q耦合动态限额；四端HVDC/二维RES出力；全局搜索对照",
+        "author_limitations_and_finite_inference": "近似模型依赖直流电压近1pu和交流电阻忽略；未读范围不作判断。",
+        "route": "组合空间/近似稳定域",
+        "evidence_pages": [
+          2,
+          5
+        ],
+        "citation": "[P19 · Study of Static Voltage Stability Region Considering Integration of Renewable Energy Through VSC-HVDC System](</Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Study_of_Static_Voltage_Stability_Region_Considering_Integration_of_Renewable_Energy_Through_VSC-HVDC_System.pdf>)，PDF pp. 2,5"
+      }
+    },
+    {
+      "target_id": "P20",
+      "title": "Online Data-Driven Evaluation Method of Static Voltage Stability Margin for AC/DC Hybrid Power Systems Considering Uncertainty of Renewable Energy",
+      "identity_verified": true,
+      "identity_basis": "首页题名（含中英文标题）及DOI与目标记录一致；空格/换行仅用于身份归一比较。",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Online_Data-Driven_Evaluation_Method_of_Static_Voltage_Stability_Margin_for_AC_DC_Hybrid_Power_Systems_Considering_Uncertainty_of_Renewable_Energy.pdf",
+      "pdf_sha256": "0427d720c93599a46136e545695a1eaf8d2e5b7ffeee555165ea2c1dc66a11b3",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/06_Online_Data_Driven_Evaluation_Method_of_Static_Voltage_Stabi_pages.json",
+      "pages_sha256": "08dab7b2b26ee5426a4d91babb1745c14f98104ac4b0d1b6d551bdb4a1802838",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "/root/review_b (independent agent)",
+      "read_ranges": [
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 6315,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 7114,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 8,
+          "start_offset": 0,
+          "end_offset": 5541,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 9,
+          "start_offset": 0,
+          "end_offset": 5184,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 16,
+          "start_offset": 0,
+          "end_offset": 5679,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 17,
+          "start_offset": 0,
+          "end_offset": 5728,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 18,
+          "start_offset": 0,
+          "end_offset": 8902,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 8,
+          "start_offset": 2959,
+          "end_offset": 3133,
+          "quote": "Both rene\nwable units are modeled as PQ\n-\ntype \ngenerators with rated active powers of 540 MW and 830 MW, \noperating under constant power factor strategies of 0.98 and 1.0. \n",
+          "interpretation": "新能源风光为恒功率因数PQ模型。",
+          "kind": "model_assumption"
+        },
+        {
+          "page": 9,
+          "start_offset": 2266,
+          "end_offset": 2923,
+          "quote": "System\n-\nlevel load growth was then applied \nunder constant power factors, with the incremental demand \ndistributed proportionally among conventional generators. \nGenerator reactive \npower limits were enforced automatically by \nswitching PV buses to PQ buses when limits were reached.\n \nFor \neach perturbed operating point, an AC/DC hybrid power flow \nwas solved using MatACDC, with the VSC\n-\nHVDC converters \noperating in V\n–\nP control on the DC si\nde and PV\n–\nPQ control on \nthe AC side. The resulting SVSM was obtained using a \ncontinuation power\n-\nflow method considering DC constraints, \nproducing 3,000 training samples and 400 validation samples\n.\n \n",
+          "interpretation": "训练标签已有外层风光抽样、常规机组供增量、PV-PQ无功限额与含直流约束CPF。",
+          "kind": "method_scope"
+        },
+        {
+          "page": 16,
+          "start_offset": 3950,
+          "end_offset": 4876,
+          "quote": "From Figs. 31\n–\n33, it can be observed that when an N\n–\n1 \ncontingency occurs at the 5\n-\nminute mark, the prediction \naccuracy of the model deteriorates significantly if the original \ntra\nining set is used without updating. In contrast, after \nperforming rapid incremental training, the model quickly \nadapts to the post\n-\ncontingency operating conditions, leading to \na substantial improvement in SVSM prediction accuracy. The \ncomputation delays fo\nr the three window lengths are 0.04 s, \n0.06 s, and 0.11 s, respectively, while the MAPE for predictions \nwithin the 5\n–\n20 minute range are \n1\n.67%, \n1\n.31%, and \n1\n.27%. \nThis indicates that while a larger update window yields higher \nprediction accuracy, it also re\nsults in greater computation \nlatency. Therefore, among the three tested configurations, a 10\n-\nminute update window is recommended for rolling incremental \ntraining due to its optimal overall performance. ",
+          "interpretation": "拓扑突变后不更新训练集精度恶化，增量训练改善；不能称代理完全无需CPF。",
+          "kind": "author_observation"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "machine_start": {
+            "page": 1,
+            "offset": 469
+          },
+          "machine_end": {
+            "page": 1,
+            "offset": 1932
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "introduction": {
+          "machine_start": {
+            "page": 1,
+            "offset": 3164
+          },
+          "machine_end": {
+            "page": 2,
+            "offset": 342
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "conclusion": {
+          "machine_start": {
+            "page": 17,
+            "offset": 3514
+          },
+          "machine_end": {
+            "page": 18,
+            "offset": 92
+          },
+          "review": "结论正文在物理p.17；p.18参考文献前仅有页眉噪声，排除页眉。断行碎片不影响所引散文语义。"
+        }
+      },
+      "issues": [
+        "数学公式存在编码/断行噪声，未据此验证公式推导或复制公式；所引用散文已逐字定位。"
+      ],
+      "resolution": "限制到可读散文及明确模型/验证范围；不把公式提取噪声当成全文不可读。",
+      "unresolved": [],
+      "status": "已核验该范围",
+      "matrix": {
+        "method_constraints_scenarios_validation": "LightGBM-SHAP-KDE代理；Copula/LHS/聚类、负荷变化；IEEE39/Polish2383、噪声缺失拓扑验证",
+        "author_limitations_and_finite_inference": "已读生成标签采用PQ新能源；未展示LVRT事件序列预测或最危险尾部覆盖保证。",
+        "route": "组合不确定性/代理模型",
+        "evidence_pages": [
+          8,
+          9,
+          16
+        ],
+        "citation": "[P20 · Online Data-Driven Evaluation Method of Static Voltage Stability Margin for AC/DC Hybrid Power Systems Considering Uncertainty of Renewable Energy](</Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Online_Data-Driven_Evaluation_Method_of_Static_Voltage_Stability_Margin_for_AC_DC_Hybrid_Power_Systems_Considering_Uncertainty_of_Renewable_Energy.pdf>)，PDF pp. 8,9,16"
+      }
+    },
+    {
+      "target_id": "P21",
+      "title": "考虑新能源功率波动的静态电压稳定边界直接算法",
+      "identity_verified": true,
+      "identity_basis": "首页题名（含中英文标题）及DOI与目标记录一致；空格/换行仅用于身份归一比较。",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/考虑新能源功率波动的静态电压稳定边界直接算法_李安然.pdf",
+      "pdf_sha256": "f230187790c161dd74e84f29a217357256fb7d18f88185b2d74c135fede2fd23",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/22_考虑新能源功率波动的静态电压稳定边界直接算法_李安然_pages.json",
+      "pages_sha256": "888b69173e172ed961b98f3b25361c6f32fcfbcbef3663b3683c2cedcb1fb097",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "/root/review_b (independent agent)",
+      "read_ranges": [
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 2752,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 3271,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 3,
+          "start_offset": 0,
+          "end_offset": 2563,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 4,
+          "start_offset": 0,
+          "end_offset": 2439,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 5,
+          "start_offset": 0,
+          "end_offset": 2620,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 6,
+          "start_offset": 0,
+          "end_offset": 4739,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 3,
+          "start_offset": 30,
+          "end_offset": 224,
+          "quote": "能无法覆盖完整的波动区间\n［ 22 ］\n。 为了使所计算的状态变量\n区间能够覆盖实际区间 ， 需要将仿射式 （ 2 ） 的系数 x\ni\n进行适\n当的扩大\n［ 22 ］\n。 一般而言 ， 将式 （ 13 ） 、 式 （ 14 ） 中对应系数扩张\n1 . 1 倍\n［ 24 ］\n具有较好的效果 。 同时 ， 为了保证不会出现过估计\n的问题 ， 需要利用潮流方程约束缩小波动系数的区间范围 。\n",
+          "interpretation": "非线性仿射运算可能漏覆盖，以系数扩大等处理；不可直接宣传为严格全局包络。",
+          "kind": "author_limitation"
+        },
+        {
+          "page": 5,
+          "start_offset": 2270,
+          "end_offset": 2369,
+          "quote": "但所提算法的鲁棒性\n与 DDM 深度绑定 ， 虽已有文献表明 DDM 具有较好的计算鲁\n棒性\n［ 19 ］\n， 若 DDM 计算不收敛 ， AA - DDM 算法由于无法获取平\n衡点而无法计算 。\n",
+          "interpretation": "AA-DDM依赖DDM收敛，失败时无法获得平衡点。",
+          "kind": "author_limitation"
+        },
+        {
+          "page": 4,
+          "start_offset": 1366,
+          "end_offset": 1524,
+          "quote": "当考虑系统约束时 ， 由于 IEEE - 14 节点系统无功约束过\n小 ， 系统负荷略微增加将引发所有约束越限 ， 无法出现 LIB\n现象 。 在进行仿真时 ， 将系统中含无功约束节点的无功上限\n统 一 上 调 至 1 . 25  pu ， 以 验 证 AA - DDM 计 算 LIB 区 间 的 准 确\n性 。 ",
+          "interpretation": "含约束算例人为统一调高无功上限以形成LIB；已处理LIB，不能宣称其忽略约束切换。",
+          "kind": "validation_scope"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "machine_start": {
+            "page": 1,
+            "offset": 475
+          },
+          "machine_end": {
+            "page": 1,
+            "offset": 724
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "introduction": {
+          "machine_start": {
+            "page": 1,
+            "offset": 808
+          },
+          "machine_end": {
+            "page": 1,
+            "offset": 2586
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "conclusion": {
+          "machine_start": {
+            "page": 5,
+            "offset": 2369
+          },
+          "machine_end": {
+            "page": 6,
+            "offset": 48
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        }
+      },
+      "issues": [
+        "数学公式存在编码/断行噪声，未据此验证公式推导或复制公式；所引用散文已逐字定位。",
+        "p.4图3流程图抽取乱码；本次仅依正文p.2–5核验方法范围，不依乱码流程图作新结论。"
+      ],
+      "resolution": "限制到可读散文及明确模型/验证范围；不把公式提取噪声当成全文不可读。",
+      "unresolved": [],
+      "status": "已核验该范围",
+      "matrix": {
+        "method_constraints_scenarios_validation": "AA-DDM、SNB及LIB；独立有功区间（14节点±30%、118节点±10%）；对照AA-CPF/MC-CPF/MC-DM",
+        "author_limitations_and_finite_inference": "作者承认非线性漏覆盖与DDM不收敛风险；已读范围无0至额定整个域和LVRT进出事件认证。",
+        "route": "组合不确定性/区间直接法",
+        "evidence_pages": [
+          3,
+          4,
+          5
+        ],
+        "citation": "[P21 · 考虑新能源功率波动的静态电压稳定边界直接算法](</Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/考虑新能源功率波动的静态电压稳定边界直接算法_李安然.pdf>)，PDF pp. 3,4,5"
+      }
+    },
+    {
+      "target_id": "P22",
+      "title": "考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法",
+      "identity_verified": true,
+      "identity_basis": "题名与首页DOI核对一致；P22无DOI，封面/正文题名、作者、2026首发信息一致。",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法_赵冬梅.pdf",
+      "pdf_sha256": "1523d79884ca5969d048080b7629b3da0fa7b0ac73f9a75558339f4dcb2ba400",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/23_考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法_赵冬梅_pages.json",
+      "pages_sha256": "1a42fe53b281baf3239bfacf0350dbde5592452b62cac1b7cb02d92496a85ccc",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "/root/review_b (independent agent)",
+      "read_ranges": [
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 999,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 2920,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 3,
+          "start_offset": 0,
+          "end_offset": 2033,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 4,
+          "start_offset": 0,
+          "end_offset": 1887,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 9,
+          "start_offset": 0,
+          "end_offset": 1928,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 12,
+          "start_offset": 0,
+          "end_offset": 3183,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 12,
+          "start_offset": 484,
+          "end_offset": 602,
+          "quote": "本文主要面向规划层面的静态电压稳定问题，\n尚未计及构网型与跟网型机组在暂态过程中的控\n制交互。后续将结合两类机组的详细控制模型，开\n展机电暂态与电磁暂态仿真，进一步研究其在动态\n电压调节、故障响应等过程中的协同特性与控制耦\n合机理。 \n",
+          "interpretation": "明确未计及GFM/GFL暂态控制交互；后续机电/电磁暂态。",
+          "kind": "author_limitation"
+        },
+        {
+          "page": 9,
+          "start_offset": 320,
+          "end_offset": 500,
+          "quote": "系统包含 26 个节点和 25 条等值支路，平衡节\n点为节点 25， 基准容量为100MVA。 新能源基地由\n8 个风电场站和 8 个光伏场站构成，总装机容量为\n4100MW，其中风电、光伏装机容量分别为 2.9GW\n和 1.2GW，算例系统拓扑如图 4 所示。 在DigSILENT \n/PowerFactory 仿真平台中构建异构新能源基地等\n值算例系统。",
+          "interpretation": "26节点16风光场站的西北基地等值系统、PowerFactory。",
+          "kind": "validation_scope"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "machine_start": {
+            "page": 2,
+            "offset": 147
+          },
+          "machine_end": {
+            "page": 2,
+            "offset": 505
+          },
+          "review": "物理p.1为首发封面；摘要在p.2，中英文重复不混读；引言p.2–3，p.4进入第一节。"
+        },
+        "introduction": {
+          "machine_start": {
+            "page": 2,
+            "offset": 2569
+          },
+          "machine_end": {
+            "page": 4,
+            "offset": 40
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "conclusion": {
+          "machine_start": {
+            "page": 12,
+            "offset": 40
+          },
+          "machine_end": {
+            "page": 12,
+            "offset": 602
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        }
+      },
+      "issues": [
+        "数学公式存在编码/断行噪声，未据此验证公式推导或复制公式；所引用散文已逐字定位。"
+      ],
+      "resolution": "限制到可读散文及明确模型/验证范围；不把公式提取噪声当成全文不可读。",
+      "unresolved": [],
+      "status": "已核验该范围",
+      "matrix": {
+        "method_constraints_scenarios_validation": "gSCR+参与因子/贪心配置与无功优化；规划容量；26节点基地PowerFactory",
+        "author_limitations_and_finite_inference": "作者明确未计暂态控制交互；不应把仅补动态仿真当独立方法创新。",
+        "route": "系统强度/资源配置",
+        "evidence_pages": [
+          9,
+          12
+        ],
+        "citation": "[P22 · 考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法](</Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/考虑静态电压稳定的新能源基地构网型场站与无功源优化配置方法_赵冬梅.pdf>)，PDF pp. 9,12"
+      }
+    },
+    {
+      "target_id": "P23",
+      "title": "计及静态电压稳定裕度的电力系统新能源承载能力评估方法",
+      "identity_verified": true,
+      "identity_basis": "首页题名（含中英文标题）及DOI与目标记录一致；空格/换行仅用于身份归一比较。",
+      "pdf_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/计及静态电压稳定裕度的电力系统新能源承载能力评估方法_陈沁昊.pdf",
+      "pdf_sha256": "410bef10056638dc67e3136d43a23d103bd513ede9584c83cdfa4c24c9b523ac",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/24_计及静态电压稳定裕度的电力系统新能源承载能力评估方法_陈沁昊_pages.json",
+      "pages_sha256": "a9d379d2213e682931e7f0305393d50a6249edcf3694b59ad322f2a67fab5af0",
+      "hash_algorithm": "SHA-256",
+      "reviewer": "/root/review_b (independent agent)",
+      "read_ranges": [
+        {
+          "page": 1,
+          "start_offset": 0,
+          "end_offset": 3109,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 2,
+          "start_offset": 0,
+          "end_offset": 2174,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 3,
+          "start_offset": 0,
+          "end_offset": 2111,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 7,
+          "start_offset": 0,
+          "end_offset": 1992,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 9,
+          "start_offset": 0,
+          "end_offset": 2188,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        },
+        {
+          "page": 10,
+          "start_offset": 0,
+          "end_offset": 4339,
+          "scope": "完整物理页原文；并非全文阅读或公式正确性认证"
+        }
+      ],
+      "evidence": [
+        {
+          "page": 3,
+          "start_offset": 594,
+          "end_offset": 904,
+          "quote": "对于新能\n源并网节点，其在潮流模型中的具体类型取决于其\n无功控制方式：当采用定交流侧无功控制时，有功\n和无功输出恒定，等效为 PQ 节点；当采用无功功\n率-电压下垂控制时，建模为一个 Q-V 下垂节点[25]， \n其特性可以由式(1)统一表示，其中： ref\niP 、 ref\niQ 、\nQVik 、 ref\niU 分别表示第 i 个并网逆变器的有功参考 \n值、无功参考值 、下垂系数、电压 参考值 ；PGi\n和 QGi 表示新能源 机组注入母线的有功功率和无\n功功率。 \n \nref\nG\nref ref\nG QV ( )\ni i\ni i i i i\nP P\nQ Q k U U\n■ =|■ = + -|■\n (1) \n",
+          "interpretation": "PQ或固定Q-V下垂模型，区分配置模型与LVRT状态机。",
+          "kind": "model_scope"
+        },
+        {
+          "page": 10,
+          "start_offset": 507,
+          "end_offset": 646,
+          "quote": "尽管本文取得了一定成果，但仍有以下潜在方\n向值得进一步探索：1）考虑大扰动下暂态稳定等\n更加复杂的系统动态约束， 提升所得新能源承载方\n案的安全稳定水平；2）计及多类型新能源出力 波\n动的时空相关性，从而有效获取兼顾系统安全稳定\n风险与运行效益的新型电力系统新能源规划方案。 \n",
+          "interpretation": "作者后续考虑暂态约束及多类新能源时空相关波动。",
+          "kind": "author_limitation"
+        },
+        {
+          "page": 9,
+          "start_offset": 1668,
+          "end_offset": 1942,
+          "quote": "需要特别指出的是，本节算例显示 Q-V 下垂控\n制的承载能力略低于定 PQ 控制，这并非意味着下\n垂控制策略本身存在机理上的缺陷，而是受限于固\n定参数配置的工程化设定。具体而言，方案 3 为了\n模拟工程中常见的低通信依赖和本地化运维场景，\n下垂控制采用了固定参数设置模式(即 Qref=0)，此\n时逆变器输出的无功功率 完全由其端电压与 参考\n电压的偏差乘以下垂系数决定，缺乏主动优化的自\n由度。在系统接近静态电压稳定极限时，尽管端电\n压有所下降，但只要其与参考电压的偏差不大，逆\n变器提供的无功支撑就十分有限，小于功率因数约\n束下的无功上限。 \n",
+          "interpretation": "下垂容量结果受固定参数和自由度限制，不能归因为下垂机理差。",
+          "kind": "author_limitation"
+        }
+      ],
+      "section_boundary_review": {
+        "abstract": {
+          "machine_start": {
+            "page": 1,
+            "offset": 819
+          },
+          "machine_end": {
+            "page": 1,
+            "offset": 1973
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "introduction": {
+          "machine_start": {
+            "page": 1,
+            "offset": 2790
+          },
+          "machine_end": {
+            "page": 3,
+            "offset": 98
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        },
+        "conclusion": {
+          "machine_start": {
+            "page": 10,
+            "offset": 38
+          },
+          "machine_end": {
+            "page": 10,
+            "offset": 710
+          },
+          "review": "已按实际页正文核对标题及上下文；引文范围以evidence为准，页眉及参考文献不作正文证据。"
+        }
+      },
+      "issues": [
+        "数学公式存在编码/断行噪声，未据此验证公式推导或复制公式；所引用散文已逐字定位。"
+      ],
+      "resolution": "限制到可读散文及明确模型/验证范围；不把公式提取噪声当成全文不可读。",
+      "unresolved": [],
+      "status": "已核验该范围",
+      "matrix": {
+        "method_constraints_scenarios_validation": "最小奇异值下界+双层循环承载度优化；节点容量/无功；改进IEEE30、MATLAB/IPOPT",
+        "author_limitations_and_finite_inference": "作者后续暂态约束与波动相关性；承载能力最大化不同于固定额定域最危险裕度搜索。",
+        "route": "最大承载力/优化与固定路径局限",
+        "evidence_pages": [
+          3,
+          9,
+          10
+        ],
+        "citation": "[P23 · 计及静态电压稳定裕度的电力系统新能源承载能力评估方法](</Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/计及静态电压稳定裕度的电力系统新能源承载能力评估方法_陈沁昊.pdf>)，PDF pp. 3,9,10"
+      }
+    }
+  ]
+}

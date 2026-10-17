@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-11",
+  "runtime": "/Users/huangxm/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "scope": "正式manifest流程；不做外部检索或下载",
+  "extraction_recovery": "初次系统python对P24/P25/P26返回cryptography>=3.1 AES依赖错误；改用已安装bundled runtime全量重抽取成功。不是OCR诊断，未改动PDF。",
+  "machine_outputs": "最终版 _inventory.json 与 _extraction_summary.json；独立审查必须对应最终hash",
+  "status": "研究方向文档已交付；尚未选定方向及开展实验",
+  "user_steering": {
+    "message": "可以先减少关注当前代码，重要性不大",
+    "effect": "不继续展开代码审查；保留不重写内核硬约束，以简报已有平台能力为方向规划前提；具体版本与接口作为实施时确认项，不以代码静态审查替代文献研究。"
+  },
+  "delivery": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/RESEARCH_DIRECTIONS_新能源切换连续潮流_CN.md",
+  "validation": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/_delivery_validation.json"
+}

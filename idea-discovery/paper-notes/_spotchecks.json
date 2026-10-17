@@ -1,0 +1,114 @@
+{
+  "checks": [
+    {
+      "target_id": "P25",
+      "reviewer": "主agent独立抽查",
+      "page": 75,
+      "start_offset": 108,
+      "end_offset": 240,
+      "quote": "在\n本\n文\n中 ， 暂\n不\n考 虑\n改\n变 中\n其\n他\n风\n电 场 的 有 功 功 率 的 改 变 ， 因\n此\n， 当 其\n他\n风\n电\n场\n采\n用 定 功 率 因\n数\n控 制 时 ， 其 无 功 功 率\n不\n变\n，\n可\n被 等 值 为 Ｐ Ｑ 节 点\n。\n",
+      "verdict": "作者明确固定其他风电场有功；支持多场站独立变化这一有限差异，不否认其已做PV/PQ和HLINB。",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/21_基于PMU数据的新能源场站静态电压稳定在线评估_孔贺_pages.json",
+      "pages_sha256": "1cd308600a0c37cd421d06909c357138b660ce253408a3b30dcd1e7258ebc716",
+      "status": "已核验该范围"
+    },
+    {
+      "target_id": "P25",
+      "reviewer": "主agent独立抽查",
+      "page": 82,
+      "start_offset": 879,
+      "end_offset": 1003,
+      "quote": "值\n得 说\n明 的 是 ，\n本\n文\n目 前 仅\n针\n对\nＨ\nＬ Ｉ\nＮ\nＢ 的 特 定 算 例 ，\n给\n出 了\n振\n荡 的\n过\n程\n分 析 ，\n数\n学\n机\n理\n方\n面\n尚\n有\n所\n欠\n缺\n，\n这\n将\n成\n为\n未\n来\n工\n作\n的\n重\n点\n。\n",
+      "verdict": "作者自述仅特定算例过程分析、数学机理欠缺；不据此宣称新的统一机理已成立。",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/21_基于PMU数据的新能源场站静态电压稳定在线评估_孔贺_pages.json",
+      "pages_sha256": "1cd308600a0c37cd421d06909c357138b660ce253408a3b30dcd1e7258ebc716",
+      "status": "已核验该范围"
+    },
+    {
+      "target_id": "P04",
+      "reviewer": "主agent独立抽查",
+      "page": 3,
+      "start_offset": 3697,
+      "end_offset": 3775,
+      "quote": "Assuming RESs operate with a constant power factor, then\nQREi = PREi∗tanφREi. ",
+      "verdict": "RES恒定功率因数假设明确；已读p4含直流站控制切换，不能泛称切换不确定性空白。",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/04_Identification_of_the_Worst_Case_Static_Voltage_Stability_Ma_pages.json",
+      "pages_sha256": "a75133ae551538125a915d5bb4dc5a4ca2c20841b34e6a6c49953a541e98c4b5",
+      "status": "已核验该范围"
+    },
+    {
+      "target_id": "P15",
+      "reviewer": "主agent独立抽查",
+      "page": 3,
+      "start_offset": 1592,
+      "end_offset": 1696,
+      "quote": "In this case, the load limit of the system\nis not at the saddle point, but at the mode switching point. ",
+      "verdict": "模式切换点先于鞍点的现象已有论证，不可作为未经区分的新贡献。",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/05_Jacobian_Free_Krylov_Arnoldi_Framework_for_Static_Voltage_St_pages.json",
+      "pages_sha256": "8106608fa49932290bc820f5177742dbaeaa39ae3e63685bac4f802f313fd869",
+      "status": "已核验该范围"
+    },
+    {
+      "page": 12,
+      "start_offset": 1969,
+      "end_offset": 2391,
+      "quote": "However, this paper has not yet considered the intermittence\nand variability of VSC resource power output. Non-continuous\nvariable reactive power compensation devices such as casting\ncapacitors are not considered. In future work, the model will\nbe transformed into a mixed-integer linear programming model.\nAnd an intraday reactive power reserve optimization method can\nbe explored for adoption in hard real-time systems.\n",
+      "interpretation": "明确未计及VSC出力间歇和变化、离散无功补偿设备。",
+      "kind": "author_limitation",
+      "target_id": "P03",
+      "reviewer": "主agent独立抽查",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/02_A_Static_Voltage_Stability_Enhancement_Method_for_Power_Syst_pages.json",
+      "pages_sha256": "2294ab1223afcb33d51b136af3cb0eadc9a9531dadb44694a9019406a5565746",
+      "status": "已核验该范围",
+      "verdict": "已按整页上下文核对，支持限定的作者自述局限；不采用破损公式作为推导证据。"
+    },
+    {
+      "page": 3,
+      "start_offset": 30,
+      "end_offset": 224,
+      "quote": "能无法覆盖完整的波动区间\n［ 22 ］\n。 为了使所计算的状态变量\n区间能够覆盖实际区间 ， 需要将仿射式 （ 2 ） 的系数 x\ni\n进行适\n当的扩大\n［ 22 ］\n。 一般而言 ， 将式 （ 13 ） 、 式 （ 14 ） 中对应系数扩张\n1 . 1 倍\n［ 24 ］\n具有较好的效果 。 同时 ， 为了保证不会出现过估计\n的问题 ， 需要利用潮流方程约束缩小波动系数的区间范围 。\n",
+      "interpretation": "非线性仿射运算可能漏覆盖，以系数扩大等处理；不可直接宣传为严格全局包络。",
+      "kind": "author_limitation",
+      "target_id": "P21",
+      "reviewer": "主agent独立抽查",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/22_考虑新能源功率波动的静态电压稳定边界直接算法_李安然_pages.json",
+      "pages_sha256": "888b69173e172ed961b98f3b25361c6f32fcfbcbef3663b3683c2cedcb1fb097",
+      "status": "已核验该范围",
+      "verdict": "已按整页上下文核对，支持限定的作者自述局限；不采用破损公式作为推导证据。"
+    },
+    {
+      "page": 5,
+      "start_offset": 2270,
+      "end_offset": 2369,
+      "quote": "但所提算法的鲁棒性\n与 DDM 深度绑定 ， 虽已有文献表明 DDM 具有较好的计算鲁\n棒性\n［ 19 ］\n， 若 DDM 计算不收敛 ， AA - DDM 算法由于无法获取平\n衡点而无法计算 。\n",
+      "interpretation": "AA-DDM依赖DDM收敛，失败时无法获得平衡点。",
+      "kind": "author_limitation",
+      "target_id": "P21",
+      "reviewer": "主agent独立抽查",
+      "pages_path": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/22_考虑新能源功率波动的静态电压稳定边界直接算法_李安然_pages.json",
+      "pages_sha256": "888b69173e172ed961b98f3b25361c6f32fcfbcbef3663b3683c2cedcb1fb097",
+      "status": "已核验该范围",
+      "verdict": "已按整页上下文核对，支持限定的作者自述局限；不采用破损公式作为推导证据。"
+    }
+  ],
+  "actual_read_pages": {
+    "P25": [
+      75,
+      82
+    ],
+    "P04": [
+      3,
+      4
+    ],
+    "P15": [
+      3
+    ],
+    "P03": [
+      12
+    ],
+    "P21": [
+      3,
+      5
+    ]
+  }
+}

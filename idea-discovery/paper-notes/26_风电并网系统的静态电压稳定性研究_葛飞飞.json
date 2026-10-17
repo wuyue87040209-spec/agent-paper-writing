@@ -1,0 +1,1236 @@
+{
+  "schema_version": 2,
+  "filename": "风电并网系统的静态电压稳定性研究_葛飞飞.pdf",
+  "pages": 61,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": null,
+  "year_candidates": [],
+  "sections": {
+    "abstract": {
+      "text": "摘 要\n我国正在大力发展新能源改变以化石能源为主的处境，风力发电作为可再生能源领\n域的核心组成部分，在电力系统中发挥着日益显著的作用。然而，随着风电并网规模的\n扩大，风力发电的风速难以控制不稳定产生功率波动，其发电特性对电力系统电能质量\n乃至稳定性产生影响，成为制约其进一步发展的因素之一。因此，本文针对高渗透率下\n的风电并网系统静态电压稳定性的问题展开研究具有理论意义与实用价值，主要工作内\n容如下：\n深入研究了风电并网对静态电压稳定性产生的影响，分析导致电压不稳定性的主要\n原因。以典型风力发电机组并网运行为研究对象，发现风速的变化整体和威布尔函数相\n似呈正态分布，建立风电机组及风电场的潮流数学模型，进一步给出了含风电场的并网\n潮流计算模型，通过容量加权等值方法建立了风电场并网等值模型。传统的连续潮流算\n法在求取静态电压稳定临界点有计算量大迭代次数多的问题，为快速求取考虑风电并网\n系统的静态电压稳定临界点，给出了改进的连续潮流法，通过预测的平均功率求出功率\n输出的上下限和在步长控制环节中加入自适应系数来确定步长以得到较准确 P-V 曲线，\n在算法上减少迭代次数，缩短计算时间，达到连续潮流算法较快求取静态电压稳定临界\n点的目的。\n此外，风电并网节点因风电的波动性会造成功率不同产生多种数据，通过蒙特卡洛\n法进行抽样，生成风力发电机组并网节点的出力场景，在利用基于概率距离分析的场景\n削减选取具有代表性的场景，详细记录了削减后的场景数据，得出风电机组的等效出力\n值，从而对该风电节点进行数据简化。借助 MATLAB 进行分析和对比研究，用普通连\n续潮流法对 IEEE14 和 IEEE39 的风电并网节点进行稳定裕度计算求出 P-V 图，再利用\n改进后连续潮流法进行稳定裕度计算，以验证所提出改进连续潮流法的有效性。研究结\n果表明，传统连续潮流法和改进连续潮流算法在求取静态电压稳定临界点时，两种方法\n经过对比分析，本文提出的算法能够有效的减小迭代次数，缩短计算时间。最后利用本\n文改进后的连续潮流算法，分别计算 IEEE14 节点系统在含风电场和不含风电场的系统\n的电压稳定性，分析风力发电并网对系统静态电压的影响。\n",
+      "page_start": 4,
+      "page_end": 4,
+      "start": {
+        "page": 4,
+        "offset": 18
+      },
+      "end": {
+        "page": 4,
+        "offset": 933
+      },
+      "preview_end": {
+        "page": 4,
+        "offset": 933
+      },
+      "heading": "摘要",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 915,
+      "truncated": false,
+      "quality_flags": [
+        "multiple_heading_candidates"
+      ],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "1 绪论\n1.1 研究背景和意义\n目前，在世界的大环境下新能源里面风能利用的主流方式已转变为大规模风电机组\n并网发电的模式，不再是低渗透下的风力发电并网。特别是在美国、欧洲等发达国家和\n地区，它们凭借早许多年的研究和发展拥有我们目前为止还有些许差距的技术支撑和雄\n厚的资金实力，持续的将大型风电场融入电力网络并实现商业运营，为电力系统提供了\n充足的电力能源。“近年来，我国的风力发电行业呈现出迅猛的发展态势，其技术成熟\n度在众多新能源发电形式中脱颖而出。随着技术的不断进步，我国风力发电的累计装机\n容量也呈现出持续增长的态势。尽管相较于西方发达国家还有些许差距，这是因为我国\n是发展中国家，技术发展慢并且因长期发展工业，利用化石燃料较多，在风力资源的开\n发利用上起步较晚，但自进入 21 世纪以来，我国在风力发电领域的关键技术方面取得\n了显著突破，为大规模开发风力资源奠定了坚实的基石。这些突破不仅提升了风力发电\n的效率和可靠性，也为我国能源结构的优化和可持续发展提供了有力支撑。”\n我国疆域辽阔，风力资源遍布四方，自山东荣成率先打造并成功投入运营我国首个\n风电场以来，风力发电领域的技术突破层出不穷，取得了显著且令人瞩目的进步。这一\n领域的进步不仅展示了科技的力量，更为清洁能源的利用与发展注入了新活力。这些技\n术上的飞跃不仅充分展示了我国在新能源领域的深厚底蕴和强大实力，更为风电产业的\n蓬勃发展注入了源源不断的强大动力。我国风能资源储备丰富，总储量高达 43.5 亿 kW。\n在这些资源中，技术可开发量达到了 2.97 亿 kW，占据了显著的比重。这些技术可开发\n风能资源的面积广泛，约为 20 万平方千米。此外，还有潜在的技术可开发量约为 7900\n万 kW，体现了我国风能资源的巨大潜力。这些风能资源主要分布于内蒙、东北、新疆\n以及沿海地区，覆盖了中东部、华北、三北及华南等多个重要地区，为我国风电产业的\n发展提供了有力的支撑[1]。\n高比例的风电和光伏发电的大规模接入电网，不仅是我国电力网络发展的必然之路，\n更是新型电力体系的一大显著特点。这一趋势预示着我国能源结构正经历着深刻的变革，\n正坚定不移地迈向可持续发展的道路。在这一变革中，新能源的崛起将有力推动我国能\n源体系的转型升级，为实现绿色发展目标奠定坚实基石[2,3]。\n面对日益严峻的环境挑战和能源消耗压力，我国正致力于持续降低传统化石能源在\n能源消费中的占比，并大力发展风能、太阳能等可再生能源。这一举措不仅是实现能源\n结构绿色转型的关键一环，更是推动可持续发展的重要内容，对于构建清洁、低碳、高\n效的能源体系具有重要意义[4]。当前，我国正积极投入电力电子技术的研究，旨在为风\n力发电提供坚实的技术支撑，从而有效提升风力发电的效率和质量。然而，风力发电领\n域仍面临诸多挑战和问题，这些问题亟待解决，以确保风力发电的稳定性得到进一步提\n1 绪论 辽宁工业大学硕士学位论文\n2\n升。我们需深入剖析这些问题，提出切实可行的解决方案，为风力发电的可持续发展贡\n献力量[5]。风能资源的充分利用受限于其低利用密度、风速的不可控性以及风电场地理\n位置等因素。然而，通过风电并网技术，我们能够实现风能的可靠、安全和高效利用，\n从而有效降低能源消耗，减少环境污染，并充分发挥风能作为清洁能源的潜力。风电并\n网技术的应用对于推动能源结构的优化和可持续发展具有重要意义[6]。\n随着风电在电力系统中接入容量的不断增长，风电并网对系统稳定性的影响逐渐凸\n显，保障风电并网系统的稳定运行显得至关重要。在并网过程中，由于风速的波动性和\n电网中潜在扰动的存在，都可能引起并网系统功率的波动，从而导致电网电压、频率等\n关键参数的波动。为确保电力系统的安全、稳定、高效运行，我们必须高度关注风电并\n网所带来的挑战，并积极采取先进的技术手段和有效的管理措施，以应对这些潜在影响，\n推动风电产业的健康发展[7]。\n风力发电功率的注入因其特有的波动性随风速而变化改变了原有的潮流分布，这会\n对系统的电能质量可能产生负面影响，导致电能质量下降，从而不利于供电的可靠性。\n同时，风电场节点在运行过程中存在电压不稳定情况，为了维持电压稳定需要从电网中\n吸收无功功率，而无功功率影响着节点电压的大小，电压和无功功率之间存在着紧密的\n关联。当节点无功功率不足时，节点的电压会相应下降，这些不利因素都在一定程度上\n制约了风力发电的广泛应用。风电场并入电网后，风电场机组与电网之间的相互作用可\n能导致扰动现象的产生。特别是在发生故障的情况下，系统可能会出现振荡甚至崩溃，\n这不仅会威胁到系统自身的稳定运行，还可能对电网的整体安全构成严重威胁。因此，\n我们需要对风电并网后的稳定性问题给予足够的重视，并采取有效措施来应对这些潜在\n风险，确保电力系统的安全和稳定运行[8]。\n1.2 国内外研究现状\n近年来，风力发电带来的技术问题作为可再生能源领域的热点，吸引了全球学者的\n广泛关注与研究。国内外学者在此领域取得了显著的成果，其研究焦点主要聚焦于提高\n风电并网的运行效率与稳定性，以减少其对电网的冲击与影响。同时，随着智能电网和\n可再生能源技术的持续演进，风电并网系统迎来了前所未有的发展机遇，但与此同时，\n也面临着日益复杂的挑战。在这一背景下，持续深入的研究与技术创新显得尤为重要。\n因此为提升我国的能源安全水平并弥补在石油资源方面的不足，我国正积极发展新能源。\n面对能源与环境之间的矛盾，我们已开始寻求新的解决方案。其中，开发新能源便是重\n要一环，它不仅可以增强我国的能源自主性，还能有效缓解对石油资源的过度依赖，进\n而促进经济与环境的协调发展[9]。\n在我国，主要的发电方式包括热力发电、风力发电和水力发电。相较于热力与水力\n发电，风力发电的投入成本更低。风能作为一种清洁能源，能够将自然资源转化为电能，\n具备生态和可持续性的特点。风力发电设备是整个发电系统的重要组成部分，因此，对\n1 绪论 辽宁工业大学硕士学位论文\n3\n发电设备的运行状态进行监测，能有效预防相关故障的发生。定期检查和维护相关设备\n机组，不仅有助于降低发电成本，还能推动风力发电事业的健康发展。因此，加强对风\n力发电设备安全管理工作的研究具有极高的现实意义[10]。\n在全球性挑战如能源危机、环境污染和气候变化愈发严峻的背景下，风能、太阳能、\n生物质能和海洋能等可再生能源迅速成为各国竞相发展的战略重点。可再生能源发电正\n在逐渐成为各国电力体系中的核心组成部分，为应对全球挑战提供了有力的支持。其中，\n在“十四五”期间，风电大型基础设施的发展被确立为我国新能源开发的核心内容之一，\n其推进速度正在持续加快[11,12]。\n“如今，风力发电已然崛起，成为世界上可再生能源发电领域的重要支柱之一。随\n着科技的进步和环保意识的提升，全国各地的风力发电量持续保持稳健增长态势，展现\n出令人瞩目的前景。风力发电以其独特的优势和巨大的潜力，正逐渐成为我们应对能源\n危机和气候变化的重要武器[13]。”\n国外研究指出，当风电比重达到 20%这一显著规模时，电力系统的规划和运行方式\n将经历巨大变革，对电网的安全稳定运行、可靠性与经济性产生深远影响。同时，随着\n越来越多风电场并入电网，电力系统的电压稳定运行也面临着严峻挑战。由于风速本身\n具备不稳定的间歇性特点，风力发电机组输出的功率会随之不断波动。这种风力资源的\n不稳定性，结合风力发电机组自身的运行特性，使得其输出功率产生显著波动，进而不\n可避免地影响到电网的电压稳定运行。这种影响对电网的整体性能和稳定性构成了不容\n忽视的威胁[14]。\n1.2.1 静态电压稳定性研究现状\n电压稳定性研究在电力领域中占据着举足轻重的地位。根据扰动规模的不同，该研\n究可细节化为两大核心领域：静态电压稳定性研究与暂态电压稳定性研究。静态电压稳\n定性指的是系统遭受微小扰动时，电压能否维持在或迅速恢复到设定的安全范围内，并\n且能够自主地回归至原先的稳定运行状态；而暂态电压稳定性则侧重于探讨系统在正常\n运行期间，一旦遭受如短路等重大扰动后，能否保持同步性，顺利地从原有的平衡状态\n过渡到新的运行状态，并在新状态下维持稳定运行。这两大研究领域共同构成了电压稳\n定性分析的核心内容，为电力系统的稳定运行提供了重要的理论支撑。\n当前，随着风力发电系统并网技术的持续进步，国内外的研究学者与机构均积极投\n身于其静态电压稳定性问题的深入探索之中。在这一研究领域中，各种前沿的分析方法\n得到了广泛的采纳与应用，从而为电力系统的安全、稳定运行提供了坚实的后盾。这方\n法在风力发电系统并网稳定性研究中发挥着重要作用，为电力系统的稳定运行提供了有\n力支持。主要有：\n（1）连续潮流法（延拓法）\n文献[15]在深入探索电力系统稳定性领域取得了显著成果，其研究独创一种新方法，\n1 绪论 辽宁工业大学硕士学位论文\n4\n将连续潮流算法与 P-V 曲线巧妙地融为一体，成功捕捉到了极限稳定运行点，并有效攻\n克了常规潮流计算在接近极限运行点时可能遭遇的收敛性难题。这一创新方法不仅大幅\n提升了计算的精准度，还显著增强了电力系统分析的可靠性。由于潮流方程  , λF x 的\n非线性特性使得解的存在性问题变得异常复杂。对于包含 n 个节点的电力系统而言，理\n论上解的数量堪称庞大。这种多解性无疑给电力系统的分析和优化带来了极大的挑战。\n在负荷不断增长的过程中，潮流方程解的数目明显展现出递减的态势，这种减少是以成\n对的方式悄然发生的。当系统逐渐逼近其运行极限的边界时，解的个数最终凝聚至仅存\n的两个极端状态：高压解与低压解。特别值得一提的是，这两个解在奇异点处展现出了\n精确的对称性，这一独特现象宛如一把钥匙，凭借这一独特的特性，我们可以对潮流解\n的个数及其之间的细微差异进行详尽而深入的分析，从而精确评估电力系统的稳定性状\n况。通过统计解的个数，并结合解之间距离的改变，我们能够有效地预测系统的运行状\n态，敏锐捕捉潜在的不稳定因素，并据此制定针对性的干预和优化措施。\n在文献[16]中，作者运用了尖端的可行解域分析技术，成功确定了系统运行边界的\n关键运行极限点。可行解域其实是一个具备独特特质的凸锥体，其顶点精准无误地坐落\n在坐标原点之上。这一重大发现，无疑为我们准确捕捉系统运行状态的临界条件奠定了\n坚实的理论基础。尤为值得一提的是，该研究独辟蹊径地提出了一个新颖且实用的观点：\n通过精确度量某一特定方向上两个切平面之间的夹角，我们能够有效地对电压稳定性进\n行量化评估。这些研究为电力系统的稳定性分析提供了新的视角和工具。\n（2）零特征根法\n直接求解电压稳定临界点，无疑是探究电力系统稳定性的高效且直接的手段。其核\n心理念在于，通过逐步增加系统负荷，细致观察 Jacobi 矩阵的变化，直至其出现奇异现\n象，从而精准地揭示出系统稳定性的临界点。当系统到达这一临界点时，SVD 分解技术\n便如一位敏锐的侦探，能够迅速捕捉到系统的零特征根，并深入剖析其对应的左右特征\n向量。借助这些特性，我们得以对系统的潮流方程进行巧妙的扩展与重构，进而精确求\n解出静态稳定极限点。然而，这种方法并非十分完善，没有任何缺点，它自身所带有的\n主要弊端亦是不能轻视的。详细说来，它对起始值的敏感度极高，即使是微小的起始值\n差异，也可能对最终结果的精确性产生至关重要的影响。因此，在求解过程中，我们必\n须仔细筛选并采用特定的初始化策略，以确保起始值的准确性。此外，该方法在处理不\n等式约束时存在局限，往往导致得到的结果不尽如人意。尝试用对改进方法进行计算但\n结果仍然差强人意。\n（3）灵敏度分析法\n该方法基于潮流计算，巧妙运用系统中特定物理量的微分关系，精准地展现出关键\n变量的灵敏度，为揭示电网中的弱稳定节点和区域发挥了至关重要的作用，为无功补偿\n点的明确提供了坚实的基石。作为较早应用于稳定分析领域的杰出方法，灵敏度分析法\n1 绪论 辽宁工业大学硕士学位论文\n5\n在多个方面展现出其卓越的价值和显著优势：首先，从编程实现的角度来看，灵敏度分\n析法堪称简便高效，无需涉及复杂的算法和冗长的计算过程，使其在实际应用中得以迅\n速推广与实施。然而，其局限性亦不容忽视。特别是在处理发电机特定变量的约束以及\n负荷变化时，该方法往往无法将其充分反映在计算方程中，这在一定程度上限制了其分\n析的全面性和准确性。因此，在实际应用中，其结果更多地作为参考依据，而非绝对结\n论。\n这意味着，尽管我们能够在一定程度上理解电压稳定与无功功率之间的相互影响，\n但在实际电力系统中，尤其是当负荷变化成为关键因素时，这种分析的适用性可能会受\n到一定限制。因此，在未来的研究中，我们需要进一步加强对负荷约束的考虑，以更全\n面、更准确地揭示电压稳定与无功功率之间的关系。\n（4）奇异值分解法\n该方法以 Jacobi 矩阵为核心分析对象，通过多样化的分解技巧来准确评估系统的稳\n定裕度。德国杰出的数学家维尼可夫，以其敏锐的洞察力和深厚的数学造诣，首次提出\n了一个具有划时代意义的观点。他与众不同的巧妙的构思将 Jacobi 矩阵的奇异程度作为\n衡量电压稳定性的核心指标，这一创新性的见解为电力系统的稳定性分析揭开了新的篇\n章。维尼可夫的这一重大发现，不仅在数学界引起了强烈的震动，更在电力系统领域产\n生了深远且广泛的影响[17]。在维尼可夫研究的基础上，Tiranuchit 进一步拓展并深化了\n这一成果，将其理论推向了新的高度。他巧妙地运用 Jacobi 矩阵的最小奇异值作为精确\n衡量电压稳定性程度的标尺，这一方法不仅具备高度的准确性，更在实际应用中展现出\n卓越的实用性。尤为值得赞美的是，Tiranuchit 成功地首次计算出了当前运行点与极限\n运行点之间的距离，这一突破性的研究为电力系统的稳定运行提供了宝贵的理论依据和\n关键数据支持。从而为电力系统的稳定运行提供了有力的理论证明。这一方法的提出不\n仅丰富了电力系统稳定性的分析手段，也为后续研究提供了新的思路。Begovic 则是尝\n试对最优乘子法这一方法的潮流编程中的 Jacobi 矩阵进行了降阶处理减少矩阵的阶数，\n以简化计算并提高分析效率。在此基础上，他进一步利用处理后的最小特征值作为判断\n电压稳定裕度的关键指标，为电力系统的稳定运行提供了更为精准和可靠的评估方法[18]。\n在深入分析静态电压稳定性的过程中，文献[19]详细比较了潮流矩阵与降阶矩阵的不同\n之处及其相互联系。但是，由于无功不足电压降低无功过多电压升高我们发现两者之间\n存在紧密的关联，我们通过上面的叙述可以看出方法所依赖的矩阵模型表现出高度的非\n线性。不但矩阵模型表现出非线性，矩阵模型的奇异值和特征值以及特征值对应的左右\n奇异特征向量同样展现出强烈的非线性特点。这种非线性特性使得该方法在全局范围内\n对系统电压稳定程度进行全面系统的分析时面临一定的困难。尽管如此，该方法仍然为\n我们提供了有价值的参考依据。\n（5）非线性规划法\n1 绪论 辽宁工业大学硕士学位论文\n6\n非线性规划法的精髓在于巧妙地将电压稳定裕度的求解问题转化为一个系统最优\n解的搜寻过程。这一方法不仅彰显了独特的创新思维，而且在处理等式和不等式约束条\n件时，展现出全面而细致的思考，从而确保了求解过程的精确无误与稳健可靠。其逻辑\n条理清晰，实用性显著，但在编程实现上相对复杂。尽管如此，非线性规划法在解决实\n际问题时展现出了良好的实用价值，为电压稳定裕度的准确求解提供了有力的工具。针\n对电压稳定临界点求解的复杂问题，巧妙地构建了一个非线性规划模型。该模型通过精\n准地运用非线性规划内点法，成功实现了对电压崩溃临界点的精确捕捉。这一方法的提\n出，不仅充分展示了作者在电力系统稳定性分析领域的深厚理论功底，更在实际应用中\n体现了其卓越的精确性和实用性。非线性规划内点法与其他分析电压稳定的算法相比，\n他的特点在于它能有效应对不等式约束，处理起来得心应手。同时，其计算速度足够快，\n完全能够满足在线分析的需求，确保实时性。更值得一提的是，非线性规划内点法能够\n迅速收敛到电压稳定点，为电力系统的稳定运行提供了坚实的保障。\n静态电压稳定性的研究核心在于潮流计算。通过深入的潮流分析，研究衍生出两大\n关键方向：一方面，我们倾力于崩溃点的精准计算，深入分析系统极限稳定运行的关键\n节点，以求对电力系统的稳定性形成全面且深入的了解确定极限节点。另一方面，我们\n专注于稳定裕度的详细分析，以揭示静态电压稳定系统稳定性能的核心问题的关键。静\n态电压稳定分析的核心议题，实则在于详尽探究潮流方程是否具备可行的解，而临界潮\n流解则被视为系统稳定运行的边界状态，即崩溃点。这样的分析框架不仅有助于我们深\n入理解静态电压稳定性的本质，还为后续的研究提供了坚实的理论保障。文献[20]对高\n渗透率下的风电场并网其中的风电场功率出力、机端电容器投切操作与灵敏度指标之间\n的相互作用关系进行了深入的剖析，并详细探讨了它们之间的内在联系，为我们全面理\n解该领域的动态过程提供了宝贵的信息。同时，文献[21]通过精确分析相关比、参与因\n子、潮流雅可比矩阵以及收缩有功和无功雅可比矩阵的最小模特征值，深刻揭示了电压\n不稳定的本质机理和失稳模式，为我们全面把握电压稳定性提供了独到的见解。此外，\n该文献还进一步计算了相关节点的稳定裕度信息，这些数据为电力系统的稳定运行提供\n了坚实的支撑，是优化电力系统运行策略时不可或缺的重要参考依据。在文献[22]中用\n了特征值分析法，对双馈异步风机组成的风电场在不同并网渗透率下的电压稳定性进行\n了详尽且精细的剖析。此举不仅加深了我们对于风电场电压稳定性的认知，更为风电场\n的稳定运行提供了坚实的理论基础。文献[23]运用连续潮流法，精确地绘制了风电场关\n键节点在有功功率出力变化下的 P-V 曲线，从而进一步揭示了风电场运行特性与电压稳\n定性之间的深刻联系。文献[24]深入探讨风电场注入有功功率作为单一控制参数时静态\n电压稳定机理的演变情况，还进一步探讨了结合无功补偿两者同时进行作为双控制参数\n时的影响，并借助分岔理论进行了深入的阐释。文献[25]提出了一种创新的负荷裕度概\n率分布求解方法。此方法通过精准地计算负荷裕度的概率密度函数，有效地揭示了非正\n1 绪论 辽宁工业大学硕士学位论文\n7\n常运行状态下电压失稳的概率。这一开创性的研究不仅为我们提供了一个全新的视角来\n评估风电系统接入后的静态电压稳定状态，更对保障风电系统的稳定运行和优化设计具\n有深刻的指导意义。\n1.2.2 连续潮流法研究现状\n连续潮流法，作为电力系统静态电压稳定分析的核心技术，通过逐步增加系统的负\n荷功率，致力于精确探寻电压稳定的临界点。这一方法在维护电力系统稳定运行中，扮\n演着举足轻重的角色。然而，在实际应用中，负荷步长的调控却犹如一把双刃剑，其难\n度之大，让人头疼不已。连续潮流法在负荷步长的设定，无疑对计算的效率与临界点的\n收敛性有着至关重要的影响。步长过小，虽然能在一定程度上提升计算的精确度，但付\n出的代价却是计算时间的急剧增加，效率大打折扣；而步长过大，则可能使计算过程变\n得动荡不安，甚至无法稳定收敛到真正的临界点[26]。因此，如何在确保计算精度的同时，\n又能兼顾计算效率，这无疑是连续潮流法面临的一大难题。\n此外，电力系统的复杂性也为连续潮流法的应用带来了不小的挑战。在实际的电力\n系统中，电源的分布、负荷的特性、网络的结构等因素错综复杂，犹如一张无形的网，\n共同影响着电压的稳定性。这使得连续潮流法的应用需要更加精细和灵活，以适应各种\n复杂多变的场景。尽管连续潮流法在电力系统静态电压稳定分析中展现出了重要的应用\n价值，但负荷步长的调控难题以及电力系统的复杂性都使得该方法在计算效率及临界点\n收敛性方面面临严峻的挑战。\n随着对潮流方法研究的不断深入，预测-校正技术凭借其独特优势，巧妙地融入连\n续潮流法中，为其注入了新的活力。该技术中，预测方法可以用于线性预测与非线性预\n测两个方面。在线性预测中，切线预测与割线预测尤为突出，成为重要的预测工具。\n然而，值得警惕的是，切线预测在某些应用场景中可能会面临预测值与实际值之间\n产生较大偏差的困境。这种偏差不仅可能导致迭代次数增多，还可能引发计算量的急剧\n攀升，从而对连续潮流法的计算效率和精度造成不利影响。因此，优化切线预测方法，\n减少预测误差，已成为研究者们亟待解决的关键问题。鉴于此，具备前瞻思维的研究者\n们提出了一种别具一格的策略，即巧妙地将切线法与割线法融合，以优化预测流程。在\n预测的初步阶段，他们审慎地运用了切线法，凭借其独特的性质进行初步估计，从而为\n后续的预测工作铺设了稳固的基石。随后，为了更进一步提升预测的精确度和计算效率，\n研究者们灵活地切换到割线法，进一步开展深入的预测工作[27]。\n近年来，非线性预测手段如牛顿插值技术和拉格朗日插值技术，在连续潮流法的应\n用中取得了引人注目的突破。相较于传统的线性预测方法，这些非线性技术不仅计算速\n度更快，而且在收敛可靠性方面也表现出更高的水准。这些创新方法的引入，为连续潮\n流法注入了新的活力，显著提高了其在实际问题中的预测精度和效率。这些方法的运用，\n为解决复杂预测难题提供了更为强大而有效的工具，推动了连续潮流法在各个领域的应\n1 绪论 辽宁工业大学硕士学位论文\n8\n用发展。在常规连续潮流法的计算过程中，传统的牛顿-拉夫逊法以其二阶的收敛性精\n度高一度占据主导地位，然而其计算效率却不尽如人意。为提高计算效率，研究者们创\n新性地提出了基于 PQ 分解法的迭代求解方法。这种方法以牛顿-拉夫逊法的极坐标形式\n为基础在其上改进而来相较于牛顿-拉夫逊法精度相差无几，虽增加迭代次数但是计算\n速度变快减少了计算量，但在高负荷条件下却可能面临收敛难题。\n当前，连续潮流法的研究正持续向更深入、更广泛的领域拓展。研究者们致力于发\n掘新型数学模型和算法，旨在进一步提升计算精度和效率。与此同时，随着人工智能、\n大数据等前沿技术的突飞猛进，连续潮流法有望与这些先进技术深度融合，形成智能化、\n高效化的电力系统分析新范式。鉴于可再生能源的日益普及和电力市场的不断演进，连\n续潮流法在相关领域的应用将愈发关键。尽管经过数十年的深入研究，连续潮流法已取\n得了显著成果，并广泛应用于商业软件中，但在实时应用方面，其计算速度仍有待提高。\n因此，未来的研究将聚焦于连续潮流法的优化与改进，以满足电力系统实时分析的高标\n准要求。展望未来，连续潮流法将继续完善与发展，为电力系统的规划、设计以及安全\n运行提供更加可靠、有效的技术支撑。我们坚信，随着技术的不断进步和研究的深入，\n连续潮流法将在电力系统中发挥更加重要的作用，为行业的可持续发展贡献力量。\n1.3 含风电场的电压稳定性分析\n虽然我国已初步构建了全面的风能发电链与市场体系，但相较于全球顶尖风电并网\n技术的成果，我国仍存在一定差距。随着风电发展的迅猛推进，风力发电在高渗透率下\n将大规模接入电网。然而，风电并网所带来的影响已成为制约我国风电并网技术进步的\n关键因素。风力发电因其固有的随机性和不可控性特点，展现出与风能相似的不可预测\n性。同时，风电并网点往往位于电力网络较为脆弱的配电网区域，这些区域的风力发电\n更易受到外界干扰，导致发出的电能难以有效控制。然而，电力系统的规定明确要求电\n网内各个节点必须保持稳定的有功功率和无功功率输出，这是维持电力系统静态电压稳\n定性的基本前提。因此，如何在风力发电的不可控性与电力系统的稳定性要求之间找到\n平衡，成为当前亟待解决的问题。虽然风能相较于其他可再生能源展现出显著的优势，\n但风机输出的有功功率却受限于风速这一关键因素。由于风速受到季节、天气等多种自\n然因素的制约，风机的输出功率难以实现持续稳定，这进一步影响了风电并网点的电能\n质量[28]。\n电能在国民经济中占据核心地位，各行业的运作和民众的日常生活均离不开它。随\n着居民生活水平的提升，对电能质量的要求也日益严格。然而，当大量风电并入电网时，\n由于电网部分结构相对薄弱，其无功支撑能力会显得不足[29]。针对风电并网所带来的对\n电压稳定性的深远影响，世界各国学术界已经从多个层面展开了详尽而细致的探讨。这\n些研究不仅全面涵盖了风电机组注入电网的功率程度，还进一步剖析了风电机组的无功\n特性、风电机组类型以及风电所占比例等核心要素。值得一提的是，当风电机组注入电\n1 绪论 辽宁工业大学硕士学位论文\n9\n网的有功功率超过某一关键阈值时，如果系统无法及时提供足够的无功功率与之相协调，\n电压稳定性将面临严重的挑战，甚至可能触发系统崩溃的极端局面 30]。风机的无功特性\n在维护电压稳定性方面有着关键性的作用关乎电压的升降。随着风机出力水平的逐步提\n升，其所需的无功功率也呈现出逐步增长的趋势，这无疑对风电并网区域的电压稳定性\n产生了直接的、不可忽视的影响[31]。为了精确衡量风电并网对电压稳定性的具体作用效\n果，引入了有功功率裕度，通过参考这一核心指标判断电压稳定。经过深入的分析与研\n究发现，在风电并网的过程中，适度的低功率注入竟然能够在一定程度上增强静态电压\n的稳定性。然而，令人惊讶的是，一旦功率注入超出某一临界范围，电压稳定性却可能\n遭受显著的损害[32]。这一重要发现为我们深入理解和认识风电并网在电力系统中的复杂\n影响提供了宝贵的启示。在文献[33]中，作者对风电并网系统的电压稳定性问题进行了\n全面而细致的探讨。该研究不仅运用了多种静态电压稳定性指标进行综合剖析，还深入\n解析了系统电压失稳的核心要素。研究结果表明，风电并网系统电压失稳的主要原因在\n于系统无功功率的支撑能力不足以及风机在输出无功功率方面的短板，不能自己产生无\n功功率。这一重要发现不仅为风电并网系统的稳定运行奠定了坚实的理论基础，更为实\n际运行中的电压稳定性控制提供了宝贵的实践指引。这一研究成果无疑为风电行业的可\n持续发展注入了新的活力，并有望推动风电并网系统在电压稳定性控制方面取得更大的\n突破。若我们能够实现风机并网区域的无功负荷与风机输出的有功功率进行的精细协调\n与优化使之减少出现电压不稳定的情况，风电并网的电压稳定性将得到显著的提升，为\n电力系统的稳定运行提供保障减少与之相关的麻烦。\n为了进一步探究不同风电机组在并网过程中的静态电压稳定性表现，我们采用了\nP-V 曲线法进行了深入的对比分析。经过细致的比较研究，我们发现双馈式感应风力发\n电机在风电出力发生波动时，因其独特的恒功率控制特性，与系统交换的无功功率相对\n较少，从而在静态电压稳定性方面展现出比异步风力发电机更为优越的性能[34]。这一发\n现无疑为风电并网技术的发展提供了重要的参考与启示。当研究了风电渗透率与风机接\n入电网的分散程度对电压稳定性的影响，发现低渗透率与分散接入有利于提高电压稳定\n性[35]。文献[36]揭示了负荷需求和风机出力不确定性对动态电压稳定裕度的影响。通过\n巧妙结合 P-V 曲线法与灵敏度法，我们深入剖析了风电并网前后系统电压薄弱节点的动\n态演变历程。经过周密的对比分析，风电并网对系统电压薄弱节点带来的显著变化一目\n了然。值得关注的是，随着风机出力的不断攀升，原本承受重压的电压薄弱节点悄然转\n移至风电场区域，仿佛一场电力格局的微妙变革正在悄然展开。在此基础上，我们进一\n步拓宽了研究视野。研究结果显示，随着风电渗透率的逐步提升，系统电压稳定性却呈\n现出令人担忧的下降趋势[37,38]。这一发现不仅深刻揭示了风电并网对系统电压稳定性的\n潜在威胁，而且为我们后续的优化设计提供了宝贵的参考。\n在风机出力较高时，需要采用无功电压控制来维持含风电系统的电压稳定性[39]。当\n1 绪论 辽宁工业大学硕士学位论文\n10\n地电网在采取大规模风电接入后，风电场有功功率输出的持续增长导致风电场接入点及\n其邻近母线电压逐渐呈现出下降趋势。若这一趋势得不到及时有效的控制，可能会引发\n电压崩溃的严重危机。这一现象深刻揭示了风电场接入对局部电力系统电压稳定性的显\n著影响，进而加剧了其稳定性的下降。通过进一步深入剖析，我们不难发现，风电场的\n无功支撑能力及其与电网的连接强度在地区电网电压稳定性中扮演着至关重要的角色，\n这一点不容忽视当无功不足会产生显著影响。具体而言，当风电场具备足够的无功支撑\n能力，并且电网规模较大时，系统的有功功率裕度也会相应增大，从而提高电网的电压\n稳定性[40]。在采用恒定的功率因数模式来调控风机功率输出，风电场将持续为电网注入\n电力。然而，此举亦伴随着线路无功损耗的渐进累积，这无疑对并网系统的电压稳定性\n构成了重大威胁，潜藏着可能引发一系列不利后果的风险。为有效应对这一挑战，亟需\n引入无功补偿设备，对系统进行必要的无功补偿。此举不仅能够平衡系统中的无功功率，\n更能显著增强风电系统的静态电压稳定性，从而确保电网的安全、稳定运行[41]。这一举\n措对于维护整个电力系统的健康运作具有不可或缺的重要性。直驱式永磁同步发电机并\n网会对电压稳定性产生多种影响，先是发现当风电渗透率低时也就是风力发电机少的情\n况能提高静态电压稳定性，但随着风机的增多表示渗透率也会相应增加从而会降低稳定\n性[42]。风力",
+      "page_start": 9,
+      "page_end": 20,
+      "start": {
+        "page": 9,
+        "offset": 20
+      },
+      "end": {
+        "page": 20,
+        "offset": 35
+      },
+      "preview_end": {
+        "page": 18,
+        "offset": 621
+      },
+      "heading": "1绪论",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 12773,
+      "truncated": true,
+      "quality_flags": [
+        "multiple_heading_candidates",
+        "numbered_boundary_candidate",
+        "text:private_use_characters",
+        "truncated"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "5 结论和展望\n5.1 结论\n我国正在大力发展新能源改变以化石能源为主的处境，风力发电作为可再生能源领\n域的核心组成部分，在电力系统中发挥着日益显著的作用。本文介绍了目前应用比较广\n泛的风力发电机组和风电场并网的潮流计算模型，传统的连续潮流算法在求取静态电压\n稳定临界点有计算量大的问题，因此提出在连续潮流法的步长控制环节中加入自适应步\n长来改进连续潮流法，从生成的风力发电机组出力场景中用蒙特卡洛法和场景削减选出\n最具代表性的场景，利用 Matlab 对传统连续潮流法和改进后的连续潮流法进行仿真分\n析，最后进行仿真对比。本文得到以下结论：\n（1）含风电场的连续潮流算法在求取静态电压稳定临界点有计算量大的问题，通\n过加入自适应来对步长控制环节进行改变，使其在面对风电场功率波动较大或较小的问\n题，能对步长进行改变。\n（2）风电并网后因风电的波动性会造成功率不同产生多种数据，通过蒙特卡洛法\n进行抽样抽取以上数据生成风机出力场景，在利用场景削减选取特定的场景，详细记录\n了削减后的场景数据，并得出风电机组的等效出力值，进行场景的简化。借助 Matlab\n进行了分析和对比研究，通过对传统连续潮流法和改进连续潮流算法求取静态电压稳定\n临界点相比较，本文提出的算法能够有效的减小迭代次数，缩短计算时间，提高计算效\n率。\n（3）利用本文改进后的连续潮流算法，分别计算 IEEE14 节点系统在含风电场和不\n含风电场的系统的电压稳定性，发现风电并网后系统的稳定裕度有所降低，这主要是由\n于双馈式风力发电机群在发出有功功率的同时需要从电网吸收无功功率，因此需要增加\n无功补偿装置来分担缺少的部分无功功率。\n5.2 展望\n同时国家正在大力发展新能源发电，以后的发电结构或慢慢变长新能源发电为主，\n化石能源发电为辅的结构，装机容量会不断扩大可能会出现多个高渗透率的分布式电源\n结合火电厂或热电厂进行供电对静态电压稳定造成不同的影响，所以仍有很多不足之处\n等着去做新的研究。\n以下为本文的进一步展望：\n（1）由于目前只考虑了风电并网后的静态电压稳定，没有考虑风电并网在动态和\n暂态稳定的情况，还需要进一步深入研究来提高动态和暂态电压稳定计算速度。\n（2）多种高渗透率的其他分布式电源和风电相结合并网比如：光伏电厂或潮汐能\n电厂联合风电场进行供电从对静态电压稳定造成不同程度的影响需要进一步研究。\n",
+      "page_start": 58,
+      "page_end": 58,
+      "start": {
+        "page": 58,
+        "offset": 24
+      },
+      "end": {
+        "page": 59,
+        "offset": 0
+      },
+      "preview_end": {
+        "page": 59,
+        "offset": 0
+      },
+      "heading": "5结论和展望",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 991,
+      "truncated": false,
+      "quality_flags": [
+        "multiple_heading_candidates"
+      ],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "abstract:multiple_heading_candidates",
+    "conclusion:multiple_heading_candidates",
+    "introduction:multiple_heading_candidates",
+    "introduction:numbered_boundary_candidate",
+    "introduction:text:private_use_characters",
+    "introduction:truncated",
+    "page:12:private_use_characters",
+    "page:24:fragmented_text",
+    "page:24:private_use_characters",
+    "page:25:private_use_characters",
+    "page:26:private_use_characters",
+    "page:27:private_use_characters",
+    "page:28:private_use_characters",
+    "page:29:private_use_characters",
+    "page:31:fragmented_text",
+    "page:31:private_use_characters",
+    "page:34:fragmented_text",
+    "page:34:private_use_characters",
+    "page:35:private_use_characters",
+    "page:36:fragmented_text",
+    "page:36:private_use_characters",
+    "page:37:private_use_characters",
+    "page:38:fragmented_text",
+    "page:38:private_use_characters",
+    "page:39:fragmented_text",
+    "page:39:private_use_characters",
+    "page:40:fragmented_text",
+    "page:40:private_use_characters",
+    "page:41:fragmented_text",
+    "page:41:private_use_characters",
+    "page:43:fragmented_text",
+    "page:43:private_use_characters",
+    "page:44:fragmented_text",
+    "page:44:private_use_characters",
+    "page:45:private_use_characters",
+    "page:49:private_use_characters",
+    "page:50:private_use_characters",
+    "page:56:private_use_characters"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 4,
+      "offset": 18,
+      "heading": "摘要",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 4,
+      "offset": 933,
+      "heading": "关键词:风电并网;连续潮流法;静态电压稳定;蒙特卡洛法;场景削减",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "abstract",
+      "page": 5,
+      "offset": 25,
+      "heading": "abstract",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 6,
+      "offset": 374,
+      "heading": "keywords:windpowergridconnection;continuouspowerflowmethod;staticvoltage",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 9,
+      "offset": 20,
+      "heading": "1绪论",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 9,
+      "offset": 25,
+      "heading": "1.1研究背景和意义",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 10,
+      "offset": 793,
+      "heading": "1.2国内外研究现状",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 11,
+      "offset": 683,
+      "heading": "1.2.1静态电压稳定性研究现状",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 15,
+      "offset": 108,
+      "heading": "1.2.2连续潮流法研究现状",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 16,
+      "offset": 597,
+      "heading": "1.3含风电场的电压稳定性分析",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 18,
+      "offset": 714,
+      "heading": "1.4存在问题",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 18,
+      "offset": 939,
+      "heading": "1.5本文主要研究内容",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 20,
+      "offset": 35,
+      "heading": "2典型风力机及风电并网潮流计算模型",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 20,
+      "offset": 54,
+      "heading": "2.1引言",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 20,
+      "offset": 291,
+      "heading": "2.2风电机组的主要类型",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 20,
+      "offset": 305,
+      "heading": "2.2.1恒速恒频风力发电机组",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 20,
+      "offset": 631,
+      "heading": "2.1所示:",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 21,
+      "offset": 322,
+      "heading": "2.2.2变速恒频风力发电机组",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 23,
+      "offset": 776,
+      "heading": "2.3风速模型和潮流计算模型",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 23,
+      "offset": 792,
+      "heading": "2.3.1风速数学模型",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 24,
+      "offset": 434,
+      "heading": "vgptttttttt",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 25,
+      "offset": 104,
+      "heading": "2.3.2威布尔函数",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 26,
+      "offset": 535,
+      "heading": "2.3.3风电场模型",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 27,
+      "offset": 984,
+      "heading": "2.3.4风电场计算模型",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 28,
+      "offset": 299,
+      "heading": "2.4风电并网潮流计算模型",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 29,
+      "offset": 391,
+      "heading": "2.5含风电场潮流计算步骤",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 30,
+      "offset": 35,
+      "heading": "2.6风电场并网等值模型",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 31,
+      "offset": 389,
+      "heading": "xx",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 31,
+      "offset": 402,
+      "heading": "vacvac",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 33,
+      "offset": 30,
+      "heading": "3计及风电场的连续潮流法",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 33,
+      "offset": 44,
+      "heading": "3.1引言",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 33,
+      "offset": 291,
+      "heading": "3.2连续潮流法",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 35,
+      "offset": 142,
+      "heading": "3.2.1参数化",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 37,
+      "offset": 435,
+      "heading": "3.2.2预测环节",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 41,
+      "offset": 292,
+      "heading": "mlqq",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 42,
+      "offset": 112,
+      "heading": "3.3.4考虑风电特性的连续潮流改进方法",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 44,
+      "offset": 202,
+      "heading": "xxdx",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 45,
+      "offset": 100,
+      "heading": "3.4算例分析",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 47,
+      "offset": 300,
+      "heading": "3.5本章小结",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 48,
+      "offset": 31,
+      "heading": "4计及风电场的静态电压稳定分析",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 48,
+      "offset": 48,
+      "heading": "4.1引言",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 48,
+      "offset": 360,
+      "heading": "4.2场景削减",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 48,
+      "offset": 590,
+      "heading": "4.2.1常规场景削减方法",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 49,
+      "offset": 193,
+      "heading": "4.2.2静态电压问题的场景削减方式",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 50,
+      "offset": 306,
+      "heading": "4.2.3蒙特卡洛法",
+      "level": 3,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 51,
+      "offset": 31,
+      "heading": "4.3改进连续潮流法仿真分析",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 56,
+      "offset": 616,
+      "heading": "4.4计及风电场的静态电压稳定裕度计算和分析",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 57,
+      "offset": 637,
+      "heading": "4.5本章小结",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 58,
+      "offset": 24,
+      "heading": "5结论和展望",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 58,
+      "offset": 32,
+      "heading": "5.1结论",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 58,
+      "offset": 723,
+      "heading": "5.2展望",
+      "level": 2,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 59,
+      "offset": 0,
+      "heading": "参考文献辽宁工业大学硕士学位论文",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "references",
+      "page": 59,
+      "offset": 18,
+      "heading": "51参考文献",
+      "level": 1,
+      "method": "joined_heading",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 60,
+      "offset": 0,
+      "heading": "参考文献辽宁工业大学硕士学位论文",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    },
+    {
+      "kind": "references",
+      "page": 61,
+      "offset": 0,
+      "heading": "参考文献辽宁工业大学硕士学位论文",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": true
+    }
+  ],
+  "toc_pages": [
+    7,
+    8
+  ],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 107
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [],
+      "chars": 96
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [],
+      "chars": 256
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [],
+      "chars": 965
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3200
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [],
+      "chars": 504
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3103
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1419
+    },
+    {
+      "page": 9,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1224
+    },
+    {
+      "page": 10,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1249
+    },
+    {
+      "page": 11,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1181
+    },
+    {
+      "page": 12,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1261
+    },
+    {
+      "page": 13,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1253
+    },
+    {
+      "page": 14,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1348
+    },
+    {
+      "page": 15,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1244
+    },
+    {
+      "page": 16,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1284
+    },
+    {
+      "page": 17,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1346
+    },
+    {
+      "page": 18,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1137
+    },
+    {
+      "page": 19,
+      "error": null,
+      "quality_flags": [],
+      "chars": 220
+    },
+    {
+      "page": 20,
+      "error": null,
+      "quality_flags": [],
+      "chars": 732
+    },
+    {
+      "page": 21,
+      "error": null,
+      "quality_flags": [],
+      "chars": 818
+    },
+    {
+      "page": 22,
+      "error": null,
+      "quality_flags": [],
+      "chars": 902
+    },
+    {
+      "page": 23,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1257
+    },
+    {
+      "page": 24,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1157
+    },
+    {
+      "page": 25,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1220
+    },
+    {
+      "page": 26,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1282
+    },
+    {
+      "page": 27,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1270
+    },
+    {
+      "page": 28,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1163
+    },
+    {
+      "page": 29,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 767
+    },
+    {
+      "page": 30,
+      "error": null,
+      "quality_flags": [],
+      "chars": 915
+    },
+    {
+      "page": 31,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 704
+    },
+    {
+      "page": 32,
+      "error": null,
+      "quality_flags": [],
+      "chars": 171
+    },
+    {
+      "page": 33,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1109
+    },
+    {
+      "page": 34,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 857
+    },
+    {
+      "page": 35,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 775
+    },
+    {
+      "page": 36,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 772
+    },
+    {
+      "page": 37,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 747
+    },
+    {
+      "page": 38,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1109
+    },
+    {
+      "page": 39,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 799
+    },
+    {
+      "page": 40,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 942
+    },
+    {
+      "page": 41,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 859
+    },
+    {
+      "page": 42,
+      "error": null,
+      "quality_flags": [],
+      "chars": 170
+    },
+    {
+      "page": 43,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 1039
+    },
+    {
+      "page": 44,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters",
+        "fragmented_text"
+      ],
+      "chars": 952
+    },
+    {
+      "page": 45,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 439
+    },
+    {
+      "page": 46,
+      "error": null,
+      "quality_flags": [],
+      "chars": 598
+    },
+    {
+      "page": 47,
+      "error": null,
+      "quality_flags": [],
+      "chars": 518
+    },
+    {
+      "page": 48,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1075
+    },
+    {
+      "page": 49,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1119
+    },
+    {
+      "page": 50,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 1113
+    },
+    {
+      "page": 51,
+      "error": null,
+      "quality_flags": [],
+      "chars": 887
+    },
+    {
+      "page": 52,
+      "error": null,
+      "quality_flags": [],
+      "chars": 644
+    },
+    {
+      "page": 53,
+      "error": null,
+      "quality_flags": [],
+      "chars": 188
+    },
+    {
+      "page": 54,
+      "error": null,
+      "quality_flags": [],
+      "chars": 186
+    },
+    {
+      "page": 55,
+      "error": null,
+      "quality_flags": [],
+      "chars": 184
+    },
+    {
+      "page": 56,
+      "error": null,
+      "quality_flags": [
+        "private_use_characters"
+      ],
+      "chars": 983
+    },
+    {
+      "page": 57,
+      "error": null,
+      "quality_flags": [],
+      "chars": 971
+    },
+    {
+      "page": 58,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1014
+    },
+    {
+      "page": 59,
+      "error": null,
+      "quality_flags": [],
+      "chars": 2091
+    },
+    {
+      "page": 60,
+      "error": null,
+      "quality_flags": [],
+      "chars": 2354
+    },
+    {
+      "page": 61,
+      "error": null,
+      "quality_flags": [],
+      "chars": 1647
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 4,
+      "cue": "简化",
+      "snippet": "入自适应系数来确定步长以得到较准确 P-V 曲线，\n在算法上减少迭代次数，缩短计算时间，达到连续潮流算法较快求取静态电压稳定临界\n点的目的。\n此外，风电并网节点因风电的波动性会造成功率不同产生多种数据，通过蒙特卡洛\n法进行抽样，生成风力发电机组并网节点的出力场景，在利用基于概率距离分析的场景\n削减选取具有代表性的场景，详细记录了削减后的场景数据，得出风电机组的等效出力\n值，从而对该风电节点进行数据简化。借助 MATLAB 进行分析和对比研究，用普通连\n续潮流法对 IEEE14 和 IEEE39 的风电并网节点进行稳定裕度计算求出 P-V 图，再利用\n改进后连续潮流法进行稳定裕度计算，以验证所提出改进连续潮流法的有效性。研究结\n果表明，传统连续潮流法和改进连续潮流算法在求取静态电压稳定临界点时，两种方法\n经过对比分析，本文提出的算法能够有效的减小迭代次数，缩短计算时间。最后利用本\n文改进后的连续"
+    },
+    {
+      "page": 4,
+      "cue": "难以",
+      "snippet": "摘要 辽宁工业大学硕士学位论文\nI\n摘 要\n我国正在大力发展新能源改变以化石能源为主的处境，风力发电作为可再生能源领\n域的核心组成部分，在电力系统中发挥着日益显著的作用。然而，随着风电并网规模的\n扩大，风力发电的风速难以控制不稳定产生功率波动，其发电特性对电力系统电能质量\n乃至稳定性产生影响，成为制约其进一步发展的因素之一。因此，本文针对高渗透率下\n的风电并网系统静态电压稳定性的问题展开研究具有理论意义与实用价值，主要工作内\n容如下：\n深入研究了风电并网对静态电压稳定性产生的影响，分析导致电压不稳定性的主要\n原因。以典型风力发电机组并网运行为研究对象，发现风速的变化整体和威布尔函数相\n似呈正态分布，建立风电机组及"
+    },
+    {
+      "page": 5,
+      "cue": "simplified",
+      "snippet": "based on probabilistic distance analysis,\nand the reduced scenario data are recorded in detail to obtain the equivalent output value of\nwind power units. Therefore, the data of the wind power node is simplified. With the help of\nMATLAB analysis and comparative research, the P-V diagram is obtained by using the\nordinary continuous power flow method to calculate the stability margin of IEEE14 and\nIEEE39 wind"
+    },
+    {
+      "page": 8,
+      "cue": "展望",
+      "snippet": ".............................. 43 \n4.4 计及风电场的静态电压稳定裕度计算和分析 ............................ 48 \n4.5 本章小结 ......................................................................................... 49 \n5 结论和展望........................................................................................... 50 \n5.1 结论 ................................................................................................."
+    },
+    {
+      "page": 10,
+      "cue": "不足",
+      "snippet": "和有效的管理措施，以应对这些潜在影响，\n推动风电产业的健康发展[7]。\n风力发电功率的注入因其特有的波动性随风速而变化改变了原有的潮流分布，这会\n对系统的电能质量可能产生负面影响，导致电能质量下降，从而不利于供电的可靠性。\n同时，风电场节点在运行过程中存在电压不稳定情况，为了维持电压稳定需要从电网中\n吸收无功功率，而无功功率影响着节点电压的大小，电压和无功功率之间存在着紧密的\n关联。当节点无功功率不足时，节点的电压会相应下降，这些不利因素都在一定程度上\n制约了风力发电的广泛应用。风电场并入电网后，风电场机组与电网之间的相互作用可\n能导致扰动现象的产生。特别是在发生故障的情况下，系统可能会出现振荡甚至崩溃，\n这不仅会威胁到系统自身的稳定运行，还可能对电网的整体安全构成严重威胁。因此，\n我们需要对风电并网后的稳定性问题给予足够的重视，并采取有效措施来应对这些潜在\n风险，确保电力系统的安全和稳定运行"
+    },
+    {
+      "page": 10,
+      "cue": "不足",
+      "snippet": "再生能源领域的热点，吸引了全球学者的\n广泛关注与研究。国内外学者在此领域取得了显著的成果，其研究焦点主要聚焦于提高\n风电并网的运行效率与稳定性，以减少其对电网的冲击与影响。同时，随着智能电网和\n可再生能源技术的持续演进，风电并网系统迎来了前所未有的发展机遇，但与此同时，\n也面临着日益复杂的挑战。在这一背景下，持续深入的研究与技术创新显得尤为重要。\n因此为提升我国的能源安全水平并弥补在石油资源方面的不足，我国正积极发展新能源。\n面对能源与环境之间的矛盾，我们已开始寻求新的解决方案。其中，开发新能源便是重\n要一环，它不仅可以增强我国的能源自主性，还能有效缓解对石油资源的过度依赖，进\n而促进经济与环境的协调发展[9]。\n在我国，主要的发电方式包括热力发电、风力发电和水力发电。相较于热力与水力\n发电，风力发电的投入成本更低。风能作为一种清洁能源，能够将自然资源转化为电能，\n具备生态和可持续性的特点。风"
+    },
+    {
+      "page": 12,
+      "cue": "局限",
+      "snippet": "。借助这些特性，我们得以对系统的潮流方程进行巧妙的扩展与重构，进而精确求\n解出静态稳定极限点。然而，这种方法并非十分完善，没有任何缺点，它自身所带有的\n主要弊端亦是不能轻视的。详细说来，它对起始值的敏感度极高，即使是微小的起始值\n差异，也可能对最终结果的精确性产生至关重要的影响。因此，在求解过程中，我们必\n须仔细筛选并采用特定的初始化策略，以确保起始值的准确性。此外，该方法在处理不\n等式约束时存在局限，往往导致得到的结果不尽如人意。尝试用对改进方法进行计算但\n结果仍然差强人意。\n（3）灵敏度分析法\n该方法基于潮流计算，巧妙运用系统中特定物理量的微分关系，精准地展现出关键\n变量的灵敏度，为揭示电网中的弱稳定节点和区域发挥了至关重要的作用，为无功补偿\n点的明确提供了坚实的基石。作为较早应用于稳定分析领域的杰出方法，灵敏度分析法"
+    },
+    {
+      "page": 13,
+      "cue": "局限",
+      "snippet": "1 绪论 辽宁工业大学硕士学位论文\n5\n在多个方面展现出其卓越的价值和显著优势：首先，从编程实现的角度来看，灵敏度分\n析法堪称简便高效，无需涉及复杂的算法和冗长的计算过程，使其在实际应用中得以迅\n速推广与实施。然而，其局限性亦不容忽视。特别是在处理发电机特定变量的约束以及\n负荷变化时，该方法往往无法将其充分反映在计算方程中，这在一定程度上限制了其分\n析的全面性和准确性。因此，在实际应用中，其结果更多地作为参考依据，而非绝对结\n论。\n这意味着，尽管我们能够在一定程度上理解电压稳定与无功功率之间的相互影响，\n但在实际电力系统中，尤其是当负荷变化成为关键因素时，这种分析的适用性可能会受\n到一定限制。因此，在未来的研究中，"
+    },
+    {
+      "page": 13,
+      "cue": "不足",
+      "snippet": "新的思路。Begovic 则是尝\n试对最优乘子法这一方法的潮流编程中的 Jacobi 矩阵进行了降阶处理减少矩阵的阶数，\n以简化计算并提高分析效率。在此基础上，他进一步利用处理后的最小特征值作为判断\n电压稳定裕度的关键指标，为电力系统的稳定运行提供了更为精准和可靠的评估方法[18]。\n在深入分析静态电压稳定性的过程中，文献[19]详细比较了潮流矩阵与降阶矩阵的不同\n之处及其相互联系。但是，由于无功不足电压降低无功过多电压升高我们发现两者之间\n存在紧密的关联，我们通过上面的叙述可以看出方法所依赖的矩阵模型表现出高度的非\n线性。不但矩阵模型表现出非线性，矩阵模型的奇异值和特征值以及特征值对应的左右\n奇异特征向量同样展现出强烈的非线性特点。这种非线性特性使得该方法在全局范围内\n对系统电压稳定程度进行全面系统的分析时面临一定的困难。尽管如此，该方法仍然为\n我们提供了有价值的参考依据。\n（5）非线性规划"
+    },
+    {
+      "page": 16,
+      "cue": "不足",
+      "snippet": "再生能源展现出显著的优势，\n但风机输出的有功功率却受限于风速这一关键因素。由于风速受到季节、天气等多种自\n然因素的制约，风机的输出功率难以实现持续稳定，这进一步影响了风电并网点的电能\n质量[28]。\n电能在国民经济中占据核心地位，各行业的运作和民众的日常生活均离不开它。随\n着居民生活水平的提升，对电能质量的要求也日益严格。然而，当大量风电并入电网时，\n由于电网部分结构相对薄弱，其无功支撑能力会显得不足[29]。针对风电并网所带来的对\n电压稳定性的深远影响，世界各国学术界已经从多个层面展开了详尽而细致的探讨。这\n些研究不仅全面涵盖了风电机组注入电网的功率程度，还进一步剖析了风电机组的无功\n特性、风电机组类型以及风电所占比例等核心要素。值得一提的是，当风电机组注入电"
+    },
+    {
+      "page": 16,
+      "cue": "有待",
+      "snippet": "研究者们致力于发\n掘新型数学模型和算法，旨在进一步提升计算精度和效率。与此同时，随着人工智能、\n大数据等前沿技术的突飞猛进，连续潮流法有望与这些先进技术深度融合，形成智能化、\n高效化的电力系统分析新范式。鉴于可再生能源的日益普及和电力市场的不断演进，连\n续潮流法在相关领域的应用将愈发关键。尽管经过数十年的深入研究，连续潮流法已取\n得了显著成果，并广泛应用于商业软件中，但在实时应用方面，其计算速度仍有待提高。\n因此，未来的研究将聚焦于连续潮流法的优化与改进，以满足电力系统实时分析的高标\n准要求。展望未来，连续潮流法将继续完善与发展，为电力系统的规划、设计以及安全\n运行提供更加可靠、有效的技术支撑。我们坚信，随着技术的不断进步和研究的深入，\n连续潮流法将在电力系统中发挥更加重要的作用，为行业的可持续发展贡献力量。\n1.3 含风电场的电压稳定性分析\n虽然我国已初步构建了全面的风能发电链与市场体系，但"
+    },
+    {
+      "page": 17,
+      "cue": "不足",
+      "snippet": "的是，一旦功率注入超出某一临界范围，电压稳定性却可能\n遭受显著的损害[32]。这一重要发现为我们深入理解和认识风电并网在电力系统中的复杂\n影响提供了宝贵的启示。在文献[33]中，作者对风电并网系统的电压稳定性问题进行了\n全面而细致的探讨。该研究不仅运用了多种静态电压稳定性指标进行综合剖析，还深入\n解析了系统电压失稳的核心要素。研究结果表明，风电并网系统电压失稳的主要原因在\n于系统无功功率的支撑能力不足以及风机在输出无功功率方面的短板，不能自己产生无\n功功率。这一重要发现不仅为风电并网系统的稳定运行奠定了坚实的理论基础，更为实\n际运行中的电压稳定性控制提供了宝贵的实践指引。这一研究成果无疑为风电行业的可\n持续发展注入了新的活力，并有望推动风电并网系统在电压稳定性控制方面取得更大的\n突破。若我们能够实现风机并网区域的无功负荷与风机输出的有功功率进行的精细协调\n与优化使之减少出现电压不稳定的情况，风"
+    },
+    {
+      "page": 18,
+      "cue": "不足",
+      "snippet": "取大规模风电接入后，风电场有功功率输出的持续增长导致风电场接入点及\n其邻近母线电压逐渐呈现出下降趋势。若这一趋势得不到及时有效的控制，可能会引发\n电压崩溃的严重危机。这一现象深刻揭示了风电场接入对局部电力系统电压稳定性的显\n著影响，进而加剧了其稳定性的下降。通过进一步深入剖析，我们不难发现，风电场的\n无功支撑能力及其与电网的连接强度在地区电网电压稳定性中扮演着至关重要的角色，\n这一点不容忽视当无功不足会产生显著影响。具体而言，当风电场具备足够的无功支撑\n能力，并且电网规模较大时，系统的有功功率裕度也会相应增大，从而提高电网的电压\n稳定性[40]。在采用恒定的功率因数模式来调控风机功率输出，风电场将持续为电网注入\n电力。然而，此举亦伴随着线路无功损耗的渐进累积，这无疑对并网系统的电压稳定性\n构成了重大威胁，潜藏着可能引发一系列不利后果的风险。为有效应对这一挑战，亟需\n引入无功补偿设备，对系统进行"
+    },
+    {
+      "page": 18,
+      "cue": "简化",
+      "snippet": "进一步提升。\n1.5 本文主要研究内容\n本文主要研究内容如下：\n（1）介绍本课题的国内外发展现状，建立风电并网潮流计算模型为后续研究奠定\n基础。\n（2）对连续潮流算法进行改进。连续潮流算法是电网静态电压稳定分析的重要工\n具，对传统的连续潮流算法求取静态电压稳定临界点计算量大的问题进行研究。达到减\n少计算迭代次数，提高计算效率的目的。\n（3）通过利用蒙特卡洛法和场景削减法的结合形成有代表性的风电场来简化数据，"
+    },
+    {
+      "page": 19,
+      "cue": "进一步研究",
+      "snippet": "工业大学硕士学位论文\n11\n减少因为风速的波动性造成的数据增多带来的计算量增加。\n（4）仿真分析。对 IEEE14 和 IEEE39 节点系统的节点进行改变，变成风电节点。\n通过仿真进行分析；对风电并网系统进行静态电压稳定分析。以 IEEE14 和 IEEE-39 节\n点系统为算例，应用改进连续潮流算法，求取风电并网后系统 P-V 曲线。\n（5）结论和展望。对本文工作内容进行梳理总结并进行评价，对进一步研究内容\n说明方向。"
+    },
+    {
+      "page": 20,
+      "cue": "简化",
+      "snippet": "成是传统的三相同步发电机，这一系统巧\n妙地融合了“恒速风力机与感应发电机的组合”。在这架构中，风力机与发电机借助齿\n轮箱实现了高效的工作效率，从而确保了能量的稳定且高效的传递。风力机方面，采用\n了先进的定桨距控制技术或主动失速调节技术，这些技术的应用使得功率的调控更加精\n确无误，有力地保证了风力发电系统的稳定运行。风力发电机组的发电机则通过断路器\n直接与电网相连，形成了所谓的刚性连接模式，此举不仅简化了系统的结构复杂性，还\n显著提升了运行的可靠性。在正常运行状态下，风力机维持恒定的转速运行，这一转速\n主要由发电机的极对数和齿轮箱的传动比共同决定。恒速恒频风电机组构示意图如图\n2.1 所示：\n图 2.1 恒速恒频风力发电机组结构图\nFig. 2.1 Structural diagram of constant speed and frequency wind turbines"
+    },
+    {
+      "page": 21,
+      "cue": "不足",
+      "snippet": "2 典型风力机及风电并网潮流计算模型 辽宁工业大学硕士学位论文\n13\n同步发电机在运行过程中不仅具备输出有功功率的能力，还能提供无功功率。然而，\n为了避免无功功率的不足，系统往往需要配备无功补偿装置，以确保电力系统的稳定运\n行。为确保同步发电机的稳定且高效运行，整个系统必须精细配置调速机构和励磁机构。\n二者相互协作，共同实现对频率、电压及功率的精准而高效的调控。否则，无功振荡与\n失步的风险将显著增加，特别是在重载条件下尤为显著。此外，由于风速的随机变化，\n恒速运行的风力发电机组无法始终保持风能转换效率在最高点，从而降低了风能的利用\n效率。因此，对于风力发电系统而"
+    },
+    {
+      "page": 23,
+      "cue": "不足",
+      "snippet": "2.3.1 风速数学模型\n风电机组以风为原动力，其动态特性直接受到风速的影响。因此，分析风电机组的\n动态特性至关重要，关键在于获取风电场在短时间内风速波动的具体数据，尤其是精确\n到秒级的风速信息。传统的风速预测模型主要聚焦于资源规划层面，旨在评估风电的经\n济性、长期稳定运行能力以及整个包含风电场的电力系统的可靠性。这些模型虽然为我\n们勾勒出了风电的基本特性，但在深入挖掘风电机组的动态行为方面仍显不足。通过获\n取并分析秒级风速数据，我们能够更细致地捕捉风电场运行中的微妙变化，从而为优化\n风电系统设计、提升其运行效率提供坚实的数据支撑。这样的深入分析将有助于我们更\n好地理解和利用风电资源，推动风电产业的持续发展。\n文献[46]深入阐述了一种基础的短期风速计算方法。该方法通过积分运算风速的功\n率谱密度函数，成功地从小时平均风速数据中推算出短时距风速数据。在构建过程中，\n该方法全面考虑了风速随机分量"
+    },
+    {
+      "page": 23,
+      "cue": "简化",
+      "snippet": "2 典型风力机及风电并网潮流计算模型 辽宁工业大学硕士学位论文\n15\n直驱式永磁风力发电机通过风吹动风力机直接驱动低速永磁交流电机实现电能的\n产生。直驱式发电系统采用了直接驱动技术，从而摒弃了传统的升速齿轮箱，实现了风\n力机与发电机的直接连接。这种设计不仅简化了机械传动结构，而且消除了润滑油泄露\n的风险，避免了齿轮箱过载和损坏等潜在问题。因此，直驱式风力发电机组不仅延长了\n维修周期，还显著降低了由齿轮箱引发的噪声污染和运维成本。特别是在低风速环境下，\n该系统能够展现出更高的发电效率，从而提升了风力发电的整体性能。直驱式永磁同步\n发电机组运用的是外转子式永磁同步风力发电机，这种发电机采用永磁体励磁方式，摒\n弃了滑环、电刷等复杂装置，使得其结构和尺寸设计更"
+    },
+    {
+      "page": 24,
+      "cue": "简化",
+      "snippet": "2 典型风力机及风电并网潮流计算模型 辽宁工业大学硕士学位论文\n16\n且部分参数在实际操作中难以获取，这无疑为其实施带来了一定的挑战。为了进一步精\n确刻画风能的随机性和间歇性特征，研究者们对风速模型进行了简化处理。他们概括了\n风速模型为几种典型的风速变化情况，包括基本风、阵风、渐变风和随机风等。这种简\n化不仅增强了模型的可理解性和应用性，还为实际风电系统的设计和运行分析提供了更\n为便捷的工具。通过模拟和分析这些典型风速变化情况，我们能够更深入地理解风电场\n的运行规律，从而为风电产业的持续发展提供有力支撑。\n（1）风电机组正常运行时，通常是处于某一功率水平，原则上可认为有一基本风\n速 WBV 与之对应。"
+    },
+    {
+      "page": 25,
+      "cue": "难以",
+      "snippet": "势；二是风速概率的分布模型，它着重于揭示风速分布的概率特性。在描述单峰特性\n的风速概率分布时，通常可选择采用正态分布、瑞利分布和威布尔分布等方法，这些分\n布模型能够精确地刻画风速分布的统计特性。风速的分布特性通常呈现出一种正向偏斜\n的非对称形态，这一特性在构建风速概率分布模型时往往被标准的对称正态分布所忽视。\n由于正态分布的固有对称性，使用其拟合风速数据会导致模型与真实风速分布之间存在\n显著偏差，难以准确反映风速的本质特征[47]。因此，在实际应用中，我们更倾向于选择\n瑞利分布或两参数威布尔分布来拟合风速数据。这两种分布能够更好地捕捉和体现风速\n的非对称特性，为风速分布建模提供了更为精确和细致的工具。瑞利分布实际上可以视\n为两参数威布尔分布的一种特殊形式。具体而言，当两参数威布尔分布的形状参数取值\n为 2 时，该分布即转化为瑞利分布。两参数威布尔分布不仅具有高度的灵活性，而且适\n应性卓越，能够"
+    },
+    {
+      "page": 26,
+      "cue": "简化",
+      "snippet": "能够更精确地刻画风电场的实际运行状况，从而为电力系统的稳定运\n行提供了坚实的理论支撑。\n（1） PQ 模型\n首先，我们借助风速与风力发电机组功率特性曲线的对应关系，精确计算出风电机\n组的有功输出。随后，为了确保风电机组在特定的功率因数下稳定运行，我们充分考虑\n了无功补偿装置的作用。在此基础上，我们进一步根据给定的功率因数估算出机组的无\n功输出。接下来，我们对所有风电机组的功率进行叠加处理。最后，为简化计算流程，\n我们将整个风电场视作一个统一的 PQ 节点，并将其整合至潮流计算程序中，从而实现\n了对整个风电场功率输出的高效分析。风电机组所吸收的无功功率与节点电压得波动紧\n密相连，一旦电压发生波动，无功功率便会相应地发生变化。在风电场中，若其无功补\n偿系统无法及时响应电压的快速变化，风场的功率因数将难以保持稳定，这无疑增加了\n风电场运营的不确定性和潜在风险。为了提高模型的准确性，研究者们持续探索，"
+    },
+    {
+      "page": 27,
+      "cue": "简化",
+      "snippet": "际运行状况时，能够\n确保更高的精确性和可靠性。然而，由于整个迭代过程被划分为两个步骤，导致迭代次\n数相对增加。此外，还有另一种方法，它通过调整潮流计算中的雅可比矩阵来反映有功\n功率、无功功率与机端电压之间的相互关系。另外，部分方法则是通过求取风电机组的\n有功功率与无功功率近似表达式来确定其风电机组所需的无功功率。其中，我们所需的\n有功功率与无功功率的之间相互的数据大小可以通过实验数据求取，或者通过简化异步\n机稳态等值电路的推导过程来得出。这些方法各具特色，为风电场的潮流计算提供了丰\n富多样的选择方案。\n（2） RX 模型\nRX 模型巧妙地将异步发电机的滑差表达为机端电压和有功功率的函数形式，从而\n成为准确刻画发电机运行状态的重要数学工具。在明确初始滑差和风速的前提之下，我\n们进一步采用异步发电机的等效电路方法，精确地计算出其等值阻抗 Z jX 。接着，我\n们将发电机视作阻抗型负载，并巧妙融入"
+    },
+    {
+      "page": 28,
+      "cue": "简化",
+      "snippet": "是系数不相同的时候的幂函数模型，第一项平方项可以\n看作恒阻抗模型不管系统如何变化阻抗是恒定的这部分功率与电压的平方成正比，第二\n项一次项可以看作是恒电流模型系统变化电流是恒定的这部分功率与电压成正比，第三\n项常数项为恒功率模型系统变化时候但是功率是一定的这部分功率与电压和电流均无\n关，因此该模型又被称为 ZIP 模型，式中各项系数之和等于 1，每项系数体现了各类负\n荷的比例。在此基础上风电并网图可简化为图 2.4 所示："
+    },
+    {
+      "page": 30,
+      "cue": "忽略",
+      "snippet": "步风\n机，再将其接入电力系统，从而实现了在保证研究重点的同时，有效降低了仿真模型的\n复杂度，提高了仿真效率。\n图 2.5 风电场并网模型\nFig. 2.5 Grid connection model of wind farm\n风电场容量加权等值方法的应用基于一系列重要前提：首先，风电场内的所有风电\n机组必须类型相同；其次，这些风电机组需通过变压器统一连接到同一条母线上。在运\n用此方法时，我们通常会忽略不同机组间电缆差异所带来的潜在影响，因为连接风电机\n组的电缆线路阻抗相较于变压器阻抗而言，其影响微乎其微。因此，在进行等值计算时，"
+    },
+    {
+      "page": 30,
+      "cue": "简化",
+      "snippet": "风机并联构成。\n由于每台风机的运行状态可能各异，加之突发情况导致的输出功率波动，单独对每台风\n机进行建模的方法并不可取。这种建模方式将带来极大的计算复杂性，不仅会导致仿真\n时间的显著延长，而且严重降低仿真的效率。因此，我们需要寻找一种更为合理且高效\n的建模方式，以准确反映风电场在电力系统中的实际运行情况。在建模过程中，我们需\n充分考虑到风电场运行的复杂性，在风电场建模的过程中，我们通常运用两种等效简化\n的策略。首先，有一种策略是将整个风电场视作一个统一的机组来进行建模，这种做法\n的主要目的是简化计算步骤，大幅度减少计算量，进而增强分析的效率。其次，另一种\n策略则是根据风电场内不同机组的类别以及它们的分布特点，将风电场等效为若干台具\n有代表性的机组。这种策略能更为精确地反映风电场的实际运行状况，对于复杂风电场\n的分析尤为重要。这两种等效简化的策略各有其优势，适应于不同的研究需求和分析目\n标，可以"
+    },
+    {
+      "page": 33,
+      "cue": "局限",
+      "snippet": "者们普遍采用传统的潮流\n计算方法。他们通过设定一定的电压裕度，逐步递增负荷功率，并反复进行迭代计算（通\n常需要经历 4 至 5 次的迭代过程），从而实现对临界点的精确计算。在迭代过程中，每\n次计算都会利用上一次的结果作为新一轮的输入，以此逐步逼近目标。然而，随着临界\n点的临近，雅可比矩阵在拐点附近呈现出奇异的特性，这使得计算过程可能无法收敛，\n从而导致结果的不准确。因此，在实际应用中，这种方法因其局限性而较少被采用。为\n了克服这一难题，确保潮流计算的收敛性，研究者们已经探索并采用了多种有效的策略\n和方法。其中，连续潮流方法通过整合预测、校正和步长选择等环节，显著提升了计算\n的可靠性[55]。\n虽然常规潮流计算对电力系统在不同状态下的电压水平进行能够有效地分析，当系\n统接近稳定极限时，常规潮流计算往往无法得出有效解，且其计算收敛性难以保证。这\n些固有的缺陷在一定程度上制约了其在实际应用中的广泛运"
+    },
+    {
+      "page": 43,
+      "cue": "假设",
+      "snippet": "（3.20）\n其中，α 表示线性关系的斜率，β表示截距。\n根据式（3.20）进一步推导，给出标准差的σ 的定义，如式（3.21）所示：\n    \n2\n1\n1σ α1\nN\nt\nP t V t βN \n    （3.21）\n式中，N 表示数据点的数量。使用标准差σ 定义置信区间，Z 值取值为 1.96，针对\n1.96 的取值，这是因为在统计学中，置信区间的计算通常基于正态分布的假设。对于一\n个标准正态分布，95%的观测值位于平均值的两个标准差之内。Z 值是正态分布的临界\n值，用于确定在给定置信水平下的置信区间。对于 95%的置信水平，需要考虑两侧的尾\n部面积，每侧为 2.5%。对于标准正态分布，查表 Z 值，可使得尾部面积为 2.5%。即 Z\n值大约是 1.96。\n在 95%的置信区间，Z 值取 1.96，风电输出的平均功率 P ，其计算公式如式（3.22）\n所示。\n "
+    },
+    {
+      "page": 48,
+      "cue": "简化",
+      "snippet": "两大关\n键方向：一方面，我们倾力于崩溃点的精准计算，深入分析系统极限稳定运行的关键节\n点，以求对电力系统的稳定性形成全面且深入的了解确定极限节点。另一方面，我们专\n注于稳定裕度的详细分析，以揭示静态电压稳定系统稳定性能的核心问题的关键。静态\n稳定分析的核心议题，实则在于详尽探究潮流方程是否具备可行的解，而临界潮流解则\n被视为系统稳定运行的边界状态，即崩溃点。本章节以蒙特卡洛法和场景削减法相互结\n合简化数据为基础，应用改进后连续潮流法对加入风电场的 IEEE14 节点和 IEEE39 节\n点进行仿真分析得到 P-V 曲线计算静态电压稳定。\n4.2 场景削减\n基于场景的建模方法可以描述风电出力的不确定性，然而，这一方法在实际操作中，\n往往伴随着海量的场景数据，使得模型构建变得异常复杂繁琐，更让电力系统的计算负\n担沉重不堪，从而限制了分析的效率和实时性。因此，为有效削减这些场景，需要采用\n适当的场景"
+    },
+    {
+      "page": 50,
+      "cue": "假设",
+      "snippet": "统计特性。而在金融领域，蒙特卡洛方法同样展现出巨大的应用价\n值，用于精确评估风险、合理定价期权等关键环节。因其高效且灵活的特性，蒙特卡洛\n方法在现代科学研究中发挥着越来越重要的作用，成为了不可或缺的工具之一。\n蒙特卡罗方法的理论基础源自概率论中的大数定理。该定理指出，当样本数量累积\n到一定程度时，随机变量的无偏估计将趋近于样本的期望。这一无偏估计值，在蒙特卡\n罗方法中，便被用作目标问题的近似解。\n假设进行 N 次独立实验，其中事件 A 出现的次数为n次，即频率为 /n N ，假设其概\n率为  P A ，根据伯努利大数定理，对于任意ε＞0 ，当 N  ，时间 A 出现的频率收敛\n于概率值，即\n lim ε 1\nN\nnP P AN\n    \n \n（4.7）\n当随机变量 , 1, 2, ,iX i N  ，独立同分布，并且数学期望值  iE X a"
+    },
+    {
+      "page": 58,
+      "cue": "不足",
+      "snippet": "现风电并网后系统的稳定裕度有所降低，这主要是由\n于双馈式风力发电机群在发出有功功率的同时需要从电网吸收无功功率，因此需要增加\n无功补偿装置来分担缺少的部分无功功率。\n5.2 展望\n同时国家正在大力发展新能源发电，以后的发电结构或慢慢变长新能源发电为主，\n化石能源发电为辅的结构，装机容量会不断扩大可能会出现多个高渗透率的分布式电源\n结合火电厂或热电厂进行供电对静态电压稳定造成不同的影响，所以仍有很多不足之处\n等着去做新的研究。\n以下为本文的进一步展望：\n（1）由于目前只考虑了风电并网后的静态电压稳定，没有考虑风电并网在动态和\n暂态稳定的情况，还需要进一步深入研究来提高动态和暂态电压稳定计算速度。\n（2）多种高渗透率的其他分布式电源和风电相结合并网比如：光伏电厂或潮汐能\n电厂联合风电场进行供电从对静态电压稳定造成不同程度的影响需要进一步研究。"
+    },
+    {
+      "page": 58,
+      "cue": "展望",
+      "snippet": "5 结论和展望 辽宁工业大学硕士学位论文\n50\n5 结论和展望\n5.1 结论\n我国正在大力发展新能源改变以化石能源为主的处境，风力发电作为可再生能源领\n域的核心组成部分，在电力系统中发挥着日益显著的作用。本文介绍了目前应用比较广\n泛的风力发电机组和风电场并网的潮流计算模型，传统的连续潮流算法在求取静态电压\n稳定临界点有计算量大的问题，因此提出在连续潮流法的步长控制环节中加入自适应步\n长来改进连续潮流法，从生成的"
+    },
+    {
+      "page": 59,
+      "cue": "展望",
+      "snippet": "52(06): 210-211.\n[11] 李晖, 刘栋, 姚丹阳. 面向碳达峰碳中和目标的我国电力系统发展研判[J]. 中国电机工程学报,\n2021, 41(18): 6245-6259.\n[12] 丰硕, 郭昆鹏, 王婧. 聚焦能源领域在不断赋能中积极转型[N]. 中国煤炭报, 2023-02-11(005).\n[13] 潘旭东, 黄豫, 唐金锐, 杨柳. 新能源发电发展的影响因素分析及前景展望[J]. 智慧电力, 2019,\n47(11): 41-47.\n[14] Chinchilla M, Arnaltes S, Burgos J C. Control of permanent-magnet generators applied to\nvariable-speed wind-energy systems connected to the grid[J]. IEEE Transacti"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/26_风电并网系统的静态电压稳定性研究_葛飞飞_pages.json",
+  "abstract": "摘 要\n我国正在大力发展新能源改变以化石能源为主的处境，风力发电作为可再生能源领\n域的核心组成部分，在电力系统中发挥着日益显著的作用。然而，随着风电并网规模的\n扩大，风力发电的风速难以控制不稳定产生功率波动，其发电特性对电力系统电能质量\n乃至稳定性产生影响，成为制约其进一步发展的因素之一。因此，本文针对高渗透率下\n的风电并网系统静态电压稳定性的问题展开研究具有理论意义与实用价值，主要工作内\n容如下：\n深入研究了风电并网对静态电压稳定性产生的影响，分析导致电压不稳定性的主要\n原因。以典型风力发电机组并网运行为研究对象，发现风速的变化整体和威布尔函数相\n似呈正态分布，建立风电机组及风电场的潮流数学模型，进一步给出了含风电场的并网\n潮流计算模型，通过容量加权等值方法建立了风电场并网等值模型。传统的连续潮流算\n法在求取静态电压稳定临界点有计算量大迭代次数多的问题，为快速求取考虑风电并网\n系统的静态电压稳定临界点，给出了改进的连续潮流法，通过预测的平均功率求出功率\n输出的上下限和在步长控制环节中加入自适应系数来确定步长以得到较准确 P-V 曲线，\n在算法上减少迭代次数，缩短计算时间，达到连续潮流算法较快求取静态电压稳定临界\n点的目的。\n此外，风电并网节点因风电的波动性会造成功率不同产生多种数据，通过蒙特卡洛\n法进行抽样，生成风力发电机组并网节点的出力场景，在利用基于概率距离分析的场景\n削减选取具有代表性的场景，详细记录了削减后的场景数据，得出风电机组的等效出力\n值，从而对该风电节点进行数据简化。借助 MATLAB 进行分析和对比研究，用普通连\n续潮流法对 IEEE14 和 IEEE39 的风电并网节点进行稳定裕度计算求出 P-V 图，再利用\n改进后连续潮流法进行稳定裕度计算，以验证所提出改进连续潮流法的有效性。研究结\n果表明，传统连续潮流法和改进连续潮流算法在求取静态电压稳定临界点时，两种方法\n经过对比分析，本文提出的算法能够有效的减小迭代次数，缩短计算时间。最后利用本\n文改进后的连续潮流算法，分别计算 IEEE14 节点系统在含风电场和不含风电场的系统\n的电压稳定性，分析风力发电并网对系统静态电压的影响。\n",
+  "introduction": "1 绪论\n1.1 研究背景和意义\n目前，在世界的大环境下新能源里面风能利用的主流方式已转变为大规模风电机组\n并网发电的模式，不再是低渗透下的风力发电并网。特别是在美国、欧洲等发达国家和\n地区，它们凭借早许多年的研究和发展拥有我们目前为止还有些许差距的技术支撑和雄\n厚的资金实力，持续的将大型风电场融入电力网络并实现商业运营，为电力系统提供了\n充足的电力能源。“近年来，我国的风力发电行业呈现出迅猛的发展态势，其技术成熟\n度在众多新能源发电形式中脱颖而出。随着技术的不断进步，我国风力发电的累计装机\n容量也呈现出持续增长的态势。尽管相较于西方发达国家还有些许差距，这是因为我国\n是发展中国家，技术发展慢并且因长期发展工业，利用化石燃料较多，在风力资源的开\n发利用上起步较晚，但自进入 21 世纪以来，我国在风力发电领域的关键技术方面取得\n了显著突破，为大规模开发风力资源奠定了坚实的基石。这些突破不仅提升了风力发电\n的效率和可靠性，也为我国能源结构的优化和可持续发展提供了有力支撑。”\n我国疆域辽阔，风力资源遍布四方，自山东荣成率先打造并成功投入运营我国首个\n风电场以来，风力发电领域的技术突破层出不穷，取得了显著且令人瞩目的进步。这一\n领域的进步不仅展示了科技的力量，更为清洁能源的利用与发展注入了新活力。这些技\n术上的飞跃不仅充分展示了我国在新能源领域的深厚底蕴和强大实力，更为风电产业的\n蓬勃发展注入了源源不断的强大动力。我国风能资源储备丰富，总储量高达 43.5 亿 kW。\n在这些资源中，技术可开发量达到了 2.97 亿 kW，占据了显著的比重。这些技术可开发\n风能资源的面积广泛，约为 20 万平方千米。此外，还有潜在的技术可开发量约为 7900\n万 kW，体现了我国风能资源的巨大潜力。这些风能资源主要分布于内蒙、东北、新疆\n以及沿海地区，覆盖了中东部、华北、三北及华南等多个重要地区，为我国风电产业的\n发展提供了有力的支撑[1]。\n高比例的风电和光伏发电的大规模接入电网，不仅是我国电力网络发展的必然之路，\n更是新型电力体系的一大显著特点。这一趋势预示着我国能源结构正经历着深刻的变革，\n正坚定不移地迈向可持续发展的道路。在这一变革中，新能源的崛起将有力推动我国能\n源体系的转型升级，为实现绿色发展目标奠定坚实基石[2,3]。\n面对日益严峻的环境挑战和能源消耗压力，我国正致力于持续降低传统化石能源在\n能源消费中的占比，并大力发展风能、太阳能等可再生能源。这一举措不仅是实现能源\n结构绿色转型的关键一环，更是推动可持续发展的重要内容，对于构建清洁、低碳、高\n效的能源体系具有重要意义[4]。当前，我国正积极投入电力电子技术的研究，旨在为风\n力发电提供坚实的技术支撑，从而有效提升风力发电的效率和质量。然而，风力发电领\n域仍面临诸多挑战和问题，这些问题亟待解决，以确保风力发电的稳定性得到进一步提\n1 绪论 辽宁工业大学硕士学位论文\n2\n升。我们需深入剖析这些问题，提出切实可行的解决方案，为风力发电的可持续发展贡\n献力量[5]。风能资源的充分利用受限于其低利用密度、风速的不可控性以及风电场地理\n位置等因素。然而，通过风电并网技术，我们能够实现风能的可靠、安全和高效利用，\n从而有效降低能源消耗，减少环境污染，并充分发挥风能作为清洁能源的潜力。风电并\n网技术的应用对于推动能源结构的优化和可持续发展具有重要意义[6]。\n随着风电在电力系统中接入容量的不断增长，风电并网对系统稳定性的影响逐渐凸\n显，保障风电并网系统的稳定运行显得至关重要。在并网过程中，由于风速的波动性和\n电网中潜在扰动的存在，都可能引起并网系统功率的波动，从而导致电网电压、频率等\n关键参数的波动。为确保电力系统的安全、稳定、高效运行，我们必须高度关注风电并\n网所带来的挑战，并积极采取先进的技术手段和有效的管理措施，以应对这些潜在影响，\n推动风电产业的健康发展[7]。\n风力发电功率的注入因其特有的波动性随风速而变化改变了原有的潮流分布，这会\n对系统的电能质量可能产生负面影响，导致电能质量下降，从而不利于供电的可靠性。\n同时，风电场节点在运行过程中存在电压不稳定情况，为了维持电压稳定需要从电网中\n吸收无功功率，而无功功率影响着节点电压的大小，电压和无功功率之间存在着紧密的\n关联。当节点无功功率不足时，节点的电压会相应下降，这些不利因素都在一定程度上\n制约了风力发电的广泛应用。风电场并入电网后，风电场机组与电网之间的相互作用可\n能导致扰动现象的产生。特别是在发生故障的情况下，系统可能会出现振荡甚至崩溃，\n这不仅会威胁到系统自身的稳定运行，还可能对电网的整体安全构成严重威胁。因此，\n我们需要对风电并网后的稳定性问题给予足够的重视，并采取有效措施来应对这些潜在\n风险，确保电力系统的安全和稳定运行[8]。\n1.2 国内外研究现状\n近年来，风力发电带来的技术问题作为可再生能源领域的热点，吸引了全球学者的\n广泛关注与研究。国内外学者在此领域取得了显著的成果，其研究焦点主要聚焦于提高\n风电并网的运行效率与稳定性，以减少其对电网的冲击与影响。同时，随着智能电网和\n可再生能源技术的持续演进，风电并网系统迎来了前所未有的发展机遇，但与此同时，\n也面临着日益复杂的挑战。在这一背景下，持续深入的研究与技术创新显得尤为重要。\n因此为提升我国的能源安全水平并弥补在石油资源方面的不足，我国正积极发展新能源。\n面对能源与环境之间的矛盾，我们已开始寻求新的解决方案。其中，开发新能源便是重\n要一环，它不仅可以增强我国的能源自主性，还能有效缓解对石油资源的过度依赖，进\n而促进经济与环境的协调发展[9]。\n在我国，主要的发电方式包括热力发电、风力发电和水力发电。相较于热力与水力\n发电，风力发电的投入成本更低。风能作为一种清洁能源，能够将自然资源转化为电能，\n具备生态和可持续性的特点。风力发电设备是整个发电系统的重要组成部分，因此，对\n1 绪论 辽宁工业大学硕士学位论文\n3\n发电设备的运行状态进行监测，能有效预防相关故障的发生。定期检查和维护相关设备\n机组，不仅有助于降低发电成本，还能推动风力发电事业的健康发展。因此，加强对风\n力发电设备安全管理工作的研究具有极高的现实意义[10]。\n在全球性挑战如能源危机、环境污染和气候变化愈发严峻的背景下，风能、太阳能、\n生物质能和海洋能等可再生能源迅速成为各国竞相发展的战略重点。可再生能源发电正\n在逐渐成为各国电力体系中的核心组成部分，为应对全球挑战提供了有力的支持。其中，\n在“十四五”期间，风电大型基础设施的发展被确立为我国新能源开发的核心内容之一，\n其推进速度正在持续加快[11,12]。\n“如今，风力发电已然崛起，成为世界上可再生能源发电领域的重要支柱之一。随\n着科技的进步和环保意识的提升，全国各地的风力发电量持续保持稳健增长态势，展现\n出令人瞩目的前景。风力发电以其独特的优势和巨大的潜力，正逐渐成为我们应对能源\n危机和气候变化的重要武器[13]。”\n国外研究指出，当风电比重达到 20%这一显著规模时，电力系统的规划和运行方式\n将经历巨大变革，对电网的安全稳定运行、可靠性与经济性产生深远影响。同时，随着\n越来越多风电场并入电网，电力系统的电压稳定运行也面临着严峻挑战。由于风速本身\n具备不稳定的间歇性特点，风力发电机组输出的功率会随之不断波动。这种风力资源的\n不稳定性，结合风力发电机组自身的运行特性，使得其输出功率产生显著波动，进而不\n可避免地影响到电网的电压稳定运行。这种影响对电网的整体性能和稳定性构成了不容\n忽视的威胁[14]。\n1.2.1 静态电压稳定性研究现状\n电压稳定性研究在电力领域中占据着举足轻重的地位。根据扰动规模的不同，该研\n究可细节化为两大核心领域：静态电压稳定性研究与暂态电压稳定性研究。静态电压稳\n定性指的是系统遭受微小扰动时，电压能否维持在或迅速恢复到设定的安全范围内，并\n且能够自主地回归至原先的稳定运行状态；而暂态电压稳定性则侧重于探讨系统在正常\n运行期间，一旦遭受如短路等重大扰动后，能否保持同步性，顺利地从原有的平衡状态\n过渡到新的运行状态，并在新状态下维持稳定运行。这两大研究领域共同构成了电压稳\n定性分析的核心内容，为电力系统的稳定运行提供了重要的理论支撑。\n当前，随着风力发电系统并网技术的持续进步，国内外的研究学者与机构均积极投\n身于其静态电压稳定性问题的深入探索之中。在这一研究领域中，各种前沿的分析方法\n得到了广泛的采纳与应用，从而为电力系统的安全、稳定运行提供了坚实的后盾。这方\n法在风力发电系统并网稳定性研究中发挥着重要作用，为电力系统的稳定运行提供了有\n力支持。主要有：\n（1）连续潮流法（延拓法）\n文献[15]在深入探索电力系统稳定性领域取得了显著成果，其研究独创一种新方法，\n1 绪论 辽宁工业大学硕士学位论文\n4\n将连续潮流算法与 P-V 曲线巧妙地融为一体，成功捕捉到了极限稳定运行点，并有效攻\n克了常规潮流计算在接近极限运行点时可能遭遇的收敛性难题。这一创新方法不仅大幅\n提升了计算的精准度，还显著增强了电力系统分析的可靠性。由于潮流方程  , λF x 的\n非线性特性使得解的存在性问题变得异常复杂。对于包含 n 个节点的电力系统而言，理\n论上解的数量堪称庞大。这种多解性无疑给电力系统的分析和优化带来了极大的挑战。\n在负荷不断增长的过程中，潮流方程解的数目明显展现出递减的态势，这种减少是以成\n对的方式悄然发生的。当系统逐渐逼近其运行极限的边界时，解的个数最终凝聚至仅存\n的两个极端状态：高压解与低压解。特别值得一提的是，这两个解在奇异点处展现出了\n精确的对称性，这一独特现象宛如一把钥匙，凭借这一独特的特性，我们可以对潮流解\n的个数及其之间的细微差异进行详尽而深入的分析，从而精确评估电力系统的稳定性状\n况。通过统计解的个数，并结合解之间距离的改变，我们能够有效地预测系统的运行状\n态，敏锐捕捉潜在的不稳定因素，并据此制定针对性的干预和优化措施。\n在文献[16]中，作者运用了尖端的可行解域分析技术，成功确定了系统运行边界的\n关键运行极限点。可行解域其实是一个具备独特特质的凸锥体，其顶点精准无误地坐落\n在坐标原点之上。这一重大发现，无疑为我们准确捕捉系统运行状态的临界条件奠定了\n坚实的理论基础。尤为值得一提的是，该研究独辟蹊径地提出了一个新颖且实用的观点：\n通过精确度量某一特定方向上两个切平面之间的夹角，我们能够有效地对电压稳定性进\n行量化评估。这些研究为电力系统的稳定性分析提供了新的视角和工具。\n（2）零特征根法\n直接求解电压稳定临界点，无疑是探究电力系统稳定性的高效且直接的手段。其核\n心理念在于，通过逐步增加系统负荷，细致观察 Jacobi 矩阵的变化，直至其出现奇异现\n象，从而精准地揭示出系统稳定性的临界点。当系统到达这一临界点时，SVD 分解技术\n便如一位敏锐的侦探，能够迅速捕捉到系统的零特征根，并深入剖析其对应的左右特征\n向量。借助这些特性，我们得以对系统的潮流方程进行巧妙的扩展与重构，进而精确求\n解出静态稳定极限点。然而，这种方法并非十分完善，没有任何缺点，它自身所带有的\n主要弊端亦是不能轻视的。详细说来，它对起始值的敏感度极高，即使是微小的起始值\n差异，也可能对最终结果的精确性产生至关重要的影响。因此，在求解过程中，我们必\n须仔细筛选并采用特定的初始化策略，以确保起始值的准确性。此外，该方法在处理不\n等式约束时存在局限，往往导致得到的结果不尽如人意。尝试用对改进方法进行计算但\n结果仍然差强人意。\n（3）灵敏度分析法\n该方法基于潮流计算，巧妙运用系统中特定物理量的微分关系，精准地展现出关键\n变量的灵敏度，为揭示电网中的弱稳定节点和区域发挥了至关重要的作用，为无功补偿\n点的明确提供了坚实的基石。作为较早应用于稳定分析领域的杰出方法，灵敏度分析法\n1 绪论 辽宁工业大学硕士学位论文\n5\n在多个方面展现出其卓越的价值和显著优势：首先，从编程实现的角度来看，灵敏度分\n析法堪称简便高效，无需涉及复杂的算法和冗长的计算过程，使其在实际应用中得以迅\n速推广与实施。然而，其局限性亦不容忽视。特别是在处理发电机特定变量的约束以及\n负荷变化时，该方法往往无法将其充分反映在计算方程中，这在一定程度上限制了其分\n析的全面性和准确性。因此，在实际应用中，其结果更多地作为参考依据，而非绝对结\n论。\n这意味着，尽管我们能够在一定程度上理解电压稳定与无功功率之间的相互影响，\n但在实际电力系统中，尤其是当负荷变化成为关键因素时，这种分析的适用性可能会受\n到一定限制。因此，在未来的研究中，我们需要进一步加强对负荷约束的考虑，以更全\n面、更准确地揭示电压稳定与无功功率之间的关系。\n（4）奇异值分解法\n该方法以 Jacobi 矩阵为核心分析对象，通过多样化的分解技巧来准确评估系统的稳\n定裕度。德国杰出的数学家维尼可夫，以其敏锐的洞察力和深厚的数学造诣，首次提出\n了一个具有划时代意义的观点。他与众不同的巧妙的构思将 Jacobi 矩阵的奇异程度作为\n衡量电压稳定性的核心指标，这一创新性的见解为电力系统的稳定性分析揭开了新的篇\n章。维尼可夫的这一重大发现，不仅在数学界引起了强烈的震动，更在电力系统领域产\n生了深远且广泛的影响[17]。在维尼可夫研究的基础上，Tiranuchit 进一步拓展并深化了\n这一成果，将其理论推向了新的高度。他巧妙地运用 Jacobi 矩阵的最小奇异值作为精确\n衡量电压稳定性程度的标尺，这一方法不仅具备高度的准确性，更在实际应用中展现出\n卓越的实用性。尤为值得赞美的是，Tiranuchit 成功地首次计算出了当前运行点与极限\n运行点之间的距离，这一突破性的研究为电力系统的稳定运行提供了宝贵的理论依据和\n关键数据支持。从而为电力系统的稳定运行提供了有力的理论证明。这一方法的提出不\n仅丰富了电力系统稳定性的分析手段，也为后续研究提供了新的思路。Begovic 则是尝\n试对最优乘子法这一方法的潮流编程中的 Jacobi 矩阵进行了降阶处理减少矩阵的阶数，\n以简化计算并提高分析效率。在此基础上，他进一步利用处理后的最小特征值作为判断\n电压稳定裕度的关键指标，为电力系统的稳定运行提供了更为精准和可靠的评估方法[18]。\n在深入分析静态电压稳定性的过程中，文献[19]详细比较了潮流矩阵与降阶矩阵的不同\n之处及其相互联系。但是，由于无功不足电压降低无功过多电压升高我们发现两者之间\n存在紧密的关联，我们通过上面的叙述可以看出方法所依赖的矩阵模型表现出高度的非\n线性。不但矩阵模型表现出非线性，矩阵模型的奇异值和特征值以及特征值对应的左右\n奇异特征向量同样展现出强烈的非线性特点。这种非线性特性使得该方法在全局范围内\n对系统电压稳定程度进行全面系统的分析时面临一定的困难。尽管如此，该方法仍然为\n我们提供了有价值的参考依据。\n（5）非线性规划法\n1 绪论 辽宁工业大学硕士学位论文\n6\n非线性规划法的精髓在于巧妙地将电压稳定裕度的求解问题转化为一个系统最优\n解的搜寻过程。这一方法不仅彰显了独特的创新思维，而且在处理等式和不等式约束条\n件时，展现出全面而细致的思考，从而确保了求解过程的精确无误与稳健可靠。其逻辑\n条理清晰，实用性显著，但在编程实现上相对复杂。尽管如此，非线性规划法在解决实\n际问题时展现出了良好的实用价值，为电压稳定裕度的准确求解提供了有力的工具。针\n对电压稳定临界点求解的复杂问题，巧妙地构建了一个非线性规划模型。该模型通过精\n准地运用非线性规划内点法，成功实现了对电压崩溃临界点的精确捕捉。这一方法的提\n出，不仅充分展示了作者在电力系统稳定性分析领域的深厚理论功底，更在实际应用中\n体现了其卓越的精确性和实用性。非线性规划内点法与其他分析电压稳定的算法相比，\n他的特点在于它能有效应对不等式约束，处理起来得心应手。同时，其计算速度足够快，\n完全能够满足在线分析的需求，确保实时性。更值得一提的是，非线性规划内点法能够\n迅速收敛到电压稳定点，为电力系统的稳定运行提供了坚实的保障。\n静态电压稳定性的研究核心在于潮流计算。通过深入的潮流分析，研究衍生出两大\n关键方向：一方面，我们倾力于崩溃点的精准计算，深入分析系统极限稳定运行的关键\n节点，以求对电力系统的稳定性形成全面且深入的了解确定极限节点。另一方面，我们\n专注于稳定裕度的详细分析，以揭示静态电压稳定系统稳定性能的核心问题的关键。静\n态电压稳定分析的核心议题，实则在于详尽探究潮流方程是否具备可行的解，而临界潮\n流解则被视为系统稳定运行的边界状态，即崩溃点。这样的分析框架不仅有助于我们深\n入理解静态电压稳定性的本质，还为后续的研究提供了坚实的理论保障。文献[20]对高\n渗透率下的风电场并网其中的风电场功率出力、机端电容器投切操作与灵敏度指标之间\n的相互作用关系进行了深入的剖析，并详细探讨了它们之间的内在联系，为我们全面理\n解该领域的动态过程提供了宝贵的信息。同时，文献[21]通过精确分析相关比、参与因\n子、潮流雅可比矩阵以及收缩有功和无功雅可比矩阵的最小模特征值，深刻揭示了电压\n不稳定的本质机理和失稳模式，为我们全面把握电压稳定性提供了独到的见解。此外，\n该文献还进一步计算了相关节点的稳定裕度信息，这些数据为电力系统的稳定运行提供\n了坚实的支撑，是优化电力系统运行策略时不可或缺的重要参考依据。在文献[22]中用\n了特征值分析法，对双馈异步风机组成的风电场在不同并网渗透率下的电压稳定性进行\n了详尽且精细的剖析。此举不仅加深了我们对于风电场电压稳定性的认知，更为风电场\n的稳定运行提供了坚实的理论基础。文献[23]运用连续潮流法，精确地绘制了风电场关\n键节点在有功功率出力变化下的 P-V 曲线，从而进一步揭示了风电场运行特性与电压稳\n定性之间的深刻联系。文献[24]深入探讨风电场注入有功功率作为单一控制参数时静态\n电压稳定机理的演变情况，还进一步探讨了结合无功补偿两者同时进行作为双控制参数\n时的影响，并借助分岔理论进行了深入的阐释。文献[25]提出了一种创新的负荷裕度概\n率分布求解方法。此方法通过精准地计算负荷裕度的概率密度函数，有效地揭示了非正\n1 绪论 辽宁工业大学硕士学位论文\n7\n常运行状态下电压失稳的概率。这一开创性的研究不仅为我们提供了一个全新的视角来\n评估风电系统接入后的静态电压稳定状态，更对保障风电系统的稳定运行和优化设计具\n有深刻的指导意义。\n1.2.2 连续潮流法研究现状\n连续潮流法，作为电力系统静态电压稳定分析的核心技术，通过逐步增加系统的负\n荷功率，致力于精确探寻电压稳定的临界点。这一方法在维护电力系统稳定运行中，扮\n演着举足轻重的角色。然而，在实际应用中，负荷步长的调控却犹如一把双刃剑，其难\n度之大，让人头疼不已。连续潮流法在负荷步长的设定，无疑对计算的效率与临界点的\n收敛性有着至关重要的影响。步长过小，虽然能在一定程度上提升计算的精确度，但付\n出的代价却是计算时间的急剧增加，效率大打折扣；而步长过大，则可能使计算过程变\n得动荡不安，甚至无法稳定收敛到真正的临界点[26]。因此，如何在确保计算精度的同时，\n又能兼顾计算效率，这无疑是连续潮流法面临的一大难题。\n此外，电力系统的复杂性也为连续潮流法的应用带来了不小的挑战。在实际的电力\n系统中，电源的分布、负荷的特性、网络的结构等因素错综复杂，犹如一张无形的网，\n共同影响着电压的稳定性。这使得连续潮流法的应用需要更加精细和灵活，以适应各种\n复杂多变的场景。尽管连续潮流法在电力系统静态电压稳定分析中展现出了重要的应用\n价值，但负荷步长的调控难题以及电力系统的复杂性都使得该方法在计算效率及临界点\n收敛性方面面临严峻的挑战。\n随着对潮流方法研究的不断深入，预测-校正技术凭借其独特优势，巧妙地融入连\n续潮流法中，为其注入了新的活力。该技术中，预测方法可以用于线性预测与非线性预\n测两个方面。在线性预测中，切线预测与割线预测尤为突出，成为重要的预测工具。\n然而，值得警惕的是，切线预测在某些应用场景中可能会面临预测值与实际值之间\n产生较大偏差的困境。这种偏差不仅可能导致迭代次数增多，还可能引发计算量的急剧\n攀升，从而对连续潮流法的计算效率和精度造成不利影响。因此，优化切线预测方法，\n减少预测误差，已成为研究者们亟待解决的关键问题。鉴于此，具备前瞻思维的研究者\n们提出了一种别具一格的策略，即巧妙地将切线法与割线法融合，以优化预测流程。在\n预测的初步阶段，他们审慎地运用了切线法，凭借其独特的性质进行初步估计，从而为\n后续的预测工作铺设了稳固的基石。随后，为了更进一步提升预测的精确度和计算效率，\n研究者们灵活地切换到割线法，进一步开展深入的预测工作[27]。\n近年来，非线性预测手段如牛顿插值技术和拉格朗日插值技术，在连续潮流法的应\n用中取得了引人注目的突破。相较于传统的线性预测方法，这些非线性技术不仅计算速\n度更快，而且在收敛可靠性方面也表现出更高的水准。这些创新方法的引入，为连续潮\n流法注入了新的活力，显著提高了其在实际问题中的预测精度和效率。这些方法的运用，\n为解决复杂预测难题提供了更为强大而有效的工具，推动了连续潮流法在各个领域的应\n1 绪论 辽宁工业大学硕士学位论文\n8\n用发展。在常规连续潮流法的计算过程中，传统的牛顿-拉夫逊法以其二阶的收敛性精\n度高一度占据主导地位，然而其计算效率却不尽如人意。为提高计算效率，研究者们创\n新性地提出了基于 PQ 分解法的迭代求解方法。这种方法以牛顿-拉夫逊法的极坐标形式\n为基础在其上改进而来相较于牛顿-拉夫逊法精度相差无几，虽增加迭代次数但是计算\n速度变快减少了计算量，但在高负荷条件下却可能面临收敛难题。\n当前，连续潮流法的研究正持续向更深入、更广泛的领域拓展。研究者们致力于发\n掘新型数学模型和算法，旨在进一步提升计算精度和效率。与此同时，随着人工智能、\n大数据等前沿技术的突飞猛进，连续潮流法有望与这些先进技术深度融合，形成智能化、\n高效化的电力系统分析新范式。鉴于可再生能源的日益普及和电力市场的不断演进，连\n续潮流法在相关领域的应用将愈发关键。尽管经过数十年的深入研究，连续潮流法已取\n得了显著成果，并广泛应用于商业软件中，但在实时应用方面，其计算速度仍有待提高。\n因此，未来的研究将聚焦于连续潮流法的优化与改进，以满足电力系统实时分析的高标\n准要求。展望未来，连续潮流法将继续完善与发展，为电力系统的规划、设计以及安全\n运行提供更加可靠、有效的技术支撑。我们坚信，随着技术的不断进步和研究的深入，\n连续潮流法将在电力系统中发挥更加重要的作用，为行业的可持续发展贡献力量。\n1.3 含风电场的电压稳定性分析\n虽然我国已初步构建了全面的风能发电链与市场体系，但相较于全球顶尖风电并网\n技术的成果，我国仍存在一定差距。随着风电发展的迅猛推进，风力发电在高渗透率下\n将大规模接入电网。然而，风电并网所带来的影响已成为制约我国风电并网技术进步的\n关键因素。风力发电因其固有的随机性和不可控性特点，展现出与风能相似的不可预测\n性。同时，风电并网点往往位于电力网络较为脆弱的配电网区域，这些区域的风力发电\n更易受到外界干扰，导致发出的电能难以有效控制。然而，电力系统的规定明确要求电\n网内各个节点必须保持稳定的有功功率和无功功率输出，这是维持电力系统静态电压稳\n定性的基本前提。因此，如何在风力发电的不可控性与电力系统的稳定性要求之间找到\n平衡，成为当前亟待解决的问题。虽然风能相较于其他可再生能源展现出显著的优势，\n但风机输出的有功功率却受限于风速这一关键因素。由于风速受到季节、天气等多种自\n然因素的制约，风机的输出功率难以实现持续稳定，这进一步影响了风电并网点的电能\n质量[28]。\n电能在国民经济中占据核心地位，各行业的运作和民众的日常生活均离不开它。随\n着居民生活水平的提升，对电能质量的要求也日益严格。然而，当大量风电并入电网时，\n由于电网部分结构相对薄弱，其无功支撑能力会显得不足[29]。针对风电并网所带来的对\n电压稳定性的深远影响，世界各国学术界已经从多个层面展开了详尽而细致的探讨。这\n些研究不仅全面涵盖了风电机组注入电网的功率程度，还进一步剖析了风电机组的无功\n特性、风电机组类型以及风电所占比例等核心要素。值得一提的是，当风电机组注入电\n1 绪论 辽宁工业大学硕士学位论文\n9\n网的有功功率超过某一关键阈值时，如果系统无法及时提供足够的无功功率与之相协调，\n电压稳定性将面临严重的挑战，甚至可能触发系统崩溃的极端局面 30]。风机的无功特性\n在维护电压稳定性方面有着关键性的作用关乎电压的升降。随着风机出力水平的逐步提\n升，其所需的无功功率也呈现出逐步增长的趋势，这无疑对风电并网区域的电压稳定性\n产生了直接的、不可忽视的影响[31]。为了精确衡量风电并网对电压稳定性的具体作用效\n果，引入了有功功率裕度，通过参考这一核心指标判断电压稳定。经过深入的分析与研\n究发现，在风电并网的过程中，适度的低功率注入竟然能够在一定程度上增强静态电压\n的稳定性。然而，令人惊讶的是，一旦功率注入超出某一临界范围，电压稳定性却可能\n遭受显著的损害[32]。这一重要发现为我们深入理解和认识风电并网在电力系统中的复杂\n影响提供了宝贵的启示。在文献[33]中，作者对风电并网系统的电压稳定性问题进行了\n全面而细致的探讨。该研究不仅运用了多种静态电压稳定性指标进行综合剖析，还深入\n解析了系统电压失稳的核心要素。研究结果表明，风电并网系统电压失稳的主要原因在\n于系统无功功率的支撑能力不足以及风机在输出无功功率方面的短板，不能自己产生无\n功功率。这一重要发现不仅为风电并网系统的稳定运行奠定了坚实的理论基础，更为实\n际运行中的电压稳定性控制提供了宝贵的实践指引。这一研究成果无疑为风电行业的可\n持续发展注入了新的活力，并有望推动风电并网系统在电压稳定性控制方面取得更大的\n突破。若我们能够实现风机并网区域的无功负荷与风机输出的有功功率进行的精细协调\n与优化使之减少出现电压不稳定的情况，风电并网的电压稳定性将得到显著的提升，为\n电力系统的稳定运行提供保障减少与之相关的麻烦。\n为了进一步探究不同风电机组在并网过程中的静态电压稳定性表现，我们采用了\nP-V 曲线法进行了深入的对比分析。经过细致的比较研究，我们发现双馈式感应风力发\n电机在风电出力发生波动时，因其独特的恒功率控制特性，与系统交换的无功功率相对\n较少，从而在静态电压稳定性方面展现出比异步风力发电机更为优越的性能[34]。这一发\n现无疑为风电并网技术的发展提供了重要的参考与启示。当研究了风电渗透率与风机接\n入电网的分散程度对电压稳定性的影响，发现低渗透率与分散接入有利于提高电压稳定\n性[35]。文献[36]揭示了负荷需求和风机出力不确定性对动态电压稳定裕度的影响。通过\n巧妙结合 P-V 曲线法与灵敏度法，我们深入剖析了风电并网前后系统电压薄弱节点的动\n态演变历程。经过周密的对比分析，风电并网对系统电压薄弱节点带来的显著变化一目\n了然。值得关注的是，随着风机出力的不断攀升，原本承受重压的电压薄弱节点悄然转\n移至风电场区域，仿佛一场电力格局的微妙变革正在悄然展开。在此基础上，我们进一\n步拓宽了研究视野。研究结果显示，随着风电渗透率的逐步提升，系统电压稳定性却呈\n现出令人担忧的下降趋势[37,38]。这一发现不仅深刻揭示了风电并网对系统电压稳定性的\n潜在威胁，而且为我们后续的优化设计提供了宝贵的参考。\n在风机出力较高时，需要采用无功电压控制来维持含风电系统的电压稳定性[39]。当\n1 绪论 辽宁工业大学硕士学位论文\n10\n地电网在采取大规模风电接入后，风电场有功功率输出的持续增长导致风电场接入点及\n其邻近母线电压逐渐呈现出下降趋势。若这一趋势得不到及时有效的控制，可能会引发\n电压崩溃的严重危机。这一现象深刻揭示了风电场接入对局部电力系统电压稳定性的显\n著影响，进而加剧了其稳定性的下降。通过进一步深入剖析，我们不难发现，风电场的\n无功支撑能力及其与电网的连接强度在地区电网电压稳定性中扮演着至关重要的角色，\n这一点不容忽视当无功不足会产生显著影响。具体而言，当风电场具备足够的无功支撑\n能力，并且电网规模较大时，系统的有功功率裕度也会相应增大，从而提高电网的电压\n稳定性[40]。在采用恒定的功率因数模式来调控风机功率输出，风电场将持续为电网注入\n电力。然而，此举亦伴随着线路无功损耗的渐进累积，这无疑对并网系统的电压稳定性\n构成了重大威胁，潜藏着可能引发一系列不利后果的风险。为有效应对这一挑战，亟需\n引入无功补偿设备，对系统进行必要的无功补偿。此举不仅能够平衡系统中的无功功率，\n更能显著增强风电系统的静态电压稳定性，从而确保电网的安全、稳定运行[41]。这一举\n措对于维护整个电力系统的健康运作具有不可或缺的重要性。直驱式永磁同步发电机并\n网会对电压稳定性产生多种影响，先是发现当风电渗透率低时也就是风力发电机少的情\n况能提高静态电压稳定性，但随着风机的增多表示渗透率也会相应增加从而会降低稳定\n性[42]。风力",
+  "conclusion": "5 结论和展望\n5.1 结论\n我国正在大力发展新能源改变以化石能源为主的处境，风力发电作为可再生能源领\n域的核心组成部分，在电力系统中发挥着日益显著的作用。本文介绍了目前应用比较广\n泛的风力发电机组和风电场并网的潮流计算模型，传统的连续潮流算法在求取静态电压\n稳定临界点有计算量大的问题，因此提出在连续潮流法的步长控制环节中加入自适应步\n长来改进连续潮流法，从生成的风力发电机组出力场景中用蒙特卡洛法和场景削减选出\n最具代表性的场景，利用 Matlab 对传统连续潮流法和改进后的连续潮流法进行仿真分\n析，最后进行仿真对比。本文得到以下结论：\n（1）含风电场的连续潮流算法在求取静态电压稳定临界点有计算量大的问题，通\n过加入自适应来对步长控制环节进行改变，使其在面对风电场功率波动较大或较小的问\n题，能对步长进行改变。\n（2）风电并网后因风电的波动性会造成功率不同产生多种数据，通过蒙特卡洛法\n进行抽样抽取以上数据生成风机出力场景，在利用场景削减选取特定的场景，详细记录\n了削减后的场景数据，并得出风电机组的等效出力值，进行场景的简化。借助 Matlab\n进行了分析和对比研究，通过对传统连续潮流法和改进连续潮流算法求取静态电压稳定\n临界点相比较，本文提出的算法能够有效的减小迭代次数，缩短计算时间，提高计算效\n率。\n（3）利用本文改进后的连续潮流算法，分别计算 IEEE14 节点系统在含风电场和不\n含风电场的系统的电压稳定性，发现风电并网后系统的稳定裕度有所降低，这主要是由\n于双馈式风力发电机群在发出有功功率的同时需要从电网吸收无功功率，因此需要增加\n无功补偿装置来分担缺少的部分无功功率。\n5.2 展望\n同时国家正在大力发展新能源发电，以后的发电结构或慢慢变长新能源发电为主，\n化石能源发电为辅的结构，装机容量会不断扩大可能会出现多个高渗透率的分布式电源\n结合火电厂或热电厂进行供电对静态电压稳定造成不同的影响，所以仍有很多不足之处\n等着去做新的研究。\n以下为本文的进一步展望：\n（1）由于目前只考虑了风电并网后的静态电压稳定，没有考虑风电并网在动态和\n暂态稳定的情况，还需要进一步深入研究来提高动态和暂态电压稳定计算速度。\n（2）多种高渗透率的其他分布式电源和风电相结合并网比如：光伏电厂或潮汐能\n电厂联合风电场进行供电从对静态电压稳定造成不同程度的影响需要进一步研究。\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/风电并网系统的静态电压稳定性研究_葛飞飞.pdf",
+  "file_sha256": "c7f39a41d073e4cd39e6a6f2a0977f60ad410ba70e02d0b08566ac85ba4f36c5",
+  "target_ids": [
+    "P24"
+  ]
+}

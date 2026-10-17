@@ -1,0 +1,328 @@
+{
+  "schema_version": 2,
+  "filename": "Jacobian-Free_Krylov-Arnoldi_Framework_for_Static_Voltage_Stability_Estimation_of_Power_Systems_With_100_Renewable_Energy.pdf",
+  "pages": 12,
+  "status": "needs_review",
+  "text_status": "needs_text_review",
+  "section_status": "candidates_located",
+  "review_status": "pending",
+  "reason": null,
+  "has_text_layer": true,
+  "doi": "10.1109/TASE.2026.3669798",
+  "year_candidates": [
+    "2050",
+    "2026",
+    "2025"
+  ],
+  "sections": {
+    "abstract": {
+      "text": "Abstract—The pervasive adoption of inverter-interfaced\nresources in 100% renewable power systems fundamentally\nalters voltage regulation dynamics and renders classical margin-\nestimation techniques computationally prohibitive. This paper\nintroduces a uniﬁed, Jacobian-free Krylov-Arnoldi (JFKA)\nframework for automated estimation of system static voltage sta-\nbility (SVS). First, inverter current-limiting behavior is captured\nby a smooth S-type function, preserving continuous power-ﬂow\nstructure across both grid-forming (GFM) and grid-following\n(GFL) control modes. Building on singularity theory, we derive\na Jacobian-free stability indicator that pinpoints the onset of\nvoltage collapse without explicit derivative evaluation. To e ﬃ-\nciently solve the resulting large-scale, transcendental power-ﬂow\nequations, we embed a reduced-order Arnoldi process within a\nNewton-Krylov solver, yielding rapid convergence and markedly\nlower memory footprint. Case studies on a modiﬁed IEEE-39 bus\nnetwork with full renewable penetration demonstrate that our\nmethod accurately tracks voltage regulation limits under varied\nload-growth scenarios and automatic mode switches.\nNote to Practitioners —As grids reach 100% renewable energy\npenetration, real-time voltage regulation capability estimation\nmust handle inverter mode switching and large-scale nonlinear\nsolves. This work introduces a JFKA solver that uses an S-type\nfunction for smooth current-limit modeling and a singularity-\nbased indicator for collapse detection. Integrated into existing\nEMS/DA tools, it enables continuous margin tracking under\nload growth and mode shifts. The framework runs on standard\ndesktop hardware and scales to large power grids, o ﬀering plug-\nand-play deployment for automated voltage regulation capability\nassessment.\n",
+      "page_start": 1,
+      "page_end": 1,
+      "start": {
+        "page": 1,
+        "offset": 342
+      },
+      "end": {
+        "page": 1,
+        "offset": 2145
+      },
+      "preview_end": {
+        "page": 1,
+        "offset": 2145
+      },
+      "heading": "abstract—thepervasiveadoptionofinverter-interfaced",
+      "method": "heading_match",
+      "end_reason": "keywords",
+      "total_chars": 1803,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    },
+    "introduction": {
+      "text": "I. I NTRODUCTION\nT\nHE urgent need to mitigate climate change has placed\nthe decarbonization of electrical power systems at the\nforefront of global energy policy. As nations commit to\nReceived 13 May 2025; revised 11 November 2025; accepted 27 January\n2026. Date of publication 2 March 2026; date of current version 11 March\n2026. This article was recommended for publication by Associate Editor\nT. Nguyen-Van and Editor Q. Zhao upon evaluation of the reviewers’ com-\nments. This work was supported by the National Natural Science Foundation\nof China under Grant 52407148. (Corresponding author: Ying Huang.)\nGuoteng Wang and Ying Huang are with the College of Electri-\ncal Engineering, Zhejiang University, Hangzhou 310027, China (e-mail:\nwgt339@zju.edu.cn; huangyingzju@zju.edu.cn).\nChongyu Wang and Mohammad Shahidehpour are with the Galvin Cen-\nter for Electricity Innovation, Illinois Institute of Technology, Chicago,\nIL 60616 USA (e-mail: chongyu.wang@outlook.com; ms@iit.edu).\nDigital Object Identiﬁer 10.1109/TASE.2026.3669798\nincreasingly ambitious zero-carbon targets, the transition to\npower systems comprised entirely of renewable energy sources\n(REPSs) is accelerating worldwide [1], [2]. In these 100%\nREPSs, conventional synchronous generators (SGs) are being\ndisplaced by inverter-interfaced wind and solar installations,\nresulting in fundamental shifts in both operational paradigms\nand system dynamics [3]. Numerous regions—including major\neconomies—have pledged to achieve full renewable supply by\n2050, underscoring the urgency and scale of this transforma-\ntion [4], [5], [6].\nUnlike SGs, inverter-based resources regulate power ﬂow\nby modulating DC voltages through power electronic switch-\ning. This introduces stringent current limits, necessary for\nprotecting sensitive semiconductor devices from thermal\nand electrical stress [9]. As grid conditions evolve—such\nas ﬂuctuating bus voltages and rising demand—inverters\nmust dynamically switch between grid-forming (GFM) and\ngrid-following (GFL) modes. During periods of stress, current-\nlimiting action further constrains their ability to provide\nreactive power support. These nonlinear and mode-dependent\nbehaviors present new technical challenges for system opera-\ntors, particularly in the context of static voltage stability (SVS)\nestimation across large-scale, highly renewable grids.\nHistorically, SVS estimation has relied on classical method-\nologies such as continuation power ﬂow (CPF) and voltage-\nsensitivity analysis, which utilize explicit Jacobian matrix\ncalculations and track system stability margins via model-\nbased rollbacks at detected bifurcation points [10], [11]. While\nadvanced methods—including holomorphic embedding [12]\nand load-impedance modulus margin techniques [13]—have\nimproved computational e ﬃciency in SG-dominated environ-\nments, they are inherently limited. These approaches often\nassume idealized voltage sources, and lack the ﬂexibility to\naccommodate the continuous, nonlinear control-mode transi-\ntions and current-limiting e ﬀects intrinsic to inverter-based\ngrids. As a result, they are increasingly ill-suited for real-time\nmonitoring and margin estimation in future REPSs.\nRecent research e ﬀorts have begun to address the uncer-\ntainty inherent in renewable generation, employing Monte\nCarlo simulations [14], global sensitivity analysis [15], matrix\nfactorization [16], and advanced weather-informed risk assess-\nments [17]. However, these studies predominantly focus on\nstochastic variability in generation, rather than the structural\nand dynamical changes in voltage regulation mechanisms\n1558-3783 © 2026 IEEE. All rights reserved, including rights for text and data mining, and training of artiﬁcial intelligence and\nsimilar technologies. Personal use is permitted, but republication /redistribution requires IEEE permission.\nSee https://www.ieee.org/publications/rights/index.html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 17:11:18 UTC from IEEE Xplore.  Restrictions apply. \nW ANG et al.: JFKA FRAMEWORK FOR SVS ESTIMATION OF POWER SYSTEMS 5755\nintroduced by inverter control. The evolving landscape of\ninverter controls—spanning GFM and GFL paradigms, with\nsubcategories such as PQ and PV modes [18], [19]—has a\nprofound impact on system voltage support, particularly under\noperational stress or rapid switching. While some recent works\nextend Jacobian formulations [21] or incorporate voltage sta-\nbility constraints in unit commitment [22], many continue to\ntreat inverter control modes as static, neglecting the dynamic\ntransitions induced by real-time current limiting [23]. This\noversimpliﬁcation can introduce signiﬁcant errors, especially\nwhen estimating SVS near operational boundaries.\nCurrent strategies to model control-mode switching often\nrely on discrete rollback mechanisms: transition points are\ndetected, the power-ﬂow model is updated, and analysis\nresumes [24]. While feasible for small networks, this approach\nbecomes computationally intractable in large-scale systems\ndue to the combinatorial growth of model variants and the\npotential for algorithmic instability. More speciﬁcally, CPF\nmethods [10], [11] su ﬀer from high computational cost due\nto repeated Jacobian evaluations and step size control, making\nthem less suitable for large-scale or real-time applications.\nHolomorphic embedding techniques [12] may encounter con-\nvergence and truncation errors in highly nonlinear systems\nwith extensive inverter penetration. Approaches relying on\nstatic inverter models [23] cannot capture the dynamic mode-\nswitching and current-limiting e ﬀects of modern inverters,\nleading to inaccurate SVS estimation under stress or rapid\noperating changes. Consequently, two major challenges remain\nunresolved: (1) integrating a continuous representation of\nmode-switching behavior into SVS estimation without resort-\ning to discrete model updates, and (2) developing a scalable,\nJacobian-free computational solver capable of real-time appli-\ncation in large, complex power networks.\nAgainst this backdrop, this paper presents a uniﬁed\nJacobian-Free Krylov-Arnoldi (JFKA) framework for auto-\nmated voltage regulation capability estimation in 100%\nrenewable power systems. Our approach is distinguished by\nthe following key innovations:\n1) Jacobian-free collapse indicator: By leveraging sin-\ngularity theory, we develop a robust stability indicator\nthat detects proximity to voltage collapse using trends in\nthe minimum singular value of Jacobian-vector products.\nThis obviates the need for explicit derivative calcula-\ntions, dramatically reducing computational overhead.\n2) Newton-Krylov solver with reduced-order Arnoldi\nprocess: We embed a low-dimensional Arnoldi process\nwithin each Newton iteration, enabling e ﬃcient and\nmemory-frugal solution of the large-scale and transcen-\ndental power-ﬂow equations characteristic of REPSs.\n3) Continuous mode-switching modeling: The pro-\nposed framework captures the e ﬀect of control mode\ntransitions—induced by inverter current limiting—on\nSVS estimation, ensuring accuracy and robustness even\nunder rapid and large-scale operational changes.\nThe remainder of this paper is organized as follows.\nSection II explores the impact of inverter control mode switch-\ning on SVS. Section III introduces the proposed JFKA method.\nSection IV presents comprehensive case studies on a modiﬁed\nFig. 1. Single-RES system.\nIEEE-39 bus system with full renewable penetration. Finally,\nSection V concludes with a summary of key ﬁndings and\nfuture research directions.\n",
+      "page_start": 1,
+      "page_end": 2,
+      "start": {
+        "page": 1,
+        "offset": 2308
+      },
+      "end": {
+        "page": 2,
+        "offset": 3534
+      },
+      "preview_end": {
+        "page": 2,
+        "offset": 3534
+      },
+      "heading": "i.introduction",
+      "method": "heading_match",
+      "end_reason": "section",
+      "total_chars": 7627,
+      "truncated": false,
+      "quality_flags": [
+        "numbered_boundary_candidate",
+        "text:control_characters_encoding_suspect"
+      ],
+      "review_status": "pending"
+    },
+    "conclusion": {
+      "text": "V. C ONCLUSION\nThis paper presents a uniﬁed JFKA framework for SVS\nestimation in 100% REPSs, explicitly considering the con-\ntrol mode switching behavior of RESs. By introducing a\nsmooth S-type function to model inverter current limiting and\ndeveloping a singularity-based, Jacobian-free voltage stabil-\nity criterion, the proposed method e ﬀectively addresses the\nnonlinear and mode-dependent challenges inherent to 100%\nRESPs. The integration of a reduced-order Arnoldi process\nwithin a Newton-Krylov solver enables e ﬃcient and memory-\nsaving solutions for large-scale, transcendental power ﬂow\nequations. Comprehensive case studies on a modiﬁed IEEE-39\nbus system demonstrate that the JFKA framework accurately\ntracks SVS under various load growth scenarios and control\nmode transitions. Results conﬁrm that inverter current limiting\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 17:11:18 UTC from IEEE Xplore.  Restrictions apply. \nW ANG et al.: JFKA FRAMEWORK FOR SVS ESTIMATION OF POWER SYSTEMS 5765\nand mode switching signiﬁcantly reduce the SVS compared to\ntraditional systems.\n",
+      "page_start": 11,
+      "page_end": 12,
+      "start": {
+        "page": 11,
+        "offset": 3569
+      },
+      "end": {
+        "page": 12,
+        "offset": 150
+      },
+      "preview_end": {
+        "page": 12,
+        "offset": 150
+      },
+      "heading": "v.conclusion",
+      "method": "heading_match",
+      "end_reason": "references",
+      "total_chars": 1150,
+      "truncated": false,
+      "quality_flags": [],
+      "review_status": "pending"
+    }
+  },
+  "missing_sections": [],
+  "quality_flags": [
+    "introduction:numbered_boundary_candidate",
+    "introduction:text:control_characters_encoding_suspect",
+    "page:2:control_characters_encoding_suspect",
+    "page:3:control_characters_encoding_suspect",
+    "page:4:control_characters_encoding_suspect",
+    "page:5:control_characters_encoding_suspect",
+    "page:6:control_characters_encoding_suspect",
+    "page:7:control_characters_encoding_suspect"
+  ],
+  "heading_candidates": [
+    {
+      "kind": "abstract",
+      "page": 1,
+      "offset": 342,
+      "heading": "abstract—thepervasiveadoptionofinverter-interfaced",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "keywords",
+      "page": 1,
+      "offset": 2145,
+      "heading": "indexterms—powersystemswith100%renewableenergy,",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "introduction",
+      "page": 1,
+      "offset": 2308,
+      "heading": "i.introduction",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 2,
+      "offset": 3534,
+      "heading": "ii.effectofmodeswitchingonsvs",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 3,
+      "offset": 2107,
+      "heading": "iii.jfkaframeworkforsvsestimation",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 5,
+      "offset": 1256,
+      "heading": "c.jacobian-freesolutionmethodofcorrectionequation",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 6,
+      "offset": 2761,
+      "heading": "d.svsestimation",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 7,
+      "offset": 2064,
+      "heading": "iv.casestudy",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 9,
+      "offset": 1095,
+      "heading": "c.impactofloadincreasingdirection",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "section",
+      "page": 9,
+      "offset": 3373,
+      "heading": "d.impactofresmodeswitching",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "conclusion",
+      "page": 11,
+      "offset": 3569,
+      "heading": "v.conclusion",
+      "level": 1,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    },
+    {
+      "kind": "references",
+      "page": 12,
+      "offset": 150,
+      "heading": "references",
+      "level": 0,
+      "method": "heading_match",
+      "repeated_header_candidate": false
+    }
+  ],
+  "toc_pages": [],
+  "page_quality": [
+    {
+      "page": 1,
+      "error": null,
+      "quality_flags": [],
+      "chars": 6400
+    },
+    {
+      "page": 2,
+      "error": null,
+      "quality_flags": [
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 5333
+    },
+    {
+      "page": 3,
+      "error": null,
+      "quality_flags": [
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 4749
+    },
+    {
+      "page": 4,
+      "error": null,
+      "quality_flags": [
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 4619
+    },
+    {
+      "page": 5,
+      "error": null,
+      "quality_flags": [
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 4800
+    },
+    {
+      "page": 6,
+      "error": null,
+      "quality_flags": [
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 3993
+    },
+    {
+      "page": 7,
+      "error": null,
+      "quality_flags": [
+        "control_characters_encoding_suspect"
+      ],
+      "chars": 3587
+    },
+    {
+      "page": 8,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4744
+    },
+    {
+      "page": 9,
+      "error": null,
+      "quality_flags": [],
+      "chars": 3913
+    },
+    {
+      "page": 10,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4674
+    },
+    {
+      "page": 11,
+      "error": null,
+      "quality_flags": [],
+      "chars": 4568
+    },
+    {
+      "page": 12,
+      "error": null,
+      "quality_flags": [],
+      "chars": 5219
+    }
+  ],
+  "limitation_hits": [
+    {
+      "page": 2,
+      "cue": "future research",
+      "snippet": "ction IV presents comprehensive case studies on a modiﬁed\nFig. 1. Single-RES system.\nIEEE-39 bus system with full renewable penetration. Finally,\nSection V concludes with a summary of key ﬁndings and\nfuture research directions.\nII. E FFECT OF MODE SWITCHING ON SVS\nn the conventional PV curve analysis, the SG is regarded as\na constant voltage source. Since the operating mode of RES\nwill switch as the bus voltage"
+    },
+    {
+      "page": 2,
+      "cue": "assumption",
+      "snippet": "solutions of the bus voltage can be obtained by\nsolving (3):\nUr\n=\nr\n1\n2 E2s−QDXL ± 1\n2\nq\u0000\n2QDXL−E2s\n\u00012\n− 4X2\nL\n\u0000\nP2\nD + Q2\nD\n\u0001\n(4)\nIn (4), the voltage magnitude of the load bus is obtained\nunder the assumption that the RES keeps the terminal voltage\nconstant. If the RES is switched to constant current control\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September"
+    },
+    {
+      "page": 3,
+      "cue": "limitation",
+      "snippet": "d bus is\nproportional to the active load. In the PV plane, the power-\nvoltage characteristic of the RES is represented by a straight\nline crossing the origin. The PV curve considering the RES\ncurrent limitation is shown in Fig. 2, and the system parame-\nters are presented in Table I.\nAs the load increases from 0, the voltage magnitude of the\nload bus will decrease from the initial value Es. When the\nvoltage"
+    }
+  ],
+  "raw_pages_file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/paper-notes/05_Jacobian_Free_Krylov_Arnoldi_Framework_for_Static_Voltage_St_pages.json",
+  "abstract": "Abstract—The pervasive adoption of inverter-interfaced\nresources in 100% renewable power systems fundamentally\nalters voltage regulation dynamics and renders classical margin-\nestimation techniques computationally prohibitive. This paper\nintroduces a uniﬁed, Jacobian-free Krylov-Arnoldi (JFKA)\nframework for automated estimation of system static voltage sta-\nbility (SVS). First, inverter current-limiting behavior is captured\nby a smooth S-type function, preserving continuous power-ﬂow\nstructure across both grid-forming (GFM) and grid-following\n(GFL) control modes. Building on singularity theory, we derive\na Jacobian-free stability indicator that pinpoints the onset of\nvoltage collapse without explicit derivative evaluation. To e ﬃ-\nciently solve the resulting large-scale, transcendental power-ﬂow\nequations, we embed a reduced-order Arnoldi process within a\nNewton-Krylov solver, yielding rapid convergence and markedly\nlower memory footprint. Case studies on a modiﬁed IEEE-39 bus\nnetwork with full renewable penetration demonstrate that our\nmethod accurately tracks voltage regulation limits under varied\nload-growth scenarios and automatic mode switches.\nNote to Practitioners —As grids reach 100% renewable energy\npenetration, real-time voltage regulation capability estimation\nmust handle inverter mode switching and large-scale nonlinear\nsolves. This work introduces a JFKA solver that uses an S-type\nfunction for smooth current-limit modeling and a singularity-\nbased indicator for collapse detection. Integrated into existing\nEMS/DA tools, it enables continuous margin tracking under\nload growth and mode shifts. The framework runs on standard\ndesktop hardware and scales to large power grids, o ﬀering plug-\nand-play deployment for automated voltage regulation capability\nassessment.\n",
+  "introduction": "I. I NTRODUCTION\nT\nHE urgent need to mitigate climate change has placed\nthe decarbonization of electrical power systems at the\nforefront of global energy policy. As nations commit to\nReceived 13 May 2025; revised 11 November 2025; accepted 27 January\n2026. Date of publication 2 March 2026; date of current version 11 March\n2026. This article was recommended for publication by Associate Editor\nT. Nguyen-Van and Editor Q. Zhao upon evaluation of the reviewers’ com-\nments. This work was supported by the National Natural Science Foundation\nof China under Grant 52407148. (Corresponding author: Ying Huang.)\nGuoteng Wang and Ying Huang are with the College of Electri-\ncal Engineering, Zhejiang University, Hangzhou 310027, China (e-mail:\nwgt339@zju.edu.cn; huangyingzju@zju.edu.cn).\nChongyu Wang and Mohammad Shahidehpour are with the Galvin Cen-\nter for Electricity Innovation, Illinois Institute of Technology, Chicago,\nIL 60616 USA (e-mail: chongyu.wang@outlook.com; ms@iit.edu).\nDigital Object Identiﬁer 10.1109/TASE.2026.3669798\nincreasingly ambitious zero-carbon targets, the transition to\npower systems comprised entirely of renewable energy sources\n(REPSs) is accelerating worldwide [1], [2]. In these 100%\nREPSs, conventional synchronous generators (SGs) are being\ndisplaced by inverter-interfaced wind and solar installations,\nresulting in fundamental shifts in both operational paradigms\nand system dynamics [3]. Numerous regions—including major\neconomies—have pledged to achieve full renewable supply by\n2050, underscoring the urgency and scale of this transforma-\ntion [4], [5], [6].\nUnlike SGs, inverter-based resources regulate power ﬂow\nby modulating DC voltages through power electronic switch-\ning. This introduces stringent current limits, necessary for\nprotecting sensitive semiconductor devices from thermal\nand electrical stress [9]. As grid conditions evolve—such\nas ﬂuctuating bus voltages and rising demand—inverters\nmust dynamically switch between grid-forming (GFM) and\ngrid-following (GFL) modes. During periods of stress, current-\nlimiting action further constrains their ability to provide\nreactive power support. These nonlinear and mode-dependent\nbehaviors present new technical challenges for system opera-\ntors, particularly in the context of static voltage stability (SVS)\nestimation across large-scale, highly renewable grids.\nHistorically, SVS estimation has relied on classical method-\nologies such as continuation power ﬂow (CPF) and voltage-\nsensitivity analysis, which utilize explicit Jacobian matrix\ncalculations and track system stability margins via model-\nbased rollbacks at detected bifurcation points [10], [11]. While\nadvanced methods—including holomorphic embedding [12]\nand load-impedance modulus margin techniques [13]—have\nimproved computational e ﬃciency in SG-dominated environ-\nments, they are inherently limited. These approaches often\nassume idealized voltage sources, and lack the ﬂexibility to\naccommodate the continuous, nonlinear control-mode transi-\ntions and current-limiting e ﬀects intrinsic to inverter-based\ngrids. As a result, they are increasingly ill-suited for real-time\nmonitoring and margin estimation in future REPSs.\nRecent research e ﬀorts have begun to address the uncer-\ntainty inherent in renewable generation, employing Monte\nCarlo simulations [14], global sensitivity analysis [15], matrix\nfactorization [16], and advanced weather-informed risk assess-\nments [17]. However, these studies predominantly focus on\nstochastic variability in generation, rather than the structural\nand dynamical changes in voltage regulation mechanisms\n1558-3783 © 2026 IEEE. All rights reserved, including rights for text and data mining, and training of artiﬁcial intelligence and\nsimilar technologies. Personal use is permitted, but republication /redistribution requires IEEE permission.\nSee https://www.ieee.org/publications/rights/index.html for more information.\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 17:11:18 UTC from IEEE Xplore.  Restrictions apply. \nW ANG et al.: JFKA FRAMEWORK FOR SVS ESTIMATION OF POWER SYSTEMS 5755\nintroduced by inverter control. The evolving landscape of\ninverter controls—spanning GFM and GFL paradigms, with\nsubcategories such as PQ and PV modes [18], [19]—has a\nprofound impact on system voltage support, particularly under\noperational stress or rapid switching. While some recent works\nextend Jacobian formulations [21] or incorporate voltage sta-\nbility constraints in unit commitment [22], many continue to\ntreat inverter control modes as static, neglecting the dynamic\ntransitions induced by real-time current limiting [23]. This\noversimpliﬁcation can introduce signiﬁcant errors, especially\nwhen estimating SVS near operational boundaries.\nCurrent strategies to model control-mode switching often\nrely on discrete rollback mechanisms: transition points are\ndetected, the power-ﬂow model is updated, and analysis\nresumes [24]. While feasible for small networks, this approach\nbecomes computationally intractable in large-scale systems\ndue to the combinatorial growth of model variants and the\npotential for algorithmic instability. More speciﬁcally, CPF\nmethods [10], [11] su ﬀer from high computational cost due\nto repeated Jacobian evaluations and step size control, making\nthem less suitable for large-scale or real-time applications.\nHolomorphic embedding techniques [12] may encounter con-\nvergence and truncation errors in highly nonlinear systems\nwith extensive inverter penetration. Approaches relying on\nstatic inverter models [23] cannot capture the dynamic mode-\nswitching and current-limiting e ﬀects of modern inverters,\nleading to inaccurate SVS estimation under stress or rapid\noperating changes. Consequently, two major challenges remain\nunresolved: (1) integrating a continuous representation of\nmode-switching behavior into SVS estimation without resort-\ning to discrete model updates, and (2) developing a scalable,\nJacobian-free computational solver capable of real-time appli-\ncation in large, complex power networks.\nAgainst this backdrop, this paper presents a uniﬁed\nJacobian-Free Krylov-Arnoldi (JFKA) framework for auto-\nmated voltage regulation capability estimation in 100%\nrenewable power systems. Our approach is distinguished by\nthe following key innovations:\n1) Jacobian-free collapse indicator: By leveraging sin-\ngularity theory, we develop a robust stability indicator\nthat detects proximity to voltage collapse using trends in\nthe minimum singular value of Jacobian-vector products.\nThis obviates the need for explicit derivative calcula-\ntions, dramatically reducing computational overhead.\n2) Newton-Krylov solver with reduced-order Arnoldi\nprocess: We embed a low-dimensional Arnoldi process\nwithin each Newton iteration, enabling e ﬃcient and\nmemory-frugal solution of the large-scale and transcen-\ndental power-ﬂow equations characteristic of REPSs.\n3) Continuous mode-switching modeling: The pro-\nposed framework captures the e ﬀect of control mode\ntransitions—induced by inverter current limiting—on\nSVS estimation, ensuring accuracy and robustness even\nunder rapid and large-scale operational changes.\nThe remainder of this paper is organized as follows.\nSection II explores the impact of inverter control mode switch-\ning on SVS. Section III introduces the proposed JFKA method.\nSection IV presents comprehensive case studies on a modiﬁed\nFig. 1. Single-RES system.\nIEEE-39 bus system with full renewable penetration. Finally,\nSection V concludes with a summary of key ﬁndings and\nfuture research directions.\n",
+  "conclusion": "V. C ONCLUSION\nThis paper presents a uniﬁed JFKA framework for SVS\nestimation in 100% REPSs, explicitly considering the con-\ntrol mode switching behavior of RESs. By introducing a\nsmooth S-type function to model inverter current limiting and\ndeveloping a singularity-based, Jacobian-free voltage stabil-\nity criterion, the proposed method e ﬀectively addresses the\nnonlinear and mode-dependent challenges inherent to 100%\nRESPs. The integration of a reduced-order Arnoldi process\nwithin a Newton-Krylov solver enables e ﬃcient and memory-\nsaving solutions for large-scale, transcendental power ﬂow\nequations. Comprehensive case studies on a modiﬁed IEEE-39\nbus system demonstrate that the JFKA framework accurately\ntracks SVS under various load growth scenarios and control\nmode transitions. Results conﬁrm that inverter current limiting\nAuthorized licensed use limited to: SOUTH CHINA UNIVERSITY OF TECHNOLOGY. Downloaded on September 14,2026 at 17:11:18 UTC from IEEE Xplore.  Restrictions apply. \nW ANG et al.: JFKA FRAMEWORK FOR SVS ESTIMATION OF POWER SYSTEMS 5765\nand mode switching signiﬁcantly reduce the SVS compared to\ntraditional systems.\n",
+  "file": "/Users/huangxm/Desktop/Mr.Leo/Project/paper-writing/idea-discovery/fulltext-pdfs/Jacobian-Free_Krylov-Arnoldi_Framework_for_Static_Voltage_Stability_Estimation_of_Power_Systems_With_100_Renewable_Energy.pdf",
+  "file_sha256": "0f91fb9e8df874021e1bddbe4fabb74f5ff5ed7dc988e95d06114a5f0ae09a28",
+  "target_ids": [
+    "P15"
+  ]
+}
